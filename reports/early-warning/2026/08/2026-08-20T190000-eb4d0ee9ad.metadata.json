@@ -1,0 +1,23 @@
+{
+  "event_id": "early_warning-20260820T190000+0800-eb4d0ee9ad",
+  "schema_version": "1.0",
+  "source_system": "early_warning",
+  "report_type": "condition_watch",
+  "generated_at": "2026-08-20T19:00:00+08:00",
+  "classification": "tactical",
+  "regime": "test",
+  "thesis": "Git auto publish integration test",
+  "risk_lights": {
+    "global": "orange",
+    "taiwan_equity": "orange",
+    "rates": "orange",
+    "fx": "yellow",
+    "commodities": "orange",
+    "industry_cycle": "orange",
+    "gold_treasury_divergence": "off"
+  },
+  "signal_ids": [
+    "gold_treasury_divergence"
+  ],
+  "report_file": "2026-08-20T190000-eb4d0ee9ad.html"
+}
