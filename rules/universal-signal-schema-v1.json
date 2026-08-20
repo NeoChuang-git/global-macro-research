@@ -1,9 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/global-macro/universal-signal-schema-v1.json",
   "title": "Universal Signal Schema v1",
   "type": "object",
   "required": [
     "schema_version",
+    "environment",
     "source_system",
     "report_type",
     "generated_at",
@@ -20,7 +22,15 @@
     "schema_version": {
       "const": "1.0"
     },
+    "environment": {
+      "type": "string",
+      "enum": [
+        "production",
+        "test"
+      ]
+    },
     "source_system": {
+      "type": "string",
       "enum": [
         "early_warning",
         "morning_brief",
@@ -28,6 +38,7 @@
       ]
     },
     "report_type": {
+      "type": "string",
       "enum": [
         "condition_watch",
         "daily_snapshot",
@@ -45,9 +56,11 @@
       "type": "boolean"
     },
     "thesis": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "classification": {
+      "type": "string",
       "enum": [
         "noise",
         "tactical",
@@ -58,14 +71,167 @@
     "regime": {
       "type": "string"
     },
+    "global_risk_level": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "risk_lights": {
-      "type": "object"
+      "type": "object",
+      "required": [
+        "global",
+        "taiwan_equity",
+        "rates",
+        "fx",
+        "commodities",
+        "industry_cycle",
+        "gold_treasury_divergence"
+      ],
+      "properties": {
+        "global": {
+          "type": "string"
+        },
+        "taiwan_equity": {
+          "type": "string"
+        },
+        "rates": {
+          "type": "string"
+        },
+        "fx": {
+          "type": "string"
+        },
+        "commodities": {
+          "type": "string"
+        },
+        "industry_cycle": {
+          "type": "string"
+        },
+        "gold_treasury_divergence": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
     },
     "signals": {
-      "type": "array"
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "severity",
+          "direction",
+          "confidence",
+          "affected_assets",
+          "affected_industries",
+          "horizon",
+          "evidence",
+          "counter_evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "on",
+              "off",
+              "watch"
+            ]
+          },
+          "severity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "direction": {
+            "type": "string",
+            "enum": [
+              "positive",
+              "negative",
+              "mixed"
+            ]
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "actual": {},
+          "consensus": {},
+          "prior": {},
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "affected_assets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "affected_industries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "horizon": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "counter_evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
     },
     "watchlist": {
       "type": "array"
+    },
+    "core_themes": {
+      "type": "array"
+    },
+    "scenario_probabilities": {
+      "type": "object",
+      "properties": {
+        "base": {
+          "type": "number"
+        },
+        "bull": {
+          "type": "number"
+        },
+        "bear": {
+          "type": "number"
+        },
+        "tail_risk": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "signal_validation": {
+      "type": "array"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "report_path": {
+      "type": "string"
     }
   },
   "additionalProperties": true

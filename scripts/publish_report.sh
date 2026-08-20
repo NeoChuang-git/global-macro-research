@@ -64,44 +64,65 @@ if ! echo "$OUTPUT" | grep -q "^INGESTED"; then
   exit 1
 fi
 
+ENVIRONMENT="$(
+  echo "$OUTPUT" |
+  awk -F': ' '/^environment:/ {print $2}'
+)"
+
 EVENT_ID="$(
   echo "$OUTPUT" |
   awk -F': ' '/^event_id:/ {print $2}'
 )"
+
+if [[ "$ENVIRONMENT" != "production" &&
+      "$ENVIRONMENT" != "test" ]]; then
+  echo "Invalid environment returned by ingest: $ENVIRONMENT"
+  exit 1
+fi
 
 if [[ -z "$EVENT_ID" ]]; then
   echo "Unable to determine event_id."
   exit 1
 fi
 
+HISTORY_PATH="data/signals/${ENVIRONMENT}/signal-history.jsonl"
+REPORT_PATH="reports/${ENVIRONMENT}"
+
 echo
-echo "=== 2. Git status ==="
+echo "=== 2. Environment ==="
+echo "$ENVIRONMENT"
 
-git status --short
+echo
+echo "=== 3. Git status ==="
 
-if git diff --quiet && git diff --cached --quiet && \
-   [[ -z "$(git ls-files --others --exclude-standard)" ]]; then
-  echo "No Git changes detected."
+git status --short \
+  "$HISTORY_PATH" \
+  "$REPORT_PATH"
+
+echo
+echo "=== 4. Git add ==="
+
+git add \
+  "$HISTORY_PATH" \
+  "$REPORT_PATH"
+
+if git diff --cached --quiet; then
+  echo "No staged changes detected."
   exit 0
 fi
 
 echo
-echo "=== 3. Git add ==="
+echo "=== 5. Commit ==="
 
-git add \
-  data/signals/signal-history.jsonl \
-  reports/
-
-echo
-echo "=== 4. Commit ==="
-
-git commit -m "Ingest research event: ${EVENT_ID}"
+git commit \
+  -m "Ingest ${ENVIRONMENT} research event: ${EVENT_ID}"
 
 echo
-echo "=== 5. Push ==="
+echo "=== 6. Push ==="
 
 git push origin main
 
 echo
 echo "PUBLISHED"
+echo "environment: ${ENVIRONMENT}"
 echo "event_id: ${EVENT_ID}"
