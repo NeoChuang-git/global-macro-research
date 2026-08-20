@@ -1,0 +1,25 @@
+{
+  "event_id": "test-early_warning-20260820T181000+0800-e90e984def",
+  "schema_version": "1.0",
+  "environment": "test",
+  "source_system": "early_warning",
+  "report_type": "condition_watch",
+  "generated_at": "2026-08-20T18:10:00+08:00",
+  "classification": "tactical",
+  "regime": "test",
+  "thesis": "Environment separation test",
+  "risk_lights": {
+    "global": "orange",
+    "taiwan_equity": "orange",
+    "rates": "orange",
+    "fx": "yellow",
+    "commodities": "orange",
+    "industry_cycle": "orange",
+    "gold_treasury_divergence": "off"
+  },
+  "signal_ids": [
+    "gold_treasury_divergence"
+  ],
+  "report_file": "2026-08-20T181000-e90e984def.html",
+  "report_path": "reports/test/early-warning/2026/08/2026-08-20T181000-e90e984def.html"
+}
