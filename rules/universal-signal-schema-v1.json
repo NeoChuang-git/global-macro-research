@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Universal Signal Schema v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source_system",
+    "report_type",
+    "generated_at",
+    "window",
+    "triggered",
+    "thesis",
+    "classification",
+    "regime",
+    "risk_lights",
+    "signals",
+    "watchlist"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "source_system": {
+      "enum": [
+        "early_warning",
+        "morning_brief",
+        "weekly_strategy"
+      ]
+    },
+    "report_type": {
+      "enum": [
+        "condition_watch",
+        "daily_snapshot",
+        "weekly_regime_review"
+      ]
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "window": {
+      "type": "string"
+    },
+    "triggered": {
+      "type": "boolean"
+    },
+    "thesis": {
+      "type": "string"
+    },
+    "classification": {
+      "enum": [
+        "noise",
+        "tactical",
+        "trend",
+        "regime_shift"
+      ]
+    },
+    "regime": {
+      "type": "string"
+    },
+    "risk_lights": {
+      "type": "object"
+    },
+    "signals": {
+      "type": "array"
+    },
+    "watchlist": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

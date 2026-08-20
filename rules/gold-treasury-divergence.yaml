@@ -1,0 +1,53 @@
+signal_id: gold_treasury_divergence
+version: "1.0"
+
+primary_inputs:
+  - spot_gold
+  - us30y_yield
+  - dxy
+
+confirmation_inputs:
+  - credit_spread
+  - repo_stress
+  - funding_stress
+
+normal_environment:
+  condition:
+    gold: up
+    us30y_yield: down
+    dxy: down
+  status: off
+  interpretation: real_yield_or_dollar_easing_gold_bullish
+
+level_1:
+  condition:
+    gold: up_or_flat
+    us30y_yield: up
+    dxy: flat
+  severity: 2
+  interpretation: inflation_or_term_premium
+
+level_2:
+  condition:
+    gold: up
+    us30y_yield: up
+    dxy: down
+  severity: 4
+  interpretation: fiscal_or_term_premium_concern
+
+level_3:
+  condition:
+    gold: up
+    us30y_yield: up
+    dxy: down
+    credit_spread: widening
+  severity: 5
+  interpretation: sovereign_confidence_stress
+
+anti_false_positive:
+  minimum_confirmation:
+    trading_days: 2
+
+price_convention:
+  gold_primary: spot
+  gold_futures: confirmation_only
