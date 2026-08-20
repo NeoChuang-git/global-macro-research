@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.globalmacro.production-bridge</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/neochuang/.local/bin/globalmacro-production-bridge</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>GLOBALMACRO_REPO_ROOT</key>
+    <string>/Users/neochuang/.local/share/globalmacro-production</string>
+    <key>GLOBALMACRO_SETTLE_SECONDS</key>
+    <string>20</string>
+    <key>HOME</key>
+    <string>/Users/neochuang</string>
+    <key>LANG</key>
+    <string>en_US.UTF-8</string>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+  </dict>
+  <key>WorkingDirectory</key>
+  <string>/Users/neochuang/.local/share/globalmacro-production</string>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict>
+      <key>Minute</key>
+      <integer>5</integer>
+    </dict>
+    <dict>
+      <key>Minute</key>
+      <integer>20</integer>
+    </dict>
+    <dict>
+      <key>Minute</key>
+      <integer>35</integer>
+    </dict>
+    <dict>
+      <key>Minute</key>
+      <integer>50</integer>
+    </dict>
+  </array>
+  <key>StandardOutPath</key>
+  <string>/tmp/globalmacro-production-bridge.stdout.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/globalmacro-production-bridge.stderr.log</string>
+</dict>
+</plist>
