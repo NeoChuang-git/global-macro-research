@@ -266,47 +266,7 @@ def build_filename(
     payload,
     event_id,
 ):
-    source = payload[
-        "source_system"
-    ]
-
-    generated = normalize_generated_at(
-        payload["generated_at"]
-    )
-
-    if source == "early_warning":
-        timestamp = generated.strftime(
-            "%Y-%m-%dT%H%M%S"
-        )
-
-        return (
-            f"{timestamp}-"
-            f"{event_id[-10:]}.html"
-        )
-
-    if source == "morning_brief":
-        return generated.strftime(
-            "%Y-%m-%d-morning.html"
-        )
-
-    if (
-        source
-        == "weekly_strategy"
-    ):
-        year, week, _ = (
-            generated.isocalendar()
-        )
-
-        return (
-            f"{year}-"
-            f"W{week:02d}-"
-            f"weekly.html"
-        )
-
-    raise RuntimeError(
-        f"Unsupported source_system: {source}"
-    )
-
+    return f"{event_id}.html"
 
 def archive_report(
     html_path: Path,

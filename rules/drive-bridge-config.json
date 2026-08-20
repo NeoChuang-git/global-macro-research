@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "drive_root": "/Users/neochuang/Library/CloudStorage/GoogleDrive-neo0406@gmail.com/我的雲端硬碟/Global-Macro-Bridge",
+  "environments": {
+    "production": {
+      "inbox": "inbox/production"
+    },
+    "test": {
+      "inbox": "inbox/test"
+    }
+  },
+  "processed": "processed",
+  "failed": "failed",
+  "pair_timeout_seconds": 300
+}

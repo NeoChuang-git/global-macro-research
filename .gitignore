@@ -13,3 +13,12 @@ node_modules/
 *.key
 secrets/
 credentials/
+
+# Local bridge runtime
+runtime/staging/
+runtime/processed/
+runtime/failed/
+runtime/logs/
+
+# Entire local bridge runtime
+runtime/
