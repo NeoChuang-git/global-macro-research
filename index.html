@@ -23,16 +23,18 @@
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <p class="eyebrow">Evidence-first macro monitoring</p>
+        <div class="hero-badge"><span class="pulse-dot"></span>Evidence-first macro monitoring</div>
         <h1 id="hero-title">每天掌握三個時間尺度的宏觀訊號</h1>
-        <p>Early Warning 追蹤突發風險，Morning 建立每日盤前視角，Weekly 整合中期趨勢。報告由 Google Drive 自動鏡像到此靜態網站。</p>
-        <a class="button" href="archive.html">翻閱完整歸檔</a>
+        <p>Early Warning 追蹤突發風險，Morning 建立每日盤前視角，Weekly 整合中期趨勢。</p>
+        <div class="hero-actions">
+          <a class="button button-hero" href="archive.html">翻閱完整歷史歸檔 →</a>
+        </div>
       </section>
 
       <section class="section" aria-labelledby="latest-title">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Latest</p>
+            <span class="section-tag">Latest Intelligence</span>
             <h2 id="latest-title">三類最新報告</h2>
           </div>
           <p id="latest-status" class="status" role="status">正在載入索引…</p>
@@ -41,8 +43,11 @@
       </section>
     </main>
 
-    <footer>
-      <p>Deterministic Python · GitHub Actions · GitHub Pages · 日常維運不呼叫 LLM</p>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-brand">Global Macro Signal Report</p>
+        <p class="footer-meta">Deterministic Sync · Zero-Token Architecture · GitHub Pages</p>
+      </div>
     </footer>
 
     <script src="assets/js/app.js" defer></script>

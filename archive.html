@@ -23,27 +23,27 @@
 
     <main class="page-main">
       <section class="page-intro" aria-labelledby="archive-title">
-        <p class="eyebrow">Archive</p>
-        <h1 id="archive-title">歷史報告</h1>
-        <p>依報告類型或日期縮小範圍。所有內容直接讀取 GitHub Pages 內的靜態 HTML mirror。</p>
+        <span class="section-tag">Historical Intelligence</span>
+        <h1 id="archive-title">歷史報告歸檔</h1>
+        <p>依報告類型或日期篩選並檢索所有歷史宏觀研究與預警報告。</p>
       </section>
 
       <section class="archive-panel" aria-label="報告篩選與結果">
         <form id="archive-filters" class="filters">
           <label>
-            報告類型
+            <span class="label-text">報告類型</span>
             <select id="category-filter" name="category">
-              <option value="all">全部類型</option>
-              <option value="early-warning">Early Warning</option>
-              <option value="morning">Morning</option>
-              <option value="weekly">Weekly</option>
+              <option value="all">全部類型 (All Categories)</option>
+              <option value="early-warning">Early Warning (突發預警)</option>
+              <option value="morning">Morning (盤前晨報)</option>
+              <option value="weekly">Weekly (每週總結)</option>
             </select>
           </label>
           <label>
-            報告日期
+            <span class="label-text">發布日期</span>
             <input id="date-filter" name="date" type="date">
           </label>
-          <button class="button button-secondary" type="reset">清除篩選</button>
+          <button class="button button-secondary" type="reset">重設條件</button>
         </form>
         <div class="archive-summary">
           <p id="archive-status" class="status" role="status">正在載入索引…</p>
@@ -52,8 +52,11 @@
       </section>
     </main>
 
-    <footer>
-      <p>資料索引：<code>data/reports.json</code></p>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-brand">Global Macro Signal Report</p>
+        <p class="footer-meta">Deterministic Sync · Zero-Token Architecture · GitHub Pages</p>
+      </div>
     </footer>
 
     <script src="assets/js/app.js" defer></script>

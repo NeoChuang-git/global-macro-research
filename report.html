@@ -23,24 +23,35 @@
 
     <main class="reader-main">
       <section class="reader-toolbar" aria-labelledby="report-title">
-        <div>
-          <p id="report-category" class="eyebrow">Report</p>
+        <div class="reader-heading">
+          <div class="reader-meta-line">
+            <span id="report-category" class="category-pill">Report</span>
+            <span id="report-date" class="report-date"></span>
+          </div>
           <h1 id="report-title">正在載入報告…</h1>
-          <p id="report-date" class="status"></p>
         </div>
         <div class="reader-actions">
-          <a class="button button-secondary" href="archive.html">返回歸檔</a>
+          <a class="button button-secondary" href="archive.html">← 返回歷史歸檔</a>
         </div>
       </section>
       <p id="report-status" class="reader-status" role="status">正在驗證索引與報告路徑…</p>
-      <iframe
-        id="report-frame"
-        class="report-frame"
-        title="Global Macro report"
-        sandbox=""
-        hidden
-      ></iframe>
+      <div class="frame-container">
+        <iframe
+          id="report-frame"
+          class="report-frame"
+          title="Global Macro report"
+          sandbox=""
+          hidden
+        ></iframe>
+      </div>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-brand">Global Macro Signal Report</p>
+        <p class="footer-meta">Deterministic Sync · Zero-Token Architecture · GitHub Pages</p>
+      </div>
+    </footer>
 
     <script src="assets/js/app.js" defer></script>
     <script src="assets/js/report.js" defer></script>
