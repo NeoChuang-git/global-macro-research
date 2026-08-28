@@ -192,7 +192,7 @@ def _list_folder_files(service, category, folder_id):
                 .list(
                     q=f"'{folder_id}' in parents and trashed = false",
                     fields="nextPageToken,files(id,name,modifiedTime,md5Checksum,size)",
-                    orderBy="name,id",
+                    orderBy="name",
                     pageSize=1000,
                     pageToken=page_token,
                     supportsAllDrives=True,
