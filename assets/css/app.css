@@ -45,12 +45,16 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.65;
   min-height: 100vh;
+}
+
+body {
   display: flex;
   flex-direction: column;
 }
@@ -72,20 +76,21 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1.5rem;
   max-width: 100%;
-  padding: 0.9rem clamp(1rem, 5vw, 3rem);
+  padding: 0.85rem clamp(1rem, 4vw, 2.5rem);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.75rem;
   font-weight: 750;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   letter-spacing: -0.025em;
   color: var(--ink);
   transition: opacity 0.2s;
+  flex-shrink: 0;
 }
 
 .brand:hover {
@@ -95,34 +100,35 @@ a {
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 0.65rem;
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 0.6rem;
   color: white;
   background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #2563eb 100%);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.05em;
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.25);
 }
 
 nav {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  background: rgba(226, 232, 240, 0.5);
-  padding: 0.25rem;
+  gap: 0.35rem;
+  background: rgba(226, 232, 240, 0.55);
+  padding: 0.2rem;
   border-radius: 9999px;
   border: 1px solid rgba(203, 213, 225, 0.6);
 }
 
 nav a {
-  padding: 0.45rem 1rem;
+  padding: 0.4rem 0.9rem;
   border-radius: 9999px;
   color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.88rem;
+  font-weight: 650;
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -148,7 +154,7 @@ main {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(3rem, 6vw, 5rem) clamp(1.75rem, 5vw, 4rem);
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 3.5rem);
   border-radius: 1.75rem;
   color: white;
   background:
@@ -209,7 +215,7 @@ main {
 
 .hero h1 {
   margin: 0.25rem 0 1rem;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(2rem, 5vw, 3.6rem);
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.04em;
@@ -217,9 +223,9 @@ main {
 
 .hero p {
   color: #cbd5e1;
-  font-size: clamp(1.02rem, 2vw, 1.18rem);
+  font-size: clamp(1rem, 2vw, 1.15rem);
   line-height: 1.7;
-  margin: 0 0 2rem;
+  margin: 0 0 1.85rem;
 }
 
 .hero-actions {
@@ -232,16 +238,17 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  min-height: 2.75rem;
-  padding: 0.65rem 1.35rem;
+  gap: 0.45rem;
+  min-height: 2.65rem;
+  padding: 0.6rem 1.25rem;
   border: 0;
   border-radius: 0.75rem;
   font: inherit;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 650;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
 }
 
 .button-hero {
@@ -271,7 +278,7 @@ main {
 
 /* Section Header */
 .section {
-  padding: 4.5rem 0 0;
+  padding: 4rem 0 0;
 }
 
 .section-heading {
@@ -279,7 +286,7 @@ main {
   align-items: flex-end;
   justify-content: space-between;
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .section-tag {
@@ -293,12 +300,12 @@ main {
   border: 1px solid var(--blue-border);
   padding: 0.25rem 0.65rem;
   border-radius: 9999px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
 }
 
 .section h2 {
   margin: 0;
-  font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.25rem);
   font-weight: 800;
   letter-spacing: -0.035em;
   color: var(--ink);
@@ -319,7 +326,7 @@ main {
 .report-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.35rem;
 }
 
 .report-card {
@@ -328,10 +335,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 270px;
-  padding: 1.85rem;
+  min-height: 260px;
+  padding: 1.75rem;
   border: 1px solid var(--line);
-  border-radius: 1.35rem;
+  border-radius: 1.25rem;
   background: var(--surface);
   box-shadow: var(--shadow-md);
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s, border-color 0.25s;
@@ -360,7 +367,7 @@ main {
 }
 
 .report-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-xl);
   border-color: #cbd5e1;
 }
@@ -368,11 +375,11 @@ main {
 .report-badge {
   align-self: flex-start;
   margin: 0;
-  font-size: 0.76rem;
+  font-size: 0.75rem;
   font-weight: 750;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 0.28rem 0.7rem;
+  padding: 0.25rem 0.65rem;
   border-radius: 9999px;
   background: var(--blue-light);
   color: var(--blue);
@@ -398,8 +405,8 @@ main {
 }
 
 .report-card-title {
-  margin: 1.25rem 0 0.5rem;
-  font-size: 1.28rem;
+  margin: 1.15rem 0 0.45rem;
+  font-size: 1.25rem;
   font-weight: 750;
   line-height: 1.35;
   color: var(--ink);
@@ -423,37 +430,37 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  margin-top: 1.5rem;
+  margin-top: 1.35rem;
   color: var(--blue);
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   font-weight: 700;
   transition: gap 0.2s ease, color 0.2s ease;
 }
 
 .text-link:hover {
   color: var(--blue-hover);
-  gap: 0.65rem;
+  gap: 0.6rem;
 }
 
 /* Page Intro (Archive) */
 .page-main {
-  max-width: 1000px;
+  max-width: 980px;
 }
 
 .page-intro {
-  padding: 2.5rem 0 2rem;
+  padding: 2rem 0 1.75rem;
 }
 
 .page-intro h1 {
-  margin: 0.35rem 0 0.75rem;
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin: 0.35rem 0 0.65rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   letter-spacing: -0.035em;
 }
 
 .page-intro > p:last-child {
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   max-width: 650px;
   margin: 0;
 }
@@ -463,7 +470,7 @@ main {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 1.35rem;
-  padding: 1.85rem;
+  padding: 1.75rem;
   box-shadow: var(--shadow-md);
 }
 
@@ -566,7 +573,7 @@ main {
 
 .archive-title {
   margin: 0.5rem 0 0;
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   font-weight: 700;
   color: var(--ink);
   line-height: 1.35;
@@ -579,30 +586,30 @@ main {
   font-size: 1.05rem;
 }
 
-/* Report Reader Page */
+/* Report Reader Page (Desktop Layout) */
 .reader-main {
   max-width: 1440px;
-  padding-top: 1rem;
+  padding: 1.25rem clamp(1rem, 3vw, 2rem) 3rem;
 }
 
 .reader-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  padding: 1.25rem 0;
+  gap: 1.5rem;
+  padding: 0.75rem 0 1.25rem;
 }
 
 .reader-meta-line {
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 }
 
 .reader-toolbar h1 {
   margin: 0;
-  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+  font-size: clamp(1.35rem, 2.5vw, 1.95rem);
   font-weight: 800;
   line-height: 1.25;
   color: var(--ink);
@@ -615,8 +622,8 @@ main {
 
 .reader-status {
   color: var(--muted);
-  font-size: 0.9rem;
-  margin: 0 0 0.85rem;
+  font-size: 0.88rem;
+  margin: 0 0 0.75rem;
 }
 
 .frame-container {
@@ -641,7 +648,7 @@ main {
   margin-top: auto;
   border-top: 1px solid var(--line);
   background: white;
-  padding: 2.25rem clamp(1rem, 5vw, 3rem);
+  padding: 2rem clamp(1rem, 4vw, 2.5rem);
 }
 
 .footer-content {
@@ -667,7 +674,10 @@ main {
   font-size: 0.86rem;
 }
 
-/* Responsive Rules */
+/* =========================================================
+   MOBILE RESPONSIVE & IMMERSIVE READER MODE (<= 768px)
+   ========================================================= */
+
 @media (max-width: 900px) {
   .report-grid {
     grid-template-columns: 1fr;
@@ -677,29 +687,204 @@ main {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
+  /* 1. Global Navigation on Mobile */
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.85rem;
+    padding: 0.75rem 1rem;
+    gap: 0.75rem;
   }
+  
+  .brand span:last-child {
+    font-size: 0.95rem;
+  }
+  
+  nav a {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  /* 2. Hero Section on Mobile */
+  main {
+    padding: 1.25rem 1rem 3.5rem;
+  }
+
   .hero {
-    padding: 2.5rem 1.5rem;
-    border-radius: 1.25rem;
+    padding: 2.25rem 1.25rem;
+    border-radius: 1.35rem;
   }
-  .reader-toolbar {
+
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .hero p {
+    font-size: 0.98rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .button-hero {
+    width: 100%;
+  }
+
+  .section {
+    padding: 2.75rem 0 0;
+  }
+
+  .section-heading {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
   }
+
+  .section h2 {
+    font-size: 1.55rem;
+  }
+
+  .report-card {
+    padding: 1.35rem;
+    min-height: 210px;
+  }
+
+  .report-card-title {
+    font-size: 1.18rem;
+    margin: 0.85rem 0 0.35rem;
+  }
+
+  /* 3. Archive Page on Mobile */
+  .page-intro {
+    padding: 1.25rem 0 1.25rem;
+  }
+
+  .page-intro h1 {
+    font-size: 1.85rem;
+  }
+
+  .archive-panel {
+    padding: 1.25rem;
+    border-radius: 1.15rem;
+  }
+
+  .filters {
+    gap: 0.85rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .archive-item {
+    padding: 1.15rem 0.75rem;
+  }
+
+  /* 4. IMMERSIVE MOBILE READER (100% Screen Utilization) */
+  body.reader-page {
+    height: 100dvh;
+    height: 100vh;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  body.reader-page .site-header {
+    display: none;
+  }
+
+  body.reader-page .site-footer {
+    display: none;
+  }
+
+  .reader-main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .reader-toolbar {
+    flex-shrink: 0;
+    height: 52px;
+    padding: 0 0.85rem;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.5rem;
+    z-index: 50;
+  }
+
+  .reader-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .reader-meta-line {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+
+  .reader-toolbar h1 {
+    display: none;
+  }
+
   .reader-actions {
-    width: 100%;
+    flex-shrink: 0;
   }
+
   .reader-actions .button {
-    width: 100%;
+    min-height: 2.1rem;
+    height: 2.1rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.82rem;
+    border-radius: 9999px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: var(--ink);
   }
+
+  .reader-status {
+    display: none;
+  }
+
+  .frame-container {
+    flex: 1;
+    width: 100vw !important;
+    height: calc(100dvh - 52px) !important;
+    height: calc(100vh - 52px) !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .report-frame {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    border: none !important;
+    display: block;
+  }
+
+  /* Footer on non-reader mobile pages */
   .footer-content {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.5rem;
   }
 }
 
