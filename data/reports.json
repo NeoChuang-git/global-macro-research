@@ -3,10 +3,10 @@
     "early-warning": {
       "category": "early-warning",
       "date": "2026-08-28",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html",
-      "modified_time": "2026-08-28T08:53:00.000Z",
-      "sha256": "cc484fc25498c3e4217ad2ae5ad27dbdbcb21293aabb5d51c927d9d4fb49e4e7",
-      "title": "Global Macro Early Warning Japan BOJ"
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Warsh_Hawkish_Repricing.html",
+      "modified_time": "2026-08-28T14:39:53.805Z",
+      "sha256": "5f543b1325528d538c03264833966465226c10a410416aa4f233d0ad457769ba",
+      "title": "Global Macro Early Warning Warsh Hawkish Repricing"
     },
     "morning": {
       "category": "morning",
@@ -19,6 +19,14 @@
     "weekly": null
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-08-28",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Warsh_Hawkish_Repricing.html",
+      "modified_time": "2026-08-28T14:39:53.805Z",
+      "sha256": "5f543b1325528d538c03264833966465226c10a410416aa4f233d0ad457769ba",
+      "title": "Global Macro Early Warning Warsh Hawkish Repricing"
+    },
     {
       "category": "early-warning",
       "date": "2026-08-28",
