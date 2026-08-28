@@ -4,8 +4,8 @@
       "category": "early-warning",
       "date": "2026-08-28",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html",
-      "modified_time": "2026-08-28T06:07:16.722Z",
-      "sha256": "cdb32b6365c155ec28d1dc3a6c1a6dcc05ad1c3e5a4d0c81d24e3afa11776421",
+      "modified_time": "2026-08-28T08:53:00.000Z",
+      "sha256": "cc484fc25498c3e4217ad2ae5ad27dbdbcb21293aabb5d51c927d9d4fb49e4e7",
       "title": "Global Macro Early Warning Japan BOJ"
     },
     "morning": {
@@ -20,20 +20,20 @@
   },
   "reports": [
     {
+      "category": "early-warning",
+      "date": "2026-08-28",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html",
+      "modified_time": "2026-08-28T08:53:00.000Z",
+      "sha256": "cc484fc25498c3e4217ad2ae5ad27dbdbcb21293aabb5d51c927d9d4fb49e4e7",
+      "title": "Global Macro Early Warning Japan BOJ"
+    },
+    {
       "category": "morning",
       "date": "2026-08-28",
       "file": "reports/morning/Global_Macro_Morning_2026-08-28.html",
       "modified_time": "2026-08-28T06:08:25.220Z",
       "sha256": "e557c83ad84a50c859fa42e113f86905cc2367420370e1ab88953ce0aeaa772f",
       "title": "Global Macro Morning"
-    },
-    {
-      "category": "early-warning",
-      "date": "2026-08-28",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html",
-      "modified_time": "2026-08-28T06:07:16.722Z",
-      "sha256": "cdb32b6365c155ec28d1dc3a6c1a6dcc05ad1c3e5a4d0c81d24e3afa11776421",
-      "title": "Global Macro Early Warning Japan BOJ"
     },
     {
       "category": "early-warning",

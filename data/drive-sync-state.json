@@ -2,12 +2,12 @@
   "files": {
     "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html": {
       "category": "early-warning",
-      "drive_file_id": "1HIz_IjIYimzc3fYx1_aBoKXUp6Nb06d7",
-      "md5_checksum": "0ab1d0c98cecc9fe39a434ce621dfe78",
-      "modified_time": "2026-08-28T06:07:16.722Z",
+      "drive_file_id": "1F4J6iY1fkpydoaD_QngBAKFe-gxJo_Sr",
+      "md5_checksum": "7dc653468e1d7ffbb50bfc4f6d90a5ef",
+      "modified_time": "2026-08-28T08:53:00.000Z",
       "name": "Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html",
-      "sha256": "cdb32b6365c155ec28d1dc3a6c1a6dcc05ad1c3e5a4d0c81d24e3afa11776421",
-      "size": 26265
+      "sha256": "cc484fc25498c3e4217ad2ae5ad27dbdbcb21293aabb5d51c927d9d4fb49e4e7",
+      "size": 8927
     },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
