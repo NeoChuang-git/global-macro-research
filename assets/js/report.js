@@ -23,7 +23,6 @@
     const status = document.getElementById("report-status");
     const frame = document.getElementById("report-frame");
     const requested = new URLSearchParams(location.search).get("file");
-    const safePath = safeReportPath(requested);
 
     function fail(message) {
       title.textContent = "無法開啟報告";
@@ -31,14 +30,18 @@
       status.classList.add("status-error");
     }
 
-    if (!safePath) {
-      fail("報告路徑無效。請從首頁或歸檔重新選擇報告。");
-      return;
-    }
-
     try {
       const data = await MacroReports.loadReports();
-      const report = data.reports.find((item) => item.file === requested);
+      let targetFile = requested;
+      if (!targetFile && Array.isArray(data.reports) && data.reports.length > 0) {
+        targetFile = data.reports[0].file;
+      }
+      const safePath = safeReportPath(targetFile);
+      if (!safePath) {
+        fail("報告路徑無效。請從首頁或歸檔重新選擇報告。");
+        return;
+      }
+      const report = data.reports.find((item) => item.file === targetFile);
       if (!report) {
         fail("此報告不在目前的 reports.json 索引中。");
         return;

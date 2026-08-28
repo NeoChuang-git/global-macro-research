@@ -63,9 +63,13 @@
   async function renderHome() {
     const grid = document.getElementById("latest-grid");
     const status = document.getElementById("latest-status");
+    const heroBtn = document.getElementById("hero-latest-btn");
     if (!grid || !status) return;
     try {
       const data = await loadReports();
+      if (heroBtn && Array.isArray(data.reports) && data.reports.length > 0) {
+        heroBtn.href = reportUrl(data.reports[0]);
+      }
       grid.replaceChildren(
         ...Object.keys(categoryLabels).map((category) =>
           reportCard(category, data.latest[category] || null)
