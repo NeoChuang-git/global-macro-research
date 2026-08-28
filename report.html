@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'">
+    <meta name="description" content="Global Macro Signal Report 閱讀器">
+    <title>報告閱讀器 · Global Macro Signal Report</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body class="reader-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Global Macro Signal Report 首頁">
+        <span class="brand-mark" aria-hidden="true">GM</span>
+        <span>Global Macro Signal Report</span>
+      </a>
+      <nav aria-label="主要導覽">
+        <a href="index.html">最新報告</a>
+        <a href="archive.html">歷史歸檔</a>
+      </nav>
+    </header>
+
+    <main class="reader-main">
+      <section class="reader-toolbar" aria-labelledby="report-title">
+        <div>
+          <p id="report-category" class="eyebrow">Report</p>
+          <h1 id="report-title">正在載入報告…</h1>
+          <p id="report-date" class="status"></p>
+        </div>
+        <div class="reader-actions">
+          <a class="button button-secondary" href="archive.html">返回歸檔</a>
+        </div>
+      </section>
+      <p id="report-status" class="reader-status" role="status">正在驗證索引與報告路徑…</p>
+      <iframe
+        id="report-frame"
+        class="report-frame"
+        title="Global Macro report"
+        sandbox=""
+        hidden
+      ></iframe>
+    </main>
+
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/report.js" defer></script>
+  </body>
+</html>

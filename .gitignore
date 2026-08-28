@@ -13,6 +13,7 @@ node_modules/
 *.key
 secrets/
 credentials/
+gha-creds-*.json
 
 # Local bridge runtime
 runtime/staging/
@@ -22,3 +23,10 @@ runtime/logs/
 
 # Entire local bridge runtime
 runtime/
+
+# Generated GitHub Pages artifact
+_site/
+.site-build-*/
+
+# Operational retired backup
+retired-local/

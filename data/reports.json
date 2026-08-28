@@ -1,0 +1,56 @@
+{
+  "latest": {
+    "early-warning": {
+      "category": "early-warning",
+      "date": "2026-08-21",
+      "file": "reports/early-warning/2026/08/Global_Macro_Taiwan_Risk_Watch_2026-08-21.html",
+      "modified_time": null,
+      "sha256": "4985d9bff3a61d98cdd9c5e302e489ade0bc75fb0dfb25eb1a7fa2cdc26772da",
+      "title": "Global Macro Taiwan Risk Watch"
+    },
+    "morning": {
+      "category": "morning",
+      "date": "2026-08-25",
+      "file": "reports/morning/Global_Macro_Morning_2026-08-25.html",
+      "modified_time": null,
+      "sha256": "dc360b6de538e00c5cf04d5a7b015ff8d8a620d6330d0df986e6886985c2a7b8",
+      "title": "Global Macro Morning"
+    },
+    "weekly": null
+  },
+  "reports": [
+    {
+      "category": "morning",
+      "date": "2026-08-25",
+      "file": "reports/morning/Global_Macro_Morning_2026-08-25.html",
+      "modified_time": null,
+      "sha256": "dc360b6de538e00c5cf04d5a7b015ff8d8a620d6330d0df986e6886985c2a7b8",
+      "title": "Global Macro Morning"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-08-21",
+      "file": "reports/early-warning/2026/08/Global_Macro_Taiwan_Risk_Watch_2026-08-21.html",
+      "modified_time": null,
+      "sha256": "4985d9bff3a61d98cdd9c5e302e489ade0bc75fb0dfb25eb1a7fa2cdc26772da",
+      "title": "Global Macro Taiwan Risk Watch"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-08-19",
+      "file": "reports/early-warning/2026/08/Global_Macro_Early_Warning_2026-08-19.html",
+      "modified_time": null,
+      "sha256": "eadeb4ae19549b1cb3e03bce4d5359426f2517aa2aac203bda56cc25b1a2f46e",
+      "title": "Global Macro Early Warning"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-08-19",
+      "file": "reports/early-warning/2026/08/taiwan_semiconductor_riskoff_2026-08-19.html",
+      "modified_time": null,
+      "sha256": "8e74006091c06a6f85495ed5a5be6ced09e04f5e87fd9b00f3fb3dfcd8d1fbd3",
+      "title": "taiwan semiconductor riskoff"
+    }
+  ],
+  "schema_version": 1
+}

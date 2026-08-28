@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'">
+    <meta name="description" content="Global Macro Signal Report 最新報告">
+    <title>Global Macro Signal Report</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Global Macro Signal Report 首頁">
+        <span class="brand-mark" aria-hidden="true">GM</span>
+        <span>Global Macro Signal Report</span>
+      </a>
+      <nav aria-label="主要導覽">
+        <a aria-current="page" href="index.html">最新報告</a>
+        <a href="archive.html">歷史歸檔</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Evidence-first macro monitoring</p>
+        <h1 id="hero-title">每天掌握三個時間尺度的宏觀訊號</h1>
+        <p>Early Warning 追蹤突發風險，Morning 建立每日盤前視角，Weekly 整合中期趨勢。報告由 Google Drive 自動鏡像到此靜態網站。</p>
+        <a class="button" href="archive.html">翻閱完整歸檔</a>
+      </section>
+
+      <section class="section" aria-labelledby="latest-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Latest</p>
+            <h2 id="latest-title">三類最新報告</h2>
+          </div>
+          <p id="latest-status" class="status" role="status">正在載入索引…</p>
+        </div>
+        <div id="latest-grid" class="report-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Deterministic Python · GitHub Actions · GitHub Pages · 日常維運不呼叫 LLM</p>
+    </footer>
+
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>

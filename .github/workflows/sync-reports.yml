@@ -1,0 +1,63 @@
+name: Sync Google Drive reports
+
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: sync-google-drive-reports
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the default branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Set up Python
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-sync.txt
+
+      - name: Install Drive client
+        run: python -m pip install --requirement requirements-sync.txt
+
+      - name: Run deterministic sync tests
+        run: python -m unittest tests/test_sync_drive.py tests/test_build_site.py -v
+
+      - name: Authenticate to Google Cloud without a service-account key
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3.0.0
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+
+      - name: Mirror Drive HTML and rebuild the index
+        env:
+          DRIVE_FOLDER_EARLY_WARNING: ${{ vars.DRIVE_FOLDER_EARLY_WARNING }}
+          DRIVE_FOLDER_MORNING: ${{ vars.DRIVE_FOLDER_MORNING }}
+          DRIVE_FOLDER_WEEKLY: ${{ vars.DRIVE_FOLDER_WEEKLY }}
+        run: python scripts/sync-drive.py
+
+      - name: Commit mirror changes when needed
+        shell: bash
+        run: |
+          git add -- reports data/reports.json data/drive-sync-state.json
+          if git diff --cached --quiet; then
+            echo "No report changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(reports): sync Google Drive mirror"
+          git push origin "HEAD:${{ github.event.repository.default_branch }}"
