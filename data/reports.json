@@ -2,18 +2,18 @@
   "latest": {
     "early-warning": {
       "category": "early-warning",
-      "date": "2026-08-21",
-      "file": "reports/early-warning/2026/08/Global_Macro_Taiwan_Risk_Watch_2026-08-21.html",
-      "modified_time": null,
-      "sha256": "4985d9bff3a61d98cdd9c5e302e489ade0bc75fb0dfb25eb1a7fa2cdc26772da",
-      "title": "Global Macro Taiwan Risk Watch"
+      "date": "2026-08-28",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html",
+      "modified_time": "2026-08-28T06:07:16.722Z",
+      "sha256": "cdb32b6365c155ec28d1dc3a6c1a6dcc05ad1c3e5a4d0c81d24e3afa11776421",
+      "title": "Global Macro Early Warning Japan BOJ"
     },
     "morning": {
       "category": "morning",
-      "date": "2026-08-25",
-      "file": "reports/morning/Global_Macro_Morning_2026-08-25.html",
-      "modified_time": null,
-      "sha256": "dc360b6de538e00c5cf04d5a7b015ff8d8a620d6330d0df986e6886985c2a7b8",
+      "date": "2026-08-28",
+      "file": "reports/morning/Global_Macro_Morning_2026-08-28.html",
+      "modified_time": "2026-08-28T06:08:25.220Z",
+      "sha256": "e557c83ad84a50c859fa42e113f86905cc2367420370e1ab88953ce0aeaa772f",
       "title": "Global Macro Morning"
     },
     "weekly": null
@@ -21,9 +21,33 @@
   "reports": [
     {
       "category": "morning",
+      "date": "2026-08-28",
+      "file": "reports/morning/Global_Macro_Morning_2026-08-28.html",
+      "modified_time": "2026-08-28T06:08:25.220Z",
+      "sha256": "e557c83ad84a50c859fa42e113f86905cc2367420370e1ab88953ce0aeaa772f",
+      "title": "Global Macro Morning"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-08-28",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html",
+      "modified_time": "2026-08-28T06:07:16.722Z",
+      "sha256": "cdb32b6365c155ec28d1dc3a6c1a6dcc05ad1c3e5a4d0c81d24e3afa11776421",
+      "title": "Global Macro Early Warning Japan BOJ"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-08-27",
+      "file": "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html",
+      "modified_time": "2026-08-27T00:29:32.321Z",
+      "sha256": "8bae773a78200d801921af3e3ceeeaed20af6f512b0efc944f8db836f20cee80",
+      "title": "Global Macro Taiwan Early Warning NVIDIA Post Earnings"
+    },
+    {
+      "category": "morning",
       "date": "2026-08-25",
       "file": "reports/morning/Global_Macro_Morning_2026-08-25.html",
-      "modified_time": null,
+      "modified_time": "2026-08-25T09:50:19.000Z",
       "sha256": "dc360b6de538e00c5cf04d5a7b015ff8d8a620d6330d0df986e6886985c2a7b8",
       "title": "Global Macro Morning"
     },
