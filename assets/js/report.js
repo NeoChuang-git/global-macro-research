@@ -47,8 +47,8 @@
       title.textContent = report.title;
       category.textContent = MacroReports.categoryLabels[report.category] || report.category;
       date.textContent = MacroReports.formatDate(report.date);
-      document.title = `${report.title} · Global Macro Signal Report`;
-      frame.src = localUrl;
+      const cacheBust = report.sha256 ? `?v=${encodeURIComponent(report.sha256.slice(0, 16))}` : "";
+      frame.src = `${localUrl}${cacheBust}`;
       frame.title = report.title;
       frame.hidden = false;
       status.textContent = "報告已載入。";
