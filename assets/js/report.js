@@ -44,9 +44,25 @@
         return;
       }
       const localUrl = safePath;
+      const catLabel = MacroReports.categoryLabels[report.category] || report.category;
+      const dateFormatted = MacroReports.formatDate(report.date);
+
       title.textContent = report.title;
-      category.textContent = MacroReports.categoryLabels[report.category] || report.category;
-      date.textContent = MacroReports.formatDate(report.date);
+      category.textContent = catLabel;
+      category.className = `category-pill category-${report.category}`;
+      date.textContent = dateFormatted;
+
+      const mobileCategory = document.getElementById("mobile-report-category");
+      const mobileDate = document.getElementById("mobile-report-date");
+      if (mobileCategory) {
+        mobileCategory.textContent = catLabel;
+        mobileCategory.className = `category-pill category-${report.category}`;
+      }
+      if (mobileDate) {
+        mobileDate.textContent = dateFormatted;
+      }
+
+      document.title = `${report.title} · Global Macro Signal Report`;
       const cacheBust = report.sha256 ? `?v=${encodeURIComponent(report.sha256.slice(0, 16))}` : "";
       frame.src = `${localUrl}${cacheBust}`;
       frame.title = report.title;
