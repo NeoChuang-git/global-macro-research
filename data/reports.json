@@ -2,23 +2,39 @@
   "latest": {
     "early-warning": {
       "category": "early-warning",
-      "date": "2026-08-28",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Warsh_Hawkish_Repricing.html",
-      "modified_time": "2026-08-28T14:39:53.805Z",
-      "sha256": "5f543b1325528d538c03264833966465226c10a410416aa4f233d0ad457769ba",
-      "title": "Global Macro Early Warning Warsh Hawkish Repricing"
+      "date": "2026-08-29",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-29_0805_Gold_Rates_Confirmation.html",
+      "modified_time": "2026-08-29T00:29:43.588Z",
+      "sha256": "25c07bf028c624304bdcdbbc3bcf2188f39c61eefe346ea6c9ced4a5bd795000",
+      "title": "Global Macro Early Warning 0805 Gold Rates Confirmation"
     },
     "morning": {
       "category": "morning",
-      "date": "2026-08-28",
-      "file": "reports/morning/Global_Macro_Morning_2026-08-28.html",
-      "modified_time": "2026-08-28T06:08:25.220Z",
-      "sha256": "e557c83ad84a50c859fa42e113f86905cc2367420370e1ab88953ce0aeaa772f",
+      "date": "2026-08-29",
+      "file": "reports/morning/Global_Macro_Morning_2026-08-29.html",
+      "modified_time": "2026-08-28T23:32:58.074Z",
+      "sha256": "642844c9452bbc3def3b0a84e8ea876c688806d189b9cc4d23b98fe096fea169",
       "title": "Global Macro Morning"
     },
     "weekly": null
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-08-29",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-29_0805_Gold_Rates_Confirmation.html",
+      "modified_time": "2026-08-29T00:29:43.588Z",
+      "sha256": "25c07bf028c624304bdcdbbc3bcf2188f39c61eefe346ea6c9ced4a5bd795000",
+      "title": "Global Macro Early Warning 0805 Gold Rates Confirmation"
+    },
+    {
+      "category": "morning",
+      "date": "2026-08-29",
+      "file": "reports/morning/Global_Macro_Morning_2026-08-29.html",
+      "modified_time": "2026-08-28T23:32:58.074Z",
+      "sha256": "642844c9452bbc3def3b0a84e8ea876c688806d189b9cc4d23b98fe096fea169",
+      "title": "Global Macro Morning"
+    },
     {
       "category": "early-warning",
       "date": "2026-08-28",

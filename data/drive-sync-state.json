@@ -18,6 +18,15 @@
       "sha256": "5f543b1325528d538c03264833966465226c10a410416aa4f233d0ad457769ba",
       "size": 6804
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-08-29_0805_Gold_Rates_Confirmation.html": {
+      "category": "early-warning",
+      "drive_file_id": "1Jx-HYkgTncUE8AomvF-td-4unpeCLrJ0",
+      "md5_checksum": "cea8f11cc4f3376af6615d8c12d32d91",
+      "modified_time": "2026-08-29T00:29:43.588Z",
+      "name": "Global_Macro_Early_Warning_2026-08-29_0805_Gold_Rates_Confirmation.html",
+      "sha256": "25c07bf028c624304bdcdbbc3bcf2188f39c61eefe346ea6c9ced4a5bd795000",
+      "size": 7017
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
@@ -44,6 +53,15 @@
       "name": "Global_Macro_Morning_2026-08-28.html",
       "sha256": "e557c83ad84a50c859fa42e113f86905cc2367420370e1ab88953ce0aeaa772f",
       "size": 11381
+    },
+    "reports/morning/Global_Macro_Morning_2026-08-29.html": {
+      "category": "morning",
+      "drive_file_id": "1ukVlmfHeM9bthHqHGi_NCskL734nFzyp",
+      "md5_checksum": "4f6078a83c0a5e74c949bbb294db0509",
+      "modified_time": "2026-08-28T23:32:58.074Z",
+      "name": "Global_Macro_Morning_2026-08-29.html",
+      "sha256": "642844c9452bbc3def3b0a84e8ea876c688806d189b9cc4d23b98fe096fea169",
+      "size": 19861
     }
   },
   "schema_version": 1
