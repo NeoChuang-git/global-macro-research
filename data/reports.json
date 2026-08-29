@@ -3,10 +3,10 @@
     "early-warning": {
       "category": "early-warning",
       "date": "2026-08-29",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-29_0805_Gold_Rates_Confirmation.html",
-      "modified_time": "2026-08-29T00:29:43.588Z",
-      "sha256": "25c07bf028c624304bdcdbbc3bcf2188f39c61eefe346ea6c9ced4a5bd795000",
-      "title": "Global Macro Early Warning 0805 Gold Rates Confirmation"
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-29_China_Cycle.html",
+      "modified_time": "2026-08-29T03:59:01.362Z",
+      "sha256": "64876661115b8ece8c8bfa5c21585d7361efb8af1bf6a4b5385860fc16cb9e0c",
+      "title": "Global Macro Early Warning China Cycle"
     },
     "morning": {
       "category": "morning",
@@ -19,6 +19,14 @@
     "weekly": null
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-08-29",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-29_China_Cycle.html",
+      "modified_time": "2026-08-29T03:59:01.362Z",
+      "sha256": "64876661115b8ece8c8bfa5c21585d7361efb8af1bf6a4b5385860fc16cb9e0c",
+      "title": "Global Macro Early Warning China Cycle"
+    },
     {
       "category": "early-warning",
       "date": "2026-08-29",
