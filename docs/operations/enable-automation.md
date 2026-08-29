@@ -102,7 +102,7 @@ In **Settings → Actions → General**:
    Without this, synchronization correctly fails at `git push` rather than
    bypassing protection.
 
-The sync schedule runs at minute 00 of every UTC hour (`0 * * * *`) and can also be
+The sync schedule runs at minute 13 of every UTC hour (`13 * * * *`) and can also be
 started manually from **Actions → Sync Google Drive reports**. Concurrency is
 serialized, and a concurrent source push causes a normal non-fast-forward
 failure rather than overwriting remote history.
