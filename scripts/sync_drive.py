@@ -101,7 +101,10 @@ def _display_title(name):
     stem = Path(name).stem
     stem = DATE_PATTERN.sub(" ", stem)
     title = re.sub(r"[_-]+", " ", stem)
-    return " ".join(title.split()) or "Untitled report"
+    title = " ".join(title.split()) or "Untitled report"
+    if title == "Global Macro Morning":
+        return "Global Daily Brief"
+    return title
 
 
 def classify_drive_file(category, name, modified_time):

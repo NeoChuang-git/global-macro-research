@@ -3,9 +3,9 @@
     "daily": {
       "category": "daily",
       "date": "2026-08-30",
-      "file": "reports/daily/Global_Daily_Brief_2026-08-30.html",
-      "modified_time": "2026-08-30T05:24:11.896Z",
-      "sha256": "2c9e79c2677f0f11752bb83dad73347a2f44695a5627215e90000b0b363d3a53",
+      "file": "reports/daily/Global_Macro_Morning_2026-08-30.html",
+      "modified_time": "2026-08-30T04:25:38.764Z",
+      "sha256": "b73a157108e7f38f303f444d1e33d1e3538088d93bce88b9d2ef612cf3d712db",
       "title": "Global Daily Brief"
     },
     "early-warning": {
@@ -22,18 +22,10 @@
     {
       "category": "daily",
       "date": "2026-08-30",
-      "file": "reports/daily/Global_Daily_Brief_2026-08-30.html",
-      "modified_time": "2026-08-30T05:24:11.896Z",
-      "sha256": "2c9e79c2677f0f11752bb83dad73347a2f44695a5627215e90000b0b363d3a53",
-      "title": "Global Daily Brief"
-    },
-    {
-      "category": "daily",
-      "date": "2026-08-30",
       "file": "reports/daily/Global_Macro_Morning_2026-08-30.html",
       "modified_time": "2026-08-30T04:25:38.764Z",
       "sha256": "b73a157108e7f38f303f444d1e33d1e3538088d93bce88b9d2ef612cf3d712db",
-      "title": "Global Macro Morning"
+      "title": "Global Daily Brief"
     },
     {
       "category": "early-warning",
@@ -62,18 +54,10 @@
     {
       "category": "daily",
       "date": "2026-08-29",
-      "file": "reports/daily/Global_Daily_Brief_2026-08-29.html",
-      "modified_time": "2026-08-28T23:32:58.074Z",
-      "sha256": "3eff685e8b2a732dd812bea92dc41fb2dc4f9c826b24e340343525460ab91c97",
-      "title": "Global Daily Brief"
-    },
-    {
-      "category": "daily",
-      "date": "2026-08-29",
       "file": "reports/daily/Global_Macro_Morning_2026-08-29.html",
       "modified_time": "2026-08-28T23:32:58.074Z",
       "sha256": "642844c9452bbc3def3b0a84e8ea876c688806d189b9cc4d23b98fe096fea169",
-      "title": "Global Macro Morning"
+      "title": "Global Daily Brief"
     },
     {
       "category": "early-warning",
@@ -94,18 +78,10 @@
     {
       "category": "daily",
       "date": "2026-08-28",
-      "file": "reports/daily/Global_Daily_Brief_2026-08-28.html",
-      "modified_time": "2026-08-28T06:08:25.220Z",
-      "sha256": "b82e0d226d1d408b5aa5269b60641dc19d5057aabe9bb1ffc6a4750ae8f122f6",
-      "title": "Global Daily Brief"
-    },
-    {
-      "category": "daily",
-      "date": "2026-08-28",
       "file": "reports/daily/Global_Macro_Morning_2026-08-28.html",
       "modified_time": "2026-08-28T06:08:25.220Z",
       "sha256": "e557c83ad84a50c859fa42e113f86905cc2367420370e1ab88953ce0aeaa772f",
-      "title": "Global Macro Morning"
+      "title": "Global Daily Brief"
     },
     {
       "category": "early-warning",
@@ -118,18 +94,10 @@
     {
       "category": "daily",
       "date": "2026-08-25",
-      "file": "reports/daily/Global_Daily_Brief_2026-08-25.html",
-      "modified_time": "2026-08-25T09:50:19.000Z",
-      "sha256": "46b5e97ee55f4e160bc32db892996c1484630065825290042ea01778866e768b",
-      "title": "Global Daily Brief"
-    },
-    {
-      "category": "daily",
-      "date": "2026-08-25",
       "file": "reports/daily/Global_Macro_Morning_2026-08-25.html",
       "modified_time": "2026-08-25T09:50:19.000Z",
       "sha256": "dc360b6de538e00c5cf04d5a7b015ff8d8a620d6330d0df986e6886985c2a7b8",
-      "title": "Global Macro Morning"
+      "title": "Global Daily Brief"
     },
     {
       "category": "early-warning",
