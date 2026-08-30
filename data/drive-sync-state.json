@@ -98,6 +98,15 @@
       "name": "Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html",
       "sha256": "8bae773a78200d801921af3e3ceeeaed20af6f512b0efc944f8db836f20cee80",
       "size": 9324
+    },
+    "reports/weekly/Weekly_Strategy_2026-08-30.html": {
+      "category": "weekly",
+      "drive_file_id": "1OfvTrz91qKZZAKxs5QbglprN6n8nvO_1",
+      "md5_checksum": "ef1f11ecafcd60886a2382aa4d2832ca",
+      "modified_time": "2026-08-30T06:02:34.173Z",
+      "name": "Weekly_Strategy_2026-08-30.html",
+      "sha256": "bea69ca6cbde8f4d726f4d57a9f05712cdcfa15226c305626ce1ea3a1f343169",
+      "size": 22031
     }
   },
   "schema_version": 1

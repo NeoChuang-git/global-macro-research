@@ -16,9 +16,24 @@
       "sha256": "120269174acc09a37622d47feb4c72e5f7d5e98f90d465c2e5b708d42a88da4c",
       "title": "Global Macro Early Warning JPY160 Carry Risk"
     },
-    "weekly": null
+    "weekly": {
+      "category": "weekly",
+      "date": "2026-08-30",
+      "file": "reports/weekly/Weekly_Strategy_2026-08-30.html",
+      "modified_time": "2026-08-30T06:02:34.173Z",
+      "sha256": "bea69ca6cbde8f4d726f4d57a9f05712cdcfa15226c305626ce1ea3a1f343169",
+      "title": "Weekly Strategy"
+    }
   },
   "reports": [
+    {
+      "category": "weekly",
+      "date": "2026-08-30",
+      "file": "reports/weekly/Weekly_Strategy_2026-08-30.html",
+      "modified_time": "2026-08-30T06:02:34.173Z",
+      "sha256": "bea69ca6cbde8f4d726f4d57a9f05712cdcfa15226c305626ce1ea3a1f343169",
+      "title": "Weekly Strategy"
+    },
     {
       "category": "daily",
       "date": "2026-08-30",
