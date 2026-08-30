@@ -80,6 +80,15 @@
       "name": "Global_Macro_Morning_2026-08-29.html",
       "sha256": "642844c9452bbc3def3b0a84e8ea876c688806d189b9cc4d23b98fe096fea169",
       "size": 19861
+    },
+    "reports/morning/Global_Macro_Morning_2026-08-30.html": {
+      "category": "morning",
+      "drive_file_id": "1nSfaOUVlEAiYJm-SW_gSxBrsizUjaSVO",
+      "md5_checksum": "bac494ba8f747756474d8313325e6a8c",
+      "modified_time": "2026-08-30T03:13:12.758Z",
+      "name": "Global_Macro_Morning_2026-08-30.html",
+      "sha256": "7a5d336734d932c2a1114918ea1979df9ec40351ce0819fe5a21703ee7ed5076",
+      "size": 3380
     }
   },
   "schema_version": 1
