@@ -19,21 +19,13 @@
     "weekly": {
       "category": "weekly",
       "date": "2026-08-30",
-      "file": "reports/weekly/weekly_library_bridge_probe.html",
-      "modified_time": "2026-08-30T12:21:27.101Z",
-      "sha256": "2127f1eab0991bbc402d3db58655e64d3c559cabd8843d5526698228badc4f16",
-      "title": "weekly library bridge probe"
+      "file": "reports/weekly/Weekly_Strategy_2026-08-30_rerun_1421.html",
+      "modified_time": "2026-08-30T06:23:50.989Z",
+      "sha256": "caa7b5491f8b4405fefaf90f1c17db8e7598701cf9690f77036d83c7b25439ce",
+      "title": "Weekly Strategy rerun 1421"
     }
   },
   "reports": [
-    {
-      "category": "weekly",
-      "date": "2026-08-30",
-      "file": "reports/weekly/weekly_library_bridge_probe.html",
-      "modified_time": "2026-08-30T12:21:27.101Z",
-      "sha256": "2127f1eab0991bbc402d3db58655e64d3c559cabd8843d5526698228badc4f16",
-      "title": "weekly library bridge probe"
-    },
     {
       "category": "weekly",
       "date": "2026-08-30",

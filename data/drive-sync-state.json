@@ -116,15 +116,6 @@
       "name": "Weekly_Strategy_2026-08-30_rerun_1421.html",
       "sha256": "caa7b5491f8b4405fefaf90f1c17db8e7598701cf9690f77036d83c7b25439ce",
       "size": 30358
-    },
-    "reports/weekly/weekly_library_bridge_probe.html": {
-      "category": "weekly",
-      "drive_file_id": "16Pg36rNFUWkDL2K8JNxLrncHOtgPOOc7",
-      "md5_checksum": "7916483731619d7aa058a802da870b52",
-      "modified_time": "2026-08-30T12:21:27.101Z",
-      "name": "weekly_library_bridge_probe.html",
-      "sha256": "2127f1eab0991bbc402d3db58655e64d3c559cabd8843d5526698228badc4f16",
-      "size": 184
     }
   },
   "schema_version": 1
