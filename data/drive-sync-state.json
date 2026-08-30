@@ -27,6 +27,42 @@
       "sha256": "3eff685e8b2a732dd812bea92dc41fb2dc4f9c826b24e340343525460ab91c97",
       "size": 19852
     },
+    "reports/daily/Global_Macro_Morning_2026-08-25.html": {
+      "category": "daily",
+      "drive_file_id": "10dgWjdJhW-HwSZRp8tFbQ_wSDiQLIiWu",
+      "md5_checksum": "1664950dcfba91c9594fdccd61c01f47",
+      "modified_time": "2026-08-25T09:50:19.000Z",
+      "name": "Global_Macro_Morning_2026-08-25.html",
+      "sha256": "dc360b6de538e00c5cf04d5a7b015ff8d8a620d6330d0df986e6886985c2a7b8",
+      "size": 18005
+    },
+    "reports/daily/Global_Macro_Morning_2026-08-28.html": {
+      "category": "daily",
+      "drive_file_id": "1s2_OWFrcZklXayih1jjffplxS2X18_Z0",
+      "md5_checksum": "9ae4fe5b711167f3f7127878e8d178b8",
+      "modified_time": "2026-08-28T06:08:25.220Z",
+      "name": "Global_Macro_Morning_2026-08-28.html",
+      "sha256": "e557c83ad84a50c859fa42e113f86905cc2367420370e1ab88953ce0aeaa772f",
+      "size": 11381
+    },
+    "reports/daily/Global_Macro_Morning_2026-08-29.html": {
+      "category": "daily",
+      "drive_file_id": "1ukVlmfHeM9bthHqHGi_NCskL734nFzyp",
+      "md5_checksum": "4f6078a83c0a5e74c949bbb294db0509",
+      "modified_time": "2026-08-28T23:32:58.074Z",
+      "name": "Global_Macro_Morning_2026-08-29.html",
+      "sha256": "642844c9452bbc3def3b0a84e8ea876c688806d189b9cc4d23b98fe096fea169",
+      "size": 19861
+    },
+    "reports/daily/Global_Macro_Morning_2026-08-30.html": {
+      "category": "daily",
+      "drive_file_id": "1EhAsVNw4C6j6aNl3nNKqyrtXH0VBfA1H",
+      "md5_checksum": "14029fb37d44deffb3a9cbc742a087d1",
+      "modified_time": "2026-08-30T04:25:38.764Z",
+      "name": "Global_Macro_Morning_2026-08-30.html",
+      "sha256": "b73a157108e7f38f303f444d1e33d1e3538088d93bce88b9d2ef612cf3d712db",
+      "size": 23904
+    },
     "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html": {
       "category": "early-warning",
       "drive_file_id": "1F4J6iY1fkpydoaD_QngBAKFe-gxJo_Sr",
@@ -62,6 +98,15 @@
       "name": "Global_Macro_Early_Warning_2026-08-29_China_Cycle.html",
       "sha256": "64876661115b8ece8c8bfa5c21585d7361efb8af1bf6a4b5385860fc16cb9e0c",
       "size": 5314
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-08-30_JPY160_Carry_Risk.html": {
+      "category": "early-warning",
+      "drive_file_id": "1pwDt3wBDiV5_oQwZf3HGNu5YXpmMJ7ZM",
+      "md5_checksum": "3f0fdef7054f952bac82e8d53d901874",
+      "modified_time": "2026-08-30T01:59:20.392Z",
+      "name": "Global_Macro_Early_Warning_2026-08-30_JPY160_Carry_Risk.html",
+      "sha256": "120269174acc09a37622d47feb4c72e5f7d5e98f90d465c2e5b708d42a88da4c",
+      "size": 3902
     },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
