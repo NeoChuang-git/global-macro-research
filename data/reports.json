@@ -2,11 +2,11 @@
   "latest": {
     "early-warning": {
       "category": "early-warning",
-      "date": "2026-08-29",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-29_China_Cycle.html",
-      "modified_time": "2026-08-29T03:59:01.362Z",
-      "sha256": "64876661115b8ece8c8bfa5c21585d7361efb8af1bf6a4b5385860fc16cb9e0c",
-      "title": "Global Macro Early Warning China Cycle"
+      "date": "2026-08-30",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-30_JPY160_Carry_Risk.html",
+      "modified_time": "2026-08-30T01:59:20.392Z",
+      "sha256": "120269174acc09a37622d47feb4c72e5f7d5e98f90d465c2e5b708d42a88da4c",
+      "title": "Global Macro Early Warning JPY160 Carry Risk"
     },
     "morning": {
       "category": "morning",
@@ -19,6 +19,14 @@
     "weekly": null
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-08-30",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-30_JPY160_Carry_Risk.html",
+      "modified_time": "2026-08-30T01:59:20.392Z",
+      "sha256": "120269174acc09a37622d47feb4c72e5f7d5e98f90d465c2e5b708d42a88da4c",
+      "title": "Global Macro Early Warning JPY160 Carry Risk"
+    },
     {
       "category": "early-warning",
       "date": "2026-08-29",
