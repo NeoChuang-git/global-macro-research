@@ -16,11 +16,11 @@ from typing import Dict, Mapping, Optional
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CATEGORIES = ("early-warning", "morning", "weekly")
+CATEGORIES = ("early-warning", "daily", "weekly")
 CATEGORY_ENV_VARS = {
-    "early-warning": "DRIVE_FOLDER_EARLY_WARNING",
-    "morning": "DRIVE_FOLDER_MORNING",
-    "weekly": "DRIVE_FOLDER_WEEKLY",
+    "early-warning": ("DRIVE_FOLDER_EARLY_WARNING",),
+    "daily": ("DRIVE_FOLDER_DAILY", "DRIVE_FOLDER_MORNING"),
+    "weekly": ("DRIVE_FOLDER_WEEKLY",),
 }
 STATE_PATH = Path("data/drive-sync-state.json")
 INDEX_PATH = Path("data/reports.json")
@@ -122,12 +122,19 @@ def classify_drive_file(category, name, modified_time):
 
 def resolve_folder_ids(environment):
     folder_ids = {}
-    for category, variable in CATEGORY_ENV_VARS.items():
-        value = environment.get(variable, "").strip()
+    for category, variables in CATEGORY_ENV_VARS.items():
+        value = ""
+        matched_var = None
+        for variable in variables:
+            val = environment.get(variable, "").strip()
+            if val:
+                value = val
+                matched_var = variable
+                break
         if not value:
-            raise SyncError(f"missing required environment variable: {variable}")
+            raise SyncError(f"missing required environment variable: {variables[0]}")
         if not re.fullmatch(r"[A-Za-z0-9_-]+", value):
-            raise SyncError(f"invalid Drive folder ID in {variable}")
+            raise SyncError(f"invalid Drive folder ID in {matched_var or variables[0]}")
         folder_ids[category] = value
     if len(set(folder_ids.values())) != len(CATEGORIES):
         raise SyncError("the three Drive folder IDs must be distinct")

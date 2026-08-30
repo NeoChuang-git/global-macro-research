@@ -68,24 +68,24 @@ mirrored because the source contract intentionally admits only `.html` files.
   "schema_version": 1,
   "reports": [
     {
-      "category": "morning",
+      "category": "daily",
       "date": "2026-08-28",
-      "file": "reports/morning/Global_Macro_Morning_2026-08-28.html",
+      "file": "reports/daily/Global_Daily_Brief_2026-08-28.html",
       "modified_time": "2026-08-28T01:00:00Z",
       "sha256": "...",
-      "title": "Global Macro Morning"
+      "title": "Global Daily Brief"
     }
   ],
   "latest": {
     "early-warning": null,
-    "morning": {},
+    "daily": {},
     "weekly": null
   }
 }
 ```
 
 Reports sort by report date descending, Drive modified time descending, category
-order (`early-warning`, `morning`, `weekly`), title, and path. A filename date in
+order (`early-warning`, `daily`, `weekly`), title, and path. A filename date in
 `YYYY-MM-DD` or `YYYYMMDD` form wins; otherwise Drive `modifiedTime` supplies the
 date. Pre-existing reports without either remain indexed with a null date.
 

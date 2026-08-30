@@ -7,7 +7,7 @@
     if (
       parts.length < 3 ||
       parts[0] !== "reports" ||
-      !["early-warning", "morning", "weekly"].includes(parts[1]) ||
+      !["early-warning", "daily", "morning", "weekly"].includes(parts[1]) ||
       parts.some((part) => !part || part === "." || part === "..") ||
       !parts[parts.length - 1].toLowerCase().endsWith(".html")
     ) {

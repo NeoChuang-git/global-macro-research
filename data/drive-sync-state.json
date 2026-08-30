@@ -1,5 +1,32 @@
 {
   "files": {
+    "reports/daily/Global_Daily_Brief_2026-08-25.html": {
+      "category": "daily",
+      "drive_file_id": "10dgWjdJhW-HwSZRp8tFbQ_wSDiQLIiWu",
+      "md5_checksum": "1664950dcfba91c9594fdccd61c01f47",
+      "modified_time": "2026-08-25T09:50:19.000Z",
+      "name": "Global_Daily_Brief_2026-08-25.html",
+      "sha256": "46b5e97ee55f4e160bc32db892996c1484630065825290042ea01778866e768b",
+      "size": 11594
+    },
+    "reports/daily/Global_Daily_Brief_2026-08-28.html": {
+      "category": "daily",
+      "drive_file_id": "1s2_OWFrcZklXayih1jjffplxS2X18_Z0",
+      "md5_checksum": "9ae4fe5b711167f3f7127878e8d178b8",
+      "modified_time": "2026-08-28T06:08:25.220Z",
+      "name": "Global_Daily_Brief_2026-08-28.html",
+      "sha256": "b82e0d226d1d408b5aa5269b60641dc19d5057aabe9bb1ffc6a4750ae8f122f6",
+      "size": 11378
+    },
+    "reports/daily/Global_Daily_Brief_2026-08-29.html": {
+      "category": "daily",
+      "drive_file_id": "1ukVlmfHeM9bthHqHGi_NCskL734nFzyp",
+      "md5_checksum": "4f6078a83c0a5e74c949bbb294db0509",
+      "modified_time": "2026-08-28T23:32:58.074Z",
+      "name": "Global_Daily_Brief_2026-08-29.html",
+      "sha256": "3eff685e8b2a732dd812bea92dc41fb2dc4f9c826b24e340343525460ab91c97",
+      "size": 19852
+    },
     "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html": {
       "category": "early-warning",
       "drive_file_id": "1F4J6iY1fkpydoaD_QngBAKFe-gxJo_Sr",
@@ -36,15 +63,6 @@
       "sha256": "64876661115b8ece8c8bfa5c21585d7361efb8af1bf6a4b5385860fc16cb9e0c",
       "size": 5314
     },
-    "reports/early-warning/Global_Macro_Early_Warning_2026-08-30_JPY160_Carry_Risk.html": {
-      "category": "early-warning",
-      "drive_file_id": "1pwDt3wBDiV5_oQwZf3HGNu5YXpmMJ7ZM",
-      "md5_checksum": "3f0fdef7054f952bac82e8d53d901874",
-      "modified_time": "2026-08-30T01:59:20.392Z",
-      "name": "Global_Macro_Early_Warning_2026-08-30_JPY160_Carry_Risk.html",
-      "sha256": "120269174acc09a37622d47feb4c72e5f7d5e98f90d465c2e5b708d42a88da4c",
-      "size": 3902
-    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
@@ -53,42 +71,6 @@
       "name": "Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html",
       "sha256": "8bae773a78200d801921af3e3ceeeaed20af6f512b0efc944f8db836f20cee80",
       "size": 9324
-    },
-    "reports/morning/Global_Macro_Morning_2026-08-25.html": {
-      "category": "morning",
-      "drive_file_id": "10dgWjdJhW-HwSZRp8tFbQ_wSDiQLIiWu",
-      "md5_checksum": "1664950dcfba91c9594fdccd61c01f47",
-      "modified_time": "2026-08-25T09:50:19.000Z",
-      "name": "Global_Macro_Morning_2026-08-25.html",
-      "sha256": "dc360b6de538e00c5cf04d5a7b015ff8d8a620d6330d0df986e6886985c2a7b8",
-      "size": 18005
-    },
-    "reports/morning/Global_Macro_Morning_2026-08-28.html": {
-      "category": "morning",
-      "drive_file_id": "1s2_OWFrcZklXayih1jjffplxS2X18_Z0",
-      "md5_checksum": "9ae4fe5b711167f3f7127878e8d178b8",
-      "modified_time": "2026-08-28T06:08:25.220Z",
-      "name": "Global_Macro_Morning_2026-08-28.html",
-      "sha256": "e557c83ad84a50c859fa42e113f86905cc2367420370e1ab88953ce0aeaa772f",
-      "size": 11381
-    },
-    "reports/morning/Global_Macro_Morning_2026-08-29.html": {
-      "category": "morning",
-      "drive_file_id": "1ukVlmfHeM9bthHqHGi_NCskL734nFzyp",
-      "md5_checksum": "4f6078a83c0a5e74c949bbb294db0509",
-      "modified_time": "2026-08-28T23:32:58.074Z",
-      "name": "Global_Macro_Morning_2026-08-29.html",
-      "sha256": "642844c9452bbc3def3b0a84e8ea876c688806d189b9cc4d23b98fe096fea169",
-      "size": 19861
-    },
-    "reports/morning/Global_Macro_Morning_2026-08-30.html": {
-      "category": "morning",
-      "drive_file_id": "1nSfaOUVlEAiYJm-SW_gSxBrsizUjaSVO",
-      "md5_checksum": "bac494ba8f747756474d8313325e6a8c",
-      "modified_time": "2026-08-30T03:13:12.758Z",
-      "name": "Global_Macro_Morning_2026-08-30.html",
-      "sha256": "7a5d336734d932c2a1114918ea1979df9ec40351ce0819fe5a21703ee7ed5076",
-      "size": 3380
     }
   },
   "schema_version": 1

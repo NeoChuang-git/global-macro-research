@@ -55,8 +55,9 @@
     }
 
     const initial = new URLSearchParams(location.search);
-    const initialCategory = initial.get("category");
-    if (["early-warning", "morning", "weekly"].includes(initialCategory)) {
+    let initialCategory = initial.get("category");
+    if (initialCategory === "morning") initialCategory = "daily";
+    if (["early-warning", "daily", "weekly"].includes(initialCategory)) {
       categoryInput.value = initialCategory;
     }
     dateInput.value = initial.get("date") || "";

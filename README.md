@@ -8,7 +8,7 @@ to three repository mirrors:
 | Google Drive folder | Repository mirror |
 | --- | --- |
 | `early-warning` | `reports/early-warning/` |
-| `morning` | `reports/morning/` |
+| `daily` | `reports/daily/` |
 | `weekly` | `reports/weekly/` |
 
 `scripts/sync-drive.py` reads those folders with the Google Drive API, mirrors
@@ -21,13 +21,13 @@ the AI-token maintenance cost is **0**.
 
 ```text
 Google Drive (read only)
-  early-warning / morning / weekly
+  early-warning / daily / weekly
                  │
                  ▼
 GitHub Actions: sync-reports.yml
   scripts/sync-drive.py
                  │
-                 ├── reports/{early-warning,morning,weekly}/**/*.html
+                 ├── reports/{early-warning,daily,weekly}/**/*.html
                  └── data/reports.json
                               │
                               ▼

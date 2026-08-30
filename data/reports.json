@@ -1,39 +1,39 @@
 {
   "latest": {
+    "daily": {
+      "category": "daily",
+      "date": "2026-08-30",
+      "file": "reports/daily/Global_Daily_Brief_2026-08-30.html",
+      "modified_time": null,
+      "sha256": "728e296c6128cca62e8ddcd39695eb38f3ba3cfa2c2fcf4e2b5c126300c720e5",
+      "title": "Global Daily Brief"
+    },
     "early-warning": {
       "category": "early-warning",
       "date": "2026-08-30",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-30_JPY160_Carry_Risk.html",
-      "modified_time": "2026-08-30T01:59:20.392Z",
+      "modified_time": null,
       "sha256": "120269174acc09a37622d47feb4c72e5f7d5e98f90d465c2e5b708d42a88da4c",
       "title": "Global Macro Early Warning JPY160 Carry Risk"
-    },
-    "morning": {
-      "category": "morning",
-      "date": "2026-08-30",
-      "file": "reports/morning/Global_Macro_Morning_2026-08-30.html",
-      "modified_time": "2026-08-30T03:13:12.758Z",
-      "sha256": "7a5d336734d932c2a1114918ea1979df9ec40351ce0819fe5a21703ee7ed5076",
-      "title": "Global Macro Morning"
     },
     "weekly": null
   },
   "reports": [
     {
-      "category": "morning",
-      "date": "2026-08-30",
-      "file": "reports/morning/Global_Macro_Morning_2026-08-30.html",
-      "modified_time": "2026-08-30T03:13:12.758Z",
-      "sha256": "7a5d336734d932c2a1114918ea1979df9ec40351ce0819fe5a21703ee7ed5076",
-      "title": "Global Macro Morning"
-    },
-    {
       "category": "early-warning",
       "date": "2026-08-30",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-30_JPY160_Carry_Risk.html",
-      "modified_time": "2026-08-30T01:59:20.392Z",
+      "modified_time": null,
       "sha256": "120269174acc09a37622d47feb4c72e5f7d5e98f90d465c2e5b708d42a88da4c",
       "title": "Global Macro Early Warning JPY160 Carry Risk"
+    },
+    {
+      "category": "daily",
+      "date": "2026-08-30",
+      "file": "reports/daily/Global_Daily_Brief_2026-08-30.html",
+      "modified_time": null,
+      "sha256": "728e296c6128cca62e8ddcd39695eb38f3ba3cfa2c2fcf4e2b5c126300c720e5",
+      "title": "Global Daily Brief"
     },
     {
       "category": "early-warning",
@@ -52,12 +52,12 @@
       "title": "Global Macro Early Warning 0805 Gold Rates Confirmation"
     },
     {
-      "category": "morning",
+      "category": "daily",
       "date": "2026-08-29",
-      "file": "reports/morning/Global_Macro_Morning_2026-08-29.html",
+      "file": "reports/daily/Global_Daily_Brief_2026-08-29.html",
       "modified_time": "2026-08-28T23:32:58.074Z",
-      "sha256": "642844c9452bbc3def3b0a84e8ea876c688806d189b9cc4d23b98fe096fea169",
-      "title": "Global Macro Morning"
+      "sha256": "3eff685e8b2a732dd812bea92dc41fb2dc4f9c826b24e340343525460ab91c97",
+      "title": "Global Daily Brief"
     },
     {
       "category": "early-warning",
@@ -76,12 +76,12 @@
       "title": "Global Macro Early Warning Japan BOJ"
     },
     {
-      "category": "morning",
+      "category": "daily",
       "date": "2026-08-28",
-      "file": "reports/morning/Global_Macro_Morning_2026-08-28.html",
+      "file": "reports/daily/Global_Daily_Brief_2026-08-28.html",
       "modified_time": "2026-08-28T06:08:25.220Z",
-      "sha256": "e557c83ad84a50c859fa42e113f86905cc2367420370e1ab88953ce0aeaa772f",
-      "title": "Global Macro Morning"
+      "sha256": "b82e0d226d1d408b5aa5269b60641dc19d5057aabe9bb1ffc6a4750ae8f122f6",
+      "title": "Global Daily Brief"
     },
     {
       "category": "early-warning",
@@ -92,12 +92,12 @@
       "title": "Global Macro Taiwan Early Warning NVIDIA Post Earnings"
     },
     {
-      "category": "morning",
+      "category": "daily",
       "date": "2026-08-25",
-      "file": "reports/morning/Global_Macro_Morning_2026-08-25.html",
+      "file": "reports/daily/Global_Daily_Brief_2026-08-25.html",
       "modified_time": "2026-08-25T09:50:19.000Z",
-      "sha256": "dc360b6de538e00c5cf04d5a7b015ff8d8a620d6330d0df986e6886985c2a7b8",
-      "title": "Global Macro Morning"
+      "sha256": "46b5e97ee55f4e160bc32db892996c1484630065825290042ea01778866e768b",
+      "title": "Global Daily Brief"
     },
     {
       "category": "early-warning",

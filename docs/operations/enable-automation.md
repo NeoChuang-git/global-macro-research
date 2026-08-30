@@ -11,7 +11,7 @@ Repository assumed below: `NeoChuang-git/global-macro-research`.
 Create exactly three folders named:
 
 - `early-warning`
-- `morning`
+- `daily`
 - `weekly`
 
 Copy each folder ID from its Drive URL. Later, share each folder as **Viewer**
@@ -82,7 +82,7 @@ In **Settings → Secrets and variables → Actions → Variables**, add:
 | `GCP_WORKLOAD_IDENTITY_PROVIDER` | `projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/github/providers/global-macro-research` |
 | `GCP_SERVICE_ACCOUNT` | `global-macro-drive-reader@PROJECT_ID.iam.gserviceaccount.com` |
 | `DRIVE_FOLDER_EARLY_WARNING` | Drive folder ID for `early-warning` |
-| `DRIVE_FOLDER_MORNING` | Drive folder ID for `morning` |
+| `DRIVE_FOLDER_DAILY` | Drive folder ID for `daily` (or `DRIVE_FOLDER_MORNING` for legacy compatibility) |
 | `DRIVE_FOLDER_WEEKLY` | Drive folder ID for `weekly` |
 
 These are identifiers, not credentials. The preferred configuration has **zero

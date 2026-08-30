@@ -37,7 +37,7 @@ def _validated_report_path(repo_root, value):
         raise BuildError(f"unsafe report path: {value}")
     if pure.parts[0] != "reports" or pure.parts[1] not in {
         "early-warning",
-        "morning",
+        "daily",
         "weekly",
     }:
         raise BuildError(f"unsafe report path: {value}")
@@ -90,7 +90,7 @@ def build_site(repo_root, output):
     if index.get("schema_version") != 1 or not isinstance(index.get("reports"), list):
         raise BuildError("unsupported reports index schema")
     latest = index.get("latest")
-    categories = {"early-warning", "morning", "weekly"}
+    categories = {"early-warning", "daily", "weekly"}
     if not isinstance(latest, dict) or set(latest) != categories:
         raise BuildError("invalid latest-report index")
 

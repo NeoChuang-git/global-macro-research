@@ -95,15 +95,15 @@ class SyncDriveTests(unittest.TestCase):
         self.assertEqual(report["category"], "early-warning")
         self.assertEqual(report["date"], "2026-08-28")
         self.assertEqual(report["title"], "Global Macro Early Warning")
-        self.assertIsNone(classify_drive_file("morning", "notes.pdf", "2026-08-29T00:00:00Z"))
+        self.assertIsNone(classify_drive_file("daily", "notes.pdf", "2026-08-29T00:00:00Z"))
 
         with self.assertRaises(SyncError):
             classify_drive_file("weekly", "../escape.html", "2026-08-29T00:00:00Z")
 
     def test_repeated_sync_is_idempotent_and_does_not_download_unchanged_file(self):
-        content = b"<html><title>Morning</title></html>"
-        remote = drive_file("one", "Global_Macro_Morning_2026-08-28.html", content)
-        self.folders[self.folder_ids["morning"]] = [remote]
+        content = b"<html><title>Daily</title></html>"
+        remote = drive_file("one", "Global_Daily_Brief_2026-08-28.html", content)
+        self.folders[self.folder_ids["daily"]] = [remote]
         service = self._service({"one": content})
 
         first = sync_reports(service, self.root, self.folder_ids)
@@ -136,8 +136,8 @@ class SyncDriveTests(unittest.TestCase):
                 ("ew-new", "Risk_2026-08-28.html", b"new", "2026-08-28T08:00:00Z"),
                 ("ew-old", "Risk_2026-08-27.html", b"old", "2026-08-27T08:00:00Z"),
             ],
-            "morning": [
-                ("am", "Morning_20260828.html", b"morning", "2026-08-28T06:00:00Z")
+            "daily": [
+                ("am", "Daily_20260828.html", b"daily", "2026-08-28T06:00:00Z")
             ],
             "weekly": [],
         }
@@ -156,21 +156,21 @@ class SyncDriveTests(unittest.TestCase):
             [item["file"] for item in index["reports"]],
             [
                 "reports/early-warning/Risk_2026-08-28.html",
-                "reports/morning/Morning_20260828.html",
+                "reports/daily/Daily_20260828.html",
                 "reports/early-warning/Risk_2026-08-27.html",
             ],
         )
         self.assertEqual(index["latest"]["early-warning"]["date"], "2026-08-28")
-        self.assertEqual(index["latest"]["morning"]["date"], "2026-08-28")
+        self.assertEqual(index["latest"]["daily"]["date"], "2026-08-28")
         self.assertIsNone(index["latest"]["weekly"])
 
     def test_redownloads_missing_local_file_even_when_state_checksum_matches(self):
         content = b"<html>restore me</html>"
-        remote = drive_file("missing", "Morning_2026-08-28.html", content)
-        self.folders[self.folder_ids["morning"]] = [remote]
+        remote = drive_file("missing", "Daily_2026-08-28.html", content)
+        self.folders[self.folder_ids["daily"]] = [remote]
         service = self._service({"missing": content})
         sync_reports(service, self.root, self.folder_ids)
-        local = self.root / "reports" / "morning" / remote["name"]
+        local = self.root / "reports" / "daily" / remote["name"]
         local.unlink()
 
         result = sync_reports(service, self.root, self.folder_ids)
@@ -197,7 +197,7 @@ class SyncDriveTests(unittest.TestCase):
             resolve_folder_ids(
                 {
                     "DRIVE_FOLDER_EARLY_WARNING": "ew",
-                    "DRIVE_FOLDER_MORNING": "am",
+                    "DRIVE_FOLDER_DAILY": "am",
                 }
             )
 
@@ -205,18 +205,38 @@ class SyncDriveTests(unittest.TestCase):
             resolve_folder_ids(
                 {
                     "DRIVE_FOLDER_EARLY_WARNING": "ew' or trashed = true",
-                    "DRIVE_FOLDER_MORNING": "am",
+                    "DRIVE_FOLDER_DAILY": "am",
                     "DRIVE_FOLDER_WEEKLY": "week",
                 }
             )
 
+        # Supports fallback from DRIVE_FOLDER_MORNING when DRIVE_FOLDER_DAILY is absent
+        folder_ids = resolve_folder_ids(
+            {
+                "DRIVE_FOLDER_EARLY_WARNING": "ew",
+                "DRIVE_FOLDER_MORNING": "am-fallback",
+                "DRIVE_FOLDER_WEEKLY": "week",
+            }
+        )
+        self.assertEqual(folder_ids["daily"], "am-fallback")
+
+        # DRIVE_FOLDER_DAILY takes precedence over DRIVE_FOLDER_MORNING
+        folder_ids_direct = resolve_folder_ids(
+            {
+                "DRIVE_FOLDER_EARLY_WARNING": "ew",
+                "DRIVE_FOLDER_DAILY": "am-direct",
+                "DRIVE_FOLDER_MORNING": "am-fallback",
+                "DRIVE_FOLDER_WEEKLY": "week",
+            }
+        )
+        self.assertEqual(folder_ids_direct["daily"], "am-direct")
 
     def test_rejects_exceeding_batch_limits(self):
         content = b"<html>report</html>"
-        name = "Global_Macro_Morning_2026-08-28.html"
-        self.folders[self.folder_ids["morning"]] = [
+        name = "Global_Daily_Brief_2026-08-28.html"
+        self.folders[self.folder_ids["daily"]] = [
             drive_file("m1", name, content),
-            drive_file("m2", "Global_Macro_Morning_2026-08-29.html", content),
+            drive_file("m2", "Global_Daily_Brief_2026-08-29.html", content),
         ]
         service = self._service({"m1": content, "m2": content})
 
@@ -231,14 +251,14 @@ class SyncDriveTests(unittest.TestCase):
 
     def test_rejects_parent_symlink_in_sync_reports(self):
         content = b"<html>symlink target</html>"
-        name = "Global_Macro_Morning_2026-08-28.html"
-        self.folders[self.folder_ids["morning"]] = [drive_file("sym", name, content)]
+        name = "Global_Daily_Brief_2026-08-28.html"
+        self.folders[self.folder_ids["daily"]] = [drive_file("sym", name, content)]
         service = self._service({"sym": content})
 
         outside = self.root.parent / "outside_dir"
         outside.mkdir(parents=True, exist_ok=True)
         (self.root / "reports").mkdir(parents=True, exist_ok=True)
-        (self.root / "reports" / "morning").symlink_to(outside)
+        (self.root / "reports" / "daily").symlink_to(outside)
 
         with self.assertRaisesRegex(SyncError, "unsafe report path or symlink ancestor"):
             sync_reports(service, self.root, self.folder_ids)

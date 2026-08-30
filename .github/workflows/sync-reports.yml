@@ -45,6 +45,7 @@ jobs:
       - name: Mirror Drive HTML and rebuild the index
         env:
           DRIVE_FOLDER_EARLY_WARNING: ${{ vars.DRIVE_FOLDER_EARLY_WARNING }}
+          DRIVE_FOLDER_DAILY: ${{ vars.DRIVE_FOLDER_DAILY || vars.DRIVE_FOLDER_MORNING }}
           DRIVE_FOLDER_MORNING: ${{ vars.DRIVE_FOLDER_MORNING }}
           DRIVE_FOLDER_WEEKLY: ${{ vars.DRIVE_FOLDER_WEEKLY }}
         run: python scripts/sync-drive.py

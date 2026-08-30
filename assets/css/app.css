@@ -369,6 +369,7 @@ main {
   background: linear-gradient(90deg, #ef4444, #f97316);
 }
 
+.report-card.category-daily::before,
 .report-card.category-morning::before {
   background: linear-gradient(90deg, #0284c7, #38bdf8);
 }
@@ -403,6 +404,7 @@ main {
   border-color: var(--red-border);
 }
 
+.report-card.category-daily .report-badge,
 .report-card.category-morning .report-badge {
   background: var(--cyan-light);
   color: var(--cyan);
@@ -570,6 +572,7 @@ main {
   border-color: var(--red-border);
 }
 
+.category-pill.category-daily,
 .category-pill.category-morning {
   background: var(--cyan-light);
   color: var(--cyan);

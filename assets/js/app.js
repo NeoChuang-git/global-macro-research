@@ -3,7 +3,7 @@
 
   const categoryLabels = {
     "early-warning": "Early Warning",
-    morning: "Morning",
+    daily: "Daily Brief",
     weekly: "Weekly",
   };
 

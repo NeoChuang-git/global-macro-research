@@ -38,7 +38,7 @@ class BuildSiteTests(unittest.TestCase):
                     "reports": reports,
                     "latest": {
                         "early-warning": None,
-                        "morning": None,
+                        "daily": None,
                         "weekly": None,
                     },
                 }
@@ -47,16 +47,16 @@ class BuildSiteTests(unittest.TestCase):
         )
 
     def test_builds_minimal_site_and_copies_indexed_reports(self):
-        report_path = self.root / "reports" / "morning" / "Morning_2026-08-28.html"
+        report_path = self.root / "reports" / "daily" / "Daily_2026-08-28.html"
         report_path.parent.mkdir(parents=True)
         report_path.write_text("<html>report</html>", encoding="utf-8")
         self._write_index(
             [
                 {
-                    "category": "morning",
-                    "title": "Morning",
+                    "category": "daily",
+                    "title": "Daily",
                     "date": "2026-08-28",
-                    "file": "reports/morning/Morning_2026-08-28.html",
+                    "file": "reports/daily/Daily_2026-08-28.html",
                     "sha256": hashlib.sha256(b"<html>report</html>").hexdigest(),
                 }
             ]
@@ -67,7 +67,7 @@ class BuildSiteTests(unittest.TestCase):
 
         self.assertTrue((output / "index.html").is_file())
         self.assertTrue((output / "assets" / "js" / "app.js").is_file())
-        self.assertEqual((output / "reports" / "morning" / report_path.name).read_text(), "<html>report</html>")
+        self.assertEqual((output / "reports" / "daily" / report_path.name).read_text(), "<html>report</html>")
         self.assertFalse((output / "scripts").exists())
 
     def test_rejects_missing_or_escaping_report_reference(self):
@@ -121,18 +121,18 @@ class BuildSiteTests(unittest.TestCase):
     def test_rejects_parent_symlink_in_build_site(self):
         outside = self.root.parent / "outside_site"
         outside.mkdir(parents=True, exist_ok=True)
-        (outside / "Morning_2026-08-28.html").write_text("<html>outside</html>", encoding="utf-8")
+        (outside / "Daily_2026-08-28.html").write_text("<html>outside</html>", encoding="utf-8")
 
         (self.root / "reports").mkdir(parents=True, exist_ok=True)
-        (self.root / "reports" / "morning").symlink_to(outside)
+        (self.root / "reports" / "daily").symlink_to(outside)
 
         self._write_index(
             [
                 {
-                    "category": "morning",
-                    "title": "Morning",
+                    "category": "daily",
+                    "title": "Daily",
                     "date": "2026-08-28",
-                    "file": "reports/morning/Morning_2026-08-28.html",
+                    "file": "reports/daily/Daily_2026-08-28.html",
                     "sha256": hashlib.sha256(b"<html>outside</html>").hexdigest(),
                 }
             ]
