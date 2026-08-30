@@ -3,10 +3,10 @@
     "daily": {
       "category": "daily",
       "date": "2026-08-30",
-      "file": "reports/daily/Global_Macro_Morning_2026-08-30.html",
-      "modified_time": "2026-08-30T04:25:38.764Z",
-      "sha256": "b73a157108e7f38f303f444d1e33d1e3538088d93bce88b9d2ef612cf3d712db",
-      "title": "Global Macro Morning"
+      "file": "reports/daily/Global_Daily_Brief_2026-08-30.html",
+      "modified_time": "2026-08-30T05:24:11.896Z",
+      "sha256": "2c9e79c2677f0f11752bb83dad73347a2f44695a5627215e90000b0b363d3a53",
+      "title": "Global Daily Brief"
     },
     "early-warning": {
       "category": "early-warning",
@@ -22,6 +22,14 @@
     {
       "category": "daily",
       "date": "2026-08-30",
+      "file": "reports/daily/Global_Daily_Brief_2026-08-30.html",
+      "modified_time": "2026-08-30T05:24:11.896Z",
+      "sha256": "2c9e79c2677f0f11752bb83dad73347a2f44695a5627215e90000b0b363d3a53",
+      "title": "Global Daily Brief"
+    },
+    {
+      "category": "daily",
+      "date": "2026-08-30",
       "file": "reports/daily/Global_Macro_Morning_2026-08-30.html",
       "modified_time": "2026-08-30T04:25:38.764Z",
       "sha256": "b73a157108e7f38f303f444d1e33d1e3538088d93bce88b9d2ef612cf3d712db",
@@ -34,14 +42,6 @@
       "modified_time": "2026-08-30T01:59:20.392Z",
       "sha256": "120269174acc09a37622d47feb4c72e5f7d5e98f90d465c2e5b708d42a88da4c",
       "title": "Global Macro Early Warning JPY160 Carry Risk"
-    },
-    {
-      "category": "daily",
-      "date": "2026-08-30",
-      "file": "reports/daily/Global_Daily_Brief_2026-08-30.html",
-      "modified_time": null,
-      "sha256": "728e296c6128cca62e8ddcd39695eb38f3ba3cfa2c2fcf4e2b5c126300c720e5",
-      "title": "Global Daily Brief"
     },
     {
       "category": "early-warning",
