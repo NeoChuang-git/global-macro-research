@@ -19,13 +19,21 @@
     "weekly": {
       "category": "weekly",
       "date": "2026-08-30",
-      "file": "reports/weekly/Weekly_Strategy_2026-08-30.html",
-      "modified_time": "2026-08-30T06:02:34.173Z",
-      "sha256": "bea69ca6cbde8f4d726f4d57a9f05712cdcfa15226c305626ce1ea3a1f343169",
-      "title": "Weekly Strategy"
+      "file": "reports/weekly/Weekly_Strategy_2026-08-30_rerun_1421.html",
+      "modified_time": "2026-08-30T06:23:50.989Z",
+      "sha256": "caa7b5491f8b4405fefaf90f1c17db8e7598701cf9690f77036d83c7b25439ce",
+      "title": "Weekly Strategy rerun 1421"
     }
   },
   "reports": [
+    {
+      "category": "weekly",
+      "date": "2026-08-30",
+      "file": "reports/weekly/Weekly_Strategy_2026-08-30_rerun_1421.html",
+      "modified_time": "2026-08-30T06:23:50.989Z",
+      "sha256": "caa7b5491f8b4405fefaf90f1c17db8e7598701cf9690f77036d83c7b25439ce",
+      "title": "Weekly Strategy rerun 1421"
+    },
     {
       "category": "weekly",
       "date": "2026-08-30",
