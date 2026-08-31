@@ -11,10 +11,10 @@
     "early-warning": {
       "category": "early-warning",
       "date": "2026-08-31",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_1906_taiwan_foreign_flow.html",
-      "modified_time": "2026-08-31T12:23:17.141Z",
-      "sha256": "4f34b6ed5d9559cd6d92c2434c8afd039d06039a994a13d0f2f9c7de13cb00a6",
-      "title": "Global Macro Early Warning 1906 taiwan foreign flow"
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_2057_energy_inflation_rates.html",
+      "modified_time": "2026-08-31T13:33:34.498Z",
+      "sha256": "58c23ec3208f74256fb75b159d7c4510e2db6e78bc7ece200e200a09f0e1645b",
+      "title": "Global Macro Early Warning 2057 energy inflation rates"
     },
     "weekly": {
       "category": "weekly",
@@ -26,6 +26,14 @@
     }
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-08-31",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_2057_energy_inflation_rates.html",
+      "modified_time": "2026-08-31T13:33:34.498Z",
+      "sha256": "58c23ec3208f74256fb75b159d7c4510e2db6e78bc7ece200e200a09f0e1645b",
+      "title": "Global Macro Early Warning 2057 energy inflation rates"
+    },
     {
       "category": "early-warning",
       "date": "2026-08-31",
