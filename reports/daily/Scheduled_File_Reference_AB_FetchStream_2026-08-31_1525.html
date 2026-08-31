@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>Scheduled File Reference A/B Canary</title>
+<style>
+:root{--bg:#fafafa;--fg:#111;--card:#fff;--muted:#666}body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:24px;line-height:1.55}main{max-width:980px;margin:auto}section{background:var(--card);border:1px solid #ddd;border-radius:12px;padding:18px;margin:16px 0}h1,h2{margin:.2em 0 .6em}table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid #ddd;padding:6px 8px;text-align:left}.badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#eee}svg{width:100%;height:140px;border:1px solid #ddd;border-radius:8px}code{background:#f1f1f1;padding:2px 4px;border-radius:4px}
+</style>
+</head>
+<body>
+<main>
+<h1>Scheduled File Reference A/B Canary</h1>
+<p class="badge">SCHEDULED_FILE_REFERENCE_AB_CANARY_V1</p>
+<p>ROUTE_A_EXPORT_FILE · ROUTE_B_FETCH_STREAM · 測試字元：&amp; &lt; &gt; &quot; &#39; → × ± % 📊 ⚠️ ✅ 🟡 🔴</p>
+<section><h2>Executive Take</h2><p>這是一份 Scheduled Runtime connector reference A/B canary。它只測試 Google Drive 原生 connector reference 的建立與 egress，不包含任何投資建議。相同來源 HTML 將經由兩條路徑輸送，以排除內容差異造成的干擾。</p></section>
+<section><h2>Signal Delta</h2><p>Deterministic synthetic signals for transport validation. ROUTE_A_EXPORT_FILE 與 ROUTE_B_FETCH_STREAM 必須同時存在於原始 source。</p></section>
+<section><h2>Why It Matters</h2><p>若 reference 能建立但 upload_file 拒絕，代表問題位於 connector reference egress / handoff boundary，而不是 HTML source、Google Docs write 或 target-folder metadata。</p></section>
+<section><h2>Cross-Asset Confirmation</h2><p>CANARY synthetic cross-asset chain: Rates → FX → Credit → Liquidity → Taiwan. Symbols and entities must survive plain-text document transport.</p><svg viewBox="0 0 800 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="canary chart"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ddd"/><stop offset="1" stop-color="#999"/></linearGradient></defs><rect x="20" y="20" width="760" height="100" rx="12" fill="url(#g)"/><polyline points="40,100 140,80 240,90 340,55 440,70 540,45 640,60 740,35" fill="none" stroke="#111" stroke-width="3"/><text x="40" y="45">CANARY → Cross-Asset Confirmation</text></svg></section>
+<section><h2>Taiwan Transmission</h2><p>美國利率(Yield) → 美元(USD) → 資金流(Flow) → 台灣市場(Taiwan). 文字包含繁體中文、English technical terms、emoji 與 HTML entities。</p></section>
+<section><h2>Risk Light</h2><p>🟡 CANARY only. 此燈號只用於傳輸測試，不代表真實市場風險。</p></section>
+<section><h2>Next Confirmation</h2><p>成功條件：reference created、reference egress allowed、upload succeeds、final raw HTML verified in exact target folder。</p></section>
+<section><h2>Transport Table</h2><table><thead><tr><th>#</th><th>Item</th><th>State</th><th>Score</th><th>Note</th></tr></thead><tbody>
+<tr><td>1</td><td>Signal 1</td><td>改善</td><td>51</td><td>CANARY → Taiwan 1</td></tr>
+<tr><td>2</td><td>Signal 2</td><td>惡化</td><td>52</td><td>CANARY → Taiwan 2</td></tr>
+<tr><td>3</td><td>Signal 3</td><td>改善</td><td>53</td><td>CANARY → Taiwan 3</td></tr>
+<tr><td>4</td><td>Signal 4</td><td>惡化</td><td>54</td><td>CANARY → Taiwan 4</td></tr>
+<tr><td>5</td><td>Signal 5</td><td>改善</td><td>55</td><td>CANARY → Taiwan 5</td></tr>
+<tr><td>6</td><td>Signal 6</td><td>惡化</td><td>56</td><td>CANARY → Taiwan 6</td></tr>
+<tr><td>7</td><td>Signal 7</td><td>改善</td><td>57</td><td>CANARY → Taiwan 7</td></tr>
+<tr><td>8</td><td>Signal 8</td><td>惡化</td><td>58</td><td>CANARY → Taiwan 8</td></tr>
+<tr><td>9</td><td>Signal 9</td><td>改善</td><td>59</td><td>CANARY → Taiwan 9</td></tr>
+<tr><td>10</td><td>Signal 10</td><td>惡化</td><td>60</td><td>CANARY → Taiwan 10</td></tr>
+<tr><td>11</td><td>Signal 11</td><td>改善</td><td>61</td><td>CANARY → Taiwan 11</td></tr>
+<tr><td>12</td><td>Signal 12</td><td>惡化</td><td>62</td><td>CANARY → Taiwan 12</td></tr>
+<tr><td>13</td><td>Signal 13</td><td>改善</td><td>63</td><td>CANARY → Taiwan 13</td></tr>
+<tr><td>14</td><td>Signal 14</td><td>惡化</td><td>64</td><td>CANARY → Taiwan 14</td></tr>
+<tr><td>15</td><td>Signal 15</td><td>改善</td><td>65</td><td>CANARY → Taiwan 15</td></tr>
+<tr><td>16</td><td>Signal 16</td><td>惡化</td><td>66</td><td>CANARY → Taiwan 16</td></tr>
+<tr><td>17</td><td>Signal 17</td><td>改善</td><td>67</td><td>CANARY → Taiwan 17</td></tr>
+<tr><td>18</td><td>Signal 18</td><td>惡化</td><td>68</td><td>CANARY → Taiwan 18</td></tr>
+<tr><td>19</td><td>Signal 19</td><td>改善</td><td>69</td><td>CANARY → Taiwan 19</td></tr>
+<tr><td>20</td><td>Signal 20</td><td>惡化</td><td>70</td><td>CANARY → Taiwan 20</td></tr>
+<tr><td>21</td><td>Signal 21</td><td>改善</td><td>71</td><td>CANARY → Taiwan 21</td></tr>
+<tr><td>22</td><td>Signal 22</td><td>惡化</td><td>72</td><td>CANARY → Taiwan 22</td></tr>
+<tr><td>23</td><td>Signal 23</td><td>改善</td><td>73</td><td>CANARY → Taiwan 23</td></tr>
+<tr><td>24</td><td>Signal 24</td><td>惡化</td><td>74</td><td>CANARY → Taiwan 24</td></tr>
+<tr><td>25</td><td>Signal 25</td><td>改善</td><td>75</td><td>CANARY → Taiwan 25</td></tr>
+<tr><td>26</td><td>Signal 26</td><td>惡化</td><td>76</td><td>CANARY → Taiwan 26</td></tr>
+<tr><td>27</td><td>Signal 27</td><td>改善</td><td>77</td><td>CANARY → Taiwan 27</td></tr>
+<tr><td>28</td><td>Signal 28</td><td>惡化</td><td>78</td><td>CANARY → Taiwan 28</td></tr>
+<tr><td>29</td><td>Signal 29</td><td>改善</td><td>79</td><td>CANARY → Taiwan 29</td></tr>
+<tr><td>30</td><td>Signal 30</td><td>惡化</td><td>80</td><td>CANARY → Taiwan 30</td></tr>
+<tr><td>31</td><td>Signal 31</td><td>改善</td><td>81</td><td>CANARY → Taiwan 31</td></tr>
+<tr><td>32</td><td>Signal 32</td><td>惡化</td><td>82</td><td>CANARY → Taiwan 32</td></tr>
+<tr><td>33</td><td>Signal 33</td><td>改善</td><td>83</td><td>CANARY → Taiwan 33</td></tr>
+<tr><td>34</td><td>Signal 34</td><td>惡化</td><td>84</td><td>CANARY → Taiwan 34</td></tr>
+<tr><td>35</td><td>Signal 35</td><td>改善</td><td>85</td><td>CANARY → Taiwan 35</td></tr>
+</tbody></table></section>
+<section><h2>Extended Transport Notes</h2>
+<p>CANARY padding 01: Connector-native transport validation preserves UTF-8 Traditional Chinese 中文內容、English technical terms, entities &amp; &lt; &gt;, arrows →, multiplication ×, plus/minus ±, percentage %, and emoji 📊⚠️✅.</p>
+<p>CANARY padding 02: Connector-native transport validation preserves UTF-8 Traditional Chinese 中文內容、English technical terms, entities &amp; &lt; &gt;, arrows →, multiplication ×, plus/minus ±, percentage %, and emoji 📊⚠️✅.</p>
+<p>CANARY padding 03: Connector-native transport validation preserves UTF-8 Traditional Chinese 中文內容、English technical terms, entities &amp; &lt; &gt;, arrows →, multiplication ×, plus/minus ±, percentage %, and emoji 📊⚠️✅.</p>
+<p>CANARY padding 04: Connector-native transport validation preserves UTF-8 Traditional Chinese 中文內容、English technical terms, entities &amp; &lt; &gt;, arrows →, multiplication ×, plus/minus ±, percentage %, and emoji 📊⚠️✅.</p>
+<p>CANARY padding 05: Connector-native transport validation preserves UTF-8 Traditional Chinese 中文內容、English technical terms, entities &amp; &lt; &gt;, arrows →, multiplication ×, plus/minus ±, percentage %, and emoji 📊⚠️✅.</p>
+<p>CANARY padding 06: Connector-native transport validation preserves UTF-8 Traditional Chinese 中文內容、English technical terms, entities &amp; &lt; &gt;, arrows →, multiplication ×, plus/minus ±, percentage %, and emoji 📊⚠️✅.</p>
+<p>CANARY padding 07: Connector-native transport validation preserves UTF-8 Traditional Chinese 中文內容、English technical terms, entities &amp; &lt; &gt;, arrows →, multiplication ×, plus/minus ±, percentage %, and emoji 📊⚠️✅.</p>
+<p>CANARY padding 08: Connector-native transport validation preserves UTF-8 Traditional Chinese 中文內容、English technical terms, entities &amp; &lt; &gt;, arrows →, multiplication ×, plus/minus ±, percentage %, and emoji 📊⚠️✅.</p>
+<p>CANARY padding 09: Connector-native transport validation preserves UTF-8 Traditional Chinese 中文內容、English technical terms, entities &amp; &lt; &gt;, arrows →, multiplication ×, plus/minus ±, percentage %, and emoji 📊⚠️✅.</p>
+<p>CANARY padding 10: Connector-native transport validation preserves UTF-8 Traditional Chinese 中文內容、English technical terms, entities &amp; &lt; &gt;, arrows →, multiplication ×, plus/minus ±, percentage %, and emoji 📊⚠️✅.</p>
+<p>CANARY padding 11: Connector-native transport validation preserves UTF-8 Traditional Chinese 中文內容、English technical terms, entities &amp; &lt; &gt;, arrows →, multiplication ×, plus/minus ±, percentage %, and emoji 📊⚠️✅.</p>
+<p>CANARY padding 12: Connector-native transport validation preserves UTF-8 Traditional Chinese 中文內容、English technical terms, entities &amp; &lt; &gt;, arrows →, multiplication ×, plus/minus ±, percentage %, and emoji 📊⚠️✅.</p>
+</section>
+<section><h2>Bottom Line</h2><p>Only FINAL_VERIFY of the exact non-empty raw <code>.html</code> counts as route success.</p></section>
+<script>(function(){const marker="SCHEDULED_FILE_REFERENCE_AB_CANARY_V1";function countRows(){return document.querySelectorAll("tbody tr").length;}function canaryCheck(){return marker.length>0&&countRows()>=30;}window.__CANARY_OK__=canaryCheck();})();</script>
+</main>
+</body>
+</html>

@@ -3,10 +3,10 @@
     "daily": {
       "category": "daily",
       "date": "2026-08-31",
-      "file": "reports/daily/Global_Daily_Brief_2026-08-31.html",
-      "modified_time": "2026-08-31T00:31:47.700Z",
-      "sha256": "1a9009e48d2da5110d2cd5a3f7509d0063987ca64fcd7bb78664e8292ca683c6",
-      "title": "Global Daily Brief"
+      "file": "reports/daily/Scheduled_File_Reference_AB_FetchStream_2026-08-31_1525.html",
+      "modified_time": "2026-08-31T07:27:19.362Z",
+      "sha256": "1dc4bf45c7be490d47c39f665ba36a0fb61681b075eed470260882abda9486ba",
+      "title": "Scheduled File Reference AB FetchStream 1525"
     },
     "early-warning": {
       "category": "early-warning",
@@ -26,6 +26,22 @@
     }
   },
   "reports": [
+    {
+      "category": "daily",
+      "date": "2026-08-31",
+      "file": "reports/daily/Scheduled_File_Reference_AB_FetchStream_2026-08-31_1525.html",
+      "modified_time": "2026-08-31T07:27:19.362Z",
+      "sha256": "1dc4bf45c7be490d47c39f665ba36a0fb61681b075eed470260882abda9486ba",
+      "title": "Scheduled File Reference AB FetchStream 1525"
+    },
+    {
+      "category": "daily",
+      "date": "2026-08-31",
+      "file": "reports/daily/Scheduled_File_Reference_AB_ExportFile_2026-08-31_1525.html",
+      "modified_time": "2026-08-31T07:27:07.809Z",
+      "sha256": "1dc4bf45c7be490d47c39f665ba36a0fb61681b075eed470260882abda9486ba",
+      "title": "Scheduled File Reference AB ExportFile 1525"
+    },
     {
       "category": "early-warning",
       "date": "2026-08-31",
