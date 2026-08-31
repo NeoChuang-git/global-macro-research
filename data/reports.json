@@ -11,10 +11,10 @@
     "early-warning": {
       "category": "early-warning",
       "date": "2026-08-31",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_1307_fed_hike_oil_taiwan_riskoff.html",
-      "modified_time": "2026-08-31T05:15:35.722Z",
-      "sha256": "7df7860221fe9f78a2ee4dffbfc64781dec6c6f64e1bced7f0777b8e60f1e96a",
-      "title": "Global Macro Early Warning 1307 fed hike oil taiwan riskoff"
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_1906_taiwan_foreign_flow.html",
+      "modified_time": "2026-08-31T12:23:17.141Z",
+      "sha256": "4f34b6ed5d9559cd6d92c2434c8afd039d06039a994a13d0f2f9c7de13cb00a6",
+      "title": "Global Macro Early Warning 1906 taiwan foreign flow"
     },
     "weekly": {
       "category": "weekly",
@@ -26,6 +26,14 @@
     }
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-08-31",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_1906_taiwan_foreign_flow.html",
+      "modified_time": "2026-08-31T12:23:17.141Z",
+      "sha256": "4f34b6ed5d9559cd6d92c2434c8afd039d06039a994a13d0f2f9c7de13cb00a6",
+      "title": "Global Macro Early Warning 1906 taiwan foreign flow"
+    },
     {
       "category": "early-warning",
       "date": "2026-08-31",
