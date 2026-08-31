@@ -54,6 +54,24 @@
       "sha256": "b73a157108e7f38f303f444d1e33d1e3538088d93bce88b9d2ef612cf3d712db",
       "size": 23904
     },
+    "reports/daily/Sediment_Reference_Acceptance_ExportFile_2026-09-01_0703.html": {
+      "category": "daily",
+      "drive_file_id": "1ztXrolBlphSGXCLVLNtkL3mtxgXQq_WR",
+      "md5_checksum": "5e62f7220855a48f18f9f77f54221ed2",
+      "modified_time": "2026-08-31T23:03:17.899Z",
+      "name": "Sediment_Reference_Acceptance_ExportFile_2026-09-01_0703.html",
+      "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
+      "size": 5582
+    },
+    "reports/daily/Sediment_Reference_Acceptance_FetchStream_2026-09-01_0703.html": {
+      "category": "daily",
+      "drive_file_id": "1xIqABiGU6RNh0jK--szWJBkEOK8YbgdH",
+      "md5_checksum": "5e62f7220855a48f18f9f77f54221ed2",
+      "modified_time": "2026-08-31T23:03:23.954Z",
+      "name": "Sediment_Reference_Acceptance_FetchStream_2026-09-01_0703.html",
+      "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
+      "size": 5582
+    },
     "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html": {
       "category": "early-warning",
       "drive_file_id": "1F4J6iY1fkpydoaD_QngBAKFe-gxJo_Sr",
@@ -143,6 +161,15 @@
       "name": "Global_Macro_Early_Warning_2026-08-31_2057_energy_inflation_rates.html",
       "sha256": "58c23ec3208f74256fb75b159d7c4510e2db6e78bc7ece200e200a09f0e1645b",
       "size": 4477
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_0254_spr_energy_buffer.html": {
+      "category": "early-warning",
+      "drive_file_id": "1XyLat02Vbap4JIZ1QTre16Ih6XjZPsfp",
+      "md5_checksum": "65ce7687743beeec7801922bcc67ffff",
+      "modified_time": "2026-08-31T23:00:56.572Z",
+      "name": "Global_Macro_Early_Warning_2026-09-01_0254_spr_energy_buffer.html",
+      "sha256": "673a7c7920d4b6d95447946b83fc1aa81a4d718ef0b0a255fce5893c22e88559",
+      "size": 3662
     },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",

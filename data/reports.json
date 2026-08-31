@@ -2,19 +2,19 @@
   "latest": {
     "daily": {
       "category": "daily",
-      "date": "2026-08-31",
-      "file": "reports/daily/Global_Daily_Brief_2026-08-31.html",
-      "modified_time": "2026-08-31T00:31:47.700Z",
-      "sha256": "1a9009e48d2da5110d2cd5a3f7509d0063987ca64fcd7bb78664e8292ca683c6",
-      "title": "Global Daily Brief"
+      "date": "2026-09-01",
+      "file": "reports/daily/Sediment_Reference_Acceptance_FetchStream_2026-09-01_0703.html",
+      "modified_time": "2026-08-31T23:03:23.954Z",
+      "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
+      "title": "Sediment Reference Acceptance FetchStream 0703"
     },
     "early-warning": {
       "category": "early-warning",
-      "date": "2026-08-31",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_2057_energy_inflation_rates.html",
-      "modified_time": "2026-08-31T13:33:34.498Z",
-      "sha256": "58c23ec3208f74256fb75b159d7c4510e2db6e78bc7ece200e200a09f0e1645b",
-      "title": "Global Macro Early Warning 2057 energy inflation rates"
+      "date": "2026-09-01",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_0254_spr_energy_buffer.html",
+      "modified_time": "2026-08-31T23:00:56.572Z",
+      "sha256": "673a7c7920d4b6d95447946b83fc1aa81a4d718ef0b0a255fce5893c22e88559",
+      "title": "Global Macro Early Warning 0254 spr energy buffer"
     },
     "weekly": {
       "category": "weekly",
@@ -26,6 +26,30 @@
     }
   },
   "reports": [
+    {
+      "category": "daily",
+      "date": "2026-09-01",
+      "file": "reports/daily/Sediment_Reference_Acceptance_FetchStream_2026-09-01_0703.html",
+      "modified_time": "2026-08-31T23:03:23.954Z",
+      "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
+      "title": "Sediment Reference Acceptance FetchStream 0703"
+    },
+    {
+      "category": "daily",
+      "date": "2026-09-01",
+      "file": "reports/daily/Sediment_Reference_Acceptance_ExportFile_2026-09-01_0703.html",
+      "modified_time": "2026-08-31T23:03:17.899Z",
+      "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
+      "title": "Sediment Reference Acceptance ExportFile 0703"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-09-01",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_0254_spr_energy_buffer.html",
+      "modified_time": "2026-08-31T23:00:56.572Z",
+      "sha256": "673a7c7920d4b6d95447946b83fc1aa81a4d718ef0b0a255fce5893c22e88559",
+      "title": "Global Macro Early Warning 0254 spr energy buffer"
+    },
     {
       "category": "early-warning",
       "date": "2026-08-31",
