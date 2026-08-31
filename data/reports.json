@@ -3,18 +3,18 @@
     "daily": {
       "category": "daily",
       "date": "2026-08-31",
-      "file": "reports/daily/Global_Daily_Brief_2026-08-31.html",
-      "modified_time": "2026-08-31T00:31:47.700Z",
-      "sha256": "1a9009e48d2da5110d2cd5a3f7509d0063987ca64fcd7bb78664e8292ca683c6",
-      "title": "Global Daily Brief"
+      "file": "reports/daily/Scheduled_Extreme_HTML_Relay_Canary_2026-08-31_1058.html",
+      "modified_time": "2026-08-31T03:06:06.779Z",
+      "sha256": "3c1153bca8f16abdd49c81bc74e40ccf38b9141d6fce0ab3370d43db08ea66fa",
+      "title": "Scheduled Extreme HTML Relay Canary 1058"
     },
     "early-warning": {
       "category": "early-warning",
       "date": "2026-08-31",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_0853_Asia_Riskoff_Breadth.html",
-      "modified_time": "2026-08-31T00:54:39.348Z",
-      "sha256": "9a54f2f26f016a2340ebdea4659171898b77913488f37fb8a062bc5b0863767b",
-      "title": "Global Macro Early Warning 0853 Asia Riskoff Breadth"
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_0957_China_PMI_Riskoff_rerun.html",
+      "modified_time": "2026-08-31T02:22:43.646Z",
+      "sha256": "d51fa232c8365577a6025947b2c0be23fa9d46027671295f82585b7e69fd7900",
+      "title": "Global Macro Early Warning 0957 China PMI Riskoff rerun"
     },
     "weekly": {
       "category": "weekly",
@@ -26,6 +26,38 @@
     }
   },
   "reports": [
+    {
+      "category": "daily",
+      "date": "2026-08-31",
+      "file": "reports/daily/Scheduled_Extreme_HTML_Relay_Canary_2026-08-31_1058.html",
+      "modified_time": "2026-08-31T03:06:06.779Z",
+      "sha256": "3c1153bca8f16abdd49c81bc74e40ccf38b9141d6fce0ab3370d43db08ea66fa",
+      "title": "Scheduled Extreme HTML Relay Canary 1058"
+    },
+    {
+      "category": "daily",
+      "date": "2026-08-31",
+      "file": "reports/daily/Scheduled_HTML_Relay_Stress_Canary_2026-08-31_1042.html",
+      "modified_time": "2026-08-31T02:44:29.090Z",
+      "sha256": "26c8893dad3cbc8633d38f03727286ce9449284ec0b6a49ff62eed45b12a5dd2",
+      "title": "Scheduled HTML Relay Stress Canary 1042"
+    },
+    {
+      "category": "daily",
+      "date": "2026-08-31",
+      "file": "reports/daily/Scheduled_Raw_HTML_Relay_Canary_2026-08-31_1022.html",
+      "modified_time": "2026-08-31T02:23:44.063Z",
+      "sha256": "3350e2360b743043146099b3aa08a1fb11bf8b96dabaf5e4c330e81b1652bff1",
+      "title": "Scheduled Raw HTML Relay Canary 1022"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-08-31",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_0957_China_PMI_Riskoff_rerun.html",
+      "modified_time": "2026-08-31T02:22:43.646Z",
+      "sha256": "d51fa232c8365577a6025947b2c0be23fa9d46027671295f82585b7e69fd7900",
+      "title": "Global Macro Early Warning 0957 China PMI Riskoff rerun"
+    },
     {
       "category": "early-warning",
       "date": "2026-08-31",

@@ -54,6 +54,33 @@
       "sha256": "b73a157108e7f38f303f444d1e33d1e3538088d93bce88b9d2ef612cf3d712db",
       "size": 23904
     },
+    "reports/daily/Scheduled_Extreme_HTML_Relay_Canary_2026-08-31_1058.html": {
+      "category": "daily",
+      "drive_file_id": "1LyrM_vg5m8L1cGTwtRVmltCCAIvtOPB-",
+      "md5_checksum": "38b5262c49b872e99de0550e50eecf11",
+      "modified_time": "2026-08-31T03:06:06.779Z",
+      "name": "Scheduled_Extreme_HTML_Relay_Canary_2026-08-31_1058.html",
+      "sha256": "3c1153bca8f16abdd49c81bc74e40ccf38b9141d6fce0ab3370d43db08ea66fa",
+      "size": 150201
+    },
+    "reports/daily/Scheduled_HTML_Relay_Stress_Canary_2026-08-31_1042.html": {
+      "category": "daily",
+      "drive_file_id": "1dRgDenapC04Q36g54Q_994WVYuinpRYy",
+      "md5_checksum": "ed959d48f3ca907e9349da35481220f3",
+      "modified_time": "2026-08-31T02:44:29.090Z",
+      "name": "Scheduled_HTML_Relay_Stress_Canary_2026-08-31_1042.html",
+      "sha256": "26c8893dad3cbc8633d38f03727286ce9449284ec0b6a49ff62eed45b12a5dd2",
+      "size": 22086
+    },
+    "reports/daily/Scheduled_Raw_HTML_Relay_Canary_2026-08-31_1022.html": {
+      "category": "daily",
+      "drive_file_id": "1o3w-KiULzCKA5IgmlRreWqWKV-Qg1NB1",
+      "md5_checksum": "ebd078c175b496b66207738b62e2ccf3",
+      "modified_time": "2026-08-31T02:23:44.063Z",
+      "name": "Scheduled_Raw_HTML_Relay_Canary_2026-08-31_1022.html",
+      "sha256": "3350e2360b743043146099b3aa08a1fb11bf8b96dabaf5e4c330e81b1652bff1",
+      "size": 158
+    },
     "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html": {
       "category": "early-warning",
       "drive_file_id": "1F4J6iY1fkpydoaD_QngBAKFe-gxJo_Sr",
@@ -107,6 +134,15 @@
       "name": "Global_Macro_Early_Warning_2026-08-31_0853_Asia_Riskoff_Breadth.html",
       "sha256": "9a54f2f26f016a2340ebdea4659171898b77913488f37fb8a062bc5b0863767b",
       "size": 9435
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_0957_China_PMI_Riskoff_rerun.html": {
+      "category": "early-warning",
+      "drive_file_id": "1Woo3Z3kj1w7SMzRA-g0xnkKCVnhMd7Zc",
+      "md5_checksum": "597ff63163f122d3f58e08a52080bf59",
+      "modified_time": "2026-08-31T02:22:43.646Z",
+      "name": "Global_Macro_Early_Warning_2026-08-31_0957_China_PMI_Riskoff_rerun.html",
+      "sha256": "d51fa232c8365577a6025947b2c0be23fa9d46027671295f82585b7e69fd7900",
+      "size": 5177
     },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
