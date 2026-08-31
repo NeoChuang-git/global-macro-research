@@ -2,19 +2,19 @@
   "latest": {
     "daily": {
       "category": "daily",
-      "date": "2026-08-30",
-      "file": "reports/daily/Global_Daily_Brief_2026-08-30.html",
-      "modified_time": "2026-08-30T05:24:11.896Z",
-      "sha256": "2c9e79c2677f0f11752bb83dad73347a2f44695a5627215e90000b0b363d3a53",
+      "date": "2026-08-31",
+      "file": "reports/daily/Global_Daily_Brief_2026-08-31.html",
+      "modified_time": "2026-08-31T00:31:47.700Z",
+      "sha256": "1a9009e48d2da5110d2cd5a3f7509d0063987ca64fcd7bb78664e8292ca683c6",
       "title": "Global Daily Brief"
     },
     "early-warning": {
       "category": "early-warning",
-      "date": "2026-08-30",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-30_JPY160_Carry_Risk.html",
-      "modified_time": "2026-08-30T01:59:20.392Z",
-      "sha256": "120269174acc09a37622d47feb4c72e5f7d5e98f90d465c2e5b708d42a88da4c",
-      "title": "Global Macro Early Warning JPY160 Carry Risk"
+      "date": "2026-08-31",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_0853_Asia_Riskoff_Breadth.html",
+      "modified_time": "2026-08-31T00:54:39.348Z",
+      "sha256": "9a54f2f26f016a2340ebdea4659171898b77913488f37fb8a062bc5b0863767b",
+      "title": "Global Macro Early Warning 0853 Asia Riskoff Breadth"
     },
     "weekly": {
       "category": "weekly",
@@ -26,6 +26,22 @@
     }
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-08-31",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_0853_Asia_Riskoff_Breadth.html",
+      "modified_time": "2026-08-31T00:54:39.348Z",
+      "sha256": "9a54f2f26f016a2340ebdea4659171898b77913488f37fb8a062bc5b0863767b",
+      "title": "Global Macro Early Warning 0853 Asia Riskoff Breadth"
+    },
+    {
+      "category": "daily",
+      "date": "2026-08-31",
+      "file": "reports/daily/Global_Daily_Brief_2026-08-31.html",
+      "modified_time": "2026-08-31T00:31:47.700Z",
+      "sha256": "1a9009e48d2da5110d2cd5a3f7509d0063987ca64fcd7bb78664e8292ca683c6",
+      "title": "Global Daily Brief"
+    },
     {
       "category": "weekly",
       "date": "2026-08-30",
