@@ -144,6 +144,15 @@
       "sha256": "d51fa232c8365577a6025947b2c0be23fa9d46027671295f82585b7e69fd7900",
       "size": 5177
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_1307_fed_hike_oil_taiwan_riskoff.html": {
+      "category": "early-warning",
+      "drive_file_id": "18QrMcdiS8uXYt_AfT-n0lzS1Rg9Z68QS",
+      "md5_checksum": "a8843a1ad9eff8abc004baacdb6c4223",
+      "modified_time": "2026-08-31T05:15:35.722Z",
+      "name": "Global_Macro_Early_Warning_2026-08-31_1307_fed_hike_oil_taiwan_riskoff.html",
+      "sha256": "7df7860221fe9f78a2ee4dffbfc64781dec6c6f64e1bced7f0777b8e60f1e96a",
+      "size": 4765
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",

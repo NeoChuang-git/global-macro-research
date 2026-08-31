@@ -11,10 +11,10 @@
     "early-warning": {
       "category": "early-warning",
       "date": "2026-08-31",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_0957_China_PMI_Riskoff_rerun.html",
-      "modified_time": "2026-08-31T02:22:43.646Z",
-      "sha256": "d51fa232c8365577a6025947b2c0be23fa9d46027671295f82585b7e69fd7900",
-      "title": "Global Macro Early Warning 0957 China PMI Riskoff rerun"
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_1307_fed_hike_oil_taiwan_riskoff.html",
+      "modified_time": "2026-08-31T05:15:35.722Z",
+      "sha256": "7df7860221fe9f78a2ee4dffbfc64781dec6c6f64e1bced7f0777b8e60f1e96a",
+      "title": "Global Macro Early Warning 1307 fed hike oil taiwan riskoff"
     },
     "weekly": {
       "category": "weekly",
@@ -26,6 +26,14 @@
     }
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-08-31",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_1307_fed_hike_oil_taiwan_riskoff.html",
+      "modified_time": "2026-08-31T05:15:35.722Z",
+      "sha256": "7df7860221fe9f78a2ee4dffbfc64781dec6c6f64e1bced7f0777b8e60f1e96a",
+      "title": "Global Macro Early Warning 1307 fed hike oil taiwan riskoff"
+    },
     {
       "category": "daily",
       "date": "2026-08-31",
