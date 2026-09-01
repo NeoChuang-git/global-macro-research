@@ -11,10 +11,10 @@
     "early-warning": {
       "category": "early-warning",
       "date": "2026-09-01",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1701_taiwan_fx_confirmation.html",
-      "modified_time": "2026-09-01T09:59:16.308Z",
-      "sha256": "ad1283d9e6e3cf739cad62f7e3479ac8faf207823fef67de311dd5960f15193b",
-      "title": "Global Macro Early Warning 1701 taiwan fx confirmation"
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1805_global_bond_selloff_broadening.html",
+      "modified_time": "2026-09-01T10:54:48.015Z",
+      "sha256": "d99ad846054b00cc3083b72ae444088fcab771dbfcb61a02aaf53702f102a824",
+      "title": "Global Macro Early Warning 1805 global bond selloff broadening"
     },
     "weekly": {
       "category": "weekly",
@@ -26,6 +26,14 @@
     }
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-09-01",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1805_global_bond_selloff_broadening.html",
+      "modified_time": "2026-09-01T10:54:48.015Z",
+      "sha256": "d99ad846054b00cc3083b72ae444088fcab771dbfcb61a02aaf53702f102a824",
+      "title": "Global Macro Early Warning 1805 global bond selloff broadening"
+    },
     {
       "category": "early-warning",
       "date": "2026-09-01",

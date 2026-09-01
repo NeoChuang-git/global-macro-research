@@ -216,6 +216,15 @@
       "sha256": "ad1283d9e6e3cf739cad62f7e3479ac8faf207823fef67de311dd5960f15193b",
       "size": 2881
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1805_global_bond_selloff_broadening.html": {
+      "category": "early-warning",
+      "drive_file_id": "1XAG_WmA6rycMxYkKBdm-BDMKJPyV7h-j",
+      "md5_checksum": "53d09ee4502a0f79d3bbfb6c76c1b8d6",
+      "modified_time": "2026-09-01T10:54:48.015Z",
+      "name": "Global_Macro_Early_Warning_2026-09-01_1805_global_bond_selloff_broadening.html",
+      "sha256": "d99ad846054b00cc3083b72ae444088fcab771dbfcb61a02aaf53702f102a824",
+      "size": 3043
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
