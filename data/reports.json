@@ -11,10 +11,10 @@
     "early-warning": {
       "category": "early-warning",
       "date": "2026-09-01",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1357_taiwan_pmi_ai_breadth.html",
-      "modified_time": "2026-09-01T06:28:30.418Z",
-      "sha256": "c98e10eaa56f660be8e1e39e1c08c6f222976e05cf883cf27aeb4842e2c25ac3",
-      "title": "Global Macro Early Warning 1357 taiwan pmi ai breadth"
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1701_taiwan_fx_confirmation.html",
+      "modified_time": "2026-09-01T09:59:16.308Z",
+      "sha256": "ad1283d9e6e3cf739cad62f7e3479ac8faf207823fef67de311dd5960f15193b",
+      "title": "Global Macro Early Warning 1701 taiwan fx confirmation"
     },
     "weekly": {
       "category": "weekly",
@@ -26,6 +26,30 @@
     }
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-09-01",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1701_taiwan_fx_confirmation.html",
+      "modified_time": "2026-09-01T09:59:16.308Z",
+      "sha256": "ad1283d9e6e3cf739cad62f7e3479ac8faf207823fef67de311dd5960f15193b",
+      "title": "Global Macro Early Warning 1701 taiwan fx confirmation"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-09-01",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1456_taiwan_close_confirmation.html",
+      "modified_time": "2026-09-01T09:58:58.700Z",
+      "sha256": "61b48ef32f28a975dd31e794bf5640965c4744f0177cb1e3181492ad2ac9baac",
+      "title": "Global Macro Early Warning 1456 taiwan close confirmation"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-09-01",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1600_taiwan_foreign_flow_confirmation.html",
+      "modified_time": "2026-09-01T09:58:37.266Z",
+      "sha256": "a5aaaa6aa256b071f6eaabeed0e41139a0c14c780e9c78496b35dda8b1e3b4eb",
+      "title": "Global Macro Early Warning 1600 taiwan foreign flow confirmation"
+    },
     {
       "category": "early-warning",
       "date": "2026-09-01",

@@ -189,6 +189,33 @@
       "sha256": "c98e10eaa56f660be8e1e39e1c08c6f222976e05cf883cf27aeb4842e2c25ac3",
       "size": 3888
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1456_taiwan_close_confirmation.html": {
+      "category": "early-warning",
+      "drive_file_id": "1czw46fSH6lgSdCu2Y0rxNvtptERvLOTq",
+      "md5_checksum": "1843354a48744db96b27bb4ae63ec897",
+      "modified_time": "2026-09-01T09:58:58.700Z",
+      "name": "Global_Macro_Early_Warning_2026-09-01_1456_taiwan_close_confirmation.html",
+      "sha256": "61b48ef32f28a975dd31e794bf5640965c4744f0177cb1e3181492ad2ac9baac",
+      "size": 2813
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1600_taiwan_foreign_flow_confirmation.html": {
+      "category": "early-warning",
+      "drive_file_id": "1xwItgRDO0MYD9M9-fujMGSmc9E6KktPX",
+      "md5_checksum": "e771e60f5be4416da3f205275f51fcb6",
+      "modified_time": "2026-09-01T09:58:37.266Z",
+      "name": "Global_Macro_Early_Warning_2026-09-01_1600_taiwan_foreign_flow_confirmation.html",
+      "sha256": "a5aaaa6aa256b071f6eaabeed0e41139a0c14c780e9c78496b35dda8b1e3b4eb",
+      "size": 2903
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1701_taiwan_fx_confirmation.html": {
+      "category": "early-warning",
+      "drive_file_id": "1CLvbaLZUIqis3xmDZgvT0lBNNqC6sHTT",
+      "md5_checksum": "4cf0cca593219b4b9411fae143ae0e66",
+      "modified_time": "2026-09-01T09:59:16.308Z",
+      "name": "Global_Macro_Early_Warning_2026-09-01_1701_taiwan_fx_confirmation.html",
+      "sha256": "ad1283d9e6e3cf739cad62f7e3479ac8faf207823fef67de311dd5960f15193b",
+      "size": 2881
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
