@@ -10,11 +10,11 @@
     },
     "early-warning": {
       "category": "early-warning",
-      "date": "2026-09-01",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_2351_us_ism_stagflation_mix.html",
-      "modified_time": "2026-09-01T16:02:00.548Z",
-      "sha256": "9bbbcefb8317a0f74f51be9f3e3f2c2c134f833ff457487e9144f676cb2c9b3a",
-      "title": "Global Macro Early Warning 2351 us ism stagflation mix"
+      "date": "2026-09-02",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0054_us_close_rates_confirmation.html",
+      "modified_time": "2026-09-01T17:11:11.807Z",
+      "sha256": "2f0c0ad6106a68d647d2a8326f9be7e545726adf74387d18e974b14fd8304f68",
+      "title": "Global Macro Early Warning 0054 us close rates confirmation"
     },
     "weekly": {
       "category": "weekly",
@@ -26,6 +26,14 @@
     }
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-09-02",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0054_us_close_rates_confirmation.html",
+      "modified_time": "2026-09-01T17:11:11.807Z",
+      "sha256": "2f0c0ad6106a68d647d2a8326f9be7e545726adf74387d18e974b14fd8304f68",
+      "title": "Global Macro Early Warning 0054 us close rates confirmation"
+    },
     {
       "category": "early-warning",
       "date": "2026-09-01",
