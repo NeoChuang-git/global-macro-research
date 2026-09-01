@@ -6,7 +6,7 @@
       "file": "reports/daily/Global_Daily_Brief_2026-09-01_1014.html",
       "modified_time": "2026-09-01T02:29:27.032Z",
       "sha256": "c1b0de1609a1043cf6592e61ec87ea5fd76ae26011b4a7a1642bdf87c49f1422",
-      "title": "Global Daily Brief 1014"
+      "title": "Global Daily Brief"
     },
     "early-warning": {
       "category": "early-warning",
@@ -32,7 +32,7 @@
       "file": "reports/daily/Global_Daily_Brief_2026-09-01_1014.html",
       "modified_time": "2026-09-01T02:29:27.032Z",
       "sha256": "c1b0de1609a1043cf6592e61ec87ea5fd76ae26011b4a7a1642bdf87c49f1422",
-      "title": "Global Daily Brief 1014"
+      "title": "Global Daily Brief"
     },
     {
       "category": "early-warning",
@@ -41,30 +41,6 @@
       "modified_time": "2026-09-01T02:23:34.412Z",
       "sha256": "51d46ce47087a21d1218068ce2b4bf60f4f5844c71da85122932c7a414d20f50",
       "title": "Global Macro Early Warning 0955 asia export cycle"
-    },
-    {
-      "category": "early-warning",
-      "date": "2026-09-01",
-      "file": "reports/early-warning/Sediment_Reference_Acceptance_FetchStream_2026-09-01_0703.html",
-      "modified_time": "2026-08-31T23:03:23.954Z",
-      "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
-      "title": "Sediment Reference Acceptance FetchStream 0703"
-    },
-    {
-      "category": "daily",
-      "date": "2026-09-01",
-      "file": "reports/daily/Sediment_Reference_Acceptance_FetchStream_2026-09-01_0703.html",
-      "modified_time": "2026-08-31T23:03:23.954Z",
-      "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
-      "title": "Sediment Reference Acceptance FetchStream 0703"
-    },
-    {
-      "category": "daily",
-      "date": "2026-09-01",
-      "file": "reports/daily/Sediment_Reference_Acceptance_ExportFile_2026-09-01_0703.html",
-      "modified_time": "2026-08-31T23:03:17.899Z",
-      "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
-      "title": "Sediment Reference Acceptance ExportFile 0703"
     },
     {
       "category": "early-warning",

@@ -102,7 +102,7 @@ def _display_title(name):
     stem = DATE_PATTERN.sub(" ", stem)
     title = re.sub(r"[_-]+", " ", stem)
     title = " ".join(title.split()) or "Untitled report"
-    if title == "Global Macro Morning":
+    if title == "Global Macro Morning" or re.match(r"^Global Daily Brief(?:\s+\d{4})?$", title):
         return "Global Daily Brief"
     return title
 
