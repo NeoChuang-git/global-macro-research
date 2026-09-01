@@ -45,6 +45,14 @@
     {
       "category": "early-warning",
       "date": "2026-09-01",
+      "file": "reports/early-warning/Sediment_Reference_Acceptance_FetchStream_2026-09-01_0703.html",
+      "modified_time": "2026-08-31T23:03:23.954Z",
+      "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
+      "title": "Sediment Reference Acceptance FetchStream 0703"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-09-01",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_0254_spr_energy_buffer.html",
       "modified_time": "2026-08-31T23:00:56.572Z",
       "sha256": "673a7c7920d4b6d95447946b83fc1aa81a4d718ef0b0a255fce5893c22e88559",

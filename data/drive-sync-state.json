@@ -180,6 +180,15 @@
       "sha256": "8bae773a78200d801921af3e3ceeeaed20af6f512b0efc944f8db836f20cee80",
       "size": 9324
     },
+    "reports/early-warning/Sediment_Reference_Acceptance_FetchStream_2026-09-01_0703.html": {
+      "category": "early-warning",
+      "drive_file_id": "1xIqABiGU6RNh0jK--szWJBkEOK8YbgdH",
+      "md5_checksum": "5e62f7220855a48f18f9f77f54221ed2",
+      "modified_time": "2026-08-31T23:03:23.954Z",
+      "name": "Sediment_Reference_Acceptance_FetchStream_2026-09-01_0703.html",
+      "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
+      "size": 5582
+    },
     "reports/weekly/Weekly_Strategy_2026-08-30.html": {
       "category": "weekly",
       "drive_file_id": "1OfvTrz91qKZZAKxs5QbglprN6n8nvO_1",
