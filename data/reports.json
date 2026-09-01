@@ -11,10 +11,10 @@
     "early-warning": {
       "category": "early-warning",
       "date": "2026-09-01",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_0955_asia_export_cycle.html",
-      "modified_time": "2026-09-01T02:23:34.412Z",
-      "sha256": "51d46ce47087a21d1218068ce2b4bf60f4f5844c71da85122932c7a414d20f50",
-      "title": "Global Macro Early Warning 0955 asia export cycle"
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1357_taiwan_pmi_ai_breadth.html",
+      "modified_time": "2026-09-01T06:28:30.418Z",
+      "sha256": "c98e10eaa56f660be8e1e39e1c08c6f222976e05cf883cf27aeb4842e2c25ac3",
+      "title": "Global Macro Early Warning 1357 taiwan pmi ai breadth"
     },
     "weekly": {
       "category": "weekly",
@@ -26,6 +26,22 @@
     }
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-09-01",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1357_taiwan_pmi_ai_breadth.html",
+      "modified_time": "2026-09-01T06:28:30.418Z",
+      "sha256": "c98e10eaa56f660be8e1e39e1c08c6f222976e05cf883cf27aeb4842e2c25ac3",
+      "title": "Global Macro Early Warning 1357 taiwan pmi ai breadth"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-09-01",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1300_taiwan_ai_relative_strength.html",
+      "modified_time": "2026-09-01T06:28:06.271Z",
+      "sha256": "55576005e80bd31bed0c03ff839de778d32ed69a1a1557d5afee5c7e156ee0aa",
+      "title": "Global Macro Early Warning 1300 taiwan ai relative strength"
+    },
     {
       "category": "daily",
       "date": "2026-09-01",
