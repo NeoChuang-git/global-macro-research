@@ -243,6 +243,15 @@
       "sha256": "2f0c0ad6106a68d647d2a8326f9be7e545726adf74387d18e974b14fd8304f68",
       "size": 3289
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0355_energy_inflation_close_confirmation.html": {
+      "category": "early-warning",
+      "drive_file_id": "1pHurExzLd8IPTlbLm64eW3LGT1RPk7RT",
+      "md5_checksum": "fc6169d0d798da78e6f388495dbb126e",
+      "modified_time": "2026-09-01T19:57:19.970Z",
+      "name": "Global_Macro_Early_Warning_2026-09-02_0355_energy_inflation_close_confirmation.html",
+      "sha256": "d45a49d2aeb444772ebc828ea47988b6531fe54cb45b47a9ed8fb5afe4b49d9b",
+      "size": 5330
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",

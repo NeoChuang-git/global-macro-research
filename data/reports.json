@@ -11,10 +11,10 @@
     "early-warning": {
       "category": "early-warning",
       "date": "2026-09-02",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0054_us_close_rates_confirmation.html",
-      "modified_time": "2026-09-01T17:11:11.807Z",
-      "sha256": "2f0c0ad6106a68d647d2a8326f9be7e545726adf74387d18e974b14fd8304f68",
-      "title": "Global Macro Early Warning 0054 us close rates confirmation"
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0355_energy_inflation_close_confirmation.html",
+      "modified_time": "2026-09-01T19:57:19.970Z",
+      "sha256": "d45a49d2aeb444772ebc828ea47988b6531fe54cb45b47a9ed8fb5afe4b49d9b",
+      "title": "Global Macro Early Warning 0355 energy inflation close confirmation"
     },
     "weekly": {
       "category": "weekly",
@@ -26,6 +26,14 @@
     }
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-09-02",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0355_energy_inflation_close_confirmation.html",
+      "modified_time": "2026-09-01T19:57:19.970Z",
+      "sha256": "d45a49d2aeb444772ebc828ea47988b6531fe54cb45b47a9ed8fb5afe4b49d9b",
+      "title": "Global Macro Early Warning 0355 energy inflation close confirmation"
+    },
     {
       "category": "early-warning",
       "date": "2026-09-02",
