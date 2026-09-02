@@ -63,6 +63,15 @@
       "sha256": "b73a157108e7f38f303f444d1e33d1e3538088d93bce88b9d2ef612cf3d712db",
       "size": 23904
     },
+    "reports/daily/Scheduled_Server_Copy_Raw_HTML_2026-09-02_1022.html": {
+      "category": "daily",
+      "drive_file_id": "1GVcz36ytbJiFQrlz54TxV9MeouBzq9Cv",
+      "md5_checksum": "9b5f5a980753271caae92e666ff8dbd5",
+      "modified_time": "2026-09-02T02:22:28.360Z",
+      "name": "Scheduled_Server_Copy_Raw_HTML_2026-09-02_1022.html",
+      "sha256": "75e435a3d93e90e4889ee694b041973f7ed6aa20b5dd535653701615aa192b70",
+      "size": 4256
+    },
     "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html": {
       "category": "early-warning",
       "drive_file_id": "1F4J6iY1fkpydoaD_QngBAKFe-gxJo_Sr",
@@ -171,6 +180,15 @@
       "sha256": "51d46ce47087a21d1218068ce2b4bf60f4f5844c71da85122932c7a414d20f50",
       "size": 5703
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1054_china_asia_cycle.html": {
+      "category": "early-warning",
+      "drive_file_id": "1twPg_ld66bt_x5DG8irCLIp2-BaaSLw4",
+      "md5_checksum": "24516907f5f7b1d430d7ec2dea40ee5d",
+      "modified_time": "2026-09-02T02:15:39.660Z",
+      "name": "Global_Macro_Early_Warning_2026-09-01_1054_china_asia_cycle.html",
+      "sha256": "29780d9e678776e65150c2ac9c60e30ce1b24f5e94a28c9c480a466b07dbc2b9",
+      "size": 2011
+    },
     "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1300_taiwan_ai_relative_strength.html": {
       "category": "early-warning",
       "drive_file_id": "1DPqbRTRKJtg1ZM_nz_fqaUwhLTzvTbcK",
@@ -243,6 +261,15 @@
       "sha256": "2f0c0ad6106a68d647d2a8326f9be7e545726adf74387d18e974b14fd8304f68",
       "size": 3289
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0206_energy_semi_risk_broadening.html": {
+      "category": "early-warning",
+      "drive_file_id": "1D86iNh1WMMnWaCr-jaAOtSe6BMmE5Lnm",
+      "md5_checksum": "94f82eafe6f956a1ec71860a65fafa84",
+      "modified_time": "2026-09-02T02:15:58.423Z",
+      "name": "Global_Macro_Early_Warning_2026-09-02_0206_energy_semi_risk_broadening.html",
+      "sha256": "4187d8cfe0fd8590aca2185f0c47607e37f460223d46c29cfd4fedb06c9e74e3",
+      "size": 1936
+    },
     "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0355_energy_inflation_close_confirmation.html": {
       "category": "early-warning",
       "drive_file_id": "1pHurExzLd8IPTlbLm64eW3LGT1RPk7RT",
@@ -251,6 +278,33 @@
       "name": "Global_Macro_Early_Warning_2026-09-02_0355_energy_inflation_close_confirmation.html",
       "sha256": "d45a49d2aeb444772ebc828ea47988b6531fe54cb45b47a9ed8fb5afe4b49d9b",
       "size": 5330
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0506_korea_chip_export_fundamental_confirmation.html": {
+      "category": "early-warning",
+      "drive_file_id": "1QNLvsBRBUXGa5zm42mteRKwo0vSsBukZ",
+      "md5_checksum": "b67e4dde4ac7b15cb3d5690b8a54b915",
+      "modified_time": "2026-09-02T02:16:14.363Z",
+      "name": "Global_Macro_Early_Warning_2026-09-02_0506_korea_chip_export_fundamental_confirmation.html",
+      "sha256": "ecd688e51c0e9f9a345a00fb6501c37e67b742f769c66f568e6c2d2006e806f5",
+      "size": 1876
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0901_asia_riskoff_transmission.html": {
+      "category": "early-warning",
+      "drive_file_id": "1qq8KOL3hYUI5mz4XHsyvLambbn_fzSx7",
+      "md5_checksum": "2edee659d9409a3939261ab290e5f75d",
+      "modified_time": "2026-09-02T02:16:32.358Z",
+      "name": "Global_Macro_Early_Warning_2026-09-02_0901_asia_riskoff_transmission.html",
+      "sha256": "099f248e6072bd76db15e7187977d4f2ef70ce9120a96beafaf7eb5d3af38baa",
+      "size": 1997
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_1009_taiwan_transmission_confirmation.html": {
+      "category": "early-warning",
+      "drive_file_id": "1FAcugTXA9NkFyJ8sC28LGDdNpFgGxl8s",
+      "md5_checksum": "d4666114ff14de216945a27bcfe44ca7",
+      "modified_time": "2026-09-02T02:16:54.049Z",
+      "name": "Global_Macro_Early_Warning_2026-09-02_1009_taiwan_transmission_confirmation.html",
+      "sha256": "67178b6b305157eaa30eb34a70285bd53a01d62a8f36b5866bd7cb731ac22aad",
+      "size": 2047
     },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
