@@ -46,15 +46,19 @@
     function setNavButtonState(btn, report, directionLabel) {
       if (!btn) return;
       if (report && report.file) {
+        btn.hidden = false;
+        btn.style.display = "";
         btn.classList.remove("is-disabled");
         btn.removeAttribute("aria-disabled");
         btn.setAttribute("href", MacroReports.reportUrl(report));
         btn.title = `${directionLabel}：${report.title} (${MacroReports.formatDate(report.date)})`;
       } else {
+        btn.hidden = true;
+        btn.style.display = "none";
         btn.classList.add("is-disabled");
         btn.setAttribute("aria-disabled", "true");
         btn.setAttribute("href", "javascript:void(0)");
-        btn.title = `已是${directionLabel}`;
+        btn.title = "";
       }
     }
 
