@@ -87,15 +87,71 @@ def _render_hero_header(metadata: Dict[str, Any]) -> str:
 """
 
 
+def clean_markdown_body(text: str) -> str:
+    """Clean markdown body by stripping any canonical markers, front matter, and footer markers."""
+    if not text:
+        return ""
+
+    # 1. Remove <<<REPORT_BEGIN>>> and <<<REPORT_END>>> markers
+    text = re.sub(r"^\s*<<<REPORT_BEGIN>>>\s*", "", text, flags=re.MULTILINE)
+    text = re.sub(r"\s*<<<REPORT_END>>>\s*", "", text, flags=re.MULTILINE)
+
+    # 2. Remove front matter block if present
+    text = re.sub(r"^\s*---\s*\n.*?\n---\s*\n", "", text, flags=re.DOTALL)
+
+    # 3. Remove trailing current doc markers like __GLOBAL_DAILY_BRIEF_CURRENT__
+    text = re.sub(r"__\w+__\s*$", "", text.strip())
+
+    # 4. Remove any remaining raw frontmatter lines at the top of the body
+    lines = text.splitlines()
+    filtered_lines = []
+    in_raw_header = True
+    header_keys = (
+        "research_status:",
+        "generated_at_taipei:",
+        "coverage_start_taipei:",
+        "coverage_end_taipei:",
+        "us_market_status:",
+        "run_id:",
+        "report_type:",
+        "report_name:",
+        "format_version:",
+        "risk_light:",
+        "slug:",
+        "trigger_status:",
+        "classification:",
+        "title:",
+    )
+    for line in lines:
+        stripped = line.strip()
+        if in_raw_header:
+            if any(stripped.startswith(k) for k in header_keys) or stripped == "---" or stripped.startswith("<<<"):
+                continue
+            if stripped == "":
+                continue
+            in_raw_header = False
+        filtered_lines.append(line)
+
+    return "\n".join(filtered_lines).strip()
+
+
 def _postprocess_soup(soup: BeautifulSoup) -> None:
     """Apply deterministic semantic post-processing to HTML elements."""
 
-    # 0. Remove redundant top-level H1 from markdown body (the canonical title is rendered in hero-header)
+    # 0. Strip any elements containing canonical markers or raw frontmatter
+    for tag in list(soup.find_all(["h1", "h2", "h3", "h4", "p", "pre", "div"])):
+        t = tag.get_text()
+        if "<<<REPORT_BEGIN>>>" in t or "<<<REPORT_END>>>" in t:
+            tag.decompose()
+        elif "research_status:" in t and "format_version:" in t:
+            tag.decompose()
+
+    # 1. Remove redundant top-level H1 from markdown body (the canonical title is rendered in hero-header)
     first_h1 = soup.find("h1")
     if first_h1:
         first_h1.decompose()
 
-    # 1. Tables: wrap in <div class="table-scroll">
+    # 2. Tables: wrap in <div class="table-scroll">
     for table in soup.find_all("table"):
         # Ensure proper wrapper if not already wrapped
         if table.parent and table.parent.name == "div" and "table-scroll" in table.parent.get("class", []):
@@ -103,7 +159,7 @@ def _postprocess_soup(soup: BeautifulSoup) -> None:
         wrapper = soup.new_tag("div", attrs={"class": "table-scroll"})
         table.wrap(wrapper)
 
-    # 2. Links: sanitize and enforce target="_blank" rel="noopener noreferrer"
+    # 3. Links: sanitize and enforce target="_blank" rel="noopener noreferrer"
     for a in soup.find_all("a"):
         href = a.get("href", "")
         if not href.startswith("http://") and not href.startswith("https://") and not href.startswith("#"):
@@ -531,7 +587,8 @@ def render_markdown_to_html(markdown_body: str, metadata: Dict[str, Any]) -> str
     """
     Render canonical markdown body and front matter metadata into complete standalone HTML.
     """
-    raw_html = MD_PARSER.render(markdown_body)
+    cleaned_body = clean_markdown_body(markdown_body)
+    raw_html = MD_PARSER.render(cleaned_body)
     soup = BeautifulSoup(raw_html, "html.parser")
     _postprocess_soup(soup)
     content_html = str(soup)
