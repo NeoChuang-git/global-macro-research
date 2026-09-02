@@ -31,6 +31,14 @@
         <span id="mobile-report-category" class="category-pill">REPORT</span>
         <span id="mobile-report-date" class="report-date"></span>
       </div>
+      <div class="mobile-reader-nav-group">
+        <a id="mobile-nav-newer-btn" class="mobile-nav-btn" href="#" aria-label="較新一份報告" title="較新一份報告">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </a>
+        <a id="mobile-nav-older-btn" class="mobile-nav-btn" href="#" aria-label="較舊一份報告" title="較舊一份報告">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+      </div>
     </div>
 
     <main class="reader-main">
@@ -43,7 +51,17 @@
           <h1 id="report-title">正在載入報告…</h1>
         </div>
         <div class="reader-actions">
-          <a class="button button-secondary" href="archive.html">← 返回歷史歸檔</a>
+          <div class="reader-nav-group">
+            <a id="nav-newer-btn" class="button button-secondary button-nav" href="#" aria-label="較新一份報告" title="較新一份報告">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+              <span>較新一份</span>
+            </a>
+            <a id="nav-older-btn" class="button button-secondary button-nav" href="#" aria-label="較舊一份報告" title="較舊一份報告">
+              <span>較舊一份</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+          </div>
+          <a class="button button-secondary" href="archive.html">返回歷史歸檔</a>
         </div>
       </section>
       <p id="report-status" class="reader-status" role="status">正在驗證索引與報告路徑…</p>
