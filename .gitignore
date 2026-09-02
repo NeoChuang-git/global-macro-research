@@ -30,7 +30,9 @@ _site/
 
 # Operational retired backup
 retired-local/
+backups/
 
 # Local agent and graphify artifacts
 .agents/
 graphify-out/
+

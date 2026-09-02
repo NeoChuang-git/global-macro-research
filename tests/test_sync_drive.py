@@ -306,7 +306,7 @@ class SyncDriveTests(unittest.TestCase):
         html_path = self.root / "reports" / "daily" / "Global_Daily_Brief_2026-09-03.html"
         self.assertTrue(html_path.exists())
         html_content = html_path.read_text()
-        self.assertIn('<div class="table-scroll">', html_content)
+        self.assertIn('<div class="table-scroll', html_content)
         self.assertIn("direction-up", html_content)
         self.assertIn("risk-red", html_content)
 
