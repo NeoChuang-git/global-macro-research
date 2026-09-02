@@ -31,7 +31,6 @@ CATEGORY_TO_REPORT_TYPE = {
     "weekly": "WEEKLY_STRATEGY",
 }
 
-# Required section keywords/phrases to validate for each report type
 REQUIRED_SECTIONS: Dict[str, List[str]] = {
     "GLOBAL_DAILY_BRIEF": [
         "Executive Intelligence Summary",
@@ -89,6 +88,45 @@ REQUIRED_SECTIONS: Dict[str, List[str]] = {
         "Scenario Matrix",
         "Risk Lights",
         "Thesis",
+        "Catalyst Calendar",
+        "Source Audit",
+        "Bottom Line",
+    ],
+}
+
+REQUIRED_SECTIONS_V2: Dict[str, List[str]] = {
+    "GLOBAL_DAILY_BRIEF": [
+        "Executive Summary",
+        "Market Signals",
+        "Impact",
+        "Strategy",
+        "Taiwan",
+        "Catalysts",
+        "Source Audit",
+    ],
+    "MACRO_TAIWAN_EARLY_WARNING": [
+        "Executive Take",
+        "Signal Delta",
+        "Why It Matters",
+        "Macro / Policy Detail",
+        "Cross-Asset Confirmation",
+        "Taiwan Transmission",
+        "Classification & Risk Light Delta",
+        "Next Confirmation",
+        "Source Audit",
+        "Bottom Line",
+    ],
+    "WEEKLY_STRATEGY": [
+        "Executive Strategy Summary",
+        "Weekly Regime Transition Matrix",
+        "Weekly Macro Signal Board",
+        "Themes",
+        "Signal Persistence",
+        "Macro Data",
+        "Transmission",
+        "Taiwan",
+        "Strategy",
+        "Risk Lights",
         "Catalyst Calendar",
         "Source Audit",
         "Bottom Line",
@@ -171,15 +209,18 @@ def validate_metadata(metadata: Dict[str, Any], expected_report_type: Optional[s
             raise CanonicalBlockError(f"missing or empty required field: '{req}'")
 
     format_version = metadata.get("format_version")
-    if format_version != 1 and format_version != "1":
-        raise CanonicalBlockError(f"unsupported format_version: '{format_version}', expected 1")
+    if format_version not in (1, 2, "1", "2"):
+        raise CanonicalBlockError(f"unsupported format_version: '{format_version}', expected 1 or 2")
 
 
-def validate_required_sections(markdown_body: str, report_type: str) -> None:
+def validate_required_sections(markdown_body: str, report_type: str, format_version: Any = 1) -> None:
     """
     Verify that required sections exist in the markdown body.
     """
-    sections = REQUIRED_SECTIONS.get(report_type, [])
+    if str(format_version) == "2" and report_type in REQUIRED_SECTIONS_V2:
+        sections = REQUIRED_SECTIONS_V2[report_type]
+    else:
+        sections = REQUIRED_SECTIONS.get(report_type, [])
     if not sections:
         return
 
@@ -213,7 +254,7 @@ def parse_and_validate_canonical_block(
     """
     metadata, body = parse_frontmatter(block)
     validate_metadata(metadata, expected_report_type)
-    validate_required_sections(body, metadata["report_type"])
+    validate_required_sections(body, metadata["report_type"], metadata.get("format_version", 1))
     return metadata, body
 
 

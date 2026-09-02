@@ -151,7 +151,7 @@ generated_at_taipei: 2026-09-03T07:30:00+08:00
 coverage_start_taipei: 2026-09-02T07:30:00+08:00
 coverage_end_taipei: 2026-09-03T07:30:00+08:00
 title: Global Daily Brief
-format_version: 2
+format_version: 99
 ---
 # Report
 """

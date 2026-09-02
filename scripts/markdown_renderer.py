@@ -8,9 +8,12 @@ zero-token HTML documents with Institutional aesthetic and full semantic styling
 
 import html
 import re
+import warnings
 from typing import Any, Dict, Optional
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 from markdown_it import MarkdownIt
+
+warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 
 DIRECTION_MAP = {
