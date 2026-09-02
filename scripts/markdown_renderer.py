@@ -87,6 +87,11 @@ def _render_hero_header(metadata: Dict[str, Any]) -> str:
 def _postprocess_soup(soup: BeautifulSoup) -> None:
     """Apply deterministic semantic post-processing to HTML elements."""
 
+    # 0. Remove redundant top-level H1 from markdown body (the canonical title is rendered in hero-header)
+    first_h1 = soup.find("h1")
+    if first_h1:
+        first_h1.decompose()
+
     # 1. Tables: wrap in <div class="table-scroll">
     for table in soup.find_all("table"):
         # Ensure proper wrapper if not already wrapped
