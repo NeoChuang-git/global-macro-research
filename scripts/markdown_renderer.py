@@ -140,9 +140,9 @@ def _enrich_text_html(text: str) -> str:
     # Escape HTML characters first
     escaped = html.escape(text)
 
-    # State transitions: e.g. "Yellow → Orange", "Neutral → Positive", "60% → 72%"
+    # State transitions: e.g. "4.18% → 4.31%", "Yellow → Orange", "Neutral → Positive", "60% → 72%", "$88.5 → $91.2"
     transition_pattern = re.compile(
-        r"\b([A-Za-z0-9%]+(?:\s+[A-Za-z0-9%]+)?)\s+→\s+([A-Za-z0-9%]+(?:\s+[A-Za-z0-9%]+)?)\b"
+        r"(?<!\S)([\$\+A-Za-z0-9.%🟢🟡🟠🔴-]+(?:\s+[\$\+A-Za-z0-9.%🟢🟡🟠🔴-]+)?)\s*→\s*([\$\+A-Za-z0-9.%🟢🟡🟠🔴-]+(?:\s+[\$\+A-Za-z0-9.%🟢🟡🟠🔴-]+)?)(?!\S)"
     )
     def _replace_transition(m):
         prior, current = m.group(1), m.group(2)
