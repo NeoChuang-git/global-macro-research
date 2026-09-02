@@ -74,27 +74,6 @@
       "topic": null
     },
     {
-      "category": "daily",
-      "coverage_end_taipei": "2026-09-03 00:48:00+08:00",
-      "coverage_start_taipei": "2026-09-02 00:48:00+08:00",
-      "date": "2026-09-03",
-      "file": "reports/daily/Global_Daily_Brief_2026-09-03_0048_dell_ai_server_demand.html",
-      "generated_at_taipei": "2026-09-03 00:48:00+08:00",
-      "html_path": "reports/daily/Global_Daily_Brief_2026-09-03_0048_dell_ai_server_demand.html",
-      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-03_0048_dell_ai_server_demand.md",
-      "markdown_sha256": "aa474524438cd1575b00859e7266db741642df7828a136c41463a7a8f705b01b",
-      "modified_time": "2026-09-03 00:48:00+08:00",
-      "report_type": "GLOBAL_DAILY_BRIEF",
-      "risk_light": "YELLOW",
-      "run_id": "GDB-20260903-0048",
-      "sha256": "68df8de654efc3ffbd90a2d0077c7c5477dab3f831853f1364c830e7e5444a04",
-      "slug": "dell_ai_server_demand",
-      "source_document_id": null,
-      "source_kind": "google_doc_markdown",
-      "title": "Global Daily Brief｜Dell AI 伺服器訂單暴增，上調全年展望驗證 AI 基建需求",
-      "topic": null
-    },
-    {
       "category": "early-warning",
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 21:01:40+08:00",
