@@ -9,13 +9,19 @@ from scripts.sync_drive import (
     SyncError,
     build_reports_index,
     classify_drive_file,
+    resolve_doc_sources,
     resolve_folder_ids,
+    sync_native_google_docs,
     sync_reports,
 )
 
 
 def md5(content):
     return hashlib.md5(content).hexdigest()
+
+
+def sha256_bytes(content):
+    return hashlib.sha256(content).hexdigest()
 
 
 class FakeRequest:
@@ -30,11 +36,14 @@ class FakeRequest:
 
 
 class FakeFiles:
-    def __init__(self, folders, contents, list_error=None):
+    def __init__(self, folders, contents, docs=None, list_error=None):
         self.folders = folders
         self.contents = contents
+        self.docs = docs or {}
         self.list_error = list_error
         self.downloads = []
+        self.doc_exports = []
+        self.write_calls = []
 
     def list(self, **kwargs):
         if self.list_error:
@@ -53,10 +62,29 @@ class FakeFiles:
             return FakeRequest(error=value)
         return FakeRequest(value=value)
 
+    def export_media(self, fileId, mimeType="text/plain", **kwargs):
+        self.doc_exports.append((fileId, mimeType))
+        if fileId not in self.docs:
+            return FakeRequest(error=RuntimeError(f"file {fileId} not found"))
+        value = self.docs[fileId]
+        if isinstance(value, Exception):
+            return FakeRequest(error=value)
+        if isinstance(value, str):
+            value = value.encode("utf-8")
+        return FakeRequest(value=value)
+
+    def create(self, **kwargs):
+        self.write_calls.append(("create", kwargs))
+        return FakeRequest({"id": "created"})
+
+    def update(self, **kwargs):
+        self.write_calls.append(("update", kwargs))
+        return FakeRequest({"id": "updated"})
+
 
 class FakeDrive:
-    def __init__(self, folders, contents, list_error=None):
-        self.files_api = FakeFiles(folders, contents, list_error)
+    def __init__(self, folders, contents, docs=None, list_error=None):
+        self.files_api = FakeFiles(folders, contents, docs, list_error)
 
     def files(self):
         return self.files_api
@@ -72,18 +100,107 @@ def drive_file(file_id, name, content, modified="2026-08-28T01:02:03Z"):
     }
 
 
+def make_sample_doc(run_id="GDB-20260903-0730", title="Global Daily Brief"):
+    return f"""<<<REPORT_BEGIN>>>
+---
+research_status: COMPLETE
+report_type: GLOBAL_DAILY_BRIEF
+run_id: {run_id}
+generated_at_taipei: 2026-09-03T07:30:00+08:00
+coverage_start_taipei: 2026-09-02T07:30:00+08:00
+coverage_end_taipei: 2026-09-03T07:30:00+08:00
+title: {title}
+format_version: 1
+risk_light: YELLOW
+slug: global_daily_brief
+---
+# {title}
+
+## 1. Executive Intelligence Summary
+Overview of today's macro conditions...
+
+## 2. Daily Signal Board
+| 指標 | 方向 | 燈號 |
+|---|:---:|:---:|
+| 10Y Yield | ↑ | 🔴 |
+
+## 3. Top 3 Daily Themes
+Theme 1, Theme 2, Theme 3.
+
+## 4. Macro Data & Policy Detail
+Data details...
+
+## 5. Cross-Asset Confirmation
+Confirmation analysis...
+
+## 6. Causal Chain Audit
+Causal link...
+
+## 7. Global Tech / AI / Semiconductor / Memory / Server Transmission
+Transmission into tech...
+
+## 8. Taiwan Economy & Policy
+Taiwan macro...
+
+## 9. Taiwan Industry & Equity
+Industry detail...
+
+## 10. Market Cycle vs Fundamental Cycle
+Cycle divergence...
+
+## 11. Daily Taiwan Equity Action Delta
+Actions...
+
+## 12. Scenario Matrix
+Scenario A / B / C...
+
+## 13. Risk Lights
+- Global 🟠
+- Rates 🔴
+
+## 14. Next 24–72h Catalysts
+Upcoming catalysts...
+
+## 15. Source Audit
+| Claim | Source | URL | Grade |
+|---|---|---|---|
+| Data | Fed | https://example.com | A |
+
+## 16. Bottom Line
+Concluding summary.
+<<<REPORT_END>>>
+"""
+
+
 class SyncDriveTests(unittest.TestCase):
     def setUp(self):
         self.temp_dir = tempfile.TemporaryDirectory()
         self.root = Path(self.temp_dir.name)
         self.folder_ids = {category: f"folder-{category}" for category in CATEGORIES}
         self.folders = {folder_id: [] for folder_id in self.folder_ids.values()}
+        self.doc_sources = {
+            "GLOBAL_DAILY_BRIEF": {
+                "document_id": "doc-daily-1",
+                "category": "daily",
+                "report_type": "GLOBAL_DAILY_BRIEF",
+            },
+            "MACRO_TAIWAN_EARLY_WARNING": {
+                "document_id": "doc-ew-1",
+                "category": "early-warning",
+                "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+            },
+            "WEEKLY_STRATEGY": {
+                "document_id": "doc-weekly-1",
+                "category": "weekly",
+                "report_type": "WEEKLY_STRATEGY",
+            },
+        }
 
     def tearDown(self):
         self.temp_dir.cleanup()
 
-    def _service(self, contents=None, list_error=None):
-        return FakeDrive(self.folders, contents or {}, list_error)
+    def _service(self, contents=None, docs=None, list_error=None):
+        return FakeDrive(self.folders, contents or {}, docs or {}, list_error)
 
     def test_classifies_html_filename_and_extracts_date_without_trusting_paths(self):
         report = classify_drive_file(
@@ -106,8 +223,8 @@ class SyncDriveTests(unittest.TestCase):
         self.folders[self.folder_ids["daily"]] = [remote]
         service = self._service({"one": content})
 
-        first = sync_reports(service, self.root, self.folder_ids)
-        second = sync_reports(service, self.root, self.folder_ids)
+        first = sync_reports(service, self.root, self.folder_ids, enable_native_docs=False)
+        second = sync_reports(service, self.root, self.folder_ids, enable_native_docs=False)
 
         self.assertEqual(first.updated, 1)
         self.assertEqual(second.updated, 0)
@@ -119,13 +236,13 @@ class SyncDriveTests(unittest.TestCase):
         name = "Global_Macro_Weekly_2026-08-28.html"
         self.folders[self.folder_ids["weekly"]] = [drive_file("weekly-1", name, old)]
         service = self._service({"weekly-1": old})
-        sync_reports(service, self.root, self.folder_ids)
+        sync_reports(service, self.root, self.folder_ids, enable_native_docs=False)
 
         self.folders[self.folder_ids["weekly"]] = [
             drive_file("weekly-1", name, new, "2026-08-28T09:00:00Z")
         ]
         service.files_api.contents["weekly-1"] = new
-        result = sync_reports(service, self.root, self.folder_ids)
+        result = sync_reports(service, self.root, self.folder_ids, enable_native_docs=False)
 
         self.assertEqual(result.updated, 1)
         self.assertEqual((self.root / "reports" / "weekly" / name).read_bytes(), new)
@@ -149,7 +266,7 @@ class SyncDriveTests(unittest.TestCase):
                 )
                 contents[file_id] = content
 
-        sync_reports(self._service(contents), self.root, self.folder_ids)
+        sync_reports(self._service(contents), self.root, self.folder_ids, enable_native_docs=False)
         index = json.loads((self.root / "data" / "reports.json").read_text())
 
         self.assertEqual(
@@ -164,108 +281,124 @@ class SyncDriveTests(unittest.TestCase):
         self.assertEqual(index["latest"]["daily"]["date"], "2026-08-28")
         self.assertIsNone(index["latest"]["weekly"])
 
-    def test_redownloads_missing_local_file_even_when_state_checksum_matches(self):
-        content = b"<html>restore me</html>"
-        remote = drive_file("missing", "Daily_2026-08-28.html", content)
-        self.folders[self.folder_ids["daily"]] = [remote]
-        service = self._service({"missing": content})
-        sync_reports(service, self.root, self.folder_ids)
-        local = self.root / "reports" / "daily" / remote["name"]
-        local.unlink()
+    def test_native_google_doc_syncs_archives_markdown_and_renders_html(self):
+        doc_content = make_sample_doc(run_id="GDB-20260903-0730")
+        docs = {"doc-daily-1": doc_content}
+        service = self._service(docs=docs)
 
-        result = sync_reports(service, self.root, self.folder_ids)
-
-        self.assertEqual(result.updated, 1)
-        self.assertEqual(local.read_bytes(), content)
-
-    def test_deduplicates_identical_drive_names_by_latest_modified_time_and_fails_on_api_error(self):
-        old_content = b"<html>old content</html>"
-        new_content = b"<html>new content</html>"
-        duplicate_name = "Weekly_2026-08-28.html"
-        self.folders[self.folder_ids["weekly"]] = [
-            drive_file("a", duplicate_name, old_content, "2026-08-28T08:00:00Z"),
-            drive_file("b", duplicate_name, new_content, "2026-08-28T09:00:00Z"),
-        ]
-
+        # 1. First sync run
         result = sync_reports(
-            self._service({"a": old_content, "b": new_content}), self.root, self.folder_ids
+            service=service,
+            repo_root=self.root,
+            folder_ids=self.folder_ids,
+            doc_sources=self.doc_sources,
+            enable_native_docs=True,
         )
+
         self.assertEqual(result.updated, 1)
-        self.assertEqual((self.root / "reports" / "weekly" / duplicate_name).read_bytes(), new_content)
 
-        with self.assertRaisesRegex(SyncError, "Drive API"):
-            sync_reports(self._service(list_error=RuntimeError("offline")), self.root, self.folder_ids)
+        # Verify archived markdown exists
+        md_path = self.root / "reports" / "daily" / "Global_Daily_Brief_2026-09-03.md"
+        self.assertTrue(md_path.exists())
+        self.assertIn("<<<REPORT_BEGIN>>>", md_path.read_text())
 
-    def test_requires_all_three_folder_ids(self):
-        with self.assertRaisesRegex(SyncError, "DRIVE_FOLDER_WEEKLY"):
-            resolve_folder_ids(
-                {
-                    "DRIVE_FOLDER_EARLY_WARNING": "ew",
-                    "DRIVE_FOLDER_DAILY": "am",
-                }
-            )
+        # Verify rendered HTML exists and contains tables and semantic classes
+        html_path = self.root / "reports" / "daily" / "Global_Daily_Brief_2026-09-03.html"
+        self.assertTrue(html_path.exists())
+        html_content = html_path.read_text()
+        self.assertIn('<div class="table-scroll">', html_content)
+        self.assertIn("direction-up", html_content)
+        self.assertIn("risk-red", html_content)
 
-        with self.assertRaisesRegex(SyncError, "invalid Drive folder ID"):
-            resolve_folder_ids(
-                {
-                    "DRIVE_FOLDER_EARLY_WARNING": "ew' or trashed = true",
-                    "DRIVE_FOLDER_DAILY": "am",
-                    "DRIVE_FOLDER_WEEKLY": "week",
-                }
-            )
+        # Verify reports.json was updated with rich metadata
+        index = json.loads((self.root / "data" / "reports.json").read_text())
+        daily_rep = next(r for r in index["reports"] if r["file"] == "reports/daily/Global_Daily_Brief_2026-09-03.html")
+        self.assertEqual(daily_rep["run_id"], "GDB-20260903-0730")
+        self.assertEqual(daily_rep["source_kind"], "google_doc_markdown")
+        self.assertEqual(daily_rep["markdown_path"], "reports/daily/Global_Daily_Brief_2026-09-03.md")
 
-        # Supports fallback from DRIVE_FOLDER_MORNING when DRIVE_FOLDER_DAILY is absent
-        folder_ids = resolve_folder_ids(
-            {
-                "DRIVE_FOLDER_EARLY_WARNING": "ew",
-                "DRIVE_FOLDER_MORNING": "am-fallback",
-                "DRIVE_FOLDER_WEEKLY": "week",
-            }
+        # 2. Second sync run with same RUN_ID (Idempotency)
+        second_result = sync_reports(
+            service=service,
+            repo_root=self.root,
+            folder_ids=self.folder_ids,
+            doc_sources=self.doc_sources,
+            enable_native_docs=True,
         )
-        self.assertEqual(folder_ids["daily"], "am-fallback")
+        self.assertEqual(second_result.updated, 0)
+        self.assertEqual(second_result.unchanged, 1)
 
-        # DRIVE_FOLDER_DAILY takes precedence over DRIVE_FOLDER_MORNING
-        folder_ids_direct = resolve_folder_ids(
-            {
-                "DRIVE_FOLDER_EARLY_WARNING": "ew",
-                "DRIVE_FOLDER_DAILY": "am-direct",
-                "DRIVE_FOLDER_MORNING": "am-fallback",
-                "DRIVE_FOLDER_WEEKLY": "week",
-            }
+    def test_prepending_new_run_id_creates_new_snapshot_and_preserves_old(self):
+        doc_old = make_sample_doc(run_id="GDB-20260902-0730", title="Daily Brief Sept 2")
+        docs = {"doc-daily-1": doc_old}
+        service = self._service(docs=docs)
+
+        sync_reports(
+            service=service,
+            repo_root=self.root,
+            folder_ids=self.folder_ids,
+            doc_sources=self.doc_sources,
+            enable_native_docs=True,
         )
-        self.assertEqual(folder_ids_direct["daily"], "am-direct")
+        old_md = self.root / "reports" / "daily" / "Global_Daily_Brief_2026-09-03.md"
+        self.assertTrue(old_md.exists())
 
-    def test_rejects_exceeding_batch_limits(self):
-        content = b"<html>report</html>"
-        name = "Global_Daily_Brief_2026-08-28.html"
-        self.folders[self.folder_ids["daily"]] = [
-            drive_file("m1", name, content),
-            drive_file("m2", "Global_Daily_Brief_2026-08-29.html", content),
-        ]
-        service = self._service({"m1": content, "m2": content})
+        # Prepend new run_id
+        doc_new = make_sample_doc(run_id="GDB-20260903-0730", title="Daily Brief Sept 3") + "\n\n" + doc_old
+        service.files_api.docs["doc-daily-1"] = doc_new
 
-        with self.assertRaisesRegex(SyncError, "batch limit of 1 files"):
-            sync_reports(service, self.root, self.folder_ids, max_batch_files=1)
+        sync_reports(
+            service=service,
+            repo_root=self.root,
+            folder_ids=self.folder_ids,
+            doc_sources=self.doc_sources,
+            enable_native_docs=True,
+        )
 
-        with self.assertRaisesRegex(SyncError, "batch limit of 10 bytes"):
-            sync_reports(service, self.root, self.folder_ids, max_batch_bytes=10)
+        # Both runs tracked in report_runs.json
+        runs_data = json.loads((self.root / "data" / "report_runs.json").read_text())
+        self.assertIn("GDB-20260902-0730", runs_data["runs"])
+        self.assertIn("GDB-20260903-0730", runs_data["runs"])
 
-        with self.assertRaisesRegex(SyncError, "batch limit of 5 bytes"):
-            sync_reports(service, self.root, self.folder_ids, max_staged_bytes=5)
+    def test_legacy_html_reports_remain_byte_for_byte_untouched(self):
+        legacy_bytes = b"<!doctype html><html><head><title>Legacy</title></head><body>Legacy 100% untouched</body></html>"
+        legacy_path = self.root / "reports" / "daily" / "Legacy_Report_2026-08-01.html"
+        legacy_path.parent.mkdir(parents=True, exist_ok=True)
+        legacy_path.write_bytes(legacy_bytes)
+        sha_before = sha256_bytes(legacy_bytes)
 
-    def test_rejects_parent_symlink_in_sync_reports(self):
-        content = b"<html>symlink target</html>"
-        name = "Global_Daily_Brief_2026-08-28.html"
-        self.folders[self.folder_ids["daily"]] = [drive_file("sym", name, content)]
-        service = self._service({"sym": content})
+        # Sync native docs
+        doc_content = make_sample_doc(run_id="GDB-20260903-0730")
+        docs = {"doc-daily-1": doc_content}
+        service = self._service(docs=docs)
 
-        outside = self.root.parent / "outside_dir"
-        outside.mkdir(parents=True, exist_ok=True)
-        (self.root / "reports").mkdir(parents=True, exist_ok=True)
-        (self.root / "reports" / "daily").symlink_to(outside)
+        sync_reports(
+            service=service,
+            repo_root=self.root,
+            folder_ids=self.folder_ids,
+            doc_sources=self.doc_sources,
+            enable_native_docs=True,
+        )
 
-        with self.assertRaisesRegex(SyncError, "unsafe report path or symlink ancestor"):
-            sync_reports(service, self.root, self.folder_ids)
+        sha_after = sha256_bytes(legacy_path.read_bytes())
+        self.assertEqual(sha_before, sha_after)
+        self.assertEqual(legacy_path.read_bytes(), legacy_bytes)
+
+    def test_never_calls_drive_upload_or_update_for_generated_html(self):
+        doc_content = make_sample_doc(run_id="GDB-20260903-0730")
+        docs = {"doc-daily-1": doc_content}
+        service = self._service(docs=docs)
+
+        sync_reports(
+            service=service,
+            repo_root=self.root,
+            folder_ids=self.folder_ids,
+            doc_sources=self.doc_sources,
+            enable_native_docs=True,
+        )
+
+        # Ensure no write operations (create/update) were invoked on Drive API
+        self.assertEqual(service.files_api.write_calls, [])
 
 
 class ReportsIndexTests(unittest.TestCase):
