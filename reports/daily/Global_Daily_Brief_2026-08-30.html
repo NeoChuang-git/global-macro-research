@@ -3,503 +3,116 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Global Daily Brief｜2026-08-30 · Global Macro Signal Report</title>
+<title>Global Daily Brief｜2026-08-30</title>
 <style>
-
-:root {
-  --bg-primary: #0f172a;
-  --bg-surface: #1e293b;
-  --bg-surface-raised: #334155;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --border: #334155;
-  --border-light: #475569;
-  --accent: #38bdf8;
-  --accent-glow: rgba(56, 189, 248, 0.15);
-  --success: #10b981;
-  --warning: #f59e0b;
-  --orange: #f97316;
-  --danger: #ef4444;
-  --table-zebra: rgba(255, 255, 255, 0.02);
-  --table-hover: rgba(56, 189, 248, 0.06);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-primary: #f8fafc;
-    --bg-surface: #ffffff;
-    --bg-surface-raised: #f1f5f9;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
-    --border: #e2e8f0;
-    --border-light: #cbd5e1;
-    --accent: #0284c7;
-    --accent-glow: rgba(2, 132, 199, 0.08);
-    --table-zebra: #f8fafc;
-    --table-hover: rgba(2, 132, 199, 0.05);
-  }
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.68;
-  font-size: 15px;
-  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
-  -webkit-font-smoothing: antialiased;
-  padding: 24px 16px;
-}
-
-.report-container {
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-/* Hero Header */
-.hero-header {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 24px 28px;
-  margin-bottom: 28px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.hero-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.hero-type-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.hero-run-id {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.hero-run-id code {
-  background: var(--bg-surface-raised);
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: var(--accent);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-}
-
-.hero-title {
-  font-size: 1.85rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  line-height: 1.28;
-}
-
-/* Typography & Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--text-primary);
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-h2 {
-  font-size: 1.35rem;
-  margin: 36px 0 16px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--accent);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-h3 {
-  font-size: 1.15rem;
-  margin: 24px 0 12px;
-  color: var(--text-primary);
-}
-
-p {
-  margin-bottom: 14px;
-  color: var(--text-primary);
-}
-
-ul, ol {
-  margin: 12px 0 16px 24px;
-  color: var(--text-primary);
-}
-
-li {
-  margin-bottom: 6px;
-}
-
-/* Blockquotes / Callout boxes */
-blockquote {
-  background: var(--accent-glow);
-  border-left: 4px solid var(--accent);
-  border-radius: 0 8px 8px 0;
-  padding: 14px 18px;
-  margin: 18px 0;
-  color: var(--text-primary);
-  font-size: 0.98rem;
-}
-
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-
-/* Tables */
-.table-scroll {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: 20px 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-surface);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.92rem;
-  text-align: left;
-}
-
-th, td {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: middle;
-}
-
-th {
-  background: var(--bg-surface-raised);
-  color: var(--text-primary);
-  font-weight: 600;
-  position: sticky;
-  top: 0;
-  white-space: nowrap;
-  letter-spacing: 0.02em;
-}
-
-tr:nth-child(even) td {
-  background: var(--table-zebra);
-}
-
-tr:hover td {
-  background: var(--table-hover);
-}
-
-/* Badges */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1;
-}
-
-.badge-type {
-  background: rgba(56, 189, 248, 0.15);
-  color: var(--accent);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-}
-
-.badge-topic {
-  background: var(--bg-surface-raised);
-  color: var(--text-secondary);
-  border: 1px solid var(--border);
-}
-
-.badge-grade-A { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
-.badge-grade-B { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
-.badge-grade-C { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
-.badge-grade-D { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
-
-/* Direction Indicators */
-.direction {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  font-weight: 600;
-  font-size: 0.88rem;
-}
-
-.direction-up { color: #38bdf8; }
-.direction-down { color: #a855f7; }
-.direction-improving { color: var(--success); }
-.direction-worsening { color: var(--danger); }
-.direction-flat { color: var(--text-muted); }
-
-/* Risk Lights */
-.risk {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-size: 0.82rem;
-  line-height: 1.2;
-}
-
-.risk-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
-.risk-yellow { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
-.risk-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
-.risk-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
-
-/* State Transition */
-.state-transition {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background: var(--bg-surface-raised);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.state-prior { color: var(--text-muted); }
-.transition-arrow { color: var(--accent); font-weight: bold; }
-.state-current { color: var(--text-primary); font-weight: 600; }
-
-/* Links */
-a {
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px dotted rgba(56, 189, 248, 0.5);
-}
-
-a:hover {
-  border-bottom-style: solid;
-}
-
-/* Code */
-code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  background: var(--bg-surface-raised);
-  padding: 2px 5px;
-  border-radius: 4px;
-  font-size: 0.88em;
-}
-
-pre {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 14px;
-  overflow-x: auto;
-  margin: 16px 0;
-}
-
-pre code {
-  background: transparent;
-  padding: 0;
-}
-
-/* Footer */
-footer {
-  margin-top: 48px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-/* Legacy Card & Layout Compatibility */
-main {
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-.card, .panel, .box, .risk-card, .sec {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 24px 28px;
-  margin: 24px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.callout, .note {
-  background: var(--accent-glow);
-  border-left: 4px solid var(--accent);
-  border-radius: 0 8px 8px 0;
-  padding: 16px 20px;
-  margin: 18px 0;
-  color: var(--text-primary);
-  font-size: 0.98rem;
-  line-height: 1.68;
-}
-
-.chain, .node {
-  background: var(--bg-surface-raised);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 16px 20px;
-  margin: 18px 0;
-  font-weight: 600;
-  text-align: center;
-  color: var(--text-primary);
-  line-height: 1.6;
-}
-
-.small, small, .footer-note {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-top: 24px;
-  display: block;
-}
-
-/* Legacy Color & Badge utilities */
-.green, .g, .badge-green { color: var(--success); font-weight: 700; }
-.yellow, .y, .badge-yellow { color: var(--warning); font-weight: 700; }
-.orange, .o, .badge-orange { color: var(--orange); font-weight: 700; }
-.red, .r, .badge-red { color: var(--danger); font-weight: 700; }
-
-.pill, .tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  line-height: 1;
-  background: var(--bg-surface-raised);
-  color: var(--text-secondary);
-  border: 1px solid var(--border);
-}
-
-.metric, .metric-down {
-  font-weight: 600;
-  font-feature-settings: "tnum" 1;
-}
-
-.arrow {
-  font-weight: 700;
-}
-
-.muted {
-  color: var(--text-muted);
-}
-
-.table-wrap, .scroll {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: 18px 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-surface);
-}
-
+:root{--bg:#0b0f14;--panel:#111823;--panel2:#151f2d;--text:#e8edf5;--muted:#9bacbf;--line:#27364a;--accent:#76b7ff;--good:#72d49f;--warn:#f3c66b;--bad:#ff8585;--ink:#d7e5f6}
+*{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#0b0f14 0%,#0d131c 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC",Arial,sans-serif;line-height:1.72}
+main{max-width:1180px;margin:0 auto;padding:42px 28px 72px}
+header{padding:34px;border:1px solid var(--line);border-radius:20px;background:radial-gradient(circle at 90% 10%,#173253 0,transparent 35%),var(--panel);box-shadow:0 18px 45px rgba(0,0,0,.25)}
+.eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)} h1{margin:.2em 0 .15em;font-size:42px;line-height:1.15} .thesis{font-size:22px;color:#f4f8ff;margin:18px 0 0}
+.meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px} .pill{border:1px solid var(--line);border-radius:999px;padding:6px 11px;color:var(--muted);font-size:13px;background:#0e1621}
+section{margin-top:36px} h2{font-size:27px;margin:0 0 15px;border-left:4px solid var(--accent);padding-left:13px} h3{line-height:1.35} p{margin:.45em 0 1em}
+.callout{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 24px} .callout strong{color:#fff}
+.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px} .card{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:18px} .card .k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)} .card .v{font-size:18px;margin-top:6px;font-weight:700}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel)} table{border-collapse:collapse;width:100%;min-width:880px} th,td{padding:12px 13px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;font-size:13px} th{position:sticky;top:0;background:#162233;color:#cfe3fb;font-weight:700} tr:last-child td{border-bottom:0} td{color:#d8e1ec}
+.theme{margin:18px 0;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:23px} .theme-head{display:flex;align-items:flex-start;gap:14px} .score{display:inline-flex;white-space:nowrap;background:#163154;border:1px solid #2f5f91;color:#b9dcff;padding:5px 9px;border-radius:9px;font-weight:700;font-size:13px} .theme h3{margin:0;font-size:21px} .theme-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;margin-top:16px} .theme-grid>div{border-top:1px solid var(--line);padding-top:10px} .theme-grid b{color:#a9cdef;font-size:13px} .theme-grid p{font-size:14px;color:#d6e0ec} .status{margin-top:10px;border-radius:10px;padding:10px 12px;background:#0e1723;color:#dbe9f8;font-size:13px}
+.note{font-size:13px;color:var(--muted)} .tag-fact{color:var(--good)} .tag-infer{color:var(--warn)} .bottom{font-size:17px} .bottom li{margin:.6em 0}
+.sources li{margin:.45em 0;color:var(--muted)} a{color:#9dcbff;text-decoration:none} a:hover{text-decoration:underline}
+.footer{margin-top:42px;color:#8192a6;font-size:12px;border-top:1px solid var(--line);padding-top:18px}
+@media(max-width:800px){main{padding:22px 14px 48px} h1{font-size:32px} .summary-grid,.theme-grid{grid-template-columns:1fr} header{padding:24px}}
 </style>
 </head>
 <body>
-<div class="report-container">
-<header class="hero-header">
-  <div class="hero-top">
-    <div class="hero-type-row">
-      <span class="badge badge-type">GLOBAL_DAILY_BRIEF</span>
-      <span class="badge risk-red">🔴 Risk: RED</span>
-    </div>
-  </div>
-  <h1 class="hero-title">Global Daily Brief｜2026-08-30</h1>
-</header>
-<main class="report-content">
+<main>
 <header>
-<div class="eyebrow">Global Daily Brief · Macro Signals × News Intelligence × Taiwan Transmission</div>
+  <div class="eyebrow">Global Daily Brief · Macro Signals × News Intelligence × Taiwan Transmission</div>
+  <h1>Global Daily Brief｜2026-08-30</h1>
+  <p class="thesis"><b>一句話 Daily Regime Thesis：</b>本日沒有足夠證據宣告 Macro Regime 改變；真正升溫的是 <b>FX／政策協調風險</b>，而 Friday 的 Fed 前端利率衝擊仍是最新市場定價狀態。台灣目前為 <b>partial transmission</b>：現貨外資與 TWD 仍正向，但期貨淨空、弱 breadth、SOX／TSM ADR 的時區落差構成 Monday 驗證壓力。</p>
+  <div class="meta"><span class="pill">As of 2026-08-30 13:17 Taipei</span><span class="pill">24h event window：8/29 13:17 → 8/30 13:17</span><span class="pill">Weekend rule：市場價格以 Friday close 為 latest state，不偽裝成 24h 新成交</span></div>
+</header>
 
-<p class="thesis"><b>一句話 Daily Regime Thesis：</b>本日沒有足夠證據宣告 Macro Regime 改變；真正升溫的是 <b>FX／政策協調風險</b>，而 Friday 的 Fed 前端利率衝擊仍是最新市場定價狀態。台灣目前為 <b>partial transmission</b>：現貨外資與 TWD 仍正向，但期貨淨空、弱 breadth、SOX／TSM ADR 的時區落差構成 Monday 驗證壓力。</p>
-<div class="meta"><span class="pill">As of 2026-08-30 13:17 Taipei</span><span class="pill">24h event window：8/29 13:17 <span class="direction direction-flat">→ 持平</span> 8/30 13:17</span><span class="pill">Weekend rule：市場價格以 Friday close 為 latest state，不偽裝成 24h 新成交</span></div>
-</header><section>
+<section>
 <h2>Executive Intelligence Summary</h2>
 <div class="callout">
 <p><strong>今天真正改變的 3 件事：</strong>① 日圓接近 160 的問題被美方明確提升到「可能擾動全球市場」的層級，FX intervention risk 的政策重要性上升；② 歐洲央行圈對美方外匯與債市政策協調可預測性的疑慮加深，但目前沒有 repo、credit 或 dollar swap stress 驗證；③ AI fundamental cycle 仍強，但 Friday semiconductor market beta 在 Fed 前端殖利率衝擊下明顯轉弱，凸顯「基本面未轉折、估值先壓縮」的分岔。</p>
 <p><strong>Macro Regime：</strong>未改變。當前更接近 <b>Financial Conditions / Market Pricing</b> 的局部再定價，而不是 Growth/Inflation regime break。<strong>Taiwan：</strong>尚未 confirmed transmission；以 Friday 資料判斷為 <b>partial</b>，真正的下一驗證在 Monday Asia/Taiwan open。</p>
 </div>
 <div class="summary-grid">
-<div class="card"><div class="k">Primary New 24h Signal</div><div class="v">JPY / Policy Coordination Risk <span class="direction direction-up">↑ 上升</span></div></div>
+<div class="card"><div class="k">Primary New 24h Signal</div><div class="v">JPY / Policy Coordination Risk ↑</div></div>
 <div class="card"><div class="k">Not Yet Confirmed</div><div class="v">Funding / Credit Crisis</div></div>
 <div class="card"><div class="k">Taiwan State</div><div class="v">Partial Transmission</div></div>
 </div>
 <p class="note">Method note：本報告嚴格區分「24h 新事件」與「Friday latest market state」。週末沒有新的美股、美債或台股收盤，因此 Friday price action 只作為 validation baseline。</p>
-</section><section><h2>1. Daily Signal Board</h2>
+</section>
+
+<section><h2>1. Daily Signal Board</h2>
 <div class="table-wrap"><table class=""><thead><tr><th>Family</th><th>Current State</th><th>24h Delta</th><th>Severity</th><th>Confidence</th><th>Persistence</th><th>Evidence</th><th>Counter-evidence</th></tr></thead><tbody><tr><td>Growth</td><td>偏弱但未失速</td><td>24h 無新高頻數據；7 月實質 PCE 約持平，需求動能偏軟</td><td>中</td><td>中高</td><td>數週</td><td>BEA：名目 PCE +0.2% m/m；real PCE 約 0.0%</td><td>企業獲利與 AI CapEx 仍強</td></tr><tr><td>Inflation</td><td>高於目標、黏性仍在</td><td>無新發布；7 月 headline PCE 3.7% y/y、core 3.3% y/y</td><td>高</td><td>高</td><td>數月</td><td>PCE / core PCE 均 +0.2% m/m</td><td>能源若回落可降低後續壓力</td></tr><tr><td>Labor</td><td>降溫待確認</td><td>24h 無新發布；市場等待 9/4 非農</td><td>中</td><td>中</td><td>數週</td><td>近期就業動能偏弱、下一個重大驗證點為 payrolls</td><td>單一月份易受修正</td></tr><tr><td>Fed / Monetary Policy</td><td>政策路徑重新偏鷹</td><td>週末無交易；承接 8/28 Warsh 談話後的升息重定價</td><td>高</td><td>高</td><td>事件驅動</td><td>2Y 殖利率單日約 +13bp；Fed futures 隱含 9 月升息機率升至約 56%</td><td>Warsh 強調紀律而非預先承諾單一決策</td></tr><tr><td>Rates / Term Premium</td><td>前端 rates shock；長端仍高</td><td>週末無新價格，Friday close 為最新 market state</td><td>高</td><td>高</td><td>數日～數週</td><td>2Y 約 4.36%；10Y 約 4.72%；30Y 約 5.2% 區間</td><td>信用與 repo 尚未跟隨惡化</td></tr><tr><td>Liquidity / Plumbing</td><td>正常</td><td>24h 無壓力確認</td><td>低</td><td>高</td><td>穩定</td><td>SOFR 8/27 3.64% 且持平；Fed swap 使用極低</td><td>需持續看 FX 壓力是否擴散至 basis / repo</td></tr><tr><td>Credit / Bank Credit</td><td>寬鬆／無 stress</td><td>24h 無急劇擴大</td><td>低</td><td>高</td><td>穩定</td><td>US HY OAS 8/27 約 2.63%，仍處低檔</td><td>若 rates shock 持續，低評級 credit 可能落後反應</td></tr><tr><td>Fiscal / Treasury Supply</td><td>結構性壓力偏高</td><td>24h 以政策協調疑慮為主，無新 auction shock</td><td>中高</td><td>中高</td><td>數月</td><td>30Y 殖利率近期曾升至逾 5.3%；Treasury 積極 buyback 討論</td><td>尚未見信用／美元 funding crisis</td></tr><tr><td>FX / Global Dollar</td><td>日圓系統性風險升溫</td><td>24h 新增美方對 disorderly yen move 的公開警告；歐洲央行官員對協調機制不安</td><td>高</td><td>高</td><td>數日</td><td>JPY 接近 160；日本 7/30–8/26 干預規模約 ¥15.4tn</td><td>SOFR、credit、swap lines 尚未確認 funding stress</td></tr><tr><td>Commodities / Inflation Chain</td><td>能源仍偏高但長期供給訊號轉鬆</td><td>委內瑞拉公布 25 年能源開發框架；短期供給效果有限</td><td>中</td><td>中</td><td>數月</td><td>原油仍高位，但新供給投資對中長期屬供給正向</td><td>地緣政治與煉油產品 tightness 仍是反向風險</td></tr><tr><td>Global Trade / Supply Chain</td><td>分化</td><td>24h 無明確新 delta</td><td>中</td><td>中</td><td>數月</td><td>AI / memory 需求強，傳統中國內需與製造偏弱</td><td>全球出口循環未同步轉弱</td></tr><tr><td>China / Asia / Taiwan Cycle</td><td>中國弱、韓台 AI鏈強，台灣市場訊號混合</td><td>等待 8/31 中國 PMI；台灣 Friday 現貨強但期貨/美股收盤轉弱</td><td>中高</td><td>高</td><td>數週</td><td>中國 7 月 PMI 49.2；台灣外資現貨持續淨買、TWD 轉強</td><td>TAIFEX 外資淨空深、breadth 弱、SOX Friday -3.47%</td></tr></tbody></table></div>
-</section><section><h2>2. Top 3 Daily Themes</h2>
-<article class="theme">
-<div class="theme-head"><span class="score">86/100</span><h3>Theme 1｜日圓接近 160：FX 壓力升格為全球政策協調風險，但尚未成為 funding crisis</h3></div>
-<div class="theme-grid">
-<div><b>What Happened</b><p>過去 24 小時最具新增資訊量的事件，是美國財長 Scott Bessent 公開警告「失序的日圓走弱」可能引發部位平倉、擾動全球市場並推高美國借貸成本；同時，歐洲央行圈對美日近期外匯協調與美方政策不可預測性表達不安。</p></div>
-<div><b>Signal Delta</b><p>canonical signal `fx_funding_stress` 從「FX intervention risk」升至「systemic attention」，但 validation 仍僅為 partially confirmed。</p></div>
-<div><b>Why It Matters</b><p>日圓若以過快速度穿越 160，風險不只在日本本身，而是 carry trade、全球 duration、亞洲 FX 與 cross-border dollar funding 的連鎖反應。</p></div>
-<div><b>Causal Chain</b><p><span class="state-transition"><span class="state-prior">JPY weakness</span><span class="transition-arrow">→</span><span class="state-current">intervention</span></span> / position <span class="state-transition"><span class="state-prior">unwind risk</span><span class="transition-arrow">→</span><span class="state-current">global duration</span></span> &amp; <span class="state-transition"><span class="state-prior">USD demand</span><span class="transition-arrow">→</span><span class="state-current">Asia FX</span></span> <span class="state-transition"><span class="state-prior">volatility</span><span class="transition-arrow">→</span><span class="state-current">Taiwan foreign</span></span> flow / TWD / equity valuation。</p></div>
-<div><b>Cross-Asset Confirmation / Counter-evidence</b><p>Supporting：日本近月大規模干預、日圓再近 160、官方跨國警告。Counter：SOFR 3.64% 持平、Fed liquidity swaps 極低、HY OAS 約 2.63% 未擴大。</p></div>
-<div><b>Market Pricing</b><p>週末沒有新的可交易市場價格；因此不可把新聞熱度誤當作已完成的 risk-off 定價。Monday Asia open 才是下一個實際驗證。</p></div>
-<div><b>Taiwan Transmission</b><p>台灣目前僅 partial：TWD Friday 轉強且外資現貨買超，但若 JPY 再度失序，台灣可能經由亞洲 FX beta、外資避險與科技股估值折現率受到壓力。</p></div>
-</div>
-<div class="status"><b>Validation Status：</b>PARTIALLY CONFIRMED / FALSE-POSITIVE-RISK</div>
-</article>
-<article class="theme">
-<div class="theme-head"><span class="score">84/100</span><h3>Theme 2｜Fed 前端利率衝擊仍是最新市場狀態：週末無新價格，但政策敘事未被反證</h3></div>
-<div class="theme-grid">
-<div><b>What Happened</b><p>Friday Warsh 談話後，市場把 9 月升息機率由約三成半上修至約五成半；2Y 美債殖利率單日跳升約 13bp。過去 24h 並無新的交易日，因此這是 carry-over market state，不是週末新 price delta。</p></div>
-<div><b>Signal Delta</b><p>`fed_policy_tightening` 與 `rates_shock` 仍維持高 severity；真正的 24h 新資訊主要來自跨國政策協調擔憂，而非新市場成交。</p></div>
-<div><b>Why It Matters</b><p>前端 real/nominal rates 是 AI、高估值科技與亞洲資產的主要 discount-rate channel。若沒有 funding/credit stress，這更像 discount-rate shock，而不是 liquidity crisis。</p></div>
-<div><b>Causal Chain</b><p>Fed <span class="state-transition"><span class="state-prior">hawkish repricing</span><span class="transition-arrow">→</span><span class="state-current">2Y</span></span> / real yield <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> equity <span class="state-transition"><span class="state-prior">duration compression</span><span class="transition-arrow">→</span><span class="state-current">semis</span></span> / growth beta <span class="direction direction-down">↓ 下降</span> <span class="direction direction-flat">→ 持平</span> TSM ADR / <span class="state-transition"><span class="state-prior">SOX</span><span class="transition-arrow">→</span><span class="state-current">Taiwan</span></span> open。</p></div>
-<div><b>Cross-Asset Confirmation / Counter-evidence</b><p>Supporting：2Y 急升、美元走強、Nasdaq/SOX 壓力、金價同步下跌。Counter：信用利差仍窄、SOFR 正常，故沒有跨到 funding shock。</p></div>
-<div><b>Market Pricing</b><p>Friday close 已反映第一輪；Monday 若 USDTWD、TAIFEX、台股 breadth 同步惡化，才算 Taiwan transmission 明確擴大。</p></div>
-<div><b>Taiwan Transmission</b><p>Friday 台股 +0.77% 是 Warsh 後美股完整反應前的時區結果；因此不能用 Friday 台股上漲否定 global rates shock。</p></div>
-</div>
-<div class="status"><b>Validation Status：</b>CONFIRMED AS PRICING SHOCK; NOT A FUNDING SHOCK</div>
-</article>
-<article class="theme">
-<div class="theme-head"><span class="score">81/100</span><h3>Theme 3｜AI 基本面仍強，但 semiconductor market beta 已被利率重新定價：基本面與市場循環分岔</h3></div>
-<div class="theme-grid">
-<div><b>What Happened</b><p>Nvidia 財報與長期營收展望延續 AI CapEx / accelerator 需求強勢；但 Friday SOX -3.47%、TSM ADR 約 -2.29%，顯示 rates shock 可以在基本面尚未轉弱時先壓縮估值與高 beta 部位。</p></div>
-<div><b>Signal Delta</b><p>`ai_fundamental_cycle` 維持 confirmed；`semiconductor_relative_weakness` 則在 Market Cycle / Positioning 層面升溫，尚不能推論 orders / inventory / margin 反轉。</p></div>
-<div><b>Why It Matters</b><p>把股價 beta 與 fundamental cycle 分開，是避免把折現率衝擊誤判成景氣拐點的核心。</p></div>
-<div><b>Causal Chain</b><p>AI demand &amp; CapEx strong ↔ higher <span class="state-transition"><span class="state-prior">discount rate</span><span class="transition-arrow">→</span><span class="state-current">valuation multiple</span></span> <span class="state-transition"><span class="state-prior">compression</span><span class="transition-arrow">→</span><span class="state-current">SOX</span></span> / <span class="state-transition"><span class="state-prior">ADR weakness</span><span class="transition-arrow">→</span><span class="state-current">Taiwan semiconductor</span></span> gap risk；若 orders/sales/guidance 未下修，Fundamental Cycle 不變。</p></div>
-<div><b>Cross-Asset Confirmation / Counter-evidence</b><p>Supporting：Nvidia 成長指引、memory / AI 需求仍強。Counter：SOX 與 ADR Friday 明顯走弱，顯示 positioning 先受壓。</p></div>
-<div><b>Market Pricing</b><p>市場在 Friday 先交易 discount-rate；後續需看 Broadcom、hyperscaler CapEx、memory pricing、台灣出口/外銷訂單是否提供 fundamental confirmation。</p></div>
-<div><b>Taiwan Transmission</b><p>TSMC 現貨 Friday +0.41%，但 ADR 在台灣收盤後 -2.29%；這是一個 Monday opening gap / relative-strength 驗證點，不是已完成的台股基本面惡化。</p></div>
-</div>
-<div class="status"><b>Validation Status：</b>FUNDAMENTALS CONFIRMED / MARKET BETA PARTIALLY NEGATIVE</div>
-</article>
-</section><section><h2>3. 24h Global News Intelligence</h2>
+</section>
+
+<section><h2>2. Top 3 Daily Themes</h2>
+    <article class="theme">
+      <div class="theme-head"><span class="score">86/100</span><h3>Theme 1｜日圓接近 160：FX 壓力升格為全球政策協調風險，但尚未成為 funding crisis</h3></div>
+      <div class="theme-grid">
+        <div><b>What Happened</b><p>過去 24 小時最具新增資訊量的事件，是美國財長 Scott Bessent 公開警告「失序的日圓走弱」可能引發部位平倉、擾動全球市場並推高美國借貸成本；同時，歐洲央行圈對美日近期外匯協調與美方政策不可預測性表達不安。</p></div>
+        <div><b>Signal Delta</b><p>canonical signal `fx_funding_stress` 從「FX intervention risk」升至「systemic attention」，但 validation 仍僅為 partially confirmed。</p></div>
+        <div><b>Why It Matters</b><p>日圓若以過快速度穿越 160，風險不只在日本本身，而是 carry trade、全球 duration、亞洲 FX 與 cross-border dollar funding 的連鎖反應。</p></div>
+        <div><b>Causal Chain</b><p>JPY weakness → intervention / position unwind risk → global duration &amp; USD demand → Asia FX volatility → Taiwan foreign flow / TWD / equity valuation。</p></div>
+        <div><b>Cross-Asset Confirmation / Counter-evidence</b><p>Supporting：日本近月大規模干預、日圓再近 160、官方跨國警告。Counter：SOFR 3.64% 持平、Fed liquidity swaps 極低、HY OAS 約 2.63% 未擴大。</p></div>
+        <div><b>Market Pricing</b><p>週末沒有新的可交易市場價格；因此不可把新聞熱度誤當作已完成的 risk-off 定價。Monday Asia open 才是下一個實際驗證。</p></div>
+        <div><b>Taiwan Transmission</b><p>台灣目前僅 partial：TWD Friday 轉強且外資現貨買超，但若 JPY 再度失序，台灣可能經由亞洲 FX beta、外資避險與科技股估值折現率受到壓力。</p></div>
+      </div>
+      <div class="status"><b>Validation Status：</b>PARTIALLY CONFIRMED / FALSE-POSITIVE-RISK</div>
+    </article>
+    
+    <article class="theme">
+      <div class="theme-head"><span class="score">84/100</span><h3>Theme 2｜Fed 前端利率衝擊仍是最新市場狀態：週末無新價格，但政策敘事未被反證</h3></div>
+      <div class="theme-grid">
+        <div><b>What Happened</b><p>Friday Warsh 談話後，市場把 9 月升息機率由約三成半上修至約五成半；2Y 美債殖利率單日跳升約 13bp。過去 24h 並無新的交易日，因此這是 carry-over market state，不是週末新 price delta。</p></div>
+        <div><b>Signal Delta</b><p>`fed_policy_tightening` 與 `rates_shock` 仍維持高 severity；真正的 24h 新資訊主要來自跨國政策協調擔憂，而非新市場成交。</p></div>
+        <div><b>Why It Matters</b><p>前端 real/nominal rates 是 AI、高估值科技與亞洲資產的主要 discount-rate channel。若沒有 funding/credit stress，這更像 discount-rate shock，而不是 liquidity crisis。</p></div>
+        <div><b>Causal Chain</b><p>Fed hawkish repricing → 2Y / real yield ↑ → equity duration compression → semis / growth beta ↓ → TSM ADR / SOX → Taiwan open。</p></div>
+        <div><b>Cross-Asset Confirmation / Counter-evidence</b><p>Supporting：2Y 急升、美元走強、Nasdaq/SOX 壓力、金價同步下跌。Counter：信用利差仍窄、SOFR 正常，故沒有跨到 funding shock。</p></div>
+        <div><b>Market Pricing</b><p>Friday close 已反映第一輪；Monday 若 USDTWD、TAIFEX、台股 breadth 同步惡化，才算 Taiwan transmission 明確擴大。</p></div>
+        <div><b>Taiwan Transmission</b><p>Friday 台股 +0.77% 是 Warsh 後美股完整反應前的時區結果；因此不能用 Friday 台股上漲否定 global rates shock。</p></div>
+      </div>
+      <div class="status"><b>Validation Status：</b>CONFIRMED AS PRICING SHOCK; NOT A FUNDING SHOCK</div>
+    </article>
+    
+    <article class="theme">
+      <div class="theme-head"><span class="score">81/100</span><h3>Theme 3｜AI 基本面仍強，但 semiconductor market beta 已被利率重新定價：基本面與市場循環分岔</h3></div>
+      <div class="theme-grid">
+        <div><b>What Happened</b><p>Nvidia 財報與長期營收展望延續 AI CapEx / accelerator 需求強勢；但 Friday SOX -3.47%、TSM ADR 約 -2.29%，顯示 rates shock 可以在基本面尚未轉弱時先壓縮估值與高 beta 部位。</p></div>
+        <div><b>Signal Delta</b><p>`ai_fundamental_cycle` 維持 confirmed；`semiconductor_relative_weakness` 則在 Market Cycle / Positioning 層面升溫，尚不能推論 orders / inventory / margin 反轉。</p></div>
+        <div><b>Why It Matters</b><p>把股價 beta 與 fundamental cycle 分開，是避免把折現率衝擊誤判成景氣拐點的核心。</p></div>
+        <div><b>Causal Chain</b><p>AI demand &amp; CapEx strong ↔ higher discount rate → valuation multiple compression → SOX / ADR weakness → Taiwan semiconductor gap risk；若 orders/sales/guidance 未下修，Fundamental Cycle 不變。</p></div>
+        <div><b>Cross-Asset Confirmation / Counter-evidence</b><p>Supporting：Nvidia 成長指引、memory / AI 需求仍強。Counter：SOX 與 ADR Friday 明顯走弱，顯示 positioning 先受壓。</p></div>
+        <div><b>Market Pricing</b><p>市場在 Friday 先交易 discount-rate；後續需看 Broadcom、hyperscaler CapEx、memory pricing、台灣出口/外銷訂單是否提供 fundamental confirmation。</p></div>
+        <div><b>Taiwan Transmission</b><p>TSMC 現貨 Friday +0.41%，但 ADR 在台灣收盤後 -2.29%；這是一個 Monday opening gap / relative-strength 驗證點，不是已完成的台股基本面惡化。</p></div>
+      </div>
+      <div class="status"><b>Validation Status：</b>FUNDAMENTALS CONFIRMED / MARKET BETA PARTIALLY NEGATIVE</div>
+    </article>
+    </section>
+
+<section><h2>3. 24h Global News Intelligence</h2>
 <div class="table-wrap"><table class=""><thead><tr><th>Event</th><th>FACT / EXPECTATION / INFERENCE</th><th>Signal Mapping</th><th>Impact</th><th>Evidence Quality</th><th>Relevance Score</th></tr></thead><tbody><tr><td>Bessent 警告失序日圓走弱可能擾動全球市場</td><td>FACT</td><td>fx_funding_stress / japan_cycle</td><td>高</td><td>Reuters + 官方政策脈絡</td><td>86</td></tr><tr><td>歐洲央行圈對美方政策與外匯協調可預測性表達憂慮</td><td>FACT / OPINION</td><td>fx_funding_stress / usd_liquidity</td><td>中高</td><td>Reuters</td><td>78</td></tr><tr><td>委內瑞拉提出 25 年能源開發框架、規劃油田與新區塊</td><td>FACT + FORWARD PLAN</td><td>energy_inflation</td><td>中</td><td>Reuters</td><td>66</td></tr><tr><td>中國 8 月官方製造業 PMI 將於 8/31 公布；市場關注是否仍低於 50</td><td>EXPECTATION / WATCH</td><td>china_cycle / global_trade_cycle</td><td>高（下一驗證點）</td><td>NBS + Reuters poll</td><td>64</td></tr><tr><td>Warsh 8/28 談話後的升息／2Y rates repricing</td><td>PRE-24H CARRY-OVER MARKET STATE</td><td>fed_policy_tightening / rates_shock</td><td>高</td><td>Fed + Reuters</td><td>84</td></tr><tr><td>Nvidia 強勁 AI 成長訊號 vs Friday SOX/TSM ADR 弱勢</td><td>PRE-24H FUNDAMENTAL + LATEST PRICING</td><td>ai_fundamental_cycle / semiconductor_relative_weakness</td><td>高</td><td>Reuters + market data</td><td>81</td></tr></tbody></table></div>
 <p class="note">去重原則：同一事件的媒體 follow-up 不重複列為獨立 signal。Warsh 與 Nvidia 並非 24h 新聞，但因 Friday close 仍是週末最新市場狀態，保留作為 market/fundamental baseline。</p>
-</section><section><h2>4. Social / Narrative Heat Map</h2>
+</section>
+
+<section><h2>4. Social / Narrative Heat Map</h2>
 <div class="table-wrap"><table class=""><thead><tr><th>Narrative</th><th>Platform</th><th>Heat / Proxy</th><th>Momentum</th><th>Market Relevance</th><th>Linked Signal</th><th>Evidence / Limitation</th></tr></thead><tbody><tr><td>Fed hawkish / 9月升息重新成為主流討論</td><td>PTT Stock、Reddit</td><td>PTT：公開互動量不完整；Reddit 樣本帖約 +56 votes</td><td>升溫</td><td>高：與2Y、美元、科技股定價同向</td><td>fed_policy_tightening / rates_shock</td><td>可見討論與市場定價一致；非平台全量資料，僅 proxy</td></tr><tr><td>日圓 160 / intervention risk</td><td>X / Reddit / financial media</td><td>X 公開索引無法取得可靠全量 engagement；以 Reuters/政策消息與關鍵價位作 proxy</td><td>升溫</td><td>高，但主要由 institutional attention 驅動</td><td>fx_funding_stress</td><td>社群精確 impression unavailable；不得把媒體密度當社群精確熱度</td></tr><tr><td>AI blowout vs chip-stock fade</td><td>Reddit / tech-finance media</td><td>精確 24h 高互動樣本不足</td><td>中性～升溫</td><td>中高：對 positioning 有意義、對 fundamentals 尚不足</td><td>ai_fundamental_cycle / semiconductor_relative_weakness</td><td>公開社群樣本不足，列為 qualitative proxy</td></tr></tbody></table></div>
 <p class="note">重要限制：X、Threads、Facebook、Instagram 等無法取得完整公開後台 impression / share / comment 全量資料，因此僅使用可見搜尋結果與代表性討論作 qualitative proxy；未虛構精確熱度。</p>
-</section><section><h2>5. Global Cross-Asset Dashboard</h2>
+</section>
+
+<section><h2>5. Global Cross-Asset Dashboard</h2>
 <div class="table-wrap"><table class=""><thead><tr><th>Asset / Channel</th><th>Latest Observable State</th><th>Daily Thesis Validation</th></tr></thead><tbody><tr><td>Rates</td><td>2Y ~4.36%、10Y ~4.72%、30Y ~5.2%（latest Friday state）</td><td>確認 discount-rate shock；週末無新 price delta</td></tr><tr><td>FX</td><td>JPY 再近 160；DXY Friday 走強；USDTWD Friday 31.628</td><td>全球 FX 風險升高，但 TWD 尚未轉成壓力</td></tr><tr><td>Credit</td><td>US HY OAS ~2.63% (8/27)</td><td>未確認 credit stress</td></tr><tr><td>Liquidity</td><td>SOFR 3.64% (8/27)；Fed swap 使用極低</td><td>未確認 funding/liquidity crisis</td></tr><tr><td>Equities</td><td>S&amp;P Friday -0.25%、Nasdaq -0.52%、SOX -3.47%</td><td>科技 beta 對 rates shock 更敏感</td></tr><tr><td>Commodities</td><td>Gold Friday -3.19%；oil 略低但仍處高檔</td><td>金價未與長端風險共振；energy inflation risk 尚未消失</td></tr></tbody></table></div>
 <div class="callout"><strong>Cross-asset conclusion：</strong>Rates 與 FX 的政策風險已升溫，但 Credit 與 Liquidity 明確沒有同步惡化。這讓今日最合理的分類是 <b>discount-rate / policy coordination shock</b>，不是 funding crisis。</div>
-</section><section><h2>6. Taiwan Transmission Matrix</h2>
+</section>
+
+<section><h2>6. Taiwan Transmission Matrix</h2>
 <div class="table-wrap"><table class=""><thead><tr><th>Global Signal / Event</th><th>Taiwan Economy</th><th>Taiwan Policy</th><th>Taiwan Industry</th><th>Taiwan Stocks</th><th>Transmission Status</th></tr></thead><tbody><tr><td>日圓 / FX intervention risk</td><td>亞洲 FX 波動可能影響進出口報價、資金流</td><td>CBC 以市場穩定與通膨傳導為 reaction function；無新增已公告措施</td><td>出口電子、金融、壽險對 FX/hedging 敏感</td><td>外資避險、TWD beta、估值折現率</td><td>PARTIAL</td></tr><tr><td>Fed / rates shock</td><td>外部融資成本、美元條件偏緊</td><td>CBC 不必機械跟隨 Fed；需看 TWD / CPI / growth</td><td>高估值電子、資本密集產業較敏感</td><td>TSMC/AI鏈 valuation、外資 futures</td><td>PARTIAL / MONDAY TEST</td></tr><tr><td>AI fundamental cycle</td><td>支撐出口、外銷訂單、設備投資</td><td>產業政策偏支援，非短線 price response</td><td>AI server、foundry、CoWoS/advanced packaging、memory</td><td>EPS / revenue support 仍在</td><td>FUNDAMENTAL CONFIRMED</td></tr><tr><td>中國弱週期</td><td>拖累傳統出口與中國需求曝險</td><td>需觀察 MOEA/NDC 對外需與景氣判讀</td><td>機械、塑化、部分傳產 &gt; AI鏈</td><td>營收與估值依中國曝險分化</td><td>ONGOING / NO NEW 24H DELTA</td></tr></tbody></table></div>
-</section><section><h2>7. Taiwan Market Reality Check</h2>
+</section>
+
+<section><h2>7. Taiwan Market Reality Check</h2>
 <div class="callout">
 <p><strong>TWSE foreign flow：</strong>Friday 外資現貨約 +NT$41.75bn；近 5D 約 +NT$110.94bn；近 20D 約 +NT$371.21bn，顯示現貨資金流仍偏正面。</p>
 <p><strong>TAIFEX：</strong>外資 TX futures OI 約 long 8,732 / short 92,387，淨空約 <b>-83,655 contracts</b>；相較 8/21 約 -82,594，5 個交易日淨空再增加約 1,061 口。現貨與衍生品訊號分歧。</p>
@@ -508,26 +121,38 @@ main {
 <p><strong>Sector / Cross-time-zone：</strong>Friday 台灣半導體約 +1.87%、TSMC 現貨 +0.41%；但其後美國 SOX -3.47%、TSM ADR 約 -2.29%。這不是同時段比較，反而正是 Monday transmission 的關鍵測試。</p>
 <p><strong>判定：</strong><b>PARTIAL TRANSMISSION</b>。現貨外資 + TWD 是正向兩項指標，但 futures net short + negative breadth + later U.S. semiconductor weakness 構成反向證據；尚不足以宣告 global risk-off 已 confirmed 傳導。</p>
 </div>
-</section><section><h2>8. Market vs Fundamental Cycle</h2>
+</section>
+
+<section><h2>8. Market vs Fundamental Cycle</h2>
 <div class="summary-grid">
 <div class="card"><div class="k">AI</div><div class="v">Fundamentals：Confirmed</div><p>accelerator / hyperscaler CapEx 路徑仍強；Nvidia 指引未顯示需求反轉。Market beta 對 rates 更敏感。</p></div>
 <div class="card"><div class="k">Semiconductor</div><div class="v">Market：Weakening</div><p>SOX Friday 明顯下跌；目前證據更符合 valuation / positioning 壓縮，而非 orders / sales / margin 全面惡化。</p></div>
 <div class="card"><div class="k">Memory</div><div class="v">Fundamental：Positive</div><p>AI 驅動 memory tightness 與區域 AI 出口仍提供支撐；需用 DRAM/NAND/HBM 報價、庫存與廠商 guidance 持續確認。</p></div>
 </div>
 <p><strong>核心規則：</strong>股價下跌 ≠ Fundamental Cycle deterioration。只有 orders、sales、inventory、margin、CapEx、guidance 等共同反轉，才應升級為基本面週期惡化。</p>
-</section><section><h2>9. Policy &amp; Regulatory Watch</h2>
+</section>
+
+<section><h2>9. Policy & Regulatory Watch</h2>
 <div class="callout">
 <p><span class="tag-fact"><b>FACT：</b></span>美方公開將 disorderly yen move 連結到全球市場穩定；日本近期已進行大規模 FX intervention。歐洲央行官員對政策協調機制的可預測性提出疑慮。</p>
 <p><span class="tag-infer"><b>INFERENCE：</b></span>若 JPY 快速穿越 160 且 repo / basis / credit 開始同步惡化，跨國政策反應機率會明顯上升。現階段不應把「可能介入」直接寫成已發生的新政策。</p>
 <p><span class="tag-infer"><b>Taiwan reaction function：</b></span>CBC 是否需要回應，應由 TWD 波動、輸入性通膨、外資流與國內 growth 組合判斷，而不是機械追隨 Fed 或日本。此為分析推論，非已公告政策。</p>
 </div>
-</section><section><h2>10. Scenario Matrix</h2>
+</section>
+
+<section><h2>10. Scenario Matrix</h2>
 <div class="table-wrap"><table class=""><thead><tr><th>Scenario</th><th>Probability</th><th>Trigger / Evidence</th><th>Taiwan Implication</th></tr></thead><tbody><tr><td>Base</td><td>55%</td><td>JPY 高波動但未形成 funding stress；Fed 維持偏鷹、AI fundamentals 強</td><td>台灣維持震盪分化；現貨外資與科技基本面提供支撐</td></tr><tr><td>Bull</td><td>20%</td><td>JPY 回落 &lt;158、2Y 下行、China PMI 明顯回升、台股 breadth 擴散</td><td>科技估值壓力緩解，傳產／出口 breadth 改善</td></tr><tr><td>Bear</td><td>20%</td><td>JPY 快速 &gt;160–162、2Y &gt;4.45%、SOX 弱勢延續且 TAIFEX 淨空擴大</td><td>台灣從 partial 轉 confirmed negative transmission</td></tr><tr><td>Tail Risk</td><td>5%</td><td>FX unwind 同時出現 SOFR/basis/credit widening</td><td>全球去槓桿；台灣 FX/外資/科技估值多通道共振</td></tr></tbody></table></div>
-</section><section><h2>11. Risk Lights</h2>
-<div class="table-wrap"><table class=""><thead><tr><th>Risk</th><th><span class="state-transition"><span class="state-prior">Yesterday</span><span class="transition-arrow">→</span><span class="state-current">Today</span></span></th><th>Reason</th></tr></thead><tbody><tr><td>Global</td><td><span class="state-transition"><span class="state-prior"><span class="risk risk-yellow">🟡 Yellow</span></span><span class="transition-arrow">→</span><span class="state-current"><span class="risk risk-yellow">🟡 Yellow</span></span></span></td><td>政策／FX 不確定性升高，但尚未形成跨資產危機</td></tr><tr><td>Growth</td><td><span class="state-transition"><span class="state-prior"><span class="risk risk-yellow">🟡 Yellow</span></span><span class="transition-arrow">→</span><span class="state-current"><span class="risk risk-yellow">🟡 Yellow</span></span></span></td><td>美國實質消費偏軟；中國製造仍弱，AI 投資提供對沖</td></tr><tr><td>Inflation</td><td><span class="state-transition"><span class="state-prior"><span class="risk risk-orange">🟠 Orange</span></span><span class="transition-arrow">→</span><span class="state-current"><span class="risk risk-orange">🟠 Orange</span></span></span></td><td>PCE 仍高於目標，能源鏈風險未消失</td></tr><tr><td>Rates</td><td><span class="state-transition"><span class="state-prior"><span class="risk risk-orange">🟠 Orange</span></span><span class="transition-arrow">→</span><span class="state-current"><span class="risk risk-red">🔴 Red</span></span></span></td><td>Friday 前端殖利率急升，Fed path 重新偏鷹</td></tr><tr><td>Liquidity</td><td><span class="state-transition"><span class="state-prior"><span class="risk risk-green">🟢 Green</span></span><span class="transition-arrow">→</span><span class="state-current"><span class="risk risk-green">🟢 Green</span></span></span></td><td>SOFR 穩定、swap 使用極低</td></tr><tr><td>Credit</td><td><span class="state-transition"><span class="state-prior"><span class="risk risk-green">🟢 Green</span></span><span class="transition-arrow">→</span><span class="state-current"><span class="risk risk-green">🟢 Green</span></span></span></td><td>HY OAS 維持低檔，未確認壓力</td></tr><tr><td>FX</td><td><span class="state-transition"><span class="state-prior"><span class="risk risk-orange">🟠 Orange</span></span><span class="transition-arrow">→</span><span class="state-current"><span class="risk risk-red">🔴 Red</span></span></span></td><td>JPY 接近 160 且官方開始以全球穩定框架警告</td></tr><tr><td>Commodities</td><td><span class="state-transition"><span class="state-prior"><span class="risk risk-orange">🟠 Orange</span></span><span class="transition-arrow">→</span><span class="state-current"><span class="risk risk-orange">🟠 Orange</span></span></span></td><td>短期地緣／煉油 tightness 對沖中長期新增供給訊號</td></tr><tr><td>Taiwan Equity</td><td><span class="state-transition"><span class="state-prior"><span class="risk risk-yellow">🟡 Yellow</span></span><span class="transition-arrow">→</span><span class="state-current"><span class="risk risk-orange">🟠 Orange</span></span></span></td><td>現貨外資與 TWD 正面，但 futures 深度淨空、breadth 弱、SOX/ADR 晚盤負面</td></tr><tr><td>Industry Cycle</td><td><span class="risk risk-green">🟢 Green</span>/<span class="risk risk-yellow">🟡 Yellow</span> <span class="direction direction-flat">→ 持平</span> <span class="risk risk-green">🟢 Green</span>/<span class="risk risk-yellow">🟡 Yellow</span></td><td>AI fundamentals 強；market beta/valuation 受 rates 壓力</td></tr><tr><td>Gold–Treasury Divergence</td><td><span class="state-transition"><span class="state-prior"><span class="risk risk-orange">🟠 Orange</span></span><span class="transition-arrow">→</span><span class="state-current"><span class="risk risk-yellow">🟡 Yellow</span></span></span></td><td>Friday 金價隨美元／殖利率反向下跌，未形成新的金債危機共振</td></tr></tbody></table></div>
-</section><section><h2>12. Next 24h Watchlist</h2>
-<div class="table-wrap"><table class=""><thead><tr><th>Indicator</th><th>Current</th><th>Next Threshold</th><th>Why It Matters</th><th>Linked Signal / Taiwan Channel</th></tr></thead><tbody><tr><td>China official Manufacturing PMI</td><td>7月 49.2</td><td>&gt;50 或 &lt;49.0</td><td>判斷 china_cycle 是否出現明顯加速／惡化</td><td>china_cycle <span class="direction direction-flat">→ 持平</span> Taiwan傳產/出口</td></tr><tr><td>USDJPY</td><td>~160 區間</td><td>快速站上 160–162 或回落 &lt;158</td><td>介入／carry unwind 的第一層壓力表</td><td>fx_funding_stress <span class="direction direction-flat">→ 持平</span> TWD/外資</td></tr><tr><td>SOFR / SOFR-EFFR spread</td><td>SOFR 3.64%</td><td>明顯跳升且與 EFFR 拉開</td><td>區分 FX shock 與 funding crisis</td><td>usd_liquidity / fx_funding_stress</td></tr><tr><td>US HY OAS</td><td>~2.63%</td><td>&gt;3.0% 並快速擴大</td><td>credit confirmation</td><td>credit_cycle</td></tr><tr><td>US 2Y Treasury</td><td>~4.36%</td><td>續升 &gt;4.45% 或回落 &lt;4.25%</td><td>Fed path / discount-rate</td><td>rates_shock <span class="direction direction-flat">→ 持平</span> Taiwan tech valuation</td></tr><tr><td>TAIFEX foreign TX OI</td><td>-83,655 contracts</td><td>淨空再增 &gt;5k 或明顯回補</td><td>台灣衍生品風險偏好</td><td>taiwan_foreign_flow</td></tr><tr><td>TWSE foreign cash flow</td><td>1D +NT$41.75bn; 5D +NT$110.94bn; 20D +NT$371.21bn</td><td>Monday 轉為大額賣超</td><td>global shock 是否傳入現貨</td><td>taiwan_foreign_flow</td></tr><tr><td>USDTWD</td><td>31.628</td><td>&gt;31.9 或 &lt;31.5</td><td>外資／美元壓力的即時台灣映射</td><td><span class="state-transition"><span class="state-prior">FX</span><span class="transition-arrow">→</span><span class="state-current">Taiwan</span></span></td></tr><tr><td>TAIEX breadth</td><td>376 up / 627 down Friday</td><td>breadth 與指數同向惡化</td><td>判斷集中度風險是否擴散</td><td>Taiwan equity transmission</td></tr><tr><td>TSM ADR vs spot</td><td>ADR -2.29% vs spot +0.41% Friday</td><td>Monday 現貨 gap / relative strength</td><td>跨時區 semiconductor transmission</td><td>semiconductor_relative_weakness</td></tr><tr><td>SOX vs Taiwan semi</td><td>SOX -3.47% Friday；台灣半導體 Friday +1.87%</td><td>Monday 台灣半導體明顯補跌或抗跌</td><td>判斷 US shock 是否真正傳導</td><td>semiconductor_relative_weakness</td></tr><tr><td>Japan / Asia macro releases</td><td>8/31 新一輪資料</td><td>產出/零售顯著偏離共識</td><td>japan_cycle 與亞洲需求</td><td>japan_cycle <span class="direction direction-flat">→ 持平</span> Taiwan</td></tr></tbody></table></div>
-</section><section><h2>Bottom Line</h2>
+</section>
+
+<section><h2>11. Risk Lights</h2>
+<div class="table-wrap"><table class=""><thead><tr><th>Risk</th><th>Yesterday → Today</th><th>Reason</th></tr></thead><tbody><tr><td>Global</td><td>🟡 → 🟡</td><td>政策／FX 不確定性升高，但尚未形成跨資產危機</td></tr><tr><td>Growth</td><td>🟡 → 🟡</td><td>美國實質消費偏軟；中國製造仍弱，AI 投資提供對沖</td></tr><tr><td>Inflation</td><td>🟠 → 🟠</td><td>PCE 仍高於目標，能源鏈風險未消失</td></tr><tr><td>Rates</td><td>🟠 → 🔴</td><td>Friday 前端殖利率急升，Fed path 重新偏鷹</td></tr><tr><td>Liquidity</td><td>🟢 → 🟢</td><td>SOFR 穩定、swap 使用極低</td></tr><tr><td>Credit</td><td>🟢 → 🟢</td><td>HY OAS 維持低檔，未確認壓力</td></tr><tr><td>FX</td><td>🟠 → 🔴</td><td>JPY 接近 160 且官方開始以全球穩定框架警告</td></tr><tr><td>Commodities</td><td>🟠 → 🟠</td><td>短期地緣／煉油 tightness 對沖中長期新增供給訊號</td></tr><tr><td>Taiwan Equity</td><td>🟡 → 🟠</td><td>現貨外資與 TWD 正面，但 futures 深度淨空、breadth 弱、SOX/ADR 晚盤負面</td></tr><tr><td>Industry Cycle</td><td>🟢/🟡 → 🟢/🟡</td><td>AI fundamentals 強；market beta/valuation 受 rates 壓力</td></tr><tr><td>Gold–Treasury Divergence</td><td>🟠 → 🟡</td><td>Friday 金價隨美元／殖利率反向下跌，未形成新的金債危機共振</td></tr></tbody></table></div>
+</section>
+
+<section><h2>12. Next 24h Watchlist</h2>
+<div class="table-wrap"><table class=""><thead><tr><th>Indicator</th><th>Current</th><th>Next Threshold</th><th>Why It Matters</th><th>Linked Signal / Taiwan Channel</th></tr></thead><tbody><tr><td>China official Manufacturing PMI</td><td>7月 49.2</td><td>&gt;50 或 &lt;49.0</td><td>判斷 china_cycle 是否出現明顯加速／惡化</td><td>china_cycle → Taiwan傳產/出口</td></tr><tr><td>USDJPY</td><td>~160 區間</td><td>快速站上 160–162 或回落 &lt;158</td><td>介入／carry unwind 的第一層壓力表</td><td>fx_funding_stress → TWD/外資</td></tr><tr><td>SOFR / SOFR-EFFR spread</td><td>SOFR 3.64%</td><td>明顯跳升且與 EFFR 拉開</td><td>區分 FX shock 與 funding crisis</td><td>usd_liquidity / fx_funding_stress</td></tr><tr><td>US HY OAS</td><td>~2.63%</td><td>&gt;3.0% 並快速擴大</td><td>credit confirmation</td><td>credit_cycle</td></tr><tr><td>US 2Y Treasury</td><td>~4.36%</td><td>續升 &gt;4.45% 或回落 &lt;4.25%</td><td>Fed path / discount-rate</td><td>rates_shock → Taiwan tech valuation</td></tr><tr><td>TAIFEX foreign TX OI</td><td>-83,655 contracts</td><td>淨空再增 &gt;5k 或明顯回補</td><td>台灣衍生品風險偏好</td><td>taiwan_foreign_flow</td></tr><tr><td>TWSE foreign cash flow</td><td>1D +NT$41.75bn; 5D +NT$110.94bn; 20D +NT$371.21bn</td><td>Monday 轉為大額賣超</td><td>global shock 是否傳入現貨</td><td>taiwan_foreign_flow</td></tr><tr><td>USDTWD</td><td>31.628</td><td>&gt;31.9 或 &lt;31.5</td><td>外資／美元壓力的即時台灣映射</td><td>FX → Taiwan</td></tr><tr><td>TAIEX breadth</td><td>376 up / 627 down Friday</td><td>breadth 與指數同向惡化</td><td>判斷集中度風險是否擴散</td><td>Taiwan equity transmission</td></tr><tr><td>TSM ADR vs spot</td><td>ADR -2.29% vs spot +0.41% Friday</td><td>Monday 現貨 gap / relative strength</td><td>跨時區 semiconductor transmission</td><td>semiconductor_relative_weakness</td></tr><tr><td>SOX vs Taiwan semi</td><td>SOX -3.47% Friday；台灣半導體 Friday +1.87%</td><td>Monday 台灣半導體明顯補跌或抗跌</td><td>判斷 US shock 是否真正傳導</td><td>semiconductor_relative_weakness</td></tr><tr><td>Japan / Asia macro releases</td><td>8/31 新一輪資料</td><td>產出/零售顯著偏離共識</td><td>japan_cycle 與亞洲需求</td><td>japan_cycle → Taiwan</td></tr></tbody></table></div>
+</section>
+
+<section><h2>Bottom Line</h2>
 <div class="callout bottom">
 <ol>
 <li><b>今天真正改變的是什麼？</b> 不是 Macro Regime，也不是 Fundamental Cycle；主要是 <b>Financial Conditions / Market Pricing / FX-policy coordination risk</b> 的再定價與風險升級。</li>
@@ -535,14 +160,14 @@ main {
 <li><b>是否需要修改未來 1–2 季判斷？</b> <b>暫不需要做 regime-level 修改</b>。目前應上修 FX / rates tail-risk 權重、保留 AI fundamental thesis，並等待中國 PMI、Monday Taiwan market confirmation 與下週美國 labor data。</li>
 </ol>
 </div>
-</section><section><h2>Sources &amp; Evidence</h2>
-<ol class="sources"><li id="S1"><a href="https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm" rel="noopener" target="_blank">Federal Reserve — Governor Kevin Warsh speech, 2026-08-28</a></li><li id="S2"><a href="https://www.reuters.com/world/china/global-markets-global-markets-2026-08-28/" rel="noopener" target="_blank">Reuters — Global markets after Warsh repricing, 2026-08-28</a></li><li id="S3"><a href="https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026" rel="noopener" target="_blank">BEA — Personal Income and Outlays, July 2026</a></li><li id="S4"><a href="https://www.reuters.com/business/finance/bessent-says-disorderly-yen-moves-can-destabilize-global-markets-2026-08-29/" rel="noopener" target="_blank">Reuters — Bessent warns disorderly yen moves can destabilize markets, 2026-08-29</a></li><li id="S5"><a href="https://www.reuters.com/business/finance/europes-central-bankers-fear-more-turbulence-testy-us-relations-2026-08-30/" rel="noopener" target="_blank">Reuters — European central bankers fear more turbulence in U.S. relations, 2026-08-30</a></li><li id="S6"><a href="https://www.federalreserve.gov/releases/h41/current/" rel="noopener" target="_blank">Federal Reserve H.4.1 — Factors Affecting Reserve Balances</a></li><li id="S7"><a href="https://fred.stlouisfed.org/series/SOFR" rel="noopener" target="_blank">FRED — SOFR</a></li><li id="S8"><a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" rel="noopener" target="_blank">FRED — ICE BofA US High Yield OAS</a></li><li id="S9"><a href="https://www.reuters.com/business/nvidia-rises-after-signaling-longer-ai-spending-runway-2026-08-27/" rel="noopener" target="_blank">Reuters — Nvidia signals longer AI spending runway</a></li><li id="S10"><a href="https://www.taifex.com.tw/enl/eng3/futContractsDate" rel="noopener" target="_blank">TAIFEX — Futures contracts by institutional investors</a></li><li id="S11"><a href="https://www.cbc.gov.tw/en/lp-700-2-1-60.html" rel="noopener" target="_blank">Central Bank of the Republic of China (Taiwan) — FX rates</a></li><li id="S12"><a href="https://www.stats.gov.cn/english/PressRelease/202608/t20260803_1964272.html" rel="noopener" target="_blank">NBS China — July 2026 Manufacturing PMI</a></li><li id="S13"><a href="https://www.stats.gov.cn/english/PressRelease/ReleaseCalendar/202512/t20251226_1962154.html" rel="noopener" target="_blank">NBS China — Release Calendar</a></li><li id="S14"><a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener" target="_blank">Investing.com — PHLX Semiconductor historical data</a></li><li id="S15"><a href="https://www.investing.com/equities/taiwan-semicon-historical-data" rel="noopener" target="_blank">Investing.com — TSMC Taiwan historical data</a></li></ol>
+</section>
+
+<section><h2>Sources & Evidence</h2>
+<ol class='sources'><li id='S1'><a href='https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm' target='_blank' rel='noopener'>Federal Reserve — Governor Kevin Warsh speech, 2026-08-28</a></li><li id='S2'><a href='https://www.reuters.com/world/china/global-markets-global-markets-2026-08-28/' target='_blank' rel='noopener'>Reuters — Global markets after Warsh repricing, 2026-08-28</a></li><li id='S3'><a href='https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026' target='_blank' rel='noopener'>BEA — Personal Income and Outlays, July 2026</a></li><li id='S4'><a href='https://www.reuters.com/business/finance/bessent-says-disorderly-yen-moves-can-destabilize-global-markets-2026-08-29/' target='_blank' rel='noopener'>Reuters — Bessent warns disorderly yen moves can destabilize markets, 2026-08-29</a></li><li id='S5'><a href='https://www.reuters.com/business/finance/europes-central-bankers-fear-more-turbulence-testy-us-relations-2026-08-30/' target='_blank' rel='noopener'>Reuters — European central bankers fear more turbulence in U.S. relations, 2026-08-30</a></li><li id='S6'><a href='https://www.federalreserve.gov/releases/h41/current/' target='_blank' rel='noopener'>Federal Reserve H.4.1 — Factors Affecting Reserve Balances</a></li><li id='S7'><a href='https://fred.stlouisfed.org/series/SOFR' target='_blank' rel='noopener'>FRED — SOFR</a></li><li id='S8'><a href='https://fred.stlouisfed.org/series/BAMLH0A0HYM2' target='_blank' rel='noopener'>FRED — ICE BofA US High Yield OAS</a></li><li id='S9'><a href='https://www.reuters.com/business/nvidia-rises-after-signaling-longer-ai-spending-runway-2026-08-27/' target='_blank' rel='noopener'>Reuters — Nvidia signals longer AI spending runway</a></li><li id='S10'><a href='https://www.taifex.com.tw/enl/eng3/futContractsDate' target='_blank' rel='noopener'>TAIFEX — Futures contracts by institutional investors</a></li><li id='S11'><a href='https://www.cbc.gov.tw/en/lp-700-2-1-60.html' target='_blank' rel='noopener'>Central Bank of the Republic of China (Taiwan) — FX rates</a></li><li id='S12'><a href='https://www.stats.gov.cn/english/PressRelease/202608/t20260803_1964272.html' target='_blank' rel='noopener'>NBS China — July 2026 Manufacturing PMI</a></li><li id='S13'><a href='https://www.stats.gov.cn/english/PressRelease/ReleaseCalendar/202512/t20251226_1962154.html' target='_blank' rel='noopener'>NBS China — Release Calendar</a></li><li id='S14'><a href='https://www.investing.com/indices/phlx-semiconductor-historical-data' target='_blank' rel='noopener'>Investing.com — PHLX Semiconductor historical data</a></li><li id='S15'><a href='https://www.investing.com/equities/taiwan-semicon-historical-data' target='_blank' rel='noopener'>Investing.com — TSMC Taiwan historical data</a></li></ol>
 <p class="note">數據時間戳不一：官方數據採最新可得發布日；市場價格採 2026-08-28 Friday close 或最新官方可得交易日。社群資料為公開可見 proxy，不代表平台全量。</p>
-</section><div class="footer">Global Daily Brief Research Engine · Generated 2026-08-30 13:17 Asia/Taipei · Single-file self-contained HTML (inline CSS, no external rendering dependencies). This report is informational research, not personalized investment advice.</div>
+</section>
+
+<div class="footer">Global Daily Brief Research Engine · Generated 2026-08-30 13:17 Asia/Taipei · Single-file self-contained HTML (inline CSS, no external rendering dependencies). This report is informational research, not personalized investment advice.</div>
 </main>
-<footer>
-  Global Macro Signal Report · Archive · Generated Deterministically
-</footer>
-</div>
 </body>
 </html>

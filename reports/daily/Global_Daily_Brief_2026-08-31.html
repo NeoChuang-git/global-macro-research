@@ -1,459 +1,56 @@
-<!doctype html>
-<html lang="zh-Hant">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fed 折現率衝擊仍是主線；週末新增日圓政策尾風險與成品油供給風險，台灣 AI 基本面仍未反轉 · Global Macro Signal Report</title>
-<style>
-
-:root {
-  --bg-primary: #0f172a;
-  --bg-surface: #1e293b;
-  --bg-surface-raised: #334155;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --border: #334155;
-  --border-light: #475569;
-  --accent: #38bdf8;
-  --accent-glow: rgba(56, 189, 248, 0.15);
-  --success: #10b981;
-  --warning: #f59e0b;
-  --orange: #f97316;
-  --danger: #ef4444;
-  --table-zebra: rgba(255, 255, 255, 0.02);
-  --table-hover: rgba(56, 189, 248, 0.06);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-primary: #f8fafc;
-    --bg-surface: #ffffff;
-    --bg-surface-raised: #f1f5f9;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
-    --border: #e2e8f0;
-    --border-light: #cbd5e1;
-    --accent: #0284c7;
-    --accent-glow: rgba(2, 132, 199, 0.08);
-    --table-zebra: #f8fafc;
-    --table-hover: rgba(2, 132, 199, 0.05);
-  }
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.68;
-  font-size: 15px;
-  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
-  -webkit-font-smoothing: antialiased;
-  padding: 24px 16px;
-}
-
-.report-container {
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-/* Hero Header */
-.hero-header {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 24px 28px;
-  margin-bottom: 28px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.hero-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.hero-type-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.hero-run-id {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.hero-run-id code {
-  background: var(--bg-surface-raised);
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: var(--accent);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-}
-
-.hero-title {
-  font-size: 1.85rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  line-height: 1.28;
-}
-
-/* Typography & Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--text-primary);
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-h2 {
-  font-size: 1.35rem;
-  margin: 36px 0 16px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--accent);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-h3 {
-  font-size: 1.15rem;
-  margin: 24px 0 12px;
-  color: var(--text-primary);
-}
-
-p {
-  margin-bottom: 14px;
-  color: var(--text-primary);
-}
-
-ul, ol {
-  margin: 12px 0 16px 24px;
-  color: var(--text-primary);
-}
-
-li {
-  margin-bottom: 6px;
-}
-
-/* Blockquotes / Callout boxes */
-blockquote {
-  background: var(--accent-glow);
-  border-left: 4px solid var(--accent);
-  border-radius: 0 8px 8px 0;
-  padding: 14px 18px;
-  margin: 18px 0;
-  color: var(--text-primary);
-  font-size: 0.98rem;
-}
-
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-
-/* Tables */
-.table-scroll {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: 20px 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-surface);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.92rem;
-  text-align: left;
-}
-
-th, td {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: middle;
-}
-
-th {
-  background: var(--bg-surface-raised);
-  color: var(--text-primary);
-  font-weight: 600;
-  position: sticky;
-  top: 0;
-  white-space: nowrap;
-  letter-spacing: 0.02em;
-}
-
-tr:nth-child(even) td {
-  background: var(--table-zebra);
-}
-
-tr:hover td {
-  background: var(--table-hover);
-}
-
-/* Badges */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1;
-}
-
-.badge-type {
-  background: rgba(56, 189, 248, 0.15);
-  color: var(--accent);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-}
-
-.badge-topic {
-  background: var(--bg-surface-raised);
-  color: var(--text-secondary);
-  border: 1px solid var(--border);
-}
-
-.badge-grade-A { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
-.badge-grade-B { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
-.badge-grade-C { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
-.badge-grade-D { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
-
-/* Direction Indicators */
-.direction {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  font-weight: 600;
-  font-size: 0.88rem;
-}
-
-.direction-up { color: #38bdf8; }
-.direction-down { color: #a855f7; }
-.direction-improving { color: var(--success); }
-.direction-worsening { color: var(--danger); }
-.direction-flat { color: var(--text-muted); }
-
-/* Risk Lights */
-.risk {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-size: 0.82rem;
-  line-height: 1.2;
-}
-
-.risk-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
-.risk-yellow { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
-.risk-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
-.risk-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
-
-/* State Transition */
-.state-transition {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background: var(--bg-surface-raised);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.state-prior { color: var(--text-muted); }
-.transition-arrow { color: var(--accent); font-weight: bold; }
-.state-current { color: var(--text-primary); font-weight: 600; }
-
-/* Links */
-a {
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px dotted rgba(56, 189, 248, 0.5);
-}
-
-a:hover {
-  border-bottom-style: solid;
-}
-
-/* Code */
-code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  background: var(--bg-surface-raised);
-  padding: 2px 5px;
-  border-radius: 4px;
-  font-size: 0.88em;
-}
-
-pre {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 14px;
-  overflow-x: auto;
-  margin: 16px 0;
-}
-
-pre code {
-  background: transparent;
-  padding: 0;
-}
-
-/* Footer */
-footer {
-  margin-top: 48px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-/* Legacy Card & Layout Compatibility */
-main {
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-.card, .panel, .box, .risk-card, .sec {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 24px 28px;
-  margin: 24px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.callout, .note {
-  background: var(--accent-glow);
-  border-left: 4px solid var(--accent);
-  border-radius: 0 8px 8px 0;
-  padding: 16px 20px;
-  margin: 18px 0;
-  color: var(--text-primary);
-  font-size: 0.98rem;
-  line-height: 1.68;
-}
-
-.chain, .node {
-  background: var(--bg-surface-raised);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 16px 20px;
-  margin: 18px 0;
-  font-weight: 600;
-  text-align: center;
-  color: var(--text-primary);
-  line-height: 1.6;
-}
-
-.small, small, .footer-note {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-top: 24px;
-  display: block;
-}
-
-/* Legacy Color & Badge utilities */
-.green, .g, .badge-green { color: var(--success); font-weight: 700; }
-.yellow, .y, .badge-yellow { color: var(--warning); font-weight: 700; }
-.orange, .o, .badge-orange { color: var(--orange); font-weight: 700; }
-.red, .r, .badge-red { color: var(--danger); font-weight: 700; }
-
-.pill, .tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  line-height: 1;
-  background: var(--bg-surface-raised);
-  color: var(--text-secondary);
-  border: 1px solid var(--border);
-}
-
-.metric, .metric-down {
-  font-weight: 600;
-  font-feature-settings: "tnum" 1;
-}
-
-.arrow {
-  font-weight: 700;
-}
-
-.muted {
-  color: var(--text-muted);
-}
-
-.table-wrap, .scroll {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: 18px 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-surface);
-}
-
-</style>
-</head>
-<body>
-<div class="report-container">
-<header class="hero-header">
-  <div class="hero-top">
-    <div class="hero-type-row">
-      <span class="badge badge-type">GLOBAL_DAILY_BRIEF</span>
-      <span class="badge risk-red">🔴 Risk: RED</span>
-    </div>
-  </div>
-  <h1 class="hero-title">Fed 折現率衝擊仍是主線；週末新增日圓政策尾風險與成品油供給風險，台灣 AI 基本面仍未反轉</h1>
-</header>
-<main class="report-content">
-<div class="mu">GLOBAL DAILY BRIEF · 2026-08-31 · 07:32 TAIPEI</div><p><b>Daily Regime Thesis｜</b>AI 基本面週期(Fundamental Cycle)仍強，但市場週期(Market Cycle)進入「盈利強、估值(Valuation)受短端利率壓縮」；週末新增訊號集中於日本匯率政策與俄羅斯柴油供給，而非新的全球資金危機。</p><h2>Executive Intelligence Summary</h2><div class="card"><b>Fed / Rates：</b>Warsh 的 Jackson Hole 訊息已由 Headline 轉成 Signal：市場把 9 月升息機率由約35%提高至約56–60%，Gulf equities 週日亦提供二次確認。這是 fed_policy_tightening / rates_shock，不是流動性(Liquidity)危機。</div><p><b>Japan / FX：</b>日本 7/30–8/26 已投入創紀錄 15.4 兆日圓干預，但 Bessent 最新表示近期日圓波動仍相當受控、並非 disorderly，弱化「立即再聯合干預」敘事；真正 watchpoint 轉向 BOJ 9 月升息預期與 USDJPY 160 附近政策反應。</p><p><b>Taiwan / AI：</b>台灣 7 月景氣燈號維持紅燈41分、領先指標連12升；7月外銷訂單(Export Orders) US$97.94bn、+61.9% YoY。8/28 外資現貨買超 NT$41.588bn、連3買，單週約 +NT$110.8bn，新台幣升至31.628。基本面與資金流(Flow)共振仍偏正面，但高估值限制追價。</p><h2>1. Daily Signal Board</h2><div class="scroll"><table><tr><th>Family</th><th>Direction</th><th>Severity</th><th>Confidence</th><th>24h Delta</th><th>Evidence / Counter</th></tr>
-<tr><td>Growth</td><td><span class="direction direction-up">↑ 上升</span> resilient</td><td>3/5</td><td>High</td><td><span class="direction direction-flat">→ 持平</span></td><td>Taiwan leading <span class="direction direction-up">↑ 上升</span>12M；US labor resilient</td></tr>
-<tr><td>Inflation</td><td><span class="direction direction-up">↑ 上升</span> sticky</td><td>4/5</td><td>High</td><td><span class="direction direction-flat">→ 持平</span></td><td>Warsh inflation focus / crude off highs</td></tr>
-<tr><td>Labor</td><td>resilient</td><td>2/5</td><td>Med-High</td><td><span class="direction direction-flat">→ 持平</span></td><td>next payroll is key</td></tr>
-<tr><td>Fed</td><td>tightening <span class="direction direction-up">↑ 上升</span></td><td>5/5</td><td>High</td><td class="r"><span class="direction direction-up">↑ 上升</span></td><td>Sep hike odds ~56–60%</td></tr>
-<tr><td>Rates / Term Premium</td><td><span class="direction direction-up">↑ 上升</span></td><td>4/5</td><td>High</td><td class="r"><span class="direction direction-up">↑ 上升</span></td><td>front-end repricing</td></tr>
-<tr><td>Liquidity</td><td>stable</td><td>2/5</td><td>Med-High</td><td><span class="direction direction-flat">→ 持平</span></td><td>no funding disorder confirmation</td></tr>
-<tr><td>Credit</td><td>stable-tight</td><td>2/5</td><td>Medium</td><td><span class="direction direction-flat">→ 持平</span></td><td>no broad spread shock</td></tr>
-<tr><td>Fiscal / Treasury</td><td>pressure</td><td>4/5</td><td>High</td><td><span class="direction direction-flat">→ 持平</span></td><td>long-end supply structural</td></tr>
-<tr><td>FX / Dollar</td><td>USD firm</td><td>4/5</td><td>High</td><td class="o"><span class="direction direction-up">↑ 上升</span></td><td>JPY ~160; intervention narrative nuanced</td></tr>
-<tr><td>Commodities</td><td>mixed <span class="direction direction-up">↑ 上升</span> tail</td><td>3/5</td><td>High</td><td class="o"><span class="direction direction-up">↑ 上升</span></td><td>Russia diesel ban extended</td></tr>
-<tr><td>Global Trade</td><td>AI-led <span class="direction direction-up">↑ 上升</span></td><td>3/5</td><td>Med-High</td><td><span class="direction direction-flat">→ 持平</span></td><td>Korea chips / Taiwan orders strong</td></tr>
-<tr><td>China/Asia/Taiwan</td><td>AI-led <span class="direction direction-up">↑ 上升</span></td><td>3/5</td><td>High</td><td class="g"><span class="direction direction-up">↑ 上升</span></td><td>Taiwan red light + leading index + flows</td></tr></table></div><h2>2. Top 3 Daily Themes</h2><h3>1｜Warsh → 短端利率重定價｜Relevance 92/100</h3><div class="chain">inflation-first reaction function <span class="direction direction-flat">→ 持平</span> fed_policy_tightening <span class="direction direction-flat">→ 持平</span> US 2Y / USD <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> 長久期估值壓縮 <span class="direction direction-flat">→ 持平</span> 台灣高估值半導體追價門檻提高</div><h3>2｜JPY：不是立即失序，而是 BOJ/Fed 利差與160防線｜84/100</h3><div class="chain">15.4tn yen intervention + USDJPY near 160 <span class="direction direction-flat">→ 持平</span> japan_cycle / FX <span class="state-transition"><span class="state-prior">policy risk</span><span class="transition-arrow">→</span><span class="state-current">carry sensitivity</span></span> <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> Asian FX volatility <span class="direction direction-up">↑ 上升</span></div><h3>3｜AI Asia Fundamental vs Market Cycle 分岔｜88/100</h3><div class="chain">Nvidia guidance + Korea memory exports + Taiwan export orders <span class="direction direction-flat">→ 持平</span> ai_fundamental_cycle / memory_cycle / asia_export_cycle <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> Taiwan revenue visibility <span class="direction direction-up">↑ 上升</span> BUT Fed 2Y <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> justified multiple <span class="direction direction-down">↓ 下降</span></div><h2>3. 24h Global News Intelligence</h2><p>Bessent 稱 yen moves contained：屬 counter-evidence；俄羅斯柴油出口禁令延長至9/30：提高成品油成本尾風險；韓國任命 Lee Hyoung-il 為財長：AI boom、貨幣緊縮與擴張財政形成政策張力；Bessent 推動 G20 處理中國貿易失衡：提高 global_trade_cycle 尾風險；全球股票基金結束13週淨流入：屬部位(Positioning)訊號，不等於基本面反轉。</p><h2>4. Social / Narrative Heat Map</h2><p>Warsh/September hike 9/10 <span class="direction direction-up">↑ 上升</span>；AI demand intact but ROI/financing quality 8.5/10 <span class="direction direction-up">↑ 上升</span>；JPY160 intervention 8/10 <span class="direction direction-flat">→ 持平</span>；Taiwan AI orders 7.5/10 <span class="direction direction-up">↑ 上升</span>。公開平台 engagement 後台不可完整取得，heat 為 qualitative proxy。</p><h2>5. Causal Chain Audit</h2><div class="scroll"><table><tr><th>Link</th><th>Mechanism</th><th>Evidence</th><th>Counter</th><th>Confidence</th><th>Status</th></tr>
-<tr><td><span class="state-transition"><span class="state-prior">Warsh</span><span class="transition-arrow">→</span><span class="state-current">2Y</span></span></td><td>policy repricing</td><td>speech + futures/yields + Gulf</td><td>data-dependent</td><td>High</td><td>Confirmed</td></tr>
-<tr><td>2Y<span class="direction direction-up">↑ 上升</span>→AI multiple<span class="direction direction-down">↓ 下降</span></td><td>discount rate</td><td>Nasdaq/Russell/NVDA weakness</td><td>EPS strong</td><td>High</td><td>Partial</td></tr>
-<tr><td><span class="state-transition"><span class="state-prior">Asia AI</span><span class="transition-arrow">→</span><span class="state-current">Taiwan orders</span></span></td><td>GPU/HBM/server supply chain</td><td>MOEA + Korea + Nvidia</td><td>optical weak</td><td>High</td><td>Confirmed</td></tr>
-<tr><td><span class="state-transition"><span class="state-prior">Taiwan orders</span><span class="transition-arrow">→</span><span class="state-current">TSMC upside</span></span></td><td>revenue visibility</td><td>orders + foreign buying</td><td>rates/valuation</td><td>Med-High</td><td>Partial</td></tr></table></div><h2>6. Global Cross-Asset Dashboard</h2><p>Rates：短端政策路徑重定價最強。FX：USD firm、JPY約160。Credit：未見廣泛信用利差(Credit Spread)失序。Equities：大型科技盈利強但高 duration 對 rates 敏感。Commodities：柴油供給風險上升。Liquidity：無 funding stress 共振。</p><h2>7. Taiwan Transmission Matrix</h2><p>Economy：Strong；Policy：Watch；Industry：AI/electronics Strong；Stocks：Positive but selective。NDC領先指標+0.72%至104.63、連12升；ICT orders +89.5%、electronics +71.7%，但 optical -10.6% 為反證。</p><h2>8. Taiwan Market Reality Check</h2><p>TAIEX 46,331.45（8/28，+0.77%）；外資 +NT$41.588bn、連3買，單週約 +NT$110.8bn；USD/TWD 31.628。台積電2,420、聯發科3,985、台達電1,830；聯電獲外資買超約88,989張。現貨資金+匯率+指數三項共振，taiwan_foreign_flow = Confirmed Positive。</p><h2>9. Market vs Fundamental Cycle</h2><p>AI Market Cycle <span class="risk risk-yellow">🟡 Yellow</span><span class="risk risk-orange">🟠 Orange</span>；AI Fundamental Cycle <span class="risk risk-green">🟢 Green</span><span class="risk risk-green">🟢 Green</span>；Memory <span class="risk risk-green">🟢 Green</span>。供應鏈(Supply Chain)資本支出(CapEx)仍強，但要持續檢查真實 end-demand、庫存(Inventory)與毛利率(Margin)。</p><h2>10. Policy &amp; Regulatory Watch</h2><p>Fed 9月升息風險；BOJ 9月升息與FX policy；G20中國貿易失衡；俄柴油禁令；台灣強景氣下匯率與資產價格管理。</p><h2>11. Daily Taiwan Equity Action Delta</h2><div class="scroll"><table><tr><th>Stock</th><th>Grade</th><th>Chain</th><th>Baseline</th><th>New Evidence</th><th>Pricing</th><th>Current Tactical</th><th>Delta</th><th>1–5D</th><th>1–4W</th><th>Confidence</th></tr>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Global Daily Brief｜2026-08-31</title>
+<style>body{margin:0;background:#08111e;color:#eef4ff;font:15px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif}main{max-width:1180px;margin:auto;padding:28px 20px 70px}h1{font-size:42px;line-height:1.12}h2{margin-top:38px;border-bottom:1px solid #293a55;padding-bottom:8px}.card{background:#101b2d;border:1px solid #293a55;border-radius:14px;padding:17px;margin:14px 0}.scroll{overflow:auto;border:1px solid #293a55;border-radius:12px}table{width:100%;border-collapse:collapse;min-width:820px}th,td{padding:10px 12px;border-bottom:1px solid #23334c;text-align:left;vertical-align:top}th{background:#17243b}.g{color:#46d28c}.o{color:#ff9f43}.r{color:#ff6075}.mu{color:#9cabc0}.chain{font-family:monospace;background:#091321;border:1px solid #293a55;padding:14px;border-radius:10px;white-space:pre-wrap}a{color:#91d8ff}</style></head><body><main>
+<div class="mu">GLOBAL DAILY BRIEF · 2026-08-31 · 07:32 TAIPEI</div>
+<h1>Fed 折現率衝擊仍是主線；週末新增日圓政策尾風險與成品油供給風險，台灣 AI 基本面仍未反轉</h1>
+<p><b>Daily Regime Thesis｜</b>AI 基本面週期(Fundamental Cycle)仍強，但市場週期(Market Cycle)進入「盈利強、估值(Valuation)受短端利率壓縮」；週末新增訊號集中於日本匯率政策與俄羅斯柴油供給，而非新的全球資金危機。</p>
+<h2>Executive Intelligence Summary</h2>
+<div class="card"><b>Fed / Rates：</b>Warsh 的 Jackson Hole 訊息已由 Headline 轉成 Signal：市場把 9 月升息機率由約35%提高至約56–60%，Gulf equities 週日亦提供二次確認。這是 fed_policy_tightening / rates_shock，不是流動性(Liquidity)危機。</div>
+<p><b>Japan / FX：</b>日本 7/30–8/26 已投入創紀錄 15.4 兆日圓干預，但 Bessent 最新表示近期日圓波動仍相當受控、並非 disorderly，弱化「立即再聯合干預」敘事；真正 watchpoint 轉向 BOJ 9 月升息預期與 USDJPY 160 附近政策反應。</p>
+<p><b>Taiwan / AI：</b>台灣 7 月景氣燈號維持紅燈41分、領先指標連12升；7月外銷訂單(Export Orders) US$97.94bn、+61.9% YoY。8/28 外資現貨買超 NT$41.588bn、連3買，單週約 +NT$110.8bn，新台幣升至31.628。基本面與資金流(Flow)共振仍偏正面，但高估值限制追價。</p>
+<h2>1. Daily Signal Board</h2><div class="scroll"><table><tr><th>Family</th><th>Direction</th><th>Severity</th><th>Confidence</th><th>24h Delta</th><th>Evidence / Counter</th></tr>
+<tr><td>Growth</td><td>↑ resilient</td><td>3/5</td><td>High</td><td>→</td><td>Taiwan leading ↑12M；US labor resilient</td></tr>
+<tr><td>Inflation</td><td>↑ sticky</td><td>4/5</td><td>High</td><td>→</td><td>Warsh inflation focus / crude off highs</td></tr>
+<tr><td>Labor</td><td>resilient</td><td>2/5</td><td>Med-High</td><td>→</td><td>next payroll is key</td></tr>
+<tr><td>Fed</td><td>tightening ↑</td><td>5/5</td><td>High</td><td class="r">↑</td><td>Sep hike odds ~56–60%</td></tr>
+<tr><td>Rates / Term Premium</td><td>↑</td><td>4/5</td><td>High</td><td class="r">↑</td><td>front-end repricing</td></tr>
+<tr><td>Liquidity</td><td>stable</td><td>2/5</td><td>Med-High</td><td>→</td><td>no funding disorder confirmation</td></tr>
+<tr><td>Credit</td><td>stable-tight</td><td>2/5</td><td>Medium</td><td>→</td><td>no broad spread shock</td></tr>
+<tr><td>Fiscal / Treasury</td><td>pressure</td><td>4/5</td><td>High</td><td>→</td><td>long-end supply structural</td></tr>
+<tr><td>FX / Dollar</td><td>USD firm</td><td>4/5</td><td>High</td><td class="o">↑</td><td>JPY ~160; intervention narrative nuanced</td></tr>
+<tr><td>Commodities</td><td>mixed ↑ tail</td><td>3/5</td><td>High</td><td class="o">↑</td><td>Russia diesel ban extended</td></tr>
+<tr><td>Global Trade</td><td>AI-led ↑</td><td>3/5</td><td>Med-High</td><td>→</td><td>Korea chips / Taiwan orders strong</td></tr>
+<tr><td>China/Asia/Taiwan</td><td>AI-led ↑</td><td>3/5</td><td>High</td><td class="g">↑</td><td>Taiwan red light + leading index + flows</td></tr></table></div>
+<h2>2. Top 3 Daily Themes</h2>
+<h3>1｜Warsh → 短端利率重定價｜Relevance 92/100</h3><div class="chain">inflation-first reaction function → fed_policy_tightening → US 2Y / USD ↑ → 長久期估值壓縮 → 台灣高估值半導體追價門檻提高</div>
+<h3>2｜JPY：不是立即失序，而是 BOJ/Fed 利差與160防線｜84/100</h3><div class="chain">15.4tn yen intervention + USDJPY near 160 → japan_cycle / FX policy risk → carry sensitivity ↑ → Asian FX volatility ↑</div>
+<h3>3｜AI Asia Fundamental vs Market Cycle 分岔｜88/100</h3><div class="chain">Nvidia guidance + Korea memory exports + Taiwan export orders → ai_fundamental_cycle / memory_cycle / asia_export_cycle ↑ → Taiwan revenue visibility ↑ BUT Fed 2Y ↑ → justified multiple ↓</div>
+<h2>3. 24h Global News Intelligence</h2>
+<p>Bessent 稱 yen moves contained：屬 counter-evidence；俄羅斯柴油出口禁令延長至9/30：提高成品油成本尾風險；韓國任命 Lee Hyoung-il 為財長：AI boom、貨幣緊縮與擴張財政形成政策張力；Bessent 推動 G20 處理中國貿易失衡：提高 global_trade_cycle 尾風險；全球股票基金結束13週淨流入：屬部位(Positioning)訊號，不等於基本面反轉。</p>
+<h2>4. Social / Narrative Heat Map</h2>
+<p>Warsh/September hike 9/10 ↑；AI demand intact but ROI/financing quality 8.5/10 ↑；JPY160 intervention 8/10 →；Taiwan AI orders 7.5/10 ↑。公開平台 engagement 後台不可完整取得，heat 為 qualitative proxy。</p>
+<h2>5. Causal Chain Audit</h2><div class="scroll"><table><tr><th>Link</th><th>Mechanism</th><th>Evidence</th><th>Counter</th><th>Confidence</th><th>Status</th></tr>
+<tr><td>Warsh→2Y</td><td>policy repricing</td><td>speech + futures/yields + Gulf</td><td>data-dependent</td><td>High</td><td>Confirmed</td></tr>
+<tr><td>2Y↑→AI multiple↓</td><td>discount rate</td><td>Nasdaq/Russell/NVDA weakness</td><td>EPS strong</td><td>High</td><td>Partial</td></tr>
+<tr><td>Asia AI→Taiwan orders</td><td>GPU/HBM/server supply chain</td><td>MOEA + Korea + Nvidia</td><td>optical weak</td><td>High</td><td>Confirmed</td></tr>
+<tr><td>Taiwan orders→TSMC upside</td><td>revenue visibility</td><td>orders + foreign buying</td><td>rates/valuation</td><td>Med-High</td><td>Partial</td></tr></table></div>
+<h2>6. Global Cross-Asset Dashboard</h2><p>Rates：短端政策路徑重定價最強。FX：USD firm、JPY約160。Credit：未見廣泛信用利差(Credit Spread)失序。Equities：大型科技盈利強但高 duration 對 rates 敏感。Commodities：柴油供給風險上升。Liquidity：無 funding stress 共振。</p>
+<h2>7. Taiwan Transmission Matrix</h2><p>Economy：Strong；Policy：Watch；Industry：AI/electronics Strong；Stocks：Positive but selective。NDC領先指標+0.72%至104.63、連12升；ICT orders +89.5%、electronics +71.7%，但 optical -10.6% 為反證。</p>
+<h2>8. Taiwan Market Reality Check</h2><p>TAIEX 46,331.45（8/28，+0.77%）；外資 +NT$41.588bn、連3買，單週約 +NT$110.8bn；USD/TWD 31.628。台積電2,420、聯發科3,985、台達電1,830；聯電獲外資買超約88,989張。現貨資金+匯率+指數三項共振，taiwan_foreign_flow = Confirmed Positive。</p>
+<h2>9. Market vs Fundamental Cycle</h2><p>AI Market Cycle 🟡🟠；AI Fundamental Cycle 🟢🟢；Memory 🟢。供應鏈(Supply Chain)資本支出(CapEx)仍強，但要持續檢查真實 end-demand、庫存(Inventory)與毛利率(Margin)。</p>
+<h2>10. Policy & Regulatory Watch</h2><p>Fed 9月升息風險；BOJ 9月升息與FX policy；G20中國貿易失衡；俄柴油禁令；台灣強景氣下匯率與資產價格管理。</p>
+<h2>11. Daily Taiwan Equity Action Delta</h2><div class="scroll"><table><tr><th>Stock</th><th>Grade</th><th>Chain</th><th>Baseline</th><th>New Evidence</th><th>Pricing</th><th>Current Tactical</th><th>Delta</th><th>1–5D</th><th>1–4W</th><th>Confidence</th></tr>
 <tr><td>台積電 2330</td><td>A-</td><td>Partial</td><td>Positive</td><td>orders+leading+flow vs Fed shock</td><td>Partially Priced</td><td>回檔布局</td><td>維持但不追價</td><td>-2.5~+3%</td><td>-5~+8%</td><td>Med-High</td></tr>
 <tr><td>聯電 2303</td><td>B+</td><td>Partial</td><td>Neutral/Positive</td><td>foreign buy 88,989 lots + cycle breadth</td><td>Partially Priced</td><td>Positive</td><td class="g">升級</td><td>-3~+5%</td><td>-6~+10%</td><td>Medium</td></tr>
 <tr><td>聯發科 2454</td><td>B+</td><td>Partial</td><td>Positive</td><td>+3.1%; orders strong vs duration risk</td><td>Largely Priced</td><td>Hold</td><td>維持</td><td>-3.5~+3.5%</td><td>-7~+8%</td><td>Medium</td></tr>
-<tr><td>台達電 2308</td><td>B+</td><td>Partial</td><td>Positive</td><td>AI power +3.39%; no new company disclosure</td><td>Largely Priced</td><td>Hold</td><td>維持</td><td>-4~+4%</td><td>-8~+9%</td><td>Medium</td></tr></table></div><h2>12. Top Action Delta Deep Dives</h2><h3>聯電 2303｜Neutral → Positive</h3><div class="chain">Taiwan leading/order breadth <span class="direction direction-up">↑ 上升</span> + foreign buying 88,989 lots <span class="direction direction-flat">→ 持平</span> taiwan_leading_cycle / taiwan_foreign_flow <span class="direction direction-flat">→ 持平</span> broader Taiwan <span class="state-transition"><span class="state-prior">risk appetite</span><span class="transition-arrow">→</span><span class="state-current">Flow effect</span></span> currently stronger than verified EPS revision <span class="direction direction-flat">→ 持平</span> Positive, not Aggressive Positive</div><p>缺乏同等強度的新公司訂單(Order)、Inventory、Margin或Guidance一手更新，因此鏈條僅 Partial。</p><h3>台積電 2330｜Positive → Buy-on-Weakness Setup</h3><div class="chain">AI orders/exports <span class="state-transition"><span class="state-prior">strong</span><span class="transition-arrow">→</span><span class="state-current">revenue visibility</span></span> <span class="direction direction-up">↑ 上升</span> BUT Fed 2Y / real yield <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> justified P/E <span class="direction direction-down">↓ 下降</span> + price 2,420 <span class="direction direction-flat">→ 持平</span> tactical asymmetry less attractive <span class="state-transition"><span class="state-prior">at highs</span><span class="transition-arrow">→</span><span class="state-current">Buy-on-Weakness Setup</span></span></div><h2>13. Tactical Price-Impact Scenario Matrix</h2><p>2330 Base55%：1–5D -1~+2%、1–4W 0~+6%；Bull20%：+3~+6% / +7~+12%；Bear25%：-3~-6% / -7~-12%。2303 Base50%：0~+4% / +1~+8%；Bull25%：+5~+9% / +9~+15%；Bear25%：-3~-6% / -7~-12%。區間為 ESTIMATE，不是單點目標價。</p><h2>14. Daily Forecast Validation</h2><p>本輪獨立重建，沒有可合法讀取的 prior prediction cohort；unavailable，不以其他排程 state 偽造。</p><h2>15. Scenario Matrix</h2><p>Base 50%｜Bull 20%｜Bear 25%｜Tail 5%。</p><h2>16. Risk Lights</h2><p>Global <span class="risk risk-orange">🟠 Orange</span>｜Growth <span class="risk risk-green">🟢 Green</span><span class="risk risk-yellow">🟡 Yellow</span>｜Inflation <span class="risk risk-orange">🟠 Orange</span><span class="risk risk-red">🔴 Red</span>｜Fed <span class="risk risk-red">🔴 Red</span>｜Rates <span class="risk risk-red">🔴 Red</span>｜Liquidity <span class="risk risk-green">🟢 Green</span><span class="risk risk-yellow">🟡 Yellow</span>｜Credit <span class="risk risk-yellow">🟡 Yellow</span>｜FX <span class="risk risk-orange">🟠 Orange</span><span class="risk risk-red">🔴 Red</span>｜Commodities <span class="risk risk-orange">🟠 Orange</span>｜Taiwan Equity <span class="risk risk-yellow">🟡 Yellow</span>｜Taiwan Flow <span class="risk risk-green">🟢 Green</span>｜AI Fundamental <span class="risk risk-green">🟢 Green</span><span class="risk risk-green">🟢 Green</span>｜AI Market <span class="risk risk-yellow">🟡 Yellow</span><span class="risk risk-orange">🟠 Orange</span>｜Memory <span class="risk risk-green">🟢 Green</span>｜Gold–Treasury Divergence <span class="risk risk-yellow">🟡 Yellow</span></p><h2>17. Next 24h Watchlist</h2><p>US2Y 4.50%；Sep hike odds 70%；USDJPY160；Brent/diesel crack；Korea 8月出口正式值；China PMI；TAIEX breadth；外資是否連4買；USD/TWD是否快速&gt;32；SOX/Nvidia follow-through；台積電/聯電relative strength。</p><h2>Bottom Line</h2><div class="card"><b>沒有證據支持把 AI / Taiwan 1–2Q 基本面 thesis 降級；改變的是 tactical hurdle rate。</b> Fed 折現率上升讓追高報酬風險比下降，因此台積電轉為回檔布局；聯電因景氣廣度與強外資流入取得 Neutral→Positive，但因缺乏新公司基本面一手證據，信心僅 Medium。</div><h2>Sources</h2><ul><li><a href="https://www.ndc.gov.tw/en/nc_199_40405">Taiwan NDC</a></li><li><a href="https://www.cbc.gov.tw/tw/lp-645-1-1-20.html">CBC FX</a></li><li><a href="https://www.reuters.com/business/will-warshs-jackson-hole-speech-be-course-correction-or-detour-2026-08-28/">Reuters Warsh</a></li><li><a href="https://www.reuters.com/world/asia-pacific/bessent-says-yen-moves-pretty-contained-not-disorderly-2026-08-30/">Reuters Yen</a></li><li><a href="https://www.reuters.com/business/energy/russia-extends-ban-diesel-exports-until-september-30-2026-08-29/">Reuters Diesel</a></li></ul>
-</main>
-<footer>
-  Global Macro Signal Report · Archive · Generated Deterministically
-</footer>
-</div>
-</body>
-</html>
+<tr><td>台達電 2308</td><td>B+</td><td>Partial</td><td>Positive</td><td>AI power +3.39%; no new company disclosure</td><td>Largely Priced</td><td>Hold</td><td>維持</td><td>-4~+4%</td><td>-8~+9%</td><td>Medium</td></tr></table></div>
+<h2>12. Top Action Delta Deep Dives</h2><h3>聯電 2303｜Neutral → Positive</h3><div class="chain">Taiwan leading/order breadth ↑ + foreign buying 88,989 lots → taiwan_leading_cycle / taiwan_foreign_flow → broader Taiwan risk appetite → Flow effect currently stronger than verified EPS revision → Positive, not Aggressive Positive</div>
+<p>缺乏同等強度的新公司訂單(Order)、Inventory、Margin或Guidance一手更新，因此鏈條僅 Partial。</p>
+<h3>台積電 2330｜Positive → Buy-on-Weakness Setup</h3><div class="chain">AI orders/exports strong → revenue visibility ↑ BUT Fed 2Y / real yield ↑ → justified P/E ↓ + price 2,420 → tactical asymmetry less attractive at highs → Buy-on-Weakness Setup</div>
+<h2>13. Tactical Price-Impact Scenario Matrix</h2><p>2330 Base55%：1–5D -1~+2%、1–4W 0~+6%；Bull20%：+3~+6% / +7~+12%；Bear25%：-3~-6% / -7~-12%。2303 Base50%：0~+4% / +1~+8%；Bull25%：+5~+9% / +9~+15%；Bear25%：-3~-6% / -7~-12%。區間為 ESTIMATE，不是單點目標價。</p>
+<h2>14. Daily Forecast Validation</h2><p>本輪獨立重建，沒有可合法讀取的 prior prediction cohort；unavailable，不以其他排程 state 偽造。</p>
+<h2>15. Scenario Matrix</h2><p>Base 50%｜Bull 20%｜Bear 25%｜Tail 5%。</p>
+<h2>16. Risk Lights</h2><p>Global 🟠｜Growth 🟢🟡｜Inflation 🟠🔴｜Fed 🔴｜Rates 🔴｜Liquidity 🟢🟡｜Credit 🟡｜FX 🟠🔴｜Commodities 🟠｜Taiwan Equity 🟡｜Taiwan Flow 🟢｜AI Fundamental 🟢🟢｜AI Market 🟡🟠｜Memory 🟢｜Gold–Treasury Divergence 🟡</p>
+<h2>17. Next 24h Watchlist</h2><p>US2Y 4.50%；Sep hike odds 70%；USDJPY160；Brent/diesel crack；Korea 8月出口正式值；China PMI；TAIEX breadth；外資是否連4買；USD/TWD是否快速>32；SOX/Nvidia follow-through；台積電/聯電relative strength。</p>
+<h2>Bottom Line</h2><div class="card"><b>沒有證據支持把 AI / Taiwan 1–2Q 基本面 thesis 降級；改變的是 tactical hurdle rate。</b> Fed 折現率上升讓追高報酬風險比下降，因此台積電轉為回檔布局；聯電因景氣廣度與強外資流入取得 Neutral→Positive，但因缺乏新公司基本面一手證據，信心僅 Medium。</div>
+<h2>Sources</h2><ul><li><a href="https://www.ndc.gov.tw/en/nc_199_40405">Taiwan NDC</a></li><li><a href="https://www.cbc.gov.tw/tw/lp-645-1-1-20.html">CBC FX</a></li><li><a href="https://www.reuters.com/business/will-warshs-jackson-hole-speech-be-course-correction-or-detour-2026-08-28/">Reuters Warsh</a></li><li><a href="https://www.reuters.com/world/asia-pacific/bessent-says-yen-moves-pretty-contained-not-disorderly-2026-08-30/">Reuters Yen</a></li><li><a href="https://www.reuters.com/business/energy/russia-extends-ban-diesel-exports-until-september-30-2026-08-29/">Reuters Diesel</a></li></ul>
+</main></body></html>
