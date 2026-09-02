@@ -47,6 +47,22 @@
       "source_document_id": null,
       "title": "Global Macro & Taiwan Early Warning｜勞動降溫開始對沖能源通膨，但尚未解除高利率壓力",
       "topic": null
+    },
+    "MTW-20260903-0233-beige-book-policy-bind": {
+      "coverage_end_taipei": "2026-09-03 02:33:00+08:00",
+      "coverage_start_taipei": "2026-09-03 00:03:00+08:00",
+      "generated_at_taipei": "2026-09-03 02:33:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0233_beige_book_policy_bind.html",
+      "html_sha256": "13f6c046ca491cb5bdecddc9755d2d905d445018b572ebc14a57db152c337681",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0233_beige_book_policy_bind.md",
+      "markdown_sha256": "9f3202aefd81179956dec244df18141dcfbf7260c07fa77ec7f2308c1b111873",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260903-0233-beige-book-policy-bind",
+      "slug": "beige_book_policy_bind",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜褐皮書確認成本壓力仍高，ADP 降溫尚不足以扭轉升息定價",
+      "topic": null
     }
   },
   "schema_version": 1
