@@ -217,6 +217,17 @@ def validate_metadata(metadata: Dict[str, Any], expected_report_type: Optional[s
         raise CanonicalBlockError(f"unsupported format_version: '{format_version}', expected 1 or 2")
 
 
+SECTION_KEYWORD_ALIASES: Dict[str, List[str]] = {
+    "executive summary": ["executive summary", "執行摘要", "executive intelligence summary", "executive take", "executive strategy summary"],
+    "market signals": ["market signals", "市場訊號", "signal board", "today top 3 market signals", "今日三大市場訊號", "signal delta"],
+    "impact": ["impact", "市場影響力", "top 3 market impact events", "市場影響力前三大事件", "events", "事件"],
+    "strategy": ["strategy", "策略", "us tech strategy", "美國科技股策略", "taiwan equity action matrix", "strategy implication matrix"],
+    "taiwan": ["taiwan", "台灣", "taiwan economy", "taiwan industry", "taiwan impact", "台灣 ai", "台灣傳導", "taiwan transmission", "taiwan relevance"],
+    "catalysts": ["catalysts", "催化劑", "next catalysts", "下一階段催化劑", "catalyst calendar"],
+    "source audit": ["source audit", "資料來源", "資料來源審計", "來源審計", "source"],
+}
+
+
 def validate_required_sections(markdown_body: str, report_type: str, format_version: Any = 1) -> None:
     """
     Verify that required sections exist in the markdown body.
@@ -235,15 +246,21 @@ def validate_required_sections(markdown_body: str, report_type: str, format_vers
         if line.strip().startswith("#")
     ]
     headings_blob = "\n".join(heading_lines)
+    body_cf = markdown_body.casefold()
 
     missing = []
     for section in sections:
         sec_cf = section.casefold()
-        # Check if any heading contains the section keyword or phrase
-        if sec_cf not in headings_blob and not any(sec_cf in h for h in heading_lines):
-            # Also check if it appears in markdown body as bold or section header
-            if f"**{section.casefold()}**" not in markdown_body.casefold() and f"### {section.casefold()}" not in markdown_body.casefold():
-                missing.append(section)
+        aliases = SECTION_KEYWORD_ALIASES.get(sec_cf, [sec_cf])
+        found = False
+        for alias in aliases:
+            a_cf = alias.casefold()
+            if a_cf in headings_blob or any(a_cf in h for h in heading_lines) or f"**{a_cf}**" in body_cf or f"### {a_cf}" in body_cf or f"## {a_cf}" in body_cf:
+                found = True
+                break
+
+        if not found:
+            missing.append(section)
 
     if missing:
         raise CanonicalBlockError(f"missing required sections for {report_type}: {', '.join(missing)}")
