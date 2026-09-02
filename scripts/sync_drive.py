@@ -488,7 +488,8 @@ def render_markdown_file_to_html(md_path: Path, category: str, runs_path: Path) 
             print(f"CANONICAL_BLOCK_INVALID in {md_path.name}: {exc}", file=sys.stderr)
 
     # Fallback for plain markdown
-    title = _display_title(md_path.name)
+    h1_match = re.search(r"^\s*#\s+(.+)$", raw_text, flags=re.MULTILINE)
+    title = h1_match.group(1).strip() if h1_match else _display_title(md_path.name)
     report_type = "GLOBAL_DAILY_BRIEF" if category == "daily" else "WEEKLY_STRATEGY" if category == "weekly" else "MACRO_TAIWAN_EARLY_WARNING"
     meta = {
         "title": title,

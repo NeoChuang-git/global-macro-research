@@ -181,6 +181,13 @@ def parse_frontmatter(block: str) -> Tuple[Dict[str, Any], str]:
     if not isinstance(metadata, dict):
         raise CanonicalBlockError("YAML front matter is not a valid mapping")
 
+    # If markdown body has a specific full descriptive H1 title (e.g. "# Category | Full Subtitle"), use it
+    h1_match = re.search(r"^\s*#\s+(.+)$", body, flags=re.MULTILINE)
+    if h1_match:
+        h1_text = h1_match.group(1).strip()
+        if "｜" in h1_text or "|" in h1_text or len(h1_text) > len(str(metadata.get("title", ""))):
+            metadata["title"] = h1_text
+
     return metadata, body
 
 

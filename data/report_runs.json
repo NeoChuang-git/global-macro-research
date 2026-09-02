@@ -37,7 +37,7 @@
       "coverage_start_taipei": "2026-09-02 21:01:40+08:00",
       "generated_at_taipei": "2026-09-03 00:03:00+08:00",
       "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.html",
-      "html_sha256": "1796689b0c0c551cd2a2869cd62b0f0777038d207abcfd4709f6495f37bfb687",
+      "html_sha256": "790118233431845edff937a35c21ffc4e57186afa97781a2e0e2e0f9107c418e",
       "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.md",
       "markdown_sha256": "08f0ed2edc90722100bff46ef66f166245d0ff1ce1430a2e34cef1b9fe917a93",
       "report_type": "MACRO_TAIWAN_EARLY_WARNING",
@@ -45,7 +45,7 @@
       "run_id": "MTW-20260903-0003-labor-rates-divergence",
       "slug": "labor_rates_divergence",
       "source_document_id": null,
-      "title": "Global Macro & Taiwan Early Warning",
+      "title": "Global Macro & Taiwan Early Warning｜勞動降溫開始對沖能源通膨，但尚未解除高利率壓力",
       "topic": null
     }
   },

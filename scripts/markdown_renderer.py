@@ -587,6 +587,13 @@ def render_markdown_to_html(markdown_body: str, metadata: Dict[str, Any]) -> str
     """
     Render canonical markdown body and front matter metadata into complete standalone HTML.
     """
+    metadata = dict(metadata)
+    h1_match = re.search(r"^\s*#\s+(.+)$", markdown_body, flags=re.MULTILINE)
+    if h1_match:
+        h1_text = h1_match.group(1).strip()
+        if "｜" in h1_text or "|" in h1_text or len(h1_text) > len(str(metadata.get("title", ""))):
+            metadata["title"] = h1_text
+
     cleaned_body = clean_markdown_body(markdown_body)
     raw_html = MD_PARSER.render(cleaned_body)
     soup = BeautifulSoup(raw_html, "html.parser")
