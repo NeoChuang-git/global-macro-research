@@ -186,73 +186,129 @@ def _postprocess_soup(soup: BeautifulSoup) -> None:
 
 def _process_element_contents(soup: BeautifulSoup, element: Any) -> None:
     """Process child text nodes of an element for semantic badges and directions."""
-    for child in list(element.contents):
-        if isinstance(child, str):
-            text = str(child)
-            if not text.strip():
-                continue
-            
-            # Check if any semantic replacement is needed
-            replaced_html = _enrich_text_html(text)
-            if replaced_html != text:
-                parsed_frag = BeautifulSoup(replaced_html, "html.parser")
-                child.replace_with(*parsed_frag.contents)
+    is_table_cell = element.name in ("td", "th")
+    for text_node in list(element.find_all(string=True)):
+        if text_node.parent and text_node.parent.name in ("code", "pre", "script", "style"):
+            continue
+        text = str(text_node)
+        if not text.strip():
+            continue
+
+        # Check if any semantic replacement is needed
+        replaced_html = _enrich_text_html(text, is_table_cell=is_table_cell)
+        if replaced_html != text:
+            parsed_frag = BeautifulSoup(replaced_html, "html.parser")
+            text_node.replace_with(*parsed_frag.contents)
 
 
-def _enrich_text_html(text: str) -> str:
+def _enrich_text_html(text: str, is_table_cell: bool = False) -> str:
     """Enrich text with semantic HTML spans while strictly preserving original text terms."""
     # Escape HTML characters first
     escaped = html.escape(text)
 
-    # State transitions: e.g. "4.18% → 4.31%", "Yellow → Orange", "Neutral → Positive", "60% → 72%", "$88.5 → $91.2"
-    transition_pattern = re.compile(
-        r"(?<!\S)([\$\+A-Za-z0-9.%🟢🟡🟠🔴-]+(?:\s+[\$\+A-Za-z0-9.%🟢🟡🟠🔴-]+)?)\s*→\s*([\$\+A-Za-z0-9.%🟢🟡🟠🔴-]+(?:\s+[\$\+A-Za-z0-9.%🟢🟡🟠🔴-]+)?)(?!\S)"
+    placeholders = {}
+    p_counter = 0
+
+    def _token(html_snippet: str) -> str:
+        nonlocal p_counter
+        p_counter += 1
+        key = f"___SEMANTIC_TOKEN_{p_counter}___"
+        placeholders[key] = html_snippet
+        return key
+
+    # 1. State transitions with Risk Light names: e.g. "ORANGE → ORANGE", "Yellow → Orange"
+    def _replace_risk_transition(m):
+        p, c = m.group(1), m.group(2)
+        p_u, c_u = p.upper(), c.upper()
+        p_class = f"risk-{p.lower()}"
+        c_class = f"risk-{c.lower()}"
+        p_icon = "🟢" if p_u == "GREEN" else "🟡" if p_u == "YELLOW" else "🟠" if p_u == "ORANGE" else "🔴"
+        c_icon = "🟢" if c_u == "GREEN" else "🟡" if c_u == "YELLOW" else "🟠" if c_u == "ORANGE" else "🔴"
+        snippet = f'<span class="state-transition"><span class="risk {p_class}">{p_icon} {p}</span> <span class="transition-arrow">→</span> <span class="risk {c_class}">{c_icon} {c}</span></span>'
+        return _token(snippet)
+
+    escaped = re.sub(
+        r"\b(GREEN|YELLOW|ORANGE|RED|Green|Yellow|Orange|Red)\s*→\s*(GREEN|YELLOW|ORANGE|RED|Green|Yellow|Orange|Red)\b",
+        _replace_risk_transition,
+        escaped,
     )
-    def _replace_transition(m):
+
+    # 2. General State transitions: e.g. "4.18% → 4.31%", "Neutral → Positive", "60% → 72%", "$88.5 → $91.2"
+    def _replace_general_transition(m):
         prior, current = m.group(1), m.group(2)
-        return f'<span class="state-transition"><span class="state-prior">{prior}</span><span class="transition-arrow">__TRANS_ARROW__</span><span class="state-current">{current}</span></span>'
+        snippet = f'<span class="state-transition"><span class="state-prior">{prior}</span><span class="transition-arrow">→</span><span class="state-current">{current}</span></span>'
+        return _token(snippet)
 
-    escaped = transition_pattern.sub(_replace_transition, escaped)
+    escaped = re.sub(
+        r"(?<!\S)([\$\+A-Za-z0-9.%🟢🟡🟠🔴-]+(?:\s+[\$\+A-Za-z0-9.%🟢🟡🟠🔴-]+)?)\s*→\s*([\$\+A-Za-z0-9.%🟢🟡🟠🔴-]+(?:\s+[\$\+A-Za-z0-9.%🟢🟡🟠🔴-]+)?)(?!\S)",
+        _replace_general_transition,
+        escaped,
+    )
 
-    # Direction arrows
+    # 3. Direction arrows
     escaped = re.sub(
         r"↑(?:\s*(?:上升|增加))?",
-        r'<span class="direction direction-up">↑ 上升</span>',
+        lambda _: _token('<span class="direction direction-up">↑ 上升</span>'),
         escaped,
     )
     escaped = re.sub(
         r"↓(?:\s*(?:下降|減少))?",
-        r'<span class="direction direction-down">↓ 下降</span>',
+        lambda _: _token('<span class="direction direction-down">↓ 下降</span>'),
         escaped,
     )
     escaped = re.sub(
         r"↗(?:\s*(?:改善|加速))?",
-        r'<span class="direction direction-improving">↗ 改善</span>',
+        lambda _: _token('<span class="direction direction-improving">↗ 改善</span>'),
         escaped,
     )
     escaped = re.sub(
         r"↘(?:\s*(?:惡化|減速))?",
-        r'<span class="direction direction-worsening">↘ 惡化</span>',
+        lambda _: _token('<span class="direction direction-worsening">↘ 惡化</span>'),
         escaped,
     )
-    # Standalone → (not part of transition)
     escaped = re.sub(
         r"(?<!\w)→(?!\w)(?:\s*(?:持平|無明顯變化))?",
-        r'<span class="direction direction-flat">→ 持平</span>',
+        lambda _: _token('<span class="direction direction-flat">→ 持平</span>'),
         escaped,
     )
 
-    # Restore transition arrow
-    escaped = escaped.replace("__TRANS_ARROW__", "→")
+    # 4. Risk Lights (Emoji)
+    escaped = re.sub(r"🟢(?:\s*Green)?", lambda _: _token('<span class="risk risk-green">🟢 Green</span>'), escaped)
+    escaped = re.sub(r"🟡(?:\s*Yellow)?", lambda _: _token('<span class="risk risk-yellow">🟡 Yellow</span>'), escaped)
+    escaped = re.sub(r"🟠(?:\s*Orange)?", lambda _: _token('<span class="risk risk-orange">🟠 Orange</span>'), escaped)
+    escaped = re.sub(r"🔴(?:\s*Red)?", lambda _: _token('<span class="risk risk-red">🔴 Red</span>'), escaped)
 
-    # Risk Lights
-    escaped = re.sub(r"🟢(?:\s*Green)?", r'<span class="risk risk-green">🟢 Green</span>', escaped)
-    escaped = re.sub(r"🟡(?:\s*Yellow)?", r'<span class="risk risk-yellow">🟡 Yellow</span>', escaped)
-    escaped = re.sub(r"🟠(?:\s*Orange)?", r'<span class="risk risk-orange">🟠 Orange</span>', escaped)
-    escaped = re.sub(r"🔴(?:\s*Red)?", r'<span class="risk risk-red">🔴 Red</span>', escaped)
+    # 5. Risk Lights following "Risk Light:" or "Risk:"
+    def _replace_named_risk_light(m):
+        prefix = m.group(1)
+        val = m.group(2)
+        val_upper = val.upper()
+        icon = "🟢" if val_upper == "GREEN" else "🟡" if val_upper == "YELLOW" else "🟠" if val_upper == "ORANGE" else "🔴"
+        cls = f"risk-{val.lower()}"
+        return prefix + _token(f'<span class="risk {cls}">{icon} {val}</span>')
 
-    # Evidence Grades (standalone in cells or tokens like "Grade A", "Grade B", etc.)
-    escaped = re.sub(r"\bGrade\s+([A-D])\b", r'<span class="badge badge-grade-\1">Grade \1</span>', escaped)
+    escaped = re.sub(
+        r"((?:Risk\s*Light|Risk|燈號)[：:]\s*)(GREEN|YELLOW|ORANGE|RED|Green|Yellow|Orange|Red)\b",
+        _replace_named_risk_light,
+        escaped,
+    )
+
+    # 6. Standalone uppercase risk light words in table cells (e.g. "ORANGE", "YELLOW", "RED", "GREEN")
+    if is_table_cell:
+        def _replace_cell_risk_word(m):
+            w = m.group(1)
+            icon = "🟢" if w == "GREEN" else "🟡" if w == "YELLOW" else "🟠" if w == "ORANGE" else "🔴"
+            cls = f"risk-{w.lower()}"
+            return _token(f'<span class="risk {cls}">{icon} {w}</span>')
+
+        escaped = re.sub(r"^\s*(GREEN|YELLOW|ORANGE|RED)\s*$", _replace_cell_risk_word, escaped)
+
+    # 7. Evidence Grades
+    escaped = re.sub(r"\bGrade\s+([A-D])\b", lambda m: _token(f'<span class="badge badge-grade-{m.group(1)}">Grade {m.group(1)}</span>'), escaped)
+
+    # Expand all tokens
+    for k, v in placeholders.items():
+        escaped = escaped.replace(k, v)
 
     return escaped
 
