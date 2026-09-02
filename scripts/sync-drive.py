@@ -1,6 +1,11 @@
-#!/usr/bin/env python3
+import sys
+from pathlib import Path
 
-from sync_drive import main
+_repo_root = Path(__file__).resolve().parent.parent
+if str(_repo_root) not in sys.path:
+    sys.path.insert(0, str(_repo_root))
+
+from scripts.sync_drive import main
 
 
 if __name__ == "__main__":

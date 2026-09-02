@@ -14,6 +14,10 @@ from datetime import date
 from pathlib import Path, PurePosixPath
 from typing import Any, Dict, List, Mapping, Optional, Tuple
 
+_repo_root = Path(__file__).resolve().parent.parent
+if str(_repo_root) not in sys.path:
+    sys.path.insert(0, str(_repo_root))
+
 from scripts.canonical_block import (
     CanonicalBlockError,
     determine_archive_filename,
