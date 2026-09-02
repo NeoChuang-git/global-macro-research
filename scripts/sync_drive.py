@@ -291,7 +291,7 @@ def sync_reports(
     ignored = 0
 
     for category in CATEGORIES:
-        seen_names = {}
+        category_remotes = {}
         for remote in _list_folder_files(service, category, folder_ids[category]):
             if not isinstance(remote.get("id"), str) or not remote["id"]:
                 raise SyncError(f"Drive file is missing an ID in {category}")
@@ -301,12 +301,17 @@ def sync_reports(
                 ignored += 1
                 continue
             folded = name.casefold()
-            if folded in seen_names:
-                raise SyncError(
-                    f"duplicate Drive HTML filename in {category}: {seen_names[folded]} / {name}"
-                )
-            seen_names[folded] = name
+            if folded in category_remotes:
+                prev_remote = category_remotes[folded]
+                prev_time = prev_remote.get("modifiedTime") or ""
+                curr_time = remote.get("modifiedTime") or ""
+                if curr_time > prev_time or (curr_time == prev_time and remote.get("id", "") > prev_remote.get("id", "")):
+                    category_remotes[folded] = remote
+            else:
+                category_remotes[folded] = remote
 
+        for remote in category_remotes.values():
+            name = remote.get("name")
             total_remote_files += 1
             if total_remote_files > max_batch_files:
                 raise SyncError(

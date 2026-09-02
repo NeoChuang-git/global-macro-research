@@ -178,16 +178,20 @@ class SyncDriveTests(unittest.TestCase):
         self.assertEqual(result.updated, 1)
         self.assertEqual(local.read_bytes(), content)
 
-    def test_fails_closed_on_duplicate_drive_names_or_api_error(self):
-        content = b"<html>same name</html>"
+    def test_deduplicates_identical_drive_names_by_latest_modified_time_and_fails_on_api_error(self):
+        old_content = b"<html>old content</html>"
+        new_content = b"<html>new content</html>"
         duplicate_name = "Weekly_2026-08-28.html"
         self.folders[self.folder_ids["weekly"]] = [
-            drive_file("a", duplicate_name, content),
-            drive_file("b", duplicate_name, content),
+            drive_file("a", duplicate_name, old_content, "2026-08-28T08:00:00Z"),
+            drive_file("b", duplicate_name, new_content, "2026-08-28T09:00:00Z"),
         ]
 
-        with self.assertRaisesRegex(SyncError, "duplicate"):
-            sync_reports(self._service({"a": content, "b": content}), self.root, self.folder_ids)
+        result = sync_reports(
+            self._service({"a": old_content, "b": new_content}), self.root, self.folder_ids
+        )
+        self.assertEqual(result.updated, 1)
+        self.assertEqual((self.root / "reports" / "weekly" / duplicate_name).read_bytes(), new_content)
 
         with self.assertRaisesRegex(SyncError, "Drive API"):
             sync_reports(self._service(list_error=RuntimeError("offline")), self.root, self.folder_ids)
