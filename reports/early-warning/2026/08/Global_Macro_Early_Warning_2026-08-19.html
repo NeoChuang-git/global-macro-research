@@ -1,43 +1,441 @@
 <!DOCTYPE html>
+
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Global Macro Early Warning｜2026-08-19</title>
 <style>
-:root{--bg:#f6f7fb;--card:#fff;--text:#172033;--muted:#667085;--line:#e5e7eb;--red:#dc2626;--orange:#ea580c;--green:#15803d;--navy:#0f172a;--blue:#2563eb;--teal:#0f766e;--violet:#7c3aed}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.72}
-.container{max-width:1120px;margin:0 auto;padding:28px 18px 60px}
-.hero{background:linear-gradient(135deg,#0f172a,#1e293b 63%,#334155);color:#fff;border-radius:22px;padding:34px;box-shadow:0 16px 44px rgba(15,23,42,.18)}
-.eyebrow{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:#cbd5e1}
-h1{margin:8px 0 13px;font-size:clamp(30px,4vw,46px);line-height:1.18}
-.hero p{margin:0;color:#dbe4f0;font-size:17px}
-.badges{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
-.badge{padding:7px 11px;border-radius:999px;font-size:13px;font-weight:700;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08)}
-.section{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:25px;box-shadow:0 7px 24px rgba(15,23,42,.035)}
-h2{margin:0 0 13px;font-size:23px;color:var(--navy)}
-.callout{margin:16px 0;padding:17px 19px;border-radius:12px;background:#eff6ff;border-left:5px solid var(--blue)}
-.callout.red{background:#fef2f2;border-left-color:var(--red)}
-.callout.orange{background:#fff7ed;border-left-color:var(--orange)}
-.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
-table{width:100%;border-collapse:collapse;min-width:800px}
-th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-th{background:#f8fafc;color:#475569;font-size:14px}
-tr:last-child td{border-bottom:none}
-.down{color:var(--red);font-weight:800}.up{color:var(--green);font-weight:800}.flat{color:#475569;font-weight:800}
-.flow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:17px 0}
-.node{padding:9px 11px;background:#f8fafc;border:1px solid var(--line);border-radius:10px;font-weight:700}
-.arrow{color:#94a3b8;font-weight:800}
-.fact{color:var(--teal);font-weight:800}.market{color:#9a3412;font-weight:800}.infer{color:var(--violet);font-weight:800}
-.risk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:12px}
-.risk-card{padding:16px;border:1px solid var(--line);border-radius:14px}
-.light{font-size:25px;margin:4px 0}.small{font-size:14px;color:var(--muted)}
-.bottom{margin-top:22px;background:#111827;color:#e5e7eb;border-radius:18px;padding:24px}
-.bottom h2{color:#fff}
-.sources{font-size:14px;color:var(--muted)}
-footer{text-align:center;color:#98a2b3;font-size:13px;margin-top:20px}
-@media(max-width:680px){.container{padding:15px 10px 38px}.hero,.section{padding:20px;border-radius:15px}h1{font-size:29px}}
+:root {
+  --bg-primary: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-raised: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #334155;
+  --border-light: #475569;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --orange: #f97316;
+  --danger: #ef4444;
+  --table-zebra: rgba(255, 255, 255, 0.02);
+  --table-hover: rgba(56, 189, 248, 0.06);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-raised: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --border-light: #cbd5e1;
+    --accent: #0284c7;
+    --accent-glow: rgba(2, 132, 199, 0.08);
+    --table-zebra: #f8fafc;
+    --table-hover: rgba(2, 132, 199, 0.05);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.68;
+  font-size: 15px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+}
+
+.report-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+/* Typography & Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 36px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 24px 0 12px;
+  color: var(--text-primary);
+}
+
+p {
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+
+ul, ol {
+  margin: 12px 0 16px 24px;
+  color: var(--text-primary);
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Blockquotes / Callout boxes */
+blockquote {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 18px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+th {
+  background: var(--bg-surface-raised);
+  color: var(--text-primary);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
+.badge-grade-B { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
+.badge-grade-C { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
+.badge-grade-D { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.direction-up { color: #38bdf8; }
+.direction-down { color: #a855f7; }
+.direction-improving { color: var(--success); }
+.direction-worsening { color: var(--danger); }
+.direction-flat { color: var(--text-muted); }
+
+/* Risk Lights */
+.risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.risk-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.risk-yellow { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+.risk-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+.risk-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* State Transition */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.state-prior { color: var(--text-muted); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(56, 189, 248, 0.5);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Legacy Report Compatibility Classes */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.card, .panel, .box, .risk-card, .sec {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.callout, .note {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 16px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+.chain, .node {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.small, small, .footer-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 24px;
+  display: block;
+}
+
+/* Legacy Color & Badge utilities */
+.green, .g, .badge-green { color: var(--success); font-weight: 700; }
+.yellow, .y, .badge-yellow { color: var(--warning); font-weight: 700; }
+.orange, .o, .badge-orange { color: var(--orange); font-weight: 700; }
+.red, .r, .badge-red { color: var(--danger); font-weight: 700; }
+
+.pill, .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.metric, .metric-down {
+  font-weight: 600;
+  font-feature-settings: "tnum" 1;
+}
+
+.arrow {
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.table-wrap, .scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 18px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
 </style>
 </head>
 <body>
@@ -48,12 +446,10 @@ footer{text-align:center;color:#98a2b3;font-size:13px;margin-top:20px}
 <p>台股收盤由盤中低點收斂，但仍失守 45,000 點，外資單日賣超約 416 億元、三大法人合計賣超逾 700 億元；同時韓國 AI／Memory 鏈仍重挫。另一方面，美債長端與美元反而回落，顯示本輪更像「亞洲科技因子去風險延續」，而不是新的全面 Macro Shock。</p>
 <div class="badges"><span class="badge">TAIEX 44,719.35 / -1.30%</span><span class="badge">外資賣超約 NT$416 億</span><span class="badge">三大法人賣超約 NT$708 億</span><span class="badge">KOSPI 約 -5.7%</span><span class="badge">US 30Y 約 5.27%</span><span class="badge">分類：趨勢形成</span></div>
 </header>
-
 <section class="section">
 <p><strong>Executive Take：</strong>台股雖從盤中接近千點跌幅收斂，卻仍收在 <strong>44,719.35 點、下跌 1.30%</strong>，而且外資與三大法人賣壓明顯放大；同時韓國 Samsung／SK Hynix 仍是亞洲最弱的 AI／Memory 資產。相反地，美國 10 年與 30 年債殖利率已由昨日高點回落、美元指數也走弱，因此目前不是「利率再衝高拖垮科技」，而是 <strong>Sector / Positioning Risk 開始比 Macro Risk 更主導台股</strong>。</p>
 <div class="callout red"><strong>新增核心訊號：</strong>外資由前一交易日約 120 億元賣超，擴大到今日約 416 億元；三大法人同步賣超約 708 億元。原本「美股晶片 → ADR → 台股價格」的鏈條，進一步得到本地資金流確認。</div>
 </section>
-
 <section class="section"><h2>一、發生什麼</h2>
 <div class="table-wrap"><table><thead><tr><th>指標</th><th>實際值</th><th>前值／狀態</th><th>Surprise</th><th>解讀</th></tr></thead><tbody>
 <tr><td><strong>TAIEX 收盤</strong></td><td class="down">44,719.35 / -589.33 / -1.30%</td><td>前日 45,308.68</td><td>失守 45K</td><td>現貨去風險延續，但尾盤較低點收斂</td></tr>
@@ -64,14 +460,12 @@ footer{text-align:center;color:#98a2b3;font-size:13px;margin-top:20px}
 <tr><td>南亞科</td><td class="down">481 元 / -6.60%</td><td>—</td><td>↓↓</td><td>Memory 高 Beta 明顯承壓</td></tr>
 <tr><td>華邦電</td><td class="down">168 元 / -4.82%</td><td>—</td><td>↓↓</td><td>記憶體去風險具本地產業廣度</td></tr>
 </tbody></table></div></section>
-
 <section class="section"><h2>二、為什麼重要</h2>
 <div class="flow"><span class="node">美國晶片 / Memory 下跌</span><span class="arrow">→</span><span class="node">韓國 Memory 急跌</span><span class="arrow">→</span><span class="node">台灣高 Beta 電子承壓</span><span class="arrow">→</span><span class="node">外資賣超擴大</span><span class="arrow">→</span><span class="node">台股風險溢酬上升</span></div>
 <p><span class="fact">FACT：</span>美國 10 年債殖利率約 4.686%、30 年債約 5.271%，均低於昨日盤中高點；美元指數約 99.43，沒有出現典型 funding squeeze。Brent 則仍在約 91.8 美元高位。</p>
 <p><span class="market">MARKET EXPECTATION：</span>市場等待 Fed 7 月會議紀要，以重新評估通膨與政策利率路徑。</p>
 <p><span class="infer">YOUR INFERENCE：</span>若利率與美元不再惡化，但台股外資賣壓與亞洲半導體仍擴大，主要風險已由 Macro discount-rate shock 轉向 AI／Memory 高 Beta 部位與獲利了結。短線應提高籌碼與相對強弱的權重。</p>
 <div class="callout orange"><strong>反證：</strong>台股從 44,308 低點收回約 400 點，台積電跌幅約 1.26%，未出現權值股全面失控；SK Hynix 的大型股東回饋亦可能形成產業穩定器。</div></section>
-
 <section class="section"><h2>三、跨市場反應</h2>
 <div class="table-wrap"><table><thead><tr><th>市場</th><th>目前反應</th><th>方向</th><th>含義</th></tr></thead><tbody>
 <tr><td><strong>TAIEX</strong></td><td class="down">-1.30%</td><td>↓</td><td>現貨與資金流同步確認</td></tr>
@@ -83,7 +477,6 @@ footer{text-align:center;color:#98a2b3;font-size:13px;margin-top:20px}
 <tr><td>DXY</td><td class="flat">約 99.43</td><td>↓</td><td>尚無美元流動性危機</td></tr>
 <tr><td>Brent</td><td class="up">約 $91.79</td><td>↑</td><td>能源通膨風險持續</td></tr>
 </tbody></table></div></section>
-
 <section class="section"><h2>四、對台股與台灣產業</h2>
 <div class="table-wrap"><table><thead><tr><th>產業／因子</th><th>直接影響</th><th>間接影響</th><th>時間尺度</th><th>風險</th><th>需確認</th></tr></thead><tbody>
 <tr><td><strong>AI／先進半導體</strong></td><td>外資降低高 Beta 曝險</td><td>估值／籌碼壓力高於基本面</td><td>日～月</td><td>🔴</td><td>SOX、台積電相對強弱</td></tr>
@@ -94,11 +487,9 @@ footer{text-align:center;color:#98a2b3;font-size:13px;margin-top:20px}
 <tr><td>機械／汽車零組件</td><td>全球成長偏弱</td><td>融資與能源成本</td><td>月～季</td><td>🟠</td><td>美國製造／汽車產出</td></tr>
 <tr><td>塑化／航運</td><td>Brent 約 $92</td><td>燃料、原料與保費壓力</td><td>月～季</td><td>🔴</td><td>Hormuz、柴油裂解價差</td></tr>
 </tbody></table></div></section>
-
 <section class="section"><h2>五、這是雜訊還是趨勢？</h2>
 <div class="callout red"><strong>分類：趨勢形成，但性質由「Macro Shock」轉向「亞洲科技／資金流去風險」。</strong></div>
 <p>新增確認來自台股本地資金流：外資賣超明顯擴大、三大法人同步站在賣方，且記憶體跌幅遠大於大盤。然而全球利率與美元沒有同步惡化，台積電也沒有失控式下跌，因此目前仍不到 Regime Shift，更不能直接推論 AI／半導體基本面已反轉。</p></section>
-
 <section class="section"><h2>六、風險燈號</h2>
 <div class="risk-grid">
 <div class="risk-card"><b>Global</b><div class="light">🟠🔴</div><div class="small">能源與主權債壓力仍高，但利率邊際穩定</div></div>
@@ -108,7 +499,6 @@ footer{text-align:center;color:#98a2b3;font-size:13px;margin-top:20px}
 <div class="risk-card"><b>Commodities</b><div class="light">🔴</div><div class="small">Brent 約 $91.8</div></div>
 <div class="risk-card"><b>Industry Cycle</b><div class="light">🔴</div><div class="small">市場面 AI / Memory 轉弱；基本面未確認反轉</div></div>
 </div></section>
-
 <section class="section"><h2>七、接下來看什麼</h2>
 <div class="table-wrap"><table><thead><tr><th>指標</th><th>目前狀態</th><th>下一關鍵門檻／事件</th><th>若觸發代表什麼</th></tr></thead><tbody>
 <tr><td><strong>Fed 7 月會議紀要</strong></td><td>待公布</td><td>是否比市場預期更鷹</td><td>美債長端可能再測前高</td></tr>
@@ -117,13 +507,10 @@ footer{text-align:center;color:#98a2b3;font-size:13px;margin-top:20px}
 <tr><td><strong>US 30Y</strong></td><td>約 5.27%</td><td>5.337% 前高</td><td>再破高重新強化 valuation shock</td></tr>
 <tr><td><strong>AI / HBM / DRAM 指引</strong></td><td>尚未明顯下修</td><td>ASP／訂單／CapEx 財測下修</td><td>升級為 Fundamental Cycle Warning</td></tr>
 </tbody></table></div></section>
-
 <section class="bottom"><h2>Bottom Line</h2>
 <p>真正的新訊號是<strong>台股外資與三大法人賣壓明顯放大</strong>，讓美國半導體 selloff 的傳導從價格層面進一步進入本地資金流。對短線台股而言，這比 US10Y 再多幾個基點更值得監控。</p>
 <p>但美債長端與美元正在邊際降溫，台股也由低點明顯收斂，因此尚不是新的全面 Macro Shock。未來 1–2 季要真正改變產業判斷，仍需看到 AI／HBM／DRAM 訂單、ASP 或企業 CapEx／財測同步下修；在此之前，主線仍是<strong>市場 Beta / Positioning 修正大於基本面反轉</strong>。</p></section>
-
 <section class="section sources"><h2>資料來源註記</h2>
 <p>本 HTML 為本次對話之 Global Macro Early Warning 報告重新產製版本，保留原分析中的市場數據、風險分類、因果鏈、產業影響與監控門檻。</p></section>
-
 <footer>Global Macro Early Warning System · Taiwan Focus · 2026-08-19</footer>
 </main></body></html>

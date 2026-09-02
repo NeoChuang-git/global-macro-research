@@ -1,22 +1,454 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Global Daily Brief｜2026-09-02 Rerun 13:08</title><style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;background:#f5f7fa;color:#17191d;line-height:1.7;margin:0}main{max-width:1080px;margin:34px auto;padding:0 22px}.card{background:#fff;border:1px solid #dfe3e8;border-radius:14px;padding:24px;margin:16px 0}h1,h2{line-height:1.28}table{width:100%;border-collapse:collapse}th,td{border:1px solid #dfe3e8;padding:9px;vertical-align:top}th{background:#f0f2f5;text-align:left}.orange{color:#b45309;font-weight:700}.green{color:#16794b;font-weight:700}</style></head><body><main>
-<section class="card"><h1>Global Daily Brief｜2026-09-02 Rerun 13:08</h1><h2>Executive Intelligence Summary</h2><p><span class="orange">Global Risk Light：Orange（上緣）。</span>相較 07:30 版，最大變化是 Global Market Cycle 的負向傳導已由美國擴展至亞洲與台灣。MSCI Asia-Pacific ex-Japan 約 -1.5%、KOSPI 跌逾3%、Nikkei 約 -2.6%；Brent 約 US$95.91、US10Y 約4.8122%。台股盤中最低46,225、跌逾700點並跌破五日線，台積電最低NT$2,390；新台幣午盤收31.726、貶9.3分。另一方面，韓國8月出口+68.7% YoY、高於consensus +62.6%，亞洲AI硬體需求仍強。當前最合理regime仍是 Market Cycle deterioration > Fundamental Cycle deterioration。</p></section>
-<section class="card"><h2>Daily Signal Board</h2><table><tr><th>Signal</th><th>Current / Prior</th><th>Severity</th><th>Confidence</th><th>Interpretation</th></tr>
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Global Daily Brief｜2026-09-02 Rerun 13:08</title><style>
+:root {
+  --bg-primary: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-raised: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #334155;
+  --border-light: #475569;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --orange: #f97316;
+  --danger: #ef4444;
+  --table-zebra: rgba(255, 255, 255, 0.02);
+  --table-hover: rgba(56, 189, 248, 0.06);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-raised: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --border-light: #cbd5e1;
+    --accent: #0284c7;
+    --accent-glow: rgba(2, 132, 199, 0.08);
+    --table-zebra: #f8fafc;
+    --table-hover: rgba(2, 132, 199, 0.05);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.68;
+  font-size: 15px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+}
+
+.report-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+/* Typography & Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 36px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 24px 0 12px;
+  color: var(--text-primary);
+}
+
+p {
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+
+ul, ol {
+  margin: 12px 0 16px 24px;
+  color: var(--text-primary);
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Blockquotes / Callout boxes */
+blockquote {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 18px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+th {
+  background: var(--bg-surface-raised);
+  color: var(--text-primary);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
+.badge-grade-B { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
+.badge-grade-C { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
+.badge-grade-D { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.direction-up { color: #38bdf8; }
+.direction-down { color: #a855f7; }
+.direction-improving { color: var(--success); }
+.direction-worsening { color: var(--danger); }
+.direction-flat { color: var(--text-muted); }
+
+/* Risk Lights */
+.risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.risk-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.risk-yellow { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+.risk-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+.risk-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* State Transition */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.state-prior { color: var(--text-muted); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(56, 189, 248, 0.5);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Legacy Report Compatibility Classes */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.card, .panel, .box, .risk-card, .sec {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.callout, .note {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 16px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+.chain, .node {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.small, small, .footer-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 24px;
+  display: block;
+}
+
+/* Legacy Color & Badge utilities */
+.green, .g, .badge-green { color: var(--success); font-weight: 700; }
+.yellow, .y, .badge-yellow { color: var(--warning); font-weight: 700; }
+.orange, .o, .badge-orange { color: var(--orange); font-weight: 700; }
+.red, .r, .badge-red { color: var(--danger); font-weight: 700; }
+
+.pill, .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.metric, .metric-down {
+  font-weight: 600;
+  font-feature-settings: "tnum" 1;
+}
+
+.arrow {
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.table-wrap, .scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 18px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+</style></head><body><main>
+<section class="card"><h1>Global Daily Brief｜2026-09-02 Rerun 13:08</h1><h2>Executive Intelligence Summary</h2><p><span class="orange">Global Risk Light：Orange（上緣）。</span>相較 07:30 版，最大變化是 Global Market Cycle 的負向傳導已由美國擴展至亞洲與台灣。MSCI Asia-Pacific ex-Japan 約 -1.5%、KOSPI 跌逾3%、Nikkei 約 -2.6%；Brent 約 US$95.91、US10Y 約4.8122%。台股盤中最低46,225、跌逾700點並跌破五日線，台積電最低NT$2,390；新台幣午盤收31.726、貶9.3分。另一方面，韓國8月出口+68.7% YoY、高於consensus +62.6%，亞洲AI硬體需求仍強。當前最合理regime仍是 Market Cycle deterioration &gt; Fundamental Cycle deterioration。</p></section>
+<section class="card"><h2>Daily Signal Board</h2><div class="table-scroll"><table><tr><th>Signal</th><th>Current / Prior</th><th>Severity</th><th>Confidence</th><th>Interpretation</th></tr>
 <tr><td>energy_inflation</td><td>Brent ~US$95.91 vs US$94.65</td><td>5/5</td><td>0.98</td><td>供給風險與通膨風險溢價持續。</td></tr>
-<tr><td>rates_shock</td><td>US10Y ~4.8122%; Japan10Y >3%</td><td>5/5</td><td>0.98</td><td>全球長端 term-premium shock。</td></tr>
+<tr><td>rates_shock</td><td>US10Y ~4.8122%; Japan10Y &gt;3%</td><td>5/5</td><td>0.98</td><td>全球長端 term-premium shock。</td></tr>
 <tr><td>fed_policy_tightening</td><td>Sep +25bp odds ~67–68%</td><td>4/5</td><td>0.95</td><td>弱growth尚不足以抵消sticky inflation。</td></tr>
 <tr><td>us_growth_momentum</td><td>ISM 54.6 vs 55.6 prior</td><td>3/5</td><td>0.97</td><td>仍擴張但動能放慢。</td></tr>
 <tr><td>us_inflation_momentum</td><td>ISM Prices 71.1</td><td>4/5</td><td>0.98</td><td>投入價格黏著。</td></tr>
 <tr><td>asia_export_cycle</td><td>Korea exports +68.7% vs +62.6% consensus</td><td>4/5 positive</td><td>0.98</td><td>亞洲科技出口 cycle 仍強。</td></tr>
 <tr><td>taiwan_leading_cycle market layer</td><td>TAIEX low 46,225 vs 46,948.72</td><td>4/5 negative</td><td>0.97</td><td>price+breadth transmission。</td></tr>
-<tr><td>Taiwan FX transmission</td><td>USD/TWD 31.726 vs 31.633</td><td>3/5 negative</td><td>0.98</td><td>risk transmission 新增FX確認。</td></tr></table></section>
-<section class="card"><h2>Top 3 Daily Themes</h2><p><b>1. Energy + Global Term Premium：</b>Brent 接近US$96、US10Y約4.81%，能源風險正轉成全球債券與政策路徑重定價。</p><p><b>2. Asia/Taiwan Risk-Off Transmission：</b>亞洲主要股市同步下跌；台灣由9/1相對強勢轉成TAIEX跌破五日線、TSMC跌破2,400、TWD轉弱。</p><p><b>3. AI/Memory Fundamentals Still Resist：</b>韓國出口與AI hardware需求仍強，美國ISM Computer & Electronic Products仍擴張，尚無demand collapse。</p></section>
+<tr><td>Taiwan FX transmission</td><td>USD/TWD 31.726 vs 31.633</td><td>3/5 negative</td><td>0.98</td><td>risk transmission 新增FX確認。</td></tr></table></div></section>
+<section class="card"><h2>Top 3 Daily Themes</h2><p><b>1. Energy + Global Term Premium：</b>Brent 接近US$96、US10Y約4.81%，能源風險正轉成全球債券與政策路徑重定價。</p><p><b>2. Asia/Taiwan Risk-Off Transmission：</b>亞洲主要股市同步下跌；台灣由9/1相對強勢轉成TAIEX跌破五日線、TSMC跌破2,400、TWD轉弱。</p><p><b>3. AI/Memory Fundamentals Still Resist：</b>韓國出口與AI hardware需求仍強，美國ISM Computer &amp; Electronic Products仍擴張，尚無demand collapse。</p></section>
 <section class="card"><h2>Causal Chain Audit</h2><p><b>Primary negative chain：</b>Middle East supply risk ↑ → Oil ↑ → Inflation Risk Premium ↑ → Fed/BOJ tightening expectations ↑ → sovereign term premium ↑ → USD/real yields ↑ → semiconductor valuation compression → Asia/Taiwan risk-off → TWD weakness。</p><p><b>Counter-chain：</b>Hyperscaler AI CapEx ↑ → HBM/DRAM/advanced-node demand ↑ → Korea/Asia exports ↑ → Taiwan semiconductor earnings support ↑。</p><p><b>Fact Check：</b>兩條鏈同時成立。Regime break 需看到 Korea/Taiwan exports、memory pricing、orders/inventory/margin/CapEx/guidance 與 earnings revisions 同步轉負，目前尚未發生。</p></section>
 <section class="card"><h2>Taiwan Transmission</h2><p>9/1 TAIEX +1.78%、外資現貨買超約NT$26.7bn，外資台指期淨空降至78,706口；9/2上午則TAIEX最低46,225、TSMC最低NT$2,390，TWD午盤31.726、貶9.3分。這代表 price + breadth + FX transmission 已部分確認。尚缺今日完整 TWSE foreign flow 與 TAIFEX foreign OI。</p></section>
-<section class="card"><h2>Daily Taiwan Equity Action Delta</h2><table><tr><th>Bucket</th><th>Action Delta</th><th>Price-Impact Estimation</th></tr>
-<tr><td>AI / Advanced Node / HBM</td><td>Fundamental bias 仍正向，但風險權重上調。</td><td>若US10Y >4.85% 且Brent >US$96–97，multiple compression可能大於EPS improvement。</td></tr>
+<section class="card"><h2>Daily Taiwan Equity Action Delta</h2><div class="table-scroll"><table><tr><th>Bucket</th><th>Action Delta</th><th>Price-Impact Estimation</th></tr>
+<tr><td>AI / Advanced Node / HBM</td><td>Fundamental bias 仍正向，但風險權重上調。</td><td>若US10Y &gt;4.85% 且Brent &gt;US$96–97，multiple compression可能大於EPS improvement。</td></tr>
 <tr><td>High-P/E Taiwan Tech</td><td>提高discount-rate sensitivity，等待rates/breadth穩定。</td><td>若TWD/foreign flow同步惡化，beta downside放大。</td></tr>
 <tr><td>Energy / Petrochemical</td><td>上游受惠與下游成本壓力分開看。</td><td>Oil上行對上游正向、能源密集下游負向。</td></tr>
-<tr><td>Broad Taiwan Market</td><td>由等待傳導改為傳導已部分成立，等待flow/OI最終確認。</td><td>若收盤<46,500且flow/OI/FX同步轉負，downside regime probability上升。</td></tr></table></section>
-<section class="card"><h2>Risk Lights</h2><p><b>Global Macro：</b><span class="orange">Orange上緣</span>。<br><b>Funding/Liquidity：</b>Yellow。<br><b>AI/Semiconductor Fundamental：</b><span class="green">Green/Yellow</span>。<br><b>Taiwan Equity：</b><span class="orange">Orange</span>。<br><b>Regime Shift：</b>尚未成立，因Credit/Funding未危機化且AI/Memory fundamental thesis仍有強反證。</p></section>
+<tr><td>Broad Taiwan Market</td><td>由等待傳導改為傳導已部分成立，等待flow/OI最終確認。</td><td>若收盤&lt;46,500且flow/OI/FX同步轉負，downside regime probability上升。</td></tr></table></div></section>
+<section class="card"><h2>Risk Lights</h2><p><b>Global Macro：</b><span class="orange">Orange上緣</span>。<br/><b>Funding/Liquidity：</b>Yellow。<br/><b>AI/Semiconductor Fundamental：</b><span class="green">Green/Yellow</span>。<br/><b>Taiwan Equity：</b><span class="orange">Orange</span>。<br/><b>Regime Shift：</b>尚未成立，因Credit/Funding未危機化且AI/Memory fundamental thesis仍有強反證。</p></section>
 <section class="card"><h2>Bottom Line</h2><p>13:08重跑版相對07:30最大改變，是 Global Discount-Rate Shock 已實際穿透亞洲與台灣市場層：亞洲breadth擴大、台股跌破五日線、TSMC跌破NT$2,400、TWD午盤轉弱。但韓國出口、亞洲AI製造與ISM電子/記憶體訊號仍不支持AI Fundamental Breakdown。下午最關鍵是盤後外資現貨與TAIFEX foreign OI是否補上最後一層risk-off confirmation。</p></section>
 </main></body></html>

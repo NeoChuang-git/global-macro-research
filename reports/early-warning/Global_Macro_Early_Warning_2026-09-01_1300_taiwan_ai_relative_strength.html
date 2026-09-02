@@ -1,1 +1,433 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><title>Global Macro & Taiwan Early Warning｜Taiwan AI Relative Strength</title><style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;background:#f5f7fa;color:#16181d;line-height:1.7;margin:0}main{max-width:960px;margin:40px auto;padding:0 24px}.card{background:#fff;border:1px solid #ddd;border-radius:14px;padding:24px;margin:16px 0}table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:9px}th{background:#f1f3f6}</style></head><body><main><div class="card"><h1>Global Macro & Taiwan Early Warning｜台股 AI 相對強勢對抗全球利率衝擊</h1><h2>Executive Take</h2><p>Risk Light 維持 Orange，但 semiconductor_relative_weakness 明顯弱化。在 Brent > US$91、美國 10Y 約 4.78%、日本 10Y 一度觸及 3% 的全球債券賣壓下，台股上午逆勢上漲近 700 點、最高約 46,827.90，聯發科因 NVIDIA US$3.5bn 投資與 AI 合作鎖漲停，台積電亦由黑翻紅。市場更偏向 Sector / Factor / Positioning divergence，而非 Global Risk-Off 或 Semiconductor Fundamental Reversal。</p></div><div class="card"><h2>Signal Delta</h2><table><tr><th>Signal</th><th>Current</th><th>Delta</th><th>Severity</th><th>Confidence</th></tr><tr><td>semiconductor_relative_weakness</td><td>全球 bond selloff 下台灣 AI／半導體逆勢強</td><td>↓</td><td>2/5</td><td>0.88</td></tr><tr><td>ai_fundamental_cycle</td><td>NVIDIA 投資聯發科 US$3.5bn</td><td>↑</td><td>4/5</td><td>0.94</td></tr><tr><td>asia_export_cycle</td><td>China PMI 51.5；Korea PMI 52.3、出口 +68.7%</td><td>↑</td><td>4/5</td><td>0.94</td></tr><tr><td>rates_shock</td><td>US10Y ≈ 4.78%</td><td>↑</td><td>4/5</td><td>0.91</td></tr></table></div><div class="card"><h2>Why It Matters</h2><p><b>FACT：</b>全球利率壓力未消失，但亞洲 AI 製造與台灣電子相對強勢同步存在。</p><p><b>MARKET EXPECTATION：</b>主要央行維持緊縮，高估值科技理應承受 Discount-rate pressure。</p><p><b>INFERENCE：</b>Global Rates Headwind + AI Fundamental Resilience + Taiwan-specific Catalyst → Relative Strength。</p><p><b>Counter-evidence：</b>前一日外資仍賣超，當日完整 flow 尚未確認。</p></div><div class="card"><h2>Cross-Asset Confirmation</h2><p>Oil ↑ → Inflation Risk Premium ↑ → Global Yields ↑ → Equity Discount Rate ↑，但 AI Demand ↑ → Asia Manufacturing / Exports ↑ → Taiwan AI/Semiconductor Relative Strength ↑。目前仍為 Discount-rate Shock > Funding/Liquidity Shock。</p></div><div class="card"><h2>Taiwan Transmission</h2><p>Global Yield ↑ → Semiconductor Multiple Compression ↓，對抗 AI CapEx → Korea/Asia Manufacturing & Exports → Taiwan Semiconductor Fundamentals ↑，以及 NVIDIA → MediaTek ecosystem / NVLink Fusion → Taiwan AI-specific Repricing ↑。</p></div><div class="card"><h2>Market vs Fundamental Cycle</h2><p><b>Market Cycle：</b>Rates / Energy 壓抑。<br><b>Fundamental Cycle：</b>AI / Semiconductor / Asia Export Cycle = Positive and Broadening。</p></div><div class="card"><h2>Classification & Risk Light Delta</h2><p>Classification：Cross-Cycle Divergence / Taiwan AI Relative Strength。Risk Light：Orange → Orange。</p></div><div class="card"><h2>Next Confirmation</h2><ul><li>TWSE foreign flow</li><li>TAIFEX foreign OI</li><li>USD/TWD</li><li>TAIEX breadth</li><li>TSMC / Taiwan semiconductor relative strength</li></ul></div><div class="card"><h2>Bottom Line</h2><p>全球利率與能源壓力惡化的同時，台灣 AI／半導體出現顯著相對強勢。最合理的框架是 energy_inflation → rates_shock → valuation compression，同時對抗 AI demand → Asia manufacturing/exports → Taiwan semiconductor fundamentals + NVIDIA/MediaTek catalyst。</p></div></main></body></html>
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"/><title>Global Macro &amp; Taiwan Early Warning｜Taiwan AI Relative Strength</title><style>
+:root {
+  --bg-primary: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-raised: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #334155;
+  --border-light: #475569;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --orange: #f97316;
+  --danger: #ef4444;
+  --table-zebra: rgba(255, 255, 255, 0.02);
+  --table-hover: rgba(56, 189, 248, 0.06);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-raised: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --border-light: #cbd5e1;
+    --accent: #0284c7;
+    --accent-glow: rgba(2, 132, 199, 0.08);
+    --table-zebra: #f8fafc;
+    --table-hover: rgba(2, 132, 199, 0.05);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.68;
+  font-size: 15px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+}
+
+.report-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+/* Typography & Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 36px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 24px 0 12px;
+  color: var(--text-primary);
+}
+
+p {
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+
+ul, ol {
+  margin: 12px 0 16px 24px;
+  color: var(--text-primary);
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Blockquotes / Callout boxes */
+blockquote {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 18px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+th {
+  background: var(--bg-surface-raised);
+  color: var(--text-primary);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
+.badge-grade-B { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
+.badge-grade-C { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
+.badge-grade-D { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.direction-up { color: #38bdf8; }
+.direction-down { color: #a855f7; }
+.direction-improving { color: var(--success); }
+.direction-worsening { color: var(--danger); }
+.direction-flat { color: var(--text-muted); }
+
+/* Risk Lights */
+.risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.risk-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.risk-yellow { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+.risk-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+.risk-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* State Transition */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.state-prior { color: var(--text-muted); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(56, 189, 248, 0.5);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Legacy Report Compatibility Classes */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.card, .panel, .box, .risk-card, .sec {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.callout, .note {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 16px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+.chain, .node {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.small, small, .footer-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 24px;
+  display: block;
+}
+
+/* Legacy Color & Badge utilities */
+.green, .g, .badge-green { color: var(--success); font-weight: 700; }
+.yellow, .y, .badge-yellow { color: var(--warning); font-weight: 700; }
+.orange, .o, .badge-orange { color: var(--orange); font-weight: 700; }
+.red, .r, .badge-red { color: var(--danger); font-weight: 700; }
+
+.pill, .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.metric, .metric-down {
+  font-weight: 600;
+  font-feature-settings: "tnum" 1;
+}
+
+.arrow {
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.table-wrap, .scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 18px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+</style></head><body><main><div class="card"><h1>Global Macro &amp; Taiwan Early Warning｜台股 AI 相對強勢對抗全球利率衝擊</h1><h2>Executive Take</h2><p>Risk Light 維持 Orange，但 semiconductor_relative_weakness 明顯弱化。在 Brent &gt; US$91、美國 10Y 約 4.78%、日本 10Y 一度觸及 3% 的全球債券賣壓下，台股上午逆勢上漲近 700 點、最高約 46,827.90，聯發科因 NVIDIA US$3.5bn 投資與 AI 合作鎖漲停，台積電亦由黑翻紅。市場更偏向 Sector / Factor / Positioning divergence，而非 Global Risk-Off 或 Semiconductor Fundamental Reversal。</p></div><div class="card"><h2>Signal Delta</h2><div class="table-scroll"><table><tr><th>Signal</th><th>Current</th><th>Delta</th><th>Severity</th><th>Confidence</th></tr><tr><td>semiconductor_relative_weakness</td><td>全球 bond selloff 下台灣 AI／半導體逆勢強</td><td>↓</td><td>2/5</td><td>0.88</td></tr><tr><td>ai_fundamental_cycle</td><td>NVIDIA 投資聯發科 US$3.5bn</td><td>↑</td><td>4/5</td><td>0.94</td></tr><tr><td>asia_export_cycle</td><td>China PMI 51.5；Korea PMI 52.3、出口 +68.7%</td><td>↑</td><td>4/5</td><td>0.94</td></tr><tr><td>rates_shock</td><td>US10Y ≈ 4.78%</td><td>↑</td><td>4/5</td><td>0.91</td></tr></table></div></div><div class="card"><h2>Why It Matters</h2><p><b>FACT：</b>全球利率壓力未消失，但亞洲 AI 製造與台灣電子相對強勢同步存在。</p><p><b>MARKET EXPECTATION：</b>主要央行維持緊縮，高估值科技理應承受 Discount-rate pressure。</p><p><b>INFERENCE：</b>Global Rates Headwind + AI Fundamental Resilience + Taiwan-specific Catalyst → Relative Strength。</p><p><b>Counter-evidence：</b>前一日外資仍賣超，當日完整 flow 尚未確認。</p></div><div class="card"><h2>Cross-Asset Confirmation</h2><p>Oil ↑ → Inflation Risk Premium ↑ → Global Yields ↑ → Equity Discount Rate ↑，但 AI Demand ↑ → Asia Manufacturing / Exports ↑ → Taiwan AI/Semiconductor Relative Strength ↑。目前仍為 Discount-rate Shock &gt; Funding/Liquidity Shock。</p></div><div class="card"><h2>Taiwan Transmission</h2><p>Global Yield ↑ → Semiconductor Multiple Compression ↓，對抗 AI CapEx → Korea/Asia Manufacturing &amp; Exports → Taiwan Semiconductor Fundamentals ↑，以及 NVIDIA → MediaTek ecosystem / NVLink Fusion → Taiwan AI-specific Repricing ↑。</p></div><div class="card"><h2>Market vs Fundamental Cycle</h2><p><b>Market Cycle：</b>Rates / Energy 壓抑。<br/><b>Fundamental Cycle：</b>AI / Semiconductor / Asia Export Cycle = Positive and Broadening。</p></div><div class="card"><h2>Classification &amp; Risk Light Delta</h2><p>Classification：Cross-Cycle Divergence / Taiwan AI Relative Strength。Risk Light：Orange → Orange。</p></div><div class="card"><h2>Next Confirmation</h2><ul><li>TWSE foreign flow</li><li>TAIFEX foreign OI</li><li>USD/TWD</li><li>TAIEX breadth</li><li>TSMC / Taiwan semiconductor relative strength</li></ul></div><div class="card"><h2>Bottom Line</h2><p>全球利率與能源壓力惡化的同時，台灣 AI／半導體出現顯著相對強勢。最合理的框架是 energy_inflation → rates_shock → valuation compression，同時對抗 AI demand → Asia manufacturing/exports → Taiwan semiconductor fundamentals + NVIDIA/MediaTek catalyst。</p></div></main></body></html>

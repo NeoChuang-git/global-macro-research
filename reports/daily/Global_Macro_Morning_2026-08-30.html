@@ -1,11 +1,441 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
+
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Global Macro Morning — 2026/08/30</title>
 <style>
-:root{--bg:#08111f;--panel:#0f1a2b;--panel2:#131f34;--text:#edf2fb;--muted:#9cabbe;--line:#273650;--green:#45d18a;--yellow:#f1c64f;--orange:#ff9f43;--red:#ff6175;--cyan:#62c9ff;--purple:#b49cff}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#07101d 0%,#0a1322 35%,#08111d 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.72}main{max-width:1180px;margin:auto;padding:28px 22px 74px}.hero{padding:34px 0 28px;border-bottom:1px solid var(--line)}.kicker{color:var(--cyan);font-size:13px;font-weight:800;letter-spacing:.14em}h1{font-size:clamp(31px,4.8vw,52px);line-height:1.08;margin:9px 0 14px}.subtitle{font-size:clamp(18px,2.1vw,24px);color:#ccd7e8;max-width:1000px}.meta{color:var(--muted);font-size:14px;margin-top:13px}section{margin-top:40px}h2{font-size:27px;margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line)}h3{font-size:20px;margin:24px 0 10px}p{margin:10px 0 15px}.card{background:linear-gradient(180deg,var(--panel),#0d1727);border:1px solid var(--line);border-radius:16px;padding:20px;margin:16px 0}.callout{background:#0d1728;border-left:4px solid var(--cyan);padding:17px 18px;border-radius:11px;margin:18px 0}.callout.red{border-color:var(--red)}.callout.orange{border-color:var(--orange)}.callout.green{border-color:var(--green)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin:22px 0}.metric{grid-column:span 3}.metric .label{color:var(--muted);font-size:13px}.metric .value{font-size:27px;font-weight:800}.metric .delta{font-size:13px;margin-top:2px}.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#0f1727;margin:16px 0}table{width:100%;border-collapse:collapse;min-width:780px}th,td{padding:12px 14px;border-bottom:1px solid #213049;text-align:left;vertical-align:top}th{background:#162139;color:#dce7f8;font-size:13px}td{font-size:14px}tr:last-child td{border-bottom:0}.tag{display:inline-block;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:800;margin-right:6px;border:1px solid}.fact{color:var(--green);border-color:rgba(69,209,138,.45);background:rgba(69,209,138,.08)}.expect{color:var(--yellow);border-color:rgba(241,198,79,.45);background:rgba(241,198,79,.08)}.infer{color:var(--purple);border-color:rgba(180,156,255,.45);background:rgba(180,156,255,.08)}.chain{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#0a1321;border:1px solid var(--line);padding:16px;border-radius:12px;white-space:pre-wrap;color:#d3e5ff}.g{color:var(--green)}.y{color:var(--yellow)}.o{color:var(--orange)}.r{color:var(--red)}.small{font-size:13px;color:var(--muted)}a{color:#8fd7ff}footer{margin-top:50px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13px}@media(max-width:900px){.metric{grid-column:span 6}}@media(max-width:560px){main{padding:18px 14px 48px}.metric{grid-column:span 12}.card{padding:16px}}
+:root {
+  --bg-primary: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-raised: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #334155;
+  --border-light: #475569;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --orange: #f97316;
+  --danger: #ef4444;
+  --table-zebra: rgba(255, 255, 255, 0.02);
+  --table-hover: rgba(56, 189, 248, 0.06);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-raised: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --border-light: #cbd5e1;
+    --accent: #0284c7;
+    --accent-glow: rgba(2, 132, 199, 0.08);
+    --table-zebra: #f8fafc;
+    --table-hover: rgba(2, 132, 199, 0.05);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.68;
+  font-size: 15px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+}
+
+.report-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+/* Typography & Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 36px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 24px 0 12px;
+  color: var(--text-primary);
+}
+
+p {
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+
+ul, ol {
+  margin: 12px 0 16px 24px;
+  color: var(--text-primary);
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Blockquotes / Callout boxes */
+blockquote {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 18px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+th {
+  background: var(--bg-surface-raised);
+  color: var(--text-primary);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
+.badge-grade-B { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
+.badge-grade-C { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
+.badge-grade-D { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.direction-up { color: #38bdf8; }
+.direction-down { color: #a855f7; }
+.direction-improving { color: var(--success); }
+.direction-worsening { color: var(--danger); }
+.direction-flat { color: var(--text-muted); }
+
+/* Risk Lights */
+.risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.risk-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.risk-yellow { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+.risk-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+.risk-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* State Transition */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.state-prior { color: var(--text-muted); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(56, 189, 248, 0.5);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Legacy Report Compatibility Classes */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.card, .panel, .box, .risk-card, .sec {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.callout, .note {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 16px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+.chain, .node {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.small, small, .footer-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 24px;
+  display: block;
+}
+
+/* Legacy Color & Badge utilities */
+.green, .g, .badge-green { color: var(--success); font-weight: 700; }
+.yellow, .y, .badge-yellow { color: var(--warning); font-weight: 700; }
+.orange, .o, .badge-orange { color: var(--orange); font-weight: 700; }
+.red, .r, .badge-red { color: var(--danger); font-weight: 700; }
+
+.pill, .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.metric, .metric-down {
+  font-weight: 600;
+  font-feature-settings: "tnum" 1;
+}
+
+.arrow {
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.table-wrap, .scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 18px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
 </style>
 </head>
 <body><main>
@@ -15,25 +445,19 @@
 <div class="subtitle">一句話 Thesis｜最新可交易市場仍停留在 Warsh 觸發的短端利率重定價（Front-end Rate Repricing）；週末新增訊號則把注意力推向美元制裁傳導（Sanctions Transmission）、日圓干預風險（Yen Intervention Risk）與柴油供給（Distillate Supply）。目前仍是政策／估值壓力，而不是資金市場危機（Funding Crisis）。</div>
 <div class="meta">資料截止：2026/08/30 07:30（台北時間）。週末美國與台灣現貨市場休市；Rates / Equities / FX / Commodities 的 current market state 採 2026/08/28 最後收盤，週末新增事件另列，不假裝成已被市場價格確認。</div>
 </header>
-
-
 <section class="grid">
 <div class="card metric"><div class="label">US 2Y</div><div class="value r">4.36%</div><div class="delta">週五 Warsh shock 後基準</div></div>
 <div class="card metric"><div class="label">DXY</div><div class="value o">99.71</div><div class="delta">+0.61% on Friday</div></div>
 <div class="card metric"><div class="label">Brent</div><div class="value o">US$89.31</div><div class="delta">週末 Russia diesel ban 增加反證</div></div>
 <div class="card metric"><div class="label">USD/TWD</div><div class="value g">31.628</div><div class="delta">台灣資金面仍穩</div></div>
 </section>
-
-
 <section><h2>Executive Summary</h2>
 <div class="callout red"><strong>第一個 regime signal：</strong>Fed 偏鷹定價仍是最新可交易市場的核心。Warsh 在 Jackson Hole 表示，若基礎通膨（Underlying Inflation）沒有清楚且以足夠速度往 2% 靠攏，Fed 仍有工作要做；週五市場將 9 月升息機率推高到約 56%–60%，2Y Treasury 單日跳升約 13bp。週末沒有新的交易價格能推翻這個訊號，因此 <code>fed_policy_tightening</code> 與 <code>rates_shock</code> 仍維持高燈號。</div>
 <p><strong>第二個新增訊號：</strong>美國對 Iran 的制裁開始從商品供應擴散到銀行美元交易。8/29，Egypt 的 Banque Misr 表示正在處理美國財政部要求其 UAE branches 暫停美元交易的通知，UAE 央行同時啟動緊急審查。這不是 global dollar funding stress，但它證明 secondary sanctions 正從油品／航運向金融渠道傳導。今日將 <code>fx_funding_stress</code> 維持綠／黃，但把「制裁型美元傳導（Sanctions-based Dollar Transmission）」列為獨立 watch item。</p>
 <p><strong>第三個新增訊號：</strong>能源通膨的短期價格壓力雖降，但供給端反證變多。俄羅斯 8/29 將柴油出口禁令延長至 9/30，背景是國內燃料短缺與煉油廠受攻擊；同時 Iran 仍宣稱控制 Hormuz。這表示 Brent 低於 US$90 並不代表能源鏈恢復正常，特別是 diesel / refined-products 可能比 crude 更容易出現局部緊張。</p>
 <p><strong>第四個新增 FX 風險：</strong>美國財長 Bessent 8/29 警告，日圓無序波動可能破壞全球市場，USD/JPY 最新交易基準已接近 160。這提高了日本／美國再度干預外匯（FX Intervention）的尾端風險，但目前尚未看到 carry unwind 或美元 funding stress 的跨資產確認。</p>
-<div class="callout orange"><strong>今日 Macro Regime：</strong><br>AI Fundamental Strength + Sticky Inflation + Hawkish Fed Repricing + Sanctions / Energy Tail Risk</div>
+<div class="callout orange"><strong>今日 Macro Regime：</strong><br/>AI Fundamental Strength + Sticky Inflation + Hawkish Fed Repricing + Sanctions / Energy Tail Risk</div>
 </section>
-
-
 <section><h2>1. Macro Signal Board</h2>
 <div class="scroll"><table><thead><tr><th>Family</th><th>方向</th><th>Severity</th><th>Confidence</th><th>24h Delta</th><th>主要證據</th><th>主要反證</th></tr></thead><tbody>
 <tr><td>Growth</td><td>↑ / resilient</td><td>3/5</td><td>0.93</td><td>→</td><td>GDPNow 4.6%、AI CapEx 強、labor 仍穩</td><td>consumer sentiment / housing 偏弱</td></tr>
@@ -43,15 +467,13 @@
 <tr><td>Rates / Term Premium</td><td>↑</td><td>4/5</td><td>0.95</td><td>→</td><td>2Y 4.36%、10Y 4.73%、30Y 約5.2%</td><td>曲線反應集中短端，非全面 disorder</td></tr>
 <tr><td>Liquidity / Plumbing</td><td>stable</td><td>2/5</td><td>0.94</td><td>→</td><td>reserves 約$2.925tn、TGA約$950.7bn</td><td>TGA 高位仍吸收部分流動性</td></tr>
 <tr><td>Credit / Bank Credit</td><td>stable-tight</td><td>2/5</td><td>0.87</td><td>→</td><td>未見 broad IG/HY disorder</td><td>AI corporate issuance 大</td></tr>
-<tr><td>Fiscal / Treasury Supply</td><td>structural pressure</td><td>4/5</td><td>0.93</td><td>→</td><td>30Y >5%、實質長端高</td><td>buyback / duration technicals 支撐</td></tr>
+<tr><td>Fiscal / Treasury Supply</td><td>structural pressure</td><td>4/5</td><td>0.93</td><td>→</td><td>30Y &gt;5%、實質長端高</td><td>buyback / duration technicals 支撐</td></tr>
 <tr><td>FX / Global Dollar</td><td>USD firm / intervention risk ↑</td><td>3/5</td><td>0.93</td><td class="o">↑</td><td>DXY 99.71、USDJPY近160、Bessent警告</td><td>尚無 broad basis / swap stress</td></tr>
 <tr><td>Commodities / Inflation Chain</td><td>mixed / supply risk ↑</td><td>4/5</td><td>0.92</td><td class="o">↑</td><td>Russia 延長柴油出口禁令、Hormuz仍受限</td><td>Brent $89.31、週跌逾5%</td></tr>
 <tr><td>Global Trade / Supply Chain</td><td>mixed</td><td>3/5</td><td>0.86</td><td class="o">↑</td><td>Iran sanctions 擴到銀行美元交易</td><td>Asia chip cycle 仍強</td></tr>
 <tr><td>China / Asia / Taiwan</td><td>AI-led strong / FX watch</td><td>3/5</td><td>0.94</td><td>→</td><td>Taiwan外資/TWD改善、Korea chips強</td><td>USDJPY intervention risk、breadth分化</td></tr>
 </tbody></table></div>
 </section>
-
-
 <section><h2>2. 今日核心主題</h2>
 <h3>核心主題一｜Warsh shock 仍是最新可交易 regime anchor</h3>
 <p><span class="tag fact">FACT</span>Warsh 官方講稿指出，12 個月 PCE inflation 為 3.7%，6 個月變化約 4.1%；他認為 labor market 大致符合 full employment，Fed 現在應把主要焦點放在價格穩定。</p>
@@ -63,8 +485,6 @@
 → policy-rate shock, not funding shock</div>
 <p><strong>市場是否已反映？</strong>短端已快速反映：2Y 與美元在週五跳升；長端反應較溫和，代表市場目前更相信是政策路徑重定價（Policy-path Repricing），而不是新的財政失序（Fiscal Disorder）。</p>
 <p><strong>Counter-evidence：</strong>Warsh 明確說自己承諾的是政策紀律而不是單一決策；後續 CPI、jobs 或 wages 若顯著降溫，9 月定價仍可能逆轉。</p>
-
-
 <h3>核心主題二｜制裁開始進入美元交易渠道，但還不是 funding crisis</h3>
 <p><span class="tag fact">FACT</span>Banque Misr 8/29 表示正在審查美國財政部要求其 UAE branches 暫停美元交易的通知；UAE 央行啟動 forensic review。這是 secondary sanctions 從 Iran oil / shipping 向 banking channel 延伸的直接案例。</p>
 <div class="chain">Iran sanctions broaden
@@ -76,8 +496,6 @@ BUT
 no broad cross-currency / swap / repo confirmation yet
 → not systemic funding stress</div>
 <p><strong>Classification：</strong><code>fx_funding_stress = Green/Yellow Watch</code>；新增 sub-signal：<strong>sanctions_based_dollar_transmission = Yellow/Orange</strong>。</p>
-
-
 <h3>核心主題三｜Crude 變便宜，不等於 refined-product inflation risk 消失</h3>
 <p>俄羅斯 8/29 將 diesel / marine fuel / gas oil export ban 延長至 9/30。這是一個與 Brent 方向相反的重要 counter-evidence：原油價格可因戰爭談判／需求預期下跌，但 refined products 仍可能因煉廠受損、區域供給與出口限制而偏緊。</p>
 <div class="chain">Refinery disruption + export ban
@@ -85,13 +503,11 @@ no broad cross-currency / swap / repo confirmation yet
 → freight / trucking / industrial fuel cost ↑
 → input inflation persistence ↑
 → headline crude relief does not fully pass through</div>
-<p>因此 <code>energy_inflation</code> 不應因 Brent <90 就降到 Green；更合理是 Orange / supply-watch。</p>
+<p>因此 <code>energy_inflation</code> 不應因 Brent &lt;90 就降到 Green；更合理是 Orange / supply-watch。</p>
 </section>
-
-
 <section><h2>3. Global Cross-Asset Dashboard</h2>
 <div class="scroll"><table><thead><tr><th>Asset</th><th>Latest tradable state</th><th>24h / Weekend</th><th>Interpretation</th></tr></thead><tbody>
-<tr><td>S&P 500</td><td>7,711.76</td><td>Fri -0.25%</td><td>policy-rate pressure</td></tr>
+<tr><td>S&amp;P 500</td><td>7,711.76</td><td>Fri -0.25%</td><td>policy-rate pressure</td></tr>
 <tr><td>Nasdaq</td><td>26,402.42</td><td>Fri -0.52%</td><td>long-duration sensitivity</td></tr>
 <tr><td>Russell 2000</td><td>—</td><td>Fri -1.4%</td><td>rates-sensitive weakness</td></tr>
 <tr><td>Nvidia</td><td>—</td><td>Fri -4.6%</td><td>post-earnings valuation reset</td></tr>
@@ -105,8 +521,6 @@ no broad cross-currency / swap / repo confirmation yet
 <tr><td>Bitcoin</td><td>~$77.4k Friday</td><td>Fri -3.3%</td><td>liquidity / duration beta</td></tr>
 </tbody></table></div>
 </section>
-
-
 <section><h2>4. Liquidity / Fiscal / Treasury Supply</h2>
 <div class="scroll"><table><thead><tr><th>Indicator</th><th>Latest</th><th>Status</th><th>判斷</th></tr></thead><tbody>
 <tr><td>Fed reserve balances</td><td>$2.925tn</td><td>-~$10.4bn w/w</td><td>🟢🟡 Stable</td></tr>
@@ -114,13 +528,11 @@ no broad cross-currency / swap / repo confirmation yet
 <tr><td>Reverse repos</td><td>$362.2bn</td><td>slightly lower</td><td>🟡</td></tr>
 <tr><td>SOFR / EFFR / TGCR / BGCR</td><td>weekend no new print</td><td>latest available orderly</td><td>🟢 / Stable</td></tr>
 <tr><td>Cross-currency basis</td><td>unavailable at reliable weekend cutoff</td><td>—</td><td>不猜測</td></tr>
-<tr><td>Treasury supply / term premium</td><td>30Y >5%</td><td>structural</td><td>🟠🔴</td></tr>
+<tr><td>Treasury supply / term premium</td><td>30Y &gt;5%</td><td>structural</td><td>🟠🔴</td></tr>
 </tbody></table></div>
 <p><strong>結論：</strong>沒有 evidence 顯示 repo、reserves 或 central-bank dollar plumbing 失序。銀行美元制裁是局部政策傳導，不應與 broad funding stress 混為一談。</p>
 </section>
-
-
-<section><h2>5. Asia & Taiwan Transmission</h2>
+<section><h2>5. Asia &amp; Taiwan Transmission</h2>
 <div class="scroll"><table><thead><tr><th>Taiwan</th><th>Latest 8/28</th><th>Signal</th></tr></thead><tbody>
 <tr><td>TAIEX</td><td>46,331.45 (+0.77%)</td><td>🟢 price trend</td></tr>
 <tr><td>Foreign cash 1D</td><td>約 +NT$41.6bn</td><td>🟢</td></tr>
@@ -132,27 +544,21 @@ no broad cross-currency / swap / repo confirmation yet
 <p>台灣目前是 <strong>Cash ↑ + TAIEX ↑ + TWD ↑ + Futures short partially covered</strong>。這是 risk-on improvement，但不是全面去避險（De-hedging）。</p>
 <p>亞洲產業面仍偏正向：韓國 8 月出口市場預估維持約 +62.6% YoY，主要由 AI-related memory/chip demand 支撐；因此 <code>asia_export_cycle</code> 與 <code>memory_cycle</code> 目前不降級。</p>
 </section>
-
-
 <section><h2>6. Market vs Fundamental Cycle</h2>
 <div class="card"><h3>AI / Semiconductor Market Cycle：🟡🟠</h3><p>Warsh 後 Nvidia、Nasdaq、Russell 2000 走弱，表示高估值資產重新受到短端利率上行影響。這是 valuation / positioning deterioration，而非需求反轉。</p></div>
 <div class="card"><h3>AI Fundamental Cycle：🟢🟢 Strong / Confirmed</h3><p>Nvidia revenue / Data Center / guidance 仍是強力確認；週末沒有新的 hyperscaler CapEx cuts、TSMC utilization cuts 或 order cancellation evidence。</p></div>
 <div class="card"><h3>Memory Cycle：🟢 Strong</h3><p>Korea export expectations 與中國 memory 廠商供需 commentary 仍支持 memory tightness；未見可靠新資料支持 HBM / DRAM cycle reversal。</p></div>
 <p><strong>核心區分：</strong>今天的新增風險主要在政策折現率（Policy Discount Rate）、美元制裁與能源產品供應，不在 AI orders / sales / CapEx。</p>
 </section>
-
-
 <section><h2>7. Scenario Matrix</h2>
 <div class="scroll"><table><thead><tr><th>Scenario</th><th>Probability</th><th>Trigger</th><th>Implication</th></tr></thead><tbody>
 <tr><td>Base</td><td>48%</td><td>Sep hike odds 40–70%、30Y 5.0–5.5%、AI EPS 強</td><td>earnings strong / multiple volatile</td></tr>
-<tr><td>Bull</td><td>18%</td><td>Aug CPI/jobs 降溫、2Y <4.2%、Hormuz / diesel risk easing</td><td>AI + broad market re-rating</td></tr>
-<tr><td>Bear</td><td>28%</td><td>Sep hike + sticky inflation + DXY >101 + 30Y >5.5%</td><td>duration compression / global tightening</td></tr>
+<tr><td>Bull</td><td>18%</td><td>Aug CPI/jobs 降溫、2Y &lt;4.2%、Hormuz / diesel risk easing</td><td>AI + broad market re-rating</td></tr>
+<tr><td>Bear</td><td>28%</td><td>Sep hike + sticky inflation + DXY &gt;101 + 30Y &gt;5.5%</td><td>duration compression / global tightening</td></tr>
 <tr><td>Tail Risk</td><td>6%</td><td>sanctions contagion + FX intervention disorder + credit/funding stress</td><td>cross-market deleveraging</td></tr>
 </tbody></table></div>
 <p class="small">ESTIMATE｜以上為研究情境機率，不是市場 implied probability。</p>
 </section>
-
-
 <section><h2>8. Risk Lights</h2>
 <div class="scroll"><table><thead><tr><th>Risk</th><th>Light</th><th>24h Delta</th><th>Comment</th></tr></thead><tbody>
 <tr><td>Global</td><td>🟠</td><td>→</td><td>policy + sanctions tail risk</td></tr>
@@ -168,29 +574,25 @@ no broad cross-currency / swap / repo confirmation yet
 <tr><td>Gold–Treasury Divergence</td><td>🟡</td><td>↓</td><td>gold fell as USD/yields rose</td></tr>
 </tbody></table></div>
 </section>
-
-
 <section><h2>9. 今日 Watchlist</h2>
 <div class="scroll"><table><thead><tr><th>Indicator</th><th>Current / Status</th><th>下一門檻</th><th>觸發意義</th></tr></thead><tbody>
-<tr><td>Sep Fed hike probability</td><td>~56–60%</td><td>>70%</td><td>policy shock intensifies</td></tr>
-<tr><td>US 2Y</td><td>~4.36%</td><td>>4.50%</td><td>tightening repricing confirmation</td></tr>
-<tr><td>US 10Y</td><td>~4.73%</td><td>>5.00%</td><td>broad valuation shock</td></tr>
-<tr><td>US 30Y</td><td>~5.2%</td><td>>5.50%</td><td>term premium / fiscal stress</td></tr>
-<tr><td>DXY</td><td>99.71</td><td>>101</td><td>global dollar tightening</td></tr>
-<tr><td>USDJPY</td><td>near 160</td><td>>161 / intervention action</td><td>carry / FX volatility risk</td></tr>
-<tr><td>Brent</td><td>$89.31</td><td>>$100 / <$85</td><td>energy escalation / relief</td></tr>
+<tr><td>Sep Fed hike probability</td><td>~56–60%</td><td>&gt;70%</td><td>policy shock intensifies</td></tr>
+<tr><td>US 2Y</td><td>~4.36%</td><td>&gt;4.50%</td><td>tightening repricing confirmation</td></tr>
+<tr><td>US 10Y</td><td>~4.73%</td><td>&gt;5.00%</td><td>broad valuation shock</td></tr>
+<tr><td>US 30Y</td><td>~5.2%</td><td>&gt;5.50%</td><td>term premium / fiscal stress</td></tr>
+<tr><td>DXY</td><td>99.71</td><td>&gt;101</td><td>global dollar tightening</td></tr>
+<tr><td>USDJPY</td><td>near 160</td><td>&gt;161 / intervention action</td><td>carry / FX volatility risk</td></tr>
+<tr><td>Brent</td><td>$89.31</td><td>&gt;$100 / &lt;$85</td><td>energy escalation / relief</td></tr>
 <tr><td>Russia diesel export ban</td><td>extended to Sep 30</td><td>further tightening</td><td>refined-product inflation</td></tr>
 <tr><td>Sanctions-based bank USD restrictions</td><td>Banque Misr UAE review</td><td>multiple banks / jurisdictions</td><td>regional dollar-friction escalation</td></tr>
 <tr><td>IG/HY spreads</td><td>orderly latest available</td><td>persistent widening</td><td>systemic confirmation</td></tr>
 <tr><td>Nvidia / SOX follow-through</td><td>post-earnings volatility</td><td>3–5D underperformance despite stable yields</td><td>market-cycle warning</td></tr>
 <tr><td>Korea Aug exports</td><td>consensus ~+62.6%</td><td>material miss</td><td>Asia chip-cycle warning</td></tr>
 <tr><td>TWSE foreign 5D</td><td>~+NT$110bn</td><td>reversal negative</td><td>Taiwan flow deterioration</td></tr>
-<tr><td>TX foreign net OI</td><td>~ -83,655</td><td><-90k / >-70k</td><td>hedge escalation / de-hedging</td></tr>
-<tr><td>USD/TWD</td><td>31.628</td><td>rapid >32.2</td><td>Taiwan FX stress</td></tr>
+<tr><td>TX foreign net OI</td><td>~ -83,655</td><td>&lt;-90k / &gt;-70k</td><td>hedge escalation / de-hedging</td></tr>
+<tr><td>USD/TWD</td><td>31.628</td><td>rapid &gt;32.2</td><td>Taiwan FX stress</td></tr>
 </tbody></table></div>
 </section>
-
-
 <section><h2>Bottom Line</h2>
 <div class="callout orange"><strong>今天需要提高對 FX / sanctions / refined-products 的監控，但不需要改變 1–2 季 AI / semiconductor fundamental thesis。</strong></div>
 <p>週末沒有新的 market close，所以不能把週末事件直接寫成「市場已確認」。目前真正已確認的市場 regime 仍是 Warsh 觸發的短端利率重定價；週末新增的三條鏈則是下一個交易日最重要的 pending confirmation：</p>
@@ -204,13 +606,11 @@ no broad cross-currency / swap / repo confirmation yet
 → DXY / USDJPY
 → Iran sanctions banking channel
 → Brent / diesel / freight
-→ Credit & funding confirmation
+→ Credit &amp; funding confirmation
 → Nvidia / SOX
 → TSMC / Taiwan flows
 → USD/TWD</div>
 </section>
-
-
 <section><h2>資料來源（Selected Sources）</h2><ul>
 <li><a href="https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm">Federal Reserve — Chairman Kevin Warsh, Jackson Hole keynote, 2026-08-28</a></li>
 <li><a href="https://www.federalreserve.gov/releases/h41/current/">Federal Reserve — H.4.1, 2026-08-27</a></li>

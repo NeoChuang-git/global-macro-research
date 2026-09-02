@@ -1,63 +1,470 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Global Macro & Taiwan Risk Watch — 2026-08-21</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Global Macro &amp; Taiwan Risk Watch — 2026-08-21</title>
 <style>
-:root{
-  --bg:#f6f7f9;--card:#fff;--text:#17191c;--muted:#666d78;--line:#e4e7ec;
-  --red:#c62828;--orange:#ef6c00;--yellow:#b88700;--green:#16803a;--blue:#2457d6;
+:root {
+  --bg-primary: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-raised: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #334155;
+  --border-light: #475569;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --orange: #f97316;
+  --danger: #ef4444;
+  --table-zebra: rgba(255, 255, 255, 0.02);
+  --table-hover: rgba(56, 189, 248, 0.06);
 }
-*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-line-height:1.72} main{max-width:1120px;margin:0 auto;padding:48px 22px 80px}
-.hero{background:linear-gradient(135deg,#101828,#26364f);color:white;border-radius:22px;padding:38px 40px;box-shadow:0 16px 50px #10182820}
-.hero h1{font-size:34px;line-height:1.2;margin:0 0 12px}.hero p{margin:8px 0;color:#d7deea}
-.badge{display:inline-block;background:#ffffff18;border:1px solid #ffffff35;border-radius:999px;padding:5px 11px;font-size:13px;margin-bottom:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 30px;margin-top:22px;box-shadow:0 5px 24px #1018280a}
-h2{font-size:24px;margin:0 0 14px} h3{font-size:18px;margin:24px 0 8px}.lead{font-size:18px}
-.callout{border-left:5px solid var(--orange);background:#fff8ef;padding:15px 18px;border-radius:8px;margin:16px 0}
-.factgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.fact{padding:15px;border-radius:12px;background:#f8fafc;border:1px solid var(--line)}
-.fact b{display:block;font-size:12px;color:var(--muted);letter-spacing:.04em;margin-bottom:5px}
-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:14px} th{background:#f2f4f7;text-align:left} th,td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-.chain{font-size:17px;text-align:center;background:#f8fafc;border-radius:14px;padding:20px;margin:14px 0}.arrow{color:var(--blue);font-weight:700}
-.red{color:var(--red);font-weight:700}.orange{color:var(--orange);font-weight:700}.green{color:var(--green);font-weight:700}.yellow{color:var(--yellow);font-weight:700}
-.signal{font-size:20px;font-weight:750}.small{font-size:13px;color:var(--muted)} ul{padding-left:22px}
-.footer{color:var(--muted);font-size:12px;margin-top:24px;text-align:center}
-@media(max-width:760px){.factgrid{grid-template-columns:1fr}.hero{padding:28px 24px}.hero h1{font-size:27px}.card{padding:22px 18px}table{font-size:12px;display:block;overflow-x:auto}}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-raised: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --border-light: #cbd5e1;
+    --accent: #0284c7;
+    --accent-glow: rgba(2, 132, 199, 0.08);
+    --table-zebra: #f8fafc;
+    --table-hover: rgba(2, 132, 199, 0.05);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.68;
+  font-size: 15px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+}
+
+.report-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+/* Typography & Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 36px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 24px 0 12px;
+  color: var(--text-primary);
+}
+
+p {
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+
+ul, ol {
+  margin: 12px 0 16px 24px;
+  color: var(--text-primary);
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Blockquotes / Callout boxes */
+blockquote {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 18px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+th {
+  background: var(--bg-surface-raised);
+  color: var(--text-primary);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
+.badge-grade-B { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
+.badge-grade-C { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
+.badge-grade-D { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.direction-up { color: #38bdf8; }
+.direction-down { color: #a855f7; }
+.direction-improving { color: var(--success); }
+.direction-worsening { color: var(--danger); }
+.direction-flat { color: var(--text-muted); }
+
+/* Risk Lights */
+.risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.risk-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.risk-yellow { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+.risk-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+.risk-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* State Transition */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.state-prior { color: var(--text-muted); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(56, 189, 248, 0.5);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Legacy Report Compatibility Classes */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.card, .panel, .box, .risk-card, .sec {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.callout, .note {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 16px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+.chain, .node {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.small, small, .footer-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 24px;
+  display: block;
+}
+
+/* Legacy Color & Badge utilities */
+.green, .g, .badge-green { color: var(--success); font-weight: 700; }
+.yellow, .y, .badge-yellow { color: var(--warning); font-weight: 700; }
+.orange, .o, .badge-orange { color: var(--orange); font-weight: 700; }
+.red, .r, .badge-red { color: var(--danger); font-weight: 700; }
+
+.pill, .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.metric, .metric-down {
+  font-weight: 600;
+  font-feature-settings: "tnum" 1;
+}
+
+.arrow {
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.table-wrap, .scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 18px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
 </style>
 </head>
 <body><main>
 <section class="hero">
-  <div class="badge">MACRO EARLY WARNING · 2026-08-21</div>
-  <h1>⚠️ Global Macro & Taiwan Risk Watch</h1>
-  <p class="lead">美國「政策托底效果有限」遇上「成長不弱、消費分化、油價偏高」：長端利率風險正在重新壓過高估值資產，但 AI／半導體基本面尚未確認反轉。</p>
-  <p>整合前後兩輪觀察：第一輪辨識 Treasury term premium 與油價風險；第二輪加入強勁活動數據、消費分化與 Gold–Treasury divergence，將訊號由單純利率波動推進至「戰術性變化、接近趨勢形成」觀察區。</p>
+<div class="badge">MACRO EARLY WARNING · 2026-08-21</div>
+<h1>⚠️ Global Macro &amp; Taiwan Risk Watch</h1>
+<p class="lead">美國「政策托底效果有限」遇上「成長不弱、消費分化、油價偏高」：長端利率風險正在重新壓過高估值資產，但 AI／半導體基本面尚未確認反轉。</p>
+<p>整合前後兩輪觀察：第一輪辨識 Treasury term premium 與油價風險；第二輪加入強勁活動數據、消費分化與 Gold–Treasury divergence，將訊號由單純利率波動推進至「戰術性變化、接近趨勢形成」觀察區。</p>
 </section>
-
 <section class="card">
 <h2>01｜Executive Summary</h2>
 <div class="callout"><b>核心判斷：</b>目前不是金融危機，也不是 AI 景氣反轉；更值得警戒的是全球長端利率可能進入結構性重新定價。經濟沒有弱到迫使 Fed 快速放鬆，但高油價已開始侵蝕部分終端消費，形成對高估值成長股不友善的「沒有衰退紅利的高利率環境」。</div>
 <div class="factgrid">
- <div class="fact"><b>RATES</b><span class="red">🔴 高風險</span><br>長債回購後殖利率僅短暫下降，隨後重新上升。</div>
- <div class="fact"><b>COMMODITIES</b><span class="red">🔴 高風險</span><br>Brent 約 US$93–94，能源通膨二次衝擊風險升高。</div>
- <div class="fact"><b>SEMICONDUCTOR</b><span class="yellow">🟡～🟢 尚有韌性</span><br>SOXX 相對大盤仍強，AI 基本面尚未確認反轉。</div>
+<div class="fact"><b>RATES</b><span class="red">🔴 高風險</span><br/>長債回購後殖利率僅短暫下降，隨後重新上升。</div>
+<div class="fact"><b>COMMODITIES</b><span class="red">🔴 高風險</span><br/>Brent 約 US$93–94，能源通膨二次衝擊風險升高。</div>
+<div class="fact"><b>SEMICONDUCTOR</b><span class="yellow">🟡～🟢 尚有韌性</span><br/>SOXX 相對大盤仍強，AI 基本面尚未確認反轉。</div>
 </div>
 </section>
-
 <section class="card">
 <h2>02｜兩輪訊號如何串起來</h2>
 <h3>第一階段：政策托底效果快速消退</h3>
 <p>美國財政部意外提高部分 10–30 年期公債回購規模，長債殖利率一度下滑，但市場很快重新拋售長債。重點不只是「殖利率上升」，而是市場開始測試：<b>政策改善流動性的措施，是否不足以抵銷財政赤字、債券供給與期限溢酬上升。</b></p>
 <h3>第二階段：經濟數據讓 Fed 更難快速轉向</h3>
 <p>Philadelphia Fed 製造業指數大幅優於預期，初領失業救濟也低於預期；同時 Walmart 同店銷售低於市場預期，顯示高汽油價格可能開始侵蝕部分家庭購買力。於是風險組合從「Yield ↑ + Oil ↑」進一步變成：</p>
-<div class="chain"><b>Economic activity ≫ expectation</b> <span class="arrow">＋</span> <b>Layoffs remain low</b><br>↓<br>Fed 無需急於放鬆 <span class="arrow">→</span> Higher-for-longer<br><br><b>Oil ↑</b> <span class="arrow">→</span> 家庭實質購買力受壓 <span class="arrow">→</span> 消費分化</div>
+<div class="chain"><b>Economic activity ≫ expectation</b> <span class="arrow">＋</span> <b>Layoffs remain low</b><br/>↓<br/>Fed 無需急於放鬆 <span class="arrow">→</span> Higher-for-longer<br/><br/><b>Oil ↑</b> <span class="arrow">→</span> 家庭實質購買力受壓 <span class="arrow">→</span> 消費分化</div>
 </section>
-
 <section class="card">
 <h2>03｜關鍵數據與 Surprise</h2>
-<table>
+<div class="table-scroll"><table>
 <thead><tr><th>指標</th><th>實際／最新狀態</th><th>預期／基準</th><th>Surprise</th><th>Macro 解讀</th></tr></thead>
 <tbody>
 <tr><td>美國長債回購</td><td>≥ US$4bn／次</td><td>原規模約一半</td><td class="orange">政策意外</td><td>財政部主動改善長債市場流動性，但價格效果未持續。</td></tr>
@@ -67,55 +474,51 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:14px} th{bac
 <tr><td>Walmart 美國同店銷售</td><td>+2.6%</td><td>+3.8%</td><td class="red">低於</td><td>高汽油成本可能開始擠壓部分消費者。</td></tr>
 <tr><td>日本核心 CPI YoY</td><td>+1.8%</td><td>+1.8%</td><td>符合</td><td>沒有新的 BOJ 鷹派 surprise，但緊縮方向未完全消失。</td></tr>
 <tr><td>Brent</td><td>約 US$93–94</td><td>—</td><td class="red">偏高</td><td>能源通膨與運輸成本風險重新升溫。</td></tr>
-</tbody></table>
+</tbody></table></div>
 <div class="factgrid" style="margin-top:16px">
 <div class="fact"><b>FACT</b>長債殖利率重新上升、油價高檔、美股承壓；美國裁員仍少，部分製造活動強。</div>
 <div class="fact"><b>MARKET EXPECTATION</b>原期待成長降溫或 Treasury buyback 能限制殖利率，但兩條路徑目前都沒有明確成立。</div>
 <div class="fact"><b>INFERENCE</b>市場焦點正由「Fed 是否升息」轉向「財政期限溢酬是否需要更高補償」。</div>
 </div>
 </section>
-
 <section class="card">
 <h2>04｜Macro 傳導鏈</h2>
 <div class="chain">
-美國財政赤字／長債供給疑慮 <span class="arrow">→</span> Term Premium ↑ <span class="arrow">→</span> US 30Y ↑<br>
-<span class="arrow">＋</span><br>
-中東／能源供應風險 <span class="arrow">→</span> Brent ↑ <span class="arrow">→</span> Inflation persistence ↑<br>
-<span class="arrow">＋</span><br>
-經濟活動仍有韌性 <span class="arrow">→</span> Fed easing urgency ↓<br>
-↓<br>
-<b>Higher-for-longer discount rate</b><br>
-↓<br>
+美國財政赤字／長債供給疑慮 <span class="arrow">→</span> Term Premium ↑ <span class="arrow">→</span> US 30Y ↑<br/>
+<span class="arrow">＋</span><br/>
+中東／能源供應風險 <span class="arrow">→</span> Brent ↑ <span class="arrow">→</span> Inflation persistence ↑<br/>
+<span class="arrow">＋</span><br/>
+經濟活動仍有韌性 <span class="arrow">→</span> Fed easing urgency ↓<br/>
+↓<br/>
+<b>Higher-for-longer discount rate</b><br/>
+↓<br/>
 高估值科技股 Multiple 壓縮 <span class="arrow">→</span> Nasdaq／AI／半導體波動放大 <span class="arrow">→</span> 台股估值外溢
 </div>
 <p><b>最危險的短期組合：</b> <span class="signal">Oil ↑ + Long Yield ↑ + Equity ↓</span>。若再加入 Gold ↑ / USD ↓，則要進一步檢查是否從 inflation trade 升級為 fiscal / currency credibility trade。</p>
 </section>
-
 <section class="card">
 <h2>05｜跨市場反應與關鍵分化</h2>
-<table>
+<div class="table-scroll"><table>
 <thead><tr><th>市場</th><th>觀察</th><th>燈號</th><th>含義</th></tr></thead>
 <tbody>
 <tr><td>美國長債</td><td>回購後殖利率重新上升</td><td class="red">🔴</td><td>政策托底效果有限。</td></tr>
-<tr><td>S&P 500 / Nasdaq</td><td>承受利率與油價壓力</td><td class="red">🔴</td><td>Duration 資產估值受到約束。</td></tr>
+<tr><td>S&amp;P 500 / Nasdaq</td><td>承受利率與油價壓力</td><td class="red">🔴</td><td>Duration 資產估值受到約束。</td></tr>
 <tr><td>SOXX</td><td>第二輪觀察時仍有相對強勢</td><td class="green">🟢</td><td>半導體基本面尚能抵抗 Macro 壓力。</td></tr>
 <tr><td>美元</td><td>對 Treasury 政策與殖利率高度敏感</td><td class="orange">🟠</td><td>需監控是否轉成政策可信度交易。</td></tr>
 <tr><td>Brent</td><td>約 US$93–94</td><td class="red">🔴</td><td>通膨下降速度可能受阻。</td></tr>
 <tr><td>黃金</td><td>殖利率反彈後未完全回吐前期漲幅</td><td class="orange">🟠</td><td>Gold–Treasury divergence 進入 Early Warning。</td></tr>
 <tr><td>日本長債</td><td>長端殖利率亦處歷史高位區</td><td class="red">🔴</td><td>問題可能不是單一 Treasury technical，而是全球 duration repricing。</td></tr>
-</tbody></table>
+</tbody></table></div>
 </section>
-
 <section class="card">
 <h2>06｜Gold–Treasury Divergence Early Warning</h2>
 <p>一般情況下，殖利率上升會提高持有黃金的機會成本，因此 Gold 與 Yield 常呈反向關係。但近期 Treasury yield 再度上升時，黃金並未完全回吐先前漲幅。</p>
-<div class="callout"><b>目前判定：🟠 Early Warning，尚非 🔴 Confirmation。</b><br>
+<div class="callout"><b>目前判定：🟠 Early Warning，尚非 🔴 Confirmation。</b><br/>
 若出現 <b>US 30Y ↑ + Gold ↑ + USD ↓</b> 並持續數個交易日，市場可能不只是在交易通膨，而是在提高對 Fiscal / Currency Credibility Risk 的定價。</div>
 </section>
-
 <section class="card">
 <h2>07｜對台股與台灣產業的映射</h2>
-<table>
+<div class="table-scroll"><table>
 <thead><tr><th>產業／因子</th><th>直接影響</th><th>間接影響</th><th>時間尺度</th><th>風險／機會</th><th>需確認</th></tr></thead>
 <tbody>
 <tr><td><b>AI／半導體</b></td><td>高殖利率壓估值</td><td>AI CapEx 融資成本提高</td><td>立即～1Q</td><td class="orange">🟠</td><td>SOX 相對強弱、Hyperscaler CapEx</td></tr>
@@ -126,10 +529,9 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:14px} th{bac
 <tr><td>汽車零組件</td><td>能源使用成本提高</td><td>消費者購買力下降</td><td>1–2Q</td><td class="orange">🟠</td><td>美國汽車銷售</td></tr>
 <tr><td>塑化</td><td>原油提高原料成本</td><td>需求未必同步改善</td><td>即時～1Q</td><td class="red">🔴🟠</td><td>產品 Spread</td></tr>
 <tr><td>航運</td><td>燃油／航線風險</td><td>運價可能同步上升</td><td>即時</td><td class="orange">🟠</td><td>運價能否轉嫁成本</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p><b>半導體的重要反證：</b>第二輪觀察中 SOXX 並未跟隨大盤同步崩跌，代表目前較合理的描述仍是「AI EPS／需求有韌性，但 valuation ceiling 因殖利率提高而下降」，而不是 AI Cycle 已結束。</p>
 </section>
-
 <section class="card">
 <h2>08｜雜訊、戰術變化，還是 Regime Shift？</h2>
 <p class="signal">目前分類：🟠 戰術性變化 → 接近「趨勢形成」觀察區</p>
@@ -138,10 +540,9 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:14px} th{bac
 <div class="chain"><b>Treasury intervention</b> <span class="arrow">→</span> Bond rally <span class="arrow">→</span> <b>Rally quickly fails</b></div>
 <p>若這個模式持續，表示市場可能認為流動性改善措施無法根治「財政赤字 + 長債供給 + 能源通膨 + 全球政府債供給」所形成的期限溢酬。</p>
 </section>
-
 <section class="card">
 <h2>09｜整合風險燈號</h2>
-<table>
+<div class="table-scroll"><table>
 <thead><tr><th>維度</th><th>燈號</th><th>理由</th></tr></thead>
 <tbody>
 <tr><td>Global Macro</td><td class="orange">🟠</td><td>成長不弱＋能源通膨＋全球長債壓力。</td></tr>
@@ -152,12 +553,11 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:14px} th{bac
 <tr><td>Gold–Treasury Divergence</td><td class="orange">🟠</td><td>黃金未隨殖利率反彈而完全回吐。</td></tr>
 <tr><td>Industry Cycle</td><td class="yellow">🟡🟢</td><td>半導體仍有相對強勢，需求尚未確認反轉。</td></tr>
 <tr><td>US Consumer</td><td class="orange">🟠</td><td>收入階層與通路出現分化，但尚非全面衰退。</td></tr>
-</tbody></table>
+</tbody></table></div>
 </section>
-
 <section class="card">
 <h2>10｜下一階段監控門檻</h2>
-<table>
+<div class="table-scroll"><table>
 <thead><tr><th>指標</th><th>目前狀態</th><th>升級門檻</th><th>觸發後解讀</th></tr></thead>
 <tbody>
 <tr><td><b>US 30Y</b></td><td>約 5.25%</td><td><b>&gt; 5.33–5.34%</b></td><td class="red">🔴 財政／期限溢酬壓力重新升級。</td></tr>
@@ -166,9 +566,8 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:14px} th{bac
 <tr><td><b>SOXX / SOX</b></td><td>仍有相對韌性</td><td><b>跌破近期低點並失去相對強勢</b></td><td class="red">🔴 利率開始壓過 AI 基本面。</td></tr>
 <tr><td><b>美國 PMI / ISM</b></td><td>Philly Fed 極強</td><td><b>全國數據確認製造改善</b></td><td class="orange">🟠 Higher-for-longer 機率提高。</td></tr>
 <tr><td><b>Hyperscaler CapEx</b></td><td>尚未確認下修</td><td><b>大型雲端業者同步下修</b></td><td class="red">🔴 從估值問題升級為 AI 基本面問題。</td></tr>
-</tbody></table>
+</tbody></table></div>
 </section>
-
 <section class="card">
 <h2>Bottom Line</h2>
 <p class="lead"><b>目前最重要的不是預測 Fed 下一步，而是判斷「長端利率是否已脫離單純政策利率邏輯，轉為財政與期限溢酬主導」。</b></p>
@@ -176,6 +575,5 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:14px} th{bac
 <div class="callout"><b>Regime Shift 升級條件：</b>若 <b>US 30Y 突破近期高點 + Brent 突破 US$95 + Gold 與殖利率同步上漲且美元轉弱 + SOX 失去相對強勢</b>，四者形成共振，則應將目前的戰術性利率警訊升級為可能實質限制科技資本支出與台股估值的 Macro Regime Shift Early Warning。</div>
 <p class="small">註：本頁為兩輪既有報告內容之整併版，數字與判斷沿用原報告觀察時點；未另行以即時行情更新。</p>
 </section>
-
-<div class="footer">Global Macro & Taiwan Risk Watch · Consolidated Edition · 2026-08-21</div>
+<div class="footer">Global Macro &amp; Taiwan Risk Watch · Consolidated Edition · 2026-08-21</div>
 </main></body></html>

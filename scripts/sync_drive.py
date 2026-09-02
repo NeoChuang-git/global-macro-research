@@ -595,7 +595,7 @@ def build_reports_index(repo_root, state_files, runs_data=None):
             classification = classify_drive_file(
                 category, path.name, metadata.get("modified_time")
             )
-            file_sha256 = metadata.get("sha256") or _hash_file(path, "sha256")
+            file_sha256 = _hash_file(path, "sha256")
 
             # Check if this report was generated from a canonical Markdown run
             run_rec = runs_by_html.get(relative)

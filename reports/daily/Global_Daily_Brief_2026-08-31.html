@@ -1,5 +1,437 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Global Daily Brief｜2026-08-31</title>
-<style>body{margin:0;background:#08111e;color:#eef4ff;font:15px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif}main{max-width:1180px;margin:auto;padding:28px 20px 70px}h1{font-size:42px;line-height:1.12}h2{margin-top:38px;border-bottom:1px solid #293a55;padding-bottom:8px}.card{background:#101b2d;border:1px solid #293a55;border-radius:14px;padding:17px;margin:14px 0}.scroll{overflow:auto;border:1px solid #293a55;border-radius:12px}table{width:100%;border-collapse:collapse;min-width:820px}th,td{padding:10px 12px;border-bottom:1px solid #23334c;text-align:left;vertical-align:top}th{background:#17243b}.g{color:#46d28c}.o{color:#ff9f43}.r{color:#ff6075}.mu{color:#9cabc0}.chain{font-family:monospace;background:#091321;border:1px solid #293a55;padding:14px;border-radius:10px;white-space:pre-wrap}a{color:#91d8ff}</style></head><body><main>
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Global Daily Brief｜2026-08-31</title>
+<style>
+:root {
+  --bg-primary: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-raised: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #334155;
+  --border-light: #475569;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --orange: #f97316;
+  --danger: #ef4444;
+  --table-zebra: rgba(255, 255, 255, 0.02);
+  --table-hover: rgba(56, 189, 248, 0.06);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-raised: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --border-light: #cbd5e1;
+    --accent: #0284c7;
+    --accent-glow: rgba(2, 132, 199, 0.08);
+    --table-zebra: #f8fafc;
+    --table-hover: rgba(2, 132, 199, 0.05);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.68;
+  font-size: 15px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+}
+
+.report-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+/* Typography & Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 36px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 24px 0 12px;
+  color: var(--text-primary);
+}
+
+p {
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+
+ul, ol {
+  margin: 12px 0 16px 24px;
+  color: var(--text-primary);
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Blockquotes / Callout boxes */
+blockquote {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 18px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+th {
+  background: var(--bg-surface-raised);
+  color: var(--text-primary);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
+.badge-grade-B { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
+.badge-grade-C { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
+.badge-grade-D { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.direction-up { color: #38bdf8; }
+.direction-down { color: #a855f7; }
+.direction-improving { color: var(--success); }
+.direction-worsening { color: var(--danger); }
+.direction-flat { color: var(--text-muted); }
+
+/* Risk Lights */
+.risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.risk-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.risk-yellow { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+.risk-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+.risk-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* State Transition */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.state-prior { color: var(--text-muted); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(56, 189, 248, 0.5);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Legacy Report Compatibility Classes */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.card, .panel, .box, .risk-card, .sec {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.callout, .note {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 16px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+.chain, .node {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.small, small, .footer-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 24px;
+  display: block;
+}
+
+/* Legacy Color & Badge utilities */
+.green, .g, .badge-green { color: var(--success); font-weight: 700; }
+.yellow, .y, .badge-yellow { color: var(--warning); font-weight: 700; }
+.orange, .o, .badge-orange { color: var(--orange); font-weight: 700; }
+.red, .r, .badge-red { color: var(--danger); font-weight: 700; }
+
+.pill, .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.metric, .metric-down {
+  font-weight: 600;
+  font-feature-settings: "tnum" 1;
+}
+
+.arrow {
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.table-wrap, .scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 18px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+</style></head><body><main>
 <div class="mu">GLOBAL DAILY BRIEF · 2026-08-31 · 07:32 TAIPEI</div>
 <h1>Fed 折現率衝擊仍是主線；週末新增日圓政策尾風險與成品油供給風險，台灣 AI 基本面仍未反轉</h1>
 <p><b>Daily Regime Thesis｜</b>AI 基本面週期(Fundamental Cycle)仍強，但市場週期(Market Cycle)進入「盈利強、估值(Valuation)受短端利率壓縮」；週末新增訊號集中於日本匯率政策與俄羅斯柴油供給，而非新的全球資金危機。</p>
@@ -37,7 +469,7 @@
 <h2>7. Taiwan Transmission Matrix</h2><p>Economy：Strong；Policy：Watch；Industry：AI/electronics Strong；Stocks：Positive but selective。NDC領先指標+0.72%至104.63、連12升；ICT orders +89.5%、electronics +71.7%，但 optical -10.6% 為反證。</p>
 <h2>8. Taiwan Market Reality Check</h2><p>TAIEX 46,331.45（8/28，+0.77%）；外資 +NT$41.588bn、連3買，單週約 +NT$110.8bn；USD/TWD 31.628。台積電2,420、聯發科3,985、台達電1,830；聯電獲外資買超約88,989張。現貨資金+匯率+指數三項共振，taiwan_foreign_flow = Confirmed Positive。</p>
 <h2>9. Market vs Fundamental Cycle</h2><p>AI Market Cycle 🟡🟠；AI Fundamental Cycle 🟢🟢；Memory 🟢。供應鏈(Supply Chain)資本支出(CapEx)仍強，但要持續檢查真實 end-demand、庫存(Inventory)與毛利率(Margin)。</p>
-<h2>10. Policy & Regulatory Watch</h2><p>Fed 9月升息風險；BOJ 9月升息與FX policy；G20中國貿易失衡；俄柴油禁令；台灣強景氣下匯率與資產價格管理。</p>
+<h2>10. Policy &amp; Regulatory Watch</h2><p>Fed 9月升息風險；BOJ 9月升息與FX policy；G20中國貿易失衡；俄柴油禁令；台灣強景氣下匯率與資產價格管理。</p>
 <h2>11. Daily Taiwan Equity Action Delta</h2><div class="scroll"><table><tr><th>Stock</th><th>Grade</th><th>Chain</th><th>Baseline</th><th>New Evidence</th><th>Pricing</th><th>Current Tactical</th><th>Delta</th><th>1–5D</th><th>1–4W</th><th>Confidence</th></tr>
 <tr><td>台積電 2330</td><td>A-</td><td>Partial</td><td>Positive</td><td>orders+leading+flow vs Fed shock</td><td>Partially Priced</td><td>回檔布局</td><td>維持但不追價</td><td>-2.5~+3%</td><td>-5~+8%</td><td>Med-High</td></tr>
 <tr><td>聯電 2303</td><td>B+</td><td>Partial</td><td>Neutral/Positive</td><td>foreign buy 88,989 lots + cycle breadth</td><td>Partially Priced</td><td>Positive</td><td class="g">升級</td><td>-3~+5%</td><td>-6~+10%</td><td>Medium</td></tr>
@@ -50,7 +482,7 @@
 <h2>14. Daily Forecast Validation</h2><p>本輪獨立重建，沒有可合法讀取的 prior prediction cohort；unavailable，不以其他排程 state 偽造。</p>
 <h2>15. Scenario Matrix</h2><p>Base 50%｜Bull 20%｜Bear 25%｜Tail 5%。</p>
 <h2>16. Risk Lights</h2><p>Global 🟠｜Growth 🟢🟡｜Inflation 🟠🔴｜Fed 🔴｜Rates 🔴｜Liquidity 🟢🟡｜Credit 🟡｜FX 🟠🔴｜Commodities 🟠｜Taiwan Equity 🟡｜Taiwan Flow 🟢｜AI Fundamental 🟢🟢｜AI Market 🟡🟠｜Memory 🟢｜Gold–Treasury Divergence 🟡</p>
-<h2>17. Next 24h Watchlist</h2><p>US2Y 4.50%；Sep hike odds 70%；USDJPY160；Brent/diesel crack；Korea 8月出口正式值；China PMI；TAIEX breadth；外資是否連4買；USD/TWD是否快速>32；SOX/Nvidia follow-through；台積電/聯電relative strength。</p>
+<h2>17. Next 24h Watchlist</h2><p>US2Y 4.50%；Sep hike odds 70%；USDJPY160；Brent/diesel crack；Korea 8月出口正式值；China PMI；TAIEX breadth；外資是否連4買；USD/TWD是否快速&gt;32；SOX/Nvidia follow-through；台積電/聯電relative strength。</p>
 <h2>Bottom Line</h2><div class="card"><b>沒有證據支持把 AI / Taiwan 1–2Q 基本面 thesis 降級；改變的是 tactical hurdle rate。</b> Fed 折現率上升讓追高報酬風險比下降，因此台積電轉為回檔布局；聯電因景氣廣度與強外資流入取得 Neutral→Positive，但因缺乏新公司基本面一手證據，信心僅 Medium。</div>
 <h2>Sources</h2><ul><li><a href="https://www.ndc.gov.tw/en/nc_199_40405">Taiwan NDC</a></li><li><a href="https://www.cbc.gov.tw/tw/lp-645-1-1-20.html">CBC FX</a></li><li><a href="https://www.reuters.com/business/will-warshs-jackson-hole-speech-be-course-correction-or-detour-2026-08-28/">Reuters Warsh</a></li><li><a href="https://www.reuters.com/world/asia-pacific/bessent-says-yen-moves-pretty-contained-not-disorderly-2026-08-30/">Reuters Yen</a></li><li><a href="https://www.reuters.com/business/energy/russia-extends-ban-diesel-exports-until-september-30-2026-08-29/">Reuters Diesel</a></li></ul>
 </main></body></html>
