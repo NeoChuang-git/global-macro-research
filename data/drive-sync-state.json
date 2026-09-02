@@ -27,6 +27,15 @@
       "sha256": "c1b0de1609a1043cf6592e61ec87ea5fd76ae26011b4a7a1642bdf87c49f1422",
       "size": 19030
     },
+    "reports/daily/Global_Daily_Brief_2026-09-02_rerun_1308.html": {
+      "category": "daily",
+      "drive_file_id": "1YRcqcSE0ltyUL43eRDXMjJ7rsX22nDQO",
+      "md5_checksum": "c6f0ac8695d1a83694f561722a41afcc",
+      "modified_time": "2026-09-02T05:10:08.471Z",
+      "name": "Global_Daily_Brief_2026-09-02_rerun_1308.html",
+      "sha256": "4cb24ade06488892126470eacdfdbc381876df04982f15759190937e9c1b748a",
+      "size": 6299
+    },
     "reports/daily/Global_Macro_Morning_2026-08-25.html": {
       "category": "daily",
       "drive_file_id": "10dgWjdJhW-HwSZRp8tFbQ_wSDiQLIiWu",
@@ -305,6 +314,15 @@
       "name": "Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html",
       "sha256": "8bae773a78200d801921af3e3ceeeaed20af6f512b0efc944f8db836f20cee80",
       "size": 9324
+    },
+    "reports/early-warning/Sediment_Reference_Acceptance_FetchStream_2026-09-01_0703.html": {
+      "category": "early-warning",
+      "drive_file_id": "1xIqABiGU6RNh0jK--szWJBkEOK8YbgdH",
+      "md5_checksum": "5e62f7220855a48f18f9f77f54221ed2",
+      "modified_time": "2026-08-31T23:03:23.954Z",
+      "name": "Sediment_Reference_Acceptance_FetchStream_2026-09-01_0703.html",
+      "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
+      "size": 5582
     },
     "reports/weekly/Weekly_Strategy_2026-08-30.html": {
       "category": "weekly",
