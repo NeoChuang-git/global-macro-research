@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
-
+<!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Global Macro Morning — 2026/08/30</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>週末沒有新的市場價格，但三條政策風險正在累積：Fed 偏鷹、Iran 制裁外溢到美元交易、能源供給風險重新抬頭 · Global Macro Signal Report</title>
 <style>
+
 :root {
   --bg-primary: #0f172a;
   --bg-surface: #1e293b;
@@ -327,7 +327,7 @@ footer {
   color: var(--text-muted);
 }
 
-/* Legacy Report Compatibility Classes */
+/* Legacy Card & Layout Compatibility */
 main {
   max-width: 1240px;
   margin: 0 auto;
@@ -337,42 +337,20 @@ main {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 22px 26px;
-  margin: 20px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.hero {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
   padding: 24px 28px;
-  margin-bottom: 24px;
+  margin: 24px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.hero h1 {
-  margin: 0 0 12px;
-  font-size: 1.85rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.28;
-}
-
-.hero p {
-  margin: 0;
-  color: var(--text-secondary);
-  font-size: 1.05rem;
 }
 
 .callout, .note {
   background: var(--accent-glow);
   border-left: 4px solid var(--accent);
   border-radius: 0 8px 8px 0;
-  padding: 14px 18px;
-  margin: 16px 0;
+  padding: 16px 20px;
+  margin: 18px 0;
   color: var(--text-primary);
   font-size: 0.98rem;
+  line-height: 1.68;
 }
 
 .chain, .node {
@@ -380,7 +358,7 @@ main {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 16px 20px;
-  margin: 16px 0;
+  margin: 18px 0;
   font-weight: 600;
   text-align: center;
   color: var(--text-primary);
@@ -436,76 +414,70 @@ main {
   border-radius: 8px;
   background: var(--bg-surface);
 }
+
 </style>
 </head>
-<body><main>
-<header class="hero">
-<div class="kicker">GLOBAL MACRO MORNING · 2026/08/30</div>
-<h1>週末沒有新的市場價格，但三條政策風險正在累積：Fed 偏鷹、Iran 制裁外溢到美元交易、能源供給風險重新抬頭</h1>
-<div class="subtitle">一句話 Thesis｜最新可交易市場仍停留在 Warsh 觸發的短端利率重定價（Front-end Rate Repricing）；週末新增訊號則把注意力推向美元制裁傳導（Sanctions Transmission）、日圓干預風險（Yen Intervention Risk）與柴油供給（Distillate Supply）。目前仍是政策／估值壓力，而不是資金市場危機（Funding Crisis）。</div>
-<div class="meta">資料截止：2026/08/30 07:30（台北時間）。週末美國與台灣現貨市場休市；Rates / Equities / FX / Commodities 的 current market state 採 2026/08/28 最後收盤，週末新增事件另列，不假裝成已被市場價格確認。</div>
+<body>
+<div class="report-container">
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">GLOBAL_DAILY_BRIEF</span>
+      <span class="badge risk-red">🔴 Risk: RED</span>
+    </div>
+  </div>
+  <h1 class="hero-title">週末沒有新的市場價格，但三條政策風險正在累積：Fed 偏鷹、Iran 制裁外溢到美元交易、能源供給風險重新抬頭</h1>
 </header>
+<main class="report-content">
 <section class="grid">
 <div class="card metric"><div class="label">US 2Y</div><div class="value r">4.36%</div><div class="delta">週五 Warsh shock 後基準</div></div>
 <div class="card metric"><div class="label">DXY</div><div class="value o">99.71</div><div class="delta">+0.61% on Friday</div></div>
 <div class="card metric"><div class="label">Brent</div><div class="value o">US$89.31</div><div class="delta">週末 Russia diesel ban 增加反證</div></div>
 <div class="card metric"><div class="label">USD/TWD</div><div class="value g">31.628</div><div class="delta">台灣資金面仍穩</div></div>
-</section>
-<section><h2>Executive Summary</h2>
+</section><section><h2>Executive Summary</h2>
 <div class="callout red"><strong>第一個 regime signal：</strong>Fed 偏鷹定價仍是最新可交易市場的核心。Warsh 在 Jackson Hole 表示，若基礎通膨（Underlying Inflation）沒有清楚且以足夠速度往 2% 靠攏，Fed 仍有工作要做；週五市場將 9 月升息機率推高到約 56%–60%，2Y Treasury 單日跳升約 13bp。週末沒有新的交易價格能推翻這個訊號，因此 <code>fed_policy_tightening</code> 與 <code>rates_shock</code> 仍維持高燈號。</div>
 <p><strong>第二個新增訊號：</strong>美國對 Iran 的制裁開始從商品供應擴散到銀行美元交易。8/29，Egypt 的 Banque Misr 表示正在處理美國財政部要求其 UAE branches 暫停美元交易的通知，UAE 央行同時啟動緊急審查。這不是 global dollar funding stress，但它證明 secondary sanctions 正從油品／航運向金融渠道傳導。今日將 <code>fx_funding_stress</code> 維持綠／黃，但把「制裁型美元傳導（Sanctions-based Dollar Transmission）」列為獨立 watch item。</p>
 <p><strong>第三個新增訊號：</strong>能源通膨的短期價格壓力雖降，但供給端反證變多。俄羅斯 8/29 將柴油出口禁令延長至 9/30，背景是國內燃料短缺與煉油廠受攻擊；同時 Iran 仍宣稱控制 Hormuz。這表示 Brent 低於 US$90 並不代表能源鏈恢復正常，特別是 diesel / refined-products 可能比 crude 更容易出現局部緊張。</p>
 <p><strong>第四個新增 FX 風險：</strong>美國財長 Bessent 8/29 警告，日圓無序波動可能破壞全球市場，USD/JPY 最新交易基準已接近 160。這提高了日本／美國再度干預外匯（FX Intervention）的尾端風險，但目前尚未看到 carry unwind 或美元 funding stress 的跨資產確認。</p>
 <div class="callout orange"><strong>今日 Macro Regime：</strong><br/>AI Fundamental Strength + Sticky Inflation + Hawkish Fed Repricing + Sanctions / Energy Tail Risk</div>
-</section>
-<section><h2>1. Macro Signal Board</h2>
+</section><section><h2>1. Macro Signal Board</h2>
 <div class="scroll"><table><thead><tr><th>Family</th><th>方向</th><th>Severity</th><th>Confidence</th><th>24h Delta</th><th>主要證據</th><th>主要反證</th></tr></thead><tbody>
-<tr><td>Growth</td><td>↑ / resilient</td><td>3/5</td><td>0.93</td><td>→</td><td>GDPNow 4.6%、AI CapEx 強、labor 仍穩</td><td>consumer sentiment / housing 偏弱</td></tr>
-<tr><td>Inflation</td><td>↑ / sticky</td><td>4/5</td><td>0.97</td><td>→</td><td>PCE 3.7%、Warsh 強調 2% 固定目標</td><td>Brent 已回到 $90 下方</td></tr>
-<tr><td>Labor</td><td>resilient</td><td>2/5</td><td>0.91</td><td>→</td><td>claims 203k、Warsh：接近 full employment</td><td>hiring / recent graduates 仍有弱點</td></tr>
-<tr><td>Fed / Monetary</td><td>tightening ↑</td><td>5/5</td><td>0.97</td><td>→高位</td><td>Sep hike odds 約56–60%、2Y 4.36%</td><td>Warsh 未承諾特定會議升息</td></tr>
-<tr><td>Rates / Term Premium</td><td>↑</td><td>4/5</td><td>0.95</td><td>→</td><td>2Y 4.36%、10Y 4.73%、30Y 約5.2%</td><td>曲線反應集中短端，非全面 disorder</td></tr>
-<tr><td>Liquidity / Plumbing</td><td>stable</td><td>2/5</td><td>0.94</td><td>→</td><td>reserves 約$2.925tn、TGA約$950.7bn</td><td>TGA 高位仍吸收部分流動性</td></tr>
-<tr><td>Credit / Bank Credit</td><td>stable-tight</td><td>2/5</td><td>0.87</td><td>→</td><td>未見 broad IG/HY disorder</td><td>AI corporate issuance 大</td></tr>
-<tr><td>Fiscal / Treasury Supply</td><td>structural pressure</td><td>4/5</td><td>0.93</td><td>→</td><td>30Y &gt;5%、實質長端高</td><td>buyback / duration technicals 支撐</td></tr>
-<tr><td>FX / Global Dollar</td><td>USD firm / intervention risk ↑</td><td>3/5</td><td>0.93</td><td class="o">↑</td><td>DXY 99.71、USDJPY近160、Bessent警告</td><td>尚無 broad basis / swap stress</td></tr>
-<tr><td>Commodities / Inflation Chain</td><td>mixed / supply risk ↑</td><td>4/5</td><td>0.92</td><td class="o">↑</td><td>Russia 延長柴油出口禁令、Hormuz仍受限</td><td>Brent $89.31、週跌逾5%</td></tr>
-<tr><td>Global Trade / Supply Chain</td><td>mixed</td><td>3/5</td><td>0.86</td><td class="o">↑</td><td>Iran sanctions 擴到銀行美元交易</td><td>Asia chip cycle 仍強</td></tr>
-<tr><td>China / Asia / Taiwan</td><td>AI-led strong / FX watch</td><td>3/5</td><td>0.94</td><td>→</td><td>Taiwan外資/TWD改善、Korea chips強</td><td>USDJPY intervention risk、breadth分化</td></tr>
+<tr><td>Growth</td><td><span class="direction direction-up">↑ 上升</span> / resilient</td><td>3/5</td><td>0.93</td><td><span class="direction direction-flat">→ 持平</span></td><td>GDPNow 4.6%、AI CapEx 強、labor 仍穩</td><td>consumer sentiment / housing 偏弱</td></tr>
+<tr><td>Inflation</td><td><span class="direction direction-up">↑ 上升</span> / sticky</td><td>4/5</td><td>0.97</td><td><span class="direction direction-flat">→ 持平</span></td><td>PCE 3.7%、Warsh 強調 2% 固定目標</td><td>Brent 已回到 $90 下方</td></tr>
+<tr><td>Labor</td><td>resilient</td><td>2/5</td><td>0.91</td><td><span class="direction direction-flat">→ 持平</span></td><td>claims 203k、Warsh：接近 full employment</td><td>hiring / recent graduates 仍有弱點</td></tr>
+<tr><td>Fed / Monetary</td><td>tightening <span class="direction direction-up">↑ 上升</span></td><td>5/5</td><td>0.97</td><td>→高位</td><td>Sep hike odds 約56–60%、2Y 4.36%</td><td>Warsh 未承諾特定會議升息</td></tr>
+<tr><td>Rates / Term Premium</td><td><span class="direction direction-up">↑ 上升</span></td><td>4/5</td><td>0.95</td><td><span class="direction direction-flat">→ 持平</span></td><td>2Y 4.36%、10Y 4.73%、30Y 約5.2%</td><td>曲線反應集中短端，非全面 disorder</td></tr>
+<tr><td>Liquidity / Plumbing</td><td>stable</td><td>2/5</td><td>0.94</td><td><span class="direction direction-flat">→ 持平</span></td><td>reserves 約$2.925tn、TGA約$950.7bn</td><td>TGA 高位仍吸收部分流動性</td></tr>
+<tr><td>Credit / Bank Credit</td><td>stable-tight</td><td>2/5</td><td>0.87</td><td><span class="direction direction-flat">→ 持平</span></td><td>未見 broad IG/HY disorder</td><td>AI corporate issuance 大</td></tr>
+<tr><td>Fiscal / Treasury Supply</td><td>structural pressure</td><td>4/5</td><td>0.93</td><td><span class="direction direction-flat">→ 持平</span></td><td>30Y &gt;5%、實質長端高</td><td>buyback / duration technicals 支撐</td></tr>
+<tr><td>FX / Global Dollar</td><td>USD firm / intervention risk <span class="direction direction-up">↑ 上升</span></td><td>3/5</td><td>0.93</td><td class="o"><span class="direction direction-up">↑ 上升</span></td><td>DXY 99.71、USDJPY近160、Bessent警告</td><td>尚無 broad basis / swap stress</td></tr>
+<tr><td>Commodities / Inflation Chain</td><td>mixed / supply risk <span class="direction direction-up">↑ 上升</span></td><td>4/5</td><td>0.92</td><td class="o"><span class="direction direction-up">↑ 上升</span></td><td>Russia 延長柴油出口禁令、Hormuz仍受限</td><td>Brent $89.31、週跌逾5%</td></tr>
+<tr><td>Global Trade / Supply Chain</td><td>mixed</td><td>3/5</td><td>0.86</td><td class="o"><span class="direction direction-up">↑ 上升</span></td><td>Iran sanctions 擴到銀行美元交易</td><td>Asia chip cycle 仍強</td></tr>
+<tr><td>China / Asia / Taiwan</td><td>AI-led strong / FX watch</td><td>3/5</td><td>0.94</td><td><span class="direction direction-flat">→ 持平</span></td><td>Taiwan外資/TWD改善、Korea chips強</td><td>USDJPY intervention risk、breadth分化</td></tr>
 </tbody></table></div>
-</section>
-<section><h2>2. 今日核心主題</h2>
+</section><section><h2>2. 今日核心主題</h2>
 <h3>核心主題一｜Warsh shock 仍是最新可交易 regime anchor</h3>
 <p><span class="tag fact">FACT</span>Warsh 官方講稿指出，12 個月 PCE inflation 為 3.7%，6 個月變化約 4.1%；他認為 labor market 大致符合 full employment，Fed 現在應把主要焦點放在價格穩定。</p>
-<div class="chain">Sticky inflation + labor resilient
-→ Fed reaction function hawkish
-→ 2Y reprices faster than 30Y
-→ USD strengthens
-→ valuation pressure on small caps / long-duration assets
-→ policy-rate shock, not funding shock</div>
+<div class="chain">Sticky inflation + <span class="state-transition"><span class="state-prior">labor resilient</span><span class="transition-arrow">→</span><span class="state-current">Fed reaction</span></span> <span class="state-transition"><span class="state-prior">function hawkish</span><span class="transition-arrow">→</span><span class="state-current">2Y reprices</span></span> faster <span class="state-transition"><span class="state-prior">than 30Y</span><span class="transition-arrow">→</span><span class="state-current">USD strengthens</span></span>
+<span class="direction direction-flat">→ 持平</span> valuation pressure on small caps / <span class="state-transition"><span class="state-prior">long-duration assets</span><span class="transition-arrow">→</span><span class="state-current">policy-rate</span></span> shock, not funding shock</div>
 <p><strong>市場是否已反映？</strong>短端已快速反映：2Y 與美元在週五跳升；長端反應較溫和，代表市場目前更相信是政策路徑重定價（Policy-path Repricing），而不是新的財政失序（Fiscal Disorder）。</p>
 <p><strong>Counter-evidence：</strong>Warsh 明確說自己承諾的是政策紀律而不是單一決策；後續 CPI、jobs 或 wages 若顯著降溫，9 月定價仍可能逆轉。</p>
 <h3>核心主題二｜制裁開始進入美元交易渠道，但還不是 funding crisis</h3>
 <p><span class="tag fact">FACT</span>Banque Misr 8/29 表示正在審查美國財政部要求其 UAE branches 暫停美元交易的通知；UAE 央行啟動 forensic review。這是 secondary sanctions 從 Iran oil / shipping 向 banking channel 延伸的直接案例。</p>
-<div class="chain">Iran sanctions broaden
-→ specific bank USD access restricted
-→ compliance / correspondent-bank risk ↑
-→ trade settlement friction ↑
-→ potential regional dollar premium ↑
+<div class="chain">Iran <span class="state-transition"><span class="state-prior">sanctions broaden</span><span class="transition-arrow">→</span><span class="state-current">specific bank</span></span> USD <span class="state-transition"><span class="state-prior">access restricted</span><span class="transition-arrow">→</span><span class="state-current">compliance</span></span> / correspondent-bank risk <span class="direction direction-up">↑ 上升</span>
+<span class="direction direction-flat">→ 持平</span> trade settlement friction <span class="direction direction-up">↑ 上升</span>
+<span class="direction direction-flat">→ 持平</span> potential regional dollar premium <span class="direction direction-up">↑ 上升</span>
 BUT
-no broad cross-currency / swap / repo confirmation yet
-→ not systemic funding stress</div>
+no broad cross-currency / swap / repo <span class="state-transition"><span class="state-prior">confirmation yet</span><span class="transition-arrow">→</span><span class="state-current">not systemic</span></span> funding stress</div>
 <p><strong>Classification：</strong><code>fx_funding_stress = Green/Yellow Watch</code>；新增 sub-signal：<strong>sanctions_based_dollar_transmission = Yellow/Orange</strong>。</p>
 <h3>核心主題三｜Crude 變便宜，不等於 refined-product inflation risk 消失</h3>
 <p>俄羅斯 8/29 將 diesel / marine fuel / gas oil export ban 延長至 9/30。這是一個與 Brent 方向相反的重要 counter-evidence：原油價格可因戰爭談判／需求預期下跌，但 refined products 仍可能因煉廠受損、區域供給與出口限制而偏緊。</p>
-<div class="chain">Refinery disruption + export ban
-→ diesel / gasoil availability ↓
-→ freight / trucking / industrial fuel cost ↑
-→ input inflation persistence ↑
-→ headline crude relief does not fully pass through</div>
+<div class="chain">Refinery disruption + <span class="state-transition"><span class="state-prior">export ban</span><span class="transition-arrow">→</span><span class="state-current">diesel</span></span> / gasoil availability <span class="direction direction-down">↓ 下降</span>
+<span class="direction direction-flat">→ 持平</span> freight / trucking / industrial fuel cost <span class="direction direction-up">↑ 上升</span>
+<span class="direction direction-flat">→ 持平</span> input inflation persistence <span class="direction direction-up">↑ 上升</span>
+<span class="direction direction-flat">→ 持平</span> headline crude relief does not fully pass through</div>
 <p>因此 <code>energy_inflation</code> 不應因 Brent &lt;90 就降到 Green；更合理是 Orange / supply-watch。</p>
-</section>
-<section><h2>3. Global Cross-Asset Dashboard</h2>
+</section><section><h2>3. Global Cross-Asset Dashboard</h2>
 <div class="scroll"><table><thead><tr><th>Asset</th><th>Latest tradable state</th><th>24h / Weekend</th><th>Interpretation</th></tr></thead><tbody>
 <tr><td>S&amp;P 500</td><td>7,711.76</td><td>Fri -0.25%</td><td>policy-rate pressure</td></tr>
 <tr><td>Nasdaq</td><td>26,402.42</td><td>Fri -0.52%</td><td>long-duration sensitivity</td></tr>
@@ -513,44 +485,40 @@ no broad cross-currency / swap / repo confirmation yet
 <tr><td>Nvidia</td><td>—</td><td>Fri -4.6%</td><td>post-earnings valuation reset</td></tr>
 <tr><td>US 2Y</td><td>~4.36%</td><td>Fri +~13bp</td><td>Fed repricing strongest</td></tr>
 <tr><td>US 10Y</td><td>~4.73%</td><td>Fri +~6bp</td><td>discount-rate pressure</td></tr>
-<tr><td>US 30Y</td><td>~5.2%</td><td>Fri modest ↑</td><td>structural pressure</td></tr>
+<tr><td>US 30Y</td><td>~5.2%</td><td>Fri modest <span class="direction direction-up">↑ 上升</span></td><td>structural pressure</td></tr>
 <tr><td>DXY</td><td>99.71</td><td>Fri +0.61%</td><td>hawkish-dollar impulse</td></tr>
-<tr><td>USDJPY</td><td>near 160</td><td>Weekend intervention rhetoric ↑</td><td>FX tail risk</td></tr>
-<tr><td>Brent</td><td>$89.31</td><td>Fri slightly ↓; weekend diesel risk ↑</td><td>crude relief, product risk</td></tr>
+<tr><td>USDJPY</td><td>near 160</td><td>Weekend intervention rhetoric <span class="direction direction-up">↑ 上升</span></td><td>FX tail risk</td></tr>
+<tr><td>Brent</td><td>$89.31</td><td>Fri slightly <span class="direction direction-down">↓ 下降</span>; weekend diesel risk <span class="direction direction-up">↑ 上升</span></td><td>crude relief, product risk</td></tr>
 <tr><td>Gold</td><td>Friday sharply lower</td><td>no weekend price</td><td>Warsh reduced hedge demand</td></tr>
 <tr><td>Bitcoin</td><td>~$77.4k Friday</td><td>Fri -3.3%</td><td>liquidity / duration beta</td></tr>
 </tbody></table></div>
-</section>
-<section><h2>4. Liquidity / Fiscal / Treasury Supply</h2>
+</section><section><h2>4. Liquidity / Fiscal / Treasury Supply</h2>
 <div class="scroll"><table><thead><tr><th>Indicator</th><th>Latest</th><th>Status</th><th>判斷</th></tr></thead><tbody>
-<tr><td>Fed reserve balances</td><td>$2.925tn</td><td>-~$10.4bn w/w</td><td>🟢🟡 Stable</td></tr>
-<tr><td>TGA</td><td>$950.7bn</td><td>high / stable</td><td>🟠 liquidity drain but not stress</td></tr>
-<tr><td>Reverse repos</td><td>$362.2bn</td><td>slightly lower</td><td>🟡</td></tr>
-<tr><td>SOFR / EFFR / TGCR / BGCR</td><td>weekend no new print</td><td>latest available orderly</td><td>🟢 / Stable</td></tr>
+<tr><td>Fed reserve balances</td><td>$2.925tn</td><td>-~$10.4bn w/w</td><td><span class="risk risk-green">🟢 Green</span><span class="risk risk-yellow">🟡 Yellow</span> Stable</td></tr>
+<tr><td>TGA</td><td>$950.7bn</td><td>high / stable</td><td><span class="risk risk-orange">🟠 Orange</span> liquidity drain but not stress</td></tr>
+<tr><td>Reverse repos</td><td>$362.2bn</td><td>slightly lower</td><td><span class="risk risk-yellow">🟡 Yellow</span></td></tr>
+<tr><td>SOFR / EFFR / TGCR / BGCR</td><td>weekend no new print</td><td>latest available orderly</td><td><span class="risk risk-green">🟢 Green</span> / Stable</td></tr>
 <tr><td>Cross-currency basis</td><td>unavailable at reliable weekend cutoff</td><td>—</td><td>不猜測</td></tr>
-<tr><td>Treasury supply / term premium</td><td>30Y &gt;5%</td><td>structural</td><td>🟠🔴</td></tr>
+<tr><td>Treasury supply / term premium</td><td>30Y &gt;5%</td><td>structural</td><td><span class="risk risk-orange">🟠 Orange</span><span class="risk risk-red">🔴 Red</span></td></tr>
 </tbody></table></div>
 <p><strong>結論：</strong>沒有 evidence 顯示 repo、reserves 或 central-bank dollar plumbing 失序。銀行美元制裁是局部政策傳導，不應與 broad funding stress 混為一談。</p>
-</section>
-<section><h2>5. Asia &amp; Taiwan Transmission</h2>
+</section><section><h2>5. Asia &amp; Taiwan Transmission</h2>
 <div class="scroll"><table><thead><tr><th>Taiwan</th><th>Latest 8/28</th><th>Signal</th></tr></thead><tbody>
-<tr><td>TAIEX</td><td>46,331.45 (+0.77%)</td><td>🟢 price trend</td></tr>
-<tr><td>Foreign cash 1D</td><td>約 +NT$41.6bn</td><td>🟢</td></tr>
-<tr><td>Foreign cash 5D</td><td>約 +NT$110bn</td><td>🟢 strong improvement</td></tr>
-<tr><td>TAIFEX foreign net OI</td><td>約 -83,655</td><td>🟠 hedge still large, but improved</td></tr>
-<tr><td>USD/TWD</td><td>31.628</td><td>🟢 TWD strengthening</td></tr>
-<tr><td>Breadth</td><td>index strong / advancers lagged decliners</td><td>🟡 concentration warning</td></tr>
+<tr><td>TAIEX</td><td>46,331.45 (+0.77%)</td><td><span class="risk risk-green">🟢 Green</span> price trend</td></tr>
+<tr><td>Foreign cash 1D</td><td>約 +NT$41.6bn</td><td><span class="risk risk-green">🟢 Green</span></td></tr>
+<tr><td>Foreign cash 5D</td><td>約 +NT$110bn</td><td><span class="risk risk-green">🟢 Green</span> strong improvement</td></tr>
+<tr><td>TAIFEX foreign net OI</td><td>約 -83,655</td><td><span class="risk risk-orange">🟠 Orange</span> hedge still large, but improved</td></tr>
+<tr><td>USD/TWD</td><td>31.628</td><td><span class="risk risk-green">🟢 Green</span> TWD strengthening</td></tr>
+<tr><td>Breadth</td><td>index strong / advancers lagged decliners</td><td><span class="risk risk-yellow">🟡 Yellow</span> concentration warning</td></tr>
 </tbody></table></div>
 <p>台灣目前是 <strong>Cash ↑ + TAIEX ↑ + TWD ↑ + Futures short partially covered</strong>。這是 risk-on improvement，但不是全面去避險（De-hedging）。</p>
 <p>亞洲產業面仍偏正向：韓國 8 月出口市場預估維持約 +62.6% YoY，主要由 AI-related memory/chip demand 支撐；因此 <code>asia_export_cycle</code> 與 <code>memory_cycle</code> 目前不降級。</p>
-</section>
-<section><h2>6. Market vs Fundamental Cycle</h2>
+</section><section><h2>6. Market vs Fundamental Cycle</h2>
 <div class="card"><h3>AI / Semiconductor Market Cycle：🟡🟠</h3><p>Warsh 後 Nvidia、Nasdaq、Russell 2000 走弱，表示高估值資產重新受到短端利率上行影響。這是 valuation / positioning deterioration，而非需求反轉。</p></div>
 <div class="card"><h3>AI Fundamental Cycle：🟢🟢 Strong / Confirmed</h3><p>Nvidia revenue / Data Center / guidance 仍是強力確認；週末沒有新的 hyperscaler CapEx cuts、TSMC utilization cuts 或 order cancellation evidence。</p></div>
 <div class="card"><h3>Memory Cycle：🟢 Strong</h3><p>Korea export expectations 與中國 memory 廠商供需 commentary 仍支持 memory tightness；未見可靠新資料支持 HBM / DRAM cycle reversal。</p></div>
 <p><strong>核心區分：</strong>今天的新增風險主要在政策折現率（Policy Discount Rate）、美元制裁與能源產品供應，不在 AI orders / sales / CapEx。</p>
-</section>
-<section><h2>7. Scenario Matrix</h2>
+</section><section><h2>7. Scenario Matrix</h2>
 <div class="scroll"><table><thead><tr><th>Scenario</th><th>Probability</th><th>Trigger</th><th>Implication</th></tr></thead><tbody>
 <tr><td>Base</td><td>48%</td><td>Sep hike odds 40–70%、30Y 5.0–5.5%、AI EPS 強</td><td>earnings strong / multiple volatile</td></tr>
 <tr><td>Bull</td><td>18%</td><td>Aug CPI/jobs 降溫、2Y &lt;4.2%、Hormuz / diesel risk easing</td><td>AI + broad market re-rating</td></tr>
@@ -558,23 +526,21 @@ no broad cross-currency / swap / repo confirmation yet
 <tr><td>Tail Risk</td><td>6%</td><td>sanctions contagion + FX intervention disorder + credit/funding stress</td><td>cross-market deleveraging</td></tr>
 </tbody></table></div>
 <p class="small">ESTIMATE｜以上為研究情境機率，不是市場 implied probability。</p>
-</section>
-<section><h2>8. Risk Lights</h2>
+</section><section><h2>8. Risk Lights</h2>
 <div class="scroll"><table><thead><tr><th>Risk</th><th>Light</th><th>24h Delta</th><th>Comment</th></tr></thead><tbody>
-<tr><td>Global</td><td>🟠</td><td>→</td><td>policy + sanctions tail risk</td></tr>
-<tr><td>Growth</td><td>🟢🟡</td><td>→</td><td>resilient, household pockets weaker</td></tr>
-<tr><td>Inflation</td><td>🟠🔴</td><td>→</td><td>PCE sticky; diesel supply counter-risk</td></tr>
-<tr><td>Rates</td><td>🔴</td><td>→ high</td><td>2Y shock remains latest anchor</td></tr>
-<tr><td>Liquidity</td><td>🟢🟡</td><td>→</td><td>plumbing stable</td></tr>
-<tr><td>Credit</td><td>🟡</td><td>→</td><td>no disorder confirmation</td></tr>
-<tr><td>FX</td><td>🟠</td><td>↑</td><td>USD firm; yen intervention risk</td></tr>
-<tr><td>Commodities</td><td>🟠</td><td>↑ supply risk</td><td>Russia diesel ban offsets crude relief</td></tr>
-<tr><td>Taiwan Equity</td><td>🟡</td><td>↓ risk</td><td>cash / TWD positive, breadth mixed</td></tr>
-<tr><td>Industry Cycle</td><td>🟢</td><td>→</td><td>AI / memory fundamentals strong</td></tr>
-<tr><td>Gold–Treasury Divergence</td><td>🟡</td><td>↓</td><td>gold fell as USD/yields rose</td></tr>
+<tr><td>Global</td><td><span class="risk risk-orange">🟠 Orange</span></td><td><span class="direction direction-flat">→ 持平</span></td><td>policy + sanctions tail risk</td></tr>
+<tr><td>Growth</td><td><span class="risk risk-green">🟢 Green</span><span class="risk risk-yellow">🟡 Yellow</span></td><td><span class="direction direction-flat">→ 持平</span></td><td>resilient, household pockets weaker</td></tr>
+<tr><td>Inflation</td><td><span class="risk risk-orange">🟠 Orange</span><span class="risk risk-red">🔴 Red</span></td><td><span class="direction direction-flat">→ 持平</span></td><td>PCE sticky; diesel supply counter-risk</td></tr>
+<tr><td>Rates</td><td><span class="risk risk-red">🔴 Red</span></td><td><span class="direction direction-flat">→ 持平</span> high</td><td>2Y shock remains latest anchor</td></tr>
+<tr><td>Liquidity</td><td><span class="risk risk-green">🟢 Green</span><span class="risk risk-yellow">🟡 Yellow</span></td><td><span class="direction direction-flat">→ 持平</span></td><td>plumbing stable</td></tr>
+<tr><td>Credit</td><td><span class="risk risk-yellow">🟡 Yellow</span></td><td><span class="direction direction-flat">→ 持平</span></td><td>no disorder confirmation</td></tr>
+<tr><td>FX</td><td><span class="risk risk-orange">🟠 Orange</span></td><td><span class="direction direction-up">↑ 上升</span></td><td>USD firm; yen intervention risk</td></tr>
+<tr><td>Commodities</td><td><span class="risk risk-orange">🟠 Orange</span></td><td><span class="direction direction-up">↑ 上升</span> supply risk</td><td>Russia diesel ban offsets crude relief</td></tr>
+<tr><td>Taiwan Equity</td><td><span class="risk risk-yellow">🟡 Yellow</span></td><td><span class="direction direction-down">↓ 下降</span> risk</td><td>cash / TWD positive, breadth mixed</td></tr>
+<tr><td>Industry Cycle</td><td><span class="risk risk-green">🟢 Green</span></td><td><span class="direction direction-flat">→ 持平</span></td><td>AI / memory fundamentals strong</td></tr>
+<tr><td>Gold–Treasury Divergence</td><td><span class="risk risk-yellow">🟡 Yellow</span></td><td><span class="direction direction-down">↓ 下降</span></td><td>gold fell as USD/yields rose</td></tr>
 </tbody></table></div>
-</section>
-<section><h2>9. 今日 Watchlist</h2>
+</section><section><h2>9. 今日 Watchlist</h2>
 <div class="scroll"><table><thead><tr><th>Indicator</th><th>Current / Status</th><th>下一門檻</th><th>觸發意義</th></tr></thead><tbody>
 <tr><td>Sep Fed hike probability</td><td>~56–60%</td><td>&gt;70%</td><td>policy shock intensifies</td></tr>
 <tr><td>US 2Y</td><td>~4.36%</td><td>&gt;4.50%</td><td>tightening repricing confirmation</td></tr>
@@ -592,26 +558,18 @@ no broad cross-currency / swap / repo confirmation yet
 <tr><td>TX foreign net OI</td><td>~ -83,655</td><td>&lt;-90k / &gt;-70k</td><td>hedge escalation / de-hedging</td></tr>
 <tr><td>USD/TWD</td><td>31.628</td><td>rapid &gt;32.2</td><td>Taiwan FX stress</td></tr>
 </tbody></table></div>
-</section>
-<section><h2>Bottom Line</h2>
+</section><section><h2>Bottom Line</h2>
 <div class="callout orange"><strong>今天需要提高對 FX / sanctions / refined-products 的監控，但不需要改變 1–2 季 AI / semiconductor fundamental thesis。</strong></div>
 <p>週末沒有新的 market close，所以不能把週末事件直接寫成「市場已確認」。目前真正已確認的市場 regime 仍是 Warsh 觸發的短端利率重定價；週末新增的三條鏈則是下一個交易日最重要的 pending confirmation：</p>
-<div class="chain">1) Specific-bank USD sanctions → regional settlement friction
-2) Russia diesel export ban → refined-product inflation risk
-3) USDJPY ~160 + Bessent warning → intervention / carry unwind risk</div>
+<div class="chain">1) Specific-bank <span class="state-transition"><span class="state-prior">USD sanctions</span><span class="transition-arrow">→</span><span class="state-current">regional settlement</span></span> friction
+2) Russia diesel <span class="state-transition"><span class="state-prior">export ban</span><span class="transition-arrow">→</span><span class="state-current">refined-product inflation</span></span> risk
+3) USDJPY ~160 + <span class="state-transition"><span class="state-prior">Bessent warning</span><span class="transition-arrow">→</span><span class="state-current">intervention</span></span> / carry unwind risk</div>
 <p>若下週開盤看到 <strong>DXY ↑ + USDJPY disorder + IG/HY spreads ↑ + SOFR/basis stress</strong>，才有理由把 FX risk 升級成真正的 funding risk；目前沒有這個證據。</p>
 <p>AI / Taiwan 部分則仍是另一套邏輯：<strong>fundamentals strong、valuation sensitive</strong>。Nvidia 財報與亞洲晶片出口仍支持需求，但 Warsh 把估值上限重新交回 Fed。台灣 8/28 的外資現貨、TAIEX、TWD 與期貨回補方向改善，因此目前不應用美國科技股單日回檔推論台灣基本面反轉。</p>
 <p><strong>今日核心監控鏈：</strong></p>
-<div class="chain">Fed pricing / US2Y
-→ DXY / USDJPY
-→ Iran sanctions banking channel
-→ Brent / diesel / freight
-→ Credit &amp; funding confirmation
-→ Nvidia / SOX
-→ TSMC / Taiwan flows
-→ USD/TWD</div>
-</section>
-<section><h2>資料來源（Selected Sources）</h2><ul>
+<div class="chain">Fed pricing / <span class="state-transition"><span class="state-prior">US2Y</span><span class="transition-arrow">→</span><span class="state-current">DXY</span></span> / <span class="state-transition"><span class="state-prior">USDJPY</span><span class="transition-arrow">→</span><span class="state-current">Iran sanctions</span></span> <span class="state-transition"><span class="state-prior">banking channel</span><span class="transition-arrow">→</span><span class="state-current">Brent</span></span> / diesel / <span class="state-transition"><span class="state-prior">freight</span><span class="transition-arrow">→</span><span class="state-current">Credit</span></span> &amp; <span class="state-transition"><span class="state-prior">funding confirmation</span><span class="transition-arrow">→</span><span class="state-current">Nvidia</span></span> / <span class="state-transition"><span class="state-prior">SOX</span><span class="transition-arrow">→</span><span class="state-current">TSMC</span></span> / Taiwan flows
+<span class="direction direction-flat">→ 持平</span> USD/TWD</div>
+</section><section><h2>資料來源（Selected Sources）</h2><ul>
 <li><a href="https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm">Federal Reserve — Chairman Kevin Warsh, Jackson Hole keynote, 2026-08-28</a></li>
 <li><a href="https://www.federalreserve.gov/releases/h41/current/">Federal Reserve — H.4.1, 2026-08-27</a></li>
 <li><a href="https://www.reuters.com/world/china/global-markets-global-markets-2026-08-28/">Reuters — Global markets after Warsh speech, 2026-08-28</a></li>
@@ -620,6 +578,11 @@ no broad cross-currency / swap / repo confirmation yet
 <li><a href="https://www.reuters.com/world/middle-east/egypts-banque-misr-reviews-us-iran-sanctions-notice-uae-central-bank-launches-2026-08-29/">Reuters — Banque Misr / Iran sanctions / UAE review, 2026-08-29</a></li>
 <li><a href="https://www.reuters.com/business/finance/bessent-says-disorderly-yen-moves-can-destabilize-global-markets-2026-08-29/">Reuters — Bessent on yen disorder and intervention risk, 2026-08-29</a></li>
 <li><a href="https://www.cbc.gov.tw/en/lp-700-2-1-20.html">Central Bank of the Republic of China — NT$/US$ Closing Rate</a></li>
-</ul></section>
-<footer>Global Macro Morning · 2026/08/30 · Daily State Snapshot · Single-file self-contained HTML</footer>
-</main></body></html>
+</ul></section><footer>Global Macro Morning · 2026/08/30 · Daily State Snapshot · Single-file self-contained HTML</footer>
+</main>
+<footer>
+  Global Macro Signal Report · Archive · Generated Deterministically
+</footer>
+</div>
+</body>
+</html>

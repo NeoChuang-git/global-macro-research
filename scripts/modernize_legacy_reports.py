@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """
-Modernize legacy HTML reports to match the new institutional design system.
-Replaces legacy inline <style> tags with the unified design system stylesheet,
-wraps unwrapped <table> elements in <div class="table-scroll">, and re-indexes reports.json.
+Comprehensive Modernizer and Content Beautifier for Legacy Global Macro Reports.
+Normalizes structure, hero headers, table scrolling, semantic direction badges,
+risk lights, state transition chips, and embeds the unified institutional design system.
 """
 
 import hashlib
+import html
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -15,12 +17,16 @@ if str(repo_root) not in sys.path:
     sys.path.insert(0, str(repo_root))
 
 from bs4 import BeautifulSoup
-from scripts.markdown_renderer import get_embedded_css
+from scripts.markdown_renderer import (
+    get_embedded_css,
+    _enrich_text_html,
+    _process_element_contents,
+)
 from scripts.sync_drive import build_reports_index, _atomic_write_if_changed, _hash_file
 
-# Enhanced institutional stylesheet covering modern markdown classes + all legacy report classes
-LEGACY_UNIFIED_CSS = get_embedded_css() + """
-/* Legacy Report Compatibility Classes */
+# Enhanced institutional stylesheet with legacy compatibility
+UNIFIED_CSS = get_embedded_css() + """
+/* Legacy Card & Layout Compatibility */
 main {
   max-width: 1240px;
   margin: 0 auto;
@@ -30,42 +36,20 @@ main {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 22px 26px;
-  margin: 20px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.hero {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
   padding: 24px 28px;
-  margin-bottom: 24px;
+  margin: 24px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.hero h1 {
-  margin: 0 0 12px;
-  font-size: 1.85rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.28;
-}
-
-.hero p {
-  margin: 0;
-  color: var(--text-secondary);
-  font-size: 1.05rem;
 }
 
 .callout, .note {
   background: var(--accent-glow);
   border-left: 4px solid var(--accent);
   border-radius: 0 8px 8px 0;
-  padding: 14px 18px;
-  margin: 16px 0;
+  padding: 16px 20px;
+  margin: 18px 0;
   color: var(--text-primary);
   font-size: 0.98rem;
+  line-height: 1.68;
 }
 
 .chain, .node {
@@ -73,7 +57,7 @@ main {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 16px 20px;
-  margin: 16px 0;
+  margin: 18px 0;
   font-weight: 600;
   text-align: center;
   color: var(--text-primary);
@@ -132,28 +116,80 @@ main {
 """
 
 
-def modernize_html_file(file_path: Path) -> bool:
-    """Modernize a single legacy HTML file with the unified stylesheet and table scrolling."""
-    # Skip new markdown-rendered reports
+def detect_report_type_badge(category: str, filename: str) -> str:
+    if category == "early-warning" or "early_warning" in filename.lower() or "risk" in filename.lower():
+        return "MACRO_TAIWAN_EARLY_WARNING"
+    elif category == "weekly" or "weekly" in filename.lower():
+        return "WEEKLY_STRATEGY"
+    return "GLOBAL_DAILY_BRIEF"
+
+
+def detect_risk_light(text: str) -> str:
+    upper = text.upper()
+    if "🔴" in text or "RISK: RED" in upper or "RED LIGHT" in upper or "AGGREGATE RISK: RED" in upper:
+        return '<span class="badge risk-red">🔴 Risk: RED</span>'
+    elif "🟠" in text or "RISK: ORANGE" in upper or "ORANGE LIGHT" in upper or "AGGREGATE RISK: ORANGE" in upper or "ORANGE" in upper:
+        return '<span class="badge risk-orange">🟠 Risk: ORANGE</span>'
+    elif "🟡" in text or "RISK: YELLOW" in upper or "YELLOW LIGHT" in upper or "YELLOW" in upper:
+        return '<span class="badge risk-yellow">🟡 Risk: YELLOW</span>'
+    elif "🟢" in text or "RISK: GREEN" in upper or "GREEN LIGHT" in upper or "GREEN" in upper:
+        return '<span class="badge risk-green">🟢 Risk: GREEN</span>'
+    return '<span class="badge risk-yellow">🟡 Risk: YELLOW</span>'
+
+
+def extract_clean_title(soup: BeautifulSoup, filename: str) -> str:
+    # 1. Try finding first H1
+    h1 = soup.find("h1")
+    if h1:
+        text = h1.get_text(strip=True)
+        if text:
+            # Clean up common prefixes like "Global Macro Early Warning｜"
+            cleaned = re.sub(r"^Global Macro (?:Early Warning|Daily Brief|Morning|Weekly Strategy)\s*[｜|—–-]\s*", "", text)
+            return cleaned or text
+
+    # 2. Try title tag
+    if soup.title and soup.title.string:
+        text = soup.title.string.strip()
+        cleaned = re.sub(r"^Global Macro (?:Early Warning|Daily Brief|Morning|Weekly Strategy)\s*[｜|—–-]\s*", "", text)
+        return cleaned or text
+
+    # 3. Fallback to filename
+    name = Path(filename).stem
+    name = re.sub(r"^(?:Global_Macro_|Global_Daily_Brief_|Weekly_Strategy_)", "", name)
+    name = re.sub(r"_\d{4}-\d{2}-\d{2}(?:_\w+)?", "", name)
+    return name.replace("_", " ").title()
+
+
+def beautify_legacy_report(file_path: Path, category: str) -> bool:
     raw_content = file_path.read_text(encoding="utf-8")
-    if "report-container" in raw_content and "hero-header" in raw_content:
+    
+    # Skip reports already generated by new markdown renderer
+    if "<!-- canonical-markdown-rendered -->" in raw_content or (
+        "hero-header" in raw_content and "report-container" in raw_content and "report_type" in raw_content
+    ):
         return False
 
     soup = BeautifulSoup(raw_content, "html.parser")
 
-    # 1. Update or inject <style> tag
-    style_tag = soup.find("style")
-    if style_tag:
-        style_tag.string = LEGACY_UNIFIED_CSS
-    else:
-        new_style = soup.new_tag("style")
-        new_style.string = LEGACY_UNIFIED_CSS
-        if soup.head:
-            soup.head.append(new_style)
-        else:
-            soup.insert(0, new_style)
+    # 1. Extract metadata
+    filename = file_path.name
+    report_type = detect_report_type_badge(category, filename)
+    clean_title = extract_clean_title(soup, filename)
+    risk_badge = detect_risk_light(soup.get_text())
 
-    # 2. Wrap all tables in <div class="table-scroll"> if not already wrapped
+    # 2. Remove legacy header/hero elements to avoid duplicate headers
+    for old_hero in list(soup.find_all(["section", "div", "header"], class_=["hero", "header", "site-header"])):
+        old_hero.decompose()
+    for h in list(soup.find_all("h1")):
+        h.decompose()
+
+    # 3. Apply semantic enrichment across all text nodes (Directions, Risk lights, Transitions, Grades)
+    for el in soup.find_all(["td", "th", "p", "li", "div", "span", "blockquote"]):
+        if el.find(["table", "pre"]):
+            continue
+        _process_element_contents(soup, el)
+
+    # 4. Wrap all tables in <div class="table-scroll">
     for table in soup.find_all("table"):
         parent = table.parent
         if parent and parent.name == "div" and any(c in parent.get("class", []) for c in ["table-scroll", "table-wrap", "scroll"]):
@@ -161,23 +197,70 @@ def modernize_html_file(file_path: Path) -> bool:
         wrapper = soup.new_tag("div", attrs={"class": "table-scroll"})
         table.wrap(wrapper)
 
-    # 3. Write back modernized HTML
-    modernized_html = str(soup)
-    file_path.write_text(modernized_html, encoding="utf-8")
+    # 5. Extract main body content
+    main_el = soup.find("main")
+    if main_el:
+        body_content = "".join(str(c) for c in main_el.contents if str(c).strip())
+    elif soup.body:
+        body_content = "".join(str(c) for c in soup.body.contents if str(c).strip())
+    else:
+        body_content = str(soup)
+
+    # 6. Build modernized HTML document
+    hero_header_html = f"""<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">{html.escape(report_type)}</span>
+      {risk_badge}
+    </div>
+  </div>
+  <h1 class="hero-title">{html.escape(clean_title)}</h1>
+</header>"""
+
+    document_html = f"""<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{html.escape(clean_title)} · Global Macro Signal Report</title>
+<style>
+{UNIFIED_CSS}
+</style>
+</head>
+<body>
+<div class="report-container">
+{hero_header_html}
+<main class="report-content">
+{body_content}
+</main>
+<footer>
+  Global Macro Signal Report · Archive · Generated Deterministically
+</footer>
+</div>
+</body>
+</html>
+"""
+
+    file_path.write_text(document_html, encoding="utf-8")
     return True
 
 
 def main():
-    repo_root = Path(__file__).resolve().parent.parent
     reports_dir = repo_root / "reports"
     updated_count = 0
 
-    for html_file in sorted(reports_dir.glob("**/*.html")):
-        if modernize_html_file(html_file):
-            updated_count += 1
-            print(f"Modernized: {html_file.relative_to(repo_root)}")
+    for cat_dir in ["early-warning", "daily", "weekly"]:
+        target_dir = reports_dir / cat_dir
+        if not target_dir.exists():
+            continue
+        for html_file in sorted(target_dir.glob("**/*.html")):
+            if html_file.name == "Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.html":
+                continue
+            if beautify_legacy_report(html_file, cat_dir):
+                updated_count += 1
+                print(f"Beautified: {html_file.relative_to(repo_root)}")
 
-    print(f"\nTotal modernized files: {updated_count}")
+    print(f"\nTotal beautified legacy reports: {updated_count}")
 
     # Rebuild reports.json index with updated sha256 checksums
     state_file = repo_root / "data/drive-sync-state.json"
