@@ -273,10 +273,16 @@ def _enrich_text_html(text: str, is_table_cell: bool = False) -> str:
     )
 
     # 4. Risk Lights (Emoji)
-    escaped = re.sub(r"🟢(?:\s*Green)?", lambda _: _token('<span class="risk risk-green">🟢 Green</span>'), escaped)
-    escaped = re.sub(r"🟡(?:\s*Yellow)?", lambda _: _token('<span class="risk risk-yellow">🟡 Yellow</span>'), escaped)
-    escaped = re.sub(r"🟠(?:\s*Orange)?", lambda _: _token('<span class="risk risk-orange">🟠 Orange</span>'), escaped)
-    escaped = re.sub(r"🔴(?:\s*Red)?", lambda _: _token('<span class="risk risk-red">🔴 Red</span>'), escaped)
+    if is_table_cell:
+        escaped = re.sub(r"🟢(?:\s*Green)?", lambda _: _token('<span class="risk risk-green">🟢</span>'), escaped)
+        escaped = re.sub(r"🟡(?:\s*Yellow)?", lambda _: _token('<span class="risk risk-yellow">🟡</span>'), escaped)
+        escaped = re.sub(r"🟠(?:\s*Orange)?", lambda _: _token('<span class="risk risk-orange">🟠</span>'), escaped)
+        escaped = re.sub(r"🔴(?:\s*Red)?", lambda _: _token('<span class="risk risk-red">🔴</span>'), escaped)
+    else:
+        escaped = re.sub(r"🟢(?:\s*Green)?", lambda _: _token('<span class="risk risk-green">🟢 Green</span>'), escaped)
+        escaped = re.sub(r"🟡(?:\s*Yellow)?", lambda _: _token('<span class="risk risk-yellow">🟡 Yellow</span>'), escaped)
+        escaped = re.sub(r"🟠(?:\s*Orange)?", lambda _: _token('<span class="risk risk-orange">🟠 Orange</span>'), escaped)
+        escaped = re.sub(r"🔴(?:\s*Red)?", lambda _: _token('<span class="risk risk-red">🔴 Red</span>'), escaped)
 
     # 5. Risk Lights following "Risk Light:" or "Risk:"
     def _replace_named_risk_light(m):
@@ -293,13 +299,13 @@ def _enrich_text_html(text: str, is_table_cell: bool = False) -> str:
         escaped,
     )
 
-    # 6. Standalone uppercase risk light words in table cells (e.g. "ORANGE", "YELLOW", "RED", "GREEN")
+    # 6. Standalone uppercase risk light words in table cells (e.g. "ORANGE", "YELLOW", "RED", "GREEN") -> icon only
     if is_table_cell:
         def _replace_cell_risk_word(m):
             w = m.group(1)
             icon = "🟢" if w == "GREEN" else "🟡" if w == "YELLOW" else "🟠" if w == "ORANGE" else "🔴"
             cls = f"risk-{w.lower()}"
-            return _token(f'<span class="risk {cls}">{icon} {w}</span>')
+            return _token(f'<span class="risk {cls}">{icon}</span>')
 
         escaped = re.sub(r"^\s*(GREEN|YELLOW|ORANGE|RED)\s*$", _replace_cell_risk_word, escaped)
 
