@@ -306,6 +306,33 @@
       "sha256": "67178b6b305157eaa30eb34a70285bd53a01d62a8f36b5866bd7cb731ac22aad",
       "size": 2047
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_1950_hormuz_physical_flow_disruption.html": {
+      "category": "early-warning",
+      "drive_file_id": "163niLKNcLFBLWrZcItNKNISyjUMYQEX9",
+      "md5_checksum": "3f159fc0d92fc35d2457dbcf0a1f0cac",
+      "modified_time": "2026-09-02T12:36:54.673Z",
+      "name": "Global_Macro_Early_Warning_2026-09-02_1950_hormuz_physical_flow_disruption.html",
+      "sha256": "58b9ccc143257fb2f7a4b0680deef5b3dc1712411c749de026cae5131878e8d7",
+      "size": 3525
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_2101_lng_supply_chain_escalation.html": {
+      "category": "early-warning",
+      "drive_file_id": "1iQYhrpws95_V1SukNgpvgtFC4s5yHwza",
+      "md5_checksum": "52c87fccc614cf2e625b92ac9af62621",
+      "modified_time": "2026-09-02T13:06:02.183Z",
+      "name": "Global_Macro_Early_Warning_2026-09-02_2101_lng_supply_chain_escalation.html",
+      "sha256": "5ba182d1e2f9f1eb2f138a03e2e2802c91afdfb33fcabbfd1b972ef9bdf200be",
+      "size": 11534
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_2332_labor_cooling_policy_bind.html": {
+      "category": "early-warning",
+      "drive_file_id": "1HBTmDbzILhGkmFlh2ljQrEAIxe9hU4nv",
+      "md5_checksum": "2ac61b5be325dfdf303b969a10c3daca",
+      "modified_time": "2026-09-02T15:33:47.430Z",
+      "name": "Global_Macro_Early_Warning_2026-09-02_2332_labor_cooling_policy_bind.html",
+      "sha256": "57ec6c7cfa24f82487d2a66cea8b9d9d18a8966d28ff1ba6abc3682392d92438",
+      "size": 6221
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",

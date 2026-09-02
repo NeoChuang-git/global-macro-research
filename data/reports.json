@@ -11,10 +11,10 @@
     "early-warning": {
       "category": "early-warning",
       "date": "2026-09-02",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_1009_taiwan_transmission_confirmation.html",
-      "modified_time": "2026-09-02T02:16:54.049Z",
-      "sha256": "67178b6b305157eaa30eb34a70285bd53a01d62a8f36b5866bd7cb731ac22aad",
-      "title": "Global Macro Early Warning 1009 taiwan transmission confirmation"
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_2332_labor_cooling_policy_bind.html",
+      "modified_time": "2026-09-02T15:33:47.430Z",
+      "sha256": "57ec6c7cfa24f82487d2a66cea8b9d9d18a8966d28ff1ba6abc3682392d92438",
+      "title": "Global Macro Early Warning 2332 labor cooling policy bind"
     },
     "weekly": {
       "category": "weekly",
@@ -26,6 +26,30 @@
     }
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-09-02",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_2332_labor_cooling_policy_bind.html",
+      "modified_time": "2026-09-02T15:33:47.430Z",
+      "sha256": "57ec6c7cfa24f82487d2a66cea8b9d9d18a8966d28ff1ba6abc3682392d92438",
+      "title": "Global Macro Early Warning 2332 labor cooling policy bind"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-09-02",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_2101_lng_supply_chain_escalation.html",
+      "modified_time": "2026-09-02T13:06:02.183Z",
+      "sha256": "5ba182d1e2f9f1eb2f138a03e2e2802c91afdfb33fcabbfd1b972ef9bdf200be",
+      "title": "Global Macro Early Warning 2101 lng supply chain escalation"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-09-02",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_1950_hormuz_physical_flow_disruption.html",
+      "modified_time": "2026-09-02T12:36:54.673Z",
+      "sha256": "58b9ccc143257fb2f7a4b0680deef5b3dc1712411c749de026cae5131878e8d7",
+      "title": "Global Macro Early Warning 1950 hormuz physical flow disruption"
+    },
     {
       "category": "daily",
       "date": "2026-09-02",
