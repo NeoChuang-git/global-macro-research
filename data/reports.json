@@ -1,33 +1,79 @@
 {
-  "schema_version": 1,
+  "latest": {
+    "daily": {
+      "category": "daily",
+      "date": "2026-09-03",
+      "file": "reports/daily/Global_Daily_Brief_2026-09-03_0048_dell_ai_server_demand.html",
+      "modified_time": null,
+      "sha256": "ce5e24cdcb671bb3308cb92ed8608cccc5d8cd870701981fb27e2506640ce7c8",
+      "title": "Global Daily Brief 0048 dell ai server demand"
+    },
+    "early-warning": {
+      "category": "early-warning",
+      "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
+      "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
+      "date": "2026-09-03",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.html",
+      "generated_at_taipei": "2026-09-03 00:03:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.html",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.md",
+      "markdown_sha256": "0b5fdbbb8c39c6cd38d5de9eced95db7165400b15f498b03937d753ff549c47b",
+      "modified_time": "2026-09-03 00:03:00+08:00",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MEW-20260903-0003-LRD",
+      "sha256": "ac2201a8b7c2472c7e50395f781780527f47d750a34841f440885986eb1cb511",
+      "slug": "labor_rates_divergence",
+      "source_document_id": "1OudDZrY4Xdk3IKAtT-xvvUBwvkotU08ZwO6b-9OjRyk",
+      "source_kind": "google_doc_markdown",
+      "title": "Global Macro Early Warning — Labor & Rates Divergence",
+      "topic": null
+    },
+    "weekly": {
+      "category": "weekly",
+      "date": "2026-08-30",
+      "file": "reports/weekly/Weekly_Strategy_2026-08-30_rerun_1421.html",
+      "modified_time": "2026-08-30T06:23:50.989Z",
+      "sha256": "caa7b5491f8b4405fefaf90f1c17db8e7598701cf9690f77036d83c7b25439ce",
+      "title": "Weekly Strategy rerun 1421"
+    }
+  },
   "reports": [
     {
       "category": "early-warning",
+      "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
+      "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
       "date": "2026-09-03",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.html",
-      "modified_time": "2026-09-03 00:03:00+08:00",
-      "sha256": "8d2b695993452482f8c9b6b67b26f5458cd2e9d9243ec5326af24832f25ed2a3",
-      "title": "Global Macro Early Warning — Labor & Rates Divergence",
-      "run_id": "MEW-20260903-0003-LRD",
-      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
-      "source_kind": "google_doc_markdown",
-      "source_document_id": "1OudDZrY4Xdk3IKAtT-xvvUBwvkotU08ZwO6b-9OjRyk",
       "generated_at_taipei": "2026-09-03 00:03:00+08:00",
-      "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
-      "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
-      "risk_light": "ORANGE",
-      "topic": null,
-      "slug": "labor_rates_divergence",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.html",
       "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.md",
       "markdown_sha256": "0b5fdbbb8c39c6cd38d5de9eced95db7165400b15f498b03937d753ff549c47b",
-      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.html"
+      "modified_time": "2026-09-03 00:03:00+08:00",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MEW-20260903-0003-LRD",
+      "sha256": "ac2201a8b7c2472c7e50395f781780527f47d750a34841f440885986eb1cb511",
+      "slug": "labor_rates_divergence",
+      "source_document_id": "1OudDZrY4Xdk3IKAtT-xvvUBwvkotU08ZwO6b-9OjRyk",
+      "source_kind": "google_doc_markdown",
+      "title": "Global Macro Early Warning — Labor & Rates Divergence",
+      "topic": null
+    },
+    {
+      "category": "daily",
+      "date": "2026-09-03",
+      "file": "reports/daily/Global_Daily_Brief_2026-09-03_0048_dell_ai_server_demand.html",
+      "modified_time": null,
+      "sha256": "ce5e24cdcb671bb3308cb92ed8608cccc5d8cd870701981fb27e2506640ce7c8",
+      "title": "Global Daily Brief 0048 dell ai server demand"
     },
     {
       "category": "early-warning",
       "date": "2026-09-02",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_2332_labor_cooling_policy_bind.html",
       "modified_time": "2026-09-02T15:33:47.430Z",
-      "sha256": "8be2f41998a9d49e0b85825d49fee0deee0347efa305df1bc19af14049b4e791",
+      "sha256": "57ec6c7cfa24f82487d2a66cea8b9d9d18a8966d28ff1ba6abc3682392d92438",
       "title": "Global Macro Early Warning 2332 labor cooling policy bind"
     },
     {
@@ -35,7 +81,7 @@
       "date": "2026-09-02",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_2101_lng_supply_chain_escalation.html",
       "modified_time": "2026-09-02T13:06:02.183Z",
-      "sha256": "0eaefdeced9512d5fbe91c952912978e490d1e5df83c7c66af28e8a46925b91c",
+      "sha256": "5ba182d1e2f9f1eb2f138a03e2e2802c91afdfb33fcabbfd1b972ef9bdf200be",
       "title": "Global Macro Early Warning 2101 lng supply chain escalation"
     },
     {
@@ -43,7 +89,7 @@
       "date": "2026-09-02",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_1950_hormuz_physical_flow_disruption.html",
       "modified_time": "2026-09-02T12:36:54.673Z",
-      "sha256": "b1711946e13edf53e2339e3b74d6be333401c27e63af1b5fe9dc0b71a3d24ec2",
+      "sha256": "58b9ccc143257fb2f7a4b0680deef5b3dc1712411c749de026cae5131878e8d7",
       "title": "Global Macro Early Warning 1950 hormuz physical flow disruption"
     },
     {
@@ -51,7 +97,7 @@
       "date": "2026-09-02",
       "file": "reports/daily/Global_Daily_Brief_2026-09-02_rerun_1308.html",
       "modified_time": "2026-09-02T05:10:08.471Z",
-      "sha256": "b00ef230583af2cd7c48a6dd40958a39e1fb8d3c2e9bdfe5840a16d1f58e48f0",
+      "sha256": "4cb24ade06488892126470eacdfdbc381876df04982f15759190937e9c1b748a",
       "title": "Global Daily Brief rerun 1308"
     },
     {
@@ -59,7 +105,7 @@
       "date": "2026-09-02",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_1009_taiwan_transmission_confirmation.html",
       "modified_time": "2026-09-02T02:16:54.049Z",
-      "sha256": "faa15abe1e717eb24cc2354c6a358c452c43f4b86663c486c6571df02ad91719",
+      "sha256": "67178b6b305157eaa30eb34a70285bd53a01d62a8f36b5866bd7cb731ac22aad",
       "title": "Global Macro Early Warning 1009 taiwan transmission confirmation"
     },
     {
@@ -67,7 +113,7 @@
       "date": "2026-09-02",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0901_asia_riskoff_transmission.html",
       "modified_time": "2026-09-02T02:16:32.358Z",
-      "sha256": "be58cbdcf1ba7af71348b2373344d496de168a503ab65e2c10c6157142fb760c",
+      "sha256": "099f248e6072bd76db15e7187977d4f2ef70ce9120a96beafaf7eb5d3af38baa",
       "title": "Global Macro Early Warning 0901 asia riskoff transmission"
     },
     {
@@ -75,7 +121,7 @@
       "date": "2026-09-02",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0506_korea_chip_export_fundamental_confirmation.html",
       "modified_time": "2026-09-02T02:16:14.363Z",
-      "sha256": "c2689a2c515ff75e633f6f12acc446ef974b899a6acd4d799ec14d0d1203c5d1",
+      "sha256": "ecd688e51c0e9f9a345a00fb6501c37e67b742f769c66f568e6c2d2006e806f5",
       "title": "Global Macro Early Warning 0506 korea chip export fundamental confirmation"
     },
     {
@@ -83,7 +129,7 @@
       "date": "2026-09-02",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0206_energy_semi_risk_broadening.html",
       "modified_time": "2026-09-02T02:15:58.423Z",
-      "sha256": "b27bafdde400482e8796332f705950ed934eef2fa2c4d3f4f559e9431af91fbd",
+      "sha256": "4187d8cfe0fd8590aca2185f0c47607e37f460223d46c29cfd4fedb06c9e74e3",
       "title": "Global Macro Early Warning 0206 energy semi risk broadening"
     },
     {
@@ -91,7 +137,7 @@
       "date": "2026-09-02",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0355_energy_inflation_close_confirmation.html",
       "modified_time": "2026-09-01T19:57:19.970Z",
-      "sha256": "1757453ec8bcc63d40b5eb0b889bbca59e899c698e99759ad4bebb1c53f067bf",
+      "sha256": "d45a49d2aeb444772ebc828ea47988b6531fe54cb45b47a9ed8fb5afe4b49d9b",
       "title": "Global Macro Early Warning 0355 energy inflation close confirmation"
     },
     {
@@ -99,7 +145,7 @@
       "date": "2026-09-02",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-02_0054_us_close_rates_confirmation.html",
       "modified_time": "2026-09-01T17:11:11.807Z",
-      "sha256": "c4fbc9c3d7d15c5d2ee81103806bc95988df9929022d6863f53b6c0292e65339",
+      "sha256": "2f0c0ad6106a68d647d2a8326f9be7e545726adf74387d18e974b14fd8304f68",
       "title": "Global Macro Early Warning 0054 us close rates confirmation"
     },
     {
@@ -107,7 +153,7 @@
       "date": "2026-09-01",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1054_china_asia_cycle.html",
       "modified_time": "2026-09-02T02:15:39.660Z",
-      "sha256": "52ed03011e9ded53db2c6a8bea2b70e2b93432cf2f3033cddaf61c585a79be86",
+      "sha256": "29780d9e678776e65150c2ac9c60e30ce1b24f5e94a28c9c480a466b07dbc2b9",
       "title": "Global Macro Early Warning 1054 china asia cycle"
     },
     {
@@ -115,7 +161,7 @@
       "date": "2026-09-01",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_2351_us_ism_stagflation_mix.html",
       "modified_time": "2026-09-01T16:02:00.548Z",
-      "sha256": "899c2adca5c5cd19d7cb8840e22ba2ddbf9028f910ce5be196558cb4f0e51336",
+      "sha256": "9bbbcefb8317a0f74f51be9f3e3f2c2c134f833ff457487e9144f676cb2c9b3a",
       "title": "Global Macro Early Warning 2351 us ism stagflation mix"
     },
     {
@@ -123,7 +169,7 @@
       "date": "2026-09-01",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1805_global_bond_selloff_broadening.html",
       "modified_time": "2026-09-01T10:54:48.015Z",
-      "sha256": "ab2e02a9d6650163169ea59b0ea935b1ac4b9173ad221a0ca6a8c872f5c7b979",
+      "sha256": "d99ad846054b00cc3083b72ae444088fcab771dbfcb61a02aaf53702f102a824",
       "title": "Global Macro Early Warning 1805 global bond selloff broadening"
     },
     {
@@ -131,7 +177,7 @@
       "date": "2026-09-01",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1701_taiwan_fx_confirmation.html",
       "modified_time": "2026-09-01T09:59:16.308Z",
-      "sha256": "fe2c1714686aa59c0b7f7eeda994a30cd6329687ecdf4e6711154a173a9e7029",
+      "sha256": "ad1283d9e6e3cf739cad62f7e3479ac8faf207823fef67de311dd5960f15193b",
       "title": "Global Macro Early Warning 1701 taiwan fx confirmation"
     },
     {
@@ -139,7 +185,7 @@
       "date": "2026-09-01",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1456_taiwan_close_confirmation.html",
       "modified_time": "2026-09-01T09:58:58.700Z",
-      "sha256": "580a09c1c4cde999d1e0cef5431d2a929480a113a440c5fc0cdef09e9a412a44",
+      "sha256": "61b48ef32f28a975dd31e794bf5640965c4744f0177cb1e3181492ad2ac9baac",
       "title": "Global Macro Early Warning 1456 taiwan close confirmation"
     },
     {
@@ -147,7 +193,7 @@
       "date": "2026-09-01",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1600_taiwan_foreign_flow_confirmation.html",
       "modified_time": "2026-09-01T09:58:37.266Z",
-      "sha256": "8139e1930797476a891d3adb59e36e3a618cce2d5e858a44eded42ea090715cd",
+      "sha256": "a5aaaa6aa256b071f6eaabeed0e41139a0c14c780e9c78496b35dda8b1e3b4eb",
       "title": "Global Macro Early Warning 1600 taiwan foreign flow confirmation"
     },
     {
@@ -155,7 +201,7 @@
       "date": "2026-09-01",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1357_taiwan_pmi_ai_breadth.html",
       "modified_time": "2026-09-01T06:28:30.418Z",
-      "sha256": "31f23dd31cd410ffc971be87c4a38506c45e36bdad39170560c64f06687be7aa",
+      "sha256": "c98e10eaa56f660be8e1e39e1c08c6f222976e05cf883cf27aeb4842e2c25ac3",
       "title": "Global Macro Early Warning 1357 taiwan pmi ai breadth"
     },
     {
@@ -163,7 +209,7 @@
       "date": "2026-09-01",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_1300_taiwan_ai_relative_strength.html",
       "modified_time": "2026-09-01T06:28:06.271Z",
-      "sha256": "949d58e04f6a999c11d03cd6572d81ddfc3a8ac719a0fd8f7ba970f22f913454",
+      "sha256": "55576005e80bd31bed0c03ff839de778d32ed69a1a1557d5afee5c7e156ee0aa",
       "title": "Global Macro Early Warning 1300 taiwan ai relative strength"
     },
     {
@@ -171,7 +217,7 @@
       "date": "2026-09-01",
       "file": "reports/daily/Global_Daily_Brief_2026-09-01_1014.html",
       "modified_time": "2026-09-01T02:29:27.032Z",
-      "sha256": "3955e8c5e545e40fe4120e07d8e7e5eac83a52f74b7013319a20dde60c60394c",
+      "sha256": "c1b0de1609a1043cf6592e61ec87ea5fd76ae26011b4a7a1642bdf87c49f1422",
       "title": "Global Daily Brief"
     },
     {
@@ -179,7 +225,7 @@
       "date": "2026-09-01",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_0955_asia_export_cycle.html",
       "modified_time": "2026-09-01T02:23:34.412Z",
-      "sha256": "a3a49f87b2326c0210b3968710b039558314009d7f81eca6c0c67c7398af6d4d",
+      "sha256": "51d46ce47087a21d1218068ce2b4bf60f4f5844c71da85122932c7a414d20f50",
       "title": "Global Macro Early Warning 0955 asia export cycle"
     },
     {
@@ -187,7 +233,7 @@
       "date": "2026-09-01",
       "file": "reports/early-warning/Sediment_Reference_Acceptance_FetchStream_2026-09-01_0703.html",
       "modified_time": "2026-08-31T23:03:23.954Z",
-      "sha256": "e977678d7c5851204b8693fb4534084b0186c1ae7a970667bb115fcfa805a890",
+      "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
       "title": "Sediment Reference Acceptance FetchStream 0703"
     },
     {
@@ -195,7 +241,7 @@
       "date": "2026-09-01",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-01_0254_spr_energy_buffer.html",
       "modified_time": "2026-08-31T23:00:56.572Z",
-      "sha256": "a9861d66b56c2c3401586e5d3bbaf82d569f7b8b9a323a4ba30dc5d011489878",
+      "sha256": "673a7c7920d4b6d95447946b83fc1aa81a4d718ef0b0a255fce5893c22e88559",
       "title": "Global Macro Early Warning 0254 spr energy buffer"
     },
     {
@@ -203,7 +249,7 @@
       "date": "2026-08-31",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_2057_energy_inflation_rates.html",
       "modified_time": "2026-08-31T13:33:34.498Z",
-      "sha256": "e1d9717f24eecb467d44f436bbf675c340885318836fd900f3ed4a6f61015cf1",
+      "sha256": "58c23ec3208f74256fb75b159d7c4510e2db6e78bc7ece200e200a09f0e1645b",
       "title": "Global Macro Early Warning 2057 energy inflation rates"
     },
     {
@@ -211,7 +257,7 @@
       "date": "2026-08-31",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_1906_taiwan_foreign_flow.html",
       "modified_time": "2026-08-31T12:23:17.141Z",
-      "sha256": "38735d107f8c140e31831887c8126eeb242c75d260fc436f9e0eb6a35f107787",
+      "sha256": "4f34b6ed5d9559cd6d92c2434c8afd039d06039a994a13d0f2f9c7de13cb00a6",
       "title": "Global Macro Early Warning 1906 taiwan foreign flow"
     },
     {
@@ -219,7 +265,7 @@
       "date": "2026-08-31",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_1307_fed_hike_oil_taiwan_riskoff.html",
       "modified_time": "2026-08-31T05:15:35.722Z",
-      "sha256": "cf3fcc732c207a438711effd4f029f3c24056aeb6958e417c5f1e6b67a07a0b0",
+      "sha256": "7df7860221fe9f78a2ee4dffbfc64781dec6c6f64e1bced7f0777b8e60f1e96a",
       "title": "Global Macro Early Warning 1307 fed hike oil taiwan riskoff"
     },
     {
@@ -227,7 +273,7 @@
       "date": "2026-08-31",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_0957_China_PMI_Riskoff_rerun.html",
       "modified_time": "2026-08-31T02:22:43.646Z",
-      "sha256": "7a88f5fbda7059b7cde8147c0589b17e8ed21c73463a8732f5780585a24c283d",
+      "sha256": "d51fa232c8365577a6025947b2c0be23fa9d46027671295f82585b7e69fd7900",
       "title": "Global Macro Early Warning 0957 China PMI Riskoff rerun"
     },
     {
@@ -235,7 +281,7 @@
       "date": "2026-08-31",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-31_0853_Asia_Riskoff_Breadth.html",
       "modified_time": "2026-08-31T00:54:39.348Z",
-      "sha256": "d8c885fb4a7e999620a15f2b44ef1ff17327ee8838945a692fa343b649431845",
+      "sha256": "9a54f2f26f016a2340ebdea4659171898b77913488f37fb8a062bc5b0863767b",
       "title": "Global Macro Early Warning 0853 Asia Riskoff Breadth"
     },
     {
@@ -243,7 +289,7 @@
       "date": "2026-08-31",
       "file": "reports/daily/Global_Daily_Brief_2026-08-31.html",
       "modified_time": "2026-08-31T00:31:47.700Z",
-      "sha256": "d812219c7f78df85e1f9ca71837464eac57d8f51dcf02da0d4d399056274159c",
+      "sha256": "1a9009e48d2da5110d2cd5a3f7509d0063987ca64fcd7bb78664e8292ca683c6",
       "title": "Global Daily Brief"
     },
     {
@@ -251,7 +297,7 @@
       "date": "2026-08-30",
       "file": "reports/weekly/Weekly_Strategy_2026-08-30_rerun_1421.html",
       "modified_time": "2026-08-30T06:23:50.989Z",
-      "sha256": "adb53d64035b7e404826b96e5730a1b397b26610c24967c1d66c070a0dcae334",
+      "sha256": "caa7b5491f8b4405fefaf90f1c17db8e7598701cf9690f77036d83c7b25439ce",
       "title": "Weekly Strategy rerun 1421"
     },
     {
@@ -259,7 +305,7 @@
       "date": "2026-08-30",
       "file": "reports/weekly/Weekly_Strategy_2026-08-30.html",
       "modified_time": "2026-08-30T06:02:34.173Z",
-      "sha256": "d99f7da624b2c8d33c4eab7de38006fd1f4f1e198849bbc5d1c94cc6ffa0ce6c",
+      "sha256": "bea69ca6cbde8f4d726f4d57a9f05712cdcfa15226c305626ce1ea3a1f343169",
       "title": "Weekly Strategy"
     },
     {
@@ -267,7 +313,7 @@
       "date": "2026-08-30",
       "file": "reports/daily/Global_Daily_Brief_2026-08-30.html",
       "modified_time": "2026-08-30T05:24:11.896Z",
-      "sha256": "89c61336671fc99d3d5995f5ec804b81deda6de02f59712f39e389c6167bfede",
+      "sha256": "2c9e79c2677f0f11752bb83dad73347a2f44695a5627215e90000b0b363d3a53",
       "title": "Global Daily Brief"
     },
     {
@@ -275,7 +321,7 @@
       "date": "2026-08-30",
       "file": "reports/daily/Global_Macro_Morning_2026-08-30.html",
       "modified_time": "2026-08-30T04:25:38.764Z",
-      "sha256": "fb787403d50107a158f655352fbfd68d6a9aec566264816c4730b8d8b5b4e258",
+      "sha256": "b73a157108e7f38f303f444d1e33d1e3538088d93bce88b9d2ef612cf3d712db",
       "title": "Global Daily Brief"
     },
     {
@@ -283,7 +329,7 @@
       "date": "2026-08-30",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-30_JPY160_Carry_Risk.html",
       "modified_time": "2026-08-30T01:59:20.392Z",
-      "sha256": "018a9e459e5cbaa91e4a92cf164d37839eec37b67b2cc9422c1fc59c64e459f1",
+      "sha256": "120269174acc09a37622d47feb4c72e5f7d5e98f90d465c2e5b708d42a88da4c",
       "title": "Global Macro Early Warning JPY160 Carry Risk"
     },
     {
@@ -291,7 +337,7 @@
       "date": "2026-08-29",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-29_China_Cycle.html",
       "modified_time": "2026-08-29T03:59:01.362Z",
-      "sha256": "501d2c287774a969781c1be224cbbb469d55fbab03b7ec2f99e7ab0453aad6fb",
+      "sha256": "64876661115b8ece8c8bfa5c21585d7361efb8af1bf6a4b5385860fc16cb9e0c",
       "title": "Global Macro Early Warning China Cycle"
     },
     {
@@ -299,7 +345,7 @@
       "date": "2026-08-29",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-29_0805_Gold_Rates_Confirmation.html",
       "modified_time": "2026-08-29T00:29:43.588Z",
-      "sha256": "231c6178b307dff423f0384fd9e9db4ef41aa31ae420b13e1c38ff235df26451",
+      "sha256": "25c07bf028c624304bdcdbbc3bcf2188f39c61eefe346ea6c9ced4a5bd795000",
       "title": "Global Macro Early Warning 0805 Gold Rates Confirmation"
     },
     {
@@ -307,7 +353,7 @@
       "date": "2026-08-29",
       "file": "reports/daily/Global_Macro_Morning_2026-08-29.html",
       "modified_time": "2026-08-28T23:32:58.074Z",
-      "sha256": "586e110d84af0faf9d47947142091acbad66024bd98c5eec6ba1a29490a59128",
+      "sha256": "642844c9452bbc3def3b0a84e8ea876c688806d189b9cc4d23b98fe096fea169",
       "title": "Global Daily Brief"
     },
     {
@@ -315,7 +361,7 @@
       "date": "2026-08-28",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Warsh_Hawkish_Repricing.html",
       "modified_time": "2026-08-28T14:39:53.805Z",
-      "sha256": "1b73348080ce8ca510767037f15caa81fa3e1afcf68c39e5de4d6af2faa1da82",
+      "sha256": "5f543b1325528d538c03264833966465226c10a410416aa4f233d0ad457769ba",
       "title": "Global Macro Early Warning Warsh Hawkish Repricing"
     },
     {
@@ -323,7 +369,7 @@
       "date": "2026-08-28",
       "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_Japan_BOJ.html",
       "modified_time": "2026-08-28T08:53:00.000Z",
-      "sha256": "d9f97ba88edbce52d8464f4006b22c05aeccd5c00ee684a047ef6f1600d96062",
+      "sha256": "cc484fc25498c3e4217ad2ae5ad27dbdbcb21293aabb5d51c927d9d4fb49e4e7",
       "title": "Global Macro Early Warning Japan BOJ"
     },
     {
@@ -331,7 +377,7 @@
       "date": "2026-08-28",
       "file": "reports/daily/Global_Macro_Morning_2026-08-28.html",
       "modified_time": "2026-08-28T06:08:25.220Z",
-      "sha256": "c5be73a985cbfbebfb7eaec9089bd6aea1ef7e1b585f85878b800dfe2d467af4",
+      "sha256": "e557c83ad84a50c859fa42e113f86905cc2367420370e1ab88953ce0aeaa772f",
       "title": "Global Daily Brief"
     },
     {
@@ -339,7 +385,7 @@
       "date": "2026-08-27",
       "file": "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html",
       "modified_time": "2026-08-27T00:29:32.321Z",
-      "sha256": "c7c16a354da618e8cb4679641eea05e1b7757e098543e5b559d7164ec7a217f0",
+      "sha256": "8bae773a78200d801921af3e3ceeeaed20af6f512b0efc944f8db836f20cee80",
       "title": "Global Macro Taiwan Early Warning NVIDIA Post Earnings"
     },
     {
@@ -347,7 +393,7 @@
       "date": "2026-08-25",
       "file": "reports/daily/Global_Macro_Morning_2026-08-25.html",
       "modified_time": "2026-08-25T09:50:19.000Z",
-      "sha256": "ea7b082a4b01621ba0bc2a05986752fcee821ba8b8601168062dca6d3c11e5ac",
+      "sha256": "dc360b6de538e00c5cf04d5a7b015ff8d8a620d6330d0df986e6886985c2a7b8",
       "title": "Global Daily Brief"
     },
     {
@@ -375,43 +421,5 @@
       "title": "taiwan semiconductor riskoff"
     }
   ],
-  "latest": {
-    "early-warning": {
-      "category": "early-warning",
-      "date": "2026-09-03",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.html",
-      "modified_time": "2026-09-03 00:03:00+08:00",
-      "sha256": "8d2b695993452482f8c9b6b67b26f5458cd2e9d9243ec5326af24832f25ed2a3",
-      "title": "Global Macro Early Warning — Labor & Rates Divergence",
-      "run_id": "MEW-20260903-0003-LRD",
-      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
-      "source_kind": "google_doc_markdown",
-      "source_document_id": "1OudDZrY4Xdk3IKAtT-xvvUBwvkotU08ZwO6b-9OjRyk",
-      "generated_at_taipei": "2026-09-03 00:03:00+08:00",
-      "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
-      "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
-      "risk_light": "ORANGE",
-      "topic": null,
-      "slug": "labor_rates_divergence",
-      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.md",
-      "markdown_sha256": "0b5fdbbb8c39c6cd38d5de9eced95db7165400b15f498b03937d753ff549c47b",
-      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.html"
-    },
-    "daily": {
-      "category": "daily",
-      "date": "2026-09-02",
-      "file": "reports/daily/Global_Daily_Brief_2026-09-02_rerun_1308.html",
-      "modified_time": "2026-09-02T05:10:08.471Z",
-      "sha256": "b00ef230583af2cd7c48a6dd40958a39e1fb8d3c2e9bdfe5840a16d1f58e48f0",
-      "title": "Global Daily Brief rerun 1308"
-    },
-    "weekly": {
-      "category": "weekly",
-      "date": "2026-08-30",
-      "file": "reports/weekly/Weekly_Strategy_2026-08-30_rerun_1421.html",
-      "modified_time": "2026-08-30T06:23:50.989Z",
-      "sha256": "adb53d64035b7e404826b96e5730a1b397b26610c24967c1d66c070a0dcae334",
-      "title": "Weekly Strategy rerun 1421"
-    }
-  }
+  "schema_version": 1
 }

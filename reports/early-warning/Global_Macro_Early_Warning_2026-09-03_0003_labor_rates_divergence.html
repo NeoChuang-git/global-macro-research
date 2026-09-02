@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Global Macro Early Warning — Labor &amp; Rates Divergence · 2026-09-03 00:03:00</title>
+<title>Global Macro Early Warning 0003 labor rates divergence · N/A</title>
 <style>
 
 :root {
@@ -336,316 +336,478 @@ footer {
   <div class="hero-top">
     <div class="hero-type-row">
       <span class="badge badge-type">MACRO_TAIWAN_EARLY_WARNING</span>
-      <span class="badge risk-orange">🟠 Risk: ORANGE</span>
+      <span class="badge risk-yellow">🟡 Risk: YELLOW</span>
       
     </div>
-    <div class="hero-run-id">RUN_ID: <code>MEW-20260903-0003-LRD</code></div>
+    <div class="hero-run-id">RUN_ID: <code>EARLY-WARNING-Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence</code></div>
   </div>
-  <h1 class="hero-title">Global Macro Early Warning — Labor &amp; Rates Divergence</h1>
+  <h1 class="hero-title">Global Macro Early Warning 0003 labor rates divergence</h1>
 </header>
 
 <main class="report-content">
+<h2>&lt;&lt;&lt;REPORT_BEGIN&gt;&gt;&gt;</h2>
+<h2>research_status: COMPLETE
+report_type: MACRO_TAIWAN_EARLY_WARNING
+run_id: MTW-20260903-0003-labor-rates-divergence
+generated_at_taipei: 2026-09-03T00:03:00+08:00
+coverage_start_taipei: 2026-09-02T21:01:40+08:00
+coverage_end_taipei: 2026-09-03T00:03:00+08:00
+title: Global Macro &amp; Taiwan Early Warning
+format_version: 1
+trigger_status: TRIGGERED
+risk_light: ORANGE
+classification: TACTICAL
+slug: labor_rates_divergence</h2>
 
-<h2>1. Executive Take</h2>
-<p>美國就業市場初領失業金走升但薪資黏著，伴隨長端美債殖利率（Yield）急遽走升，殖利率曲線出現 Bear Steepening 走勢。台灣半導體與高階伺服器供應鏈面臨資金流（Flow）與估值（Valuation）短期重定價壓力。</p>
-<blockquote>
-<p><strong>核心警訊：</strong> 實質殖利率（Real Yield）攀升壓抑科技股本益比，外銷訂單（Export Orders）動能與市場週期（Market Cycle）出現背離。</p>
-</blockquote>
-<h2>2. Signal Delta</h2>
+<h2>Executive Take</h2>
+<ul>
+<li><strong>新 Signal Delta：勞動市場（Labor Market）↘ 降溫。</strong> ADP 8 月私人就業僅增加 3.8 萬人，低於 Reuters 調查共識 4.8 萬人，且製造業減少 1.7 萬人。這是對「經濟足夠強、Fed 可在 9 月升息」敘事的第一個新反證，但 ADP 對官方非農就業的預測力有限，因此只列 Tactical，不升級為 Regime Shift。</li>
+<li><strong>成長訊號不是全面崩落。</strong> 7 月工廠訂單（Factory Orders）<span class="direction direction-up">↑ 上升</span> 0.9%，高於共識 0.6%，但核心資本財訂單（Core Capital Goods Orders）修正為持平，顯示 headline strength 與 underlying business-equipment momentum 分化。</li>
+<li><strong>利率（Rates）仍是主要壓力來源。</strong> 美國 10 年期公債殖利率（10Y Treasury Yield）盤中先接近三年高位約 4.8182%，之後隨美元與殖利率回落，黃金反彈超過 1%。這代表市場開始交易 growth/labor counter-signal，但尚未逆轉高期限溢酬（Term Premium）與能源通膨風險。</li>
+<li><strong>市場週期（Market Cycle）仍弱於基本面週期（Fundamental Cycle）。</strong> 半導體/AI 高波動延續，但 AI 投資與台灣企業赴美新增投資計畫仍提供結構性需求反證；目前較合理解讀仍是 discount-rate compression &gt; synchronized AI fundamental downturn。</li>
+<li><strong>台灣傳導（Taiwan Transmission）維持 Orange。</strong> 高美債殖利率與美元對高估值科技股不利；若後續官方非農也明顯轉弱，才可能透過全球需求與風險偏好改善部分 valuation 壓力。相反地，若就業仍穩且能源價格居高，Fed 重新緊縮機率將再次上升。</li>
+</ul>
+<h2>1. Signal Delta</h2>
 <div class="table-scroll"><table>
 <thead>
 <tr>
-<th style="text-align:left">監控領域 (Family)</th>
-<th style="text-align:center">前值</th>
-<th style="text-align:center">目前</th>
-<th style="text-align:center">方向</th>
-<th style="text-align:center">燈號</th>
-<th style="text-align:center">狀態轉換</th>
-<th style="text-align:center">信心度</th>
+<th>Signal</th>
+<th>Prior / Baseline</th>
+<th>Current</th>
+<th>Consensus</th>
+<th>Delta / Direction</th>
+<th style="text-align:right">Severity</th>
+<th style="text-align:right">Confidence</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">US 10Y Yield</td>
-<td style="text-align:center">4.18%</td>
-<td style="text-align:center">4.31%</td>
-<td style="text-align:center"><span class="direction direction-up">↑ 上升</span></td>
-<td style="text-align:center"><span class="risk risk-red">🔴 Red</span></td>
-<td style="text-align:center"><span class="state-transition"><span class="state-prior">4.18%</span><span class="transition-arrow">→</span><span class="state-current">4.31%</span></span></td>
-<td style="text-align:center">90%</td>
+<td>labor_market_cooling</td>
+<td>7 月 ADP +4.6萬（上修）；JOLTS 約 1.05 個職缺/失業者</td>
+<td>8 月 ADP +3.8萬；製造業 -1.7萬</td>
+<td>+4.8萬</td>
+<td><span class="direction direction-worsening">↘ 惡化</span> 低於共識 1.0萬</td>
+<td style="text-align:right">3/5</td>
+<td style="text-align:right">0.86</td>
+<td>勞動動能降溫，對 9 月升息敘事形成新反證</td>
 </tr>
 <tr>
-<td style="text-align:left">US 2Y Yield</td>
-<td style="text-align:center">3.82%</td>
-<td style="text-align:center">3.88%</td>
-<td style="text-align:center"><span class="direction direction-improving">↗ 改善</span></td>
-<td style="text-align:center"><span class="risk risk-orange">🟠 Orange</span></td>
-<td style="text-align:center"><span class="state-transition"><span class="state-prior">3.82%</span><span class="transition-arrow">→</span><span class="state-current">3.88%</span></span></td>
-<td style="text-align:center">85%</td>
+<td>us_growth_momentum</td>
+<td>製造業仍擴張但新訂單放慢</td>
+<td>7 月 Factory Orders +0.9%</td>
+<td>+0.6%</td>
+<td><span class="direction direction-up">↑ 上升</span> headline beat</td>
+<td style="text-align:right">2/5</td>
+<td style="text-align:right">0.90</td>
+<td>總體需求尚未崩落</td>
 </tr>
 <tr>
-<td style="text-align:left">US Labor Prime Wage</td>
-<td style="text-align:center">3.8%</td>
-<td style="text-align:center">4.1%</td>
-<td style="text-align:center"><span class="direction direction-up">↑ 上升</span></td>
-<td style="text-align:center"><span class="risk risk-red">🔴 Red</span></td>
-<td style="text-align:center"><span class="state-transition"><span class="state-prior">Neutral</span><span class="transition-arrow">→</span><span class="state-current">Hawkish</span></span></td>
-<td style="text-align:center">80%</td>
+<td>business_equipment_cycle</td>
+<td>Core capital goods 初值 +0.2%</td>
+<td>修正為 0.0%</td>
+<td>N/A</td>
+<td><span class="direction direction-worsening">↘ 惡化</span> 修正轉平</td>
+<td style="text-align:right">3/5</td>
+<td style="text-align:right">0.90</td>
+<td>headline 訂單強，但企業設備投資動能較表面數據弱</td>
 </tr>
 <tr>
-<td style="text-align:left">Taiwan Tech Equity Valuation</td>
-<td style="text-align:center">22.4x</td>
-<td style="text-align:center">20.8x</td>
-<td style="text-align:center"><span class="direction direction-worsening">↘ 惡化</span></td>
-<td style="text-align:center"><span class="risk risk-orange">🟠 Orange</span></td>
-<td style="text-align:center"><span class="state-transition"><span class="state-prior">Positive</span><span class="transition-arrow">→</span><span class="state-current">Neutral</span></span></td>
-<td style="text-align:center">75%</td>
+<td>rates_shock</td>
+<td>US10Y 接近三年高位</td>
+<td>盤中約 4.8182%，後自高位回落</td>
+<td>N/A</td>
+<td><span class="direction direction-up">↑ 上升</span> 高位後小幅 <span class="direction direction-worsening">↘ 惡化</span></td>
+<td style="text-align:right">4/5</td>
+<td style="text-align:right">0.95</td>
+<td>valuation 壓力仍高，但 growth/labor counter-signal 開始被市場交易</td>
+</tr>
+<tr>
+<td>fed_policy_tightening</td>
+<td>一週前 9 月升息機率約 37%</td>
+<td>近期約 64–67%</td>
+<td>N/A</td>
+<td><span class="direction direction-up">↑ 上升</span> 仍偏鷹</td>
+<td style="text-align:right">4/5</td>
+<td style="text-align:right">0.90</td>
+<td>ADP 尚不足以扭轉 Fed 定價，Friday NFP 才是關鍵</td>
+</tr>
+<tr>
+<td>energy_inflation</td>
+<td>Iran/Hormuz 衝突推升油氣與全球殖利率</td>
+<td>Brent 約 US$95 附近，能源風險仍高</td>
+<td>N/A</td>
+<td><span class="direction direction-flat">→ 持平</span> 高檔</td>
+<td style="text-align:right">5/5</td>
+<td style="text-align:right">0.96</td>
+<td>對 labor cooling 形成反向通膨壓力</td>
 </tr>
 </tbody>
 </table></div>
-<h2>3. Why It Matters</h2>
-<p>長端利率上升帶動信用利差（Credit Spread）與期限溢酬（Term Premium）擴大，流動性（Liquidity）邊際收縮。</p>
-<h2>4. Macro / Policy Detail</h2>
-<p>聯準會（Fed）官員談話強化高等級利率維持更長時間（Higher for longer）的市場定價（Market Pricing）。</p>
-<h2>5. Cross-Asset Confirmation</h2>
+<h2>2. Why It Matters</h2>
+<p>目前最重要的不是「就業弱＝Fed 一定轉鴿」，而是市場第一次同時面對兩條方向相反的鏈：</p>
+<p><strong>鏈 A：勞動降溫（Labor Cooling） → 成長預期（Growth Expectations）↘ → 升息必要性↘ → 殖利率（Yield）↘ → 高估值科技股估值壓力緩解。</strong></p>
+<p><strong>鏈 B：能源供給衝擊（Energy Supply Shock） → 輸入通膨（Input Inflation）↑ → Fed 寬鬆空間縮小 → 期限溢酬/實質折現率維持高檔 → 高估值科技股估值（Valuation）↘。</strong></p>
+<p>本輪 Tactical warning 的重點就是 <strong>A 開始出現，但 B 尚未失效</strong>。因此不能把 ADP miss 解讀成 regime reversal。</p>
+<h2>3. Cross-Asset Confirmation</h2>
 <div class="table-scroll"><table>
 <thead>
 <tr>
-<th style="text-align:left">資產類別</th>
-<th style="text-align:left">變動數值</th>
-<th style="text-align:center">方向</th>
-<th style="text-align:left">跨資產確認狀態</th>
+<th>Asset / Indicator</th>
+<th style="text-align:right">Latest Available</th>
+<th>Direction</th>
+<th>Impact</th>
+<th>Confirmation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">Brent Crude Oil</td>
-<td style="text-align:left"><span class="state-transition"><span class="state-prior">$88.5</span><span class="transition-arrow">→</span><span class="state-current">$91.2</span></span></td>
-<td style="text-align:center"><span class="direction direction-up">↑ 上升</span></td>
-<td style="text-align:left">Confirmed</td>
+<td>US 10Y Treasury Yield</td>
+<td style="text-align:right">約 4.8182% 盤中高位，後回落</td>
+<td><span class="direction direction-up">↑ 上升</span> 後 <span class="direction direction-worsening">↘ 惡化</span></td>
+<td>Equity Valuation 仍偏負面</td>
+<td>Partial</td>
 </tr>
 <tr>
-<td style="text-align:left">USD Index (DXY)</td>
-<td style="text-align:left"><span class="state-transition"><span class="state-prior">103.8</span><span class="transition-arrow">→</span><span class="state-current">104.6</span></span></td>
-<td style="text-align:center"><span class="direction direction-improving">↗ 改善</span></td>
-<td style="text-align:left">Confirmed</td>
+<td>U.S. Dollar</td>
+<td style="text-align:right">接近近三週高位後回落</td>
+<td><span class="direction direction-up">↑ 上升</span> 後 <span class="direction direction-worsening">↘ 惡化</span></td>
+<td>亞洲進口成本/金融條件仍偏緊</td>
+<td>Partial</td>
 </tr>
 <tr>
-<td style="text-align:left">SOX Semiconductor Index</td>
-<td style="text-align:left">-2.4%</td>
-<td style="text-align:center"><span class="direction direction-worsening">↘ 惡化</span></td>
-<td style="text-align:left">Confirmed</td>
+<td>Gold</td>
+<td style="text-align:right">約 US$4,374/oz，日內反彈 &gt;1%</td>
+<td><span class="direction direction-improving">↗ 改善</span></td>
+<td>殖利率/美元回落的即時反應</td>
+<td>Confirmed</td>
 </tr>
 <tr>
-<td style="text-align:left">TAIEX Futures</td>
-<td style="text-align:left">-185 pts</td>
-<td style="text-align:center"><span class="direction direction-down">↓ 下降</span></td>
-<td style="text-align:left">Confirmed</td>
+<td>Brent Crude</td>
+<td style="text-align:right">約 US$95/bbl 附近</td>
+<td><span class="direction direction-flat">→ 持平</span> 高檔</td>
+<td>Input Inflation <span class="direction direction-up">↑ 上升</span></td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>Asian Equities</td>
+<td style="text-align:right">KOSPI/Nikkei 前段交易顯著下跌</td>
+<td><span class="direction direction-down">↓ 下降</span></td>
+<td>Risk Appetite <span class="direction direction-worsening">↘ 惡化</span></td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>SOX / AI complex</td>
+<td style="text-align:right">高波動、但年度累積漲幅仍高</td>
+<td><span class="direction direction-down">↓ 下降</span> / volatile</td>
+<td>Market Cycle 弱於 Fundamental Cycle</td>
+<td>Partial</td>
+</tr>
+<tr>
+<td>Credit / Funding</td>
+<td style="text-align:right">無新的 crisis-type widening 證據</td>
+<td><span class="direction direction-flat">→ 持平</span></td>
+<td>尚不足以定義 funding crisis</td>
+<td>Unconfirmed</td>
 </tr>
 </tbody>
 </table></div>
-<h2>6. Evidence vs Counter-evidence</h2>
+<h2>4. Evidence vs Counter-evidence</h2>
 <div class="table-scroll"><table>
 <thead>
 <tr>
-<th style="text-align:left">核心證據 (Evidence)</th>
-<th style="text-align:center">證據等級</th>
-<th style="text-align:left">反證 (Counter-evidence)</th>
-<th style="text-align:center">證據等級</th>
+<th>Thesis</th>
+<th>Supporting Evidence</th>
+<th>Counter-evidence</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">2Y/10Y 殖利率曲線陡峭化 13bp</td>
-<td style="text-align:center"><span class="badge badge-grade-A">Grade A</span></td>
-<td style="text-align:left">AI 伺服器新訂單（New Orders）展望穩健</td>
-<td style="text-align:center"><span class="badge badge-grade-A">Grade A</span></td>
+<td>美國勞動正在降溫</td>
+<td>ADP +3.8萬 &lt; +4.8萬共識；製造業 -1.7萬</td>
+<td>JOLTS 仍約 1.05 openings/unemployed；ADP 對 NFP 指示力有限</td>
+<td>Partial</td>
 </tr>
 <tr>
-<td style="text-align:left">信用利差走闊 8bp</td>
-<td style="text-align:center"><span class="badge badge-grade-B">Grade B</span></td>
-<td style="text-align:left">台灣 8 月外銷訂單年增率維持雙位數</td>
-<td style="text-align:center"><span class="badge badge-grade-B">Grade B</span></td>
+<td>美國成長快速惡化</td>
+<td>Core capital goods 修正為持平</td>
+<td>Factory Orders +0.9% &gt; +0.6% 共識；AI investment 仍支撐設備需求</td>
+<td>Unconfirmed</td>
+</tr>
+<tr>
+<td>Fed 9 月升息定價應快速逆轉</td>
+<td>ADP miss、殖利率/美元自高位回落</td>
+<td>市場升息機率仍約 64–67%；能源價格高檔</td>
+<td>Unconfirmed</td>
+</tr>
+<tr>
+<td>高利率開始壓縮科技估值</td>
+<td>US10Y 接近三年高位、亞洲科技 beta 弱</td>
+<td>AI/半導體結構性需求仍有企業投資與訂單反證</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>Funding crisis 正在形成</td>
+<td>N/A</td>
+<td>無 repo/cross-currency basis/credit crisis confirmation</td>
+<td>Contradicted</td>
 </tr>
 </tbody>
 </table></div>
-<h2>7. Taiwan Transmission</h2>
+<h2>5. Taiwan Transmission Matrix</h2>
 <div class="table-scroll"><table>
 <thead>
 <tr>
-<th style="text-align:left">傳導路徑</th>
-<th style="text-align:left">傳導機制與影響</th>
-<th style="text-align:center">敏感度</th>
-<th style="text-align:left">傳導狀態</th>
+<th>Channel</th>
+<th>Horizon</th>
+<th>Direction</th>
+<th>Taiwan Impact</th>
+<th style="text-align:right">Confidence</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">資金面（Capital Flow）</td>
-<td style="text-align:left">美元走強引發外資期現貨部位（Positioning）調節</td>
-<td style="text-align:center">High</td>
-<td style="text-align:left">Active</td>
+<td>Valuation / Rates</td>
+<td>即時–1個月</td>
+<td>US10Y <span class="direction direction-up">↑ 上升</span> / 高檔</td>
+<td>高 P/E 半導體、AI hardware multiple 壓縮</td>
+<td style="text-align:right">0.93</td>
 </tr>
 <tr>
-<td style="text-align:left">基本面（Fundamentals）</td>
-<td style="text-align:left">終端消費電子需求復甦遞延，AI 獨強支撐資本支出（CapEx）</td>
-<td style="text-align:center">Medium</td>
-<td style="text-align:left">Confirmed</td>
+<td>USD / FX</td>
+<td>即時–數週</td>
+<td>USD 高檔</td>
+<td>進口能源成本<span class="direction direction-up">↑ 上升</span>；外資風險偏好偏弱</td>
+<td style="text-align:right">0.88</td>
+</tr>
+<tr>
+<td>Global Growth</td>
+<td>數週–數月</td>
+<td>Labor <span class="direction direction-worsening">↘ 惡化</span></td>
+<td>若 NFP/消費同步降溫，出口訂單風險才會提高</td>
+<td style="text-align:right">0.72</td>
+</tr>
+<tr>
+<td>AI / Semiconductor Fundamentals</td>
+<td>1–2季</td>
+<td><span class="direction direction-flat">→ 持平</span> Positive-to-Neutral</td>
+<td>尚無同步 orders/guidance reversal，基本面仍比股價有韌性</td>
+<td style="text-align:right">0.84</td>
+</tr>
+<tr>
+<td>Energy / Industrial Cost</td>
+<td>數週–1–3季</td>
+<td>Energy <span class="direction direction-up">↑ 上升</span></td>
+<td>台灣高能源進口依賴使成本壓力持續</td>
+<td style="text-align:right">0.94</td>
+</tr>
+<tr>
+<td>Taiwan U.S. Investment / Supply Chain</td>
+<td>1–3年</td>
+<td><span class="direction direction-improving">↗ 改善</span></td>
+<td>赴美 AI/半導體投資強化長期需求，但可能增加資本支出與在地化成本</td>
+<td style="text-align:right">0.86</td>
 </tr>
 </tbody>
 </table></div>
-<h2>8. Industry / Equity Sensitivity</h2>
+<h2>6. Industry / Equity Sensitivity</h2>
 <div class="table-scroll"><table>
 <thead>
 <tr>
-<th style="text-align:left">產業板塊</th>
-<th style="text-align:center">估值敏感度</th>
-<th style="text-align:left">訂單與庫存（Inventory）狀況</th>
-<th style="text-align:left">戰術建議</th>
+<th>Segment</th>
+<th>Near-term Sensitivity</th>
+<th>Fundamental Read</th>
+<th>Action Bias</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">晶圓代工龍頭</td>
-<td style="text-align:center">Medium</td>
-<td style="text-align:left">產能利用率 &gt;90%，毛利率（Gross Margin）維持高檔</td>
-<td style="text-align:left">Buy-on-Weakness Setup</td>
+<td>High-P/E AI / Semiconductors</td>
+<td>高</td>
+<td>基本面尚未同步惡化</td>
+<td>Hold / Buy-on-Weakness only with rate confirmation</td>
 </tr>
 <tr>
-<td style="text-align:left">散熱與電源模組</td>
-<td style="text-align:center">High</td>
-<td style="text-align:left">伺服器升級出貨加速</td>
-<td style="text-align:left">Hold</td>
+<td>Memory / HBM</td>
+<td>中高</td>
+<td>結構需求仍有支撐</td>
+<td>Hold</td>
 </tr>
 <tr>
-<td style="text-align:left">成熟製程 IC</td>
-<td style="text-align:center">High</td>
-<td style="text-align:left">價格競爭激烈，每股盈餘（EPS）承壓</td>
-<td style="text-align:left">Reduce</td>
+<td>Server / Data Center</td>
+<td>中高</td>
+<td>AI CapEx 支撐，但 duration risk 高</td>
+<td>Hold</td>
+</tr>
+<tr>
+<td>Airlines / Transport</td>
+<td>高</td>
+<td>高能源價格直接壓成本</td>
+<td>Reduce / Avoid on renewed oil spike</td>
+</tr>
+<tr>
+<td>Energy-intensive Industrials</td>
+<td>中高</td>
+<td>Margin 受能源與 FX 雙重壓力</td>
+<td>Neutral / Reduce</td>
+</tr>
+<tr>
+<td>Financials</td>
+<td>混合</td>
+<td>高利率利差 vs bond-duration/credit risk</td>
+<td>Selective Neutral</td>
 </tr>
 </tbody>
 </table></div>
-<h2>9. Market Cycle vs Fundamental Cycle</h2>
-<p>市場定價週期（Market Cycle）短期受利率震盪干擾，但基本面週期（Fundamental Cycle）在 AI 供應鏈支撐下維持擴張。</p>
-<h2>10. Classification &amp; Risk Light Delta</h2>
+<h2>7. Classification &amp; Risk Light / Scenario Matrix</h2>
 <div class="table-scroll"><table>
 <thead>
 <tr>
-<th style="text-align:left">維度</th>
-<th style="text-align:center">前期評級</th>
-<th style="text-align:center">本期評級</th>
-<th style="text-align:center">轉換狀態</th>
+<th>Scenario</th>
+<th style="text-align:right">Qualitative Probability</th>
+<th>Trigger</th>
+<th>Market Impact</th>
+<th>Risk Light</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">警戒類別 (Classification)</td>
-<td style="text-align:center">STRATEGIC</td>
-<td style="text-align:center">TACTICAL</td>
-<td style="text-align:center"><span class="state-transition"><span class="state-prior">Strategic</span><span class="transition-arrow">→</span><span class="state-current">Tactical</span></span></td>
+<td>Base：Labor cooling but inflation remains sticky</td>
+<td style="text-align:right">55%</td>
+<td>NFP 溫和、Brent 90–100、US10Y 約 4.6–4.9%</td>
+<td>高波動、valuation 壓力持續；AI fundamentals 尚穩</td>
+<td>ORANGE</td>
 </tr>
 <tr>
-<td style="text-align:left">總體燈號 (Risk Light)</td>
-<td style="text-align:center"><span class="risk risk-yellow">🟡 Yellow</span></td>
-<td style="text-align:center"><span class="risk risk-orange">🟠 Orange</span></td>
-<td style="text-align:center"><span class="state-transition"><span class="state-prior">Yellow</span><span class="transition-arrow">→</span><span class="state-current">Orange</span></span></td>
+<td>Bull：Labor cools enough to cap rates</td>
+<td style="text-align:right">20%</td>
+<td>NFP 明顯低於預期、US10Y &lt;4.6%、Fed hike odds &lt;50%</td>
+<td>科技估值修復、台灣外資壓力下降</td>
+<td>YELLOW</td>
+</tr>
+<tr>
+<td>Bear：Energy inflation dominates</td>
+<td style="text-align:right">25%</td>
+<td>Brent &gt;100、US10Y 接近/突破 5%、Fed hike odds &gt;75%</td>
+<td>長久期科技再壓縮、TWD/外資/工業成本惡化</td>
+<td>RED</td>
 </tr>
 </tbody>
 </table></div>
-<h2>11. Scenario Matrix</h2>
+<p><strong>Classification：TACTICAL — Labor/Rates Divergence.</strong></p>
+<p><strong>Risk Light：ORANGE → ORANGE。</strong><br/>
+本輪出現重要 counter-signal，但尚不足以降低整體風險燈號。</p>
+<h2>8. Next Confirmation Quantitative Thresholds</h2>
 <div class="table-scroll"><table>
 <thead>
 <tr>
-<th style="text-align:left">情境 (Scenario)</th>
-<th style="text-align:center">發生機率</th>
-<th style="text-align:left">總體觸發條件</th>
-<th style="text-align:left">台股預期衝擊</th>
+<th>Watch Item</th>
+<th>Confirm / Improve Threshold</th>
+<th>Deterioration Threshold</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">Scenario A: 利率短暫超跌反彈</td>
-<td style="text-align:center">55%</td>
-<td style="text-align:left">10Y Yield 於 4.35% 遇阻</td>
-<td style="text-align:left">回測月線後回穩</td>
+<td>U.S. Nonfarm Payrolls</td>
+<td>明顯低於約 +5.6萬市場預期、且 unemployment &gt;4.1%</td>
+<td>明顯高於預期且 wage inflation 重新加速</td>
 </tr>
 <tr>
-<td style="text-align:left">Scenario B: 停滯性通膨預期加劇</td>
-<td style="text-align:center">30%</td>
-<td style="text-align:left">油價突破 $95 且核心 CPI 超預期</td>
-<td style="text-align:left">科技股估值向下修正 5-8%</td>
+<td>US10Y</td>
+<td>&lt;4.60% 並持續</td>
+<td>&gt;4.85%，尤其接近/突破 5.00%</td>
 </tr>
 <tr>
-<td style="text-align:left">Scenario C: 就業迅速降溫引發降息定價</td>
-<td style="text-align:center">15%</td>
-<td style="text-align:left">非農就業新增 &lt;10 萬人</td>
-<td style="text-align:left">資金重回高成長股</td>
+<td>Fed Sep Hike Pricing</td>
+<td>&lt;50%</td>
+<td>&gt;75%</td>
+</tr>
+<tr>
+<td>Brent</td>
+<td>&lt;US$90</td>
+<td>&gt;US$100</td>
+</tr>
+<tr>
+<td>Asian Spot LNG</td>
+<td>&lt;US$18/mmBtu</td>
+<td>&gt;US$23–25/mmBtu 並持續</td>
+</tr>
+<tr>
+<td>USD/TWD</td>
+<td>回到 &lt;31.5 並伴外資改善</td>
+<td>&gt;31.8 並伴外資現貨/期貨同步惡化</td>
+</tr>
+<tr>
+<td>Taiwan/Semi Fundamentals</td>
+<td>Orders/exports/guidance 穩定</td>
+<td>exports/orders/memory pricing/AI guidance 同步轉負</td>
 </tr>
 </tbody>
 </table></div>
-<h2>12. Next Confirmation</h2>
+<h2>9. Source Audit</h2>
 <div class="table-scroll"><table>
 <thead>
 <tr>
-<th style="text-align:left">量化監控指標</th>
-<th style="text-align:left">觸發確認門檻</th>
-<th style="text-align:left">預計發布時間</th>
+<th>Claim</th>
+<th>Source Type</th>
+<th>Source</th>
+<th>URL</th>
+<th>Evidence Grade</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">美國 8 月非農就業報告 (NFP)</td>
-<td style="text-align:left">&gt; 18.5 萬人或時薪 MoM &gt; 0.4%</td>
-<td style="text-align:left">本週五 20:30</td>
+<td>ADP 8月私人就業 +3.8萬、低於共識 +4.8萬；製造業 -1.7萬</td>
+<td>High-quality secondary / underlying ADP</td>
+<td>Reuters, 2026-09-02</td>
+<td>https://www.reuters.com/business/us-private-payrolls-growth-slows-august-adp-says-2026-09-02/</td>
+<td>B</td>
 </tr>
 <tr>
-<td style="text-align:left">台灣出口海關統計</td>
-<td style="text-align:left">年增率 &lt; +8.0%</td>
-<td style="text-align:left">下週一 16:00</td>
+<td>7月 Factory Orders +0.9% vs +0.6%；Core capital goods 修正為持平</td>
+<td>High-quality secondary / Census data</td>
+<td>Reuters, 2026-09-02</td>
+<td>https://www.reuters.com/business/aerospace-defense/rise-us-factory-orders-beats-expectations-july-2026-09-02/</td>
+<td>B</td>
+</tr>
+<tr>
+<td>US10Y 約 4.8182%、美元偏強、亞洲股票廣泛下跌</td>
+<td>Market data / high-quality secondary</td>
+<td>Reuters, 2026-09-02</td>
+<td>https://www.reuters.com/world/china/global-markets-wrapup-1-2026-09-02/</td>
+<td>B</td>
+</tr>
+<tr>
+<td>黃金隨美元與殖利率自高位回落而反彈 &gt;1%</td>
+<td>Market data / high-quality secondary</td>
+<td>Reuters, 2026-09-02</td>
+<td>https://www.reuters.com/world/india/gold-hits-over-3-week-low-mideast-tensions-fan-rate-hike-fears-2026-09-02/</td>
+<td>B</td>
+</tr>
+<tr>
+<td>台灣企業規劃新增約 US$20bn 美國投資，AI demand 為主要驅動</td>
+<td>Official comment / high-quality secondary</td>
+<td>Reuters, 2026-09-02</td>
+<td>https://www.reuters.com/world/china/taiwan-says-its-companies-plan-invest-another-20-billion-us-2026-09-02/</td>
+<td>B</td>
+</tr>
+<tr>
+<td>OPEC+ 可能維持10月產量政策不變、Hormuz衝突仍擾動實際供給</td>
+<td>High-quality secondary</td>
+<td>Reuters, 2026-09-02</td>
+<td>https://www.reuters.com/business/energy/opec-likely-to-keep-oil-output-policy-unchanged-sunday-sources-say-2026-09-02/</td>
+<td>B</td>
 </tr>
 </tbody>
 </table></div>
-<h2>13. Source Audit</h2>
-<div class="table-scroll"><table>
-<thead>
-<tr>
-<th style="text-align:left">Claim</th>
-<th style="text-align:left">Source Type</th>
-<th style="text-align:left">Source</th>
-<th style="text-align:left">URL</th>
-<th style="text-align:center">Evidence Grade</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">US Treasury Yield 10Y</td>
-<td style="text-align:left">Official Exchange</td>
-<td style="text-align:left">US Treasury</td>
-<td style="text-align:left">https://home.treasury.gov</td>
-<td style="text-align:center"><span class="badge badge-grade-A">Grade A</span></td>
-</tr>
-<tr>
-<td style="text-align:left">Taiwan Export Statistics</td>
-<td style="text-align:left">Government Stat</td>
-<td style="text-align:left">MOF Taiwan</td>
-<td style="text-align:left">https://www.mof.gov.tw</td>
-<td style="text-align:center"><span class="badge badge-grade-A">Grade A</span></td>
-</tr>
-<tr>
-<td style="text-align:left">Fed Speech Transcript</td>
-<td style="text-align:left">Central Bank</td>
-<td style="text-align:left">Federal Reserve</td>
-<td style="text-align:left">https://www.federalreserve.gov</td>
-<td style="text-align:center"><span class="badge badge-grade-A">Grade A</span></td>
-</tr>
-</tbody>
-</table></div>
-<h2>14. Bottom Line</h2>
-<p>本次勞動數據黏著引發之長端利率衝擊屬戰術性（Tactical）震盪。建議維持核心 AI 硬體部位，暫時迴避高本益比且無獲利支撐之題材股。</p>
+<h2>Bottom Line</h2>
+<p>本輪 Macro Warning 的新增訊號不是「能源風險再次上升」，而是 <strong>勞動市場開始提供第一個可量化的反向訊號</strong>：ADP 就業低於預期、製造業就業下降，同時核心資本財訂單被修正至持平，促使美元與公債殖利率從高位回落，黃金反彈。這降低了「Fed 必然快速再升息」的確定性，但尚不足以解除風險，因能源價格仍高、10Y 殖利率仍接近多年高位，且 9 月升息機率仍高。對台灣而言，短線仍以 <strong>高利率造成的科技估值壓力 + 能源/匯率輸入成本</strong> 為主；是否能從 Orange 降至 Yellow，必須等待 Friday NFP、US10Y &lt;4.6% 與 Fed hike pricing &lt;50% 等後續確認。</p>
+<p>&lt;&lt;&lt;REPORT_END&gt;&gt;&gt;</p>
 
 </main>
 <footer>
-  Global Macro Signal Report · 2026-09-03 00:03:00 · Generated Deterministically
+  Global Macro Signal Report · N/A · Generated Deterministically
 </footer>
 </div>
 </body>

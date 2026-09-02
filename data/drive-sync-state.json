@@ -36,6 +36,15 @@
       "sha256": "4cb24ade06488892126470eacdfdbc381876df04982f15759190937e9c1b748a",
       "size": 6299
     },
+    "reports/daily/Global_Daily_Brief_2026-09-03_0048_dell_ai_server_demand.md": {
+      "category": "daily",
+      "drive_file_id": "1MRB54K1bxX5wXGXzZ5m2TlK86bb4zW5q",
+      "md5_checksum": "5d4a7f3544108130116fc10450b96911",
+      "modified_time": "2026-09-02T16:57:44.361Z",
+      "name": "Global_Daily_Brief_2026-09-03_0048_dell_ai_server_demand.md",
+      "sha256": "aa474524438cd1575b00859e7266db741642df7828a136c41463a7a8f705b01b",
+      "size": 24558
+    },
     "reports/daily/Global_Macro_Morning_2026-08-25.html": {
       "category": "daily",
       "drive_file_id": "10dgWjdJhW-HwSZRp8tFbQ_wSDiQLIiWu",
@@ -332,6 +341,15 @@
       "name": "Global_Macro_Early_Warning_2026-09-02_2332_labor_cooling_policy_bind.html",
       "sha256": "57ec6c7cfa24f82487d2a66cea8b9d9d18a8966d28ff1ba6abc3682392d92438",
       "size": 6221
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.md": {
+      "category": "early-warning",
+      "drive_file_id": "1wAu-ii7rNE3howWM8dzbCKX1UWy9pFOs",
+      "md5_checksum": "95cfbdd5e116ce1139b3775c4f775215",
+      "modified_time": "2026-09-02T16:05:43.484Z",
+      "name": "Global_Macro_Early_Warning_2026-09-03_0003_labor_rates_divergence.md",
+      "sha256": "08f0ed2edc90722100bff46ef66f166245d0ff1ce1430a2e34cef1b9fe917a93",
+      "size": 11368
     },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",

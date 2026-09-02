@@ -1,452 +1,43 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nvidia 證明 AI 需求仍在加速，但 PCE、就業與 GDPNow 同時告訴市場：Fed 沒有理由急著救估值 · Global Macro Signal Report</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Global Macro Morning — 2026/08/28</title>
 <style>
-
-:root {
-  --bg-primary: #0f172a;
-  --bg-surface: #1e293b;
-  --bg-surface-raised: #334155;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --border: #334155;
-  --border-light: #475569;
-  --accent: #38bdf8;
-  --accent-glow: rgba(56, 189, 248, 0.15);
-  --success: #10b981;
-  --warning: #f59e0b;
-  --orange: #f97316;
-  --danger: #ef4444;
-  --table-zebra: rgba(255, 255, 255, 0.02);
-  --table-hover: rgba(56, 189, 248, 0.06);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-primary: #f8fafc;
-    --bg-surface: #ffffff;
-    --bg-surface-raised: #f1f5f9;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
-    --border: #e2e8f0;
-    --border-light: #cbd5e1;
-    --accent: #0284c7;
-    --accent-glow: rgba(2, 132, 199, 0.08);
-    --table-zebra: #f8fafc;
-    --table-hover: rgba(2, 132, 199, 0.05);
-  }
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.68;
-  font-size: 15px;
-  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
-  -webkit-font-smoothing: antialiased;
-  padding: 24px 16px;
-}
-
-.report-container {
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-/* Hero Header */
-.hero-header {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 24px 28px;
-  margin-bottom: 28px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.hero-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.hero-type-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.hero-run-id {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.hero-run-id code {
-  background: var(--bg-surface-raised);
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: var(--accent);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-}
-
-.hero-title {
-  font-size: 1.85rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  line-height: 1.28;
-}
-
-/* Typography & Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--text-primary);
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-h2 {
-  font-size: 1.35rem;
-  margin: 36px 0 16px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--accent);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-h3 {
-  font-size: 1.15rem;
-  margin: 24px 0 12px;
-  color: var(--text-primary);
-}
-
-p {
-  margin-bottom: 14px;
-  color: var(--text-primary);
-}
-
-ul, ol {
-  margin: 12px 0 16px 24px;
-  color: var(--text-primary);
-}
-
-li {
-  margin-bottom: 6px;
-}
-
-/* Blockquotes / Callout boxes */
-blockquote {
-  background: var(--accent-glow);
-  border-left: 4px solid var(--accent);
-  border-radius: 0 8px 8px 0;
-  padding: 14px 18px;
-  margin: 18px 0;
-  color: var(--text-primary);
-  font-size: 0.98rem;
-}
-
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-
-/* Tables */
-.table-scroll {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: 20px 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-surface);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.92rem;
-  text-align: left;
-}
-
-th, td {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: middle;
-}
-
-th {
-  background: var(--bg-surface-raised);
-  color: var(--text-primary);
-  font-weight: 600;
-  position: sticky;
-  top: 0;
-  white-space: nowrap;
-  letter-spacing: 0.02em;
-}
-
-tr:nth-child(even) td {
-  background: var(--table-zebra);
-}
-
-tr:hover td {
-  background: var(--table-hover);
-}
-
-/* Badges */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1;
-}
-
-.badge-type {
-  background: rgba(56, 189, 248, 0.15);
-  color: var(--accent);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-}
-
-.badge-topic {
-  background: var(--bg-surface-raised);
-  color: var(--text-secondary);
-  border: 1px solid var(--border);
-}
-
-.badge-grade-A { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
-.badge-grade-B { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
-.badge-grade-C { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
-.badge-grade-D { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
-
-/* Direction Indicators */
-.direction {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  font-weight: 600;
-  font-size: 0.88rem;
-}
-
-.direction-up { color: #38bdf8; }
-.direction-down { color: #a855f7; }
-.direction-improving { color: var(--success); }
-.direction-worsening { color: var(--danger); }
-.direction-flat { color: var(--text-muted); }
-
-/* Risk Lights */
-.risk {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-size: 0.82rem;
-  line-height: 1.2;
-}
-
-.risk-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
-.risk-yellow { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
-.risk-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
-.risk-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
-
-/* State Transition */
-.state-transition {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background: var(--bg-surface-raised);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.state-prior { color: var(--text-muted); }
-.transition-arrow { color: var(--accent); font-weight: bold; }
-.state-current { color: var(--text-primary); font-weight: 600; }
-
-/* Links */
-a {
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px dotted rgba(56, 189, 248, 0.5);
-}
-
-a:hover {
-  border-bottom-style: solid;
-}
-
-/* Code */
-code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  background: var(--bg-surface-raised);
-  padding: 2px 5px;
-  border-radius: 4px;
-  font-size: 0.88em;
-}
-
-pre {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 14px;
-  overflow-x: auto;
-  margin: 16px 0;
-}
-
-pre code {
-  background: transparent;
-  padding: 0;
-}
-
-/* Footer */
-footer {
-  margin-top: 48px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-/* Legacy Card & Layout Compatibility */
-main {
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-.card, .panel, .box, .risk-card, .sec {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 24px 28px;
-  margin: 24px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.callout, .note {
-  background: var(--accent-glow);
-  border-left: 4px solid var(--accent);
-  border-radius: 0 8px 8px 0;
-  padding: 16px 20px;
-  margin: 18px 0;
-  color: var(--text-primary);
-  font-size: 0.98rem;
-  line-height: 1.68;
-}
-
-.chain, .node {
-  background: var(--bg-surface-raised);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 16px 20px;
-  margin: 18px 0;
-  font-weight: 600;
-  text-align: center;
-  color: var(--text-primary);
-  line-height: 1.6;
-}
-
-.small, small, .footer-note {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-top: 24px;
-  display: block;
-}
-
-/* Legacy Color & Badge utilities */
-.green, .g, .badge-green { color: var(--success); font-weight: 700; }
-.yellow, .y, .badge-yellow { color: var(--warning); font-weight: 700; }
-.orange, .o, .badge-orange { color: var(--orange); font-weight: 700; }
-.red, .r, .badge-red { color: var(--danger); font-weight: 700; }
-
-.pill, .tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  line-height: 1;
-  background: var(--bg-surface-raised);
-  color: var(--text-secondary);
-  border: 1px solid var(--border);
-}
-
-.metric, .metric-down {
-  font-weight: 600;
-  font-feature-settings: "tnum" 1;
-}
-
-.arrow {
-  font-weight: 700;
-}
-
-.muted {
-  color: var(--text-muted);
-}
-
-.table-wrap, .scroll {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: 18px 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-surface);
-}
-
+body{margin:0;background:#0b1020;color:#e8edf7;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.7}
+main{max-width:1100px;margin:auto;padding:32px 20px 70px}h1{font-size:44px;line-height:1.1;margin:.2em 0}.sub{font-size:21px;color:#c7d2e8}.muted{color:#9aa8c0}
+section{margin-top:38px}h2{border-bottom:1px solid #293652;padding-bottom:9px}.box{background:#111a2d;border:1px solid #293652;border-radius:14px;padding:18px;margin:14px 0}
+.scroll{overflow:auto;border:1px solid #293652;border-radius:12px}table{width:100%;border-collapse:collapse;min-width:760px}th,td{padding:11px 13px;border-bottom:1px solid #26344d;text-align:left;vertical-align:top}th{background:#162139}
+.g{color:#47d18c}.o{color:#ff9f43}.r{color:#ff5d73}.y{color:#f2c14e}code{color:#9ddcff}
 </style>
-</head>
-<body>
-<div class="report-container">
-<header class="hero-header">
-  <div class="hero-top">
-    <div class="hero-type-row">
-      <span class="badge badge-type">GLOBAL_DAILY_BRIEF</span>
-      <span class="badge risk-red">🔴 Risk: RED</span>
-    </div>
-  </div>
-  <h1 class="hero-title">Nvidia 證明 AI 需求仍在加速，但 PCE、就業與 GDPNow 同時告訴市場：Fed 沒有理由急著救估值</h1>
-</header>
-<main class="report-content">
-<div class="muted">GLOBAL MACRO MORNING · 2026/08/28</div><div class="sub">AI Earnings Re-acceleration + Sticky Inflation + Strong Nominal Growth + Structural Term Premium</div><p class="muted">資料截止：2026/08/28 約 07:30 台北時間；美國市場採 8/27 收盤，台灣市場採 8/27 收盤。</p><section><h2>Executive Summary</h2>
+</head><body><main>
+<div class="muted">GLOBAL MACRO MORNING · 2026/08/28</div>
+<h1>Nvidia 證明 AI 需求仍在加速，但 PCE、就業與 GDPNow 同時告訴市場：Fed 沒有理由急著救估值</h1>
+<div class="sub">AI Earnings Re-acceleration + Sticky Inflation + Strong Nominal Growth + Structural Term Premium</div>
+<p class="muted">資料截止：2026/08/28 約 07:30 台北時間；美國市場採 8/27 收盤，台灣市場採 8/27 收盤。</p>
+
+<section><h2>Executive Summary</h2>
 <div class="box"><b>Thesis｜</b>AI Fundamental Cycle 獲得強力財報確認，但 Macro Discount Rate 並未同步轉好。Nvidia Q2 revenue US$96.22bn、Data Center US$89bn、Q3 revenue guidance US$108bn ±2%，市場以 Nvidia +8.7%、SOX +2.3%、Nasdaq +1.57% 確認；同時 July PCE 年增 3.7%、GDPNow Q3 4.6%、initial claims 203k，顯示 Fed 沒有明顯理由急著救估值。</div>
 <p>今日 regime 更新為：<b>Strong Nominal Growth + Sticky Inflation + AI Earnings Re-acceleration</b>。AI earnings risk 明顯下降，但 Fed tightening / long-end rates 仍限制 broader multiple expansion。</p>
-</section><section><h2>1. Macro Signal Board</h2><div class="scroll"><table>
+</section>
+
+<section><h2>1. Macro Signal Board</h2><div class="scroll"><table>
 <tr><th>Family</th><th>方向</th><th>Severity</th><th>Confidence</th><th>24h Delta</th><th>主要證據</th><th>主要反證</th></tr>
-<tr><td>Growth</td><td><span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span></td><td>3/5</td><td>.95</td><td class="g"><span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span></td><td>GDPNow 4.6%、AI CapEx 強</td><td>consumer/housing 部分轉弱</td></tr>
-<tr><td>Inflation</td><td><span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span> sticky</td><td>4/5</td><td>.95</td><td class="o"><span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span></td><td>PCE 3.7% &gt; 3.6% consensus</td><td>oil 低於前週高點</td></tr>
-<tr><td>Labor</td><td>resilient</td><td>2/5</td><td>.92</td><td class="g"><span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span></td><td>claims 203k</td><td>hiring rate 偏慢</td></tr>
-<tr><td>Fed / Monetary</td><td>tightening bias <span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span></td><td>4/5</td><td>.93</td><td class="o"><span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span></td><td>hike odds 約40–44%</td><td>部分 inflation 可能不具 persistence</td></tr>
-<tr><td>Rates / Term Premium</td><td>high</td><td>4/5</td><td>.95</td><td class="o"><span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span></td><td>10Y ~4.68%、30Y ~5.19%</td><td>尚未重返5.3%</td></tr>
-<tr><td>Liquidity</td><td>stable</td><td>2/5</td><td>.93</td><td><span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span></td><td>reserves ~US$2.93tn</td><td>TGA 高位</td></tr>
+<tr><td>Growth</td><td>↑</td><td>3/5</td><td>.95</td><td class="g">↑</td><td>GDPNow 4.6%、AI CapEx 強</td><td>consumer/housing 部分轉弱</td></tr>
+<tr><td>Inflation</td><td>↑ sticky</td><td>4/5</td><td>.95</td><td class="o">↑</td><td>PCE 3.7% > 3.6% consensus</td><td>oil 低於前週高點</td></tr>
+<tr><td>Labor</td><td>resilient</td><td>2/5</td><td>.92</td><td class="g">↑</td><td>claims 203k</td><td>hiring rate 偏慢</td></tr>
+<tr><td>Fed / Monetary</td><td>tightening bias ↑</td><td>4/5</td><td>.93</td><td class="o">↑</td><td>hike odds 約40–44%</td><td>部分 inflation 可能不具 persistence</td></tr>
+<tr><td>Rates / Term Premium</td><td>high</td><td>4/5</td><td>.95</td><td class="o">↑</td><td>10Y ~4.68%、30Y ~5.19%</td><td>尚未重返5.3%</td></tr>
+<tr><td>Liquidity</td><td>stable</td><td>2/5</td><td>.93</td><td>→</td><td>reserves ~US$2.93tn</td><td>TGA 高位</td></tr>
 <tr><td>Credit</td><td>stable-tight</td><td>2/5</td><td>.92</td><td class="g">改善</td><td>IG OAS ~80bp</td><td>AI corporate supply 很大</td></tr>
-<tr><td>Fiscal / Treasury</td><td>structural pressure</td><td>4/5</td><td>.94</td><td><span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span></td><td>long-end &gt;5%</td><td>buyback technical support</td></tr>
-<tr><td>FX</td><td>mixed</td><td>2/5</td><td>.85</td><td><span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span></td><td>USD broadly stable</td><td>Fed hawkish risk</td></tr>
-<tr><td>Commodities</td><td><span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span> risk</td><td>4/5</td><td>.92</td><td class="o"><span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span></td><td>Brent ~US$89.7</td><td>低於$100 danger zone</td></tr>
-<tr><td>Global Trade</td><td>mixed</td><td>3/5</td><td>.86</td><td><span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span></td><td>AI capital-goods demand</td><td>trade friction</td></tr>
-<tr><td>China / Asia / Taiwan</td><td>AI-led strong</td><td>3/5</td><td>.95</td><td class="g"><span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span></td><td>Taiwan flows、TWD、memory</td><td>China/geopolitics</td></tr>
-</table></div></section><section><h2>2. 今日核心主題</h2>
+<tr><td>Fiscal / Treasury</td><td>structural pressure</td><td>4/5</td><td>.94</td><td>→</td><td>long-end >5%</td><td>buyback technical support</td></tr>
+<tr><td>FX</td><td>mixed</td><td>2/5</td><td>.85</td><td>→</td><td>USD broadly stable</td><td>Fed hawkish risk</td></tr>
+<tr><td>Commodities</td><td>↑ risk</td><td>4/5</td><td>.92</td><td class="o">↑</td><td>Brent ~US$89.7</td><td>低於$100 danger zone</td></tr>
+<tr><td>Global Trade</td><td>mixed</td><td>3/5</td><td>.86</td><td>→</td><td>AI capital-goods demand</td><td>trade friction</td></tr>
+<tr><td>China / Asia / Taiwan</td><td>AI-led strong</td><td>3/5</td><td>.95</td><td class="g">↑</td><td>Taiwan flows、TWD、memory</td><td>China/geopolitics</td></tr>
+</table></div></section>
+
+<section><h2>2. 今日核心主題</h2>
 <h3>① Nvidia 對「AI Cycle Peak」給出目前最強反證</h3>
 <div class="scroll"><table>
 <tr><th>Nvidia FY27 Q2</th><th>Actual</th><th>Consensus</th><th>Surprise</th></tr>
@@ -456,26 +47,34 @@ main {
 <tr><td>Q3 Revenue Guidance</td><td>US$108bn ±2%</td><td>US$104.19bn</td><td class="g">Beat</td></tr>
 <tr><td>FY2028 Revenue Growth</td><td>~70%</td><td>~44%</td><td class="g">Strong</td></tr>
 </table></div>
-<p>因果鏈：AI <span class="state-transition"><span class="state-prior">demand</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">accelerator deployment</span></span> <span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span> <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Data Center revenue <span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span> <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Rubin ramp <span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span> <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> HBM / advanced packaging / networking <span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span> <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Taiwan semiconductor visibility <span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span>。<b>Counter-evidence：</b>memory/component cost 可能壓低未來 margin，市場下一步會聚焦 AI ROI 與 marginal profitability。</p>
+<p>因果鏈：AI demand → accelerator deployment ↑ → Data Center revenue ↑ → Rubin ramp ↑ → HBM / advanced packaging / networking ↑ → Taiwan semiconductor visibility ↑。<b>Counter-evidence：</b>memory/component cost 可能壓低未來 margin，市場下一步會聚焦 AI ROI 與 marginal profitability。</p>
+
 <h3>② PCE + GDPNow + Claims：Fed 面對的是「太有韌性的經濟」</h3>
-<p>Headline PCE +0.2% MoM / 3.7% YoY，Core PCE 3.3% YoY；GDPNow Q3 上修至 4.6%，Initial Claims 僅 203k。因果鏈為 Growth <span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span> + Labor resilient + <span class="state-transition"><span class="state-prior">PCE sticky</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Fed easing</span></span> probability <span class="direction direction-down"><span class="direction direction-down">↓ 下降</span></span> <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> front-end / long-end floor <span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span> <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> broad P/E expansion 受限。</p>
+<p>Headline PCE +0.2% MoM / 3.7% YoY，Core PCE 3.3% YoY；GDPNow Q3 上修至 4.6%，Initial Claims 僅 203k。因果鏈為 Growth ↑ + Labor resilient + PCE sticky → Fed easing probability ↓ → front-end / long-end floor ↑ → broad P/E expansion 受限。</p>
+
 <h3>③ EPS 可以暫時打敗 Discount Rate</h3>
 <p>8/27 債券殖利率與油價小幅走高，但 Nvidia +8.7%、Technology +3.4%、Nasdaq +1.57%。因此新的核心框架是：<b>EPS revision speed vs Discount-rate increase speed</b>。</p>
-</section><section><h2>3. Global Cross-Asset Dashboard</h2><div class="scroll"><table>
+</section>
+
+<section><h2>3. Global Cross-Asset Dashboard</h2><div class="scroll"><table>
 <tr><th>Asset</th><th>8/27</th><th>24h</th><th>Interpretation</th></tr>
-<tr><td>S&amp;P 500</td><td>7,730.99</td><td>+0.72%</td><td>earnings support</td></tr>
+<tr><td>S&P 500</td><td>7,730.99</td><td>+0.72%</td><td>earnings support</td></tr>
 <tr><td>Nasdaq</td><td>26,541.35</td><td>+1.57%</td><td>AI re-rating</td></tr>
 <tr><td>Nvidia</td><td>—</td><td>+8.7%</td><td class="g">fundamental confirmation</td></tr>
 <tr><td>SOX</td><td>—</td><td>+2.3%</td><td class="g">semiconductor confirmation</td></tr>
-<tr><td>US 2Y</td><td>~4.24%</td><td>小幅<span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span></td><td>Fed risk</td></tr>
-<tr><td>US 10Y</td><td>~4.68%</td><td>小幅<span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span></td><td>elevated discount rate</td></tr>
-<tr><td>US 30Y</td><td>~5.19%</td><td>小幅<span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span></td><td>structural pressure</td></tr>
+<tr><td>US 2Y</td><td>~4.24%</td><td>小幅↑</td><td>Fed risk</td></tr>
+<tr><td>US 10Y</td><td>~4.68%</td><td>小幅↑</td><td>elevated discount rate</td></tr>
+<tr><td>US 30Y</td><td>~5.19%</td><td>小幅↑</td><td>structural pressure</td></tr>
 <tr><td>Brent</td><td>~$89.70</td><td>+2.1%</td><td>energy risk</td></tr>
-</table></div></section><section><h2>4. Liquidity / Fiscal / Treasury Supply</h2>
+</table></div></section>
+
+<section><h2>4. Liquidity / Fiscal / Treasury Supply</h2>
 <p><b>Liquidity：</b>reserve balances 約 US$2.93tn，SOFR/EFFR 仍在政策區間附近，無美元 funding emergency。</p>
 <p><b>Credit：</b>IG OAS 約 80bp、Single-B HY OAS 約 282bp，沒有 corporate credit disorder。</p>
 <p><b>Treasury：</b>30Y 仍約 5.19%，buyback 只改善 secondary liquidity，不改變 deficit / net issuance，所以 <code>treasury_supply_stress</code> 維持 Orange/Red。</p>
-</section><section><h2>5. Asia &amp; Taiwan Transmission</h2><div class="scroll"><table>
+</section>
+
+<section><h2>5. Asia & Taiwan Transmission</h2><div class="scroll"><table>
 <tr><th>Taiwan</th><th>Latest</th><th>Signal</th></tr>
 <tr><td>TAIEX</td><td>45,975.22</td><td class="g">改善</td></tr>
 <tr><td>Foreign cash 8/27</td><td>+NT$49.09bn</td><td class="g">流入</td></tr>
@@ -484,19 +83,27 @@ main {
 <tr><td>USD/TWD</td><td>31.708</td><td class="g">TWD strong</td></tr>
 </table></div>
 <p>Cash + equity + FX 已形成 capital-inflow confirmation，但 futures hedge 尚未解除，比較像 long cash / short futures 的 institutional risk-management 結構。</p>
-</section><section><h2>6. Market vs Fundamental Cycle</h2>
+</section>
+
+<section><h2>6. Market vs Fundamental Cycle</h2>
 <p><b>AI Market Cycle：</b><span class="g">Green</span>。Nvidia/SOX 已用價格確認 earnings surprise。</p>
 <p><b>AI Fundamental Cycle：</b><span class="g">Strong Green / Confirmed</span>。Revenue、Data Center、guidance、Rubin ramp 與需求 breadth 多層確認。</p>
 <p><b>Memory Cycle：</b><span class="g">Green</span>。Memory tightness 對 supplier ASP / margin 有利，但對 GPU vendor margin 形成成本壓力。</p>
-</section><section><h2>7. Scenario Matrix</h2><div class="scroll"><table>
+</section>
+
+<section><h2>7. Scenario Matrix</h2><div class="scroll"><table>
 <tr><th>Scenario</th><th>Probability</th><th>Trigger</th><th>Taiwan / AI</th></tr>
-<tr><td>Base</td><td>50%</td><td>AI EPS 強、Brent $80–100、30Y 5.0–5.5%</td><td>EPS <span class="direction direction-up"><span class="direction direction-up">↑ 上升</span></span> / P-E volatile</td></tr>
+<tr><td>Base</td><td>50%</td><td>AI EPS 強、Brent $80–100、30Y 5.0–5.5%</td><td>EPS ↑ / P-E volatile</td></tr>
 <tr><td>Bull</td><td>22%</td><td>inflation 再降、30Y &lt;5%、AI guidance續升</td><td>Semiconductor re-rating</td></tr>
 <tr><td>Bear</td><td>23%</td><td>PCE 再升、Fed hikes、30Y &gt;5.5%</td><td>Multiple compression</td></tr>
 <tr><td>Tail</td><td>5%</td><td>rates + credit + funding 同時失序</td><td>broad deleveraging</td></tr>
-</table></div></section><section><h2>8. Risk Lights</h2>
-<p>Global <span class="risk risk-yellow"><span class="risk risk-yellow">🟡 Yellow</span></span><span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span></span>｜Growth <span class="risk risk-green"><span class="risk risk-green">🟢 Green</span></span>｜Inflation <span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span></span>｜Fed Tightening <span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span></span>｜Rates <span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span></span>｜Liquidity <span class="risk risk-green"><span class="risk risk-green">🟢 Green</span></span>｜Credit <span class="risk risk-green"><span class="risk risk-green">🟢 Green</span></span><span class="risk risk-yellow"><span class="risk risk-yellow">🟡 Yellow</span></span>｜Energy <span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span></span>｜Treasury Supply <span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span></span><span class="risk risk-red"><span class="risk risk-red">🔴 Red</span></span>｜Taiwan Equity <span class="risk risk-green"><span class="risk risk-green">🟢 Green</span></span><span class="risk risk-yellow"><span class="risk risk-yellow">🟡 Yellow</span></span>｜Taiwan Foreign Cash <span class="risk risk-green"><span class="risk risk-green">🟢 Green</span></span>｜Taiwan Futures Hedge <span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span></span>｜Taiwan FX Funding <span class="risk risk-green"><span class="risk risk-green">🟢 Green</span></span>｜AI Market Cycle <span class="risk risk-green"><span class="risk risk-green">🟢 Green</span></span>｜AI Fundamental Cycle <span class="risk risk-green"><span class="risk risk-green">🟢 Green</span></span><span class="risk risk-green"><span class="risk risk-green">🟢 Green</span></span>｜Memory Cycle <span class="risk risk-green"><span class="risk risk-green">🟢 Green</span></span>｜Gold–Treasury Divergence <span class="risk risk-yellow"><span class="risk risk-yellow">🟡 Yellow</span></span></p>
-</section><section><h2>9. 今日 Watchlist</h2><div class="scroll"><table>
+</table></div></section>
+
+<section><h2>8. Risk Lights</h2>
+<p>Global 🟡🟠｜Growth 🟢｜Inflation 🟠｜Fed Tightening 🟠｜Rates 🟠｜Liquidity 🟢｜Credit 🟢🟡｜Energy 🟠｜Treasury Supply 🟠🔴｜Taiwan Equity 🟢🟡｜Taiwan Foreign Cash 🟢｜Taiwan Futures Hedge 🟠｜Taiwan FX Funding 🟢｜AI Market Cycle 🟢｜AI Fundamental Cycle 🟢🟢｜Memory Cycle 🟢｜Gold–Treasury Divergence 🟡</p>
+</section>
+
+<section><h2>9. 今日 Watchlist</h2><div class="scroll"><table>
 <tr><th>Indicator</th><th>Current</th><th>下一門檻</th><th>意義</th></tr>
 <tr><td>US30Y</td><td>~5.19%</td><td>&gt;5.50 / &lt;5.00</td><td>valuation shock / relief</td></tr>
 <tr><td>US10Y</td><td>~4.68%</td><td>&gt;5.00</td><td>broad discount-rate shock</td></tr>
@@ -509,15 +116,12 @@ main {
 <tr><td>IG OAS</td><td>~80bp</td><td>&gt;100bp</td><td>credit confirmation</td></tr>
 <tr><td>TX foreign OI</td><td>-84,836</td><td>&lt;-90k</td><td>hedge escalation</td></tr>
 <tr><td>USD/TWD</td><td>31.708</td><td>rapid &gt;32.2</td><td>FX stress</td></tr>
-</table></div></section><section><h2>Bottom Line</h2>
+</table></div></section>
+
+<section><h2>Bottom Line</h2>
 <div class="box"><b>AI Cycle Peak 的短期論點遭到強烈反證。</b> Nvidia 同時通過 revenue、data center、EPS、Q3 guidance、長期成長與市場價格確認。今日最精確的 regime 是 <b>Strong Nominal Growth + Sticky Inflation + AI Earnings Re-acceleration</b>。</div>
 <p>台灣方面，Foreign cash 5D 約 +NT$97.5bn、USD/TWD 31.708、TAIEX 45,975 都指向資金回流；唯一仍需警戒的是 TAIFEX 外資約 -84,836 口淨空。若後續空單回補，將形成更完整的 Taiwan Risk-on confirmation。</p>
-<p><b>核心監控鏈：</b>Fed / <span class="state-transition"><span class="state-prior">inflation</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">US2Y</span></span> <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> <span class="state-transition"><span class="state-prior">US30Y</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">AI valuation</span></span> <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Nvidia / <span class="state-transition"><span class="state-prior">SOX follow-through</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">TSMC</span></span> / <span class="state-transition"><span class="state-prior">Taiwan AI</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">TWSE foreign</span></span> <span class="state-transition"><span class="state-prior">cash</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">TAIFEX futures</span></span> hedge <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> USD/TWD。</p>
+<p><b>核心監控鏈：</b>Fed / inflation → US2Y → US30Y → AI valuation → Nvidia / SOX follow-through → TSMC / Taiwan AI → TWSE foreign cash → TAIFEX futures hedge → USD/TWD。</p>
 </section>
-</main>
-<footer>
-  Global Macro Signal Report · Archive · Generated Deterministically
-</footer>
-</div>
-</body>
-</html>
+
+</main></body></html>
