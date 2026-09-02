@@ -45,15 +45,15 @@
 
     function setNavButtonState(btn, report, directionLabel) {
       if (!btn) return;
-      if (report) {
+      if (report && report.file) {
         btn.classList.remove("is-disabled");
         btn.removeAttribute("aria-disabled");
-        btn.href = MacroReports.reportUrl(report);
+        btn.setAttribute("href", MacroReports.reportUrl(report));
         btn.title = `${directionLabel}：${report.title} (${MacroReports.formatDate(report.date)})`;
       } else {
         btn.classList.add("is-disabled");
         btn.setAttribute("aria-disabled", "true");
-        btn.href = "#";
+        btn.setAttribute("href", "javascript:void(0)");
         btn.title = `已是${directionLabel}`;
       }
     }
@@ -107,7 +107,7 @@
       frame.src = `${localUrl}${cacheBust}`;
       frame.title = currentReport.title;
       frame.hidden = false;
-      status.textContent = "報告已載入。";
+      status.textContent = "報告載入中…";
       status.classList.remove("status-error");
 
       frame.addEventListener(
@@ -124,29 +124,37 @@
       }
     }
 
-    function setupNavEvents(desktopBtn, mobileBtn, getTarget) {
-      const handler = (event) => {
-        const target = getTarget();
-        if (target) {
-          event.preventDefault();
-          renderReport(target.file, true);
-        }
-      };
-      if (desktopBtn) desktopBtn.addEventListener("click", handler);
-      if (mobileBtn) mobileBtn.addEventListener("click", handler);
+    function handleNavClick(event, getTarget) {
+      event.preventDefault();
+      const target = getTarget();
+      if (target && target.file) {
+        renderReport(target.file, true);
+      }
     }
 
-    setupNavEvents(newerBtn, mobileNewerBtn, () => newerReport);
-    setupNavEvents(olderBtn, mobileOlderBtn, () => olderReport);
+    if (newerBtn) {
+      newerBtn.addEventListener("click", (e) => handleNavClick(e, () => newerReport));
+    }
+    if (olderBtn) {
+      olderBtn.addEventListener("click", (e) => handleNavClick(e, () => olderReport));
+    }
+    if (mobileNewerBtn) {
+      mobileNewerBtn.addEventListener("click", (e) => handleNavClick(e, () => newerReport));
+    }
+    if (mobileOlderBtn) {
+      mobileOlderBtn.addEventListener("click", (e) => handleNavClick(e, () => olderReport));
+    }
 
-    // Keyboard Shortcuts: ArrowLeft (Newer), ArrowRight (Older)
-    window.addEventListener("keydown", (event) => {
+    // Keyboard Shortcuts: ArrowLeft / 'k' (Newer), ArrowRight / 'j' (Older)
+    document.addEventListener("keydown", (event) => {
       if (["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement?.tagName)) {
         return;
       }
-      if (event.key === "ArrowLeft" && newerReport) {
+      if ((event.key === "ArrowLeft" || event.key === "k") && newerReport) {
+        event.preventDefault();
         renderReport(newerReport.file, true);
-      } else if (event.key === "ArrowRight" && olderReport) {
+      } else if ((event.key === "ArrowRight" || event.key === "j") && olderReport) {
+        event.preventDefault();
         renderReport(olderReport.file, true);
       }
     });
@@ -156,6 +164,8 @@
       const fileFromUrl = new URLSearchParams(location.search).get("file");
       if (fileFromUrl) {
         renderReport(fileFromUrl, false);
+      } else if (Array.isArray(reportsData?.reports) && reportsData.reports.length > 0) {
+        renderReport(reportsData.reports[0].file, false);
       }
     });
 
