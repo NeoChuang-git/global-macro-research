@@ -52,9 +52,6 @@ def _render_hero_header(metadata: Dict[str, Any]) -> str:
     title = html.escape(str(metadata.get("title", "Global Macro Report")))
     report_type = html.escape(str(metadata.get("report_type", "")))
     run_id = html.escape(str(metadata.get("run_id", "")))
-    gen_time = _format_datetime(metadata.get("generated_at_taipei"))
-    cov_start = _format_datetime(metadata.get("coverage_start_taipei"))
-    cov_end = _format_datetime(metadata.get("coverage_end_taipei"))
     risk_light = str(metadata.get("risk_light", "")).upper()
     topic = metadata.get("topic")
 
@@ -83,16 +80,6 @@ def _render_hero_header(metadata: Dict[str, Any]) -> str:
     <div class="hero-run-id">RUN_ID: <code>{run_id}</code></div>
   </div>
   <h1 class="hero-title">{title}</h1>
-  <div class="hero-meta-grid">
-    <div class="meta-item">
-      <span class="meta-label">Generated (Taipei)</span>
-      <span class="meta-value">{gen_time}</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">Coverage Window</span>
-      <span class="meta-value">{cov_start} → {cov_end}</span>
-    </div>
-  </div>
 </header>
 """
 
@@ -311,36 +298,7 @@ body {
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-primary);
-  margin-bottom: 16px;
   line-height: 1.28;
-}
-
-.hero-meta-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 12px;
-  border-top: 1px solid var(--border);
-  padding-top: 14px;
-}
-
-.meta-item {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.meta-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
-  font-weight: 600;
-}
-
-.meta-value {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-secondary);
 }
 
 /* Typography & Headings */
