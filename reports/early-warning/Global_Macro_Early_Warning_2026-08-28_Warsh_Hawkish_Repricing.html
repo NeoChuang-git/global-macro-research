@@ -1,30 +1,442 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Global Macro Early Warning</title>
-<style>body{margin:0;background:#0b1020;color:#eef3ff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft JhengHei",sans-serif;line-height:1.7}main{max-width:1080px;margin:auto;padding:42px 24px}h1{font-size:32px;line-height:1.3}h2{margin-top:34px;border-bottom:1px solid #283553;padding-bottom:8px}.card{background:#121a2e;border:1px solid #283553;border-radius:14px;padding:20px;margin:18px 0}.orange{color:#ff9f43}.green{color:#43d17d}.yellow{color:#ffd166}table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid #283553;padding:10px;vertical-align:top}th{background:#18233c;text-align:left}.muted{color:#9eabc5}.flow{border-left:4px solid #ff9f43;padding:14px;background:#10182b}a{color:#9cc7ff}</style></head><body><main>
-<div class="muted">GLOBAL MACRO &amp; TAIWAN EARLY WARNING · 2026-08-28</div>
-<h1>Global Macro Early Warning｜Warsh 首場 Jackson Hole 演說把風險重新推向「政策利率可能再緊」；但 AI 基本面與台股現貨尚未確認全面 Risk-off</h1>
-<div class="card"><b class="orange">Risk Light：Fed / Rates Yellow → Orange</b><p><b>Executive Take：</b>本輪新增訊號是聯準會主席 Kevin Warsh 明確把政策焦點重新鎖定物價，表示若底層通膨未以足夠速度回到 2%，Fed 仍有工作要做。市場同步把 2 年期美債殖利率推至約 4.29%，形成 fed_policy_tightening 的新增確認。但 NVIDIA 財報與指引仍強、台股 8/28 現貨收漲 0.77%，目前較符合折現率（Discount Rate）壓力升高，而非 AI 基本面（Fundamental Cycle）反轉。</p></div>
-<h2>1. Signal Delta</h2>
-<table><tr><th>Signal</th><th>前次／基準</th><th>目前</th><th>門檻／比較</th><th>Severity</th><th>Confidence</th><th>意義</th></tr>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warsh 首場 Jackson Hole 演說把風險重新推向「政策利率可能再緊」；但 AI 基本面與台股現貨尚未確認全面 Risk-off · Global Macro Signal Report</title>
+<style>
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-raised: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #334155;
+  --border-light: #475569;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --orange: #f97316;
+  --danger: #ef4444;
+  --table-zebra: rgba(255, 255, 255, 0.02);
+  --table-hover: rgba(56, 189, 248, 0.06);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-raised: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --border-light: #cbd5e1;
+    --accent: #0284c7;
+    --accent-glow: rgba(2, 132, 199, 0.08);
+    --table-zebra: #f8fafc;
+    --table-hover: rgba(2, 132, 199, 0.05);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.68;
+  font-size: 15px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+}
+
+.report-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+/* Typography & Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 36px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 24px 0 12px;
+  color: var(--text-primary);
+}
+
+p {
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+
+ul, ol {
+  margin: 12px 0 16px 24px;
+  color: var(--text-primary);
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Blockquotes / Callout boxes */
+blockquote {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 18px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+th {
+  background: var(--bg-surface-raised);
+  color: var(--text-primary);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
+.badge-grade-B { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
+.badge-grade-C { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
+.badge-grade-D { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.direction-up { color: #38bdf8; }
+.direction-down { color: #a855f7; }
+.direction-improving { color: var(--success); }
+.direction-worsening { color: var(--danger); }
+.direction-flat { color: var(--text-muted); }
+
+/* Risk Lights */
+.risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.risk-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.risk-yellow { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+.risk-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+.risk-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* State Transition */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.state-prior { color: var(--text-muted); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(56, 189, 248, 0.5);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Legacy Card & Layout Compatibility */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.card, .panel, .box, .risk-card, .sec {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 24px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.callout, .note {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+  margin: 18px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+  line-height: 1.68;
+}
+
+.chain, .node {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 18px 0;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.small, small, .footer-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 24px;
+  display: block;
+}
+
+/* Legacy Color & Badge utilities */
+.green, .g, .badge-green { color: var(--success); font-weight: 700; }
+.yellow, .y, .badge-yellow { color: var(--warning); font-weight: 700; }
+.orange, .o, .badge-orange { color: var(--orange); font-weight: 700; }
+.red, .r, .badge-red { color: var(--danger); font-weight: 700; }
+
+.pill, .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.metric, .metric-down {
+  font-weight: 600;
+  font-feature-settings: "tnum" 1;
+}
+
+.arrow {
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.table-wrap, .scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 18px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+
+</style>
+</head>
+<body>
+<div class="report-container">
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">MACRO_TAIWAN_EARLY_WARNING</span>
+      <span class="badge risk-orange">🟠 Risk: ORANGE</span>
+    </div>
+  </div>
+  <h1 class="hero-title">Warsh 首場 Jackson Hole 演說把風險重新推向「政策利率可能再緊」；但 AI 基本面與台股現貨尚未確認全面 Risk-off</h1>
+</header>
+<main class="report-content">
+<div class="muted">GLOBAL MACRO &amp; TAIWAN EARLY WARNING · 2026-08-28</div><div class="card"><b class="orange">Risk Light：Fed / Rates Yellow → Orange</b><p><b>Executive Take：</b>本輪新增訊號是聯準會主席 Kevin Warsh 明確把政策焦點重新鎖定物價，表示若底層通膨未以足夠速度回到 2%，Fed 仍有工作要做。市場同步把 2 年期美債殖利率推至約 4.29%，形成 fed_policy_tightening 的新增確認。但 NVIDIA 財報與指引仍強、台股 8/28 現貨收漲 0.77%，目前較符合折現率（Discount Rate）壓力升高，而非 AI 基本面（Fundamental Cycle）反轉。</p></div><h2>1. Signal Delta</h2><div class="table-scroll"><table><tr><th>Signal</th><th>前次／基準</th><th>目前</th><th>門檻／比較</th><th>Severity</th><th>Confidence</th><th>意義</th></tr>
 <tr><td>fed_policy_tightening</td><td>7 月 FOMC 維持 3.50–3.75%</td><td>Warsh 強調物價優先；底層通膨若未充分回落仍需行動</td><td>核心 PCE（Core PCE）7 月 YoY 3.3%</td><td>4/5</td><td>0.86</td><td>政策路徑（Policy Path）上修風險</td></tr>
 <tr><td>rates_shock</td><td>長端殖利率已處高檔</td><td>2Y 約 4.29%；10Y 演說後震盪至約 4.69%</td><td>7Y 拍賣 4.512%，小幅尾差（Tail）</td><td>3/5</td><td>0.78</td><td>偏政策／折現率衝擊，非 Funding Stress</td></tr>
-<tr><td>ai_fundamental_cycle（反證）</td><td>市場擔心 AI 資本支出（CapEx）持續性</td><td>NVIDIA Q2 FY27 營收 US$96.2bn、YoY +106%；Data Center US$89.0bn、YoY +117%</td><td>需求仍強</td><td>反證</td><td>0.92</td><td>不能把利率壓力等同 AI Cycle 結束</td></tr></table>
-<h2>2. Why It Matters</h2>
-<div class="flow">核心 PCE（Core PCE）3.3% YoY + Warsh 重申 2% 固定目標 → 短端政策利率（Policy Rate）上修風險 → 殖利率高位 → 高本益比（High-P/E）科技股折現率提高 → 台灣 AI／半導體估值上緣受限。</div>
-<p><b>FACT：</b>BEA：7 月 PCE MoM +0.2%、YoY +3.7%；核心 PCE MoM +0.2%、YoY +3.3%。Warsh 表示 Fed 當前主要焦點應是物價，2% 是固定目標。</p>
-<p><b>MARKET EXPECTATION：</b>演說前市場仍在評估 9 月按兵不動與後續升息；Warsh 未提供傳統前瞻指引（Forward Guidance），但其通膨反應函數不支持把近期改善直接外推為寬鬆。</p>
-<p><b>INFERENCE：</b>風險由單純期限溢酬（Term Premium）擴展到「短端政策路徑 + 長端供給／期限溢酬」可能同時偏緊。</p>
-<p><b>Counter-evidence：</b>NVIDIA 最新財報顯示 AI 計算需求仍強；前一交易日 Nasdaq +1.6%，台股 8/28 收漲 0.77%。尚無跨市場證據支持 AI 基本面反轉或全面 Risk-off。</p>
-<h2>3. Cross-Asset Confirmation</h2>
-<table><tr><th>資產</th><th>訊號</th><th>確認</th><th>解讀</th></tr><tr><td>US 2Y</td><td>約 4.29%</td><td>強</td><td>政策利率風險</td></tr><tr><td>US 10Y</td><td>約 4.69%，演說中先降後彈</td><td>中</td><td>成長、通膨與期限溢酬拉扯</td></tr><tr><td>7Y Auction</td><td>4.512%；Indirect 60.8%</td><td>中</td><td>需求未崩，但邊際承接不強</td></tr><tr><td>半導體</td><td>NVIDIA 財報後產業鏈獲支撐</td><td>反證</td><td>基本面仍抵抗折現率壓力</td></tr></table>
-<h2>4. Taiwan Transmission</h2>
-<p>台股 8/28 收 46,331.45，上漲 356.23 點（+0.77%），成交值約 NT$1.02 兆。TAIFEX 8/27 外資台指期（TX）未平倉淨部位 -84,836 口，相較 8/17–8/21 週資料 -82,594 口仍偏空。8/28 最新完整外資期貨／夜盤機構資料在本輪官方頁面尚未完整更新，標示 <b>unavailable</b>，不推估。</p>
-<h2>5. Market vs Fundamental Cycle</h2>
-<p><b class="orange">Market Cycle：壓力升高。</b> Fed 反應函數偏鷹、短端殖利率上行。<br><b class="green">Fundamental Industry Cycle：尚未反轉。</b> NVIDIA 營收與 Data Center 仍高速成長。<br><b class="yellow">Taiwan Transmission：早期／混合。</b> 外資期貨偏空，但現貨上漲，尚缺至少兩項同步惡化。</p>
-<h2>6. Classification &amp; Risk Light Delta</h2>
-<p><b>Tactical → Trend Formation Watch。</b> Fed / Rates：Yellow → Orange。整體 Global Macro / Taiwan 尚不足 Red；信用（Credit）、流動性（Liquidity）、台股現貨與 AI 基本面未同步惡化。<b>Regime Shift：否。</b></p>
-<h2>7. Next Confirmation</h2>
-<table><tr><th>量化門檻</th><th>意義</th></tr><tr><td>US 2Y 持續突破近期高點並維持 2–3 個觀察點</td><td>政策重定價確認</td></tr><tr><td>10Y / 30Y 同創近期高點，拍賣持續 Tail + Indirect 弱化</td><td>treasury_supply_stress 與 rates_shock 共振</td></tr><tr><td>SOX 相對 S&amp;P 500 連續 3/5 日轉弱</td><td>估值壓力開始壓過 AI 基本面</td></tr><tr><td>TAIFEX 外資 TX 淨空擴大 + TWSE 外資現貨 5D 明顯淨賣超</td><td>台灣傳導兩層確認</td></tr><tr><td>USDTWD 走弱 + breadth 惡化 + 電子相對弱勢</td><td>資金撤出廣化</td></tr></table>
-<h2>Bottom Line</h2>
-<p>本次訊號足以把 <b>Fed / Rates 風險燈號上調至 Orange</b>，但不足以把整體台灣／半導體風險升級為 Red，也不足以宣告 Regime Shift。核心新增資訊是 Warsh 正式把「通膨未充分回落 → 仍可能需要政策行動」寫進市場反應函數；NVIDIA 與台股現貨仍提供有力反證。</p>
-<h2>Sources</h2><p class="muted">BEA Personal Income and Outlays (2026-08-26)；Federal Reserve Jackson Hole calendar；NVIDIA Investor Relations Q2 FY2027；TAIFEX institutional positions；CNA/Focus Taiwan；Reuters、AP、WSJ 市場反應。資料截止 2026-08-28。</p>
-</main></body></html>
+<tr><td>ai_fundamental_cycle（反證）</td><td>市場擔心 AI 資本支出（CapEx）持續性</td><td>NVIDIA Q2 FY27 營收 US$96.2bn、YoY +106%；Data Center US$89.0bn、YoY +117%</td><td>需求仍強</td><td>反證</td><td>0.92</td><td>不能把利率壓力等同 AI Cycle 結束</td></tr></table></div><h2>2. Why It Matters</h2><div class="flow">核心 PCE（Core PCE）3.3% YoY + Warsh 重申 2% 固定目標 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 短端政策利率（Policy Rate）上修風險 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 殖利率高位 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 高本益比（High-P/E）科技股折現率提高 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 台灣 AI／半導體估值上緣受限。</div><p><b>FACT：</b>BEA：7 月 PCE MoM +0.2%、YoY +3.7%；核心 PCE MoM +0.2%、YoY +3.3%。Warsh 表示 Fed 當前主要焦點應是物價，2% 是固定目標。</p><p><b>MARKET EXPECTATION：</b>演說前市場仍在評估 9 月按兵不動與後續升息；Warsh 未提供傳統前瞻指引（Forward Guidance），但其通膨反應函數不支持把近期改善直接外推為寬鬆。</p><p><b>INFERENCE：</b>風險由單純期限溢酬（Term Premium）擴展到「短端政策路徑 + 長端供給／期限溢酬」可能同時偏緊。</p><p><b>Counter-evidence：</b>NVIDIA 最新財報顯示 AI 計算需求仍強；前一交易日 Nasdaq +1.6%，台股 8/28 收漲 0.77%。尚無跨市場證據支持 AI 基本面反轉或全面 Risk-off。</p><h2>3. Cross-Asset Confirmation</h2><div class="table-scroll"><table><tr><th>資產</th><th>訊號</th><th>確認</th><th>解讀</th></tr><tr><td>US 2Y</td><td>約 4.29%</td><td>強</td><td>政策利率風險</td></tr><tr><td>US 10Y</td><td>約 4.69%，演說中先降後彈</td><td>中</td><td>成長、通膨與期限溢酬拉扯</td></tr><tr><td>7Y Auction</td><td>4.512%；Indirect 60.8%</td><td>中</td><td>需求未崩，但邊際承接不強</td></tr><tr><td>半導體</td><td>NVIDIA 財報後產業鏈獲支撐</td><td>反證</td><td>基本面仍抵抗折現率壓力</td></tr></table></div><h2>4. Taiwan Transmission</h2><p>台股 8/28 收 46,331.45，上漲 356.23 點（+0.77%），成交值約 NT$1.02 兆。TAIFEX 8/27 外資台指期（TX）未平倉淨部位 -84,836 口，相較 8/17–8/21 週資料 -82,594 口仍偏空。8/28 最新完整外資期貨／夜盤機構資料在本輪官方頁面尚未完整更新，標示 <b>unavailable</b>，不推估。</p><h2>5. Market vs Fundamental Cycle</h2><p><b class="orange">Market Cycle：壓力升高。</b> Fed 反應函數偏鷹、短端殖利率上行。<br/><b class="green">Fundamental Industry Cycle：尚未反轉。</b> NVIDIA 營收與 Data Center 仍高速成長。<br/><b class="yellow">Taiwan Transmission：早期／混合。</b> 外資期貨偏空，但現貨上漲，尚缺至少兩項同步惡化。</p><h2>6. Classification &amp; Risk Light Delta</h2><p><b>Tactical → Trend Formation Watch。</b> Fed / Rates：Yellow <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Orange。整體 Global Macro / Taiwan 尚不足 Red；信用（Credit）、流動性（Liquidity）、台股現貨與 AI 基本面未同步惡化。<b>Regime Shift：否。</b></p><h2>7. Next Confirmation</h2><div class="table-scroll"><table><tr><th>量化門檻</th><th>意義</th></tr><tr><td>US 2Y 持續突破近期高點並維持 2–3 個觀察點</td><td>政策重定價確認</td></tr><tr><td>10Y / 30Y 同創近期高點，拍賣持續 Tail + Indirect 弱化</td><td>treasury_supply_stress 與 rates_shock 共振</td></tr><tr><td>SOX 相對 S&amp;P 500 連續 3/5 日轉弱</td><td>估值壓力開始壓過 AI 基本面</td></tr><tr><td>TAIFEX 外資 TX 淨空擴大 + TWSE 外資現貨 5D 明顯淨賣超</td><td>台灣傳導兩層確認</td></tr><tr><td>USDTWD 走弱 + breadth 惡化 + 電子相對弱勢</td><td>資金撤出廣化</td></tr></table></div><h2>Bottom Line</h2><p>本次訊號足以把 <b>Fed / Rates 風險燈號上調至 Orange</b>，但不足以把整體台灣／半導體風險升級為 Red，也不足以宣告 Regime Shift。核心新增資訊是 Warsh 正式把「通膨未充分回落 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 仍可能需要政策行動」寫進市場反應函數；NVIDIA 與台股現貨仍提供有力反證。</p><h2>Sources</h2><p class="muted">BEA Personal Income and Outlays (2026-08-26)；Federal Reserve Jackson Hole calendar；NVIDIA Investor Relations Q2 FY2027；TAIFEX institutional positions；CNA/Focus Taiwan；Reuters、AP、WSJ 市場反應。資料截止 2026-08-28。</p>
+</main>
+<footer>
+  Global Macro Signal Report · Archive · Generated Deterministically
+</footer>
+</div>
+</body>
+</html>

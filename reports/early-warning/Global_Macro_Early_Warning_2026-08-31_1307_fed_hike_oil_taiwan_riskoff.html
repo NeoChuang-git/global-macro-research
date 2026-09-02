@@ -2,70 +2,467 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Global Macro Early Warning｜2026-08-31</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fed 升息重定價 × 油價衝擊形成台灣風險資產同步壓力 · Global Macro Signal Report</title>
 <style>
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.65;margin:0;background:#f7f7f8;color:#111}
-main{max-width:980px;margin:40px auto;padding:0 24px}
-.card{background:#fff;border:1px solid #ddd;border-radius:14px;padding:24px;margin:18px 0}
-h1,h2{line-height:1.25}
-.badge{display:inline-block;padding:4px 10px;border:1px solid #bbb;border-radius:999px;font-size:14px}
-table{width:100%;border-collapse:collapse;margin:16px 0}
-th,td{border:1px solid #ddd;padding:10px;vertical-align:top}
-th{background:#f0f0f2}
-small{color:#666}
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-raised: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #334155;
+  --border-light: #475569;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --orange: #f97316;
+  --danger: #ef4444;
+  --table-zebra: rgba(255, 255, 255, 0.02);
+  --table-hover: rgba(56, 189, 248, 0.06);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-raised: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --border-light: #cbd5e1;
+    --accent: #0284c7;
+    --accent-glow: rgba(2, 132, 199, 0.08);
+    --table-zebra: #f8fafc;
+    --table-hover: rgba(2, 132, 199, 0.05);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.68;
+  font-size: 15px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+}
+
+.report-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.28;
+}
+
+/* Typography & Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 36px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 24px 0 12px;
+  color: var(--text-primary);
+}
+
+p {
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+
+ul, ol {
+  margin: 12px 0 16px 24px;
+  color: var(--text-primary);
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Blockquotes / Callout boxes */
+blockquote {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 18px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+th {
+  background: var(--bg-surface-raised);
+  color: var(--text-primary);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
+.badge-grade-B { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
+.badge-grade-C { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
+.badge-grade-D { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.direction-up { color: #38bdf8; }
+.direction-down { color: #a855f7; }
+.direction-improving { color: var(--success); }
+.direction-worsening { color: var(--danger); }
+.direction-flat { color: var(--text-muted); }
+
+/* Risk Lights */
+.risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.risk-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.risk-yellow { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+.risk-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+.risk-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+
+/* State Transition */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.state-prior { color: var(--text-muted); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(56, 189, 248, 0.5);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Legacy Card & Layout Compatibility */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.card, .panel, .box, .risk-card, .sec {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 24px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.callout, .note {
+  background: var(--accent-glow);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+  margin: 18px 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+  line-height: 1.68;
+}
+
+.chain, .node {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 18px 0;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.small, small, .footer-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 24px;
+  display: block;
+}
+
+/* Legacy Color & Badge utilities */
+.green, .g, .badge-green { color: var(--success); font-weight: 700; }
+.yellow, .y, .badge-yellow { color: var(--warning); font-weight: 700; }
+.orange, .o, .badge-orange { color: var(--orange); font-weight: 700; }
+.red, .r, .badge-red { color: var(--danger); font-weight: 700; }
+
+.pill, .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.metric, .metric-down {
+  font-weight: 600;
+  font-feature-settings: "tnum" 1;
+}
+
+.arrow {
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.table-wrap, .scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 18px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-surface);
+}
+
 </style>
 </head>
-<body><main>
+<body>
+<div class="report-container">
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">MACRO_TAIWAN_EARLY_WARNING</span>
+      <span class="badge risk-orange">🟠 Risk: ORANGE</span>
+    </div>
+  </div>
+  <h1 class="hero-title">Fed 升息重定價 × 油價衝擊形成台灣風險資產同步壓力</h1>
+</header>
+<main class="report-content">
 <div class="card">
-<h1>Global Macro Early Warning｜Fed 升息重定價 × 油價衝擊形成台灣風險資產同步壓力</h1>
-<p><span class="badge">Risk Light：Yellow → Orange</span></p>
+<p><span class="badge">Risk Light：Yellow <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Orange</span></p>
 <h2>Executive Take</h2>
 <p>本輪達到實質 Signal Delta：Fed 鷹派訊號使市場對 9 月升息的定價快速上升，美國 2 年期公債殖利率(Yield)升至逾一個月高位；同時美伊衝突推升 Brent。美元走強、USDJPY 突破 160，亞洲股市同步承壓，構成 Fed/Monetary Policy + Rates + Commodities 三個 Signal Families 的共振。</p>
-<p>台灣市場已出現第一層傳導：SOX 明顯下跌、台股與台積電同步承壓。現階段更符合 discount-rate / positioning shock → 高估值科技股 multiple 壓縮，而非已有證據證明半導體訂單(Order)或獲利週期反轉。</p>
-</div>
-
-<div class="card">
+<p>台灣市場已出現第一層傳導：SOX 明顯下跌、台股與台積電同步承壓。現階段更符合 discount-rate / positioning shock <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 高估值科技股 multiple 壓縮，而非已有證據證明半導體訂單(Order)或獲利週期反轉。</p>
+</div><div class="card">
 <h2>1. Signal Delta</h2>
-<table>
+<div class="table-scroll"><table>
 <tr><th>Signal</th><th>目前變化</th><th>Severity</th><th>Confidence</th><th>意義</th></tr>
 <tr><td>fed_policy_tightening</td><td>9 月升息機率快速上升</td><td>4/5</td><td>0.82</td><td>短端殖利率與美元同步受壓力影響</td></tr>
 <tr><td>rates_shock</td><td>美國 2Y 殖利率升至近期高位</td><td>3/5</td><td>0.78</td><td>高估值科技股估值(Valuation)壓縮</td></tr>
 <tr><td>energy_inflation</td><td>Brent 升破約 US$90/bbl</td><td>3/5</td><td>0.76</td><td>強化 sticky inflation / hawkish repricing</td></tr>
-</table>
-</div>
-
-<div class="card">
+</table></div>
+</div><div class="card">
 <h2>2. Why It Matters</h2>
 <p><b>FACT：</b>能源價格上升、短端殖利率上升、美元走強與科技股走弱同步發生。</p>
 <p><b>MARKET EXPECTATION：</b>市場提高對 Fed 更鷹派政策路徑的定價。</p>
-<p><b>INFERENCE：</b>Data / Event → Rates / FX → Sector / Flows → EPS/Valuation → Taiwan 的主要傳導，目前集中在估值與資金流(Flow)，而非基本面。</p>
+<p><b>INFERENCE：</b>Data / <span class="state-transition"><span class="state-prior">Event</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Rates</span></span> / <span class="state-transition"><span class="state-prior">FX</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Sector</span></span> / Flows <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> EPS/Valuation <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Taiwan 的主要傳導，目前集中在估值與資金流(Flow)，而非基本面。</p>
 <p><b>Counter-evidence：</b>中國 PMI、新訂單(New Orders)、日本工業生產與韓國半導體出口預期仍提供亞洲製造與 AI/半導體基本面支撐。</p>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h2>3. Cross-Asset Confirmation</h2>
 <p>美元、短端殖利率、原油與科技股風險資產方向一致，構成跨資產確認；Credit / Funding Stress 尚未同步惡化，因此不升級為 Red。</p>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h2>4. Taiwan Transmission</h2>
-<p>Global Rates / USD → US tech multiple compression → SOX / ADR 壓力 → 台灣電子權值股 → 外資現貨與期貨部位(Positioning)。若 TWSE 外資現貨與 TAIFEX 外資未平倉同步轉空，taiwan_foreign_flow 才可升級為 confirmed。</p>
-</div>
-
-<div class="card">
+<p>Global Rates / <span class="state-transition"><span class="state-prior">USD</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">US tech</span></span> <span class="state-transition"><span class="state-prior">multiple compression</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">SOX</span></span> / ADR 壓力 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 台灣電子權值股 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 外資現貨與期貨部位(Positioning)。若 TWSE 外資現貨與 TAIFEX 外資未平倉同步轉空，taiwan_foreign_flow 才可升級為 confirmed。</p>
+</div><div class="card">
 <h2>5. Market vs Fundamental Cycle</h2>
 <p><b>Market Cycle deterioration &gt; Fundamental Cycle deterioration。</b>目前主要是估值、風險偏好與部位調整；尚無足夠訂單(Order)、庫存(Inventory)、毛利率(Margin)、資本支出(CapEx)或 guidance 證據支持半導體基本面反轉。</p>
-</div>
-
-<div class="card">
-<h2>6. Classification & Risk Light Delta</h2>
+</div><div class="card">
+<h2>6. Classification &amp; Risk Light Delta</h2>
 <p>Classification：<b>Trend Formation / Tactical Risk-Off</b></p>
 <p>Risk Light：<b>Yellow → Orange</b></p>
 <p>尚不屬於 Regime Shift，因 Credit / Liquidity / Funding stress 未形成足夠第二層確認。</p>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h2>7. Next Confirmation</h2>
 <ul>
 <li>Fed 9 月升息機率是否持續 &gt;60–70%</li>
@@ -74,10 +471,14 @@ small{color:#666}
 <li>TWSE 外資現貨 1D/5D 是否轉為明顯淨賣超</li>
 <li>TAIFEX 外資 OI 是否與現貨同步偏空</li>
 </ul>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h2>Bottom Line</h2>
-<p>本輪已足以提高短線 Macro / Taiwan risk assessment，但核心仍是「能源通膨 → Fed 更鷹 → 短端殖利率與美元上升 → 高估值科技股估值壓縮 → 台灣半導體市場週期承壓」，目前不能把股價下跌誤判成半導體基本面反轉。</p>
+<p>本輪已足以提高短線 Macro / Taiwan risk assessment，但核心仍是「能源通膨 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Fed 更鷹 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 短端殖利率與美元上升 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 高估值科技股估值壓縮 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 台灣半導體市場週期承壓」，目前不能把股價下跌誤判成半導體基本面反轉。</p>
 </div>
-</main></body></html>
+</main>
+<footer>
+  Global Macro Signal Report · Archive · Generated Deterministically
+</footer>
+</div>
+</body>
+</html>
