@@ -143,6 +143,9 @@ def _display_title(name):
     return title
 
 
+ALLOWED_EXTENSIONS = (".html", ".md", ".txt")
+
+
 def classify_drive_file(category, name, modified_time):
     if category not in CATEGORIES:
         raise SyncError(f"unknown report category: {category}")
@@ -150,7 +153,8 @@ def classify_drive_file(category, name, modified_time):
         raise SyncError(f"invalid Drive filename in {category}")
     if Path(name).name != name or "/" in name or "\\" in name:
         raise SyncError(f"unsafe Drive filename in {category}: {name}")
-    if not name.lower().endswith(".html"):
+    lower_name = name.lower()
+    if not any(lower_name.endswith(ext) for ext in ALLOWED_EXTENSIONS):
         return None
     return {
         "category": category,
@@ -440,6 +444,63 @@ def sync_native_google_docs(
     return archived_count, skipped_count
 
 
+def render_markdown_file_to_html(md_path: Path, category: str, runs_path: Path) -> Path:
+    """Render a downloaded .md / .txt file to companion .html with institutional styling."""
+    raw_text = md_path.read_text(encoding="utf-8", errors="replace")
+    block = extract_latest_complete_report_block(raw_text)
+    html_path = md_path.with_suffix(".html")
+
+    if block:
+        try:
+            expected_type = None
+            if category == "early-warning":
+                expected_type = "MACRO_TAIWAN_EARLY_WARNING"
+            elif category == "daily":
+                expected_type = "GLOBAL_DAILY_BRIEF"
+            elif category == "weekly":
+                expected_type = "WEEKLY_STRATEGY"
+            metadata, body = parse_and_validate_canonical_block(block, expected_type)
+            html_content = render_markdown_to_html(body, metadata)
+            html_bytes = html_content.encode("utf-8")
+            _atomic_write_if_changed(html_path, html_bytes)
+            
+            repo_root_dir = runs_path.parent.parent if runs_path.parent.name == "data" else runs_path.parent
+            run_rec = {
+                "run_id": metadata["run_id"],
+                "report_type": metadata["report_type"],
+                "title": metadata["title"],
+                "generated_at_taipei": str(metadata.get("generated_at_taipei") or ""),
+                "coverage_start_taipei": str(metadata.get("coverage_start_taipei") or ""),
+                "coverage_end_taipei": str(metadata.get("coverage_end_taipei") or ""),
+                "risk_light": metadata.get("risk_light"),
+                "topic": metadata.get("topic"),
+                "slug": metadata.get("slug"),
+                "source_document_id": None,
+                "markdown_path": md_path.relative_to(repo_root_dir).as_posix(),
+                "markdown_sha256": _hash_file(md_path, "sha256"),
+                "html_path": html_path.relative_to(repo_root_dir).as_posix(),
+                "html_sha256": _hash_bytes(html_bytes, "sha256"),
+            }
+            record_report_run(runs_path, run_rec)
+            print(f"MARKDOWN_RENDERED: {html_path.name}")
+            return html_path
+        except CanonicalBlockError as exc:
+            print(f"CANONICAL_BLOCK_INVALID in {md_path.name}: {exc}", file=sys.stderr)
+
+    # Fallback for plain markdown
+    title = _display_title(md_path.name)
+    report_type = "GLOBAL_DAILY_BRIEF" if category == "daily" else "WEEKLY_STRATEGY" if category == "weekly" else "MACRO_TAIWAN_EARLY_WARNING"
+    meta = {
+        "title": title,
+        "report_type": report_type,
+        "run_id": f"{category.upper()}-{md_path.stem}",
+    }
+    html_content = render_markdown_to_html(raw_text, meta)
+    _atomic_write_if_changed(html_path, html_content.encode("utf-8"))
+    print(f"MARKDOWN_RENDERED_FALLBACK: {html_path.name}")
+    return html_path
+
+
 def sync_reports(
     service,
     repo_root,
@@ -549,7 +610,11 @@ def sync_reports(
                 next_files[relative_text] = _state_entry(remote, relative, content_sha256)
 
         for relative_text in sorted(staged):
-            _atomic_write_if_changed(repo_root / relative_text, staged[relative_text])
+            written_path = repo_root / relative_text
+            _atomic_write_if_changed(written_path, staged[relative_text])
+            if relative_text.lower().endswith((".md", ".txt")):
+                runs_file = repo_root / RUNS_STATE_PATH
+                render_markdown_file_to_html(written_path, written_path.parent.name, runs_file)
 
         next_state = {"schema_version": 1, "files": dict(sorted(next_files.items()))}
         _atomic_write_if_changed(state_file, _json_bytes(next_state))
