@@ -19,8 +19,7 @@ if str(repo_root) not in sys.path:
 from bs4 import BeautifulSoup
 from scripts.markdown_renderer import (
     get_embedded_css,
-    _enrich_text_html,
-    _process_element_contents,
+    enhance_html_elements,
 )
 
 # Enhanced institutional stylesheet with legacy compatibility
@@ -179,19 +178,8 @@ def beautify_legacy_html_content(raw_content: str, category: str, filename: str)
     for h in list(soup.find_all("h1")):
         h.decompose()
 
-    # 3. Apply semantic enrichment across all text nodes (Directions, Risk lights, Transitions, Grades)
-    for el in soup.find_all(["td", "th", "p", "li", "div", "span", "blockquote"]):
-        if el.find(["table", "pre"]):
-            continue
-        _process_element_contents(soup, el)
-
-    # 4. Wrap all tables in <div class="table-scroll">
-    for table in soup.find_all("table"):
-        parent = table.parent
-        if parent and parent.name == "div" and any(c in parent.get("class", []) for c in ["table-scroll", "table-wrap", "scroll"]):
-            continue
-        wrapper = soup.new_tag("div", attrs={"class": "table-scroll"})
-        table.wrap(wrapper)
+    # 3. Apply full semantic institutional enhancements across elements and tables
+    enhance_html_elements(soup, skip_h1_removal=True)
 
     # 5. Extract main body content
     main_el = soup.find("main")

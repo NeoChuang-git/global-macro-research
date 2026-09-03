@@ -5,7 +5,12 @@ import json
 from pathlib import Path
 import unittest
 from bs4 import BeautifulSoup
-from scripts.markdown_renderer import render_markdown_to_html
+from scripts.markdown_renderer import (
+    enhance_html_elements,
+    enhance_html_semantics,
+    get_embedded_css,
+    render_markdown_to_html,
+)
 
 
 class MarkdownRendererTests(unittest.TestCase):
@@ -290,7 +295,37 @@ class MarkdownRendererTests(unittest.TestCase):
                     h.update(f.read())
                 self.assertEqual(h.hexdigest(), expected_sha, f"Byte mismatch on existing report {rel_file}")
 
+    def test_get_embedded_css_file_backed(self):
+        css = get_embedded_css()
+        self.assertIsInstance(css, str)
+        self.assertIn(".report-container", css)
+        self.assertIn(".table-scroll", css)
+        self.assertGreater(len(css), 1000)
+
+    def test_enhance_html_semantics_standalone(self):
+        raw_html = """
+        <div class="content">
+            <blockquote><strong>一句話結論｜</strong> 核心判斷已驗證。</blockquote>
+            <p>方向：↑ 上升，燈號：🟢 Green</p>
+            <table>
+                <tr><th>指標</th><th>數值</th></tr>
+                <tr><td>10Y</td><td>4.85%</td></tr>
+            </table>
+        </div>
+        """
+        enhanced = enhance_html_semantics(raw_html)
+        self.assertIn("callout-thesis", enhanced)
+        self.assertIn("direction-up", enhanced)
+        self.assertIn("risk-green", enhanced)
+        self.assertIn("table-scroll", enhanced)
+        self.assertIn("numeric", enhanced)
+
+    def test_enhance_html_elements_in_place(self):
+        soup = BeautifulSoup("<blockquote><strong>風險提醒｜</strong> 流動性緊縮。</blockquote>", "html.parser")
+        result_soup = enhance_html_elements(soup, skip_h1_removal=True)
+        bq = result_soup.find("blockquote")
+        self.assertIn("callout-risk", bq.get("class", []))
+
 
 if __name__ == "__main__":
     unittest.main()
-
