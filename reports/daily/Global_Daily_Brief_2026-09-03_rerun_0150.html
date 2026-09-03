@@ -7,38 +7,90 @@
 <style>
 
 :root {
-  --bg-primary: #0f172a;
-  --bg-surface: #1e293b;
-  --bg-surface-raised: #334155;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
+  color-scheme: light;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
   --text-muted: #64748b;
-  --border: #334155;
-  --border-light: #475569;
-  --accent: #38bdf8;
-  --accent-glow: rgba(56, 189, 248, 0.15);
-  --success: #10b981;
-  --warning: #f59e0b;
-  --orange: #f97316;
-  --danger: #ef4444;
-  --table-zebra: rgba(255, 255, 255, 0.02);
-  --table-hover: rgba(56, 189, 248, 0.06);
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --accent: #0284c7;
+  --accent-light: #e0f2fe;
+  --accent-glow: rgba(2, 132, 199, 0.08);
+
+  /* Callout Colors */
+  --callout-bg: #f8fafc;
+  --callout-thesis-border: #0284c7;
+  --callout-thesis-bg: #f0f9ff;
+  --callout-risk-border: #f97316;
+  --callout-risk-bg: #fff7ed;
+  --callout-strategy-border: #8b5cf6;
+  --callout-strategy-bg: #f5f3ff;
+  --callout-catalyst-border: #10b981;
+  --callout-catalyst-bg: #ecfdf5;
+
+  /* Card & Chips */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
+  --chip-border: #cbd5e1;
+
+  /* Risk Lights */
+  --risk-green-bg: #ecfdf5; --risk-green-text: #059669; --risk-green-border: #a7f3d0;
+  --risk-yellow-bg: #fefce8; --risk-yellow-text: #d97706; --risk-yellow-border: #fef08a;
+  --risk-orange-bg: #fff7ed; --risk-orange-text: #ea580c; --risk-orange-border: #fed7aa;
+  --risk-red-bg: #fef2f2; --risk-red-text: #dc2626; --risk-red-border: #fecaca;
+
+  /* Table */
+  --table-zebra: #f8fafc;
+  --table-hover: #f1f5f9;
+  --table-header-bg: #f1f5f9;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary: #f8fafc;
-    --bg-surface: #ffffff;
-    --bg-surface-raised: #f1f5f9;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
-    --border: #e2e8f0;
-    --border-light: #cbd5e1;
-    --accent: #0284c7;
-    --accent-glow: rgba(2, 132, 199, 0.08);
-    --table-zebra: #f8fafc;
-    --table-hover: rgba(2, 132, 199, 0.05);
+    color-scheme: dark;
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --bg-surface-raised: #334155;
+    --bg-surface-hover: #475569;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #334155;
+    --border-subtle: #475569;
+    --accent: #38bdf8;
+    --accent-light: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.12);
+
+    --callout-bg: #1e293b;
+    --callout-thesis-border: #38bdf8;
+    --callout-thesis-bg: rgba(56, 189, 248, 0.08);
+    --callout-risk-border: #fb923c;
+    --callout-risk-bg: rgba(249, 115, 22, 0.08);
+    --callout-strategy-border: #a78bfa;
+    --callout-strategy-bg: rgba(167, 139, 250, 0.08);
+    --callout-catalyst-border: #34d399;
+    --callout-catalyst-bg: rgba(52, 211, 153, 0.08);
+
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --chip-bg: #334155;
+    --chip-text: #cbd5e1;
+    --chip-border: #475569;
+
+    --risk-green-bg: rgba(16, 185, 129, 0.15); --risk-green-text: #34d399; --risk-green-border: rgba(16, 185, 129, 0.3);
+    --risk-yellow-bg: rgba(245, 158, 11, 0.15); --risk-yellow-text: #fbbf24; --risk-yellow-border: rgba(245, 158, 11, 0.3);
+    --risk-orange-bg: rgba(249, 115, 22, 0.15); --risk-orange-text: #fb923c; --risk-orange-border: rgba(249, 115, 22, 0.3);
+    --risk-red-bg: rgba(239, 68, 68, 0.15); --risk-red-text: #f87171; --risk-red-border: rgba(239, 68, 68, 0.3);
+
+    --table-zebra: rgba(255, 255, 255, 0.02);
+    --table-hover: rgba(56, 189, 248, 0.06);
+    --table-header-bg: #334155;
   }
 }
 
@@ -49,29 +101,49 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
-  line-height: 1.68;
-  font-size: 15px;
+  line-height: 1.8;
+  font-size: 17px;
   font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
   -webkit-font-smoothing: antialiased;
   padding: 24px 16px;
+  overflow-x: hidden;
 }
 
+/* Layout Containers: Narrative & Content Presentation */
 .report-container {
-  max-width: 1240px;
+  width: 100%;
+  max-width: 1120px;
   margin: 0 auto;
+  padding: 24px 20px 48px;
+  position: relative;
+}
+
+.report-narrative {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Content Presentation */
+.wide-content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Hero Header */
 .hero-header {
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 24px 28px;
-  margin-bottom: 28px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .hero-top {
@@ -80,7 +152,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .hero-type-row {
@@ -104,97 +176,269 @@ body {
 }
 
 .hero-title {
-  font-size: 1.85rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
   color: var(--text-primary);
-  line-height: 1.28;
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
 }
 
 /* Typography & Headings */
+.report-narrative p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
-  font-weight: 600;
   line-height: 1.35;
+  letter-spacing: -0.015em;
 }
 
 h2 {
-  font-size: 1.35rem;
-  margin: 36px 0 16px;
-  padding-bottom: 8px;
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem;
+  padding-bottom: 0.6rem;
   border-bottom: 2px solid var(--accent);
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 h3 {
-  font-size: 1.15rem;
-  margin: 24px 0 12px;
-  color: var(--text-primary);
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
 }
 
-p {
-  margin-bottom: 14px;
-  color: var(--text-primary);
+h4 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 100%;
 }
 
 ul, ol {
-  margin: 12px 0 16px 24px;
-  color: var(--text-primary);
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
 }
 
 li {
-  margin-bottom: 6px;
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
 }
 
-/* Blockquotes / Callout boxes */
-blockquote {
-  background: var(--accent-glow);
+/* Callouts */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.35rem;
   border-left: 4px solid var(--accent);
-  border-radius: 0 8px 8px 0;
-  padding: 14px 18px;
-  margin: 18px 0;
-  color: var(--text-primary);
-  font-size: 0.98rem;
+  border-radius: 0 10px 10px 0;
+  background: var(--callout-bg);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
-blockquote p:last-child {
-  margin-bottom: 0;
+.callout p {
+  margin: 0;
+  line-height: 1.75;
 }
+
+.callout-thesis {
+  border-left-color: var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.callout-risk {
+  border-left-color: var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.callout-strategy {
+  border-left-color: var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.callout-catalyst {
+  border-left-color: var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Analysis Cards */
+.analysis-card {
+  margin: 2.2rem 0;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.analysis-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Meta Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  line-height: 1.35;
+}
+
+.chip-score {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.chip-evidence, .chip-confidence, .chip-severity, .chip-persistence {
+  color: var(--text-secondary);
+}
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.direction-up { color: #0284c7; }
+.direction-down { color: #7c3aed; }
+.direction-improving { color: #059669; }
+.direction-worsening { color: #dc2626; }
+.direction-flat { color: var(--text-muted); }
+
+/* Risk Lights */
+.risk-chip, .risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.risk-green { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.risk-yellow { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.risk-orange { background: var(--risk-orange-bg); color: var(--risk-orange-text); border: 1px solid var(--risk-orange-border); }
+.risk-red { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* State Transitions */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.state-prior { color: var(--text-muted); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
 
 /* Tables */
 .table-scroll {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin: 20px 0;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 10px;
   background: var(--bg-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
 }
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 0.92rem;
   text-align: left;
-}
-
-th, td {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: middle;
+  min-width: 680px;
 }
 
 th {
-  background: var(--bg-surface-raised);
+  background: var(--table-header-bg);
   color: var(--text-primary);
-  font-weight: 600;
+  font-weight: 650;
   position: sticky;
   top: 0;
+  z-index: 2;
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
   white-space: nowrap;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+}
+
+td {
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+tr:last-child td {
+  border-bottom: none;
 }
 
 tr:nth-child(even) td {
@@ -203,6 +447,37 @@ tr:nth-child(even) td {
 
 tr:hover td {
   background: var(--table-hover);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Executive Summary Grid */
+.executive-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 0;
+}
+
+.executive-points > li {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .executive-points {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Badges */
@@ -219,9 +494,9 @@ tr:hover td {
 }
 
 .badge-type {
-  background: rgba(56, 189, 248, 0.15);
+  background: var(--accent-light);
   color: var(--accent);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  border: 1px solid var(--accent);
 }
 
 .badge-topic {
@@ -230,64 +505,16 @@ tr:hover td {
   border: 1px solid var(--border);
 }
 
-.badge-grade-A { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
-.badge-grade-B { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
-.badge-grade-C { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
-.badge-grade-D { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
-
-/* Direction Indicators */
-.direction {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  font-weight: 600;
-  font-size: 0.88rem;
-}
-
-.direction-up { color: #38bdf8; }
-.direction-down { color: #a855f7; }
-.direction-improving { color: var(--success); }
-.direction-worsening { color: var(--danger); }
-.direction-flat { color: var(--text-muted); }
-
-/* Risk Lights */
-.risk {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-size: 0.82rem;
-  line-height: 1.2;
-}
-
-.risk-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
-.risk-yellow { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
-.risk-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
-.risk-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
-
-/* State Transition */
-.state-transition {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background: var(--bg-surface-raised);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.state-prior { color: var(--text-muted); }
-.transition-arrow { color: var(--accent); font-weight: bold; }
-.state-current { color: var(--text-primary); font-weight: 600; }
+.badge-grade-A { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.badge-grade-B { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent); }
+.badge-grade-C { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.badge-grade-D { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
 
 /* Links */
 a {
   color: var(--accent);
   text-decoration: none;
-  border-bottom: 1px dotted rgba(56, 189, 248, 0.5);
+  border-bottom: 1px dotted rgba(2, 132, 199, 0.4);
 }
 
 a:hover {
@@ -327,28 +554,52 @@ footer {
   color: var(--text-muted);
 }
 
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+    font-size: 16px;
+  }
+  .report-narrative p {
+    font-size: 16px;
+  }
+  h1.hero-title { font-size: 1.45rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  h4 { font-size: 1rem; }
+  .analysis-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+}
+
 </style>
 </head>
 <body>
 <div class="report-container">
-
+  <div class="report-narrative">
+    
 <header class="hero-header">
   <div class="hero-top">
     <div class="hero-type-row">
       <span class="badge badge-type">GLOBAL_DAILY_BRIEF</span>
-      <span class="badge risk-yellow">🟡 Risk: YELLOW</span>
+      <span class="risk-chip risk-yellow">🟡 Risk: YELLOW</span>
       
     </div>
     <div class="hero-run-id">RUN_ID: <code>GDB-20260903-0150</code></div>
   </div>
   <h1 class="hero-title">Global Daily Brief｜Dell AI 伺服器訂單暴增，AI 基建需求再獲硬證據</h1>
+  <div class="hero-meta-row">
+    <span class="hero-chip">發布時間：2026-09-03 01:50:00</span>
+    <span class="hero-chip hero-chip-cov">涵蓋：2026-09-02 01:50:00 ~ 2026-09-03 01:50:00</span>
+  </div>
 </header>
 
-<main class="report-content">
-
+    <main class="report-content">
+      
 <h2>執行摘要（EXECUTIVE SUMMARY）</h2>
 <p>今日核心判斷：過去24小時最有市場影響力的科技主線，是 <strong>AI 基礎建設需求持續被真實訂單與財報驗證，但高利率仍抑制估值擴張</strong>。Dell 的訂單、積壓訂單、營收與全年指引同步上修，是本輪最強硬證據；Palo Alto 則提醒市場「財報 beat 不等於估值一定上修」。</p>
-<ul>
+<ul class="executive-points">
 <li><strong>Dell／AI 基建｜<span class="direction direction-improving">↗ 改善</span></strong> — FY2027 Q2 營收 US$47bn、AI 伺服器訂單約 US$60.9bn、AI server revenue US$16.4bn；全年營收展望由 US$167bn 上調至 US$192bn。</li>
 <li><strong>AI 伺服器供應鏈｜<span class="direction direction-improving">↗ 改善</span> 有跨股確認</strong> — DELL 盤中約 +5%～8%，NVDA 約 +4%～5%；但並非所有 server peers 同步大漲，顯示市場偏好「有訂單／指引證據」而非無差別追價。</li>
 <li><strong>Palo Alto／資安 AI｜<span class="direction direction-worsening">↘ 惡化</span> 估值壓力高於財報利多</strong> — Revenue US$3.41bn、non-GAAP EPS US$1.02 均 beat，FY27 revenue guidance 亦優於共識，但股價約 -5.2%；市場在意 margin／自由現金流與高估值。</li>
@@ -357,58 +608,58 @@ footer {
 <li><strong>風險燈號｜YELLOW</strong> — 美國10年期殖利率仍約4.8%附近、能源與Fed升息預期限制科技股估值；目前更像「基本面強、折現率高」而非全面 risk-on。</li>
 </ul>
 <h2>今日三大市場訊號（TODAY TOP 3 MARKET SIGNALS）</h2>
-<div class="table-scroll"><table>
+<div class="table-scroll wide-content"><table>
 <thead>
 <tr>
-<th style="text-align:right">排名</th>
+<th class="numeric" style="text-align:right">排名</th>
 <th>市場訊號</th>
 <th>方向</th>
 <th>核心證據</th>
 <th>受影響資產</th>
 <th>持續性</th>
-<th style="text-align:right">信心程度</th>
+<th class="numeric" style="text-align:right">信心程度</th>
 <th>台灣關聯</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:right">1</td>
+<td class="numeric" style="text-align:right">1</td>
 <td>AI 伺服器／資料中心需求</td>
 <td><span class="direction direction-improving">↗ 改善</span></td>
 <td>Dell AI orders US$60.9bn、AI server revenue US$16.4bn、全年 revenue/EPS 大幅上修</td>
 <td>DELL、NVDA、SMCI、HPE、AI infra</td>
 <td>1–4季</td>
-<td style="text-align:right">0.97</td>
+<td class="numeric" style="text-align:right">0.97</td>
 <td>高：ODM、HBM/DRAM、CoWoS、PCB/CCL、電源、散熱</td>
 </tr>
 <tr>
-<td style="text-align:right">2</td>
+<td class="numeric" style="text-align:right">2</td>
 <td>AI 資安需求 vs 高估值壓力</td>
 <td><span class="direction direction-flat">→ 持平</span> 基本面強／股價弱</td>
 <td>PANW revenue +34% YoY、NGS ARR 強，但股價約 -5.2%</td>
 <td>PANW、CRWD、AI security</td>
 <td>1–4季</td>
-<td style="text-align:right">0.91</td>
+<td class="numeric" style="text-align:right">0.91</td>
 <td>中低：直接供應鏈有限，主要透過 SaaS/AI 估值風險偏好</td>
 </tr>
 <tr>
-<td style="text-align:right">3</td>
+<td class="numeric" style="text-align:right">3</td>
 <td>台灣 AI 供應鏈在地化／研發擴張</td>
 <td><span class="direction direction-improving">↗ 改善</span></td>
 <td>台灣企業新增約 US$20bn 赴美投資；Google 擴大台灣 AI infra R&amp;D 中心</td>
 <td>TSM＋台灣半導體／server ecosystem</td>
 <td>1–3年</td>
-<td style="text-align:right">0.94</td>
+<td class="numeric" style="text-align:right">0.94</td>
 <td>很高：先進製程、封裝、設備、伺服器、電源與液冷</td>
 </tr>
 </tbody>
 </table></div>
 <h2>市場影響力前三大事件（TOP 3 MARKET IMPACT EVENTS）</h2>
-<div class="table-scroll"><table>
+<div class="table-scroll wide-content"><table>
 <thead>
 <tr>
-<th style="text-align:right">排名</th>
-<th style="text-align:right">影響分數</th>
+<th class="numeric" style="text-align:right">排名</th>
+<th class="numeric" style="text-align:right">影響分數</th>
 <th>方向</th>
 <th>事件</th>
 <th>主要股票</th>
@@ -418,8 +669,8 @@ footer {
 </thead>
 <tbody>
 <tr>
-<td style="text-align:right">1</td>
-<td style="text-align:right">94</td>
+<td class="numeric" style="text-align:right">1</td>
+<td class="numeric" style="text-align:right">94</td>
 <td><span class="direction direction-improving">↗ 改善</span></td>
 <td>Dell AI 伺服器訂單、營收與全年展望同步大幅上修</td>
 <td>DELL、NVDA、SMCI</td>
@@ -427,8 +678,8 @@ footer {
 <td>部分反映</td>
 </tr>
 <tr>
-<td style="text-align:right">2</td>
-<td style="text-align:right">82</td>
+<td class="numeric" style="text-align:right">2</td>
+<td class="numeric" style="text-align:right">82</td>
 <td><span class="direction direction-worsening">↘ 惡化</span></td>
 <td>Palo Alto 財報與指引 beat、收購 Console，但市場轉向 margin／估值消化</td>
 <td>PANW、CRWD</td>
@@ -436,8 +687,8 @@ footer {
 <td>高預期已反映，估值重新定價</td>
 </tr>
 <tr>
-<td style="text-align:right">3</td>
-<td style="text-align:right">79</td>
+<td class="numeric" style="text-align:right">3</td>
+<td class="numeric" style="text-align:right">79</td>
 <td><span class="direction direction-improving">↗ 改善</span></td>
 <td>台灣企業新增 US$20bn 赴美投資；Google 擴建台灣 AI 基礎建設研發</td>
 <td>TSM＋台灣供應鏈</td>
@@ -446,8 +697,8 @@ footer {
 </tr>
 </tbody>
 </table></div>
-<h3>#1｜Dell AI 伺服器需求推升訂單、營收與全年展望</h3>
-<p><strong>影響分數｜94/100｜方向｜<span class="direction direction-improving">↗ 改善</span>｜證據等級｜A｜信心｜高</strong></p>
+<section class="analysis-card"><h3>#1｜Dell AI 伺服器需求推升訂單、營收與全年展望</h3>
+<div class="meta-chips"><span class="chip chip-score">影響分數 94/100</span><span class="chip direction direction-improving">方向 ↗</span><span class="chip chip-evidence">證據等級 A</span><span class="chip chip-confidence">信心 高</span></div>
 <ul>
 <li><strong>事件重點</strong> — Dell FY2027 Q2 營收 US$47bn、年增58%；ISG revenue US$31.8bn、年增89%；AI 伺服器訂單約 US$60.9bn，AI server revenue 約 US$16.4bn。</li>
 <li><strong>市場為何在意</strong> — 公司把 FY27 revenue midpoint 由 US$167bn 上調至 US$192bn，non-GAAP EPS 由 US$17.90 上調至 US$25.50；這不是單季 beat，而是全年 earnings power 被重估。</li>
@@ -458,8 +709,8 @@ footer {
 <p><strong>市場定價：</strong> AI 基建長期成長已高度被市場理解，但 Dell 本輪新增的訂單規模、ISG 成長與全年指引上修仍是新的 fundamental confirmation，因此判定為「部分反映」。</p>
 <p><strong>反向證據：</strong> 高利率、客戶融資、GPU／電力供應瓶頸、AI data center 資本效率，以及 backlog conversion 都可能降低訂單轉收入的速度。</p>
 <p><strong>下一催化劑：</strong> Broadcom Q3 FY2026 財報／AI 半導體指引；hyperscaler CapEx；NVDA 與 server peers 的出貨／訂單評論。</p>
-<h3>#2｜Palo Alto 財報 beat，但市場用股價下跌重新定價高估值</h3>
-<p><strong>影響分數｜82/100｜方向｜<span class="direction direction-worsening">↘ 惡化</span>｜證據等級｜A-｜信心｜高</strong></p>
+</section><section class="analysis-card"><h3>#2｜Palo Alto 財報 beat，但市場用股價下跌重新定價高估值</h3>
+<div class="meta-chips"><span class="chip chip-score">影響分數 82/100</span><span class="chip direction direction-worsening">方向 ↘</span><span class="chip chip-evidence">證據等級 A-</span><span class="chip chip-confidence">信心 高</span></div>
 <ul>
 <li><strong>事件重點</strong> — Q4 revenue US$3.41bn、年增34%；non-GAAP EPS US$1.02，高於市場預期；NGS ARR 仍強，公司並收購 AI-native security platform Console。</li>
 <li><strong>市場為何在意</strong> — FY27 revenue guidance 約 US$14.10–14.20bn，高於市場預期，但股價仍約 -5.2%，說明市場關注點已從「是否成長」轉向 margin、free cash flow 與高估值能否持續。</li>
@@ -470,8 +721,8 @@ footer {
 <p><strong>市場定價：</strong> 高預期已充分反映。若後續 NGS ARR、free cash flow margin 或 Console cross-sell 超預期，才可能重新打開估值上修空間。</p>
 <p><strong>反向證據：</strong> 公司 revenue、EPS、FY27 guidance 仍強，且 AI 提升資安重要性的結構性 tailwind 沒有逆轉。</p>
 <p><strong>下一催化劑：</strong> 下一季 NGS ARR、margin、FCF 指引，以及 Console 整合／交叉銷售數據。</p>
-<h3>#3｜台灣企業新增 US$20bn 赴美投資，Google 同步擴建台灣 AI 基建研發</h3>
-<p><strong>影響分數｜79/100｜方向｜<span class="direction direction-improving">↗ 改善</span>｜證據等級｜A｜信心｜高</strong></p>
+</section><section class="analysis-card"><h3>#3｜台灣企業新增 US$20bn 赴美投資，Google 同步擴建台灣 AI 基建研發</h3>
+<div class="meta-chips"><span class="chip chip-score">影響分數 79/100</span><span class="chip direction direction-improving">方向 ↗</span><span class="chip chip-evidence">證據等級 A</span><span class="chip chip-confidence">信心 高</span></div>
 <ul>
 <li><strong>事件重點</strong> — 經濟部宣布台灣企業新增約 US$20bn 赴美投資，並稱 AI／晶片訂單「非常活絡」；Google 同日宣布將台北士林 AI 基礎建設研發中心辦公空間擴增約60%。</li>
 <li><strong>市場為何在意</strong> — 兩個事件共同指向「AI demand <span class="direction direction-flat">→ 持平</span> 美國在地化製造 + 台灣研發能力擴張」的雙軌結構，而非單純把台灣供應鏈外移。</li>
@@ -482,8 +733,8 @@ footer {
 <p><strong>市場定價：</strong> 尚未充分反映／長週期。真正可交易的 earnings impact 要等個別公司 CapEx、設備採購與客戶 commitment。</p>
 <p><strong>反向證據：</strong> 若新增投資只是既有計畫重新分類、或美國成本顯著侵蝕 margin，headline 的正面 read-through 會下降。</p>
 <p><strong>下一催化劑：</strong> 個別公司投資公告、Arizona／美國新廠進度、Google 台灣研發新增職缺／合作專案與採購訊號。</p>
-<h2>重要個股事件掃描</h2>
-<div class="table-scroll"><table>
+</section><h2>重要個股事件掃描</h2>
+<div class="table-scroll wide-content"><table>
 <thead>
 <tr>
 <th>Ticker</th>
@@ -554,11 +805,11 @@ footer {
 </tbody>
 </table></div>
 <h2>其他重要市場事件</h2>
-<div class="table-scroll"><table>
+<div class="table-scroll wide-content"><table>
 <thead>
 <tr>
-<th style="text-align:right">排名</th>
-<th style="text-align:right">分數</th>
+<th class="numeric" style="text-align:right">排名</th>
+<th class="numeric" style="text-align:right">分數</th>
 <th>方向</th>
 <th>事件</th>
 <th>主要股票</th>
@@ -567,24 +818,24 @@ footer {
 </thead>
 <tbody>
 <tr>
-<td style="text-align:right">4</td>
-<td style="text-align:right">74</td>
+<td class="numeric" style="text-align:right">4</td>
+<td class="numeric" style="text-align:right">74</td>
 <td><span class="direction direction-improving">↗ 改善</span></td>
 <td>Enflame IPO 線上申購超額6,109倍</td>
 <td>NVDA／中國 AI chip ecosystem</td>
 <td>中國本土 GPU 資本市場熱度高，政策替代題材仍強</td>
 </tr>
 <tr>
-<td style="text-align:right">5</td>
-<td style="text-align:right">70</td>
+<td class="numeric" style="text-align:right">5</td>
+<td class="numeric" style="text-align:right">70</td>
 <td><span class="direction direction-worsening">↘ 惡化</span></td>
 <td>Tesla 中國製 EV 8 月銷量 YoY +3.6%、MoM -7.9%</td>
 <td>TSLA</td>
 <td>中國／出口需求未崩，但動能較7月顯著降溫</td>
 </tr>
 <tr>
-<td style="text-align:right">6</td>
-<td style="text-align:right">68</td>
+<td class="numeric" style="text-align:right">6</td>
+<td class="numeric" style="text-align:right">68</td>
 <td><span class="direction direction-improving">↗ 改善</span></td>
 <td>Google AI Search publisher opt-out 進入 EU antitrust 審視</td>
 <td>GOOGL</td>
@@ -593,7 +844,7 @@ footer {
 </tbody>
 </table></div>
 <h2>美國科技股策略（US TECH STRATEGY）</h2>
-<div class="table-scroll"><table>
+<div class="table-scroll wide-content"><table>
 <thead>
 <tr>
 <th>主題</th>
@@ -645,7 +896,7 @@ footer {
 </tbody>
 </table></div>
 <h2>台灣 AI／半導體／記憶體／伺服器影響</h2>
-<div class="table-scroll"><table>
+<div class="table-scroll wide-content"><table>
 <thead>
 <tr>
 <th>全球驅動因子</th>
@@ -654,7 +905,7 @@ footer {
 <th>傳導機制</th>
 <th>可能受益／承壓</th>
 <th>時間區間</th>
-<th style="text-align:right">信心</th>
+<th class="numeric" style="text-align:right">信心</th>
 <th>反向證據</th>
 </tr>
 </thead>
@@ -666,7 +917,7 @@ footer {
 <td>AI rack/server deployment 擴大 order pool</td>
 <td>ODM 生態系</td>
 <td>1–4季</td>
-<td style="text-align:right">0.94</td>
+<td class="numeric" style="text-align:right">0.94</td>
 <td>Dell sourcing mix／backlog conversion</td>
 </tr>
 <tr>
@@ -676,7 +927,7 @@ footer {
 <td>accelerator 出貨提高 CoWoS/advanced packaging 需求</td>
 <td>先進封裝生態系</td>
 <td>2–6季</td>
-<td style="text-align:right">0.92</td>
+<td class="numeric" style="text-align:right">0.92</td>
 <td>packaging/power bottleneck</td>
 </tr>
 <tr>
@@ -686,7 +937,7 @@ footer {
 <td>每台 server 記憶體內容值提升</td>
 <td>Memory／module ecosystem</td>
 <td>1–4季</td>
-<td style="text-align:right">0.90</td>
+<td class="numeric" style="text-align:right">0.90</td>
 <td>供給擴張與 pricing normalization</td>
 </tr>
 <tr>
@@ -696,7 +947,7 @@ footer {
 <td>rack kW 上升推高 PSU／liquid cooling content</td>
 <td>power/thermal/connector</td>
 <td>1–6季</td>
-<td style="text-align:right">0.91</td>
+<td class="numeric" style="text-align:right">0.91</td>
 <td>架構改變／customer insourcing</td>
 </tr>
 <tr>
@@ -706,7 +957,7 @@ footer {
 <td>美國產能與 localization 擴張</td>
 <td>equipment/materials；overseas margin 有壓力</td>
 <td>1–3年</td>
-<td style="text-align:right">0.88</td>
+<td class="numeric" style="text-align:right">0.88</td>
 <td>公司別／專案／時程尚未完整</td>
 </tr>
 <tr>
@@ -716,13 +967,13 @@ footer {
 <td>台灣在3D packaging、主機板、供電、液冷研發角色提升</td>
 <td>AI infra R&amp;D ecosystem</td>
 <td>2–8季</td>
-<td style="text-align:right">0.84</td>
+<td class="numeric" style="text-align:right">0.84</td>
 <td>辦公空間擴張不等同採購額</td>
 </tr>
 </tbody>
 </table></div>
 <h2>下一階段催化劑（NEXT CATALYSTS）</h2>
-<div class="table-scroll"><table>
+<div class="table-scroll wide-content"><table>
 <thead>
 <tr>
 <th>催化劑</th>
@@ -765,7 +1016,7 @@ footer {
 </tbody>
 </table></div>
 <h2>SOURCE AUDIT</h2>
-<div class="table-scroll"><table>
+<div class="table-scroll wide-content"><table>
 <thead>
 <tr>
 <th>Claim / Event</th>
@@ -828,10 +1079,11 @@ footer {
 <h2>免責聲明（DISCLAIMER）</h2>
 <p>本報告為研究與資訊整理，不構成投資建議、買賣邀約或保證報酬。Market Impact Score、市場定價狀態、Taiwan Spillover 與策略判斷屬基於可得資料的研究推論；盤中價格與政策預期可能快速變動，應以實際市場資料與公司／主管機關最新公告為準。</p>
 
-</main>
-<footer>
-  Global Macro Signal Report · 2026-09-03 01:50:00 · Generated Deterministically
-</footer>
+    </main>
+    <footer>
+      Global Macro Signal Report · 2026-09-03 01:50:00 · Generated Deterministically
+    </footer>
+  </div>
 </div>
 </body>
 </html>
