@@ -127,6 +127,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜ISM服務業需求與價格同步升溫，升息定價逆轉Waller relief",
       "topic": null
+    },
+    "MTW-20260904-1759-taiwan_flow_relief": {
+      "coverage_end_taipei": "2026-09-04 17:59:33+08:00",
+      "coverage_start_taipei": "2026-09-03 22:58:22+08:00",
+      "generated_at_taipei": "2026-09-04 17:59:33+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-04_1759_taiwan_flow_relief.html",
+      "html_sha256": "eb9c952d32e366ba1c8c08ba04621e5c8fa00f7f7219000001d30bb8393c97d8",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-04_1759_taiwan_flow_relief.md",
+      "markdown_sha256": "67ac972fe90d78302d34be87908884e0218fdab669b2dd50e74f422228941e63",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260904-1759-taiwan_flow_relief",
+      "slug": "taiwan_flow_relief",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台灣外資與匯率同步修復，但長端利率與能源風險仍阻止降燈",
+      "topic": null
     }
   },
   "schema_version": 1

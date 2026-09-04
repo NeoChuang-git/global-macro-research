@@ -396,6 +396,15 @@
       "sha256": "0006561767be6aa0edbcc75d1bac02f177cfb92c7e9170fb560ff655a86f66f8",
       "size": 15551
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-04_1759_taiwan_flow_relief.md": {
+      "category": "early-warning",
+      "drive_file_id": "1zQe39j0HYKuYeuEozwOeCE-Fz0cvsrQi",
+      "md5_checksum": "485e513dda804dde79f00a05c34c3512",
+      "modified_time": "2026-09-04T10:06:18.201Z",
+      "name": "Global_Macro_Early_Warning_2026-09-04_1759_taiwan_flow_relief.md",
+      "sha256": "67ac972fe90d78302d34be87908884e0218fdab669b2dd50e74f422228941e63",
+      "size": 17843
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
