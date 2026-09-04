@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Macro Early Warning｜非農大幅超預期重啟升息定價，前一輪台灣資金修復遭遇折現率反壓 · 2026-09-04 22:04:35</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --accent: #0284c7;
+  --accent-light: #e0f2fe;
+  --accent-glow: rgba(2, 132, 199, 0.08);
+
+  /* Callout Colors */
+  --callout-bg: #f8fafc;
+  --callout-thesis-border: #0284c7;
+  --callout-thesis-bg: #f0f9ff;
+  --callout-risk-border: #f97316;
+  --callout-risk-bg: #fff7ed;
+  --callout-strategy-border: #8b5cf6;
+  --callout-strategy-bg: #f5f3ff;
+  --callout-catalyst-border: #10b981;
+  --callout-catalyst-bg: #ecfdf5;
+
+  /* Card & Chips */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
+  --chip-border: #cbd5e1;
+
+  /* Risk Lights */
+  --risk-green-bg: #ecfdf5; --risk-green-text: #059669; --risk-green-border: #a7f3d0;
+  --risk-yellow-bg: #fefce8; --risk-yellow-text: #d97706; --risk-yellow-border: #fef08a;
+  --risk-orange-bg: #fff7ed; --risk-orange-text: #ea580c; --risk-orange-border: #fed7aa;
+  --risk-red-bg: #fef2f2; --risk-red-text: #dc2626; --risk-red-border: #fecaca;
+
+  /* Table */
+  --table-zebra: #f8fafc;
+  --table-hover: #f1f5f9;
+  --table-header-bg: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --bg-surface-raised: #334155;
+    --bg-surface-hover: #475569;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #334155;
+    --border-subtle: #475569;
+    --accent: #38bdf8;
+    --accent-light: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.12);
+
+    --callout-bg: #1e293b;
+    --callout-thesis-border: #38bdf8;
+    --callout-thesis-bg: rgba(56, 189, 248, 0.08);
+    --callout-risk-border: #fb923c;
+    --callout-risk-bg: rgba(249, 115, 22, 0.08);
+    --callout-strategy-border: #a78bfa;
+    --callout-strategy-bg: rgba(167, 139, 250, 0.08);
+    --callout-catalyst-border: #34d399;
+    --callout-catalyst-bg: rgba(52, 211, 153, 0.08);
+
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --chip-bg: #334155;
+    --chip-text: #cbd5e1;
+    --chip-border: #475569;
+
+    --risk-green-bg: rgba(16, 185, 129, 0.15); --risk-green-text: #34d399; --risk-green-border: rgba(16, 185, 129, 0.3);
+    --risk-yellow-bg: rgba(245, 158, 11, 0.15); --risk-yellow-text: #fbbf24; --risk-yellow-border: rgba(245, 158, 11, 0.3);
+    --risk-orange-bg: rgba(249, 115, 22, 0.15); --risk-orange-text: #fb923c; --risk-orange-border: rgba(249, 115, 22, 0.3);
+    --risk-red-bg: rgba(239, 68, 68, 0.15); --risk-red-text: #f87171; --risk-red-border: rgba(239, 68, 68, 0.3);
+
+    --table-zebra: rgba(255, 255, 255, 0.02);
+    --table-hover: rgba(56, 189, 248, 0.06);
+    --table-header-bg: #334155;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 17px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+/* Layout Containers: Narrative & Content Presentation */
+.report-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  position: relative;
+}
+
+.report-narrative {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Content Presentation */
+.wide-content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Typography & Headings */
+.report-narrative p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 100%;
+}
+
+ul, ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
+}
+
+/* Callouts */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.35rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--callout-bg);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.callout p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.callout-thesis {
+  border-left-color: var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.callout-risk {
+  border-left-color: var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.callout-strategy {
+  border-left-color: var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.callout-catalyst {
+  border-left-color: var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Analysis Cards */
+.analysis-card {
+  margin: 2.2rem 0;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.analysis-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Meta Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  line-height: 1.35;
+}
+
+.chip-score {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.chip-evidence, .chip-confidence, .chip-severity, .chip-persistence {
+  color: var(--text-secondary);
+}
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.direction-up { color: #0284c7; }
+.direction-down { color: #7c3aed; }
+.direction-improving { color: #059669; }
+.direction-worsening { color: #dc2626; }
+.direction-flat { color: var(--text-muted); }
+
+/* Risk Lights */
+.risk-chip, .risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.risk-green { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.risk-yellow { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.risk-orange { background: var(--risk-orange-bg); color: var(--risk-orange-text); border: 1px solid var(--risk-orange-border); }
+.risk-red { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* State Transitions */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.state-prior { color: var(--text-muted); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  text-align: left;
+  min-width: 680px;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--text-primary);
+  font-weight: 650;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+td {
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Executive Summary Grid */
+.executive-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 0;
+}
+
+.executive-points > li {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .executive-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.badge-grade-B { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent); }
+.badge-grade-C { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.badge-grade-D { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(2, 132, 199, 0.4);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+    font-size: 16px;
+  }
+  .report-narrative p {
+    font-size: 16px;
+  }
+  h1.hero-title { font-size: 1.45rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  h4 { font-size: 1rem; }
+  .analysis-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="report-container">
+  <div class="report-narrative">
+    
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">MACRO_TAIWAN_EARLY_WARNING</span>
+      <span class="risk-chip risk-orange">🟠 Risk: ORANGE</span>
+      
+    </div>
+    <div class="hero-run-id">RUN_ID: <code>MTW-20260904-2204-nfp_hawkish_repricing</code></div>
+  </div>
+  <h1 class="hero-title">Global Macro Early Warning｜非農大幅超預期重啟升息定價，前一輪台灣資金修復遭遇折現率反壓</h1>
+  <div class="hero-meta-row">
+    <span class="hero-chip">發布時間：2026-09-04 22:04:35</span>
+    <span class="hero-chip hero-chip-cov">涵蓋：2026-09-04 17:59:33 ~ 2026-09-04 22:04:35</span>
+  </div>
+</header>
+
+    <main class="report-content">
+      
+<h2>核心警報摘要（EXECUTIVE TAKE）</h2>
+<blockquote class="callout">
+<p>8 月非農就業不是一般程度的 beat，而是把前一輪「就業溫和 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Fed 暫停 <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 殖利率回落」的改善鏈直接打斷：新增 16.2 萬，約為市場共識 5.5–5.6 萬的三倍，2Y/10Y 殖利率同步跳升、美元走強、黃金大跌，9 月升息市場定價（Market Pricing）重新升至約 59–65%。這構成新的 TACTICAL hawkish repricing，但尚未達 RED。</p>
+</blockquote>
+<ul>
+<li><strong>勞動市場｜<span class="direction direction-worsening">↘ 惡化</span></strong> — 非農新增 16.2 萬，高於約 5.5–5.6 萬共識；失業率維持 4.1%，勞動參與率反升至 61.6%。先前「Labor Cooling」作為 Fed 暫停的高權重反證明顯削弱。</li>
+<li><strong>Fed／利率｜<span class="direction direction-worsening">↘ 惡化</span></strong> — 2Y 殖利率（Yield）由約 4.34% 升至約 4.40%，10Y 升至約 4.80%；9 月升息機率由約五五波回到約 59–65%，折現率壓力重新主導。</li>
+<li><strong>美元／黃金｜<span class="direction direction-worsening">↘ 惡化</span></strong> — DXY 約升 0.37% 至 99.33；Gold 單日跌逾 2%。這與 Treasury selloff 同向，確認是 hawkish policy repricing，而非單一就業新聞。</li>
+<li><strong>風險資產｜<span class="direction direction-flat">→ 持平</span> 偏負但未失序</strong> — S&amp;P 500／Nasdaq 開盤近乎持平，並未出現信用利差（Credit Spread）或流動性（Liquidity）危機；因此仍是 discount-rate shock，不是 funding shock。</li>
+<li><strong>台灣｜ORANGE 維持</strong> — 9/4 白天外資現貨、TWD、TAIEX 已修復，但今晚美國利率與美元反向惡化，將對下一交易日高估值半導體／AI 形成估值（Valuation）壓力；AI／Memory 基本面仍是關鍵反證。</li>
+</ul>
+<hr/>
+<h2>訊號變化總覽（SIGNAL DELTA）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>訊號</th>
+<th>前值→目前</th>
+<th>方向／Delta</th>
+<th style="text-align:right">嚴重度</th>
+<th style="text-align:right">信心</th>
+<th>跨資產確認</th>
+<th>台灣關聯</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>labor_market_cooling</td>
+<td>約+5.6萬預期／7月+2.1萬修正 <span class="direction direction-flat">→ 持平</span> 8月+16.2萬</td>
+<td><span class="direction direction-worsening">↘ 惡化</span> 明顯惡化</td>
+<td style="text-align:right">2/5→4/5</td>
+<td style="text-align:right">高</td>
+<td>2Y<span class="direction direction-up">↑ 上升</span>、USD<span class="direction direction-up">↑ 上升</span></td>
+<td>高</td>
+</tr>
+<tr>
+<td>fed_policy_tightening</td>
+<td>約48–50%附近 <span class="direction direction-flat">→ 持平</span> 約59–65%升息定價</td>
+<td><span class="direction direction-worsening">↘ 惡化</span></td>
+<td style="text-align:right">3/5→4/5</td>
+<td style="text-align:right">高</td>
+<td>2Y/10Y<span class="direction direction-up">↑ 上升</span>、Gold<span class="direction direction-down">↓ 下降</span></td>
+<td>高</td>
+</tr>
+<tr>
+<td>rates_shock</td>
+<td>10Y約4.76–4.77% <span class="direction direction-flat">→ 持平</span> 約4.80%</td>
+<td><span class="direction direction-worsening">↘ 惡化</span></td>
+<td style="text-align:right">3/5→4/5</td>
+<td style="text-align:right">高</td>
+<td>2Y同步上升</td>
+<td>極高</td>
+</tr>
+<tr>
+<td>fx_funding_stress</td>
+<td>DXY偏弱 <span class="direction direction-flat">→ 持平</span> 99.33、+0.37%</td>
+<td><span class="direction direction-worsening">↘ 惡化</span> 邊際惡化</td>
+<td style="text-align:right">2/5→3/5</td>
+<td style="text-align:right">中高</td>
+<td>EUR/JPY同步走弱</td>
+<td>高</td>
+</tr>
+<tr>
+<td>energy_inflation</td>
+<td>Brent約95.5、週線高檔</td>
+<td><span class="direction direction-flat">→ 持平</span> 高風險</td>
+<td style="text-align:right">5/5</td>
+<td style="text-align:right">高</td>
+<td>週漲逾6%</td>
+<td>高</td>
+</tr>
+</tbody>
+</table></div>
+<section class="analysis-card"><h3>Signal #1｜非農大幅超預期，Labor Cooling thesis 被高權重官方資料反證</h3>
+<div class="meta-chips"><span class="chip chip-score">Severity 4/5</span><span class="chip chip-confidence">Confidence 高</span><span class="chip">TACTICAL</span><span class="chip direction direction-flat">Risk Light：<span class="state-transition"><span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span> ORANGE</span> <span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span> <span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span> ORANGE</span></span></span></div>
+<ul>
+<li><strong>What changed｜</strong> 美國 8 月非農新增 162,000，市場共識約 55,000–56,000；失業率維持 4.1%，勞參率 61.4% <span class="direction direction-flat">→ 持平</span> 61.6%。</li>
+<li><strong>Current / Prior / Consensus / Revision｜</strong> current = +162k；prior 7 月由 -23k 修正為 +21k；consensus 約 +55k～56k；前值上修本身也降低「勞動急凍」論點。</li>
+<li><strong>Rate of change｜</strong> 新增就業較 7 月修正值增加約 141k，且相對共識高出逾 100k；屬可改變政策定價的統計級 surprise。</li>
+<li><strong>Persistence / Breadth｜</strong> 單月 headline 仍需工資與後續月份確認，但失業率未升、勞參率回升、初領失業金仍低，breadth 足以否定「快速失速」。</li>
+<li><strong>Market reaction / Cross-asset｜</strong> 2Y 約 +6bp、10Y 約 +3bp；DXY +0.37%；Gold 跌逾2%；Fed 9月升息機率重新升至約59–65%。</li>
+<li><strong>Kill condition｜</strong> 9/11 CPI 明顯低於預期、Fed hike odds 重新 &lt;40–50%、US10Y 回落 &lt;4.6%，且後續 labor data 再顯著降溫。</li>
+</ul>
+<h4>機制</h4>
+<p>就業本身變強對營收（Revenue）不是負面；但當油價與服務價格仍高、Fed 對通膨仍敏感時，強勞動市場降低需求快速降溫的機率，讓政策維持限制性甚至再升息的空間增加。傳導鏈為：Labor <span class="state-transition"><span class="state-prior">resilience</span><span class="transition-arrow">→</span><span class="state-current">inflation persistence</span></span> risk <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> Fed easing space <span class="direction direction-down">↓ 下降</span> / hike risk <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> Real Yield／discount rate <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> long-duration equity multiple 承壓。</p>
+<h4>市場定價</h4>
+<blockquote class="callout">
+<p>本輪不是「成長好所以股市一定差」，而是「就業強到足以改變 Fed 反應函數」。Treasury、美元與黃金三個資產群組同步反應，符合 hawkish repricing；股票尚未大跌則是 AI／盈利基本面仍提供對沖。</p>
+</blockquote>
+<h4>反向證據</h4>
+<p>Q2 單位勞動成本僅 +1.2%、製造業 -0.3%，說明 wage-cost spiral 尚未重新建立；Waller 仍保留在通膨降溫時 hold 的選項。故本輪是政策尾端風險重新上升，不是通膨失控或確定升息。</p>
+<h4>台灣傳導</h4>
+<p>即時：高 2Y/10Y 與美元上升壓縮 TSMC／AI hardware 高 duration 估值。數週至數月：若 Fed 維持更久高利率，外資資金流（Flow）與 TWD 可能再承壓。1–3 季：只有訂單（Order）、外銷訂單（Export Orders）、庫存（Inventory）、毛利率（Gross Margin）、資本支出（CapEx）與前瞻指引（Guidance）同步下修，才升級為基本面週期惡化。</p>
+<h4>下一確認條件</h4>
+<p>9/11 CPI／core CPI；Fed hike odds 是否維持 &gt;65–75%；US10Y 是否突破 4.85–5.0%；USD/TWD 是否重新 &gt;31.8；台灣外資現貨回補是否在下週反轉。</p>
+<hr/>
+</section><h2>為何重要（WHY IT MATTERS）</h2>
+<blockquote class="callout">
+<p>前一輪 ORANGE 不降燈的重要理由之一，是等待 NFP 驗證 rates relief 是否可持續。現在 NFP 給出的不是溫和確認，而是直接反向 surprise，因此本輪有明確的 Signal Delta；但信用與 Funding 未惡化、台灣基本面反證仍在，所以不升 RED。</p>
+</blockquote>
+<ol>
+<li><strong>Data / Policy</strong> <span class="direction direction-flat">→ 持平</span> NFP +162k、失業率 4.1% <span class="direction direction-flat">→ 持平</span> 勞動韌性超預期 <span class="direction direction-flat">→ 持平</span> Fed hold conviction 下降。</li>
+<li><strong>Rates / FX / Credit / Liquidity</strong> <span class="direction direction-flat">→ 持平</span> 2Y/10Y <span class="direction direction-up">↑ 上升</span>、DXY <span class="direction direction-up">↑ 上升</span>、Gold <span class="direction direction-down">↓ 下降</span>；Credit／Liquidity 未失序 <span class="direction direction-flat">→ 持平</span> discount-rate shock。</li>
+<li><strong>Sector / Flows</strong> <span class="direction direction-flat">→ 持平</span> 長久期科技估值敏感度升高；白天台灣外資回補面臨下一交易日再測試。</li>
+<li><strong>Earnings / Valuation</strong> <span class="direction direction-flat">→ 持平</span> 強需求有利企業營收，但高折現率限制 multiple expansion。</li>
+<li><strong>Taiwan</strong> <span class="direction direction-flat">→ 持平</span> 先經估值、外資 Flow、TWD 傳導；只有訂單／盈利同步弱化才轉 Fundamental shock。</li>
+</ol>
+<hr/>
+<h2>總經與政策細節（MACRO / POLICY DETAIL）</h2>
+<ul>
+<li><strong>Growth｜</strong> 非農 +162k 與失業率 4.1% 反對 near-term recession；美國服務需求此前亦維持擴張。<code>us_growth_momentum</code> 由「溫和」轉為「韌性偏強」。</li>
+<li><strong>Inflation｜</strong> July CPI headline 3.4% y/y、core 2.5%，ULC 降溫是反證；但 Services Prices 高檔與 Brent 約95美元以上使 <code>us_inflation_momentum</code> 仍偏上行風險。</li>
+<li><strong>Labor｜</strong> <code>labor_market_cooling</code> 明顯逆轉：headline、失業率、勞參率與前值修正共同削弱快速降溫 thesis。</li>
+<li><strong>Fed / Monetary Policy｜</strong> <code>fed_policy_tightening</code> 再升溫；Waller conditional hold 仍在，但市場已提高 9 月升息定價。</li>
+<li><strong>Rates / Term Premium｜</strong> 2Y/10Y 反應最直接；30Y 先前約5.24%高檔，期限溢酬（Term Premium）背景未解除。</li>
+<li><strong>Liquidity / Market Plumbing｜</strong> 無 repo、basis、FX swap crisis 新證據；<code>usd_liquidity</code> 維持中性偏緊，而非 crisis。</li>
+<li><strong>Credit / Bank Credit｜</strong> 無 crisis-type spread widening 或銀行信貸急縮新證據；<code>credit_cycle</code>／<code>bank_credit_tightening</code> 不升級。</li>
+<li><strong>Fiscal / Treasury Supply｜</strong> 高供給與財政仍是長端殖利率背景，但本輪不是 auction/supply-specific trigger。</li>
+<li><strong>FX / Global Dollar｜</strong> DXY +0.37% 至99.33；EUR、JPY同步走弱，<code>fx_funding_stress</code> 邊際上升但尚非 funding squeeze。</li>
+<li><strong>Commodities / Inflation Chain｜</strong> Brent 週漲逾6%、柴油創高，<code>energy_inflation</code> 維持高 severity，與強就業形成 Fed hawkish 共振。</li>
+<li><strong>Global Trade / Supply Chain｜</strong> Hormuz 實體航運限制仍在，但本輪沒有新的更高級 physical-disruption threshold。</li>
+<li><strong>China / Asia / Taiwan Cycle｜</strong> 中國服務 PMI 51.4；韓國8月出口 +68.7% y/y，AI hardware 需求強。<code>ai_fundamental_cycle</code>、<code>memory_cycle</code>、<code>asia_export_cycle</code> 尚未反轉。</li>
+</ul>
+<hr/>
+<h2>跨資產確認（CROSS-ASSET CONFIRMATION）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>資產／指標</th>
+<th style="text-align:right">最新可得狀態</th>
+<th>Raw Direction</th>
+<th>Signal 解讀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US2Y</td>
+<td style="text-align:right">約4.40%，資料後約+6bp</td>
+<td><span class="direction direction-up">↑ 上升</span></td>
+<td><span class="direction direction-worsening">↘ 惡化</span> Fed tightening risk 上升</td>
+</tr>
+<tr>
+<td>US10Y</td>
+<td style="text-align:right">約4.795%，資料後約+3bp</td>
+<td><span class="direction direction-up">↑ 上升</span></td>
+<td><span class="direction direction-worsening">↘ 惡化</span> 股票估值壓力上升</td>
+</tr>
+<tr>
+<td>US30Y / Real Yield</td>
+<td style="text-align:right">30Y先前約5.24%；即時精確 real yield不足</td>
+<td>→高檔</td>
+<td><span class="direction direction-worsening">↘ 惡化</span> 長 duration 壓力未解</td>
+</tr>
+<tr>
+<td>DXY</td>
+<td style="text-align:right">約99.33、+0.37%</td>
+<td><span class="direction direction-up">↑ 上升</span></td>
+<td><span class="direction direction-worsening">↘ 惡化</span> 全球美元金融條件收緊</td>
+</tr>
+<tr>
+<td>JPY</td>
+<td style="text-align:right">約156.45/USD</td>
+<td><span class="direction direction-down">↓ 下降</span>日圓</td>
+<td><span class="direction direction-worsening">↘ 惡化</span> 亞洲美元壓力邊際上升</td>
+</tr>
+<tr>
+<td>Gold</td>
+<td style="text-align:right">約US$4,376、跌逾2%</td>
+<td><span class="direction direction-down">↓ 下降</span></td>
+<td><span class="direction direction-worsening">↘ 惡化</span> hawkish repricing確認</td>
+</tr>
+<tr>
+<td>Brent</td>
+<td style="text-align:right">約US$95–96、週漲逾6%</td>
+<td><span class="direction direction-up">↑ 上升</span>週線</td>
+<td><span class="direction direction-worsening">↘ 惡化</span> 能源通膨壓力</td>
+</tr>
+<tr>
+<td>Credit Spread</td>
+<td style="text-align:right">無危機型擴張新證據</td>
+<td><span class="direction direction-flat">→ 持平</span></td>
+<td><span class="direction direction-flat">→ 持平</span> 非 credit shock</td>
+</tr>
+<tr>
+<td>VIX / MOVE</td>
+<td style="text-align:right">本輪缺乏可靠即時精確值</td>
+<td>—</td>
+<td>不作 trigger evidence</td>
+</tr>
+<tr>
+<td>S&amp;P / Nasdaq</td>
+<td style="text-align:right">開盤約0%附近</td>
+<td><span class="direction direction-flat">→ 持平</span></td>
+<td><span class="direction direction-flat">→ 持平</span> 盈利反證仍在</td>
+</tr>
+<tr>
+<td>亞洲主要股市</td>
+<td style="text-align:right">9/4白天多數上漲</td>
+<td><span class="direction direction-up">↑ 上升</span></td>
+<td><span class="direction direction-improving">↗ 改善</span> 先前風險偏好修復</td>
+</tr>
+<tr>
+<td>TAIEX</td>
+<td style="text-align:right">46,551.13、+1.51%</td>
+<td><span class="direction direction-up">↑ 上升</span></td>
+<td><span class="direction direction-improving">↗ 改善</span> 白天台灣 repair；待下交易日驗證</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2>證據與反向證據（EVIDENCE VS COUNTER-EVIDENCE）</h2>
+<p><strong>FACT</strong></p>
+<ul>
+<li>BLS：8 月非農 +162k、失業率 4.1%、勞參率 61.6%；7 月就業修正為 +21k。</li>
+<li>Treasury：2Y 約4.40%、10Y 約4.795%，均在就業數據後上升。</li>
+<li>DXY 約 +0.37%；Gold 跌逾2%；Brent 週漲逾6%。</li>
+<li>9/4 台灣白天外資買超 NT$562.13 億、TAIEX +1.51%、USD/TWD 收31.630、TAIFEX 外資臺股期貨淨空 -82,389口。</li>
+</ul>
+<p><strong>MARKET EXPECTATION</strong></p>
+<ul>
+<li>8 月 NFP 共識約 +55k～56k；實際 +162k。</li>
+<li>9 月 Fed 升息機率在數據後升至約 59–65%；市場仍等待 9/11 CPI 決定是否跨越更高 hawkish threshold。</li>
+</ul>
+<p><strong>INFERENCE</strong></p>
+<ul>
+<li>Labor Cooling 的前一輪改善 thesis 被高權重官方資料削弱，<code>fed_policy_tightening</code> 與 <code>rates_shock</code> severity 上調。</li>
+<li>但股票未全面 risk-off、Credit/Funding 未失序、台灣外資白天仍改善，因此不能把本輪等同 RED 或 Regime Shift。</li>
+</ul>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>論點</th>
+<th>支持證據</th>
+<th>反向證據</th>
+<th>判定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fed再緊縮風險上升</td>
+<td>NFP大幅beat；2Y/10Y<span class="direction direction-up">↑ 上升</span>；hike odds<span class="direction direction-up">↑ 上升</span></td>
+<td>Waller conditional hold；ULC溫和</td>
+<td>Confirmed Tactical</td>
+</tr>
+<tr>
+<td>Labor Cooling thesis失效</td>
+<td>+162k、失業率4.1%、前值上修</td>
+<td>單月資料仍需後續確認</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>Funding crisis形成</td>
+<td>無</td>
+<td>stocks穩、credit未失序</td>
+<td>Contradicted</td>
+</tr>
+<tr>
+<td>AI／Memory基本面反轉</td>
+<td>無</td>
+<td>韓國出口、Nvidia/TSMC需求仍強</td>
+<td>Contradicted</td>
+</tr>
+<tr>
+<td>Taiwan Flow repair完全失效</td>
+<td>尚無</td>
+<td>9/4外資/TWD/TAIEX仍改善</td>
+<td>Unconfirmed</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2>台灣傳導（TAIWAN TRANSMISSION）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>傳導管道</th>
+<th>Horizon</th>
+<th>方向</th>
+<th>台灣影響</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>估值（Valuation）</td>
+<td>即時</td>
+<td><span class="direction direction-worsening">↘ 惡化</span></td>
+<td>UST與Real Yield上行壓縮高P/E半導體／AI multiple</td>
+</tr>
+<tr>
+<td>外需</td>
+<td>數週至數月</td>
+<td>→偏正</td>
+<td>美國就業韌性＋韓國出口強，需求尚未崩落</td>
+</tr>
+<tr>
+<td>金融條件</td>
+<td>即時至數週</td>
+<td><span class="direction direction-worsening">↘ 惡化</span>邊際</td>
+<td>美元／殖利率上升可能減弱外資回補</td>
+</tr>
+<tr>
+<td>匯率</td>
+<td>即時</td>
+<td><span class="direction direction-worsening">↘ 惡化</span>風險</td>
+<td>若USD/TWD再升，能源進口與外資風險溢酬放大</td>
+</tr>
+<tr>
+<td>日本放大器</td>
+<td>數週至數月</td>
+<td>混合</td>
+<td>JPY走弱減少carry unwind，但美元壓力升高</td>
+</tr>
+<tr>
+<td>中國放大器</td>
+<td>數週至數月</td>
+<td><span class="direction direction-flat">→ 持平</span></td>
+<td>服務業PMI改善，暫無新負面threshold</td>
+</tr>
+<tr>
+<td>供應鏈（Supply Chain）</td>
+<td>1–3季</td>
+<td>→偏正</td>
+<td>AI/Memory orders、CapEx尚未反轉</td>
+</tr>
+<tr>
+<td>能源成本</td>
+<td>數週至1–3季</td>
+<td><span class="direction direction-worsening">↘ 惡化</span></td>
+<td>Brent/Hormuz與美元可能共同壓毛利率</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2>產業／股票敏感度（INDUSTRY / EQUITY SENSITIVITY）</h2>
+<blockquote class="callout">
+<p>本輪最敏感的不是所有台股，而是「高 duration + 高外資權重」與「高能源成本曝險」兩端；AI／Memory 基本面仍強時，優先視為 valuation shock。</p>
+</blockquote>
+<ul>
+<li><strong>大型半導體／AI｜</strong> 高敏感。US2Y/10Y與美元上行對估值偏負；訂單與CapEx反證仍強。</li>
+<li><strong>Server / Data Center｜</strong> 需求與資本支出（CapEx）仍具支撐，但 discount-rate beta 高。</li>
+<li><strong>Memory / HBM｜</strong> 韓國出口與AI需求維持強勁，基本面週期仍 Positive-to-Neutral。</li>
+<li><strong>航空／運輸／高耗能工業｜</strong> 油價與美元雙升最直接壓毛利率（Gross Margin）。</li>
+<li><strong>金融｜</strong> 高利率對利差與債券 duration 的效果分化，不作單向判斷。</li>
+</ul>
+<hr/>
+<h2>市場週期 vs 基本面週期</h2>
+<blockquote class="callout">
+<p>市場週期（Market Cycle）今晚重新轉向 hawkish repricing；基本面週期（Fundamental Cycle）仍未失守。現在更合理的判讀是「discount-rate deterioration &gt; earnings deterioration」。</p>
+</blockquote>
+<p><strong>市場週期｜<span class="direction direction-worsening">↘ 惡化</span> 邊際惡化。</strong> 2Y/10Y、美元、黃金與 Fed 定價同步反應，證明前一輪 rates relief 的 persistence 失敗。</p>
+<p><strong>基本面週期｜<span class="direction direction-flat">→ 持平</span> 偏正。</strong> AI／Memory 的訂單、營收、庫存、CapEx、前瞻指引尚未同步轉弱；韓國出口 +68.7% y/y 仍是強反證。</p>
+<hr/>
+<h2>分類與風險燈號變化（CLASSIFICATION &amp; RISK LIGHT DELTA）</h2>
+<blockquote class="callout">
+<p>本輪是 TACTICAL hawkish repricing，不是 Regime Shift。ORANGE 維持，因雖有 Labor + Fed Policy + Rates + FX 共振，但 Credit/Funding 未危機化，且 Taiwan/AI fundamentals 的核心反證仍有效。</p>
+</blockquote>
+<p><strong>Classification｜</strong> TACTICAL — NFP Hawkish Repricing / Labor Cooling Reversal.</p>
+<p><strong>Risk Light｜</strong> <span class="state-transition"><span class="risk risk-orange">🟠 ORANGE</span> <span class="transition-arrow">→</span> <span class="risk risk-orange">🟠 ORANGE</span></span>。</p>
+<p>升 RED 至少仍需：Fed hike odds &gt;75% 並持續、US10Y &gt;4.85–5.0%、Brent &gt;100，且 Credit/Funding 或台灣外資／FX／基本面至少再有一組同步惡化。降 YELLOW 則需 CPI 溫和、hike odds &lt;40–50%、US10Y &lt;4.6%、Brent &lt;90，並且台灣 Flow repair 延續。</p>
+<hr/>
+<h2>情境矩陣（SCENARIO MATRIX）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>情境</th>
+<th class="numeric" style="text-align:right">機率</th>
+<th>關鍵條件</th>
+<th>市場影響</th>
+<th>Risk Light</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base</td>
+<td class="numeric" style="text-align:right">55%</td>
+<td>NFP強、CPI未再加速；hike odds 55–70%；10Y 4.7–4.9；Brent 90–100</td>
+<td>科技估值受限、基本面仍穩</td>
+<td><span class="risk risk-orange">🟠</span></td>
+</tr>
+<tr>
+<td>Bull</td>
+<td class="numeric" style="text-align:right">20%</td>
+<td>CPI明顯溫和、hike odds &lt;40%、10Y &lt;4.6、Brent &lt;90、台灣外資續買</td>
+<td>Taiwan risk premium下降</td>
+<td><span class="risk risk-yellow">🟡</span></td>
+</tr>
+<tr>
+<td>Bear</td>
+<td class="numeric" style="text-align:right">25%</td>
+<td>CPI偏熱、hike odds &gt;75%、10Y &gt;4.85–5%、Brent &gt;100、台灣Flow/FX再惡化</td>
+<td>rates/FX shock擴大</td>
+<td>RED候選</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2>下一確認條件（NEXT CONFIRMATION）</h2>
+<blockquote class="callout">
+<p>下一個能決定本輪 hawkish repricing 是否從 Tactical 轉成更高風險級別的，是 9/11 CPI 與市場對它的跨資產反應，而不是再看單一 Fed 發言。</p>
+</blockquote>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>監控項目</th>
+<th>改善門檻</th>
+<th>惡化門檻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPI / core CPI</td>
+<td>明顯低於預期、3m annualized降溫</td>
+<td>headline/core重新加速</td>
+</tr>
+<tr>
+<td>Fed hike odds</td>
+<td>&lt;40–50%並持續</td>
+<td>&gt;75%並持續</td>
+</tr>
+<tr>
+<td>US10Y</td>
+<td>&lt;4.60%</td>
+<td>&gt;4.85–5.00%</td>
+</tr>
+<tr>
+<td>Brent</td>
+<td>&lt;US$90</td>
+<td>&gt;US$100並持續</td>
+</tr>
+<tr>
+<td>USD/TWD</td>
+<td>&lt;31.5且外資續買</td>
+<td>&gt;31.8且外資再賣</td>
+</tr>
+<tr>
+<td>TWSE foreign flow</td>
+<td>連續2–3日買超</td>
+<td>再現NT$300–500億級賣超</td>
+</tr>
+<tr>
+<td>TAIFEX foreign OI</td>
+<td>淨空&lt;75,000並續降</td>
+<td>淨空&gt;85,000並續增</td>
+</tr>
+<tr>
+<td>AI fundamentals</td>
+<td>orders／guidance／memory pricing穩</td>
+<td>orders／inventory／margin／CapEx／guidance同步轉弱</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2>SOURCE AUDIT</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Source</th>
+<th>URL</th>
+<th>Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8月NFP +162k、失業率4.1%、勞參率61.6%</td>
+<td>U.S. Bureau of Labor Statistics</td>
+<td>https://www.bls.gov/news.release/archives/empsit_09042026.htm</td>
+<td>A</td>
+</tr>
+<tr>
+<td>NFP共識約+56k、前值修正+21k、Fed定價上升</td>
+<td>Reuters</td>
+<td>https://www.reuters.com/business/us-nonfarm-payrolls-surge-august-unemployment-rate-steady-41-2026-09-04/</td>
+<td>A/B</td>
+</tr>
+<tr>
+<td>2Y約4.40%、10Y約4.795%，資料後跳升</td>
+<td>MarketWatch / market data</td>
+<td>https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-investors-await-august-jobs-data/card/treasury-yields-spike-after-jobs-data-PXatWOa5VAWR1pr6rAFX</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Gold跌逾2%、Fed hike odds約65%</td>
+<td>Reuters</td>
+<td>https://www.reuters.com/world/india/gold-holds-ground-with-us-payrolls-data-radar-2026-09-04/</td>
+<td>B</td>
+</tr>
+<tr>
+<td>DXY +0.37%至99.33；EUR/JPY走弱</td>
+<td>Reuters</td>
+<td>https://www.reuters.com/world/asia-pacific/yen-headed-strongest-week-month-dollar-flat-ahead-payroll-data-2026-09-04/</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Brent週漲逾6%、能源通膨壓力</td>
+<td>Reuters</td>
+<td>https://www.reuters.com/business/energy/oil-set-steepest-weekly-gain-since-mid-july-over-intensifying-us-iran-tensions-2026-09-04/</td>
+<td>B</td>
+</tr>
+<tr>
+<td>韓國8月出口+68.7% y/y、AI／晶片需求強</td>
+<td>Reuters</td>
+<td>https://www.reuters.com/world/asia-pacific/south-koreas-aug-exports-up-687-yy-expand-15th-straight-month-2026-09-01/</td>
+<td>B</td>
+</tr>
+<tr>
+<td>台灣9/4外資/TWD/TAIEX/OI白天修復</td>
+<td>Macro &amp; Taiwan Risk Watch Durable Journal latest block</td>
+<td>Google Doc current-run precheck</td>
+<td>A/internal verified</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2>結論（BOTTOM LINE）</h2>
+<blockquote class="callout">
+<p>這一輪真正的新 Signal Delta 是「Labor Cooling 的改善 thesis 被官方非農大幅反證，並立刻獲得 Treasury、美元、黃金與 Fed 定價確認」。非農 +162k 對比約 +56k 共識、2Y/10Y 上行、DXY 走強、Gold 跌逾2%，足以把 <code>labor_market_cooling</code>、<code>fed_policy_tightening</code> 與 <code>rates_shock</code> severity 同步上調。</p>
+</blockquote>
+<p>但目前仍不是 RED：S&amp;P/Nasdaq 未出現全面 risk-off，Credit/Funding 無危機型惡化，台灣白天的外資/TWD/TAIEX修復尚未被下一交易日價格行為證偽，AI／Memory 基本面也仍強。Classification 維持 TACTICAL、Risk Light 維持 ORANGE；下一個真正可能跨級的節點是 9/11 CPI 是否把強就業轉化為更持久的 Fed tightening 定價。</p>
+
+    </main>
+    <footer>
+      Global Macro Signal Report · 2026-09-04 22:04:35 · Generated Deterministically
+    </footer>
+  </div>
+</div>
+</body>
+</html>

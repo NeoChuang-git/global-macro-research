@@ -143,6 +143,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜台灣外資與匯率同步修復，但長端利率與能源風險仍阻止降燈",
       "topic": null
+    },
+    "MTW-20260904-2204-nfp_hawkish_repricing": {
+      "coverage_end_taipei": "2026-09-04 22:04:35+08:00",
+      "coverage_start_taipei": "2026-09-04 17:59:33+08:00",
+      "generated_at_taipei": "2026-09-04 22:04:35+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-04_2204_nfp_hawkish_repricing.html",
+      "html_sha256": "8c5a39aabdf37ca3cfc71ba4f0f6796222a5ebf09ebe225baf78254bc4ff2223",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-04_2204_nfp_hawkish_repricing.md",
+      "markdown_sha256": "0095ff8131dbee4684c18b4958370a38b51c21e960abe434baee04ccf4a7da6c",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260904-2204-nfp_hawkish_repricing",
+      "slug": "nfp_hawkish_repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜非農大幅超預期重啟升息定價，前一輪台灣資金修復遭遇折現率反壓",
+      "topic": null
     }
   },
   "schema_version": 1
