@@ -16,6 +16,22 @@
       "title": "Global Daily Brief｜Dell AI 伺服器訂單暴增，AI 基建需求再獲硬證據",
       "topic": null
     },
+    "GDB-20260904-0728": {
+      "coverage_end_taipei": "2026-09-04 07:28:51+08:00",
+      "coverage_start_taipei": "2026-09-03 07:28:51+08:00",
+      "generated_at_taipei": "2026-09-04 07:28:51+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-04.html",
+      "html_sha256": "2083418fae9671bbb353c20cffd17eecd37f4f2022b19cc3b2fffec8598cd6ec",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-04.md",
+      "markdown_sha256": "3a0fc52cd1bac0fcd8afc9f9a9640f6e8b9b54790fba48b4004313a042e58c81",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20260904-0728",
+      "slug": "nvidia_huggingface_open_ai_platform",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜NVIDIA 以 129 億美元收購 Hugging Face，AI 戰場向開放模型平台延伸",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
