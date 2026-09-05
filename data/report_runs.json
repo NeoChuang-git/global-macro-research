@@ -175,6 +175,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜非農大幅超預期重啟升息定價，前一輪台灣資金修復遭遇折現率反壓",
       "topic": null
+    },
+    "MTW-20260905-2216-kharg_tanker_escalation": {
+      "coverage_end_taipei": "2026-09-05 22:16:45+08:00",
+      "coverage_start_taipei": "2026-09-04 22:04:35+08:00",
+      "generated_at_taipei": "2026-09-05 22:16:45+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-05_2216_kharg_tanker_escalation.html",
+      "html_sha256": "27738d1646b1286998eaa02e0aad48e318134509f7f3c3c248990e40eb6e5a29",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-05_2216_kharg_tanker_escalation.md",
+      "markdown_sha256": "01ffd81b76a2ba75a6c1a0983e36e25ea9fe40600177b38718903bef52d000c9",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260905-2216-kharg_tanker_escalation",
+      "slug": "kharg_tanker_escalation",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美伊衝突直接延伸至原油運輸船，能源實體鏈升級但全球供給衝擊尚未確認",
+      "topic": null
     }
   },
   "schema_version": 1

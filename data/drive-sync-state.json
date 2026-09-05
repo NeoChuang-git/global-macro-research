@@ -423,6 +423,15 @@
       "sha256": "0095ff8131dbee4684c18b4958370a38b51c21e960abe434baee04ccf4a7da6c",
       "size": 17761
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-05_2216_kharg_tanker_escalation.md": {
+      "category": "early-warning",
+      "drive_file_id": "1OWnicWVwYdz98nOrjnDkV_eAgkvZBAQI",
+      "md5_checksum": "68bd7cb3139cafe2a1b8f8b563a2658e",
+      "modified_time": "2026-09-05T14:23:52.115Z",
+      "name": "Global_Macro_Early_Warning_2026-09-05_2216_kharg_tanker_escalation.md",
+      "sha256": "01ffd81b76a2ba75a6c1a0983e36e25ea9fe40600177b38718903bef52d000c9",
+      "size": 21576
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
