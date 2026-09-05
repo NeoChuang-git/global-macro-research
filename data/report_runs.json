@@ -32,6 +32,22 @@
       "title": "Global Daily Brief｜NVIDIA 以 129 億美元收購 Hugging Face，AI 戰場向開放模型平台延伸",
       "topic": null
     },
+    "GDB-20260905-1016": {
+      "coverage_end_taipei": "2026-09-05 10:16:00+08:00",
+      "coverage_start_taipei": "2026-09-04 10:16:00+08:00",
+      "generated_at_taipei": "2026-09-05 10:16:00+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-05_rerun_1016.html",
+      "html_sha256": "4198befcaf878bc98cb047106c822274827da2d2f38d8b888a427f019764dc3a",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-05_rerun_1016.md",
+      "markdown_sha256": "da07fff85e21c03d5b7896c6e7bccfcb363e65f72790583bba82d8e79cac7604",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20260905-1016",
+      "slug": "tesla_cybercab_nhtsa_probe",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Tesla Cybercab 遭 NHTSA 正式調查，自駕商業化進入監管壓力測試",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
