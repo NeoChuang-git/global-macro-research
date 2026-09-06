@@ -44,11 +44,11 @@
     },
     "weekly": {
       "category": "weekly",
-      "date": "2026-08-30",
-      "file": "reports/weekly/Weekly_Strategy_2026-08-30_rerun_1421.html",
-      "modified_time": "2026-08-30T06:23:50.989Z",
-      "sha256": "caa7b5491f8b4405fefaf90f1c17db8e7598701cf9690f77036d83c7b25439ce",
-      "title": "Weekly Strategy rerun 1421"
+      "date": "2026-09-06",
+      "file": "reports/weekly/Weekly_Strategy_2026-09-06.html",
+      "modified_time": null,
+      "sha256": "698c9475a3b94d90268be0787ec573ec8b652ad2248f1c74b7cfbadd567b0750",
+      "title": "Weekly Strategy"
     }
   },
   "reports": [
@@ -72,6 +72,14 @@
       "source_kind": "google_doc_markdown",
       "title": "Global Daily Brief｜鴻海 8 月營收創高，AI 伺服器需求再獲台灣供應鏈硬證據",
       "topic": null
+    },
+    {
+      "category": "weekly",
+      "date": "2026-09-06",
+      "file": "reports/weekly/Weekly_Strategy_2026-09-06.html",
+      "modified_time": null,
+      "sha256": "698c9475a3b94d90268be0787ec573ec8b652ad2248f1c74b7cfbadd567b0750",
+      "title": "Weekly Strategy"
     },
     {
       "category": "early-warning",

@@ -476,6 +476,15 @@
       "name": "Weekly_Strategy_2026-08-30_rerun_1421.html",
       "sha256": "caa7b5491f8b4405fefaf90f1c17db8e7598701cf9690f77036d83c7b25439ce",
       "size": 30358
+    },
+    "reports/weekly/Weekly_Strategy_2026-09-06.md": {
+      "category": "weekly",
+      "drive_file_id": "1LwjHbfFi9vj8TFMnb9N6yuhmvVbFIqNS",
+      "md5_checksum": "1979fd2038dc367b96a2472bfb1c9c77",
+      "modified_time": "2026-09-06T12:10:14.866Z",
+      "name": "Weekly_Strategy_2026-09-06.md",
+      "sha256": "bb32fcf17dc014c8237796b0a5e8a228fdb4d2cb6142ee3fc3a938eb67a2bf4f",
+      "size": 26318
     }
   },
   "schema_version": 1
