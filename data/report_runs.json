@@ -64,6 +64,22 @@
       "title": "Global Daily Brief｜鴻海 8 月營收創高，AI 伺服器需求再獲台灣供應鏈硬證據",
       "topic": null
     },
+    "GDB-20260907-0731": {
+      "coverage_end_taipei": "2026-09-07 07:31:51+08:00",
+      "coverage_start_taipei": "2026-09-06 07:31:51+08:00",
+      "generated_at_taipei": "2026-09-07 07:31:51+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-07.html",
+      "html_sha256": "9f2fa8823ae1ce457ddc62a87e0f0002cf844185049fc51d274e5a891438aced",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-07.md",
+      "markdown_sha256": "2f9dd6fe7c3d457bafb6f02063442081d14530fffaca5f6f6025e7799908f191",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20260907-0731",
+      "slug": "ai_datacenter_constraints_weekend",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜週末科技事件降溫，AI 資料中心擴張轉向電力、成本與政策約束",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
