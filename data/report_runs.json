@@ -48,6 +48,22 @@
       "title": "Global Daily Brief｜Tesla Cybercab 遭 NHTSA 正式調查，自駕商業化進入監管壓力測試",
       "topic": null
     },
+    "GDB-20260906-0727": {
+      "coverage_end_taipei": "2026-09-06 07:27:10+08:00",
+      "coverage_start_taipei": "2026-09-05 07:27:10+08:00",
+      "generated_at_taipei": "2026-09-06 07:27:10+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-06.html",
+      "html_sha256": "e7c86709066d5a83833932c05b357648dc3cf6b6cc9a5d346b7c0c93256d1df9",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-06.md",
+      "markdown_sha256": "74c14c7e0731b86318a99f8321001089f8f2d0484158b6dfbcec8f82f3c85f35",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20260906-0727",
+      "slug": "foxconn_ai_august_revenue",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜鴻海 8 月營收創高，AI 伺服器需求再獲台灣供應鏈硬證據",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
