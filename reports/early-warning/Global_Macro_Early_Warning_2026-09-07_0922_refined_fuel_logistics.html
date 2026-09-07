@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Macro Early Warning｜能源衝擊擴散至船用燃料與亞洲物流成本，通膨鏈由原油風險進入成品油瓶頸 · 2026-09-07 09:22:56</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --accent: #0284c7;
+  --accent-light: #e0f2fe;
+  --accent-glow: rgba(2, 132, 199, 0.08);
+
+  /* Callout Colors */
+  --callout-bg: #f8fafc;
+  --callout-thesis-border: #0284c7;
+  --callout-thesis-bg: #f0f9ff;
+  --callout-risk-border: #f97316;
+  --callout-risk-bg: #fff7ed;
+  --callout-strategy-border: #8b5cf6;
+  --callout-strategy-bg: #f5f3ff;
+  --callout-catalyst-border: #10b981;
+  --callout-catalyst-bg: #ecfdf5;
+
+  /* Card & Chips */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
+  --chip-border: #cbd5e1;
+
+  /* Risk Lights */
+  --risk-green-bg: #ecfdf5; --risk-green-text: #059669; --risk-green-border: #a7f3d0;
+  --risk-yellow-bg: #fefce8; --risk-yellow-text: #d97706; --risk-yellow-border: #fef08a;
+  --risk-orange-bg: #fff7ed; --risk-orange-text: #ea580c; --risk-orange-border: #fed7aa;
+  --risk-red-bg: #fef2f2; --risk-red-text: #dc2626; --risk-red-border: #fecaca;
+
+  /* Table */
+  --table-zebra: #f8fafc;
+  --table-hover: #f1f5f9;
+  --table-header-bg: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --bg-surface-raised: #334155;
+    --bg-surface-hover: #475569;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #334155;
+    --border-subtle: #475569;
+    --accent: #38bdf8;
+    --accent-light: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.12);
+
+    --callout-bg: #1e293b;
+    --callout-thesis-border: #38bdf8;
+    --callout-thesis-bg: rgba(56, 189, 248, 0.08);
+    --callout-risk-border: #fb923c;
+    --callout-risk-bg: rgba(249, 115, 22, 0.08);
+    --callout-strategy-border: #a78bfa;
+    --callout-strategy-bg: rgba(167, 139, 250, 0.08);
+    --callout-catalyst-border: #34d399;
+    --callout-catalyst-bg: rgba(52, 211, 153, 0.08);
+
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --chip-bg: #334155;
+    --chip-text: #cbd5e1;
+    --chip-border: #475569;
+
+    --risk-green-bg: rgba(16, 185, 129, 0.15); --risk-green-text: #34d399; --risk-green-border: rgba(16, 185, 129, 0.3);
+    --risk-yellow-bg: rgba(245, 158, 11, 0.15); --risk-yellow-text: #fbbf24; --risk-yellow-border: rgba(245, 158, 11, 0.3);
+    --risk-orange-bg: rgba(249, 115, 22, 0.15); --risk-orange-text: #fb923c; --risk-orange-border: rgba(249, 115, 22, 0.3);
+    --risk-red-bg: rgba(239, 68, 68, 0.15); --risk-red-text: #f87171; --risk-red-border: rgba(239, 68, 68, 0.3);
+
+    --table-zebra: rgba(255, 255, 255, 0.02);
+    --table-hover: rgba(56, 189, 248, 0.06);
+    --table-header-bg: #334155;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 17px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+/* Layout Containers: Narrative & Content Presentation */
+.report-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  position: relative;
+}
+
+.report-narrative {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Content Presentation */
+.wide-content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Typography & Headings */
+.report-narrative p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 100%;
+}
+
+ul, ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
+}
+
+/* Callouts */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.35rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--callout-bg);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.callout p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.callout-thesis {
+  border-left-color: var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.callout-risk {
+  border-left-color: var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.callout-strategy {
+  border-left-color: var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.callout-catalyst {
+  border-left-color: var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Analysis Cards */
+.analysis-card {
+  margin: 2.2rem 0;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.analysis-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Meta Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  line-height: 1.35;
+}
+
+.chip-score {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.chip-evidence, .chip-confidence, .chip-severity, .chip-persistence {
+  color: var(--text-secondary);
+}
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.direction-up { color: #0284c7; }
+.direction-down { color: #7c3aed; }
+.direction-improving { color: #059669; }
+.direction-worsening { color: #dc2626; }
+.direction-flat { color: var(--text-muted); }
+
+/* Risk Lights */
+.risk-chip, .risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.risk-green { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.risk-yellow { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.risk-orange { background: var(--risk-orange-bg); color: var(--risk-orange-text); border: 1px solid var(--risk-orange-border); }
+.risk-red { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* State Transitions */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.state-prior { color: var(--text-muted); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  text-align: left;
+  min-width: 680px;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--text-primary);
+  font-weight: 650;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+td {
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Executive Summary Grid */
+.executive-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 0;
+}
+
+.executive-points > li {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .executive-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.badge-grade-B { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent); }
+.badge-grade-C { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.badge-grade-D { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(2, 132, 199, 0.4);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+    font-size: 16px;
+  }
+  .report-narrative p {
+    font-size: 16px;
+  }
+  h1.hero-title { font-size: 1.45rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  h4 { font-size: 1rem; }
+  .analysis-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="report-container">
+  <div class="report-narrative">
+    
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">MACRO_TAIWAN_EARLY_WARNING</span>
+      <span class="risk-chip risk-orange">🟠 Risk: ORANGE</span>
+      
+    </div>
+    <div class="hero-run-id">RUN_ID: <code>MTW-20260907-0922-refined_fuel_logistics</code></div>
+  </div>
+  <h1 class="hero-title">Global Macro Early Warning｜能源衝擊擴散至船用燃料與亞洲物流成本，通膨鏈由原油風險進入成品油瓶頸</h1>
+  <div class="hero-meta-row">
+    <span class="hero-chip">發布時間：2026-09-07 09:22:56</span>
+    <span class="hero-chip hero-chip-cov">涵蓋：2026-09-07 07:48:55 ~ 2026-09-07 09:22:56</span>
+  </div>
+</header>
+
+    <main class="report-content">
+      
+<h2>核心警報摘要（EXECUTIVE TAKE）</h2>
+<blockquote class="callout">
+<p>本輪真正新增的警報不是 Brent 再漲多少，而是能源衝擊已從 Hormuz 原油物流收縮進一步擴散到船用燃料與中間餾分油：低庫存、亞洲成品油進口收縮與高燃料成本同時存在，讓通膨壓力開始具備「物流成本二次傳導」條件。</p>
+</blockquote>
+<ul>
+<li><strong>成品油供應鏈 <span class="direction direction-worsening">↘ 惡化</span>：</strong> Reuters 9/7 新增資料顯示，全球主要燃料油庫存中心約低於季節常態 30%，Q3 燃料油供需缺口估計約 21.8 萬桶/日；這是實體供需訊號，不是單一地緣政治標題。</li>
+<li><strong>亞洲物流成本 <span class="direction direction-worsening">↘ 惡化</span>：</strong> 新加坡低硫船用燃料（VLSFO）自伊朗戰爭開始以來累計漲幅約 76%，明顯大於同期 Brent 約 40%；若持續，貨櫃、散裝與區域供應鏈（Supply Chain）的燃油附加成本將向終端報價傳導。</li>
+<li><strong>跨資產尚未全面惡化：</strong> Brent 本輪僅小幅上升至約 96.5–96.8 美元；日本、韓國與亞洲股市早盤仍上漲，美元大致持穩，顯示市場目前仍把衝擊視為可控的供給風險，而非廣泛 funding / credit shock。</li>
+<li><strong>台灣即時反證仍有效：</strong> 09:05 電子零組件類股約上漲 1.94%，75 家上漲、14 家下跌；外資現貨資金流（Flow）、TAIFEX 外資 OI 與完整 USDTWD 盤中確認尚未取得，因此 Risk Light 維持 ORANGE。</li>
+</ul>
+<h2>訊號變化總覽（SIGNAL DELTA）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>訊號</th>
+<th>前值→目前</th>
+<th>方向／Delta</th>
+<th class="numeric" style="text-align:right">嚴重度</th>
+<th>信心</th>
+<th>跨資產確認</th>
+<th>台灣關聯</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>energy_inflation</td>
+<td>原油物流收縮 <span class="direction direction-flat">→ 持平</span> 成品油/船燃瓶頸</td>
+<td><span class="direction direction-worsening">↘ 惡化</span></td>
+<td class="numeric" style="text-align:right">4/5</td>
+<td>高</td>
+<td>產品價格與庫存確認；股市未確認</td>
+<td>高：運輸、電力與進口成本</td>
+</tr>
+<tr>
+<td>global_trade_cycle</td>
+<td>Hormuz 流量下降 <span class="direction direction-flat">→ 持平</span> 航運燃料成本傳導</td>
+<td><span class="direction direction-worsening">↘ 惡化</span></td>
+<td class="numeric" style="text-align:right">3/5</td>
+<td>中高</td>
+<td>亞洲成品油進口低檔；亞洲股市反向</td>
+<td>高：出口型供應鏈物流</td>
+</tr>
+<tr>
+<td>rates_shock</td>
+<td>高利率風險 <span class="direction direction-flat">→ 持平</span> 無新現貨利率確認</td>
+<td><span class="direction direction-flat">→ 持平</span> 中性</td>
+<td class="numeric" style="text-align:right">3/5</td>
+<td>中</td>
+<td>美國假期、現券新價格不足</td>
+<td>中高：估值敏感</td>
+</tr>
+<tr>
+<td>semiconductor_relative_weakness</td>
+<td>無明顯弱化 <span class="direction direction-flat">→ 持平</span> 早盤零組件偏強</td>
+<td><span class="direction direction-improving">↗ 改善</span></td>
+<td class="numeric" style="text-align:right">2/5</td>
+<td>中</td>
+<td>韓國/日本股市同步偏強</td>
+<td>高：AI/半導體核心曝險</td>
+</tr>
+</tbody>
+</table></div>
+<section class="analysis-card"><h3>Signal #1｜成品油瓶頸把能源風險推向第二輪通膨傳導</h3>
+<div class="meta-chips"><span class="chip chip-score">Severity 4/5</span><span class="chip chip-confidence">Confidence 高</span><span class="chip">TACTICAL</span><span class="chip direction direction-flat">Risk Light：<span class="state-transition"><span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span> ORANGE</span> <span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span> <span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span> ORANGE</span></span></span></div>
+<ul>
+<li><strong>What changed：</strong> 07:48 後新增的實體證據顯示，燃料油市場不只是「可能變緊」，而是出現低庫存、供需缺口與價格相對原油超額上漲的組合。</li>
+<li><strong>Current / Prior / Consensus / Revision：</strong> Q3 全球燃料油缺口估計約 21.8 萬桶/日，去年同期僅約 0.6 萬桶/日；主要庫存中心約低於季節常態 30%。這是本輪新增的量化確認，非宏觀共識預測。</li>
+<li><strong>Rate of change / Persistence / Breadth：</strong> 亞洲 8 月成品油進口降至 510 萬桶/日，7 月為 561 萬桶/日，且較戰前均值少近 200 萬桶/日；柴油、航煤與船燃均呈緊張，廣度已跨越單一產品。</li>
+<li><strong>Market reaction：</strong> Brent 原始價格（Raw Direction）<span class="direction direction-up">↑ 上升</span> 約 0.2–0.5%，至約 96.5–96.8 美元；但新加坡 VLSFO 自戰爭以來累計 <span class="direction direction-up">↑ 上升</span> 約 76%，代表產品端 scarcity premium 高於原油本身。</li>
+<li><strong>Counter-evidence：</strong> 亞洲股市仍偏強，且 Brent 未突破前幾日高點；因此目前尚無「能源 <span class="direction direction-flat">→ 持平</span> 利率 <span class="direction direction-flat">→ 持平</span> 信用利差（Credit Spread）<span class="direction direction-flat">→ 持平</span> 股票」的完整 risk-off confirmation。</li>
+</ul>
+<h4>機制</h4>
+<p>原油供應受限只是第一層；當煉廠運轉、產品出口與海運本身同時受阻，柴油、航煤與船燃的有效供給會比 crude benchmark 更緊。船燃成本上升會先推高航運報價與能源密集產業成本，再透過訂單（Order）與毛利率（Gross Margin）壓力影響企業前瞻指引（Guidance）。</p>
+<h4>市場定價</h4>
+<p>目前市場定價（Market Pricing）仍呈「實體能源緊、風險資產未全面風險趨避」的分裂狀態。這使本訊號屬高信心的基本面供給警報，但尚不足以把整體 Risk Light 由 ORANGE 升至 RED。</p>
+<h4>反向證據</h4>
+<p>IEA 8 月報告同時指出高燃料價格已壓低全球需求，2026 年油品需求預估收縮；需求破壞可限制第二輪漲價。中國 8 月海運原油進口亦由 7 月 693 萬桶/日回升至 714 萬桶/日，雖仍大幅低於戰前，顯示替代來源與調整仍在進行。</p>
+<h4>台灣傳導</h4>
+<p>即時：航運、航空、石化與高耗能製造的成本敏感度上升。數週至數月：若 bunker / diesel premium 維持高檔，台灣出口供應鏈可能面臨運費與庫存（Inventory）安全水位上升。1–3 季：若能源成本進一步抬高全球通膨與實質殖利率（Real Yield），則 AI／半導體高估值（Valuation）資產會遭遇折現率壓力。</p>
+<h4>下一確認條件</h4>
+<p>觀察 Singapore VLSFO / gasoil cracks 是否續創高、Brent 是否有效突破近期區間、亞洲貨櫃與散裝運價是否跟進，以及美國市場重開後 2Y/10Y/30Y 殖利率（Yield）、實質殖利率與信用利差是否同步上行。</p>
+</section><section class="analysis-card"><h3>Signal #2｜亞洲成品油短缺開始轉化為全球貿易成本風險</h3>
+<div class="meta-chips"><span class="chip chip-score">Severity 3/5</span><span class="chip chip-confidence">Confidence 中高</span><span class="chip">TACTICAL</span><span class="chip direction direction-flat">Risk Light：<span class="state-transition"><span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span> ORANGE</span> <span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span> <span class="risk risk-orange"><span class="risk risk-orange">🟠 Orange</span> ORANGE</span></span></span></div>
+<ul>
+<li><strong>What changed：</strong> 航運燃料供應壓力已明確指向亞洲，尤其高度依賴 Gulf flows 的新加坡與東亞貿易鏈。</li>
+<li><strong>Current / Prior：</strong> 亞洲 8 月成品油進口 510 萬桶/日，月減約 9%，且較戰前少近 200 萬桶/日；這讓船燃短缺具備區域廣度與持續性。</li>
+<li><strong>Causal mechanism：</strong> bunker cost <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> freight surcharge <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> 交貨與安全庫存成本 <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> 出口商毛利率／終端價格壓力 <span class="direction direction-up">↑ 上升</span>。</li>
+<li><strong>Cross-asset confirmation：</strong> 日本 Nikkei 約 <span class="direction direction-up">↑ 上升</span>2%、韓國 KOSPI 約 <span class="direction direction-up">↑ 上升</span>3%、MSCI 亞太除日本約 <span class="direction direction-up">↑ 上升</span>0.9%，構成明確反向證據；目前並非 global risk-off。</li>
+<li><strong>Kill condition：</strong> Hormuz 實體通行快速恢復、主要產品庫存回到季節均值，且 VLSFO / gasoil 相對 Brent 的超額漲幅顯著回吐，則本訊號降級。</li>
+</ul>
+<h4>台灣傳導</h4>
+<p>台灣的主要風險不是立即的股價崩跌，而是外需與物流成本對營收（Revenue）／毛利率的滯後侵蝕。電子業若具高附加價值與議價能力可部分吸收，但航運、航空、石化、機械與低毛利 OEM 對燃料與運輸附加費更敏感。</p>
+</section><h2>為何重要（WHY IT MATTERS）</h2>
+<ol>
+<li><strong>Data / Policy：</strong> Hormuz 流量收縮已被成品油低庫存與供需缺口補上第二層實體證據。</li>
+<li><strong>Rates / FX / Credit / Liquidity：</strong> 若產品通膨持續，Fed 降溫空間下降，期限溢酬（Term Premium）與實質殖利率存在再上行風險；目前流動性（Liquidity）與信用尚未同步惡化。</li>
+<li><strong>Sector / Flow：</strong> 能源、煉油相對受益；航運燃料使用者、航空與低毛利製造承受成本壓力。亞洲科技股資金流（Flow）目前仍具韌性。</li>
+<li><strong>Earnings / Valuation：</strong> 先影響運費與毛利率，再經通膨預期影響估值；若利率市場跟進，成長股折現率壓力會放大。</li>
+<li><strong>Taiwan：</strong> 即時由物流／能源成本傳導，數週至數月反映在外銷訂單（Export Orders）與毛利率，1–3 季才可能形成估值與資本支出（CapEx）的第二輪影響。</li>
+</ol>
+<h2>總經與政策細節（MACRO / POLICY DETAIL）</h2>
+<p><strong>Growth：</strong> 美國 8 月就業強勢是既有訊號，本輪無新統計增量；亞洲股市偏強仍支持短期成長韌性。<strong>Inflation：</strong> 新增的是產品端供給瓶頸，方向 <span class="direction direction-worsening">↘ 惡化</span>。<strong>Labor / Fed：</strong> 本輪無新官方勞動或 Fed 訊號，維持前次偏鷹再定價背景。</p>
+<p><strong>Rates / Term Premium：</strong> 美國現券市場本時段缺乏新價格確認，不能以舊殖利率冒充本輪。<strong>Liquidity / Credit / Bank Credit：</strong> 未發現新的美元 funding stress、信用事件或銀行信貸惡化證據。<strong>Fiscal / Treasury Supply：</strong> 無新的高影響供給事件。</p>
+<p><strong>FX / Global Dollar：</strong> 美元大致持穩、日圓偏強，未形成美元流動性壓迫。<strong>Commodities：</strong> 原油僅小幅走高，但 refined-product premium 顯著偏強。<strong>Global Trade / Supply Chain：</strong> 成品油進口與 bunker cost 是本輪最重要增量。<strong>China / Asia / Taiwan：</strong> 中國原油進口月增但仍遠低於戰前；亞洲與台灣科技早盤尚未確認 risk-off。</p>
+<h2>跨資產確認（CROSS-ASSET CONFIRMATION）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>資產</th>
+<th>Raw Direction</th>
+<th>經濟解讀</th>
+<th>Signal Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brent</td>
+<td><span class="direction direction-up">↑ 上升</span> 至約 96.5–96.8 美元</td>
+<td>供給風險仍在，但未加速突破</td>
+<td><span class="direction direction-worsening">↘ 惡化</span></td>
+</tr>
+<tr>
+<td>Singapore VLSFO</td>
+<td><span class="direction direction-up">↑ 上升</span> 戰爭以來約 76%</td>
+<td>船燃 scarcity premium 擴大</td>
+<td><span class="direction direction-worsening">↘ 惡化</span></td>
+</tr>
+<tr>
+<td>DXY / JPY</td>
+<td>美元約持平；JPY偏強</td>
+<td>無新增美元 funding stress</td>
+<td><span class="direction direction-improving">↗ 改善</span></td>
+</tr>
+<tr>
+<td>Nikkei / KOSPI / MSCI Asia ex-Japan</td>
+<td><span class="direction direction-up">↑ 上升</span> 約 2% / 3% / 0.9%</td>
+<td>風險偏好仍有韌性</td>
+<td><span class="direction direction-improving">↗ 改善</span></td>
+</tr>
+<tr>
+<td>台灣電子零組件</td>
+<td><span class="direction direction-up">↑ 上升</span> 約 1.94%</td>
+<td>科技風險尚未擴散</td>
+<td><span class="direction direction-improving">↗ 改善</span></td>
+</tr>
+<tr>
+<td>UST / Real Yield / Credit Spread / MOVE / VIX</td>
+<td><span class="direction direction-flat">→ 持平</span> 無本時段可驗證的新完整價格</td>
+<td>不以舊值推導新 shock</td>
+<td><span class="direction direction-flat">→ 持平</span> 中性</td>
+</tr>
+</tbody>
+</table></div>
+<h2>證據與反向證據（EVIDENCE VS COUNTER-EVIDENCE）</h2>
+<p><strong>FACT：</strong> Reuters 9/7 報導 Q3 燃料油供需缺口約 21.8 萬桶/日，主要庫存中心低於季節常態約 30%；亞洲 8 月成品油進口降至 510 萬桶/日。IEA 8 月 OMR 亦確認全球煉廠 throughput 年減、產品市場偏緊與中間餾分油 crack 高企。</p>
+<p><strong>MARKET EXPECTATION：</strong> 市場目前沒有把此情境定價為全面金融壓力；亞洲股票上漲、美元平穩，顯示「供給型通膨尾端風險」仍高於「立即衰退／流動性危機」機率。</p>
+<p><strong>INFERENCE：</strong> 若船燃與柴油相對原油的 premium 再擴大，即使 Brent 本身不突破 100 美元，全球物流通膨仍可能先行惡化。反之，只要產品庫存補回、亞洲進口回升且 cracks 壓縮，二次傳導就會失效。</p>
+<h2>台灣傳導（TAIWAN TRANSMISSION）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>傳導渠道</th>
+<th>Horizon</th>
+<th>目前判斷</th>
+<th>需確認</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>估值</td>
+<td>1–3季</td>
+<td>若通膨抬高 Real Yield，AI/半導體估值承壓</td>
+<td>美債重開後實質利率</td>
+</tr>
+<tr>
+<td>外需</td>
+<td>數週至數月</td>
+<td>全球運輸成本抬升可能侵蝕終端需求</td>
+<td>出口、外銷訂單（Export Orders）</td>
+</tr>
+<tr>
+<td>金融條件</td>
+<td>即時至數週</td>
+<td>尚未見信用／美元流動性收緊</td>
+<td>Credit Spread、DXY、外資 Flow</td>
+</tr>
+<tr>
+<td>匯率</td>
+<td>即時</td>
+<td>本輪未取得足夠新 USDTWD 盤中驗證</td>
+<td>USDTWD、亞洲貨幣聯動</td>
+</tr>
+<tr>
+<td>日本／中國放大器</td>
+<td>數週至數月</td>
+<td>中國受 Gulf 供應約束較深；日本股市目前反向偏強</td>
+<td>中國進口、JPY、日韓製造循環</td>
+</tr>
+</tbody>
+</table></div>
+<p>TAIFEX 外資 OI、TWSE 外資當日最終 Flow、TSMC ADR vs spot 的完整日內確認尚未形成，因此不將早盤局部價格行為外推為整體台灣風險升級。</p>
+<h2>產業／股票敏感度（INDUSTRY / EQUITY SENSITIVITY）</h2>
+<p><strong>高負敏感：</strong> 航空、國際航運燃料使用者、石化下游、低毛利 OEM／機械出口商；核心變數是燃料附加費能否轉嫁。<strong>中度負敏感：</strong> 高估值 AI／半導體，主要透過實質殖利率與估值而非直接燃料成本。</p>
+<p><strong>相對受益：</strong> 上游能源、部分煉油／產品裂解受益者。台灣半導體基本面週期（Fundamental Cycle）目前未被本輪能源訊號破壞，且早盤電子零組件仍強，因此不能把能源供給風險誤判成 semiconductor_relative_weakness。</p>
+<h2>市場週期 vs 基本面週期</h2>
+<p><strong>市場週期（Market Cycle）：</strong> 亞洲股票與台灣電子類股顯示 risk-on 韌性，能源風險尚未形成廣泛去風險部位（Positioning）。<strong>基本面週期（Fundamental Cycle）：</strong> refined-product scarcity、低庫存與進口收縮已具持續性，基本面風險比股價表現更差。</p>
+<p>兩者目前背離，這正是 early-warning 的價值：先記錄成本鏈惡化，但在利率、信用與股票尚未同步確認前，不提前升級為 RED 或 REGIME_SHIFT。</p>
+<h2>分類與風險燈號變化（CLASSIFICATION &amp; RISK LIGHT DELTA）</h2>
+<ul>
+<li><strong>Risk Light：<span class="state-transition"><span class="risk risk-orange">🟠 ORANGE</span> <span class="transition-arrow">→</span> <span class="risk risk-orange">🟠 ORANGE</span></span>。</strong> 新訊號提高能源通膨與台灣物流成本尾端風險，但缺乏至少兩項獨立市場指標同步惡化，故不升 RED。</li>
+<li><strong>Classification：TACTICAL <span class="direction direction-flat">→ 持平</span> TACTICAL。</strong> 供給衝擊具 persistence 與 breadth，但跨資產尚未形成趨勢型 risk-off；尚不符合 TREND_FORMATION / REGIME_SHIFT 的市場確認門檻。</li>
+<li><strong>Signal Direction：</strong> energy_inflation <span class="direction direction-worsening">↘ 惡化</span>；global_trade_cycle <span class="direction direction-worsening">↘ 惡化</span>；semiconductor_relative_weakness <span class="direction direction-improving">↗ 改善</span>；fx_funding_stress <span class="direction direction-flat">→ 持平</span> 中性。</li>
+</ul>
+<h2>情境矩陣（SCENARIO MATRIX）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>情境</th>
+<th>機率傾向</th>
+<th>關鍵條件</th>
+<th>市場含意</th>
+<th>台灣含意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base：高油品成本但風險資產吸收</td>
+<td>最高</td>
+<td>Brent 90–100 區間、產品 cracks 高但不再加速</td>
+<td>ORANGE / TACTICAL</td>
+<td>毛利與物流成本壓力、科技仍相對強</td>
+</tr>
+<tr>
+<td>Bear：產品短缺轉成再通膨交易</td>
+<td>上升</td>
+<td>VLSFO/diesel 再創高、UST Real Yield 與 USD 同升</td>
+<td><span class="state-transition"><span class="risk risk-orange">🟠 ORANGE</span> <span class="transition-arrow">→</span> <span class="risk risk-red">🔴 RED</span></span> 候選</td>
+<td>外資轉賣、TWD弱、半導體估值壓縮</td>
+</tr>
+<tr>
+<td>Bull：物流正常化與需求破壞降溫</td>
+<td>仍可行</td>
+<td>Hormuz 流量回升、庫存補回、cracks 壓縮</td>
+<td><span class="state-transition"><span class="risk risk-orange">🟠 ORANGE</span> <span class="transition-arrow">→</span> <span class="risk risk-yellow">🟡 YELLOW</span></span> 候選</td>
+<td>成本壓力緩解、AI基本面重新主導</td>
+</tr>
+</tbody>
+</table></div>
+<h2>下一確認條件（NEXT CONFIRMATION）</h2>
+<blockquote class="callout">
+<p>下一個真正會改變 Risk Light 的不是另一則戰爭標題，而是「產品價格＋利率／美元＋信用／股票」是否出現同步惡化。若只剩 bunker fuel 高、而亞洲科技與金融條件穩定，維持 ORANGE / TACTICAL。</p>
+</blockquote>
+<p>優先檢查：1) Singapore VLSFO、gasoil/diesel crack 與主要庫存；2) Brent 是否突破近期高點；3) 美國市場重開後 UST 2Y/10Y/30Y、Real Yield、curve、MOVE/VIX、Credit Spread；4) DXY/JPY/EUR/USDTWD；5) TWSE foreign flow、TAIFEX foreign OI、TAIEX breadth、TSMC ADR vs spot、SOX vs Taiwan semi；6) 台灣出口／訂單、韓國半導體出口、memory pricing、主要公司訂單／庫存／毛利率／CapEx／Guidance。</p>
+<h2>SOURCE AUDIT</h2>
+<ul>
+<li>Reuters｜Ship fuel shortage looms as refiners strained by war favour other products｜2026-09-07｜https://www.reuters.com/business/energy/ship-fuel-shortage-looms-refiners-strained-by-war-favour-other-products-2026-09-07/</li>
+<li>Reuters｜Asia's refined fuel imports hit post-war low, can the Middle East help?｜2026-09-01｜https://www.reuters.com/commentary/reuters-open-interest/asias-refined-fuel-imports-hit-post-war-low-can-middle-east-help-2026-09-01/</li>
+<li>IEA｜Oil Market Report - August 2026｜2026-08-12｜https://www.iea.org/reports/oil-market-report-august-2026</li>
+<li>U.S. EIA｜Weekly Petroleum Status Report, week ending 2026-08-28｜2026-09-02｜https://www.eia.gov/petroleum/supply/weekly/pdf/highlights.pdf</li>
+<li>Reuters｜Asia shares bounce, others cautious as oil rises｜2026-09-07｜https://www.reuters.com/world/china/global-markets-global-markets-2026-09-07/</li>
+<li>Reuters｜China's crude oil imports stayed weak in August. Can this continue?｜2026-09-07｜https://www.reuters.com/commentary/reuters-open-interest/chinas-crude-oil-imports-stayed-weak-august-can-this-continue-2026-09-07/</li>
+<li>鉅亨網｜台股電子零組件業 09:05 盤中資料｜2026-09-07｜https://gfe-desktop.cnyes.com/news/id/6599028</li>
+</ul>
+<h2>結論（BOTTOM LINE）</h2>
+<blockquote class="callout">
+<p>本輪的 material delta 是「能源風險由原油物流收縮，擴散至成品油與船燃成本鏈」。這提高亞洲與台灣的物流／輸入性通膨尾端風險，但股票、美元與金融條件尚未同步惡化，因此 Research 判定為 TRIGGERED、Risk Light 維持 ORANGE、Classification 維持 TACTICAL；下一步必須等利率、信用與台灣外資 Flow 是否加入共振。</p>
+</blockquote>
+
+    </main>
+    <footer>
+      Global Macro Signal Report · 2026-09-07 09:22:56 · Generated Deterministically
+    </footer>
+  </div>
+</div>
+</body>
+</html>

@@ -239,6 +239,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜Hormuz 實體航運流量降至 5 月來低點，能源供應風險由事件升級為可量化物流收縮",
       "topic": null
+    },
+    "MTW-20260907-0922-refined_fuel_logistics": {
+      "coverage_end_taipei": "2026-09-07 09:22:56+08:00",
+      "coverage_start_taipei": "2026-09-07 07:48:55+08:00",
+      "generated_at_taipei": "2026-09-07 09:22:56+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-07_0922_refined_fuel_logistics.html",
+      "html_sha256": "8fbbc65cabe94417509a171f82415d86bf00a32a00d6c863b419f0c77f0e77be",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-07_0922_refined_fuel_logistics.md",
+      "markdown_sha256": "f9f44dd0f2ea4d46841b770c771a291dc1d7c8dade9f49ed34335d7d55451598",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260907-0922-refined_fuel_logistics",
+      "slug": "refined_fuel_logistics",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜能源衝擊擴散至船用燃料與亞洲物流成本，通膨鏈由原油風險進入成品油瓶頸",
+      "topic": null
     }
   },
   "schema_version": 1
