@@ -303,6 +303,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜美債高殖利率與日圓 Carry Unwind 形成新一輪金融條件壓力",
       "topic": null
+    },
+    "MTW-20260908-1811-oil-rates-tightening": {
+      "coverage_end_taipei": "2026-09-08 18:11:57+08:00",
+      "coverage_start_taipei": "2026-09-08 14:27:44+08:00",
+      "generated_at_taipei": "2026-09-08 18:11:57+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-08_1811_oil-rates-tightening.html",
+      "html_sha256": "d1f77b3152a540373057b95232a25f680649f4239b7d556b5b4c80214d07031f",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-08_1811_oil-rates-tightening.md",
+      "markdown_sha256": "aeb207ba5da079cde9422058e0793090f4fa3f94fab6d61635564be4f1838475",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260908-1811-oil-rates-tightening",
+      "slug": "oil-rates-tightening",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜沙烏地供給衝擊推油價逼近100美元，折現率壓力再上移",
+      "topic": null
     }
   },
   "schema_version": 1
