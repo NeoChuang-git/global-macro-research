@@ -80,6 +80,22 @@
       "title": "Global Daily Brief｜週末科技事件降溫，AI 資料中心擴張轉向電力、成本與政策約束",
       "topic": null
     },
+    "GDB-20260908-0730": {
+      "coverage_end_taipei": "2026-09-08 07:30:10+08:00",
+      "coverage_start_taipei": "2026-09-07 07:30:10+08:00",
+      "generated_at_taipei": "2026-09-08 07:30:10+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-08.html",
+      "html_sha256": "ac94c629c7e1019b25f4ea6c97dca77dc9ddcad387ceaca3819cf248fcf7ea20",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-08.md",
+      "markdown_sha256": "6f77b012f2dd4d1e25f3a8810e440dbf1311e445a394596831883719851089a0",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20260908-0730",
+      "slug": "wistron_ai_supply_chain_funding",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜緯創募資 14.7 億美元擴充 AI 供應鏈資金，伺服器需求再獲資本面驗證",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
