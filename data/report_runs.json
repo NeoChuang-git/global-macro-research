@@ -287,6 +287,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜台灣外資、期貨與匯率同步修復，AI 權值股抵銷能源通膨但市場廣度仍分化",
       "topic": null
+    },
+    "MTW-20260908-1427-rates_yen_carry": {
+      "coverage_end_taipei": "2026-09-08 14:27:44+08:00",
+      "coverage_start_taipei": "2026-09-07 17:22:20+08:00",
+      "generated_at_taipei": "2026-09-08 14:27:44+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-08_1427_rates_yen_carry.html",
+      "html_sha256": "0226e04137c572ac5cb31044d40e380e87df7bc9073ea8bfe8f449241c8b5055",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-08_1427_rates_yen_carry.md",
+      "markdown_sha256": "76b44d6940ab6a28bd3405a831bba8deb8f8e6256875464f7b2ec44bfe50a85e",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260908-1427-rates_yen_carry",
+      "slug": "rates_yen_carry",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美債高殖利率與日圓 Carry Unwind 形成新一輪金融條件壓力",
+      "topic": null
     }
   },
   "schema_version": 1
