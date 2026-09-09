@@ -513,6 +513,15 @@
       "sha256": "aeb207ba5da079cde9422058e0793090f4fa3f94fab6d61635564be4f1838475",
       "size": 12734
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-09_2152_hormuz-oil-rates.md": {
+      "category": "early-warning",
+      "drive_file_id": "1a_o73EGh7Q3-pIZ5hVjUxd091QFSm8zZ",
+      "md5_checksum": "3c61a8e112957c01126de3bcd21070cc",
+      "modified_time": "2026-09-09T14:02:37.012Z",
+      "name": "Global_Macro_Early_Warning_2026-09-09_2152_hormuz-oil-rates.md",
+      "sha256": "24c62432a01b74dcf71cd6652fa19ed0e2dc90f437ce07870562b54f7ec38bc2",
+      "size": 17269
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
