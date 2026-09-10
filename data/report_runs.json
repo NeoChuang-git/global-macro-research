@@ -367,6 +367,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜荷莫茲供給流量驟降，油價百美元衝擊跨入全球折現率壓力",
       "topic": null
+    },
+    "MTW-20260910-1236-energy-rates-shock": {
+      "coverage_end_taipei": "2026-09-10 12:36:34+08:00",
+      "coverage_start_taipei": "2026-09-10 11:36:34+08:00",
+      "generated_at_taipei": "2026-09-10 12:36:34+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-10_1236_energy-rates-shock.html",
+      "html_sha256": "84591a063bffd51c8de9d58e9acfa36c23a63c68afe3f58e72e86a4db40a3eed",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-10_1236_energy-rates-shock.md",
+      "markdown_sha256": "34cce0fdd6fd9bfd1d22188aee337ddd21246eca9062482f50b9b6118bf8f298",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20260910-1236-energy-rates-shock",
+      "slug": "energy-rates-shock",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜油價破百與長端殖利率共振：再通膨折現率衝擊升溫",
+      "topic": null
     }
   },
   "schema_version": 1

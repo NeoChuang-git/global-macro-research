@@ -531,6 +531,15 @@
       "sha256": "24c62432a01b74dcf71cd6652fa19ed0e2dc90f437ce07870562b54f7ec38bc2",
       "size": 17269
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-10_1236_energy-rates-shock.md": {
+      "category": "early-warning",
+      "drive_file_id": "1WUB6K4yZ3j70HOwmp51Ut0tdutKWRmo0",
+      "md5_checksum": "3145f39746a583411ba114bd6d06dcf7",
+      "modified_time": "2026-09-10T04:49:05.463Z",
+      "name": "Global_Macro_Early_Warning_2026-09-10_1236_energy-rates-shock.md",
+      "sha256": "34cce0fdd6fd9bfd1d22188aee337ddd21246eca9062482f50b9b6118bf8f298",
+      "size": 15553
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
