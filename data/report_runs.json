@@ -128,6 +128,22 @@
       "title": "Global Daily Brief｜Google 砸 130 億歐元擴建芬蘭 AI 基建，算力競爭正式綁定核電長約",
       "topic": null
     },
+    "GDB-20260911-0812": {
+      "coverage_end_taipei": "2026-09-11 08:12:00+08:00",
+      "coverage_start_taipei": "2026-09-10 08:12:00+08:00",
+      "generated_at_taipei": "2026-09-11 08:12:00+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-11.html",
+      "html_sha256": "377348404e7be123b1fdf687f8e937ab4dd4ec2a234a3515971de85e3b2b2f61",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-11.md",
+      "markdown_sha256": "bdbfdb118db312171b34c158a30a4a44bcfe5f8bc1a30fb74123549f0963d2d3",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "ORANGE",
+      "run_id": "GDB-20260911-0812",
+      "slug": "oracle-ai-cloud-capex",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Oracle AI 雲端成長驗證需求，但 CapEx 壓力同步升高",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
