@@ -447,6 +447,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜能源再通膨與長端殖利率共振，Fed 緊縮尾部風險升高",
       "topic": null
+    },
+    "MTW-20260912-0700-inflation-rates-tw-flow": {
+      "coverage_end_taipei": "2026-09-12 07:00:00+08:00",
+      "coverage_start_taipei": "2026-09-11 07:00:00+08:00",
+      "generated_at_taipei": "2026-09-12 07:00:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-12_0700_inflation-rates-tw-flow.html",
+      "html_sha256": "35f196e0116501cb8b91d8ff411eb20034b475a316f13f6033b5f8f6db5c2ab7",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-12_0700_inflation-rates-tw-flow.md",
+      "markdown_sha256": "df5bc44efcc1128a0a1eec11cf4548f7338fcfba08d69d6a5bca3e5e951c2cad",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260912-0700-inflation-rates-tw-flow",
+      "slug": "inflation-rates-tw-flow",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜通膨黏性重啟升息定價，長端利率壓力傳導至台灣外資",
+      "topic": null
     }
   },
   "schema_version": 1

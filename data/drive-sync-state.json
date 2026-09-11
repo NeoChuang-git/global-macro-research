@@ -576,6 +576,15 @@
       "sha256": "a7dae4546dede711dca7571cf5de2eae697e4689f876a6783518d5ca0d2c3c46",
       "size": 14141
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-12_0700_inflation-rates-tw-flow.md": {
+      "category": "early-warning",
+      "drive_file_id": "1aRPk584IFdfv-SfDub6pC-GTm-DQj7Xq",
+      "md5_checksum": "522afa63f85a67487cb1d88e762ade1e",
+      "modified_time": "2026-09-11T23:10:02.740Z",
+      "name": "Global_Macro_Early_Warning_2026-09-12_0700_inflation-rates-tw-flow.md",
+      "sha256": "df5bc44efcc1128a0a1eec11cf4548f7338fcfba08d69d6a5bca3e5e951c2cad",
+      "size": 14800
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
