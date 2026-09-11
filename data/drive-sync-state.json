@@ -567,6 +567,15 @@
       "sha256": "72f01f575a81133906effe9c594ab724da1bfe27b13cf2872c375ee36961f41f",
       "size": 18915
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-11_1951_energy-rates-repricing.md": {
+      "category": "early-warning",
+      "drive_file_id": "1rKuw45jgDZZO5Dr5R2P-T9GsqLKw5NgY",
+      "md5_checksum": "90e56ad3ee405d9a008a31eb7f515cd7",
+      "modified_time": "2026-09-11T12:02:10.880Z",
+      "name": "Global_Macro_Early_Warning_2026-09-11_1951_energy-rates-repricing.md",
+      "sha256": "a7dae4546dede711dca7571cf5de2eae697e4689f876a6783518d5ca0d2c3c46",
+      "size": 14141
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
