@@ -479,6 +479,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜通膨黏性重啟升息定價，長端利率壓力傳導至台灣外資",
       "topic": null
+    },
+    "MTW-20260912-1458-energy-supply-shock": {
+      "coverage_end_taipei": "2026-09-12 14:58:28+08:00",
+      "coverage_start_taipei": "2026-09-12 07:00:00+08:00",
+      "generated_at_taipei": "2026-09-12 14:58:28+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-12_1458_energy-supply-shock.html",
+      "html_sha256": "7d66a5d98d193924161db0d230e13ce667273bb2a5aa335ce07cefb274f50c88",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-12_1458_energy-supply-shock.md",
+      "markdown_sha256": "5c15e8b50f233d30933b86d0299320dafd24fe8fe3699d9c9bd2acca1a0942bf",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260912-1458-energy-supply-shock",
+      "slug": "energy-supply-shock",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜沙烏地替代輸油通道停運，能源供給尾端風險再上修",
+      "topic": null
     }
   },
   "schema_version": 1
