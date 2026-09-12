@@ -495,6 +495,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜沙烏地替代輸油通道停運，能源供給尾端風險再上修",
       "topic": null
+    },
+    "MTW-20260912-1959-rates-energy-repricing": {
+      "coverage_end_taipei": "2026-09-12 19:59:51+08:00",
+      "coverage_start_taipei": "2026-09-12 19:00:00+08:00",
+      "generated_at_taipei": "2026-09-12 19:59:51+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-12_1959_rates-energy-repricing.html",
+      "html_sha256": "8886d58d704e6fb304bf8772392029248dd6402bf4feb907feeb3bf13706948a",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-12_1959_rates-energy-repricing.md",
+      "markdown_sha256": "e0d676628586e9fba5364f80b58bf5e565b08b050d12e42032ceae94ce265c29",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260912-1959-rates-energy-repricing",
+      "slug": "rates-energy-repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜通膨與油價共振推升實質利率，台灣科技股面臨折現率壓力",
+      "topic": null
     }
   },
   "schema_version": 1
