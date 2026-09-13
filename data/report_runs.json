@@ -160,6 +160,22 @@
       "title": "Global Daily Brief｜NVIDIA 擬錨定 Anthropic 超大型 IPO，AI 資本循環再升級",
       "topic": null
     },
+    "GDB-20260913-0727": {
+      "coverage_end_taipei": "2026-09-13 07:27:46+08:00",
+      "coverage_start_taipei": "2026-09-12 07:27:46+08:00",
+      "generated_at_taipei": "2026-09-13 07:27:46+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-13.html",
+      "html_sha256": "a8974e224b181a1c7621f80424d00847996186fe0eeca29a42b0b3f608ad6308",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-13.md",
+      "markdown_sha256": "481db9e8c1e1acca6a7bdbb8b73eb87f240d474e6a1b47dad319a79d335259a6",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "ORANGE",
+      "run_id": "GDB-20260913-0727",
+      "slug": "ai_safety_slowdown",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜AI 安全風險升級，Anthropic 籲放慢前沿模型開發",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
