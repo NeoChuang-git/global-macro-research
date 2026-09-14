@@ -135,6 +135,15 @@
       "sha256": "481db9e8c1e1acca6a7bdbb8b73eb87f240d474e6a1b47dad319a79d335259a6",
       "size": 12336
     },
+    "reports/daily/Global_Daily_Brief_2026-09-14.md": {
+      "category": "daily",
+      "drive_file_id": "1DPJ8IuuX1gNk84OoZ8N8CWyGeicTV1ct",
+      "md5_checksum": "817b430e3d9ecd3eca1a1561f05ad7e5",
+      "modified_time": "2026-09-13T23:32:46.883Z",
+      "name": "Global_Daily_Brief_2026-09-14.md",
+      "sha256": "def4f594eb2b43e2b0130549791f70cc2d432ee6b961de9a5ed9cc16b0583f0a",
+      "size": 13061
+    },
     "reports/daily/Global_Macro_Morning_2026-08-25.html": {
       "category": "daily",
       "drive_file_id": "10dgWjdJhW-HwSZRp8tFbQ_wSDiQLIiWu",
@@ -621,6 +630,24 @@
       "sha256": "e0d676628586e9fba5364f80b58bf5e565b08b050d12e42032ceae94ce265c29",
       "size": 16380
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-13_1659_hormuz-route-risk.md": {
+      "category": "early-warning",
+      "drive_file_id": "11qvfnjiWpHTIL35jvFDFg_2qo-JToUbA",
+      "md5_checksum": "a232740466e7075e981d76c7077efddc",
+      "modified_time": "2026-09-13T09:12:06.621Z",
+      "name": "Global_Macro_Early_Warning_2026-09-13_1659_hormuz-route-risk.md",
+      "sha256": "681247f0267fb58cc484c89797c1d209658b736851f96e8410fcebcb5d38c2fa",
+      "size": 14218
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-14_0100_real-yield-taiwan-flow.md": {
+      "category": "early-warning",
+      "drive_file_id": "1ObK18k9vOdrfI0S-FkvtSDreTn2zjiXX",
+      "md5_checksum": "8fe27ac91e129e38ff5271c559f94942",
+      "modified_time": "2026-09-13T17:10:51.639Z",
+      "name": "Global_Macro_Early_Warning_2026-09-14_0100_real-yield-taiwan-flow.md",
+      "sha256": "3651436160f82b697503b0c19e761c564b0cdecbdabd9771bd16e36da9c8b0e2",
+      "size": 19269
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
@@ -665,6 +692,24 @@
       "name": "Weekly_Strategy_2026-09-06.md",
       "sha256": "bb32fcf17dc014c8237796b0a5e8a228fdb4d2cb6142ee3fc3a938eb67a2bf4f",
       "size": 26318
+    },
+    "reports/weekly/Weekly_Strategy_2026-09-13.md": {
+      "category": "weekly",
+      "drive_file_id": "1rceMMRhFexce80k_FWvMsL47NhmHlAjD",
+      "md5_checksum": "39044065878ce7195c2b9b26a23b6db4",
+      "modified_time": "2026-09-13T12:04:51.186Z",
+      "name": "Weekly_Strategy_2026-09-13.md",
+      "sha256": "020029257d912e6786e1978a5cde67e5faec934377fcb81f44b7fcaf02cdeb26",
+      "size": 27061
+    },
+    "reports/weekly/Weekly_Strategy_2026-09-13_rerun_2320.md": {
+      "category": "weekly",
+      "drive_file_id": "10RNOPM1JBSiIJe8ouE9nJCbjjXdDi616",
+      "md5_checksum": "1171ac12246e489644c2f1cbeff01125",
+      "modified_time": "2026-09-13T15:27:05.023Z",
+      "name": "Weekly_Strategy_2026-09-13_rerun_2320.md",
+      "sha256": "1ced6c9a66b7587b4c28d33cd825c71310c3f1ef80b65574bb2e7f09faecf7de",
+      "size": 28465
     }
   },
   "schema_version": 1
