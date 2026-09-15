@@ -657,6 +657,15 @@
       "sha256": "d4f9798c2478d137cd6f2d560384bb2c17e1d65c03f275453276d7151dea348e",
       "size": 19454
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-15_1300_oil-rates-shock.md": {
+      "category": "early-warning",
+      "drive_file_id": "1XYBdsdp1g-wHuC_emtf5uZVrpZd-oMi8",
+      "md5_checksum": "a6c8b416ff6aa359e30cac740a0c6382",
+      "modified_time": "2026-09-15T05:03:39.247Z",
+      "name": "Global_Macro_Early_Warning_2026-09-15_1300_oil-rates-shock.md",
+      "sha256": "88d4625244bb6b47b7098e767b9bbe757cd4529e635713aa75dbb0137bdbe5ba",
+      "size": 13658
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",

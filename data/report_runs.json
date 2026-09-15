@@ -591,6 +591,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜油價供給衝擊疊加 Fed 再緊縮定價，10Y 突破 5%",
       "topic": null
+    },
+    "MTW-20260915-1300-oil-rates-shock": {
+      "coverage_end_taipei": "2026-09-15 13:00:19+08:00",
+      "coverage_start_taipei": "2026-09-15 12:00:00+08:00",
+      "generated_at_taipei": "2026-09-15 13:00:19+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-15_1300_oil-rates-shock.html",
+      "html_sha256": "6ecbd7fe759f05c6dbad1cef468a6813bded01c30aa3fb637c8af35b4584e90d",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-15_1300_oil-rates-shock.md",
+      "markdown_sha256": "88d4625244bb6b47b7098e767b9bbe757cd4529e635713aa75dbb0137bdbe5ba",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260915-1300-oil-rates-shock",
+      "slug": "oil-rates-shock",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜油價衝擊外溢至利率與美元，台灣估值壓力升級",
+      "topic": null
     }
   },
   "schema_version": 1
