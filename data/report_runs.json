@@ -192,6 +192,22 @@
       "title": "Global Daily Brief｜Anthropic 連兩季調整後獲利，AI 資本支出開始接受盈利能力檢驗",
       "topic": null
     },
+    "GDB-20260915-0730": {
+      "coverage_end_taipei": "2026-09-15 07:30:00+08:00",
+      "coverage_start_taipei": "2026-09-14 07:30:00+08:00",
+      "generated_at_taipei": "2026-09-15 16:09:00+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-15.html",
+      "html_sha256": "8fa2bea67a5f8d562c13c5bf4c7a1349f2b79371b250d507effe5b58e368770c",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-15.md",
+      "markdown_sha256": "91c27ccd2ea417750ab294ae40c1290b1cf8d49da4737cd0d4b144f30dfb059a",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "ORANGE",
+      "run_id": "GDB-20260915-0730",
+      "slug": "ai-slowdown-semiconductor-selloff",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜AI 降速疑慮重擊半導體，5% 美債殖利率放大估值壓力",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
