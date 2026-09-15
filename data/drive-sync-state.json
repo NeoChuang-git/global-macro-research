@@ -684,6 +684,15 @@
       "sha256": "cd1f2dd5731128a8239b157fb172d64387e4017788ae5916bb38a9d0728f12a5",
       "size": 11133
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-15_1858_rates-oil-tightening.md": {
+      "category": "early-warning",
+      "drive_file_id": "1_bJMPXAl5vw7VroxBUnI281k3KwUFDpa",
+      "md5_checksum": "64d3dc01620fad9745126e09ada01753",
+      "modified_time": "2026-09-15T11:01:12.883Z",
+      "name": "Global_Macro_Early_Warning_2026-09-15_1858_rates-oil-tightening.md",
+      "sha256": "29fc7192e4eb430f17dbc74a1c836ac325030cd41a7a7847cd39be2baa5b2de6",
+      "size": 15170
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
