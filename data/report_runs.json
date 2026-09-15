@@ -719,6 +719,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜10Y突破5%與油價破109美元，Fed再緊縮風險形成跨資產共振",
       "topic": null
+    },
+    "MTW-20260916-0702-energy-rates-squeeze": {
+      "coverage_end_taipei": "2026-09-16 07:02:33+08:00",
+      "coverage_start_taipei": "2026-09-15 07:00:00+08:00",
+      "generated_at_taipei": "2026-09-16 07:02:33+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_0702_energy-rates-squeeze.html",
+      "html_sha256": "306c90855d650c463cdffb30f300bc38b6730a0267893fb1fbf119da96c75d66",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_0702_energy-rates-squeeze.md",
+      "markdown_sha256": "8f5f8b5ad3538469caab63ccfd4221f8eb78e7ee30fd9450553702a0442fbcc9",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260916-0702-energy-rates-squeeze",
+      "slug": "energy-rates-squeeze",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜油價再衝高與美債 5% 共振，雙重金融緊縮進入第二日",
+      "topic": null
     }
   },
   "schema_version": 1

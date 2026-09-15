@@ -729,6 +729,15 @@
       "sha256": "9c4eadc2b0e66f10f8d264a71aacd4503297dd8344fb64cb30c335bb7c827efc",
       "size": 13091
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_0702_energy-rates-squeeze.md": {
+      "category": "early-warning",
+      "drive_file_id": "1_0XWdrcfRCEXokk1Z2YwdPJ8Kqh4qCql",
+      "md5_checksum": "6789ff18a8ebc81b11d607e72c2cccc0",
+      "modified_time": "2026-09-15T23:04:53.763Z",
+      "name": "Global_Macro_Early_Warning_2026-09-16_0702_energy-rates-squeeze.md",
+      "sha256": "8f5f8b5ad3538469caab63ccfd4221f8eb78e7ee30fd9450553702a0442fbcc9",
+      "size": 11199
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
