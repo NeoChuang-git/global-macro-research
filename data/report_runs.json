@@ -671,6 +671,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜美債10Y突破5%與油價逾105美元共振，金融條件再緊縮",
       "topic": null
+    },
+    "MTW-20260916-0301-rates-oil-fed": {
+      "coverage_end_taipei": "2026-09-16 03:01:23+08:00",
+      "coverage_start_taipei": "2026-09-16 02:00:00+08:00",
+      "generated_at_taipei": "2026-09-16 03:01:23+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_0301_rates-oil-fed.html",
+      "html_sha256": "048b0c41d54d2ed3d48e7d78c925953553431aba02387dacd5997b5d253fb228",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_0301_rates-oil-fed.md",
+      "markdown_sha256": "6ede272103c0e903e065f2069572871ab5a79a43804289772242e4184f5c21a9",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260916-0301-rates-oil-fed",
+      "slug": "rates-oil-fed",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜5% 美債殖利率、油價與升息定價形成三重緊縮",
+      "topic": null
     }
   },
   "schema_version": 1
