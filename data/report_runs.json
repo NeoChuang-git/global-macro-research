@@ -655,6 +655,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜油價衝擊與長端殖利率逼近 5%，Fed 緊縮定價重新升溫",
       "topic": null
+    },
+    "MTW-20260915-2159-rates-oil-tightening": {
+      "coverage_end_taipei": "2026-09-15 21:59:10+08:00",
+      "coverage_start_taipei": "2026-09-15 20:59:10+08:00",
+      "generated_at_taipei": "2026-09-15 21:59:10+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-15_2159_rates-oil-tightening.html",
+      "html_sha256": "1ff2f658d1256946dc1613be3da51b0f47cfc830c49f6c71486c68d93fa348fb",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-15_2159_rates-oil-tightening.md",
+      "markdown_sha256": "d48e86ea088fd964478ea7a48b5bd0803114f0806ab1d3367c6ddb86f638d2db",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260915-2159-rates-oil-tightening",
+      "slug": "rates-oil-tightening",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美債10Y突破5%與油價逾105美元共振，金融條件再緊縮",
+      "topic": null
     }
   },
   "schema_version": 1
