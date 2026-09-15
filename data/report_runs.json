@@ -687,6 +687,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜5% 美債殖利率、油價與升息定價形成三重緊縮",
       "topic": null
+    },
+    "MTW-20260916-0501-rates-oil-tightening": {
+      "coverage_end_taipei": "2026-09-16 05:01:45+08:00",
+      "coverage_start_taipei": "2026-09-15 20:05:00+08:00",
+      "generated_at_taipei": "2026-09-16 05:01:45+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_0501_rates-oil-tightening.html",
+      "html_sha256": "de723ae51e1e18c5402a2388655aa371435f4a9f4d547d9d89f82c4a724602be",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_0501_rates-oil-tightening.md",
+      "markdown_sha256": "0b825ae629a553a0574c255c952ca6d1eec2eed6b910636ae32969d0ddddede2",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260916-0501-rates-oil-tightening",
+      "slug": "rates-oil-tightening",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美債殖利率突破 5% 與油價再升，折現率—通膨雙重緊縮加深",
+      "topic": null
     }
   },
   "schema_version": 1
