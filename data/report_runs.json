@@ -735,6 +735,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜油價再衝高與美債 5% 共振，雙重金融緊縮進入第二日",
       "topic": null
+    },
+    "MTW-20260916-0857-rates-oil-tightening": {
+      "coverage_end_taipei": "2026-09-16 08:57:19+08:00",
+      "coverage_start_taipei": "2026-09-15 08:57:19+08:00",
+      "generated_at_taipei": "2026-09-16 08:57:19+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_0857_rates-oil-tightening.html",
+      "html_sha256": "ea19b703ca99b6f72cf7c6655ee5f8f25cba935ac9ca56e05f812aedea950f4d",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_0857_rates-oil-tightening.md",
+      "markdown_sha256": "ed2f3bf06c8e76883d6a94f893ec64a8c38548a00a9c5083951fc9dbf269f1fd",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260916-0857-rates-oil-tightening",
+      "slug": "rates-oil-tightening",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜10Y 突破 5% 與油價再升，Fed 緊縮與期限溢酬風險共振",
+      "topic": null
     }
   },
   "schema_version": 1
