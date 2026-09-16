@@ -831,6 +831,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜全球再緊縮定價成形：10Y 站上 5%、Fed 升息機率逾九成",
       "topic": null
+    },
+    "MTW-20260917-0059-fed-hike-repricing": {
+      "coverage_end_taipei": "2026-09-17 00:59:31+08:00",
+      "coverage_start_taipei": "2026-09-16 00:59:31+08:00",
+      "generated_at_taipei": "2026-09-17 00:59:31+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-17_0059_fed-hike-repricing.html",
+      "html_sha256": "d5a8181b5b9475165d005bc258e04f4157bef3a7bd829fd08a31382babc04cdd",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-17_0059_fed-hike-repricing.md",
+      "markdown_sha256": "16edbe34286207027f592b950687a71ff7ffaec61623be8a01945675e3a730cb",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260917-0059-fed-hike-repricing",
+      "slug": "fed-hike-repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜Fed 升息定價逼近確定、長端殖利率再測 5% 壓力區",
+      "topic": null
     }
   },
   "schema_version": 1
