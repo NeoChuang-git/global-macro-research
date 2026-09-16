@@ -847,6 +847,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜Fed 升息定價逼近確定、長端殖利率再測 5% 壓力區",
       "topic": null
+    },
+    "MTW-20260917-0459-fed-hike-repricing": {
+      "coverage_end_taipei": "2026-09-17 04:59:19+08:00",
+      "coverage_start_taipei": "2026-09-17 03:00:00+08:00",
+      "generated_at_taipei": "2026-09-17 04:59:19+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-17_0459_fed-hike-repricing.html",
+      "html_sha256": "ee6c3d918d9437c21ad14fbb134b93cce4f3bc2554e3bb3a487773497ff11a07",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-17_0459_fed-hike-repricing.md",
+      "markdown_sha256": "770b34f4d589702929f175c83a393041f74556f2558475273c9c6feab5703c35",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260917-0459-fed-hike-repricing",
+      "slug": "fed-hike-repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜Fed 升息衝擊重新定價，折現率與美元壓力同步上升",
+      "topic": null
     }
   },
   "schema_version": 1
