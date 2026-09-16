@@ -153,6 +153,15 @@
       "sha256": "91c27ccd2ea417750ab294ae40c1290b1cf8d49da4737cd0d4b144f30dfb059a",
       "size": 10376
     },
+    "reports/daily/Global_Daily_Brief_2026-09-16.md": {
+      "category": "daily",
+      "drive_file_id": "12jjyozTN75CRjE339tYcJs-3YC1XPmyq",
+      "md5_checksum": "0cb2808d9ee86945b7686a53a4fd9569",
+      "modified_time": "2026-09-16T01:24:05.615Z",
+      "name": "Global_Daily_Brief_2026-09-16.md",
+      "sha256": "6f08509464950a41b4369467c0fd766560d69ca089368263cfe40b40bf232fe8",
+      "size": 5850
+    },
     "reports/daily/Global_Macro_Morning_2026-08-25.html": {
       "category": "daily",
       "drive_file_id": "10dgWjdJhW-HwSZRp8tFbQ_wSDiQLIiWu",
@@ -746,6 +755,15 @@
       "name": "Global_Macro_Early_Warning_2026-09-16_0857_rates-oil-tightening.md",
       "sha256": "ed2f3bf06c8e76883d6a94f893ec64a8c38548a00a9c5083951fc9dbf269f1fd",
       "size": 12863
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_1002_rates-energy-fed.md": {
+      "category": "early-warning",
+      "drive_file_id": "1Bu6dd7eCIhgyoJVJYODARAEdonwYi9Hr",
+      "md5_checksum": "4f4c99a55d96880d9530266fde51a9db",
+      "modified_time": "2026-09-16T02:04:32.544Z",
+      "name": "Global_Macro_Early_Warning_2026-09-16_1002_rates-energy-fed.md",
+      "sha256": "59524e43b357a99677d61ffe953ea84d23357566f521be0daffdf185d03d2e84",
+      "size": 13865
     },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
