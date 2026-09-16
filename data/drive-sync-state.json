@@ -162,6 +162,15 @@
       "sha256": "6f08509464950a41b4369467c0fd766560d69ca089368263cfe40b40bf232fe8",
       "size": 5850
     },
+    "reports/daily/Global_Daily_Brief_2026-09-16_rerun_1903.md": {
+      "category": "daily",
+      "drive_file_id": "16S5InRrL8neLues6f0MK3uVCwYXcPT3f",
+      "md5_checksum": "ed7dbe70fb58c4a76995077bb137f4c2",
+      "modified_time": "2026-09-16T11:12:31.197Z",
+      "name": "Global_Daily_Brief_2026-09-16_rerun_1903.md",
+      "sha256": "6c0c724774f3bd5aa978e3bfe22ffba53558ec752659a5a91929b98be042ab8e",
+      "size": 21372
+    },
     "reports/daily/Global_Macro_Morning_2026-08-25.html": {
       "category": "daily",
       "drive_file_id": "10dgWjdJhW-HwSZRp8tFbQ_wSDiQLIiWu",
