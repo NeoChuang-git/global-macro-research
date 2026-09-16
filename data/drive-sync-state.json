@@ -774,6 +774,15 @@
       "sha256": "c78e4df1c3b4cb99024ddb2620ea0142224bd5b4b2111e472af3a6c740f74177",
       "size": 12145
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_1602_global_repricing.md": {
+      "category": "early-warning",
+      "drive_file_id": "14TV9U_cCbrNIZSSiZxQh6skhQN_JIv8J",
+      "md5_checksum": "4688f1ada84232b60f1253697bbcef21",
+      "modified_time": "2026-09-16T08:05:33.617Z",
+      "name": "Global_Macro_Early_Warning_2026-09-16_1602_global_repricing.md",
+      "sha256": "4b8c351b6ef7058e0a0dbfe168671485454298de22cb34ba726eca6f2bad15c1",
+      "size": 13693
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",

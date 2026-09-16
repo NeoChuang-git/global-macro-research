@@ -799,6 +799,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜長端利率與能源同步上行，金融條件再度收緊",
       "topic": null
+    },
+    "MTW-20260916-1602-global_repricing": {
+      "coverage_end_taipei": "2026-09-16 16:02:58+08:00",
+      "coverage_start_taipei": "2026-09-14 17:30:00+08:00",
+      "generated_at_taipei": "2026-09-16 16:02:58+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_1602_global_repricing.html",
+      "html_sha256": "1fe8b4c3ff225a2c810782a7bd48d1a9ecc30b9f6ceddc318830d58f31702fe5",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-16_1602_global_repricing.md",
+      "markdown_sha256": "4b8c351b6ef7058e0a0dbfe168671485454298de22cb34ba726eca6f2bad15c1",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "RED",
+      "run_id": "MTW-20260916-1602-global_repricing",
+      "slug": "global_repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜全球再緊縮定價成形：10Y 站上 5%、Fed 升息機率逾九成",
+      "topic": null
     }
   },
   "schema_version": 1
