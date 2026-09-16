@@ -1398,6 +1398,14 @@
     {
       "category": "daily",
       "date": "2026-08-30",
+      "file": "reports/daily/Global_Macro_Morning_2026-08-30_1306.html",
+      "modified_time": "2026-08-30T05:13:01.000Z",
+      "sha256": "cfb8daa34adb567618f0b46f11fdd5abd62e5c810ae9cedcfb81af9c2e00221f",
+      "title": "Global Macro Morning 1306"
+    },
+    {
+      "category": "daily",
+      "date": "2026-08-30",
       "file": "reports/daily/Global_Macro_Morning_2026-08-30.html",
       "modified_time": "2026-08-30T04:25:38.764Z",
       "sha256": "b73a157108e7f38f303f444d1e33d1e3538088d93bce88b9d2ef612cf3d712db",
@@ -1434,6 +1442,14 @@
       "modified_time": "2026-08-28T23:32:58.074Z",
       "sha256": "642844c9452bbc3def3b0a84e8ea876c688806d189b9cc4d23b98fe096fea169",
       "title": "Global Daily Brief"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-08-28",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-28_2254_Warsh_Rates.html",
+      "modified_time": "2026-08-28T14:58:08.000Z",
+      "sha256": "999b1c5aa116ca4615d26871a09408f21ad3230c967eddbbd3153e12c6ad52f2",
+      "title": "Global Macro Early Warning 2254 Warsh Rates"
     },
     {
       "category": "early-warning",
@@ -1482,6 +1498,14 @@
       "modified_time": null,
       "sha256": "f08855e37ecc19426181c4a3998646fdd5d101979002d439855f9d1ead05599e",
       "title": "Global Macro Taiwan Risk Watch"
+    },
+    {
+      "category": "early-warning",
+      "date": "2026-08-19",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-08-19.html",
+      "modified_time": "2026-08-19T14:21:38.000Z",
+      "sha256": "eadeb4ae19549b1cb3e03bce4d5359426f2517aa2aac203bda56cc25b1a2f46e",
+      "title": "Global Macro Early Warning"
     },
     {
       "category": "early-warning",
