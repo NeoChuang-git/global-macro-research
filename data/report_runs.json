@@ -240,6 +240,22 @@
       "title": "Global Daily Brief｜Meta One 啟動跨 App AI 訂閱，AI 商業化進入變現驗證",
       "topic": null
     },
+    "GDB-20260917-0731": {
+      "coverage_end_taipei": "2026-09-17 07:31:00+08:00",
+      "coverage_start_taipei": "2026-09-16 07:31:00+08:00",
+      "generated_at_taipei": "2026-09-17 07:31:00+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-17.html",
+      "html_sha256": "21a9bca0f41ef5af7fdafc71d6b183cce63776ce6e31b4810d30f901763cf71e",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-17.md",
+      "markdown_sha256": "1684d55f4db363acdc6be3bee33d49455990896b44f940e1acb8069345527a97",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "ORANGE",
+      "run_id": "GDB-20260917-0731",
+      "slug": "fed-hike-tech-ai-capex",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Fed 升息震撼科技股：AI 資本支出遇上更高折現率",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
