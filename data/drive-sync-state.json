@@ -873,6 +873,15 @@
       "sha256": "5c5b5d5eefbdcbd70675d778a3f66c7b2b42d011eac10b936558807e60500677",
       "size": 10094
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-18_0658_fed-hawkish-repricing.md": {
+      "category": "early-warning",
+      "drive_file_id": "12vHqIOtDG2uyqDO0xcsdLB4a6QbK6WOZ",
+      "md5_checksum": "404a14ddc684260cbc25932e05cadb29",
+      "modified_time": "2026-09-17T23:01:07.429Z",
+      "name": "Global_Macro_Early_Warning_2026-09-18_0658_fed-hawkish-repricing.md",
+      "sha256": "768d44939775a1552d5a7783a57e9327586b9637acf84e2f54c695af7000d575",
+      "size": 26008
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",

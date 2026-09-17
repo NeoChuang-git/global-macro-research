@@ -895,6 +895,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜Fed正式升息、10年債破5%確認折現率衝擊",
       "topic": null
+    },
+    "MTW-20260918-0658-fed-hawkish-repricing": {
+      "coverage_end_taipei": "2026-09-18 06:58:34+08:00",
+      "coverage_start_taipei": "2026-09-18 05:00:00+08:00",
+      "generated_at_taipei": "2026-09-18 06:58:34+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-18_0658_fed-hawkish-repricing.html",
+      "html_sha256": "e47066021d08be324b4680b01ce7f373f5da494649a1c098a769d42c2f2da38d",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-18_0658_fed-hawkish-repricing.md",
+      "markdown_sha256": "768d44939775a1552d5a7783a57e9327586b9637acf84e2f54c695af7000d575",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260918-0658-fed-hawkish-repricing",
+      "slug": "fed-hawkish-repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜Fed 首次升息後鷹派路徑確認，美元與殖利率同步重定價",
+      "topic": null
     }
   },
   "schema_version": 1
