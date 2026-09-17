@@ -855,6 +855,15 @@
       "sha256": "31d44ba3cab2c3f27d078233388c2d00a0c5959ee7ac2a9f2c86df811d1ab4d0",
       "size": 12265
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-17_1059_fed-hike-rates-dollar.md": {
+      "category": "early-warning",
+      "drive_file_id": "1klviWcDwnOlhMuBVuDJQ9XuZbOx3MoTu",
+      "md5_checksum": "78523287fb86a62ed6e2d7997d106c98",
+      "modified_time": "2026-09-17T03:02:00.500Z",
+      "name": "Global_Macro_Early_Warning_2026-09-17_1059_fed-hike-rates-dollar.md",
+      "sha256": "d868f9b838a9055f456aa559fc50981999c53d60e77847fa689d5305921feb63",
+      "size": 15938
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
