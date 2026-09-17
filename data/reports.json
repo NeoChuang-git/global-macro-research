@@ -145,6 +145,14 @@
       "title": "Global Macro Early Warning 1059 fed hike rates dollar"
     },
     {
+      "category": "early-warning",
+      "date": "2026-09-17",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-17_1359_fed-rehike.html",
+      "modified_time": null,
+      "sha256": "33ff29779a63f827daca75c61e081fc6af24fb38fd623c30326b283812f8d36e",
+      "title": "Global Macro Early Warning 1359 fed rehike"
+    },
+    {
       "category": "daily",
       "coverage_end_taipei": "2026-09-16 07:30:00+08:00",
       "coverage_start_taipei": "2026-09-15 07:30:00+08:00",
