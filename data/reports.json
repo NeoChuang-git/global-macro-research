@@ -75,6 +75,14 @@
     },
     {
       "category": "early-warning",
+      "date": "2026-09-19",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-19_0701_global-tightening.html",
+      "modified_time": null,
+      "sha256": "b687380d570598b4042cdc0162b7bb36cfbc22bd9f492e287a132fc168ceb8da",
+      "title": "Global Macro Early Warning 0701 global tightening"
+    },
+    {
+      "category": "early-warning",
       "coverage_end_taipei": "2026-09-18 17:58:16+08:00",
       "coverage_start_taipei": "2026-09-18 16:00:00+08:00",
       "date": "2026-09-18",
