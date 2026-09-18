@@ -959,6 +959,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜Fed 重啟升息與長端利率再定價形成雙重緊縮",
       "topic": null
+    },
+    "MTW-20260919-0202-global-duration-shock": {
+      "coverage_end_taipei": "2026-09-19 02:02:54+08:00",
+      "coverage_start_taipei": "2026-09-19 01:00:00+08:00",
+      "generated_at_taipei": "2026-09-19 02:02:54+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-19_0202_global-duration-shock.html",
+      "html_sha256": "9649831d3de4e78596d14ac7ebfe231b3ac94ce28752cf6d0a482e0341000cc7",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-19_0202_global-duration-shock.md",
+      "markdown_sha256": "7d18ba643ddda5be3cb0b343dd30ef52bddf3ac1fc2712f0ad56a2d54e36ebb1",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260919-0202-global-duration-shock",
+      "slug": "global-duration-shock",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美日政策緊縮共振，全球長端利率壓力升級",
+      "topic": null
     }
   },
   "schema_version": 1
