@@ -1007,6 +1007,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜Fed 升息後長端殖利率站上 5%，BOJ 再升息確認全球折現率衝擊",
       "topic": null
+    },
+    "MTW-20260919-1400-rates-reset": {
+      "coverage_end_taipei": "2026-09-19 14:00:41+08:00",
+      "coverage_start_taipei": "2026-09-18 14:00:00+08:00",
+      "generated_at_taipei": "2026-09-19 14:00:41+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-19_1400_rates-reset.html",
+      "html_sha256": "4e99fcdf8303d510938af0bb3c00bddb3661ae5e242e4301a67a142f48777bef",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-19_1400_rates-reset.md",
+      "markdown_sha256": "2f1ec910f9bbc3f16455dd378cc6ad0f1831486297ffe55f875b7298329f7c57",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260919-1400-rates-reset",
+      "slug": "rates-reset",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜Fed 重啟升息與 10Y 突破 5%：全球折現率進入再緊縮區",
+      "topic": null
     }
   },
   "schema_version": 1
