@@ -1023,6 +1023,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜Fed 重啟升息與 10Y 突破 5%：全球折現率進入再緊縮區",
       "topic": null
+    },
+    "MTW-20260919-1558-global_repricing": {
+      "coverage_end_taipei": "2026-09-19 15:58:00+08:00",
+      "coverage_start_taipei": "2026-09-18 15:58:00+08:00",
+      "generated_at_taipei": "2026-09-19 15:58:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-19_1558_global_repricing.html",
+      "html_sha256": "cb493699405c2d901fa0f541be2cb7e511fe915f7dcec07199a5b77a4054e695",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-19_1558_global_repricing.md",
+      "markdown_sha256": "f1f84be1a98966405bd63e55bad51ceceeebabfaf2ba83cc078496be73c1b3c3",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260919-1558-global_repricing",
+      "slug": "global_repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜Fed 升息後全球再定價：5% 美債、百美元油價與美元壓力形成共振",
+      "topic": null
     }
   },
   "schema_version": 1
