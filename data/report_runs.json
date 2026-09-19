@@ -272,6 +272,22 @@
       "title": "Global Daily Brief｜AI 算力稀缺再定價：Nebius 漲價、CoreWeave 融資與光互連擴產同步驗證需求",
       "topic": null
     },
+    "GDB-20260919-0731": {
+      "coverage_end_taipei": "2026-09-19 07:31:19+08:00",
+      "coverage_start_taipei": "2026-09-18 07:31:19+08:00",
+      "generated_at_taipei": "2026-09-19 07:31:19+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-19.html",
+      "html_sha256": "258a6c4115b1f48dde8ca6208bbd049ae7155ec2afcb824f437046b1b128196d",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-19.md",
+      "markdown_sha256": "6bd336c47f754a44756fe27c1a007010494f246e257f3ca74efb4be6918312ad",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20260919-0731",
+      "slug": "apple-iphone18-ai-device-demand",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Apple iPhone 18 Pro 全球開賣，AI 終端換機週期進入需求驗證",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
