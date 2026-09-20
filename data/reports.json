@@ -44,10 +44,10 @@
     },
     "weekly": {
       "category": "weekly",
-      "date": "2026-09-13",
-      "file": "reports/weekly/Weekly_Strategy_2026-09-13.html",
+      "date": "2026-09-20",
+      "file": "reports/weekly/Weekly_Strategy_2026-09-20.html",
       "modified_time": null,
-      "sha256": "0ea53928a98abb96dc2a9431f94e67370918c38e075267a1319c7ea6eec5119b",
+      "sha256": "241b26d837809251ee7f27254e29b08466f592bd99bd13a8b964b35a3e64983b",
       "title": "Weekly Strategy"
     }
   },
@@ -72,6 +72,14 @@
       "source_kind": "google_doc_markdown",
       "title": "Global Daily Brief｜Nscale IPO 把 AI 基礎設施的「百億合約、十億虧損」推上公開市場檢驗台",
       "topic": null
+    },
+    {
+      "category": "weekly",
+      "date": "2026-09-20",
+      "file": "reports/weekly/Weekly_Strategy_2026-09-20.html",
+      "modified_time": null,
+      "sha256": "241b26d837809251ee7f27254e29b08466f592bd99bd13a8b964b35a3e64983b",
+      "title": "Weekly Strategy"
     },
     {
       "category": "early-warning",
