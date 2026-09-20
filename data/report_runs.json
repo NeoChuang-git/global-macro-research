@@ -288,6 +288,22 @@
       "title": "Global Daily Brief｜Apple iPhone 18 Pro 全球開賣，AI 終端換機週期進入需求驗證",
       "topic": null
     },
+    "GDB-20260920-0727": {
+      "coverage_end_taipei": "2026-09-20 07:27:04+08:00",
+      "coverage_start_taipei": "2026-09-19 07:27:04+08:00",
+      "generated_at_taipei": "2026-09-20 07:27:04+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-20.html",
+      "html_sha256": "a793421292569e1adfa09cd181348ffd19c6444f50c1a80eca8e5fe8e6d2ff2f",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-20.md",
+      "markdown_sha256": "bc60d9683dbbee461b5eb3a289f0cd6f5d3108170f1686c6e0b73941e1c9ac9e",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "ORANGE",
+      "run_id": "GDB-20260920-0727",
+      "slug": "nscale-ai-infra-ipo",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Nscale IPO 把 AI 基礎設施的「百億合約、十億虧損」推上公開市場檢驗台",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
