@@ -1055,6 +1055,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜Fed 升息後全球再定價：5% 美債、百美元油價與美元壓力形成共振",
       "topic": null
+    },
+    "MTW-20260921-0002-policy-energy-tightening": {
+      "coverage_end_taipei": "2026-09-21 00:02:01+08:00",
+      "coverage_start_taipei": "2026-09-19 10:00:00+08:00",
+      "generated_at_taipei": "2026-09-21 00:02:01+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-21_0002_policy-energy-tightening.html",
+      "html_sha256": "b477f9a77d07e3327cf2b1413e9ff4f46846c055db06c28183795f8638dde7f2",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-21_0002_policy-energy-tightening.md",
+      "markdown_sha256": "3a6d05907594f89d68283dadad84f280757b360473caefc2810cca2f23839517",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260921-0002-policy-energy-tightening",
+      "slug": "policy-energy-tightening",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜Fed 二次升息定價升溫、油價百美元與全球緊縮共振",
+      "topic": null
     }
   },
   "schema_version": 1
