@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Macro Early Warning｜亞洲半導體外需再加速，AI 基本面與台灣出口形成跨市場共振 · 2026-09-22 04:58:19</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --accent: #0284c7;
+  --accent-light: #e0f2fe;
+  --accent-glow: rgba(2, 132, 199, 0.08);
+
+  /* Callout Colors */
+  --callout-bg: #f8fafc;
+  --callout-thesis-border: #0284c7;
+  --callout-thesis-bg: #f0f9ff;
+  --callout-risk-border: #f97316;
+  --callout-risk-bg: #fff7ed;
+  --callout-strategy-border: #8b5cf6;
+  --callout-strategy-bg: #f5f3ff;
+  --callout-catalyst-border: #10b981;
+  --callout-catalyst-bg: #ecfdf5;
+
+  /* Card & Chips */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
+  --chip-border: #cbd5e1;
+
+  /* Risk Lights */
+  --risk-green-bg: #ecfdf5; --risk-green-text: #059669; --risk-green-border: #a7f3d0;
+  --risk-yellow-bg: #fefce8; --risk-yellow-text: #d97706; --risk-yellow-border: #fef08a;
+  --risk-orange-bg: #fff7ed; --risk-orange-text: #ea580c; --risk-orange-border: #fed7aa;
+  --risk-red-bg: #fef2f2; --risk-red-text: #dc2626; --risk-red-border: #fecaca;
+
+  /* Table */
+  --table-zebra: #f8fafc;
+  --table-hover: #f1f5f9;
+  --table-header-bg: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --bg-surface-raised: #334155;
+    --bg-surface-hover: #475569;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #334155;
+    --border-subtle: #475569;
+    --accent: #38bdf8;
+    --accent-light: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.12);
+
+    --callout-bg: #1e293b;
+    --callout-thesis-border: #38bdf8;
+    --callout-thesis-bg: rgba(56, 189, 248, 0.08);
+    --callout-risk-border: #fb923c;
+    --callout-risk-bg: rgba(249, 115, 22, 0.08);
+    --callout-strategy-border: #a78bfa;
+    --callout-strategy-bg: rgba(167, 139, 250, 0.08);
+    --callout-catalyst-border: #34d399;
+    --callout-catalyst-bg: rgba(52, 211, 153, 0.08);
+
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --chip-bg: #334155;
+    --chip-text: #cbd5e1;
+    --chip-border: #475569;
+
+    --risk-green-bg: rgba(16, 185, 129, 0.15); --risk-green-text: #34d399; --risk-green-border: rgba(16, 185, 129, 0.3);
+    --risk-yellow-bg: rgba(245, 158, 11, 0.15); --risk-yellow-text: #fbbf24; --risk-yellow-border: rgba(245, 158, 11, 0.3);
+    --risk-orange-bg: rgba(249, 115, 22, 0.15); --risk-orange-text: #fb923c; --risk-orange-border: rgba(249, 115, 22, 0.3);
+    --risk-red-bg: rgba(239, 68, 68, 0.15); --risk-red-text: #f87171; --risk-red-border: rgba(239, 68, 68, 0.3);
+
+    --table-zebra: rgba(255, 255, 255, 0.02);
+    --table-hover: rgba(56, 189, 248, 0.06);
+    --table-header-bg: #334155;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 17px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+/* Layout Containers: Narrative & Content Presentation */
+.report-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  position: relative;
+}
+
+.report-narrative {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Content Presentation */
+.wide-content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Typography & Headings */
+.report-narrative p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 100%;
+}
+
+ul, ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
+}
+
+/* Callouts */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.35rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--callout-bg);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.callout p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.callout-thesis {
+  border-left-color: var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.callout-risk {
+  border-left-color: var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.callout-strategy {
+  border-left-color: var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.callout-catalyst {
+  border-left-color: var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Analysis Cards */
+.analysis-card {
+  margin: 2.2rem 0;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.analysis-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Meta Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  line-height: 1.35;
+}
+
+.chip-score {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.chip-evidence, .chip-confidence, .chip-severity, .chip-persistence {
+  color: var(--text-secondary);
+}
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.direction-up { color: #0284c7; }
+.direction-down { color: #7c3aed; }
+.direction-improving { color: #059669; }
+.direction-worsening { color: #dc2626; }
+.direction-flat { color: var(--text-muted); }
+
+/* Risk Lights */
+.risk-chip, .risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.risk-green { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.risk-yellow { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.risk-orange { background: var(--risk-orange-bg); color: var(--risk-orange-text); border: 1px solid var(--risk-orange-border); }
+.risk-red { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* State Transitions */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.state-prior { color: var(--text-muted); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  text-align: left;
+  min-width: 680px;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--text-primary);
+  font-weight: 650;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+td {
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Executive Summary Grid */
+.executive-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 0;
+}
+
+.executive-points > li {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .executive-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.badge-grade-B { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent); }
+.badge-grade-C { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.badge-grade-D { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(2, 132, 199, 0.4);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+    font-size: 16px;
+  }
+  .report-narrative p {
+    font-size: 16px;
+  }
+  h1.hero-title { font-size: 1.45rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  h4 { font-size: 1rem; }
+  .analysis-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="report-container">
+  <div class="report-narrative">
+    
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">MACRO_TAIWAN_EARLY_WARNING</span>
+      <span class="risk-chip risk-yellow">🟡 Risk: YELLOW</span>
+      
+    </div>
+    <div class="hero-run-id">RUN_ID: <code>MTW-20260922-0458-ai-asia-cycle</code></div>
+  </div>
+  <h1 class="hero-title">Global Macro Early Warning｜亞洲半導體外需再加速，AI 基本面與台灣出口形成跨市場共振</h1>
+  <div class="hero-meta-row">
+    <span class="hero-chip">發布時間：2026-09-22 04:58:19</span>
+    <span class="hero-chip hero-chip-cov">涵蓋：2026-09-22 03:58:19 ~ 2026-09-22 04:58:19</span>
+  </div>
+</header>
+
+    <main class="report-content">
+      
+<h2>核心警報摘要（EXECUTIVE TAKE）</h2>
+<blockquote class="callout">
+<p>本輪新增的有效訊號不是單一股價上漲，而是韓國 9 月前 20 日半導體出口、台灣 8 月出口／企業營收與美國半導體股同步轉強；AI 基本面週期的「需求仍強」得到新的亞洲實體資料確認，降低近期半導體景氣快速反轉的機率。</p>
+</blockquote>
+<ul>
+<li><strong>FACT｜韓國前 20 日出口：</strong> 9 月總出口年增 13.5%，半導體出口年增 29.2%，為亞洲科技外需提供新的高頻確認。</li>
+<li><strong>FACT｜台灣：</strong> 8 月出口 US$82.4bn、年增 41.0%，電子零組件年增 58.0%；TSMC 8 月營收年增 53.3%，供應鏈廣度仍強。</li>
+<li><strong>MARKET EXPECTATION｜跨資產：</strong> 9/21 SOX 上漲約 4.3%，Nasdaq 創收盤新高；台股同日上漲 1.14%，外資現貨淨買約 NT$20.48bn，美元兌台幣降至 31.758。</li>
+<li><strong>INFERENCE｜風險：</strong> 這是基本面與資金流（Flow）共振的正向 Delta，但尚不足以抵銷 Fed 再升息風險與長端殖利率（Yield）偏高的估值壓力，因此 Risk Light 維持 YELLOW。</li>
+</ul>
+<h2>訊號變化總覽（SIGNAL DELTA）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>訊號</th>
+<th>前值→目前</th>
+<th>方向／Delta</th>
+<th class="numeric">嚴重度</th>
+<th>信心</th>
+<th>跨資產確認</th>
+<th>台灣關聯</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>asia_export_cycle</td>
+<td>已強→再加速確認</td>
+<td><span class="direction direction-improving">↗ 改善</span></td>
+<td class="numeric">4/5</td>
+<td>高</td>
+<td>SOX、Nasdaq、台股同步上行</td>
+<td>高</td>
+</tr>
+<tr>
+<td>ai_fundamental_cycle</td>
+<td>強勁→廣度擴大</td>
+<td><span class="direction direction-improving">↗ 改善</span></td>
+<td class="numeric">4/5</td>
+<td>高</td>
+<td>TSMC、韓國半導體出口</td>
+<td>高</td>
+</tr>
+<tr>
+<td>taiwan_leading_cycle</td>
+<td>擴張→高檔延續</td>
+<td><span class="direction direction-improving">↗ 改善</span></td>
+<td class="numeric">3/5</td>
+<td>中高</td>
+<td>外資淨買、TWD 走強</td>
+<td>高</td>
+</tr>
+</tbody>
+</table></div>
+<section class="analysis-card"><h3>Signal #1｜亞洲半導體出口高頻資料再加速</h3>
+<div class="meta-chips"><span class="chip chip-score">Severity 4/5</span><span class="chip chip-confidence">Confidence 高</span><span class="chip">TACTICAL</span><span class="chip direction direction-flat">Risk Light：<span class="state-transition"><span class="risk risk-yellow"><span class="risk risk-yellow">🟡 Yellow</span></span> <span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span> <span class="risk risk-yellow"><span class="risk risk-yellow">🟡 Yellow</span></span></span></span></div>
+<ul>
+<li><strong>What changed：</strong> 韓國 9 月前 20 日出口年增 13.5%，半導體年增 29.2%，在台灣 8 月出口創單月新高後形成第二個亞洲實體資料確認。</li>
+<li><strong>Current / prior / consensus / revision：</strong> current 為韓國 9 月 1–20 日；prior 為台灣 8 月出口年增 41.0%及 7 月外銷訂單（Export Orders）年增 61.9%。高頻資料無一致市場共識可比；本輪未發現重大下修。</li>
+<li><strong>Rate of change / persistence / breadth：</strong> 台灣出口已連續 34 個月年增，電子零組件與 ICT 同步強；韓國半導體出口亦保持雙位數成長，顯示非單點雜訊。</li>
+<li><strong>Market reaction：</strong> SOX 9/21 上漲約 4.3%，Nasdaq 創高；台股 9/21 上漲 1.14%，外資現貨淨買 NT$20.48bn，USDTWD <span class="direction direction-down">↓ 下降</span> 至 31.758。</li>
+<li><strong>Cross-asset confirmation：</strong> 股市、外資資金流與台幣方向一致；但美國長端利率仍高，尚非全面金融條件放鬆。</li>
+<li><strong>Taiwan transmission：</strong> 外需與估值（Valuation）正向、匯率偏正向；高殖利率與政策緊縮仍是即時反向因子。</li>
+</ul>
+<h4>機制</h4>
+<ol>
+<li>訂單（Order）／出口需求 <span class="direction direction-flat">→ 持平</span> 2. 晶圓、記憶體、伺服器供應鏈（Supply Chain）稼動率 <span class="direction direction-flat">→ 持平</span> 3. 營收（Revenue）與毛利率（Gross Margin） <span class="direction direction-flat">→ 持平</span> 4. 每股盈餘（EPS）與資本支出（CapEx）可見度 <span class="direction direction-flat">→ 持平</span> 5. 台灣半導體估值與外資部位（Positioning）。</li>
+</ol>
+<h4>市場定價</h4>
+<p>市場定價（Market Pricing）目前把 AI 需求延續反映到半導體股，但並未解除利率折現壓力。Raw Direction：SOX <span class="direction direction-up">↑ 上升</span>、TAIEX <span class="direction direction-up">↑ 上升</span>、USDTWD <span class="direction direction-down">↓ 下降</span>；Signal Direction：對風險資產邊際影響為 <span class="direction direction-improving">↗ 改善</span>。</p>
+<h4>反向證據</h4>
+<p>Fed 9 月會議後仍保留年底再升息可能；若 10Y／實質殖利率（Real Yield）再上行、信用利差（Credit Spread）擴大，可能壓過基本面改善。AI 需求亦高度集中於高階運算，傳統終端並非全面復甦。</p>
+<h4>台灣傳導</h4>
+<ul>
+<li><strong>即時｜估值／資金流：</strong> SOX 與外資淨買改善，支持大型權值半導體。</li>
+<li><strong>數週至數月｜外需／匯率：</strong> 出口與新訂單（New Orders）強，台幣偏強有利資金面但可能壓縮部分出口商換匯收益。</li>
+<li><strong>1–3 季｜基本面：</strong> 若訂單轉為出貨並維持前瞻指引（Guidance），庫存（Inventory）正常化與 CapEx 可延續；中國／日本需求則是放大器。</li>
+</ul>
+<h4>下一確認條件</h4>
+<blockquote class="callout">
+<p>下一個關鍵不是股價再創高，而是台灣 9 月出口、韓國 10 月前 20 日半導體出口與主要供應商 Q3/Q4 Guidance 是否繼續同向；三者若至少兩項轉弱，這個正向 Delta 應降級。</p>
+</blockquote>
+</section><h2>為何重要（WHY IT MATTERS）</h2>
+<ol>
+<li><strong>Data/Policy：</strong> 亞洲出口實體量能持續強，降低 AI 需求突然斷裂的機率。</li>
+<li><strong>Rates/FX/Credit/Liquidity：</strong> 基本面改善支撐風險偏好，但期限溢酬（Term Premium）與高殖利率仍限制估值擴張。</li>
+<li><strong>Sector/Flows：</strong> 半導體領漲且台灣外資淨買，顯示資金不是只停留在美國大型科技股。</li>
+<li><strong>Earnings/Valuation：</strong> 若出貨轉為獲利，EPS 可見度上升；若利率再升，估值上修空間受限。</li>
+<li><strong>Taiwan：</strong> 台灣處於 AI 供應鏈核心，外需改善可透過出口、企業獲利與資本支出放大至本地景氣。</li>
+</ol>
+<h2>總經與政策細節（MACRO / POLICY DETAIL）</h2>
+<p>美國成長與通膨目前沒有足以取代本輪亞洲科技訊號的新拐點；Fed 在 9 月升息後仍保留再升息選項，意味折現率衝擊尚未消失。故本輪分類為 TACTICAL，而非 Regime Shift。</p>
+<h2>跨資產確認（CROSS-ASSET CONFIRMATION）</h2>
+<p>美股科技／半導體、台股、外資資金流與台幣同向改善，構成有效確認；油價回落有助通膨鏈，但長端美債殖利率仍接近高檔，MOVE／信用市場尚未提供足以宣告全面流動性（Liquidity）改善的證據。</p>
+<h2>證據與反向證據（EVIDENCE VS COUNTER-EVIDENCE）</h2>
+<p><strong>支持：</strong> 韓國高頻出口、台灣出口、TSMC 月營收與股市反應跨資料類型一致。<strong>反向：</strong> Fed 緊縮風險、長端利率與 AI 需求集中度仍高；若信用市場轉差，基本面正向訊號可能被金融條件抵銷。</p>
+<h2>台灣傳導（TAIWAN TRANSMISSION）</h2>
+<p>估值：<span class="direction direction-improving">↗ 改善</span>；外需：<span class="direction direction-improving">↗ 改善</span>；金融條件：<span class="direction direction-flat">→ 持平</span>；匯率：<span class="direction direction-improving">↗ 改善</span>／出口商混合；日本／中國放大器：<span class="direction direction-flat">→ 持平</span>。台灣製造 PMI 8 月升至 62.5，與出口、營收資料方向一致，但需防高基期使年增率後續自然降速。</p>
+<h2>產業／股票敏感度（INDUSTRY / EQUITY SENSITIVITY）</h2>
+<p>高敏感：先進製程、AI 伺服器、先進封裝、記憶體與高速網通；中敏感：設備／材料。低敏感或需個別驗證：非 AI 消費電子與傳統製造。此處是敏感度映射，不等同個股買賣建議。</p>
+<h2>市場週期 vs 基本面週期</h2>
+<p>市場週期（Market Cycle）已先行反映 AI 樂觀，估值不低；基本面週期（Fundamental Cycle）本輪則由亞洲出口與企業營收補上確認。兩者同向是正面，但也提高「好消息已部分定價」風險。</p>
+<h2>分類與風險燈號變化（CLASSIFICATION &amp; RISK LIGHT DELTA）</h2>
+<p>Classification：TACTICAL <span class="direction direction-flat">→ 持平</span> TACTICAL。Risk Light：<span class="state-transition"><span class="risk risk-yellow">🟡 YELLOW</span> <span class="transition-arrow">→</span> <span class="risk risk-yellow">🟡 YELLOW</span></span>。正向 Delta 足以觸發報告，但尚未達到兩個以上宏觀 Signal Families 持續共振並使原風險 thesis 失效的 Regime Shift 門檻。</p>
+<h2>情境矩陣（SCENARIO MATRIX）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>情境</th>
+<th>機率判斷</th>
+<th>驗證條件</th>
+<th>台灣影響</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 外需延續</td>
+<td>基準</td>
+<td>亞洲出口＋Guidance 同向</td>
+<td>半導體獲利與 CapEx 延續</td>
+</tr>
+<tr>
+<td>利率壓過基本面</td>
+<td>次要</td>
+<td>10Y／Real Yield 再升、信用利差擴大</td>
+<td>估值壓縮、外資轉弱</td>
+</tr>
+<tr>
+<td>AI 需求降速</td>
+<td>尾部</td>
+<td>出口、訂單、Guidance 至少兩項轉弱</td>
+<td>先進製程／伺服器鏈降溫</td>
+</tr>
+</tbody>
+</table></div>
+<h2>下一確認條件（NEXT CONFIRMATION）</h2>
+<blockquote class="callout">
+<p>升級為更強正向趨勢需看到台灣 9 月出口、韓國下一輪高頻半導體出口與企業 Guidance 至少兩項續強，且美債長端／信用市場不惡化；反之若其中兩項轉弱，kill condition 成立，撤銷本輪正向訊號。</p>
+</blockquote>
+<h2>SOURCE AUDIT</h2>
+<ul>
+<li>Korea Customs Service / Reuters，2026-09-21：韓國 9 月前 20 日出口與半導體出口。</li>
+<li>Taiwan Ministry of Finance / CNA，2026-09-09：8 月出口 US$82.4bn、年增 41.0%，電子零組件年增 58.0%。</li>
+<li>TSMC / CNA，2026-09-10：8 月營收 NT$514.806bn、年增 53.3%。</li>
+<li>TWSE，2026-09-21：外資現貨淨買 NT$20.479bn。</li>
+<li>Reuters，2026-09-21：Nasdaq 創高、SOX 約 +4.3%、美債殖利率回落。</li>
+<li>Taipei Forex / CNA，2026-09-21：USDTWD 收 31.758。</li>
+</ul>
+<h2>結論（BOTTOM LINE）</h2>
+<blockquote class="callout">
+<p>本輪 Signal Delta 是「亞洲 AI／半導體基本面由單一企業強勁，進一步擴散到跨國出口資料與資金流確認」。它降低近期科技景氣急轉弱的風險，但 Fed 與長端利率仍是主要反證，因此維持 YELLOW／TACTICAL，不升級為 Regime Shift。</p>
+</blockquote>
+
+    </main>
+    <footer>
+      Global Macro Signal Report · 2026-09-22 04:58:19 · Generated Deterministically
+    </footer>
+  </div>
+</div>
+</body>
+</html>

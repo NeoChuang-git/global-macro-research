@@ -1119,6 +1119,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜韓國20日出口確認AI半導體基本面再加速，暫時抵銷利率衝擊",
       "topic": null
+    },
+    "MTW-20260922-0458-ai-asia-cycle": {
+      "coverage_end_taipei": "2026-09-22 04:58:19+08:00",
+      "coverage_start_taipei": "2026-09-22 03:58:19+08:00",
+      "generated_at_taipei": "2026-09-22 04:58:19+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-22_0458_ai-asia-cycle.html",
+      "html_sha256": "6f088563d84c8e0e7bf35389652dc9b339a1271bb25d45bb05ce8f846a3a38c0",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-22_0458_ai-asia-cycle.md",
+      "markdown_sha256": "6b8dd0150fcebfb6106f89538e5d9e8709b06c3cb2285f493bef93fca15fafea",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20260922-0458-ai-asia-cycle",
+      "slug": "ai-asia-cycle",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜亞洲半導體外需再加速，AI 基本面與台灣出口形成跨市場共振",
+      "topic": null
     }
   },
   "schema_version": 1
