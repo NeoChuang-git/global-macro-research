@@ -1087,6 +1087,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜Fed 二次升息定價升溫、油價百美元與全球緊縮共振",
       "topic": null
+    },
+    "MTW-20260921-1203-asia-export-chip-confirmation": {
+      "coverage_end_taipei": "2026-09-21 12:03:01+08:00",
+      "coverage_start_taipei": "2026-09-19 07:20:00+08:00",
+      "generated_at_taipei": "2026-09-21 12:03:01+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-21_1203_asia-export-chip-confirmation.html",
+      "html_sha256": "9f4b473d0e160e67a9cabf3863051ceb485269ac2db8681ada91dd8f10bbb789",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-21_1203_asia-export-chip-confirmation.md",
+      "markdown_sha256": "4fffcbf5f5ec63bbd072927b33a1b71fdbf04c65fdfd347217781dadebfa9f08",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20260921-1203-asia-export-chip-confirmation",
+      "slug": "asia-export-chip-confirmation",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜韓國出口確認 AI／半導體週期延續，亞洲外需廣度同步擴張",
+      "topic": null
     }
   },
   "schema_version": 1
