@@ -304,6 +304,22 @@
       "title": "Global Daily Brief｜Nscale IPO 把 AI 基礎設施的「百億合約、十億虧損」推上公開市場檢驗台",
       "topic": null
     },
+    "GDB-20260921-0729": {
+      "coverage_end_taipei": "2026-09-21 07:29:23+08:00",
+      "coverage_start_taipei": "2026-09-20 07:29:23+08:00",
+      "generated_at_taipei": "2026-09-21 07:29:23+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-21.html",
+      "html_sha256": "46878b44d8d1826897afaf6abed4b7efa2da342713fa8edf684e3b318d8dbc99",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-21.md",
+      "markdown_sha256": "aa8a5746790206d45e375a4038f25ffbb4bd273ca09bf080c74e93ac376b70cc",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20260921-0729",
+      "slug": "cxmt-g5-dram-mass-production",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜長鑫存儲第五代 DRAM 平台量產，中國記憶體國產化進入供給驗證期",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
