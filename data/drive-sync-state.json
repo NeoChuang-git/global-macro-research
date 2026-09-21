@@ -999,6 +999,15 @@
       "sha256": "4fffcbf5f5ec63bbd072927b33a1b71fdbf04c65fdfd347217781dadebfa9f08",
       "size": 33596
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-21_2104_korea-chip-export-confirmation.md": {
+      "category": "early-warning",
+      "drive_file_id": "1QrSnY9rWDYNA1pwLNwY2D6gx75l5nzmo",
+      "md5_checksum": "1dd0b2c99bbe2279f1f8c328d3f795f0",
+      "modified_time": "2026-09-21T13:07:09.700Z",
+      "name": "Global_Macro_Early_Warning_2026-09-21_2104_korea-chip-export-confirmation.md",
+      "sha256": "f1c896de20eea61278894f2edcdf207e705456ee544c7d0671b435651eaa1024",
+      "size": 12816
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
