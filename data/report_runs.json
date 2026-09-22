@@ -320,6 +320,22 @@
       "title": "Global Daily Brief｜長鑫存儲第五代 DRAM 平台量產，中國記憶體國產化進入供給驗證期",
       "topic": null
     },
+    "GDB-20260922-0730": {
+      "coverage_end_taipei": "2026-09-22 07:30:58+08:00",
+      "coverage_start_taipei": "2026-09-21 07:30:58+08:00",
+      "generated_at_taipei": "2026-09-22 07:30:58+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-22.html",
+      "html_sha256": "b00d19aad9cfea53f18c003556b6a81a53503dcecfe2752ca0fef6fec1a3e203",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-22.md",
+      "markdown_sha256": "f07a38255a75a454f37b12f62d859e3f3844afa55209202c9e6c3fde2ab2c0ae",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20260922-0730",
+      "slug": "amd-trillion-ai-chip-rally",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜AMD 跨越兆美元市值，AI 晶片行情再擴散",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
