@@ -1167,6 +1167,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜台灣外銷訂單首破千億美元，AI／半導體需求再加速",
       "topic": null
+    },
+    "MTW-20260923-0402-asia-export-acceleration": {
+      "coverage_end_taipei": "2026-09-23 04:02:11+08:00",
+      "coverage_start_taipei": "2026-09-22 04:00:00+08:00",
+      "generated_at_taipei": "2026-09-23 04:02:11+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-23_0402_asia-export-acceleration.html",
+      "html_sha256": "0bed2cd855084a981a405672a0e1f182bd10268346a048b01b94dde88d7bd467",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-23_0402_asia-export-acceleration.md",
+      "markdown_sha256": "fc1ecb070851883dd3d1fb8b9f81d20a1755b6b014f80a3eca099b917727e4e5",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20260923-0402-asia-export-acceleration",
+      "slug": "asia-export-acceleration",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台灣外銷訂單突破千億美元，AI／半導體外需再加速",
+      "topic": null
     }
   },
   "schema_version": 1
