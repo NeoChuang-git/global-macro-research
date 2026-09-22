@@ -1151,6 +1151,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜亞洲半導體外需再加速，AI 基本面與台灣出口形成跨市場共振",
       "topic": null
+    },
+    "MTW-20260922-1857-ai-order-acceleration": {
+      "coverage_end_taipei": "2026-09-22 18:57:14+08:00",
+      "coverage_start_taipei": "2026-09-22 17:57:14+08:00",
+      "generated_at_taipei": "2026-09-22 18:57:14+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-22_1857_ai-order-acceleration.html",
+      "html_sha256": "9399f4c1325cf1e84d42387bb019962d7705485436c0efa97a220cd690b0cb84",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-22_1857_ai-order-acceleration.md",
+      "markdown_sha256": "5fa6d1e9727fc60b63c2f1a34edfb558e1d85bddc2c4af242daa74a5e2c3ba48",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20260922-1857-ai-order-acceleration",
+      "slug": "ai-order-acceleration",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台灣外銷訂單首破千億美元，AI／半導體需求再加速",
+      "topic": null
     }
   },
   "schema_version": 1
