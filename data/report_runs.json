@@ -352,6 +352,22 @@
       "title": "Global Daily Brief｜Meta Muse 重塑 AI 定價：晶片走強、軟體與平台面臨代理型競爭",
       "topic": null
     },
+    "GDB-20260924-0731": {
+      "coverage_end_taipei": "2026-09-24 07:31:08+08:00",
+      "coverage_start_taipei": "2026-09-23 07:31:08+08:00",
+      "generated_at_taipei": "2026-09-24 07:31:08+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-24.html",
+      "html_sha256": "35b52dbda91da64a785d0db751e64ace78ace1bf782827d20a5ec91a6ae64a08",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-24.md",
+      "markdown_sha256": "a06342f8c89048e4e3ceaaab35b5197085a1fa3d33b4fe32cfc23516aa22c113",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "ORANGE",
+      "run_id": "GDB-20260924-0731",
+      "slug": "meta-muse-ai-monetization",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Meta Muse 商業化預期升溫，AI 應用層開始挑戰基礎設施主線",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
