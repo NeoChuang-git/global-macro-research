@@ -336,6 +336,22 @@
       "title": "Global Daily Brief｜AMD 跨越兆美元市值，AI 晶片行情再擴散",
       "topic": null
     },
+    "GDB-20260923-0728": {
+      "coverage_end_taipei": "2026-09-23 07:28:14+08:00",
+      "coverage_start_taipei": "2026-09-22 07:28:14+08:00",
+      "generated_at_taipei": "2026-09-23 07:28:14+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-23.html",
+      "html_sha256": "4ed66a2a24b41a22e14a5999a15c66413db17cf542402ca59a101a3ae595b558",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-23.md",
+      "markdown_sha256": "fa058a853ab18bc098ca0d710c69e03cbc68f10426726cae69137e474b032adb",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20260923-0728",
+      "slug": "meta-muse-ai-repricing",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Meta Muse 重塑 AI 定價：晶片走強、軟體與平台面臨代理型競爭",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
