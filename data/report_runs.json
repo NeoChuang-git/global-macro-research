@@ -1215,6 +1215,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜台灣 AI／半導體外需與生產動能同步擴張",
       "topic": null
+    },
+    "MTW-20260924-0000-rates-repricing": {
+      "coverage_end_taipei": "2026-09-24 00:00:58+08:00",
+      "coverage_start_taipei": "2026-09-23 00:00:00+08:00",
+      "generated_at_taipei": "2026-09-24 00:00:58+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_0000_rates-repricing.html",
+      "html_sha256": "fa9c15cc0e593d92ef73f689efbd1d2e7628b99ce68f5d3de9a357c253aa2943",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_0000_rates-repricing.md",
+      "markdown_sha256": "6f0d53995adeb4f3df01b8eaa3e3b07046bf0c7c29fecd214d125d8fe0fc37c9",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260924-0000-rates-repricing",
+      "slug": "rates-repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美債 10Y 突破 5%：強需求與 Fed 鷹派訊號推升再緊縮定價",
+      "topic": null
     }
   },
   "schema_version": 1
