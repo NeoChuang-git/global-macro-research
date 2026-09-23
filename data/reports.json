@@ -75,6 +75,14 @@
     },
     {
       "category": "early-warning",
+      "date": "2026-09-24",
+      "file": "reports/early-warning/__INVALID_MD_FINAL_VERIFY_FAILED_MTW-20260924-0558-rates-repricing.html",
+      "modified_time": null,
+      "sha256": "ccfa292871e3938df7d4a2061e4432b091942e3ec0d91cdaa42b66ceda477e06",
+      "title": "INVALID MD FINAL VERIFY FAILED MTW 0558 rates repricing"
+    },
+    {
+      "category": "early-warning",
       "coverage_end_taipei": "2026-09-23 20:00:00+08:00",
       "coverage_start_taipei": "2026-09-22 20:00:00+08:00",
       "date": "2026-09-23",

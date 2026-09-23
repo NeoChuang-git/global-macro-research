@@ -1089,6 +1089,15 @@
       "sha256": "c7c30d349d0b442841cdc24a3e04c63ba785a36aedea7f516b1ef4b65d9adf0e",
       "size": 5582
     },
+    "reports/early-warning/__INVALID_MD_FINAL_VERIFY_FAILED_MTW-20260924-0558-rates-repricing.txt": {
+      "category": "early-warning",
+      "drive_file_id": "1C6Cy67BBxG8aAdyInB6NTuHd10oH0hoK",
+      "md5_checksum": "19768afaabfcdda27668406ed5f19506",
+      "modified_time": "2026-09-23T22:02:02.360Z",
+      "name": "__INVALID_MD_FINAL_VERIFY_FAILED_MTW-20260924-0558-rates-repricing.txt",
+      "sha256": "b76f1456de276ed21efeec355f8ad8f835e688d11a60723d17eefc35f71ae28b",
+      "size": 9630
+    },
     "reports/weekly/Weekly_Strategy_2026-08-30.html": {
       "category": "weekly",
       "drive_file_id": "1OfvTrz91qKZZAKxs5QbglprN6n8nvO_1",
