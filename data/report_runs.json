@@ -1199,6 +1199,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜台灣外銷訂單突破千億美元，AI／半導體外需再加速",
       "topic": null
+    },
+    "MTW-20260923-2000-taiwan-cycle": {
+      "coverage_end_taipei": "2026-09-23 20:00:00+08:00",
+      "coverage_start_taipei": "2026-09-22 20:00:00+08:00",
+      "generated_at_taipei": "2026-09-23 20:00:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-23_2000_taiwan-cycle.html",
+      "html_sha256": "9b313c5b07dcfa85adec7debc21ead2b822e87bfa8226dd73428310a23074d75",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-23_2000_taiwan-cycle.md",
+      "markdown_sha256": "7ebb6820fd49354f83c28bb4f6a45ab6f0ecc5888a29b21a22e17f6647d979f0",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20260923-2000-taiwan-cycle",
+      "slug": "taiwan-cycle",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台灣 AI／半導體外需與生產動能同步擴張",
+      "topic": null
     }
   },
   "schema_version": 1
