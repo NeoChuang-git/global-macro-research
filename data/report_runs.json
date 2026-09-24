@@ -1295,6 +1295,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜美債殖利率突破 5% 與再升息定價共振",
       "topic": null
+    },
+    "MTW-20260924-2057-rates-repricing": {
+      "coverage_end_taipei": "2026-09-24 20:57:55+08:00",
+      "coverage_start_taipei": "2026-09-23 20:57:55+08:00",
+      "generated_at_taipei": "2026-09-24 20:57:55+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_2057_rates-repricing.html",
+      "html_sha256": "ff7fb13611306876c7ad419f7be2388380fcc36828d5ebf4868646bc755ceadd",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_2057_rates-repricing.md",
+      "markdown_sha256": "81d066625e491c961c4d1977af5449a57609e05580fa1a19c06212b86d1a06e1",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260924-2057-rates-repricing",
+      "slug": "rates-repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美債殖利率突破 5%：再升息定價與台灣外資轉賣共振",
+      "topic": null
     }
   },
   "schema_version": 1
