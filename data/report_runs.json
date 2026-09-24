@@ -1263,6 +1263,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜美債長端再定價升級，折現率衝擊壓過台灣基本面韌性",
       "topic": null
+    },
+    "MTW-20260924-1102-rates-repricing": {
+      "coverage_end_taipei": "2026-09-24 11:02:25+08:00",
+      "coverage_start_taipei": "2026-09-24 10:00:00+08:00",
+      "generated_at_taipei": "2026-09-24 11:02:25+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_1102_rates-repricing.html",
+      "html_sha256": "33c895a40a60660fae4b0ccfcd133a72787f551e3cf3a4f44c23a0cdd3282187",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_1102_rates-repricing.md",
+      "markdown_sha256": "8b7d7a0ca1eb365a872f1f51827eccdbce5d9a36b91d99e53a2397b0d7d59bb5",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260924-1102-rates-repricing",
+      "slug": "rates-repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美國成長意外轉強推升殖利率，降息定價快速退潮",
+      "topic": null
     }
   },
   "schema_version": 1
