@@ -1311,6 +1311,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜美債殖利率突破 5%：再升息定價與台灣外資轉賣共振",
       "topic": null
+    },
+    "MTW-20260924-2300-rates-oil-repricing": {
+      "coverage_end_taipei": "2026-09-24 23:00:52+08:00",
+      "coverage_start_taipei": "2026-09-22 09:02:00+08:00",
+      "generated_at_taipei": "2026-09-24 23:00:52+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_2300_rates-oil-repricing.html",
+      "html_sha256": "cda5dbfe6f7da889806b84827c47866365112d3fa1740bda6ac51f6c0ae9a071",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_2300_rates-oil-repricing.md",
+      "markdown_sha256": "c8f114e0f55fabe4fceefe93d900714152cc32cb0df53ded91917efc46bae33f",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260924-2300-rates-oil-repricing",
+      "slug": "rates-oil-repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜油價反彈疊加長端殖利率突破 5.1%，台灣外資現貨與期貨同步轉弱",
+      "topic": null
     }
   },
   "schema_version": 1
