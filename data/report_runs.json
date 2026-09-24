@@ -1279,6 +1279,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜美國成長意外轉強推升殖利率，降息定價快速退潮",
       "topic": null
+    },
+    "MTW-20260924-1657-rates-repricing": {
+      "coverage_end_taipei": "2026-09-24 16:57:13+08:00",
+      "coverage_start_taipei": "2026-09-24 15:57:13+08:00",
+      "generated_at_taipei": "2026-09-24 16:57:13+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_1657_rates-repricing.html",
+      "html_sha256": "f844d03b888fa68cb56efde3331d087692598c710d68720409a8450765e9fe22",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_1657_rates-repricing.md",
+      "markdown_sha256": "a285ea36f910b60b22f78498acd091158e109322cdf36ad639763532e985bdfb",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260924-1657-rates-repricing",
+      "slug": "rates-repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美債殖利率突破 5% 與再升息定價共振",
+      "topic": null
     }
   },
   "schema_version": 1
