@@ -368,6 +368,22 @@
       "title": "Global Daily Brief｜Meta Muse 商業化預期升溫，AI 應用層開始挑戰基礎設施主線",
       "topic": null
     },
+    "GDB-20260925-0727": {
+      "coverage_end_taipei": "2026-09-25 07:27:40+08:00",
+      "coverage_start_taipei": "2026-09-24 07:27:40+08:00",
+      "generated_at_taipei": "2026-09-25 07:27:40+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-25.html",
+      "html_sha256": "77a21fc55673e330452364c88edd00135e57def4c67c317280ccd6a7101189e8",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-25.md",
+      "markdown_sha256": "20d7ee7aeaf6aed247738c804e6661e1b9e75b03b3635ae4db9d901e6f81463d",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "ORANGE",
+      "run_id": "GDB-20260925-0727",
+      "slug": "oracle-ai-datacenter-power-delay",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Oracle 資料中心電力延誤，AI 基建瓶頸轉向電網",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
