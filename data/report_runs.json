@@ -384,6 +384,22 @@
       "title": "Global Daily Brief｜Oracle 資料中心電力延誤，AI 基建瓶頸轉向電網",
       "topic": null
     },
+    "GDB-20260927-1141": {
+      "coverage_end_taipei": "2026-09-27 11:41:26+08:00",
+      "coverage_start_taipei": "2026-09-26 11:41:26+08:00",
+      "generated_at_taipei": "2026-09-27 11:41:26+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-27.html",
+      "html_sha256": "b1baafca8a167203ae4b74a9f17ccc1ba964ea31ac662257177d8561a99fbe24",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-27.md",
+      "markdown_sha256": "06f228c9f95428152f0c1ea61d3be9877ede91909b7c9a4c37add390a77e58f2",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20260927-1141",
+      "slug": "agentic-ai-control-governance",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Agentic AI 從能力競賽轉向控制與治理驗證",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
