@@ -44,10 +44,10 @@
     },
     "weekly": {
       "category": "weekly",
-      "date": "2026-09-20",
-      "file": "reports/weekly/Weekly_Strategy_2026-09-20.html",
+      "date": "2026-09-27",
+      "file": "reports/weekly/Weekly_Strategy_2026-09-27.html",
       "modified_time": null,
-      "sha256": "241b26d837809251ee7f27254e29b08466f592bd99bd13a8b964b35a3e64983b",
+      "sha256": "3610381dbba7db81e9b9a46ec2d045d1a65fd92557d7acd2608f39cd47f16731",
       "title": "Weekly Strategy"
     }
   },
@@ -72,6 +72,14 @@
       "source_kind": "google_doc_markdown",
       "title": "Global Daily Brief｜Agentic AI 從能力競賽轉向控制與治理驗證",
       "topic": null
+    },
+    {
+      "category": "weekly",
+      "date": "2026-09-27",
+      "file": "reports/weekly/Weekly_Strategy_2026-09-27.html",
+      "modified_time": null,
+      "sha256": "3610381dbba7db81e9b9a46ec2d045d1a65fd92557d7acd2608f39cd47f16731",
+      "title": "Weekly Strategy"
     },
     {
       "category": "daily",
