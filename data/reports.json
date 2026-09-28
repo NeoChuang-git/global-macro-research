@@ -23,24 +23,11 @@
     },
     "early-warning": {
       "category": "early-warning",
-      "coverage_end_taipei": "2026-09-24 23:00:52+08:00",
-      "coverage_start_taipei": "2026-09-22 09:02:00+08:00",
-      "date": "2026-09-24",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_2300_rates-oil-repricing.html",
-      "generated_at_taipei": "2026-09-24 23:00:52+08:00",
-      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_2300_rates-oil-repricing.html",
-      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-24_2300_rates-oil-repricing.md",
-      "markdown_sha256": "c8f114e0f55fabe4fceefe93d900714152cc32cb0df53ded91917efc46bae33f",
-      "modified_time": "2026-09-24 23:00:52+08:00",
-      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
-      "risk_light": "ORANGE",
-      "run_id": "MTW-20260924-2300-rates-oil-repricing",
-      "sha256": "cda5dbfe6f7da889806b84827c47866365112d3fa1740bda6ac51f6c0ae9a071",
-      "slug": "rates-oil-repricing",
-      "source_document_id": null,
-      "source_kind": "google_doc_markdown",
-      "title": "Global Macro Early Warning｜油價反彈疊加長端殖利率突破 5.1%，台灣外資現貨與期貨同步轉弱",
-      "topic": null
+      "date": "2026-09-28",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-28_1859_oil-yield-confirmation.html",
+      "modified_time": null,
+      "sha256": "3b29ac5631bf125457201d31c6d73c76476dcdc5958dda1d1c838f823c67a463",
+      "title": "Global Macro Early Warning 1859 oil yield confirmation"
     },
     "weekly": {
       "category": "weekly",
@@ -52,6 +39,14 @@
     }
   },
   "reports": [
+    {
+      "category": "early-warning",
+      "date": "2026-09-28",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-28_1859_oil-yield-confirmation.html",
+      "modified_time": null,
+      "sha256": "3b29ac5631bf125457201d31c6d73c76476dcdc5958dda1d1c838f823c67a463",
+      "title": "Global Macro Early Warning 1859 oil yield confirmation"
+    },
     {
       "category": "daily",
       "coverage_end_taipei": "2026-09-27 11:41:26+08:00",

@@ -1143,6 +1143,15 @@
       "sha256": "c8f114e0f55fabe4fceefe93d900714152cc32cb0df53ded91917efc46bae33f",
       "size": 14030
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-28_1859_oil-yield-confirmation.md": {
+      "category": "early-warning",
+      "drive_file_id": "1POZr3CI7KwIEhRgghAu0G6wsXDxym4RS",
+      "md5_checksum": "a2d26a118a17be7ca830cbcd82891587",
+      "modified_time": "2026-09-28T11:02:23.726Z",
+      "name": "Global_Macro_Early_Warning_2026-09-28_1859_oil-yield-confirmation.md",
+      "sha256": "3661a1567352aa854fedb581736137a1d3e26aa57383a9c75591ae2b995b8359",
+      "size": 12919
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
