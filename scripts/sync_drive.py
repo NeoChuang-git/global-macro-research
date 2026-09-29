@@ -4,6 +4,7 @@
 
 import argparse
 import hashlib
+import html
 import json
 import os
 import re
@@ -141,6 +142,66 @@ def _display_title(name):
     if title == "Global Macro Morning" or re.match(r"^Global Daily Brief(?:\s+\d{4})?$", title):
         return "Global Daily Brief"
     return title
+
+
+def _is_generic_title(title: Optional[str]) -> bool:
+    if not title:
+        return True
+    t = title.strip().lower()
+    return t in {
+        "weekly strategy",
+        "global daily brief",
+        "global macro morning",
+        "global macro early warning",
+        "untitled report",
+    }
+
+
+def extract_report_title(path: Path) -> Optional[str]:
+    """Extract a descriptive title from companion markdown or HTML content."""
+    md_path = path.with_suffix(".md")
+    if not md_path.is_file():
+        txt_path = path.with_suffix(".txt")
+        if txt_path.is_file():
+            md_path = txt_path
+
+    if md_path.is_file():
+        try:
+            raw_md = md_path.read_text(encoding="utf-8", errors="replace")
+            fm_match = re.search(r"^\s*title:\s*(.+)$", raw_md, re.MULTILINE)
+            if fm_match:
+                val = fm_match.group(1).strip().strip("'\"")
+                if val:
+                    return val
+            h1_match = re.search(r"^\s*\\?#\s+(.+)$", raw_md, re.MULTILINE)
+            if h1_match:
+                val = h1_match.group(1).strip()
+                if val:
+                    return val
+        except Exception:
+            pass
+
+    try:
+        raw_html = path.read_text(encoding="utf-8", errors="replace")
+    except Exception:
+        return None
+
+    m_h1 = re.search(r"<h1[^>]*>(.*?)</h1>", raw_html, re.IGNORECASE | re.DOTALL)
+    if m_h1:
+        clean = html.unescape(re.sub(r"<[^>]+>", "", m_h1.group(1))).strip()
+        clean = " ".join(clean.split())
+        if clean:
+            return clean
+
+    m_title = re.search(r"<title[^>]*>(.*?)</title>", raw_html, re.IGNORECASE | re.DOTALL)
+    if m_title:
+        clean = html.unescape(re.sub(r"<[^>]+>", "", m_title.group(1))).strip()
+        clean = re.sub(r"\s*[·•|-]\s*N/A\s*$", "", clean, flags=re.IGNORECASE)
+        clean = " ".join(clean.split())
+        if clean:
+            return clean
+
+    return None
 
 
 ALLOWED_EXTENSIONS = (".html", ".md", ".txt")
@@ -488,16 +549,46 @@ def render_markdown_file_to_html(md_path: Path, category: str, runs_path: Path) 
             print(f"CANONICAL_BLOCK_INVALID in {md_path.name}: {exc}", file=sys.stderr)
 
     # Fallback for plain markdown
-    h1_match = re.search(r"^\s*#\s+(.+)$", raw_text, flags=re.MULTILINE)
-    title = h1_match.group(1).strip() if h1_match else _display_title(md_path.name)
+    title = None
+    fm_match = re.search(r"^\s*title:\s*(.+)$", raw_text, re.MULTILINE)
+    if fm_match:
+        title = fm_match.group(1).strip().strip("'\"")
+    if not title:
+        h1_match = re.search(r"^\s*\\?#\s+(.+)$", raw_text, flags=re.MULTILINE)
+        if h1_match:
+            title = h1_match.group(1).strip()
+    if not title:
+        title = _display_title(md_path.name)
+
     report_type = "GLOBAL_DAILY_BRIEF" if category == "daily" else "WEEKLY_STRATEGY" if category == "weekly" else "MACRO_TAIWAN_EARLY_WARNING"
+    run_id = f"{category.upper()}-{md_path.stem}"
     meta = {
         "title": title,
         "report_type": report_type,
-        "run_id": f"{category.upper()}-{md_path.stem}",
+        "run_id": run_id,
     }
     html_content = render_markdown_to_html(raw_text, meta)
-    _atomic_write_if_changed(html_path, html_content.encode("utf-8"))
+    html_bytes = html_content.encode("utf-8")
+    _atomic_write_if_changed(html_path, html_bytes)
+
+    repo_root_dir = runs_path.parent.parent if runs_path.parent.name == "data" else runs_path.parent
+    run_rec = {
+        "run_id": run_id,
+        "report_type": report_type,
+        "title": title,
+        "generated_at_taipei": None,
+        "coverage_start_taipei": None,
+        "coverage_end_taipei": None,
+        "risk_light": None,
+        "topic": None,
+        "slug": None,
+        "source_document_id": None,
+        "markdown_path": md_path.relative_to(repo_root_dir).as_posix(),
+        "markdown_sha256": _hash_file(md_path, "sha256"),
+        "html_path": html_path.relative_to(repo_root_dir).as_posix(),
+        "html_sha256": _hash_bytes(html_bytes, "sha256"),
+    }
+    record_report_run(runs_path, run_rec)
     print(f"MARKDOWN_RENDERED_FALLBACK: {html_path.name}")
     return html_path
 
@@ -668,16 +759,22 @@ def build_reports_index(repo_root, state_files, runs_data=None):
             file_sha256 = _hash_file(path, "sha256")
 
             # Check if this report was generated from a canonical Markdown run
+            extracted_title = extract_report_title(path)
             run_rec = runs_by_html.get(relative)
             if run_rec:
                 date_val = str(classification["date"] or str(run_rec.get("generated_at_taipei", ""))[:10])
+                resolved_title = (
+                    run_rec.get("title")
+                    if (run_rec.get("title") and not _is_generic_title(run_rec.get("title")))
+                    else (extracted_title or run_rec.get("title") or classification["title"])
+                )
                 entry = {
                     "category": category,
                     "date": date_val,
                     "file": relative,
                     "modified_time": str(metadata.get("modified_time") or run_rec.get("generated_at_taipei") or ""),
                     "sha256": file_sha256,
-                    "title": run_rec.get("title") or classification["title"],
+                    "title": resolved_title,
                     "run_id": run_rec.get("run_id"),
                     "report_type": run_rec.get("report_type"),
                     "source_kind": "google_doc_markdown",
@@ -700,7 +797,7 @@ def build_reports_index(repo_root, state_files, runs_data=None):
                     "file": relative,
                     "modified_time": str(metadata.get("modified_time") or "") if metadata.get("modified_time") else None,
                     "sha256": file_sha256,
-                    "title": classification["title"],
+                    "title": extracted_title or classification["title"],
                 }
                 # Log preservation of legacy HTML
                 # print(f"LEGACY_HTML_PRESERVED: {relative}")

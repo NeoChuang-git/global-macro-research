@@ -9,6 +9,7 @@ from scripts.sync_drive import (
     SyncError,
     build_reports_index,
     classify_drive_file,
+    extract_report_title,
     resolve_doc_sources,
     resolve_folder_ids,
     sync_native_google_docs,
@@ -427,6 +428,37 @@ class ReportsIndexTests(unittest.TestCase):
 
             index = build_reports_index(root, {})
             self.assertEqual(len(index["reports"]), 0)
+
+    def test_extract_report_title_from_html_and_markdown(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            html_file = root / "Weekly_Strategy_2026-09-27.html"
+            html_file.write_text("<!doctype html><html><body><h1>Weekly Global Macro Strategy &amp; Outlook</h1></body></html>", encoding="utf-8")
+            self.assertEqual(extract_report_title(html_file), "Weekly Global Macro Strategy & Outlook")
+
+            # With companion markdown title frontmatter
+            md_file = root / "Weekly_Strategy_2026-09-27.md"
+            md_file.write_text("---\ntitle: Rich Markdown Frontmatter Title\n---\n# Ignored\n", encoding="utf-8")
+            self.assertEqual(extract_report_title(html_file), "Rich Markdown Frontmatter Title")
+
+    def test_build_reports_index_extracts_weekly_title_automatically(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            weekly_dir = root / "reports" / "weekly"
+            weekly_dir.mkdir(parents=True)
+            html_file = weekly_dir / "Weekly_Strategy_2026-09-27.html"
+            html_file.write_text(
+                "<!doctype html><html><head><title>Ignored</title></head><body>"
+                "<h1>Weekly Global Macro &amp; Investment Strategy｜AI獲利動能撐住風險資產</h1>"
+                "</body></html>",
+                encoding="utf-8",
+            )
+
+            index = build_reports_index(root, {})
+            self.assertEqual(len(index["reports"]), 1)
+            expected_title = "Weekly Global Macro & Investment Strategy｜AI獲利動能撐住風險資產"
+            self.assertEqual(index["reports"][0]["title"], expected_title)
+            self.assertEqual(index["latest"]["weekly"]["title"], expected_title)
 
 
 if __name__ == "__main__":
