@@ -267,6 +267,38 @@ Invalid body without sections
         self.assertFalse(res_bad_block.is_success)
         self.assertIsNotNone(res_bad_block.error)
 
+    def test_ingest_escaped_canonical_document(self):
+        escaped_doc = f"""
+\\<\\<\\<REPORT\\_BEGIN\\>\\>\\>
+\\---
+research\\_status: COMPLETE
+report\\_type: GLOBAL\\_DAILY\\_BRIEF
+run\\_id: GDB-20260929-ESCAPED
+generated\\_at\\_taipei: 2026-09-29T07:30:00+08:00
+coverage\\_start\\_taipei: 2026-09-28T07:30:00+08:00
+coverage\\_end\\_taipei: 2026-09-29T07:30:00+08:00
+title: Global Daily Brief Escaped Ingestion Test
+format\\_version: 1
+risk\\_light: GREEN
+\\---
+{SAMPLE_DAILY_BODY}
+\\<\\<\\<REPORT\\_END\\>\\>\\>
+"""
+        res = ingest_report_content(
+            content=escaped_doc,
+            category="daily",
+            repo_root=self.root,
+            allow_fallback=False,
+        )
+        self.assertEqual(res.status, IngestionStatus.ARCHIVED_CANONICAL)
+        self.assertTrue(res.is_success)
+        self.assertEqual(res.run_id, "GDB-20260929-ESCAPED")
+        self.assertIsNotNone(res.html_path)
+        html_text = res.html_path.read_text(encoding="utf-8")
+        self.assertIn("<h2", html_text)
+        self.assertNotIn("\\#\\#", html_text)
+
 
 if __name__ == "__main__":
     unittest.main()
+

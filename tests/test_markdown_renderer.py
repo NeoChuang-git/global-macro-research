@@ -367,6 +367,43 @@ NVIDIA 推出安全平台。
         bq = result_soup.find("blockquote")
         self.assertIn("callout-risk", bq.get("class", []))
 
+    def test_render_escaped_headers_and_emphasis(self):
+        escaped_md = """
+\\#\\# 核心警報摘要（EXECUTIVE TAKE）
+\\> 一句話結論｜前一輪能源供給風險。
+\\- \\*\\*energy\\_inflation ↘ 惡化：\\*\\* 美伊談判僵局
+"""
+        rendered = render_markdown_to_html(escaped_md, {"title": "Test Escaped", "run_id": "ESC-1"})
+        self.assertIn("<h2", rendered)
+        self.assertNotIn("\\#\\#", rendered)
+        self.assertIn("callout-thesis", rendered)
+        self.assertIn("<strong>energy_inflation", rendered)
+        self.assertIn("direction-worsening", rendered)
+        self.assertNotIn("\\*\\*", rendered)
+
+    def test_table_boundary_isolation(self):
+        table_with_adjacent_heading = """
+| 訊號 | 方向 |
+|---|---|
+| Rates | 惡化 |
+\\#\\#\\# Signal \\#1｜能源—長債—美元形成第二輪同向確認
+\\*\\*Severity 4/5｜Confidence 高\\*\\*
+- \\*\\*What changed：\\*\\* 殖利率走高。
+"""
+        rendered = render_markdown_to_html(table_with_adjacent_heading, {"title": "Test Table", "run_id": "TBL-1"})
+        soup = BeautifulSoup(rendered, "html.parser")
+        tables = soup.find_all("table")
+        self.assertEqual(len(tables), 1)
+        # Ensure the table cells do not contain the heading
+        for td in soup.find_all("td"):
+            self.assertNotIn("Signal #1", td.get_text())
+            self.assertNotIn("Signal \\#1", td.get_text())
+        # Ensure h3 was rendered outside the table
+        h3 = soup.find("h3")
+        self.assertIsNotNone(h3)
+        self.assertIn("Signal #1", h3.get_text())
+
 
 if __name__ == "__main__":
     unittest.main()
+

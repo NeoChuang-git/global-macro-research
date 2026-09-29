@@ -98,10 +98,73 @@ def _render_hero_header(metadata: Dict[str, Any]) -> str:
 """
 
 
+def sanitize_markdown_syntax(text: str) -> str:
+    """Normalize escaped Markdown delimiters, syntax characters, and table boundaries."""
+    if not text:
+        return ""
+
+    # 1. Normalize escaped report markers e.g. \<\<\<REPORT_BEGIN\>\>\> or \<\<\<REPORT\_BEGIN\>\>\>
+    text = re.sub(r"(?:\\+<|<){3}\s*REPORT(?:\\+_|_)?BEGIN\s*(?:\\+>|>){3}", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"(?:\\+<|<){3}\s*REPORT(?:\\+_|_)?END\s*(?:\\+>|>){3}", "", text, flags=re.IGNORECASE)
+
+    # 2. Normalize escaped front matter block if present at the top
+    text = re.sub(r"^\s*\\?-(?:\\?-){2,}\s*\n.*?\n\s*\\?-(?:\\?-){2,}\s*\n", "", text, flags=re.DOTALL)
+
+    # 3. Normalize escaped line-start syntax (headings, blockquotes, list markers) & isolate tables
+    lines = text.splitlines()
+    norm_lines = []
+    in_table = False
+
+    for line in lines:
+        # Unescape leading headings: e.g. \#\# 標題 or \#\#\# 標題 -> ## 標題 / ### 標題
+        m_head = re.match(r"^(\s*)((?:\\*#)+)\s+(.+)$", line)
+        if m_head:
+            indent = m_head.group(1)
+            hashes = "#" * m_head.group(2).count("#")
+            head_title = m_head.group(3).strip().replace(r"\#", "#")
+            line = f"{indent}{hashes} {head_title}"
+        else:
+            # Unescape leading blockquotes: e.g. \> 引用 -> > 引用
+            line = re.sub(r"^(\s*)\\+>(\s*)", r"\1>\2", line)
+            # Unescape leading unordered lists: e.g. \- 項目 -> - 項目
+            line = re.sub(r"^(\s*)\\+([*-])(\s+)", r"\1\2\3", line)
+            # Unescape leading ordered lists: e.g. 1\. 項目 -> 1. 項目
+            line = re.sub(r"^(\s*\d+)\\+\.(\s+)", r"\1.\2", line)
+
+        stripped = line.strip()
+        is_table_row = stripped.startswith("|") and stripped.endswith("|")
+        if in_table and not is_table_row and stripped != "":
+            # Table ended without a blank line before subsequent content
+            norm_lines.append("")
+            in_table = False
+        elif is_table_row:
+            in_table = True
+        elif stripped == "":
+            in_table = False
+
+        norm_lines.append(line)
+
+    text = "\n".join(norm_lines)
+
+    # 4. Inline formatting normalization:
+    # Bold emphasis: \*\*text\*\* -> **text**
+    text = text.replace(r"\*\*", "**")
+    # Escaped brackets in links or text: \[ and \]
+    text = text.replace(r"\[", "[").replace(r"\]", "]")
+    # Escaped plus signs: \+ -> +
+    text = text.replace(r"\+", "+")
+    # Escaped underscores in identifiers: e.g. energy\_inflation -> energy_inflation
+    text = text.replace(r"\_", "_")
+
+    return text
+
+
 def clean_markdown_body(text: str) -> str:
     """Clean markdown body by stripping any canonical markers, front matter, and footer markers."""
     if not text:
         return ""
+
+    text = sanitize_markdown_syntax(text)
 
     # 1. Remove <<<REPORT_BEGIN>>> and <<<REPORT_END>>> markers
     text = re.sub(r"^\s*<<<REPORT_BEGIN>>>\s*", "", text, flags=re.MULTILINE)
@@ -592,7 +655,7 @@ def render_markdown_to_html(markdown_body: str, metadata: Dict[str, Any]) -> str
     Render canonical markdown body and front matter metadata into complete standalone HTML.
     """
     metadata = dict(metadata)
-    h1_match = re.search(r"^\s*#\s+(.+)$", markdown_body, flags=re.MULTILINE)
+    h1_match = re.search(r"^\s*\\?#\s+(.+)$", markdown_body, flags=re.MULTILINE)
     if h1_match:
         h1_text = h1_match.group(1).strip()
         if "｜" in h1_text or "|" in h1_text or len(h1_text) > len(str(metadata.get("title", ""))):
