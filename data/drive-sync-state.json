@@ -1170,6 +1170,33 @@
       "sha256": "3661a1567352aa854fedb581736137a1d3e26aa57383a9c75591ae2b995b8359",
       "size": 12919
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-28_2202_hawkish-repricing.md": {
+      "category": "early-warning",
+      "drive_file_id": "1v1-7O-Ya0ZGEXlMkuLd9722KVSoXuJUF",
+      "md5_checksum": "15e5f442f34358123edbc8d30e5f3da4",
+      "modified_time": "2026-09-29T11:06:55.011Z",
+      "name": "Global_Macro_Early_Warning_2026-09-28_2202_hawkish-repricing.md",
+      "sha256": "13bfd76abf1aeee1a94a49fb6b1261c17ebc91581df038130bb6bafbd20f6e91",
+      "size": 11552
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_0803_credit-catches-rates.md": {
+      "category": "early-warning",
+      "drive_file_id": "12NmFsi8Bkj9h69lW0fyDKMePofMlOKdI",
+      "md5_checksum": "3e856dce8d1903e4b20251e141b8427b",
+      "modified_time": "2026-09-29T11:07:08.272Z",
+      "name": "Global_Macro_Early_Warning_2026-09-29_0803_credit-catches-rates.md",
+      "sha256": "bfaacee3b5433a1e79c8494708ac5cd73d2f055e0c7e682d89feb0ed360fda4a",
+      "size": 11595
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_1303_global-rates-oil.md": {
+      "category": "early-warning",
+      "drive_file_id": "1UbD0-2AnWzHZa4pQRHP1ogeWGg5l5p-a",
+      "md5_checksum": "afbc04d9d5d21e81a0c5d9a0a1b9401e",
+      "modified_time": "2026-09-29T11:07:21.641Z",
+      "name": "Global_Macro_Early_Warning_2026-09-29_1303_global-rates-oil.md",
+      "sha256": "48c982f1a4faa6aeb20b38d535449a9365bbc906210afb235da29673b9b79703",
+      "size": 11729
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
