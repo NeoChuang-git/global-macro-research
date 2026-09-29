@@ -32,3 +32,16 @@ _Avoid_: Report list, file scanner
 The canonical, structured metadata record representing a single published macro report in the catalog.
 _Avoid_: Index dict, report row
 
+**Storage Adapter**:
+The decoupled persistence and retrieval boundary that abstracts remote cloud storage (Google Drive) and in-memory mock storage behind a unified interface.
+_Avoid_: Drive client, API helper
+
+**Remote File**:
+The typed metadata representation of an asset residing in a storage adapter, encapsulating ID, name, size, timestamps, and checksums.
+_Avoid_: Drive item, file dict
+
+**Memory Storage Adapter**:
+An in-memory, zero-dependency implementation of the Storage Adapter used for deterministic, blazing-fast unit testing without mocking Google SDK internals.
+_Avoid_: Fake drive, mock client
+
+
