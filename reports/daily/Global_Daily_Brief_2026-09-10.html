@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -687,29 +737,29 @@ footer {
 <section class="analysis-card"><h3>#1｜Google：AI 算力競爭從晶片採購進入「資料中心＋核電＋電網」一體化</h3>
 <div class="meta-chips"><span class="chip chip-score">93/100</span><span class="chip direction direction-improving"><span class="direction direction-improving"><span class="direction direction-improving">↗ 改善</span></span></span><span class="chip chip-confidence">信心 高</span></div>
 <p><strong>市場解讀｜</strong> FACT：Google 官方宣布2027–2028年在芬蘭投入 €13bn，支援 Search、Maps、Gemini 等服務；Fortum 官方確認22年 PPA，2030–2049年涵蓋 Loviisa 核電廠50%容量，並搭配94MW電池與後續核能／再生能源合作。INFERENCE：AI CapEx 的稀缺資源已從 GPU 延伸到可長期鎖定的低碳電力與 time-to-power。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>GOOGL 收盤 <span class="direction direction-down">↓ 下降</span>2.28%，但同日 META 強勢分流資金、Nasdaq <span class="direction direction-down">↓ 下降</span>0.64%，且油價／殖利率上升形成 macro beta；因此不能把 GOOGL 跌幅解讀為市場否定芬蘭投資。相反地，Fortum 對長約現金流的直接曝險使其歐股顯著上漲，提供更乾淨的事件驗證。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>€13bn 是跨兩年的基建與能源投資，不等於同額 GPU 或台灣供應鏈訂單。歐洲電網、施工、設備交期、資料中心利用率與 AI monetization 若不及預期，資本報酬率可能低於 headline 所暗示的需求強度。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>Google 後續資料中心機房容量、accelerator／server 採購、Finland site 開工進度、電網接入，以及 Alphabet 下一次 CapEx 與 AI 收入更新。</p>
 </section><section class="analysis-card"><h3>#2｜Meta Muse：個人 agent 從聊天跨入付款與跨 App 執行，市場給出明確 alpha</h3>
 <div class="meta-chips"><span class="chip chip-score">89/100</span><span class="chip direction direction-improving"><span class="direction direction-improving"><span class="direction direction-improving">↗ 改善</span></span> 需求／<span class="direction direction-worsening"><span class="direction direction-worsening">↘ 惡化</span></span> 治理</span><span class="chip chip-confidence">信心 高</span></div>
 <p><strong>市場解讀｜</strong> Meta 官方宣布 Muse 在美國透過獨立 App 與 WhatsApp 上線，可操作 email、行事曆、購物、旅遊與付款服務；Reuters 同時指出內測曾暴露可靠性與資料安全問題。FACT 是產品正式商業化；INFERENCE 是 consumer AI 的競爭單位開始從模型能力轉向「代理執行＋身份／支付／安全」。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>META 收盤 <span class="direction direction-up">↑ 上升</span>6.55%，而 Nasdaq <span class="direction direction-down">↓ 下降</span>0.64%，事件 alpha 明顯。GOOGL <span class="direction direction-down">↓ 下降</span>2.28%、AMZN <span class="direction direction-down">↓ 下降</span>1.78% 亦可能包含競爭 read-through，但兩者同時受利率與市場 beta 影響，不能全部歸因 Muse。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>若使用者不願授權 email、付款與私人資料，或 Sentinel／人工確認使任務摩擦過高，實際活躍度與付費轉換可能低於產品能力；資安事故亦可能把成長利多轉成監管成本。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>Muse DAU/MAU、付費方案轉換、WhatsApp 與智慧眼鏡整合、第三方 App 數量，以及任何安全事故或監管回應。</p>
 </section><section class="analysis-card"><h3>#3｜Apple iPhone Duo：摺疊機進入 iPhone 主線，但股價顯示驚喜度有限</h3>
 <div class="meta-chips"><span class="chip chip-score">78/100</span><span class="chip direction direction-flat"><span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 中性偏正向</span><span class="chip chip-confidence">信心 高</span></div>
 <p><strong>市場解讀｜</strong> Apple 官方發布首款摺疊 iPhone Duo，7.6吋內螢幕、A20 Pro、Apple Intelligence 與 Siri AI，起價 US$1,999，10月23日上市。這提高高階 iPhone 平均售價（ASP）與零組件內容值的可能性，但摺疊手機仍是小眾市場，短期出貨量需驗證。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>AAPL 收盤 <span class="direction direction-down">↓ 下降</span>0.28%，明顯優於 Nasdaq，但沒有形成大型產品週期常見的強勢重估；較合理的判斷是產品大致符合高預期，市場等待預購、供應與毛利率資料。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>高售價可能限制量；新機的鉸鏈、柔性面板、良率與維修成本也可能壓縮毛利。若 Duo 只是替代 Pro Max 而非擴大總需求，營收增量會低於 ASP headline。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>10/16預購、10/23上市、首批交期、供應鏈拉貨、iPhone 18系列 mix 與 Apple 下一季毛利率／產品收入。</p>
 </section><h2>重要個股事件掃描</h2>
 <div class="table-scroll wide-content"><table>

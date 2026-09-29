@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -687,29 +737,29 @@ footer {
 <section class="analysis-card"><h3>#1｜緯創 US$1.47bn 募資：AI server 需求從訂單進入營運資金與產能週期</h3>
 <div class="meta-chips"><span class="chip chip-score">82/100</span><span class="chip direction direction-improving"><span class="direction direction-improving"><span class="direction direction-improving">↗ 改善</span></span> 基本面／<span class="direction direction-worsening"><span class="direction direction-worsening">↘ 惡化</span></span> 每股稀釋</span><span class="chip chip-confidence">信心 高</span></div>
 <p><strong>市場解讀｜</strong> FACT：緯創將發行 25m GDR、對應 250m 普通股，定價 US$58.88/GDR，募資約 US$1.47bn，用於外幣原料採購。公司亦已擴充台灣產能，並在德州啟用約 US$700m、製造 NVIDIA 最新 AI 系統的工廠。INFERENCE：當 ODM 必須以股權資本擴大採購與產能，代表 AI server 成長已進入高營運資金需求階段，而不只是題材交易。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>緯創 9/7 台股收盤 <span class="direction direction-down">↓ 下降</span>約0.5%，GDR 定價約較收盤折價5.5%；負面反應可合理連結稀釋與新股供給，但當日亦包含市場 beta。NVDA 因美股 Labor Day 休市，對需求 read-through 尚待 9/8 美國現貨市場驗證。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>募資不等於新增訂單；若原料採購主要為既有 backlog、客戶需求轉弱、AI server 毛利率未隨營收提升，或股權稀釋高於獲利增長，股東價值可能低於 headline 顯示的需求強度。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>緯創後續月營收、AI server 毛利率／現金轉換、德州廠利用率，以及 NVIDIA／hyperscaler 對 AI 系統出貨與 CapEx 的更新。</p>
 </section><section class="analysis-card"><h3>#2｜OpenAI agent 事件進入 EU 正式通報：治理風險由研究議題轉向監管成本</h3>
 <div class="meta-chips"><span class="chip chip-score">70/100</span><span class="chip direction direction-worsening"><span class="direction direction-worsening"><span class="direction direction-worsening">↘ 惡化</span></span></span><span class="chip chip-confidence">信心 中高</span></div>
 <p><strong>市場解讀｜</strong> 歐盟執委會 9/7 確認已收到 OpenAI 對德國網站事件的 incident report，並表示仍與公司密切聯繫。這不是新的事故本身，而是新的監管狀態：高自治 agent 的 sandbox、權限、網路存取、logging、事件揭露與第三方稽核可能成為企業部署的必要成本。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>OpenAI 為私人公司；MSFT 與其他美股 9/7 休市，因此沒有乾淨的上市公司 event alpha。短期影響較可能體現在治理風險溢酬，而非立即營收下修。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>若 EU 最終只要求標準化事故通報，且 OpenAI 證明問題已被技術控制、沒有形成更廣泛的部署限制，長期商業採用衝擊可顯著下降。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>OpenAI 是否公開完整事故報告、安全控制更新，以及 EU 是否提出具體調查、AI Act 執法或通報標準。</p>
 </section><section class="analysis-card"><h3>#3｜台灣晶片外交深化：AI 供應鏈全球化加速，但海外成本同步上升</h3>
 <div class="meta-chips"><span class="chip chip-score">65/100</span><span class="chip direction direction-flat"><span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> 混合</span><span class="chip chip-confidence">信心 中高</span></div>
 <p><strong>市場解讀｜</strong> Reuters 9/7 報導，SEMICON Taiwan 期間台灣持續以半導體與 AI 供應鏈能力深化美國、歐盟合作；TSMC Arizona 規劃投資規模已達 US$265bn，另有台灣企業約 US$20bn 美國投資規劃。這是供應鏈韌性與地理分散的結構性訊號，不是單日新訂單。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>美股休市，TSM ADR 無新價格驗證。長期正面是客戶 proximity、政策支持與供應鏈韌性；反面是海外廠折舊、人才、建廠與營運成本，故 Signal Direction 維持混合而非自動判定受益。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>若海外投資主要是既有計畫重述，或美國／歐洲成本使毛利率與 ROIC 顯著下降，供應鏈韌性的估值溢價可能被成本折價抵銷。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>個別公司 CapEx、設備採購、先進封裝海外布局、補貼條件與實際客戶 commitment。</p>
 </section><h2>重要個股事件掃描</h2>
 <blockquote class="callout">

@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -684,44 +734,44 @@ footer {
 </tr>
 </tbody>
 </table></div>
-<h3>1｜Anthropic：AI 產業開始從「營收成長」進入「盈利能力」驗證</h3>
+<section class="analysis-card"><h3>1｜Anthropic：AI 產業開始從「營收成長」進入「盈利能力」驗證</h3>
 <p><strong>FACT｜</strong> Financial Times 9/13 報導 Anthropic 已告知部分投資人，公司預期連續第二季錄得正的調整後營業利益；毛利率在分潤與模型訓練等部分成本前據報超過 80%。Reuters 隨後轉述此報導，但表示未獨立驗證，Anthropic 亦未即時回覆。</p>
 <p><strong>Score Rationale｜83/100：</strong> 事件直接影響 frontier AI 的估值框架、IPO 可行性與巨額算力支出的資本效率；但數字仍來自投資人簡報／媒體報導，未取得完整官方財報，因此 Evidence 與 Persistence 不給滿分。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <ol>
 <li><strong>基本面：</strong> 若調整後營業獲利可持續，代表模型使用量、企業付費與價格結構已能部分吸收高昂推論與研發成本。</li>
 <li><strong>資本層：</strong> 獲利能力改善有助降低市場對「AI lab 永久依賴外部融資」的疑慮，也提高 IPO／債務融資的可行性。</li>
 <li><strong>供應鏈：</strong> 更健康的單位經濟可支持 AWS、Google Cloud、NVIDIA／AMD accelerator 與資料中心（Data Center）採購，但不代表每一美元獲利都會轉成新增硬體訂單。</li>
 </ol>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>Anthropic 為私人公司，消息於週末發酵；NVDA、AMZN、GOOGL 等合作夥伴沒有事件後現貨價格，標記 <strong>Pending / Market Closed</strong>。下一交易日需觀察 AI infrastructure basket 相對 Nasdaq/SOX 的異常報酬。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>調整後營業利益不等同 GAAP 淨利或自由現金流；訓練新一代模型、Revenue-sharing、長期 compute commitments 與資料中心資本強度仍可能使現金流波動。若完整財報顯示排除項目過大，估值改善幅度應下修。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>Anthropic IPO 文件、完整收入／毛利／現金流揭露、compute commitments，以及 AWS／Google／NVIDIA 對合作規模的更新。</p>
-<h3>2｜AI 安全：產業主張放慢模型，政策端仍強調對中競爭</h3>
+</section><section class="analysis-card"><h3>2｜AI 安全：產業主張放慢模型，政策端仍強調對中競爭</h3>
 <p><strong>FACT｜</strong> Anthropic 執行長 Dario Amodei 已公開主張前沿 AI 公司降低開發速度並建立獨立評估與共同安全標準；Reuters 9/13 的後續報導顯示 OpenAI 與 xAI 領袖支持部分倡議。另一方面，美國政府既有 AI 政策框架仍把「維持美國 AI 領先」與加速創新列為核心目標。</p>
 <p><strong>Score Rationale｜76/100：</strong> 影響整個模型、雲端與算力產業的 release cadence 與治理成本，但目前沒有具法律拘束力的全面 slowdown，因此 Fundamental Impact 採中高而非結構性滿分。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>安全治理支出 <span class="direction direction-up">↑ 上升</span> 對 AI labs 的成本面是負向，但也可能提升企業採用信任。真正影響 GPU／雲端需求的關鍵，不是公開倡議本身，而是模型發布頻率、訓練規模與 compute utilization 是否實際下降。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>週末無現貨驗證。若下一交易日 NVDA／AMZN／GOOGL／MSFT 未出現相對市場的負 alpha，市場可能把此事件視為治理成本增加，而非 AI CapEx 反轉。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>美國政策仍明確強調與中國競爭，且產業沒有共同停止開發的正式協議；安全框架也可能增加 evaluation、cybersecurity 與 inference compute 需求。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>Anthropic／OpenAI／Google／Meta 是否正式修改 release policy；美國國會是否把自願標準轉為法律要求。</p>
-<h3>3｜釔供應：中國出口控制形成半導體材料尾端風險</h3>
+</section><section class="analysis-card"><h3>3｜釔供應：中國出口控制形成半導體材料尾端風險</h3>
 <p><strong>FACT｜</strong> Reuters 9/13 指出，釔（yttrium）因中國出口控制而成為美日供應鏈風險點；中國在相關供應與加工上占主導地位，出口流量對部分市場出現明顯不穩定。釔可用於半導體、能源與高階工業材料。</p>
 <p><strong>Score Rationale｜66/100：</strong> Persistence 與供應鏈戰略性高，但目前未確認 TSMC、ASML 或主要晶圓廠因此停產，因此 Magnitude 與 Price Transmission 保守評分。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>這是「供應安全」而非「已發生晶圓短缺」事件。若限制持續，企業可能增加安全庫存、替代材料驗證與非中供應來源投資，推高部分材料成本與交期。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>缺乏可乾淨歸因的單股價格反應；週末亦無美股現貨交易。對 TSM、ASML 等只能視為風險 read-through。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>供應可能透過外交協調、替代來源或庫存緩衝恢復；若下游已有足夠庫存，短期生產影響有限。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>中國出口許可流量、美日歐替代供應、主要晶圓廠／設備商對材料庫存與交期的正式評論。</p>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <div class="table-scroll wide-content"><table>
 <thead>
 <tr>

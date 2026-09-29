@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -680,52 +730,52 @@ footer {
 </tr>
 </tbody>
 </table></div>
-<h3>1. CXMT 第五代 DRAM 平台進入量產｜82/100</h3>
+<section class="analysis-card"><h3>1. CXMT 第五代 DRAM 平台進入量產</h3><div class="meta-chips"><span class="chip chip-score">82/100</span></div>
 <p><strong>發生什麼：</strong> CXMT 9 月 20 日正式宣布第五代 DRAM 技術平台（G5）量產，採自對準四重圖案化（SAQP），記憶體陣列 active-area half-pitch 達 11.95nm；同時推出 24Gb LPDDR5X。公司稱以 8Gb die 為基準，每片晶圓 gross die 數較上一代至少增加 50%。</p>
 <p><strong>為何現在重要：</strong> 這不是 HBM 等級突破，但它把中國在成熟／主流 DRAM 的追趕推進到「量產經濟性」階段。真正關鍵不在節點名稱，而在良率、客戶認證與單位成本能否支持持續放量。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <ol>
 <li><strong>基本面：</strong> 若良率與客戶採用成立，一般型 DRAM 的全球供給曲線右移，Micron、Samsung、SK hynix 在手機、PC、傳統伺服器記憶體的價格權力可能下降。</li>
 <li><strong>HBM：</strong> 目前沒有證據顯示 CXMT 已達 HBM 先進堆疊、頻寬與大規模客戶認證能力，因此近期 AI HBM 緊缺論點<strong>尚未被推翻</strong>。</li>
 <li><strong>台灣：</strong> 對南亞科、華邦電等一般型／利基型記憶體的中期價格競爭風險高於對台積電；對先進封裝（Advanced Packaging）與 AI 伺服器 ODM 的直接影響有限。</li>
 </ol>
 <p><strong>Score Rationale：</strong> 技術與供給結構影響大（Magnitude、Fundamental 高），且牽涉全球記憶體定價與中國半導體自主化；但 HBM read-through 仍有限，且量產良率尚未獨立驗證，因此未給 90+。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>美國現貨市場週末休市，MU 的事件驅動反應為 <strong>待市場驗證（Pending / Market Closed）</strong>。週日晚間 Nasdaq-100、S&amp;P 500 期貨僅約小幅正報酬，不能把期貨波動歸因於 CXMT 單一事件。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>CXMT 公布的是公司自述的製程與 gross-die 指標；尚缺第三方良率、實際成本、主要 OEM 認證與市占數據。SAQP 增加製程步驟，也可能提高 cycle time 與良率管理難度。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p><strong>確認條件：</strong> LPDDR5X 大客戶認證、實際出貨／市占、價格競爭、G5 良率與 HBM roadmap。<br/>
 <strong>失效條件：</strong> 量產規模有限、良率偏低、客戶認證延後，或 HBM 與先進 DRAM 技術差距未縮小。</p>
 <hr/>
-<h3>2. 美中就 AI、關稅與關鍵礦物展開會談｜76/100</h3>
+</section><section class="analysis-card"><h3>2. 美中就 AI、關稅與關鍵礦物展開會談</h3><div class="meta-chips"><span class="chip chip-score">76/100</span></div>
 <p><strong>發生什麼：</strong> Reuters 報導，美國財長 Scott Bessent 與中國副總理何立峰 9 月 20 日在紐約展開會談，議題包含 AI、關稅與關鍵礦物，目標之一是為 9 月 24 日川普—習近平峰會準備可能的協議框架。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>FACT：</strong> 高層談判已被可靠媒體報導。<br/>
 <strong>MARKET EXPECTATION：</strong> 市場將聚焦 AI 晶片出口限制、關鍵礦物供應與關稅是否出現可執行的緩和條款。<br/>
 <strong>INFERENCE：</strong> 若出口管制邊際放寬，NVDA／AMD 的中國可服務市場（TAM）可能改善；若管制升級，則中國本土替代與 Huawei Ascend 生態的戰略價值上升。</p>
 <p><strong>Score Rationale：</strong> Breadth 與 Taiwan Spillover 高，能同時影響 GPU、晶圓代工、設備與供應鏈風險溢價；但目前沒有具體政策結果，所以分數低於已落地的 CXMT 量產事件。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>週日晚間美股期貨約小幅上漲，顯示市場未先行定價重大突破。<strong>官方具體協議尚未取得確認（Official confirmation unavailable）</strong>，不可把「會談」寫成「政策緩和」。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>即使峰會形成政治聲明，出口管制與實體清單等措施仍可能需要後續法規或行政程序；科技股基本面不一定立即改變。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>9 月 24 日峰會與會後聲明。確認條件是可執行的出口、關稅或關鍵礦物條款；失效條件是僅有原則性表述、沒有政策文本。</p>
 <hr/>
-<h3>3. AI 基礎設施表外保證融資規模浮現｜72/100</h3>
+</section><section class="analysis-card"><h3>3. AI 基礎設施表外保證融資規模浮現</h3><div class="meta-chips"><span class="chip chip-score">72/100</span></div>
 <p><strong>發生什麼：</strong> Financial Times 9 月 20 日報導，大型科技與晶片公司正利用剩餘價值保證等結構，協助特殊目的載體（SPV）為 AI 資料中心與晶片融資；報導估計相關 AI exposure 可達約 3,000 億美元級別。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>短期正面：</strong> 融資結構降低 hyperscaler／AI lab 一次性資產負債表壓力，可延長 GPU、網路、伺服器與資料中心資本支出週期。<br/>
 <strong>中期風險：</strong> 若 AI 資產殘值、利用率或終端現金流低於假設，保證義務可能重新回到科技公司信用與估值框架，讓「CapEx 成長」伴隨更高尾部風險。</p>
 <p><strong>Score Rationale：</strong> 事件橫跨 NVDA、AVGO、AI labs、雲端與資料中心融資，Breadth 與 Persistence 高；但 FT 的跨公司彙總尚無單一官方文件可完整對照，因此 Evidence Grade 低於前兩項。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>NVDA、AVGO 與 hyperscalers 現貨市場尚未針對本報導交易，為 <strong>待市場驗證</strong>。高 10Y 殖利率會放大槓桿／殘值風險的估值敏感度。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>保證不等於立即負債或損失；若 AI 資產利用率、租金現金流與二手價值保持強勁，這些結構可能只是資本效率工具，而非信用事件。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>後續公司財報附註、信用評等機構對 contingent liabilities 的調整、SPV 融資成本，以及 AI 資料中心租用率與資產殘值。</p>
 <hr/>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <div class="table-scroll wide-content"><table>
 <thead>
 <tr>

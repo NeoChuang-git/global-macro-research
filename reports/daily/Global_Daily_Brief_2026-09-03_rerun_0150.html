@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Global Daily Brief｜Dell AI 伺服器訂單暴增，AI 基建需求再獲硬證據 · 2026-09-03 01:50:00</title>
 <style>
-
 :root {
   color-scheme: light;
   --bg-primary: #f8fafc;
@@ -298,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -698,7 +747,7 @@ footer {
 </tbody>
 </table></div>
 <section class="analysis-card"><h3>#1｜Dell AI 伺服器需求推升訂單、營收與全年展望</h3>
-<div class="meta-chips"><span class="chip chip-score">影響分數 94/100</span><span class="chip direction direction-improving">方向 ↗</span><span class="chip chip-evidence">證據等級 A</span><span class="chip chip-confidence">信心 高</span></div>
+<div class="meta-chips"><span class="chip chip-score">影響分數 94/100</span><span class="chip direction direction-improving">方向 <span class="direction direction-improving"><span class="direction direction-improving">↗ 改善</span></span></span><span class="chip chip-evidence">證據等級 A</span><span class="chip chip-confidence">信心 高</span></div>
 <ul>
 <li><strong>事件重點</strong> — Dell FY2027 Q2 營收 US$47bn、年增58%；ISG revenue US$31.8bn、年增89%；AI 伺服器訂單約 US$60.9bn，AI server revenue 約 US$16.4bn。</li>
 <li><strong>市場為何在意</strong> — 公司把 FY27 revenue midpoint 由 US$167bn 上調至 US$192bn，non-GAAP EPS 由 US$17.90 上調至 US$25.50；這不是單季 beat，而是全年 earnings power 被重估。</li>
@@ -710,7 +759,7 @@ footer {
 <p><strong>反向證據：</strong> 高利率、客戶融資、GPU／電力供應瓶頸、AI data center 資本效率，以及 backlog conversion 都可能降低訂單轉收入的速度。</p>
 <p><strong>下一催化劑：</strong> Broadcom Q3 FY2026 財報／AI 半導體指引；hyperscaler CapEx；NVDA 與 server peers 的出貨／訂單評論。</p>
 </section><section class="analysis-card"><h3>#2｜Palo Alto 財報 beat，但市場用股價下跌重新定價高估值</h3>
-<div class="meta-chips"><span class="chip chip-score">影響分數 82/100</span><span class="chip direction direction-worsening">方向 ↘</span><span class="chip chip-evidence">證據等級 A-</span><span class="chip chip-confidence">信心 高</span></div>
+<div class="meta-chips"><span class="chip chip-score">影響分數 82/100</span><span class="chip direction direction-worsening">方向 <span class="direction direction-worsening"><span class="direction direction-worsening">↘ 惡化</span></span></span><span class="chip chip-evidence">證據等級 A-</span><span class="chip chip-confidence">信心 高</span></div>
 <ul>
 <li><strong>事件重點</strong> — Q4 revenue US$3.41bn、年增34%；non-GAAP EPS US$1.02，高於市場預期；NGS ARR 仍強，公司並收購 AI-native security platform Console。</li>
 <li><strong>市場為何在意</strong> — FY27 revenue guidance 約 US$14.10–14.20bn，高於市場預期，但股價仍約 -5.2%，說明市場關注點已從「是否成長」轉向 margin、free cash flow 與高估值能否持續。</li>
@@ -722,7 +771,7 @@ footer {
 <p><strong>反向證據：</strong> 公司 revenue、EPS、FY27 guidance 仍強，且 AI 提升資安重要性的結構性 tailwind 沒有逆轉。</p>
 <p><strong>下一催化劑：</strong> 下一季 NGS ARR、margin、FCF 指引，以及 Console 整合／交叉銷售數據。</p>
 </section><section class="analysis-card"><h3>#3｜台灣企業新增 US$20bn 赴美投資，Google 同步擴建台灣 AI 基建研發</h3>
-<div class="meta-chips"><span class="chip chip-score">影響分數 79/100</span><span class="chip direction direction-improving">方向 ↗</span><span class="chip chip-evidence">證據等級 A</span><span class="chip chip-confidence">信心 高</span></div>
+<div class="meta-chips"><span class="chip chip-score">影響分數 79/100</span><span class="chip direction direction-improving">方向 <span class="direction direction-improving"><span class="direction direction-improving">↗ 改善</span></span></span><span class="chip chip-evidence">證據等級 A</span><span class="chip chip-confidence">信心 高</span></div>
 <ul>
 <li><strong>事件重點</strong> — 經濟部宣布台灣企業新增約 US$20bn 赴美投資，並稱 AI／晶片訂單「非常活絡」；Google 同日宣布將台北士林 AI 基礎建設研發中心辦公空間擴增約60%。</li>
 <li><strong>市場為何在意</strong> — 兩個事件共同指向「AI demand <span class="direction direction-flat">→ 持平</span> 美國在地化製造 + 台灣研發能力擴張」的雙軌結構，而非單純把台灣供應鏈外移。</li>

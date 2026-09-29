@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -644,39 +694,39 @@ footer {
 </tbody>
 </table></div>
 <h2>市場影響力前三大事件（TOP 3 MARKET IMPACT EVENTS）</h2>
-<h3>1. AI「降速」呼聲觸發 AI 基建重新定價 — 92/100</h3>
+<section class="analysis-card"><h3>1. AI「降速」呼聲觸發 AI 基建重新定價</h3><div class="meta-chips"><span class="chip chip-score">92/100</span></div>
 <p>Anthropic 執行長 Dario Amodei 提議放慢前沿 AI 模型能力提升速度，OpenAI 執行長 Sam Altman 與 Elon Musk 隨後支持相關安全討論。市場將此解讀為 AI 開發與基礎設施投資可能不再維持無間斷高速擴張的尾端風險。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>Raw <span class="state-transition"><span class="state-prior">Data Change</span><span class="transition-arrow">→</span><span class="state-current">AI</span></span> 開發速度預期下降；Economic Interpretation <span class="direction direction-flat">→ 持平</span> 新增算力急迫性可能下降；Transmission <span class="direction direction-flat">→ 持平</span> GPU／HBM／先進封裝／伺服器／資料中心 CapEx 成長斜率可能被下修；Signal Direction <span class="direction direction-flat">→ 持平</span> <strong><span class="direction direction-worsening">↘ 惡化</span></strong>。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>NVDA -3.4%，MU 跌逾 5%，AMD 與 AVGO 均跌逾 4%；SOX -5.9%。相較 Nasdaq -0.56%，賣壓高度集中於 AI 基建供應鏈。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>目前尚未看到大型雲端服務商取消 GPU 訂單、資料中心建設或電力容量合約，因此現階段較合理的判斷是「風險溢價上升」，而非「AI CapEx 已進入衰退」。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>觀察 MSFT、GOOGL、AMZN、META、ORCL 是否調整 CapEx／資料中心 Guidance，以及 NVDA、AVGO、AMD、MU 是否出現訂單、交期或庫存變化。</p>
 <hr/>
-<h3>2. 10Y 美債殖利率突破 5%，Fed 升息預期升高 — 88/100</h3>
+</section><section class="analysis-card"><h3>2. 10Y 美債殖利率突破 5%，Fed 升息預期升高</h3><div class="meta-chips"><span class="chip chip-score">88/100</span></div>
 <p>美國 10 年期公債殖利率盤中突破 5%，市場對本週 Fed 升息 25bp 的定價約達 90%。高油價、通膨與財政／供給疑慮共同推升長端利率，使科技股面臨第二層估值壓力。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>Raw Direction：<span class="direction direction-up">↑ 上升</span>；Signal Direction：<span class="direction direction-worsening">↘ 惡化</span>。</strong> 傳導鏈為殖利率上升 <span class="direction direction-flat">→ 持平</span> 折現率與資金成本上升 <span class="direction direction-flat">→ 持平</span> 金融條件收緊 <span class="direction direction-flat">→ 持平</span> 長久期科技股估值受壓。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>S&amp;P 500 -0.48%、Nasdaq -0.56%。AI 半導體跌幅遠大於指數，代表價格同時包含宏觀 Beta 與 AI CapEx 敘事，不能把全部跌幅歸因於單一事件。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>若 Fed 訊息較預期鴿派、油價快速回落，或 10Y 重新跌破 5%，科技股估值壓力可快速緩解。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>Fed 利率決議、政策聲明與主席記者會，以及 10Y 是否持續站穩 5%。</p>
 <hr/>
-<h3>3. AI 資料安全疑慮擴大，企業模型採用出現治理摩擦 — 68/100</h3>
+</section><section class="analysis-card"><h3>3. AI 資料安全疑慮擴大，企業模型採用出現治理摩擦</h3><div class="meta-chips"><span class="chip chip-score">68/100</span></div>
 <p>The Information 報導指出 Palantir、NVIDIA 與 Booz Allen 等企業因資料保留與智慧財產權疑慮，限制或重新評估部分 Anthropic／OpenAI 模型用途；Reuters 轉述該報導，相關企業未即時提供完整官方確認。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>企業 AI 導入正從「模型能力優先」進入「資料治理、零資料保留、私有部署與安全邊界」競爭階段；對可提供隔離環境與企業治理方案的平台可能形成相對優勢。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>本事件與更廣泛的 AI 降速討論同日發生，難以從股價中單獨識別因果，因此不將 NVDA 當日跌幅直接歸因於資料治理消息。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>Anthropic 與 OpenAI 均主張企業資料預設不會用於模型訓練；目前也沒有足夠證據顯示大型企業全面停止採用外部模型。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>觀察零資料保留（Zero Data Retention）、私有模型、企業 AI Gateway 與雲端隔離環境是否成為大型合約標準條件。</p>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <div class="table-scroll wide-content"><table>
 <thead>
 <tr>

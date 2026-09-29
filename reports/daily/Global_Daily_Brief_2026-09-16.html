@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -605,19 +655,19 @@ footer {
 <li>台灣 AI 供應鏈基本面仍具支撐，但高基期個股進入「財測驗證期」，股價對訂單、毛利率與 capex 訊號更加敏感。</li>
 </ol>
 <h2>市場影響力前三大事件（TOP 3 MARKET IMPACT EVENTS）</h2>
-<h3>1. Fed 降息預期升溫 — Market Impact Score: 92/100</h3>
+<section class="analysis-card"><h3>1. Fed 降息預期升溫</h3><div class="meta-chips"><span class="chip chip-score">92/100</span></div>
 <p>FACT：近期美國通膨與政策訊號使市場提高後續降息預期，長天期美債殖利率回落。
 EXPECTATION：若 Fed 進一步確認寬鬆方向，高 duration 科技與 AI infrastructure 股票的估值折現率壓力可望下降。
 INFERENCE：這對大型科技與半導體屬估值面正向，但若降息源自經濟快速轉弱，則需求端風險會重新上升。</p>
-<h3>2. AI 基礎設施投資持續擴散 — Market Impact Score: 88/100</h3>
+</section><section class="analysis-card"><h3>2. AI 基礎設施投資持續擴散</h3><div class="meta-chips"><span class="chip chip-score">88/100</span></div>
 <p>FACT：大型雲端業者仍持續投入 AI data center、accelerator、networking 與 storage。
 EXPECTATION：AI capex 的受惠範圍持續由 GPU 擴大到交換器、光通訊、記憶體、伺服器與電力基礎設施。
 INFERENCE：市場將更加重視「實際營收轉換率」而非單純 AI 題材。</p>
-<h3>3. 台灣先進製程與伺服器供應鏈維持關鍵地位 — Market Impact Score: 84/100</h3>
+</section><section class="analysis-card"><h3>3. 台灣先進製程與伺服器供應鏈維持關鍵地位</h3><div class="meta-chips"><span class="chip chip-score">84/100</span></div>
 <p>FACT：TSMC 先進製程、CoWoS/advanced packaging 與台灣 ODM 仍是全球 AI server 供應鏈的重要環節。
 EXPECTATION：若 hyperscaler capex 維持，相關供應鏈訂單能見度仍具支撐。
 INFERENCE：高估值個股若財測未能跟上市場預期，仍可能出現劇烈修正。</p>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <ul>
 <li>NVDA：AI accelerator 需求仍是市場核心觀察指標，需追蹤 hyperscaler capex 與新平台量產節奏。</li>
 <li>MSFT：Azure AI 與 Copilot 商業化進度仍是市場評估 AI 投資報酬的重要依據。</li>

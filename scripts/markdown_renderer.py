@@ -235,9 +235,9 @@ def _enhance_callouts(soup: BeautifulSoup) -> None:
 
 
 def _enhance_analysis_cards(soup: BeautifulSoup) -> None:
-    """Package H3 sections matching numbered events (#1, 1., 1｜, Signal #1) into structured cards."""
+    """Package H3 sections matching numbered events (#1, 1., 1｜, Signal #1, Event #1) into structured cards."""
     card_title_pattern = re.compile(
-        r"^\s*(?:#?\d+\s*[\.、｜\|—–-]|Signal\s*#?\d+\s*[｜\|]|Theme\s*#?\d+\s*[｜\|]|Top\s*\d+\s*[｜\|])",
+        r"^\s*(?:#?\d+\s*[\.、｜\|—–-]|Signal\s*#?\d+\s*[｜\|]|Theme\s*#?\d+\s*[｜\|]|Top\s*\d+\s*[｜\|]|Event\s*#?\d+\s*[｜\|])",
         re.IGNORECASE,
     )
 

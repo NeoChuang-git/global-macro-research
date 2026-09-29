@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -674,50 +724,50 @@ footer {
 </tr>
 </tbody>
 </table></div>
-<h3>1. Meta Muse：從 AI 助理變成可改寫交易入口的代理型平台｜88/100</h3>
+<section class="analysis-card"><h3>1. Meta Muse：從 AI 助理變成可改寫交易入口的代理型平台</h3><div class="meta-chips"><span class="chip chip-score">88/100</span></div>
 <p><strong>發生什麼：</strong> Meta 9月8日推出 Muse；過去24小時華爾街進一步把其採用速度與營收潛力納入估值。Reuters 指出 Muse 推出後 Meta 股價累計上漲逾20%，12天下載約280萬次；同時市場開始交易其對旅遊、券商、零售與消費軟體入口的替代風險。</p>
 <p><strong>Score Rationale：</strong> 影響不只 META，而是同時改變 AI 晶片需求敘事、消費平台流量入口與軟體競爭格局；廣度與估值傳導均高，但商業化轉換率仍屬市場預期而非已實現財報。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <ol>
 <li><strong>基本面機制</strong>：若代理型 AI 能直接完成購物、旅行、郵件與交易，Meta 可新增訂閱／交易收入，同時提高 AI 推論需求。</li>
 <li><strong>估值機制</strong>：市場從「Meta 高 CapEx 是否有回報」轉向「AI 是否形成新收入池」，使 CapEx 的估值折價下降。</li>
 <li><strong>競爭傳導</strong>：Amazon 已限制 Muse 在其平台購物，顯示代理入口與既有平台控制權衝突已從理論進入商業行動。</li>
 </ol>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>9月22日 Nasdaq <span class="direction direction-up">↑ 上升</span>0.45% 至27,244.28、連續第二個收盤新高；MU <span class="direction direction-up">↑ 上升</span>約5%。同日 SCHW <span class="direction direction-down">↓ 下降</span>6.1%、ABNB <span class="direction direction-down">↓ 下降</span>3%，Uber/Lyft 均跌逾1%。這種橫截面分化比指數本身更能支持「Muse 事件驅動」而非單純市場 beta。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>Muse 的下載速度不等於長期付費率；人類 concierge 測試與隱私／安全疑慮也可能提高服務成本。若後續留存、付費轉換或交易成功率低於預期，市場可能回吐「新收入引擎」溢價。</p>
-<h4>台灣外溢</h4>
+<h4 class="subheading-pill">台灣外溢</h4>
 <p><strong>機制</strong>：代理型 AI 使用量 <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> 推論算力、記憶體與資料中心需求 <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> GPU／ASIC、HBM/DRAM、先進製程、先進封裝、伺服器與網通需求可能改善。<strong>反證</strong>：若效率提升快於 token／agent 使用量，單位推論成本下降可能部分抵銷硬體增量。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>觀察 Meta 是否公布 Muse 活躍用戶、付費轉換、推論成本與商業合作；以及 Amazon 等平台是否擴大封鎖或改採合作模式。<strong>失效條件</strong>：採用增速快速放緩、付費率低、或監管／安全事件限制 agent 執行權限。</p>
-<h3>2. Alibaba：模型、晶片、資料中心一次擴張｜78/100</h3>
+</section><section class="analysis-card"><h3>2. Alibaba：模型、晶片、資料中心一次擴張</h3><div class="meta-chips"><span class="chip chip-score">78/100</span></div>
 <p><strong>發生什麼：</strong> Alibaba 在 Apsara 大會宣布開發5–10兆參數級模型、推出 Zhenwu V900 AI 晶片，並提出 Alibaba Cloud 資料中心容量至2032年超過20GW；Reuters 報導股價 <span class="direction direction-up">↑ 上升</span>5.1% 至一個月高點。</p>
 <p><strong>Score Rationale：</strong> 事件同時覆蓋模型、晶片與資料中心資本支出，對中國 AI 供應鏈與 Nvidia 替代具有結構性意義；但晶片預計2027年才量產，短期營收影響仍有限。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>基本面</strong>：Alibaba 正把雲端競爭從模型服務延伸到自研晶片與資料中心全棧，降低受美國出口管制的單點依賴。<strong>估值</strong>：市場先以股價 <span class="direction direction-up">↑ 上升</span>5.1% 反映 AI 資產價值，但長期回報仍取決於利用率、晶片良率與雲端收入成長。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>這是明確事件驅動反應，因公告與股價跳升同日發生；但無法僅由單日漲幅判定全部來自晶片，模型與 CapEx 願景也共同貢獻。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>官方原始公告在本輪可檢索來源中未完整取得，因此細節以 Reuters 現場報導為主，<strong>尚未取得完整官方確認（Official confirmation unavailable）</strong>。此外，20GW 是2032目標，距離實際營收與投資回報尚遠。</p>
-<h4>台灣外溢</h4>
+<h4 class="subheading-pill">台灣外溢</h4>
 <p>中國本土 AI 晶片擴張對台灣不是單向利多。若供應鏈受出口管制限制，先進製程／封裝的台灣受惠可能低於全球 AI CapEx 增幅；相反地，全球雲端與非中國 AI 建置若同步擴張，台灣高階製造仍可受益。需把「全球需求增加」與「中國供應鏈在地化」分開觀察。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>Zhenwu V900 的量產節點、代工來源、叢集規模、Alibaba Cloud CapEx 與雲收入增速。<strong>失效條件</strong>：量產延後、效能／能效不及預期、或資料中心利用率不足。</p>
-<h3>3. Anthropic Claude Opus 5.5：前沿模型競爭轉向推論經濟學｜70/100</h3>
+</section><section class="analysis-card"><h3>3. Anthropic Claude Opus 5.5：前沿模型競爭轉向推論經濟學</h3><div class="meta-chips"><span class="chip chip-score">70/100</span></div>
 <p><strong>發生什麼：</strong> Anthropic 9月22日推出 Claude Opus 5.5；官方表示其在代理式程式開發與知識工作領先，典型工作負載運行成本較 Opus 5 低40%。Reuters 亦確認發布與成本下降。</p>
 <p><strong>Score Rationale：</strong> 對 Anthropic 本身屬重大產品事件，並會壓迫 OpenAI、Google、Microsoft 等模型／雲端定價；但 Anthropic 未上市，短期對公開市場的直接價格反應較弱。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>基本面</strong>：同等或更高能力若以更低推論成本交付，企業 agent 的 ROI 門檻下降，可擴大 token 與工作流需求。<strong>估值</strong>：對雲端平台是「需求量增加」與「單位價格下降」並存，真正利多取決於使用量彈性是否大於價格下降。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>Anthropic 無公開股價，因此本事件屬 <strong>待市場驗證（Pending）</strong>；應觀察 AWS、Google Cloud、Azure 的模型使用量與價格跟進，而非把大型雲端股單日波動直接歸因於此事件。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>模型 benchmark 與官方成本聲明未必等同企業實際總持有成本；若更低價格只是競爭性降價，可能壓縮模型供應商毛利率。</p>
-<h4>台灣外溢</h4>
+<h4 class="subheading-pill">台灣外溢</h4>
 <p>若價格下降帶動 agent 使用量彈性，推論伺服器、記憶體、網通與電力需求可受惠；但更高模型效率也可能降低每任務算力需求。台灣供應鏈真正受益需看到雲端 CapEx 或伺服器訂單同步上修。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>AWS／Azure／Google Cloud 的上架價格與採用、OpenAI／Google 是否跟進降價、以及企業 agent 實際使用量。<strong>失效條件</strong>：使用量彈性不足以抵銷單位成本下降。</p>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <div class="table-scroll wide-content"><table>
 <thead>
 <tr>

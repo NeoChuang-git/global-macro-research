@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -639,7 +689,7 @@ footer {
 </tbody>
 </table></div>
 <h2>市場影響力前三大事件（TOP 3 MARKET IMPACT EVENTS）</h2>
-<h3>1. Nscale 提交美國 IPO：AI 資料中心從「成長故事」進入資本效率壓力測試｜78/100</h3>
+<section class="analysis-card"><h3>1. Nscale 提交美國 IPO：AI 資料中心從「成長故事」進入資本效率壓力測試</h3><div class="meta-chips"><span class="chip chip-score">78/100</span></div>
 <div class="table-scroll wide-content"><table>
 <thead>
 <tr>
@@ -670,39 +720,39 @@ footer {
 </tr>
 </tbody>
 </table></div>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <ol>
 <li><strong>基本面</strong>：合約需求支持 GPU、網路、伺服器與資料中心建設，但已認列營收相對合約值仍小，執行風險高。</li>
 <li><strong>估值</strong>：若 IPO 定價能維持高估值，代表市場仍願意為長期 AI 容量付費；若折價，可能向 CoreWeave 類型資產與供應鏈估值傳導。</li>
 <li><strong>台灣外溢</strong>：對伺服器 ODM、電源、散熱、PCB/CCL、光通訊與 NVIDIA 平台供應鏈屬需求正向 read-through，但只有在融資落地與機房按期上線時才轉成訂單（Order）。</li>
 </ol>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>美股已休市，Nscale 本身待 IPO 價格區間與掛牌後市場驗證。NVDA 當日上漲不足以證明市場已完整定價 Nscale 的合約管線。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>上半年淨損遠高於營收，且客戶與融資集中度高；高利率環境使資料中心專案的資金成本成為主要反證。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>S-1 修訂版的股數、價格區間、估值、融資條款，以及大型客戶合約的實際開通進度。</p>
-<h3>2. 中國擴大網路平台反壟斷調查｜63/100</h3>
+</section><section class="analysis-card"><h3>2. 中國擴大網路平台反壟斷調查</h3><div class="meta-chips"><span class="chip chip-score">63/100</span></div>
 <p>Reuters 9/19 報導，中國監管機構調查 Meituan、Alibaba 相關單位、Tongcheng 與 Tujia 涉嫌不正當競爭。這是監管風險再升溫，但目前主要影響中國平台服務估值，對美國大型 AI/半導體供應鏈的直接營收衝擊有限。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>Raw Direction：調查案件 <span class="direction direction-up">↑ 上升</span>｜Signal Direction：<span class="direction direction-worsening">↘ 惡化</span>。</strong> 對 Alibaba 生態與中國平台股是估值折價因素；對台灣半導體的直接外溢偏低，除非監管擴大至雲端、AI 或廣告資本支出。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>週末事件，主要相關市場尚未開盤，屬 <strong>待市場驗證（Pending / Market Closed）</strong>。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>調查聚焦線上旅遊／飯店平台競爭行為，尚無證據顯示政策重新轉向全面壓制大型科技公司。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>SAMR 正式處分範圍、罰款、整改要求，以及是否延伸至 Alibaba 核心電商／雲端業務。</p>
-<h3>3. AI「協調減速」遭反壟斷訴訟挑戰｜60/100</h3>
+</section><section class="analysis-card"><h3>3. AI「協調減速」遭反壟斷訴訟挑戰</h3><div class="meta-chips"><span class="chip chip-score">60/100</span></div>
 <p>AP 9/19 報導，一宗美國聯邦訴訟指控 Anthropic、OpenAI、SpaceXAI 與 Google 就 AI 開發減速形成非法協議。<strong>FACT</strong> 是訴訟已提出；<strong>INFERENCE</strong> 是它可能提高產業共同安全協議的法律成本；目前沒有法院認定違法。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>若安全協作被迫改成公司各自決策，短期可能降低「集體減速」對算力需求的尾部風險；但法律與監管不確定性增加，因此整體訊號為 <strong><span class="direction direction-flat">→ 持平</span> 中性偏負面</strong>。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>週末事件，GOOGL 與相關未上市 AI 公司皆待下一交易日驗證。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>私人訴訟不等於 DOJ/FTC 執法，且法院可能認定安全合作具有合理、非限制競爭目的。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>被告回應、法院是否受理核心反壟斷主張，以及 DOJ/FTC 是否介入。</p>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <p>本輪 14 檔強制預檢後，正文僅保留具 material read-through 者：<strong>NVDA</strong> 因 Nscale 的 NVIDIA 投資與 GPU 容量需求具直接關聯；<strong>MSFT</strong> 因 Nscale 合約／合作具高關聯；<strong>GOOGL</strong> 因 AI 減速訴訟直接涉入。其餘 AAPL、AMZN、META、TSLA、AMD、TSM、AVGO、MU、ASML、DELL、SMCI 在本輪 24 小時內未取得足以單獨進榜的新 root event，不硬列事件。</p>
 <h2>美國科技股策略（US TECH STRATEGY）</h2>
 <blockquote class="callout">

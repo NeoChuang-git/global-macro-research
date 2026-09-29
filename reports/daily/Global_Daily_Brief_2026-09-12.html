@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -684,50 +734,50 @@ footer {
 </tr>
 </tbody>
 </table></div>
-<h3>1｜NVIDIA × Anthropic：超大型 IPO 把 AI 資本循環推向新層級</h3>
+<section class="analysis-card"><h3>1｜NVIDIA × Anthropic：超大型 IPO 把 AI 資本循環推向新層級</h3>
 <p><strong>FACT｜</strong> Reuters 9/11 美東晚間引述知情人士稱，Anthropic 正洽談讓 NVIDIA 成為 IPO 錨定投資人；募資可能最高 US$100bn、估值約 US$2tn，NVIDIA 可能投入最高 US$10bn。Anthropic、NVIDIA 均未就談判內容提供正式確認。</p>
 <p><strong>Score Rationale｜86/100：</strong> 潛在規模極大、影響 NVDA／AMZN／GOOGL／MSFT 與 AI 資料中心資本循環，且可能建立 frontier-lab 公開市場估值基準；但交易仍在談判、條款可變，因此 Evidence 與 Persistence 不給滿分。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <ol>
 <li><strong>需求層：</strong> Anthropic 若取得巨額股權資本，可降低短期 compute 融資約束，支撐 GPU、Trainium、TPU、Broadcom custom silicon 與資料中心採購。</li>
 <li><strong>競爭層：</strong> NVIDIA 既是供應商又可能成為重要股東，強化生態系綁定；但 Anthropic 同時擴大 AWS Trainium、Google TPU 與自研晶片，並非單一路線。</li>
 <li><strong>估值層：</strong> US$2tn 若成為正式 IPO 定價，將成為 OpenAI／大型 AI labs 的新估值錨；反之若需求不足或折價，可能壓縮整個 AI 私募／公開市場估值。</li>
 </ol>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>消息在 9/11 美股收盤後才出現，故 NVDA、AMZN、GOOGL 的當日收盤不能作為事件反應；標記 <strong>Pending / Market Closed</strong>。下一交易日需觀察 NVDA 相對 SOX、AMZN／GOOGL 相對 Nasdaq 的異常報酬。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>尚未取得官方確認，募資額、估值、NVIDIA 投資額均可能變更。更重要的是，供應商投資客戶會加深市場對「AI 廠商以資本支持 compute demand」的循環融資疑慮；若 Anthropic 自研晶片進展加快，NVIDIA 的長期硬體份額亦未必同步增加。</p>
-<h4>台灣外溢</h4>
+<h4 class="subheading-pill">台灣外溢</h4>
 <p><strong>機制：</strong> 新資本 <span class="direction direction-flat">→ 持平</span> compute／Data Center 採購 <span class="direction direction-flat">→ 持平</span> GPU／ASIC、HBM、先進製程、先進封裝、伺服器 ODM、網通／光通訊、電源與散熱。<strong>時間：</strong> 2–8季。<strong>反證：</strong> Anthropic 已明確多元化至 AWS Trainium 與 Google TPU，新增資本不等於全部流向 NVIDIA／台灣 GPU 供應鏈。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>正式 IPO 文件、錨定投資人名單、募資與估值區間、Anthropic compute commitment、NVIDIA 投資條款，以及 AMZN／GOOGL 對 Anthropic 雲端合作的更新。</p>
-<h3>2｜Enflame：首日 ↑179%，中國 GPU 國產替代獲得公開市場資本</h3>
+</section><section class="analysis-card"><h3>2｜Enflame：首日 ↑179%，中國 GPU 國產替代獲得公開市場資本</h3>
 <p><strong>FACT｜</strong> Enflame 9/11 在上海 STAR Market 掛牌，IPO 募資 61.2 億人民幣（約 US$912m）；收盤 397 元，較 142.18 元發行價 <span class="direction direction-up">↑ 上升</span>179%。公司 2025 年營收 9.90 億人民幣、仍淨虧損 11.6 億；Tencent 持股約17.95%，且占其 2025 年營收約83.79%。</p>
 <p><strong>Score Rationale｜76/100：</strong> 價格反應極強、政策與產業持續性高，且直接涉及 NVIDIA 在中國的替代競爭；但公司規模仍小、未獲利、客戶集中，因此全球基本面廣度低於 Anthropic 事件。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>資本市場願意以高估值支持仍虧損的中國 AI GPU 公司，意味出口管制並未削弱本土算力投資意願，反而加速國產替代融資。這對中國半導體設備、封裝與本土供應鏈偏正向，對 NVIDIA 中國長期市占則是競爭性訊號。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>Enflame <span class="direction direction-up">↑ 上升</span>179%，而 STAR 50 <span class="direction direction-down">↓ 下降</span>1%、CSI 300 <span class="direction direction-down">↓ 下降</span>0.84%，事件 alpha 極強；但首日流通比例低且 IPO 稀缺性會放大漲幅，不宜直接視為基本面價值發現。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>公司尚未獲利，且單一大客戶集中度極高。中國 GPU 的軟體生態、先進製程取得、HBM 供給與大規模叢集效率仍是長期瓶頸。</p>
-<h4>台灣外溢</h4>
+<h4 class="subheading-pill">台灣外溢</h4>
 <p>對台灣先進製程的直接正向映射有限，因出口管制與中國在地化會改變晶片製造路徑；較可能的外溢是中國 AI compute 投資持續，對全球 HBM／記憶體供需形成間接支撐，同時增加非 NVIDIA accelerator 的競爭。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>上市後首份財報、Tencent 以外客戶占比、第五／第六代晶片進度、HBM 來源與供應，以及中國出口管制／國產替代政策。</p>
-<h3>3｜Micron 台灣：高額獎酬仍未解除工會爭議</h3>
+</section><section class="analysis-card"><h3>3｜Micron 台灣：高額獎酬仍未解除工會爭議</h3>
 <p><strong>FACT｜</strong> Micron 9/11 表示台灣直接員工 FY2026 總獎酬相當於 35–68 個月薪資，並提供最低現金報酬；但桃園工會表示與公司仍未達成共識，若訴求未獲回應將繼續朝罷工方向推進。Micron 在台約 15,000 名員工，台灣是其重要製造基地。</p>
 <p><strong>Score Rationale｜68/100：</strong> 若罷工實際發生，對 DRAM／HBM 供應鏈影響可能很高；但目前仍是勞資談判階段，沒有停產證據，因此 Magnitude 以情境風險而非既成事實評估。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>這是「供給尾端風險」，不是「已發生供給衝擊」。AI memory 供需本已緊張，若勞資爭議升級，可能提高記憶體價格風險溢酬；但若迅速達成協議，市場影響可快速消退。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>MU 9/11 沒有呈現可乾淨歸因此事件的異常反應；同日科技股與記憶體股仍受 Oracle AI cloud read-through、CPI 與利率共同影響，因此不以同日相關性判定事件方向。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>公司已提出史上最高獎酬方案，可能提高達成協議機率；目前沒有罷工日期、停線或出貨中斷證據。</p>
-<h4>台灣外溢</h4>
+<h4 class="subheading-pill">台灣外溢</h4>
 <p><strong>HBM/DRAM：</strong> 潛在供給風險 <span class="direction direction-worsening">↘ 惡化</span>；若停產才可能轉為報價 <span class="direction direction-improving">↗ 改善</span>。<strong>伺服器 ODM：</strong> 若記憶體交期拉長，會增加 BOM／交付風險。<strong>時間：</strong> 數週至1季。<strong>確認條件：</strong> 正式罷工投票、停工或產能受影響；<strong>失效條件：</strong> 勞資達成協議且產線正常。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>政府調解、工會正式投票、Micron 後續獎酬制度調整，以及 9/30 財報對 HBM／DRAM 供需與台灣產能的評論。</p>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <div class="table-scroll wide-content"><table>
 <thead>
 <tr>

@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -642,40 +692,40 @@ footer {
 </tbody>
 </table></div>
 <h2>市場影響力前三大事件（TOP 3 MARKET IMPACT EVENTS）</h2>
-<h3>1. Oracle Project Jupiter：電力成為 AI 基建關鍵約束 — 82/100</h3>
+<section class="analysis-card"><h3>1. Oracle Project Jupiter：電力成為 AI 基建關鍵約束</h3><div class="meta-chips"><span class="chip chip-score">82/100</span></div>
 <p><strong>FACT：</strong> Reuters 9 月 24 日報導，Oracle 對 Blue Owl 旗下開發商發出不可抗力通知，原因是 New Mexico 大型資料中心可能延遲取得電力。ORCL 約 <span class="direction direction-down">↓ 下降</span>3.3%。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>資料中心即使取得 GPU 與伺服器，若 energization 延誤，仍會推遲雲端容量上線與營收（Revenue）認列，並降低資本支出（CapEx）周轉效率。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>ORCL 明顯落後近乎持平的大盤，事件驅動成分高；但油價與殖利率上升亦形成共同估值逆風。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>Oracle 並未退出專案。若電力接入快速明朗且 2028 上線時程不變，本事件可能主要屬合約風險管理。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>Oracle、Blue Owl 與電力供應方對上線時程、專案融資與設備交付的更新。</p>
 <p><strong>台灣外溢：</strong> 風險集中在 AI 伺服器 ODM、電源、散熱、PCB/CCL 與網通設備的交付節奏，而非終端需求立即消失。</p>
-<h3>2. Meta Connect：Muse 進入 AI 眼鏡 — 74/100</h3>
+</section><section class="analysis-card"><h3>2. Meta Connect：Muse 進入 AI 眼鏡</h3><div class="meta-chips"><span class="chip chip-score">74/100</span></div>
 <p><strong>FACT：</strong> Meta 官方宣布 Muse 將進入 AI 眼鏡，並推出 Ray-Ban Meta Audio、Ray-Ban Meta Gen 3 等產品。META 約 <span class="direction direction-up">↑ 上升</span>4.5%。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>裝置分發可提高 Muse 使用頻率，若後續形成訂閱、交易或廣告增量，AI 投資將從成本中心進一步轉為可量化營收來源。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>META 在近乎平盤的大市中顯著上漲，顯示市場正面評價 consumer AI adoption；但付費轉換率、ARPU 與硬體毛利率（Gross Margin）仍待財報驗證。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>智慧眼鏡仍面臨隱私、監管與硬體毛利率風險；高下載或裝置銷量不必然等於高付費率。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>10 月產品出貨、Muse 使用數據，以及 Meta 下一次財報對 AI 收入與 CapEx 的量化。</p>
 <p><strong>台灣外溢：</strong> Edge AI、光學、感測與部分消費電子鏈中期偏正面；資料中心則取決於 Muse 推論量能否持續增加。</p>
-<h3>3. SoftBank：111 億美元高收益債支應 AI 投資 — 70/100</h3>
+</section><section class="analysis-card"><h3>3. SoftBank：111 億美元高收益債支應 AI 投資</h3><div class="meta-chips"><span class="chip chip-score">70/100</span></div>
 <p><strong>FACT：</strong> Reuters 報導 SoftBank 完成約 111 億美元美元／歐元高收益債發行，資金將支應 OpenAI 與其他 AI、半導體及資料中心投資。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>資金到位提高 AI 基建持續投資能力，但高收益融資也把信用利差與再融資條件帶入 AI CapEx 循環。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>此事件較像資金供給延續的確認，不等於新的 GPU 或伺服器訂單（Order）。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>資金用途涵蓋多類 AI 資產；不得把募資金額直接換算為台灣供應鏈營收。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>SoftBank 對 OpenAI 投資撥款、資料中心承諾與後續信用條件。</p>
 <p><strong>台灣外溢：</strong> 若資金最終形成加速器與 AI server 訂單，才會傳導至先進製程、先進封裝（Advanced Packaging）、HBM、ODM、電源與散熱。</p>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <p>14 Stock Precheck 已完成。META 為直接 material 事件；NVDA、TSM、AMD、AVGO 為 AI 基建 read-through。MSFT、AAPL、GOOGL、AMZN、TSLA、MU、ASML、DELL、SMCI 在本 coverage window 未發現足以獨立進榜的新 root event，因此不硬創造事件。</p>
 <h2>美國科技股策略（US TECH STRATEGY）</h2>
 <p>AI 需求未反轉，但電力、融資成本與完工時程已成為與晶片供給同等重要的估值變數。研究上應把 backlog 與實際 energization、施工、融資進度一起追蹤，並持續區分公司事件與高殖利率造成的市場 beta。</p>

@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -684,70 +734,70 @@ footer {
 </tr>
 </tbody>
 </table></div>
-<h3>1. Meta Muse：AI 應用層開始出現可量化的營收選擇權 — 76/100</h3>
+<section class="analysis-card"><h3>1. Meta Muse：AI 應用層開始出現可量化的營收選擇權</h3>
 <p><strong>FACT｜發生什麼：</strong> Meta 於 9 月 8 日推出個人 AI 代理人 Muse；過去 24 小時 Reuters 彙整華爾街最新評估，指出 Muse 上線 12 天約 280 萬次下載，Meta 股價自推出後已上漲逾 20%，市值增加逾 2,000 億美元。Muse 採免費層加每月 20 / 100 美元訂閱方案。</p>
 <p><strong>為何現在重要：</strong> 市場原先主要把 Meta 的 AI 支出視為資本支出與廣告效率故事；Muse 若形成直接訂閱收入，估值框架會新增「consumer agent recurring revenue」。這比單純模型 benchmark 更接近可驗證的營收（Revenue）事件。</p>
 <p><strong>Market Impact Score 76/100｜理由：</strong> Magnitude 中高、Mega-cap breadth 高、基本面潛在影響高，但目前仍是早期下載與分析師推估，尚未有公司揭露付費轉換率或實際 Muse 營收，因此未達 80+ structural 等級。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <ol>
 <li><strong>營收機制：</strong> 免費層擴大分發 <span class="direction direction-flat">→ 持平</span> 活躍使用者成長 <span class="direction direction-flat">→ 持平</span> 付費轉換 <span class="direction direction-flat">→ 持平</span> 新訂閱收入。</li>
 <li><strong>成本機制：</strong> agent 長時間背景執行會增加推論成本；毛利率（Gross Margin）取決於模型效率與雲端/自建算力成本。</li>
 <li><strong>競爭機制：</strong> Meta 的 WhatsApp、社群與裝置分發可降低獲客成本，但 Amazon 已阻擋 Muse 直接進入其購物環境，顯示 agent interoperability 並非無摩擦。</li>
 </ol>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p><strong>FACT：</strong> Reuters 指 Meta 自 Muse 發布以來漲逾 20%，9 月 22 日中午再漲約 1%。<br/>
 <strong>INFERENCE：</strong> 大部分「產品成功預期」已開始反映，但尚未有付費轉換率、ARPU 或增量 CapEx，因此目前更像估值（Valuation）重評，而非已被財報證實的 EPS 上修。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <ul>
 <li>Amazon 對第三方 agent 存取購物網站採限制態度，可能削弱 Muse 跨平台交易能力。</li>
 <li>280 萬下載不等於高留存率，也不等於付費轉換。</li>
 <li>高利率環境使新增遠期 AI 現金流的折現價值下降。</li>
 </ul>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>Meta 下一次正式財報與任何 Muse 活躍用戶、付費轉換率、推論成本或增量 CapEx 揭露。若下載增長無法轉化為留存與付費，本事件的「新營收引擎」假設失效。</p>
 <p><strong>台灣外溢：</strong> 若 Muse 使用量持續擴張，推論流量將增加 Meta 資料中心（Data Center）負載，對 AI 伺服器、先進製程、先進封裝（Advanced Packaging）、電源與散熱形成中期需求支撐；但現階段沒有新增硬體訂單（Order）或 CapEx 上修的官方證據，不能直接判定台灣供應鏈新增受益。</p>
 <hr/>
-<h3>2. Anthropic Claude Opus 5.5：高階模型成本曲線再下移 — 72/100</h3>
+</section><section class="analysis-card"><h3>2. Anthropic Claude Opus 5.5：高階模型成本曲線再下移</h3><div class="meta-chips"><span class="chip chip-score">72/100</span></div>
 <p><strong>FACT｜發生什麼：</strong> Anthropic 9 月 22 日正式推出 Claude Opus 5.5。官方表示，典型工作負載的運行成本較 Opus 5 低約 40%；定價為每百萬 input tokens 4 美元、output tokens 20 美元，並已可透過 AWS、Google Cloud 與 Microsoft Foundry 使用。</p>
 <p><strong>與先前預期差異：</strong> 新版本不是單純能力提升，而是「高階能力 + 顯著單位成本下降」。這對 AI 經濟模型更重要：企業部署門檻下降，但同時意味相同工作量所需算力與 token 成本可能降低。</p>
 <p><strong>Market Impact Score 72/100｜理由：</strong> 對 AI 軟體、三大雲端與推論經濟性具有廣泛 read-through；但 Anthropic 為私有公司，且尚無證據顯示此次發布立即改變 AWS / Azure / Google Cloud 的收入指引或 GPU 訂單。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <ol>
 <li><strong>需求正向：</strong> 更低成本可擴大企業 agent 可行使用情境，增加總推論量。</li>
 <li><strong>單位算力負向：</strong> 若效率提升速度快於使用量成長，GPU/加速器的單位工作負載需求可能下降。</li>
 <li><strong>雲端競爭：</strong> 同一模型跨 AWS、Google Cloud、Microsoft Foundry 提供，降低單一雲端獨占性，競爭焦點轉向價格、資料治理與企業整合。</li>
 </ol>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>Anthropic 無公開股價，因此直接價格反應不可觀察。9 月 23 日美股整體受利率上升壓制，NVDA 與 AMD 均約跌 1.47%、SOX 跌 1.23%；沒有足夠證據把這些跌幅歸因於 Opus 5.5。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <ul>
 <li>官方 40% 為「典型工作負載」成本宣稱，不代表所有 workload 的實際 TCO 都下降 40%。</li>
 <li>更便宜的推論可能引發 Jevons-style 使用量擴張，最終總算力需求反而增加。</li>
 <li>尚無 hyperscaler CapEx 或加速器訂單調整的直接證據。</li>
 </ul>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>未來數週 Sonnet 5.5 / Haiku 5.5、雲端平台價格與採用數據，以及 AWS / Google Cloud / Azure 是否在下一輪財報提及 Anthropic workload 成長。</p>
 <p><strong>台灣外溢：</strong> 對 TSMC、CoWoS/HBM、伺服器 ODM 的方向不是單向利多。確認條件是雲端 CapEx、GPU/ASIC 出貨或伺服器訂單繼續上修；失效條件是模型效率提升後，推論需求成長不足以吸收單位算力下降。</p>
 <hr/>
-<h3>3. Palo Alto Networks：前沿模型從「工具」變成持續式企業資安服務 — 64/100</h3>
+</section><section class="analysis-card"><h3>3. Palo Alto Networks：前沿模型從「工具」變成持續式企業資安服務</h3><div class="meta-chips"><span class="chip chip-score">64/100</span></div>
 <p><strong>FACT｜發生什麼：</strong> Palo Alto Networks 9 月 22 日推出 Unit 42 Continuous Frontier AI Defense，使用 Anthropic、OpenAI 與 open-weight 模型持續測試 web application、API 與雲端基礎設施，並提供修補建議。服務採年度訂閱，價格依模型組合而定。</p>
 <p><strong>Market Impact Score 64/100｜理由：</strong> 事件驗證 agentic AI 可直接嵌入企業資安預算，對 SaaS / security workflow 具示範意義；但對 Mega-cap 或半導體營收的近期直接影響有限，因此維持 tactical material 而非 high-impact。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>基本面：</strong> 若 continuous offensive security 取代週期性滲透測試，PANW 可增加高附加價值服務收入並提高客戶黏著度。<br/>
 <strong>估值：</strong> 目前市場仍需要訂單、ARR 或毛利率資料確認，不能只因產品發布就上調長期估值。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>Reuters 報導時 PANW 約跌 1.37%。由於同日科技股受到殖利率與油價上升壓力，無法把跌幅直接歸因於產品；目前應視為「尚未取得正向價格驗證」。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <ul>
 <li>服務仍需專家參與，不一定具純軟體式高毛利率。</li>
 <li>企業對高能力模型執行 offensive testing 的治理、法遵與資料邊界可能限制採用。</li>
 <li>未公布訂單、客戶數或 ARR。</li>
 </ul>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>PANW 後續財報對 Unit 42 訂閱採用、Next-Generation Security ARR 與毛利率的揭露。</p>
 <p><strong>台灣外溢：</strong> 直接硬體 read-through 低；較可能影響台灣企業資安服務與雲端治理支出，而不是形成新的晶圓、HBM 或伺服器訂單。</p>
 <hr/>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <div class="table-scroll wide-content"><table>
 <thead>
 <tr>

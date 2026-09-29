@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -710,13 +760,13 @@ footer {
 <li><strong>為何現在重要｜</strong> 大型客戶正自研 AI 晶片以降低 NVIDIA 依賴；控制開發者入口與 open-model distribution，可讓 NVIDIA 把競爭從單純 GPU 性能延伸到軟體、模型、工具與部署生態系。</li>
 <li><strong>台灣外溢｜</strong> 短期不是直接晶圓訂單事件；若開放模型降低企業 AI 部署成本並擴大 inference demand，中期才可能增加 GPU、server、networking、HBM 與先進封裝需求。</li>
 </ul>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>FACT：</strong> NVIDIA 官方已公告交易；Reuters 指出此案是 NVIDIA 最大型收購之一。<strong>INFERENCE：</strong> 戰略價值高於短期 EPS 貢獻，核心在 developer funnel、模型分發與軟硬整合，而非立刻增加晶片出貨。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>NVDA 收盤約 <span class="direction direction-up">↑ 上升</span>1.8%，但 Nasdaq 同日 <span class="direction direction-up">↑ 上升</span>1.40%，因此僅部分可視為交易 alpha。市場正向接受，但尚未對整合、監管與平台中立性給出完整估值。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>Hugging Face 的價值來自中立與開放；若開發者擔心 NVIDIA 偏向自家硬體而轉移平台，交易可能削弱原有網路效應。大型雲端與模型商持續發展自研晶片，也限制 NVIDIA 生態系控制力。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>交易監管審查、Hugging Face 開放治理承諾、NVIDIA 是否推出新的模型／部署整合，以及 AWS、Azure、Google Cloud 與 AMD 對平台中立性的反應。</p>
 <hr/>
 </section><section class="analysis-card"><h3>#2｜Broadcom：AI 基本面再上修，但股票仍被更高預期門檻壓制</h3>
@@ -726,13 +776,13 @@ footer {
 <li><strong>預期差｜</strong> Q4 總營收指引 US$34.8bn 低於 LSEG 共識約 US$35.03bn，造成「長期 AI 更強、短期總體指引未跨過 whisper bar」的分裂定價。</li>
 <li><strong>台灣外溢｜</strong> 對 custom accelerator、AI networking、先進製程、先進封裝與資料中心高速互連需求偏正向；但毛利率與客戶自研 ASIC 組合可能讓供應鏈受益程度不一致。</li>
 </ul>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>AVGO 下跌不是 AI demand collapse。公司官方資料顯示 Q4 AI semiconductor revenue 預估 US$21.7bn、年增 236%；股價負反應更接近高估值／高預期消化。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>AVGO 收跌約 2.7%，SOX 約 <span class="direction direction-down">↓ 下降</span>0.8%，而 Nasdaq <span class="direction direction-up">↑ 上升</span>1.40%；相對表現顯示公司事件 alpha 明顯偏負，而非單純 macro beta。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>若 FY2027 US$115bn AI revenue 能持續被訂單、供應與客戶部署驗證，短線估值壓縮可能不代表中期 earnings power 下降。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>大型客戶 CapEx、custom accelerator 出貨、networking mix、毛利率，以及 OpenAI／Anthropic／Meta 的部署節奏。</p>
 <hr/>
 </section><section class="analysis-card"><h3>#3｜Snowflake：AI 支出從基礎建設向企業軟體消耗變現擴散</h3>
@@ -742,13 +792,13 @@ footer {
 <li><strong>市場為何在意｜</strong> 這提供「AI <span class="state-transition"><span class="state-prior">CapEx</span><span class="transition-arrow">→</span><span class="state-current">enterprise workload</span></span> <span class="direction direction-flat">→ 持平</span> software consumption」的實際收入證據，降低 AI 只有硬體供應商獲利的疑慮。</li>
 <li><strong>價格反應｜</strong> SNOW 盤中曾接近 <span class="direction direction-up">↑ 上升</span>25%，Reuters 後段報價約 <span class="direction direction-up">↑ 上升</span>23.3%；NOW、TEAM、CRM、ADBE 同步上漲 3.5%–6%。</li>
 </ul>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>事件 alpha 清楚高於大盤。AI coding assistant Cortex Code 與企業 chatbot CoWork 帳戶增加，支持 AI 不只是獨立產品，而是在拉動核心 data-cloud consumption。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>正向重新定價已快速發生；SNOW forward revenue multiple 約 15x，顯著高於軟體 ETF，後續需要持續加速才能支撐 premium valuation。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>高估值意味下一季若 consumption growth、net retention 或 AI workload monetization 放緩，股價對小幅 miss 的敏感度將提高。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>下一季 product revenue、AI account conversion、企業 IT 預算，以及 hyperscaler cloud consumption 的交叉確認。</p>
 </section><h2>重要個股事件掃描</h2>
 <blockquote class="callout callout-thesis">

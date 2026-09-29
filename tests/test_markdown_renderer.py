@@ -173,6 +173,18 @@ NVIDIA 推出安全平台。
         self.assertEqual(len(cards), 1)
         self.assertIn("AI 伺服器需求加速", cards[0].get_text())
 
+    def test_event_numbered_card_detection(self):
+        md = """
+### Event #1｜Meta One：跨 App AI 訂閱
+
+內文說明。
+"""
+        rendered = render_markdown_to_html(md, {"title": "Test", "run_id": "T-EVENT-1"})
+        soup = BeautifulSoup(rendered, "html.parser")
+        cards = soup.find_all("section", class_="analysis-card")
+        self.assertEqual(len(cards), 1)
+        self.assertIn("Meta One", cards[0].get_text())
+
     def test_theme_card_detection(self):
         md = """
 ### Theme #1｜全球半導體資本支出週期

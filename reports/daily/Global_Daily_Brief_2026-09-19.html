@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -669,41 +719,41 @@ footer {
 </tr>
 </tbody>
 </table></div>
-<h3>1. Apple 新機正式開賣：AI 終端需求由發表會進入實銷</h3>
+<section class="analysis-card"><h3>1. Apple 新機正式開賣：AI 終端需求由發表會進入實銷</h3>
 <p>Apple 官方確認 iPhone 18 Pro、18 Pro Max、Apple Watch Series 12/Ultra 4 與 AirPods 5 於 9/18 全球到店；iPhone 18 Pro 以 A20 Pro、Siri AI 與裝置端 AI 工作負載作為主要升級軸。這不是新規格揭露，而是需求驗證時點由預購轉為實際交付。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <ol>
 <li><strong>基本面機制</strong>：首週交付速度、Pro/Pro Max mix 與供貨等待時間，將影響 Apple 營收（Revenue）與高階機種組合預期。</li>
 <li><strong>台灣傳導</strong>：若高階 mix 優於預期，晶圓代工、先進製程、封裝、散熱與組裝鏈的 read-through 偏正面；但僅憑上市日排隊或缺貨不能推論最終需求。</li>
 <li><strong>估值機制</strong>：真正可重估的條件是 Siri AI 帶動換機率，而非單純新品上市。</li>
 </ol>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>9/18 美國市場已收盤；本報將 Apple 上市事件視為「部分定價」。需要後續 AAPL 相對 Nasdaq 的超額報酬、交期與通路資料，才能區分事件驅動與大盤 beta。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>若交期快速縮短、非 Pro mix 偏高或中國等重要市場需求弱，AI 換機週期論點將被削弱。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>首週銷售／交期資料、供應鏈拉貨訊號，以及後續財報對 iPhone 需求與毛利率的說法。</p>
-<h3>2. AI 記憶體供需仍緊：MU 財報成下一個硬驗證</h3>
+</section><section class="analysis-card"><h3>2. AI 記憶體供需仍緊：MU 財報成下一個硬驗證</h3>
 <p>RBC 的最新產業觀察認為，agentic AI 增加記憶體需求，而 HBM、clean-room 與 EUV 供給限制使需求仍超過供給；MU 9/18 盤中上漲。Micron 官方近期亦已展示 512GB DDR5 RDIMM，並持續量產 HBM4，方向與高容量 AI 記憶體需求一致。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>基本面</strong>：供給緊張若延續，DRAM/HBM 平均售價與毛利率有上修空間。<strong>台灣</strong>：對記憶體封測、伺服器與 AI 加速器供應鏈偏正面，但若 HBM 擠壓傳統 DRAM/NAND 投資或客戶降規，受益不會均勻。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>MU 已明顯反映樂觀預期，因此不是「尚未定價」。9/30 財報與前瞻指引（Guidance）若只符合高預期，股價仍可能出現 sell-the-news。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>AI CapEx 降速、客戶庫存（Inventory）上升、長約重新議價、產能擴張快於需求，均會破壞緊缺論點。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>Micron 9/30 財報：DRAM/HBM ASP、毛利率、HBM 供應承諾與 2027 產能規劃。</p>
-<h3>3. Anthropic × Accenture：AI 安全評估成為可計價的企業服務</h3>
+</section><section class="analysis-card"><h3>3. Anthropic × Accenture：AI 安全評估成為可計價的企業服務</h3>
 <p>Anthropic 與 Accenture 9/18 宣布建立 embedded evaluator 團隊，由 Faculty 主導模型 red-team、alignment 與 safeguards 測試；雙方各預計五年投入至少 10 億美元。這把 frontier model governance 從外部顧問工作推向更深的常駐式服務。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>對 ACN 而言，這是 AI 服務收入與能力資產化的直接訊號；對 Anthropic 則增加固定治理投入，但也可能降低大型企業採用 frontier AI 的風險折價。對 MSFT/GOOGL/AMZN 的 read-through 是企業 AI 平台未來可能需要更制度化的第三方評估層。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>TechCrunch 報導 ACN 盤後上漲約 8%，屬明顯事件反應；對未上市 Anthropic 無公開股價可驗證。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>embedded evaluator 的獨立性、責任邊界與實際採購規模尚未成熟；若最終主要是成本中心而非可複製服務，估值影響會下降。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>團隊規模、實際合約收入認列、其他 frontier labs 是否採用類似模式。</p>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <div class="table-scroll wide-content"><table>
 <thead>
 <tr>

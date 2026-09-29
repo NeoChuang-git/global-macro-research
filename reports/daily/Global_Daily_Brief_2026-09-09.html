@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -687,29 +737,29 @@ footer {
 <section class="analysis-card"><h3>#1｜Amazon × Qualcomm：AI 推論晶片競爭從 GPU 替代走向客製矽＋光互連</h3>
 <div class="meta-chips"><span class="chip chip-score">93/100</span><span class="chip direction direction-improving"><span class="direction direction-improving"><span class="direction direction-improving">↗ 改善</span></span></span><span class="chip chip-confidence">信心 高</span></div>
 <p><strong>市場解讀｜</strong> FACT：Qualcomm 官方公告雙方將共同開發多世代客製 AI inference silicon 與最高 1.6T 光互連；SEC 8-K 顯示 Amazon warrant 的分批歸屬與商業安排、訂單及實際採購掛鉤，累計付款上限 US$60bn。INFERENCE：hyperscaler 正把 AI 成本優化從 GPU 採購延伸到自訂推論晶片、SerDes 與 optical DSP。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>QCOM 收盤 <span class="direction direction-up">↑ 上升</span>3.2%，AMZN <span class="direction direction-down">↓ 下降</span>約0.7%，同日 S&amp;P 500 <span class="direction direction-down">↓ 下降</span>0.58%。QCOM 相對大盤的正向 alpha 與公告一致，但早盤漲幅收斂，市場仍在評估執行、毛利與長期採購實現率。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>US$60bn 是與 warrant 歸屬連結的最高商業規模，不等於已無條件下單 US$60bn。AWS 仍有 Trainium／Inferentia，自研與 NVIDIA、Broadcom 等方案將共同競爭 CapEx。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>Qualcomm 資料中心營收、Amazon purchase orders、量產節點／代工夥伴、1.6T optical design wins 與 AWS AI CapEx。</p>
 </section><section class="analysis-card"><h3>#2｜Meta Muse：agent 從聊天進入付款與跨 App 執行</h3>
 <div class="meta-chips"><span class="chip chip-score">84/100</span><span class="chip direction direction-improving"><span class="direction direction-improving"><span class="direction direction-improving">↗ 改善</span></span> 需求／<span class="direction direction-worsening"><span class="direction direction-worsening">↘ 惡化</span></span> 治理</span><span class="chip chip-confidence">信心 中高</span></div>
 <p><strong>市場解讀｜</strong> Meta 推出 Muse，在美國透過 App 與 WhatsApp 上線，可寄信、訂旅遊、填表與購物。consumer agent 從「回答」跨入「執行」，但安全／隱私疑慮使 adoption 與治理成本必須同時定價。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>META 約 <span class="direction direction-down">↓ 下降</span>0.5%，未形成明顯正向 event alpha；短期營收貢獻尚未量化。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>若使用者不願授權 email、付款與個人資料，或敏感操作需要大量人工確認，實際使用頻率與變現速度可能低於能力暗示的 TAM。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>Muse 活躍用戶、付費方案、WhatsApp／AI glasses 擴張、第三方 integrations 與安全／監管回應。</p>
 </section><section class="analysis-card"><h3>#3｜Mistral €3bn 融資：歐洲 AI 從模型主權延伸到自有算力</h3>
 <div class="meta-chips"><span class="chip chip-score">78/100</span><span class="chip direction direction-improving"><span class="direction direction-improving"><span class="direction direction-improving">↗ 改善</span></span></span><span class="chip chip-confidence">信心 中高</span></div>
 <p><strong>市場解讀｜</strong> Mistral 完成 €3bn 融資、估值約 €21bn，Samsung 與 EU-backed Scaleup Europe Fund 等參與；資金支持 frontier models、compute 與 infrastructure，強化 sovereign AI 的資本可得性。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>Mistral 為私人公司，沒有直接股價；對 ASML、NVDA、Samsung、MSFT 僅視為策略 read-through。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>相較美國 frontier labs 資本規模仍小；若歐洲資料中心受電力、審批或利用率限制，融資不會等比例轉成設備訂單。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>自建資料中心 CapEx、GPU／accelerator 採購、Samsung 半導體合作、企業 ARR 與 IPO 路徑。</p>
 </section><h2>重要個股事件掃描</h2>
 <div class="table-scroll wide-content"><table>

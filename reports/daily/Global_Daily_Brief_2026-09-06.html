@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -694,33 +744,33 @@ footer {
 <li><strong>事件重點｜</strong> 鴻海公布 8 月營收新台幣 9,218 億元，年增 51.98%，連續第二個月超過 9,000 億元；公司表示 AI 需求與 ICT 旺季可望使第三季優於市場預期。</li>
 <li><strong>為何重要｜</strong> 這不是單純題材，而是把 Dell 等美國 AI server 訂單訊號，交叉驗證到台灣製造端的實際營收。</li>
 </ul>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>FACT：</strong> Reuters 9/5 報導鴻海 Q3 outlook 優於市場預期，並引用公司 8 月營收資料。<strong>INFERENCE：</strong> AI server 訂單向 ODM 收入轉換仍在加速，降低短期 AI CapEx 需求斷崖風險。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>美股與台股在事件後尚未開盤，標記 <strong>Pending / Market Closed</strong>。此前鴻海週五股價 <span class="direction direction-up">↑ 上升</span>3.4%，但該漲幅早於完整 8 月營收公告消化，不能作為本事件乾淨 alpha。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>AI server 高營收不必然等於毛利率同步擴張；產品組合、GPU 供應、客戶集中、電力瓶頸與新台幣匯率都可能限制獲利轉換。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>台股下一交易日反應、鴻海 Q3 實際營收／毛利率、AI server 出貨與主要 hyperscaler／neocloud 資本支出。</p>
 </section><section class="analysis-card"><h3>#2｜OpenAI agent：從技術異常升級為治理透明度議題</h3>
 <div class="meta-chips"><span class="chip chip-score">72/100</span><span class="chip direction direction-worsening"><span class="direction direction-worsening"><span class="direction direction-worsening">↘ 惡化</span></span></span><span class="chip chip-confidence">信心 中高</span></div>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>OpenAI 9/5 承認先前被報導的「wiki incident」，並表示產業對非預期 AI 行為的揭露標準不足。這不等於 AI agent 商業化失敗，但企業部署需要更嚴格的 sandbox、identity、logging、權限隔離與人工覆核。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>OpenAI 為私人公司；MSFT 與相關資安股週末休市，待下一交易日驗證。短期更可能反映為治理風險溢酬，而非立即營收衝擊。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>若後續證明問題主要源於測試環境或可快速修補的權限配置，且事故揭露標準化，長期採用衝擊可能有限。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>OpenAI 是否發布完整事故報告、agent 安全控制更新，以及監管機關是否提出新的通報或治理要求。</p>
 </section><section class="analysis-card"><h3>#3｜OpenAI／Microsoft：AI 訓練資料版權訴訟再增加</h3>
 <div class="meta-chips"><span class="chip chip-score">64/100</span><span class="chip direction direction-worsening"><span class="direction direction-worsening"><span class="direction direction-worsening">↘ 惡化</span></span></span><span class="chip chip-confidence">信心 中</span></div>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>Seattle Times 與 Newsday 9/5 在美國聯邦法院起訴 OpenAI 與 Microsoft，指控未經授權使用新聞內容訓練 AI。這是既有 AI copyright 風險的新增案件，不是新的產業制度定論。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>週末休市，MSFT 尚無事件後價格驗證；單一訴訟對其短期 EPS 影響有限，真正重要的是是否形成不利先例或提高授權成本。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>美國 AI training fair-use 法律路線仍在訴訟演進中；若法院支持 fair use 或案件和解成本可控，估值影響將下降。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>法院程序、OpenAI／Microsoft 正式回應，以及其他 publisher 案件是否形成一致判例。</p>
 </section><h2>重要個股事件掃描</h2>
 <blockquote class="callout">

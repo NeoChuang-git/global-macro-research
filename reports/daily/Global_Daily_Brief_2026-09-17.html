@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -672,44 +722,44 @@ footer {
 </tr>
 </tbody>
 </table></div>
-<h3>1. Fed 意外升息：高估值科技重新面對更高折現率｜92/100</h3>
+<section class="analysis-card"><h3>1. Fed 意外升息：高估值科技重新面對更高折現率</h3><div class="meta-chips"><span class="chip chip-score">92/100</span></div>
 <p><strong>發生什麼。</strong> 美國聯準會（Federal Reserve）9 月 16 日將聯邦基金利率目標區間提高 25bp 至 3.75%–4.00%。Reuters 報導指出，市場原先對升息並未完全定價，因此政策決定構成明顯 hawkish surprise。</p>
 <p><strong>Score Rationale。</strong> 影響同時涵蓋 Magnificent 7、半導體、雲端、資料中心融資與美元資產估值；基本面不會一天改變，但估值與資本成本的傳導立即且廣泛，因此列為 92/100 的結構性市場事件。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <ol>
 <li>政策利率 <span class="direction direction-up">↑ 上升</span> <span class="direction direction-flat">→ 持平</span> 無風險利率／折現率上升。</li>
 <li>長久期科技股現金流現值下降，AI 高 CapEx 模式的資本效率門檻提高。</li>
 <li>對 NVDA、AMD、AVGO、TSM 等而言，短線主要是估值 beta；只有當雲端客戶削減 CapEx，才會進一步轉成訂單（Order）與營收（Revenue）風險。</li>
 </ol>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>美股 9 月 16 日收盤呈現風險資產壓力，Nasdaq 與大型科技股受利率重新定價影響。事件驅動與 broader market beta 高度重疊，因此不把單一科技股跌幅全部歸因於公司基本面。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>若後續核心通膨快速降溫、Fed 明確表示本次升息屬一次性調整，或 2Y／10Y 殖利率回落，科技股估值壓力可能迅速逆轉。AI 資料中心需求目前亦未出現同步取消訂單的官方證據。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>下一輪 Fed 官員談話、PCE/CPI、2Y/10Y 殖利率與雲端業者 CapEx 指引。<strong>確認條件</strong>：殖利率維持高位且 hyperscaler 指引轉弱；<strong>失效條件</strong>：利率回落但 AI CapEx 指引維持或上修。</p>
-<h3>2. Alphabet／Google Cloud 與 Crux AI、Blackstone 推進 AI 基建融資｜76/100</h3>
+</section><section class="analysis-card"><h3>2. Alphabet／Google Cloud 與 Crux AI、Blackstone 推進 AI 基建融資</h3><div class="meta-chips"><span class="chip chip-score">76/100</span></div>
 <p><strong>發生什麼。</strong> Alphabet 旗下 Google Cloud 與能源／AI 基礎設施平台 Crux 擴大合作，Blackstone 等資本參與 AI 資料中心與能源基建融資。事件的重點不是單一產品，而是 AI 算力擴張正在把融資、電力與資料中心容量整合成新的資本市場鏈條。</p>
 <p><strong>Score Rationale。</strong> 對 Alphabet 本身的近期每股盈餘（EPS）影響有限，但對 AI 資料中心建設的 breadth 與 persistence 高，且可讀穿至 GPU、網通、伺服器、電力與散熱供應鏈，評為 76/100。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>私募資本願意承接大型 AI 基礎設施，降低 hyperscaler 單獨承擔全部資本負擔的壓力；若融資模式可複製，將延長 GPU、先進封裝（Advanced Packaging）與伺服器 ODM 的需求週期。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>短線 Alphabet 股價仍受 Fed 利率事件主導，因此此事件的正向基本面訊號未必能直接反映在單日股價。較適合觀察中期 CapEx、租賃承諾與供應鏈訂單。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>資料中心融資增加不等於終端 AI 需求必然獲利；若電力取得、建置時程、利用率或 AI 服務毛利率（Gross Margin）不如預期，資本密集度可能反過來壓低自由現金流。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>Google Cloud 下一季 CapEx／營收指引、Blackstone/Crux 新專案規模、電力採購與 GPU 交付節奏。</p>
-<h3>3. Anthropic 將 Claude 推向文件、試算表與簡報工作流｜64/100</h3>
+</section><section class="analysis-card"><h3>3. Anthropic 將 Claude 推向文件、試算表與簡報工作流</h3><div class="meta-chips"><span class="chip chip-score">64/100</span></div>
 <p><strong>發生什麼。</strong> Anthropic 推進 Claude 在文件、試算表、簡報與 PDF 的整合式生產力工作流，競爭面直接延伸到 Microsoft Copilot 與 Google Workspace/Gemini 的企業應用層。</p>
 <p><strong>Score Rationale。</strong> 事件對上市公司近期財務影響仍需驗證，但可能改變企業 AI 軟體競爭與推理算力需求；影響廣度中等、硬體 read-through 間接，因此評為 64/100。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>企業 AI 的競爭焦點由「模型能力」轉向「能否完成工作」。這會提高 Microsoft、Google 與 Anthropic 在企業席次、資料權限、工作流整合與模型成本上的競爭強度。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>Anthropic 非上市公司，無直接股價可驗證；MSFT、GOOGL 的單日價格仍主要受 Fed beta 主導，故此事件標記為 <strong>待後續營收／採用率驗證</strong>。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>若企業客戶不願授權敏感文件資料、生成品質不足以替代既有 Office 流程，或推理成本高於可接受訂閱價格，產品擴張不一定轉成高毛利收入。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>企業採用數、付費方案、Microsoft/Google 對應產品更新，以及 Anthropic 後續模型與企業合作公告。</p>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <p>14 Stock Precheck 已逐一檢查 NVDA、MSFT、AAPL、GOOGL、AMZN、META、TSLA、AMD、TSM、AVGO、MU、ASML、DELL、SMCI。除 GOOGL 與上述 AI 基礎設施事件具直接關聯外，本輪未發現其他足以獨立超越 60 分門檻、且能取得官方＋可靠二次確認的新 root event；因此不以重複宏觀 beta 灌榜。</p>
 <h2>美國科技股策略（US TECH STRATEGY）</h2>
 <blockquote class="callout">

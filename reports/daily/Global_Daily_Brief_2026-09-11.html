@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -685,29 +735,29 @@ footer {
 </tr>
 </tbody>
 </table></div>
-<h3>1｜Oracle FY27 Q1：AI 雲端需求加速，CapEx 壓力同步放大</h3>
+<section class="analysis-card"><h3>1｜Oracle FY27 Q1：AI 雲端需求加速，CapEx 壓力同步放大</h3>
 <p><strong>FACT｜發生什麼：</strong> Oracle 公布 FY27 Q1，營收 193 億美元、年增 30%；總雲端營收 116 億美元、年增 62%；雲端基礎設施（IaaS）營收 74 億美元、年增 121%；RPO 達 6640 億美元。公司並表示單季新增約 850MW 資料中心容量。</p>
 <p><strong>與預期差異：</strong> 營收略高於市場預期，調整後 EPS 1.92 美元亦高於約 1.74 美元市場預期；但單季 CapEx 約 285 億美元，明顯高於市場原先約 194 億美元的估計。這代表需求端比市場擔心的更強，但資本投入也更重。</p>
 <p><strong>Score Rationale｜88/100：</strong> Magnitude 高（Oracle 是全球 AI 雲端與 OpenAI/Stargate 重要承載者）、Breadth 高（GPU、伺服器、網路、電力與資料中心）、Fundamental Impact 高（Revenue/RPO/CapEx 同時改變）、價格盤後立即反應，且對台灣 AI 伺服器與晶片供應鏈有直接 read-through。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <ol>
 <li><strong>需求層：</strong> RPO 與 IaaS 成長顯示 AI 算力合約仍在累積，且 Oracle 開始把 backlog 更快轉換為營收（Revenue）。</li>
 <li><strong>供給層：</strong> 850MW 新增容量說明限制不只在 GPU，也包含機房、電力、網路與機電設備。</li>
 <li><strong>資本層：</strong> CapEx 大幅高於預期，強化市場對自由現金流、融資成本與信用風險的敏感度。</li>
 <li><strong>估值層：</strong> ORCL 盤後上漲代表市場先認可「需求與執行改善」，但若殖利率持續上升，估值擴張空間仍會被壓縮。</li>
 </ol>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>ORCL 正規盤在財報前下跌，盤後財報公布後約 <span class="direction direction-up">↑ 上升</span>7%～8%。這是典型 event-driven repricing；相較同日 Nasdaq 約 <span class="direction direction-down">↓ 下降</span>0.7%，事件 alpha 明顯。市場目前更重視 RPO、IaaS 與 FY27 前瞻指引（Guidance），但 CapEx 超標尚未被完全消化。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <ul>
 <li>CapEx 的實際現金流壓力仍高，若後續合約轉營收速度不及擴建速度，自由現金流與信用指標可能再度惡化。</li>
 <li>Oracle 表示部分新增訂單採預付、客戶自備硬體等結構，可降低自身增量 CapEx；但這種模式是否可持續、對毛利率（Gross Margin）的長期效果仍需驗證。</li>
 <li>AI infrastructure 市場若出現電力、許可或施工延誤，RPO 不等於短期可實現 Revenue。</li>
 </ul>
-<h4>台灣外溢</h4>
+<h4 class="subheading-pill">台灣外溢</h4>
 <p><strong>機制：</strong> Oracle 資料中心擴張 <span class="direction direction-flat">→ 持平</span> GPU／ASIC、HBM、先進封裝（Advanced Packaging）、伺服器 ODM、電源／散熱、網通／光通訊需求增加。<strong>受影響環節：</strong> TSMC、CoWoS 供應鏈、AI server ODM、PCB/CCL、PSU、thermal、optics。<strong>時間：</strong> 近 1–6 季較明確；更長期取決於資料中心建設進度。</p>
 <p><strong>反證：</strong> 若客戶自備硬體比例提高，Oracle 自身 CapEx 與台灣供應鏈訂單的映射關係會更分散；另外，高利率與能源成本可能使部分資料中心專案延後。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <ul>
 <li>Oracle Q2 IaaS 成長與 RPO 轉 Revenue 速度。</li>
 <li>FY27 CapEx、自由現金流與融資安排更新。</li>
@@ -715,23 +765,23 @@ footer {
 </ul>
 <p><strong>確認條件：</strong> IaaS 維持高成長、RPO 持續轉為 Revenue、資料中心容量按計畫上線。<strong>失效條件：</strong> CapEx 持續上修但 Revenue conversion 下降，或信用／融資成本明顯惡化。</p>
 <hr/>
-<h3>2｜TSMC 8 月營收 5,148.06 億元，連續創高驗證先進製程需求</h3>
+</section><section class="analysis-card"><h3>2｜TSMC 8 月營收 5,148.06 億元，連續創高驗證先進製程需求</h3>
 <p><strong>FACT｜發生什麼：</strong> TSMC 於台北時間 9 月 10 日 13:30 公布 8 月合併營收新台幣 5,148.06 億元，月增 10.1%、年增 53.3%；前 8 月累計營收 3.38687 兆元、年增 39.3%。公司月營收資料本身不拆客戶與產品。</p>
 <p><strong>MARKET EXPECTATION：</strong> 7–8 月合計營收使公司第三季 Revenue Guidance 的達標可見度提高；市場普遍將 AI/HPC 與新一代手機先進製程拉貨視為主要驅動，但「8 月每一元增長來自何客戶」不可由月營收直接推論。</p>
 <p><strong>Score Rationale｜78/100：</strong> Magnitude 與 Taiwan Spillover 很高，對 NVDA/AMD/AVGO/AAPL 等主要客戶都有 read-through；但單月 Revenue 資訊粒度有限，因此 Fundamental Impact 與 Persistence 分數不做滿分。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>基本面：</strong> Revenue 再創新高確認先進製程需求仍強；對 2nm／3nm、高效能運算（HPC）與高階手機供應鏈偏正面。<strong>估值：</strong> TSM ADR 當日反而下跌，代表這個強數據已部分被市場預期吸收，且殖利率、油價與整體半導體風險偏好更主導當日價格。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>TSM ADR 當日約 <span class="direction direction-down">↓ 下降</span>1.7%～2.2%；同時 NVDA 約 <span class="direction direction-down">↓ 下降</span>2.1%、MU 約 <span class="direction direction-down">↓ 下降</span>4.5%。因此「TSMC 營收創高 <span class="direction direction-flat">→ 持平</span> 半導體股當天應上漲」不成立。較合理分解是：<strong>公司基本面訊號 <span class="direction direction-improving">↗ 改善</span>，但 sector beta／折現率衝擊 <span class="direction direction-worsening">↘ 惡化</span>。</strong></p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <ul>
 <li>月營收不揭露毛利率、客戶別與產品組合，無法直接證明每個 AI 客戶都同步加速。</li>
 <li>若 2027 年先進製程報價上調幅度過高，可能壓縮 fabless 客戶毛利或延後部分非核心需求。</li>
 <li>台幣匯率、海外廠 ramp 成本與高 CapEx 仍會影響獲利品質。</li>
 </ul>
-<h4>台灣外溢</h4>
+<h4 class="subheading-pill">台灣外溢</h4>
 <p><strong>晶圓代工／先進製程：</strong> <span class="direction direction-improving">↗ 改善</span>。<strong>CoWoS／先進封裝：</strong> 高階 AI accelerator 的後續封裝需求仍受支持。<strong>HBM/DRAM：</strong> 需求方向正向，但供應與價格主導權不在 TSMC。<strong>伺服器 ODM／PCB／散熱／電源：</strong> 需等待 hyperscaler/AI cloud CapEx 與 actual shipment 共同確認，不能只用 TSMC 月營收直接推導。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <ul>
 <li>10 月公布第三季財報與 4Q Guidance。</li>
 <li>2nm 量產爬坡、CoWoS 擴產與 AI accelerator 客戶 tape-out／shipment。</li>
@@ -739,22 +789,22 @@ footer {
 </ul>
 <p><strong>確認條件：</strong> 3Q Revenue 靠近或高於 Guidance 上緣、AI/HPC demand 維持強勁。<strong>失效條件：</strong> 先進製程利用率或 4Q Guidance 顯著低於預期。</p>
 <hr/>
-<h3>3｜NVIDIA 澳洲合作夥伴規劃至 2027 年最高 2GW AI 資料中心</h3>
+</section><section class="analysis-card"><h3>3｜NVIDIA 澳洲合作夥伴規劃至 2027 年最高 2GW AI 資料中心</h3>
 <p><strong>FACT｜發生什麼：</strong> NVIDIA 宣布與 Firmus、Sharon AI、IREN、Megaport、ResetData、CDC、NEXTDC、AirTrunk 等澳洲夥伴合作，以 NVIDIA DSX 平台推進最高 2GW AI factory／資料中心容量，目標至 2027 年逐步建置。</p>
 <p><strong>Score Rationale｜70/100：</strong> Breadth 與 Persistence 高，證明 AI Data Center 建置從美國向澳洲／亞太擴散；但未披露單一訂單金額、GPU 數量與 NVIDIA 認列 Revenue 時程，因此 Magnitude 採保守評分。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>這不是單一「賣多少顆 GPU」公告，而是土地、電力、機房、網路與運算平台的整體生態擴張。若按計畫執行，對 GPU、NVLink／高速互連、交換器、光通訊、電源與散熱的長期需求為正向。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>NVDA 當日約 <span class="direction direction-down">↓ 下降</span>2.1%，而 Nasdaq 約 <span class="direction direction-down">↓ 下降</span>0.7%。由於同日油價、PPI 與美債殖利率全面上升，較合理判斷是高 beta 半導體受到 macro/rates 去估值，並非市場否定澳洲 2GW 計畫。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <ul>
 <li>「最高 2GW」是 capacity target，不等於已簽訂等量 GPU 採購訂單。</li>
 <li>澳洲電力、用水、電網與資料中心監管爭議可能影響建設速度。</li>
 <li>2027 才是主要建置期限，短期 Revenue recognition 可能有限。</li>
 </ul>
-<h4>台灣外溢</h4>
+<h4 class="subheading-pill">台灣外溢</h4>
 <p><strong>晶圓／先進封裝：</strong> 若 NVIDIA GPU 與 networking silicon 出貨增加，TSMC 先進製程與 CoWoS 需求受益。<strong>伺服器 ODM／電源／散熱／PCB/CCL／光通訊：</strong> 具潛在正向 read-through，但需以 partner capex、設備採購與 shipment schedule 驗證。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <ul>
 <li>Firmus、NEXTDC、AirTrunk 等夥伴的實際 CapEx、MW 上線與 GPU deployment。</li>
 <li>NVIDIA 下一代平台 shipment schedule 與 DSX reference architecture 採用速度。</li>
@@ -762,7 +812,7 @@ footer {
 </ul>
 <p><strong>確認條件：</strong> partner 公布具體建設里程碑、電力合約與硬體採購。<strong>失效條件：</strong> 電力或監管導致 MW 計畫延遲，或 2GW 長期維持在規劃而非 committed capacity。</p>
 <hr/>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <blockquote class="callout">
 <p>僅列 material 個股；其餘 14 Stock Precheck 已完成但不在正文展開。</p>
 </blockquote>
