@@ -19,18 +19,15 @@ _repo_root = Path(__file__).resolve().parent.parent
 if str(_repo_root) not in sys.path:
     sys.path.insert(0, str(_repo_root))
 
-from scripts.canonical_block import (
-    CanonicalBlockError,
-    determine_archive_filename,
-    extract_latest_complete_report_block,
-    parse_and_validate_canonical_block,
+from scripts.report_ingestion import (
+    IngestionResult,
+    IngestionStatus,
+    ingest_report_content,
+    ingest_report_file,
 )
-from scripts.markdown_renderer import render_markdown_to_html
 from scripts.report_runs import (
     RUNS_STATE_PATH,
-    is_run_id_processed,
     load_report_runs,
-    record_report_run,
 )
 
 
@@ -402,7 +399,6 @@ def sync_native_google_docs(
     repo_root = Path(repo_root)
     sources = doc_sources or resolve_doc_sources(os.environ)
     runs_path = runs_file or (repo_root / RUNS_STATE_PATH)
-    runs_data = load_report_runs(runs_path)
 
     archived_count = 0
     skipped_count = 0
@@ -426,171 +422,51 @@ def sync_native_google_docs(
             print(f"SOURCE_DOC_PERMISSION_DENIED: {category} ({doc_id}): {exc}", file=sys.stderr)
             continue
 
-        # 2. Extract latest complete block
-        block = extract_latest_complete_report_block(text)
-        if not block:
-            print(f"NO_CANONICAL_BLOCK_YET: {category}")
-            continue
+        result = ingest_report_content(
+            content=text,
+            category=category,
+            repo_root=repo_root,
+            source_document_id=doc_id,
+            expected_type=expected_type,
+            runs_path=runs_path,
+            allow_fallback=False,
+        )
 
-        # 3. Parse and validate
-        try:
-            metadata, body = parse_and_validate_canonical_block(block, expected_type)
-            print(f"CANONICAL_BLOCK_FOUND: {metadata.get('run_id')} ({category})")
-        except CanonicalBlockError as exc:
-            print(f"CANONICAL_BLOCK_INVALID: {category}: {exc}", file=sys.stderr)
-            continue
-
-        run_id = metadata["run_id"]
-
-        # 4. Check idempotency
-        if is_run_id_processed(runs_data, run_id):
-            print(f"RUN_ID_PREEXISTING: {run_id}")
+        if result.status == IngestionStatus.ARCHIVED_CANONICAL:
+            print(f"CANONICAL_BLOCK_FOUND: {result.run_id} ({category})")
+            print(f"MARKDOWN_ARCHIVED: {result.markdown_rel} ({result.markdown_sha256[:8]})")
+            print(f"MARKDOWN_RENDERED: {result.html_rel} ({result.html_sha256[:8]})")
+            archived_count += 1
+        elif result.status == IngestionStatus.SKIPPED_EXISTING:
+            print(f"CANONICAL_BLOCK_FOUND: {result.run_id} ({category})")
+            print(f"RUN_ID_PREEXISTING: {result.run_id}")
             skipped_count += 1
-            continue
-
-        # 5. Determine filenames and paths
-        category_dir = repo_root / "reports" / category
-        category_dir.mkdir(parents=True, exist_ok=True)
-        existing_filenames = {p.name for p in category_dir.iterdir() if p.is_file()}
-
-        md_filename = determine_archive_filename(metadata, existing_filenames)
-        html_filename = Path(md_filename).with_suffix(".html").name
-
-        md_rel = PurePosixPath("reports", category, md_filename)
-        html_rel = PurePosixPath("reports", category, html_filename)
-
-        md_full = repo_root.joinpath(*md_rel.parts)
-        html_full = repo_root.joinpath(*html_rel.parts)
-
-        # 6. Archive canonical Markdown snapshot
-        md_bytes = (f"<<<REPORT_BEGIN>>>\n{block}\n<<<REPORT_END>>>\n").encode("utf-8")
-        _atomic_write_if_changed(md_full, md_bytes)
-        md_sha256 = _hash_bytes(md_bytes, "sha256")
-        print(f"MARKDOWN_ARCHIVED: {md_rel.as_posix()} ({md_sha256[:8]})")
-
-        # 7. Render HTML
-        html_content = render_markdown_to_html(body, metadata)
-        html_bytes = html_content.encode("utf-8")
-        _atomic_write_if_changed(html_full, html_bytes)
-        html_sha256 = _hash_bytes(html_bytes, "sha256")
-        print(f"MARKDOWN_RENDERED: {html_rel.as_posix()} ({html_sha256[:8]})")
-
-        def _iso_str(val):
-            if val is None:
-                return None
-            if hasattr(val, "isoformat"):
-                return val.isoformat()
-            return str(val)
-
-        # 8. Update report runs manifest
-        run_record = {
-            "run_id": run_id,
-            "report_type": metadata["report_type"],
-            "title": metadata["title"],
-            "generated_at_taipei": _iso_str(metadata.get("generated_at_taipei")),
-            "coverage_start_taipei": _iso_str(metadata.get("coverage_start_taipei")),
-            "coverage_end_taipei": _iso_str(metadata.get("coverage_end_taipei")),
-            "risk_light": metadata.get("risk_light"),
-            "topic": metadata.get("topic"),
-            "slug": metadata.get("slug"),
-            "source_document_id": doc_id,
-            "markdown_path": md_rel.as_posix(),
-            "markdown_sha256": md_sha256,
-            "html_path": html_rel.as_posix(),
-            "html_sha256": html_sha256,
-        }
-        runs_data = record_report_run(runs_path, run_record)
-        archived_count += 1
+        elif result.status == IngestionStatus.NO_CANONICAL_BLOCK:
+            print(f"NO_CANONICAL_BLOCK_YET: {category}")
+        elif result.status == IngestionStatus.CANONICAL_BLOCK_INVALID:
+            print(f"CANONICAL_BLOCK_INVALID: {category}: {result.error}", file=sys.stderr)
+        else:
+            print(f"INGESTION_FAILED: {category} ({doc_id}): {result.error}", file=sys.stderr)
 
     return archived_count, skipped_count
 
 
 def render_markdown_file_to_html(md_path: Path, category: str, runs_path: Path) -> Path:
     """Render a downloaded .md / .txt file to companion .html with institutional styling."""
-    raw_text = md_path.read_text(encoding="utf-8", errors="replace")
-    block = extract_latest_complete_report_block(raw_text)
-    html_path = md_path.with_suffix(".html")
-
-    if block:
-        try:
-            expected_type = None
-            if category == "early-warning":
-                expected_type = "MACRO_TAIWAN_EARLY_WARNING"
-            elif category == "daily":
-                expected_type = "GLOBAL_DAILY_BRIEF"
-            elif category == "weekly":
-                expected_type = "WEEKLY_STRATEGY"
-            metadata, body = parse_and_validate_canonical_block(block, expected_type)
-            html_content = render_markdown_to_html(body, metadata)
-            html_bytes = html_content.encode("utf-8")
-            _atomic_write_if_changed(html_path, html_bytes)
-            
-            repo_root_dir = runs_path.parent.parent if runs_path.parent.name == "data" else runs_path.parent
-            run_rec = {
-                "run_id": metadata["run_id"],
-                "report_type": metadata["report_type"],
-                "title": metadata["title"],
-                "generated_at_taipei": str(metadata.get("generated_at_taipei") or ""),
-                "coverage_start_taipei": str(metadata.get("coverage_start_taipei") or ""),
-                "coverage_end_taipei": str(metadata.get("coverage_end_taipei") or ""),
-                "risk_light": metadata.get("risk_light"),
-                "topic": metadata.get("topic"),
-                "slug": metadata.get("slug"),
-                "source_document_id": None,
-                "markdown_path": md_path.relative_to(repo_root_dir).as_posix(),
-                "markdown_sha256": _hash_file(md_path, "sha256"),
-                "html_path": html_path.relative_to(repo_root_dir).as_posix(),
-                "html_sha256": _hash_bytes(html_bytes, "sha256"),
-            }
-            record_report_run(runs_path, run_rec)
-            print(f"MARKDOWN_RENDERED: {html_path.name}")
-            return html_path
-        except CanonicalBlockError as exc:
-            print(f"CANONICAL_BLOCK_INVALID in {md_path.name}: {exc}", file=sys.stderr)
-
-    # Fallback for plain markdown
-    title = None
-    fm_match = re.search(r"^\s*title:\s*(.+)$", raw_text, re.MULTILINE)
-    if fm_match:
-        title = fm_match.group(1).strip().strip("'\"")
-    if not title:
-        h1_match = re.search(r"^\s*\\?#\s+(.+)$", raw_text, flags=re.MULTILINE)
-        if h1_match:
-            title = h1_match.group(1).strip()
-    if not title:
-        title = _display_title(md_path.name)
-
-    report_type = "GLOBAL_DAILY_BRIEF" if category == "daily" else "WEEKLY_STRATEGY" if category == "weekly" else "MACRO_TAIWAN_EARLY_WARNING"
-    run_id = f"{category.upper()}-{md_path.stem}"
-    meta = {
-        "title": title,
-        "report_type": report_type,
-        "run_id": run_id,
-    }
-    html_content = render_markdown_to_html(raw_text, meta)
-    html_bytes = html_content.encode("utf-8")
-    _atomic_write_if_changed(html_path, html_bytes)
-
     repo_root_dir = runs_path.parent.parent if runs_path.parent.name == "data" else runs_path.parent
-    run_rec = {
-        "run_id": run_id,
-        "report_type": report_type,
-        "title": title,
-        "generated_at_taipei": None,
-        "coverage_start_taipei": None,
-        "coverage_end_taipei": None,
-        "risk_light": None,
-        "topic": None,
-        "slug": None,
-        "source_document_id": None,
-        "markdown_path": md_path.relative_to(repo_root_dir).as_posix(),
-        "markdown_sha256": _hash_file(md_path, "sha256"),
-        "html_path": html_path.relative_to(repo_root_dir).as_posix(),
-        "html_sha256": _hash_bytes(html_bytes, "sha256"),
-    }
-    record_report_run(runs_path, run_rec)
-    print(f"MARKDOWN_RENDERED_FALLBACK: {html_path.name}")
-    return html_path
+    result = ingest_report_file(
+        file_path=md_path,
+        category=category,
+        repo_root=repo_root_dir,
+        runs_path=runs_path,
+        allow_fallback=True,
+    )
+    if result.status == IngestionStatus.ARCHIVED_CANONICAL:
+        print(f"MARKDOWN_RENDERED: {result.html_path.name}")
+    elif result.status == IngestionStatus.ARCHIVED_FALLBACK:
+        print(f"MARKDOWN_RENDERED_FALLBACK: {result.html_path.name}")
+    return result.html_path or md_path.with_suffix(".html")
+
 
 
 def sync_reports(
