@@ -29,6 +29,15 @@ from scripts.report_runs import (
     RUNS_STATE_PATH,
     load_report_runs,
 )
+from scripts.report_catalog import (
+    ReportCatalog,
+    date_from_modified_time as _date_from_modified_time,
+    date_from_name as _date_from_name,
+    display_title as _display_title,
+    extract_report_title,
+    is_generic_title as _is_generic_title,
+    is_safe_parent_and_path as _is_safe_parent_and_path,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -74,131 +83,6 @@ class SyncResult:
     updated: int
     unchanged: int
     ignored: int
-
-
-def _is_safe_parent_and_path(repo_root, category, local_path):
-    repo_root = Path(repo_root).resolve()
-    category_dir = repo_root / "reports" / category
-    category_dir.mkdir(parents=True, exist_ok=True)
-    category_root = category_dir.resolve()
-    try:
-        category_root.relative_to(repo_root)
-    except (ValueError, RuntimeError):
-        return False
-    resolved_path = local_path.resolve()
-    if not local_path.exists():
-        resolved_parent = local_path.parent.resolve()
-        try:
-            resolved_parent.relative_to(category_root)
-        except (ValueError, RuntimeError):
-            return False
-    else:
-        try:
-            resolved_path.relative_to(category_root)
-        except (ValueError, RuntimeError):
-            return False
-    current = local_path.absolute()
-    while True:
-        if current.resolve() == repo_root:
-            break
-        if current.is_symlink():
-            return False
-        parent = current.parent
-        if parent == current:
-            break
-        current = parent
-    return True
-
-
-def _valid_date(value):
-    try:
-        date.fromisoformat(value)
-    except (TypeError, ValueError):
-        return None
-    return value
-
-
-def _date_from_name(name):
-    match = DATE_PATTERN.search(name)
-    if not match:
-        return None
-    return _valid_date("-".join(match.groups()))
-
-
-def _date_from_modified_time(modified_time):
-    if not modified_time or len(modified_time) < 10:
-        return None
-    return _valid_date(modified_time[:10])
-
-
-def _display_title(name):
-    stem = Path(name).stem
-    stem = DATE_PATTERN.sub(" ", stem)
-    title = re.sub(r"[_-]+", " ", stem)
-    title = " ".join(title.split()) or "Untitled report"
-    if title == "Global Macro Morning" or re.match(r"^Global Daily Brief(?:\s+\d{4})?$", title):
-        return "Global Daily Brief"
-    return title
-
-
-def _is_generic_title(title: Optional[str]) -> bool:
-    if not title:
-        return True
-    t = title.strip().lower()
-    return t in {
-        "weekly strategy",
-        "global daily brief",
-        "global macro morning",
-        "global macro early warning",
-        "untitled report",
-    }
-
-
-def extract_report_title(path: Path) -> Optional[str]:
-    """Extract a descriptive title from companion markdown or HTML content."""
-    md_path = path.with_suffix(".md")
-    if not md_path.is_file():
-        txt_path = path.with_suffix(".txt")
-        if txt_path.is_file():
-            md_path = txt_path
-
-    if md_path.is_file():
-        try:
-            raw_md = md_path.read_text(encoding="utf-8", errors="replace")
-            fm_match = re.search(r"^\s*title:\s*(.+)$", raw_md, re.MULTILINE)
-            if fm_match:
-                val = fm_match.group(1).strip().strip("'\"")
-                if val:
-                    return val
-            h1_match = re.search(r"^\s*\\?#\s+(.+)$", raw_md, re.MULTILINE)
-            if h1_match:
-                val = h1_match.group(1).strip()
-                if val:
-                    return val
-        except Exception:
-            pass
-
-    try:
-        raw_html = path.read_text(encoding="utf-8", errors="replace")
-    except Exception:
-        return None
-
-    m_h1 = re.search(r"<h1[^>]*>(.*?)</h1>", raw_html, re.IGNORECASE | re.DOTALL)
-    if m_h1:
-        clean = html.unescape(re.sub(r"<[^>]+>", "", m_h1.group(1))).strip()
-        clean = " ".join(clean.split())
-        if clean:
-            return clean
-
-    m_title = re.search(r"<title[^>]*>(.*?)</title>", raw_html, re.IGNORECASE | re.DOTALL)
-    if m_title:
-        clean = html.unescape(re.sub(r"<[^>]+>", "", m_title.group(1))).strip()
-        clean = re.sub(r"\s*[·•|-]\s*N/A\s*$", "", clean, flags=re.IGNORECASE)
-        clean = " ".join(clean.split())
-        if clean:
-            return clean
-
-    return None
 
 
 ALLOWED_EXTENSIONS = (".html", ".md", ".txt")
@@ -598,8 +482,8 @@ def sync_reports(
     # 3. Build & update reports.json index
     runs_file = repo_root / RUNS_STATE_PATH
     runs_data = load_report_runs(runs_file)
-    index = build_reports_index(repo_root, next_files, runs_data=runs_data)
-    _atomic_write_if_changed(repo_root / INDEX_PATH, _json_bytes(index))
+    catalog = ReportCatalog.build_from_scan(repo_root, next_files, runs_data=runs_data)
+    catalog.save(repo_root)
     print("REPORT_INDEX_UPDATED")
     print("BUILD_SUCCEEDED")
 
@@ -607,88 +491,7 @@ def sync_reports(
 
 
 def build_reports_index(repo_root, state_files, runs_data=None):
-    repo_root = Path(repo_root)
-    reports = []
-    
-    # Map html_path to run_record if available
-    runs_by_html = {}
-    if runs_data and isinstance(runs_data.get("runs"), dict):
-        for run_rec in runs_data["runs"].values():
-            html_p = run_rec.get("html_path")
-            if html_p:
-                runs_by_html[html_p] = run_rec
-
-    for category in CATEGORIES:
-        category_root = repo_root / "reports" / category
-        if not category_root.exists():
-            continue
-        for path in sorted(category_root.rglob("*")):
-            if not path.is_file() or path.is_symlink() or not path.name.lower().endswith(".html"):
-                continue
-            if not _is_safe_parent_and_path(repo_root, category, path):
-                continue
-            relative = path.relative_to(repo_root).as_posix()
-            metadata = state_files.get(relative, {})
-            classification = classify_drive_file(
-                category, path.name, metadata.get("modified_time")
-            )
-            file_sha256 = _hash_file(path, "sha256")
-
-            # Check if this report was generated from a canonical Markdown run
-            extracted_title = extract_report_title(path)
-            run_rec = runs_by_html.get(relative)
-            if run_rec:
-                date_val = str(classification["date"] or str(run_rec.get("generated_at_taipei", ""))[:10])
-                resolved_title = (
-                    run_rec.get("title")
-                    if (run_rec.get("title") and not _is_generic_title(run_rec.get("title")))
-                    else (extracted_title or run_rec.get("title") or classification["title"])
-                )
-                entry = {
-                    "category": category,
-                    "date": date_val,
-                    "file": relative,
-                    "modified_time": str(metadata.get("modified_time") or run_rec.get("generated_at_taipei") or ""),
-                    "sha256": file_sha256,
-                    "title": resolved_title,
-                    "run_id": run_rec.get("run_id"),
-                    "report_type": run_rec.get("report_type"),
-                    "source_kind": "google_doc_markdown",
-                    "source_document_id": run_rec.get("source_document_id"),
-                    "generated_at_taipei": str(run_rec.get("generated_at_taipei") or ""),
-                    "coverage_start_taipei": str(run_rec.get("coverage_start_taipei") or ""),
-                    "coverage_end_taipei": str(run_rec.get("coverage_end_taipei") or ""),
-                    "risk_light": run_rec.get("risk_light"),
-                    "topic": run_rec.get("topic"),
-                    "slug": run_rec.get("slug"),
-                    "markdown_path": run_rec.get("markdown_path"),
-                    "markdown_sha256": run_rec.get("markdown_sha256"),
-                    "html_path": relative,
-                }
-            else:
-                # Legacy HTML report
-                entry = {
-                    "category": category,
-                    "date": classification["date"],
-                    "file": relative,
-                    "modified_time": str(metadata.get("modified_time") or "") if metadata.get("modified_time") else None,
-                    "sha256": file_sha256,
-                    "title": extracted_title or classification["title"],
-                }
-                # Log preservation of legacy HTML
-                # print(f"LEGACY_HTML_PRESERVED: {relative}")
-
-            reports.append(entry)
-
-    reports.sort(key=lambda item: (item["title"].casefold(), item["file"]))
-    reports.sort(key=lambda item: CATEGORIES.index(item["category"]))
-    reports.sort(key=lambda item: str(item.get("modified_time") or ""), reverse=True)
-    reports.sort(key=lambda item: str(item.get("date") or ""), reverse=True)
-    latest = {category: None for category in CATEGORIES}
-    for report in reports:
-        if latest[report["category"]] is None:
-            latest[report["category"]] = report
-    return {"schema_version": 1, "reports": reports, "latest": latest}
+    return ReportCatalog.build_from_scan(repo_root, state_files, runs_data=runs_data).to_dict()
 
 
 def create_drive_service():

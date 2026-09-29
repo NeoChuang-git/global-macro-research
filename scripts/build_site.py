@@ -6,11 +6,15 @@ import argparse
 import hashlib
 import json
 import shutil
+import sys
 import tempfile
 from pathlib import Path, PurePosixPath
 
-
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from scripts.report_catalog import CATEGORIES, CatalogError, ReportCatalog
 STATIC_FILES = (
     "index.html",
     "archive.html",
@@ -82,27 +86,18 @@ def build_site(repo_root, output):
     if output.parent != repo_root or output.name != "_site":
         raise BuildError("output must be the repository's _site directory")
 
-    index_path = repo_root / "data" / "reports.json"
     try:
-        index = json.loads(index_path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError) as exc:
+        catalog = ReportCatalog.load_from_disk(repo_root)
+    except CatalogError as exc:
         raise BuildError(f"invalid reports index: {exc}") from exc
-    if index.get("schema_version") != 1 or not isinstance(index.get("reports"), list):
-        raise BuildError("unsupported reports index schema")
-    latest = index.get("latest")
-    categories = {"early-warning", "daily", "weekly"}
-    if not isinstance(latest, dict) or set(latest) != categories:
-        raise BuildError("invalid latest-report index")
 
     validated_reports = []
     indexed_files = set()
-    for report in index["reports"]:
-        if not isinstance(report, dict):
-            raise BuildError("invalid non-object report entry")
-        relative, source = _validated_report_path(repo_root, report.get("file"))
+    for entry in catalog.reports:
+        relative, source = _validated_report_path(repo_root, entry.file)
         if relative.as_posix() in indexed_files:
             raise BuildError(f"duplicate indexed report: {relative.as_posix()}")
-        expected_sha256 = report.get("sha256")
+        expected_sha256 = entry.sha256
         if (
             not isinstance(expected_sha256, str)
             or len(expected_sha256) != 64
@@ -114,12 +109,13 @@ def build_site(repo_root, output):
         indexed_files.add(relative.as_posix())
         validated_reports.append((relative, source))
 
-    for category, report in latest.items():
-        if report is None:
+    for category in CATEGORIES:
+        latest_entry = catalog.get_latest(category)
+        if latest_entry is None:
             continue
-        if not isinstance(report, dict) or report.get("category") != category:
+        if latest_entry.category != category:
             raise BuildError(f"invalid latest report for {category}")
-        if report.get("file") not in indexed_files:
+        if latest_entry.file not in indexed_files:
             raise BuildError(f"latest report is not indexed for {category}")
 
     temporary = Path(tempfile.mkdtemp(prefix=".site-build-", dir=repo_root))

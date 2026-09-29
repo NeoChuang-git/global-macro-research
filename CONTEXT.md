@@ -23,3 +23,12 @@ _Avoid_: Log entry, sync record
 **Report Fallback**:
 The secondary parsing and rendering mechanism applied when a document lacks canonical delimiters but represents valid research content.
 _Avoid_: Error handler, default template
+
+**Report Catalog**:
+The centralized index and query module that discovers, classifies, and exposes metadata for all published reports across categories.
+_Avoid_: Report list, file scanner
+
+**Catalog Entry**:
+The canonical, structured metadata record representing a single published macro report in the catalog.
+_Avoid_: Index dict, report row
+
