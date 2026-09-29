@@ -261,6 +261,24 @@
       "sha256": "06f228c9f95428152f0c1ea61d3be9877ede91909b7c9a4c37add390a77e58f2",
       "size": 13707
     },
+    "reports/daily/Global_Daily_Brief_2026-09-28.md": {
+      "category": "daily",
+      "drive_file_id": "1ePbAmE3CYYGhGwK8Hbu0qUL-SzgETgCa",
+      "md5_checksum": "daa1e26ac5c8409fa3ce6a8149bf2255",
+      "modified_time": "2026-09-29T00:28:18.467Z",
+      "name": "Global_Daily_Brief_2026-09-28.md",
+      "sha256": "0e72ffe96788abe347843260607bcb8903782876d6a7410a8c41b5dbea7291fd",
+      "size": 10759
+    },
+    "reports/daily/Global_Daily_Brief_2026-09-29.md": {
+      "category": "daily",
+      "drive_file_id": "1TQZAAg_68uIXkJ3Ik9YoTGljw1CD9jaM",
+      "md5_checksum": "7e0d02042ab5930eaca274a2832a64ad",
+      "modified_time": "2026-09-29T00:24:46.791Z",
+      "name": "Global_Daily_Brief_2026-09-29.md",
+      "sha256": "73ef48f9690fc1ae9132afceea96601bed5310d7e45283dc1e8d7f55c1737b82",
+      "size": 9643
+    },
     "reports/daily/Global_Macro_Morning_2026-08-25.html": {
       "category": "daily",
       "drive_file_id": "10dgWjdJhW-HwSZRp8tFbQ_wSDiQLIiWu",
