@@ -7,7 +7,7 @@
     <meta name="description" content="Global Macro Signal Report 最新報告">
     <title>Global Macro Signal Report</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/app.css?v=20260903_06">
+    <link rel="stylesheet" href="assets/css/app.css?v=20260930_03">
   </head>
   <body>
     <header class="site-header">
@@ -23,20 +23,25 @@
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-badge"><span class="pulse-dot"></span>Evidence-first macro monitoring</div>
-        <h1 id="hero-title">每天掌握三個時間尺度的宏觀訊號</h1>
-        <p>Early Warning 追蹤突發風險，Daily Brief 建立每日全景視角，Weekly 整合中期趨勢。</p>
-        <div class="hero-actions">
-          <a id="hero-latest-btn" class="button button-hero" href="report.html?file=reports%2Fearly-warning%2FGlobal_Macro_Early_Warning_2026-08-28_Japan_BOJ.html">翻閱最新報告 →</a>
+        <div class="hero-content">
+          <div class="hero-meta-bar">
+            <div class="hero-badge"><span class="pulse-dot"></span>Evidence-first macro monitoring</div>
+            <div id="hero-risk-pill" class="hero-risk-pill risk-orange">
+              <span class="risk-dot"></span>
+              <span>市場總體評級：<strong id="hero-risk-text">警戒 (Elevated)</strong></span>
+            </div>
+          </div>
+          <h1 id="hero-title">全球宏觀風險監測雷達</h1>
+          <p>結合 Early Warning 突發預警、Daily 全景視角與 Weekly 中期趨勢，穿透市場雜訊。</p>
+          <div class="hero-actions">
+            <a id="hero-latest-btn" class="button button-hero" href="report.html?file=reports%2Fearly-warning%2FGlobal_Macro_Early_Warning_2026-08-28_Japan_BOJ.html">翻閱最新報告 →</a>
+          </div>
         </div>
       </section>
 
       <section id="latest-reports" class="section" aria-labelledby="latest-title">
         <div class="section-heading">
-          <div>
-            <span class="section-tag">Latest Intelligence</span>
-            <h2 id="latest-title">三類最新報告</h2>
-          </div>
+          <h2 id="latest-title" class="section-tag">Latest Intelligence</h2>
           <p id="latest-status" class="status" role="status">正在載入索引…</p>
         </div>
         <div id="latest-grid" class="report-grid" aria-live="polite"></div>
@@ -53,6 +58,6 @@
       </div>
     </footer>
 
-    <script src="assets/js/app.js?v=20260903_06" defer></script>
+    <script src="assets/js/app.js?v=20260930_03" defer></script>
   </body>
 </html>
