@@ -38,6 +38,16 @@ from scripts.report_catalog import (
     is_generic_title as _is_generic_title,
     is_safe_parent_and_path as _is_safe_parent_and_path,
 )
+from scripts.storage_adapter import (
+    GoogleDriveStorageAdapter,
+    MemoryStorageAdapter,
+    RemoteFile,
+    StorageAdapter,
+    StorageError,
+    StorageNotFoundError,
+    StoragePermissionError,
+    create_storage_adapter,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -200,72 +210,68 @@ def _atomic_write_if_changed(path, content):
 
 
 def _list_folder_files(service, category, folder_id):
-    files = []
-    page_token = None
+    adapter = create_storage_adapter(service)
     try:
-        while True:
-            response = (
-                service.files()
-                .list(
-                    q=f"'{folder_id}' in parents and trashed = false",
-                    fields="nextPageToken,files(id,name,modifiedTime,md5Checksum,size)",
-                    orderBy="name",
-                    pageSize=1000,
-                    pageToken=page_token,
-                    supportsAllDrives=True,
-                    includeItemsFromAllDrives=True,
-                )
-                .execute()
-            )
-            files.extend(response.get("files", []))
-            page_token = response.get("nextPageToken")
-            if not page_token:
-                break
+        return adapter.list_folder_files(folder_id)
+    except StoragePermissionError as exc:
+        raise SyncError(f"Drive API list failed for {category}: {exc}") from exc
+    except StorageError as exc:
+        raise SyncError(f"Drive API list failed for {category}: {exc}") from exc
     except Exception as exc:
         raise SyncError(f"Drive API list failed for {category}: {exc}") from exc
-    return sorted(files, key=lambda item: (item.get("name", "").casefold(), item.get("id", "")))
 
 
 def _download_file(service, remote, category, max_report_bytes):
+    adapter = create_storage_adapter(service)
+    name = remote.name if hasattr(remote, "name") else remote.get("name")
+    size = remote.size if hasattr(remote, "size") else remote.get("size")
+    f_id = remote.id if hasattr(remote, "id") else remote.get("id")
+    md5_checksum = remote.md5_checksum if hasattr(remote, "md5_checksum") else remote.get("md5Checksum")
+
     try:
-        declared_size = int(remote.get("size", 0))
+        declared_size = int(size or 0)
     except (TypeError, ValueError) as exc:
-        raise SyncError(f"invalid Drive size for {category}/{remote.get('name')}") from exc
+        raise SyncError(f"invalid Drive size for {category}/{name}") from exc
     if declared_size < 0:
-        raise SyncError(f"invalid Drive size for {category}/{remote.get('name')}")
+        raise SyncError(f"invalid Drive size for {category}/{name}")
     if declared_size > max_report_bytes:
         raise SyncError(
-            f"report exceeds {max_report_bytes} bytes: {category}/{remote.get('name')}"
+            f"report exceeds {max_report_bytes} bytes: {category}/{name}"
         )
     try:
-        content = service.files().get_media(
-            fileId=remote["id"], supportsAllDrives=True
-        ).execute()
+        content = adapter.read_file_bytes(f_id)
+    except StoragePermissionError as exc:
+        raise SyncError(f"Drive API download failed for {category}/{name}: {exc}") from exc
+    except StorageError as exc:
+        raise SyncError(f"Drive API download failed for {category}/{name}: {exc}") from exc
     except Exception as exc:
-        raise SyncError(
-            f"Drive API download failed for {category}/{remote.get('name')}: {exc}"
-        ) from exc
+        raise SyncError(f"Drive API download failed for {category}/{name}: {exc}") from exc
+
     if not isinstance(content, bytes):
-        raise SyncError(f"Drive returned non-binary content for {category}/{remote.get('name')}")
+        raise SyncError(f"Drive returned non-binary content for {category}/{name}")
     if len(content) > max_report_bytes:
         raise SyncError(
-            f"downloaded report exceeds {max_report_bytes} bytes: {category}/{remote.get('name')}"
+            f"downloaded report exceeds {max_report_bytes} bytes: {category}/{name}"
         )
-    expected_md5 = remote.get("md5Checksum")
-    if expected_md5 and _hash_bytes(content, "md5") != expected_md5:
-        raise SyncError(f"checksum mismatch for {category}/{remote.get('name')}")
+    if md5_checksum and _hash_bytes(content, "md5") != md5_checksum:
+        raise SyncError(f"checksum mismatch for {category}/{name}")
     return content
 
 
 def _state_entry(remote, relative_path, content_sha256):
+    f_id = remote.id if hasattr(remote, "id") else remote["id"]
+    md5_checksum = remote.md5_checksum if hasattr(remote, "md5_checksum") else remote.get("md5Checksum")
+    modified_time = remote.modified_time if hasattr(remote, "modified_time") else remote.get("modifiedTime")
+    name = remote.name if hasattr(remote, "name") else remote["name"]
+    size = remote.size if hasattr(remote, "size") else int(remote.get("size", 0))
     return {
         "category": relative_path.parts[1],
-        "drive_file_id": remote["id"],
-        "md5_checksum": remote.get("md5Checksum"),
-        "modified_time": remote.get("modifiedTime"),
-        "name": remote["name"],
+        "drive_file_id": f_id,
+        "md5_checksum": md5_checksum,
+        "modified_time": modified_time,
+        "name": name,
         "sha256": content_sha256,
-        "size": int(remote.get("size", 0)),
+        "size": int(size),
     }
 
 
@@ -281,6 +287,7 @@ def sync_native_google_docs(
     Returns (archived_count, skipped_count).
     """
     repo_root = Path(repo_root)
+    adapter = create_storage_adapter(service)
     sources = doc_sources or resolve_doc_sources(os.environ)
     runs_path = runs_file or (repo_root / RUNS_STATE_PATH)
 
@@ -292,15 +299,9 @@ def sync_native_google_docs(
         doc_id = source_info["document_id"]
         expected_type = source_info["report_type"]
 
-        # 1. Fetch text from Google Doc via export_media
+        # 1. Fetch text from Google Doc via adapter
         try:
-            raw_content = service.files().export_media(
-                fileId=doc_id, mimeType="text/plain"
-            ).execute()
-            if isinstance(raw_content, bytes):
-                text = raw_content.decode("utf-8", errors="replace")
-            else:
-                text = str(raw_content)
+            text = adapter.export_doc_text(doc_id=doc_id, mime_type="text/plain")
             print(f"SOURCE_DOC_FETCHED: {category} ({doc_id})")
         except Exception as exc:
             print(f"SOURCE_DOC_PERMISSION_DENIED: {category} ({doc_id}): {exc}", file=sys.stderr)
@@ -365,6 +366,7 @@ def sync_reports(
     enable_native_docs=True,
 ):
     repo_root = Path(repo_root)
+    adapter = create_storage_adapter(service)
 
     state_file = repo_root / STATE_PATH
     state = _load_json(state_file, {"schema_version": 1, "files": {}})
@@ -388,28 +390,33 @@ def sync_reports(
 
         for category in CATEGORIES:
             category_remotes = {}
-            for remote in _list_folder_files(service, category, folder_ids[category]):
-                if not isinstance(remote.get("id"), str) or not remote["id"]:
+            for remote in _list_folder_files(adapter, category, folder_ids[category]):
+                f_id = remote.id if hasattr(remote, "id") else remote.get("id")
+                name = remote.name if hasattr(remote, "name") else remote.get("name")
+                mod_time = remote.modified_time if hasattr(remote, "modified_time") else remote.get("modifiedTime")
+                if not isinstance(f_id, str) or not f_id:
                     raise SyncError(f"Drive file is missing an ID in {category}")
-                name = remote.get("name")
-                classification = classify_drive_file(category, name, remote.get("modifiedTime"))
+                classification = classify_drive_file(category, name, mod_time)
                 if classification is None:
                     ignored += 1
                     continue
                 folded = name.casefold()
                 if folded in category_remotes:
                     prev_remote = category_remotes[folded]
-                    prev_time = prev_remote.get("modifiedTime") or ""
-                    curr_time = remote.get("modifiedTime") or ""
+                    prev_time = prev_remote.modified_time if hasattr(prev_remote, "modified_time") else (prev_remote.get("modifiedTime") or "")
+                    curr_time = mod_time or ""
+                    prev_id = prev_remote.id if hasattr(prev_remote, "id") else prev_remote.get("id", "")
                     if curr_time > prev_time or (
-                        curr_time == prev_time and remote.get("id", "") > prev_remote.get("id", "")
+                        curr_time == prev_time and f_id > prev_id
                     ):
                         category_remotes[folded] = remote
                 else:
                     category_remotes[folded] = remote
 
             for remote in category_remotes.values():
-                name = remote.get("name")
+                name = remote.name if hasattr(remote, "name") else remote.get("name")
+                size = remote.size if hasattr(remote, "size") else remote.get("size", 0)
+                md5_chk = remote.md5_checksum if hasattr(remote, "md5_checksum") else remote.get("md5Checksum")
                 total_remote_files += 1
                 if total_remote_files > max_batch_files:
                     raise SyncError(
@@ -417,7 +424,7 @@ def sync_reports(
                     )
 
                 try:
-                    declared_size = int(remote.get("size", 0))
+                    declared_size = int(size)
                 except (TypeError, ValueError):
                     declared_size = 0
                 total_remote_bytes += max(0, declared_size)
@@ -434,7 +441,7 @@ def sync_reports(
                     raise SyncError(f"unsafe report path or symlink ancestor: {relative_text}")
 
                 previous = next_files.get(relative_text, {})
-                remote_md5 = remote.get("md5Checksum")
+                remote_md5 = md5_chk
                 local_matches = False
                 if local_path.is_file() and not local_path.is_symlink():
                     if remote_md5:
@@ -446,7 +453,7 @@ def sync_reports(
                     content_sha256 = _hash_file(local_path, "sha256")
                     unchanged += 1
                 else:
-                    content = _download_file(service, remote, category, max_report_bytes)
+                    content = _download_file(adapter, remote, category, max_report_bytes)
                     content_sha256 = _hash_bytes(content, "sha256")
                     if local_path.is_file() and _hash_file(local_path, "sha256") == content_sha256:
                         unchanged += 1
@@ -474,7 +481,7 @@ def sync_reports(
     # 2. Sync Native Google Docs Markdown blocks
     if enable_native_docs:
         doc_updated, doc_skipped = sync_native_google_docs(
-            service=service, repo_root=repo_root, doc_sources=doc_sources
+            service=adapter, repo_root=repo_root, doc_sources=doc_sources
         )
         updated += doc_updated
         unchanged += doc_skipped

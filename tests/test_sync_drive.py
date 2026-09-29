@@ -15,6 +15,7 @@ from scripts.sync_drive import (
     sync_native_google_docs,
     sync_reports,
 )
+from scripts.storage_adapter import MemoryStorageAdapter, RemoteFile
 
 
 def md5(content):
@@ -401,6 +402,37 @@ class SyncDriveTests(unittest.TestCase):
         # Ensure no write operations (create/update) were invoked on Drive API
         self.assertEqual(service.files_api.write_calls, [])
 
+    def test_sync_reports_powered_by_memory_storage_adapter(self):
+        adapter = MemoryStorageAdapter()
+        # Add a daily report HTML
+        daily_content = b"<html><h1>Daily Global Brief</h1></html>"
+        f1 = RemoteFile(
+            id="mem-1",
+            name="Global_Daily_Brief_2026-09-02.html",
+            size=len(daily_content),
+            modified_time="2026-09-02T08:00:00Z",
+            md5_checksum=md5(daily_content),
+        )
+        adapter.add_file(self.folder_ids["daily"], f1, daily_content)
+
+        # Add a native Google Doc
+        doc_payload = make_sample_doc(run_id="GDB-20260903-0730", title="Daily Memory Brief")
+        adapter.add_doc("doc-daily-1", doc_payload)
+
+        # First sync
+        first = sync_reports(adapter, self.root, self.folder_ids, self.doc_sources, enable_native_docs=True)
+        self.assertEqual(first.updated, 2)  # 1 folder file + 1 canonical doc
+
+        # File exists on disk
+        self.assertTrue((self.root / "reports" / "daily" / "Global_Daily_Brief_2026-09-02.html").is_file())
+        self.assertTrue((self.root / "reports" / "daily" / "Global_Daily_Brief_2026-09-03.html").is_file())
+        self.assertTrue((self.root / "data" / "reports.json").is_file())
+
+        # Second sync is idempotent
+        second = sync_reports(adapter, self.root, self.folder_ids, self.doc_sources, enable_native_docs=True)
+        self.assertEqual(second.updated, 0)
+        self.assertEqual(second.unchanged, 2)
+
 
 class ReportsIndexTests(unittest.TestCase):
     def test_index_includes_preexisting_nested_html_and_ignores_non_html(self):
@@ -459,6 +491,7 @@ class ReportsIndexTests(unittest.TestCase):
             expected_title = "Weekly Global Macro & Investment Strategy｜AI獲利動能撐住風險資產"
             self.assertEqual(index["reports"][0]["title"], expected_title)
             self.assertEqual(index["latest"]["weekly"]["title"], expected_title)
+
 
 
 if __name__ == "__main__":
