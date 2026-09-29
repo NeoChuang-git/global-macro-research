@@ -120,6 +120,47 @@ class MarkdownRendererTests(unittest.TestCase):
         self.assertIn("Dell AI 伺服器需求推升訂單", cards[0].get_text())
         self.assertIn("Palo Alto 估值調整", cards[1].get_text())
 
+    def test_numbered_event_card_and_subheadings_detection(self):
+        md = """
+### 1. Microsoft：Copilot 進入長時運行 Agent｜86/100
+
+Microsoft 宣布 Copilot 產品。
+
+#### 市場解讀
+FACT 說明。
+
+#### 市場定價
+定價說明。
+
+#### 反向證據
+風險反證。
+
+#### 下一催化劑
+催化劑驗證。
+
+### 2. NVIDIA：Open Agent Safety Platform｜78/100
+
+NVIDIA 推出安全平台。
+"""
+        rendered = render_markdown_to_html(md, {"title": "Test", "run_id": "T-9B"})
+        soup = BeautifulSoup(rendered, "html.parser")
+        cards = soup.find_all("section", class_="analysis-card")
+        self.assertEqual(len(cards), 2)
+        
+        # Check title cleaned and score chip injected
+        card1 = cards[0]
+        h3 = card1.find("h3")
+        self.assertEqual(h3.get_text().strip(), "1. Microsoft：Copilot 進入長時運行 Agent")
+        score_chip = card1.find("span", class_="chip-score")
+        self.assertIsNotNone(score_chip)
+        self.assertEqual(score_chip.get_text().strip(), "86/100")
+        
+        # Check subheadings tagged with pills
+        self.assertTrue(card1.find("h4", class_="sub-market"))
+        self.assertTrue(card1.find("h4", class_="sub-pricing"))
+        self.assertTrue(card1.find("h4", class_="sub-counter"))
+        self.assertTrue(card1.find("h4", class_="sub-catalyst"))
+
     def test_signal_card_detection(self):
         md = """
 ### Signal #1｜AI 伺服器需求加速

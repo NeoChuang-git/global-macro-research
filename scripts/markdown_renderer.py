@@ -172,9 +172,9 @@ def _enhance_callouts(soup: BeautifulSoup) -> None:
 
 
 def _enhance_analysis_cards(soup: BeautifulSoup) -> None:
-    """Package H3 sections matching #<number>｜, Signal #<number>｜, Theme #<number>｜ into cards."""
+    """Package H3 sections matching numbered events (#1, 1., 1｜, Signal #1) into structured cards."""
     card_title_pattern = re.compile(
-        r"^\s*(?:#\d+\s*[｜\|]|Signal\s*#\d+\s*[｜\|]|Theme\s*#\d+\s*[｜\|]|Top\s*\d+\s*[｜\|]|#\d+\s*[-—–])",
+        r"^\s*(?:#?\d+\s*[\.、｜\|—–-]|Signal\s*#?\d+\s*[｜\|]|Theme\s*#?\d+\s*[｜\|]|Top\s*\d+\s*[｜\|])",
         re.IGNORECASE,
     )
 
@@ -204,6 +204,46 @@ def _enhance_analysis_cards(soup: BeautifulSoup) -> None:
 
         for node in nodes_to_move:
             card_section.append(node)
+
+        # Extract score from H3 title if present (e.g. ｜86/100, — 82/100)
+        score_match = re.search(
+            r"\s*[｜\|—–-]\s*(?:(?:Market Impact )?Score:\s*)?(\d+/(?:100|5))\s*$",
+            text,
+            re.IGNORECASE,
+        )
+        if score_match:
+            score_val = score_match.group(1)
+            clean_title = text[:score_match.start()].strip()
+            h3.string = clean_title
+
+            # Check if an existing chip paragraph already exists right after H3
+            has_score_sibling = False
+            next_sib = h3.find_next_sibling()
+            if next_sib and next_sib.name == "p":
+                p_text = next_sib.get_text()
+                if ("｜" in p_text or "|" in p_text) and any(k in p_text for k in ("100", "證據", "信心", "Grade")):
+                    has_score_sibling = True
+
+            if not has_score_sibling:
+                chips_div = soup.new_tag("div", attrs={"class": "meta-chips"})
+                chip_span = soup.new_tag("span", attrs={"class": "chip chip-score"})
+                chip_span.string = score_val
+                chips_div.append(chip_span)
+                h3.insert_after(chips_div)
+
+        # Enhance subheadings inside the analysis card
+        for h4 in card_section.find_all("h4"):
+            h4_text = h4.get_text()
+            h4_classes = ["subheading-pill"]
+            if any(k in h4_text for k in ("市場解讀", "解讀", "核心判斷")):
+                h4_classes.append("sub-market")
+            elif any(k in h4_text for k in ("市場定價", "定價", "預期差")):
+                h4_classes.append("sub-pricing")
+            elif any(k in h4_text for k in ("反向證據", "反向", "反證", "風險")):
+                h4_classes.append("sub-counter")
+            elif any(k in h4_text for k in ("下一催化劑", "催化劑", "驗證")):
+                h4_classes.append("sub-catalyst")
+            h4["class"] = h4_classes
 
 
 def _parse_chip_text_to_spans(soup: BeautifulSoup, raw_text: str) -> Optional[Tag]:

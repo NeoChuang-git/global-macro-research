@@ -297,18 +297,68 @@ li {
 
 /* Analysis Cards */
 .analysis-card {
-  margin: 2.2rem 0;
-  padding: 1.5rem 1.6rem;
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
   border: 1px solid var(--card-border);
   border-radius: 14px;
   background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .analysis-card > h3:first-child {
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
 }
 
 /* Meta Chips */
@@ -676,37 +726,37 @@ footer {
 </tr>
 </tbody>
 </table></div>
-<h3>1. Microsoft：Copilot 進入長時運行 Agent 與企業 Managed Runtime｜86/100</h3>
+<section class="analysis-card"><h3>1. Microsoft：Copilot 進入長時運行 Agent 與企業 Managed Runtime</h3><div class="meta-chips"><span class="chip chip-score">86/100</span></div>
 <p>Microsoft 9/28 宣布 Copilot Home、Code 與 Autopilot。Autopilot 可在使用者離線時持續推進工作；Code 使用與 GitHub Copilot 相同底層技術並在沙盒環境執行；Copilot Managed Runtime 提供企業租戶內由 IT 管理的程式碼執行基礎設施。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>FACT：</strong> Microsoft 把工作入口、程式建立、長時 Agent、runtime 與 FinOps 串成企業平台。<strong>INFERENCE：</strong> 若採用率提升，AI 支出將從單次 token 消耗延伸至長時運行、儲存、網路與治理，對 Azure 與資料中心利用率偏正向。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>美股已收盤；本輪不把單日股價變動機械歸因於產品發布。產品架構更重要的意義，是把企業 AI monetization 從席次授權擴展至 usage-based billing 與 agent runtime。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>企業若無法量化 Agent 生產力回報，FinOps 與治理成本可能壓低部署速度；多項功能仍處預覽或分階段開放，短期營收貢獻不能視為已實現。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>企業正式採用率、usage-based billing、Azure AI workload、Managed Runtime GA 時程與 10–11 月後企業案例。</p>
-<h3>2. NVIDIA：Open Agent Safety Platform 把治理推至硬體層｜78/100</h3>
+</section><section class="analysis-card"><h3>2. NVIDIA：Open Agent Safety Platform 把治理推至硬體層</h3><div class="meta-chips"><span class="chip chip-score">78/100</span></div>
 <p>NVIDIA 9/28 發布 Open Agent Safety Platform。OpenShell 提供安全 runtime 邊界；Sentry 透過 BlueField-4 DPU 進行 out-of-band 監控並可隔離越界 Agent。官方生態系包含 Microsoft、Anthropic、Dell、Cisco、CrowdStrike、Salesforce、SAP、ServiceNow 等。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p>安全若成為企業 Agent 上線必要條件，NVIDIA 的價值捕捉可由 GPU 延伸到 CPU、DPU、networking 與 policy enforcement；但目前尚無可量化新增營收。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>本事件與 NVIDIA 其他公司事件同日發生，無法可靠拆分單一公告的股價貢獻，因此不做偽精確歸因。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>OpenShell 可延伸至第三方 Arm/Intel 平台；企業也可能使用純軟體 sandbox，而不增加 BlueField attach rate。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>OpenShell/Sentry 商用部署、BlueField-4 attach rate、Vera 採用與 OEM/雲端商正式 SKU。</p>
-<h3>3. Meta：Enterprise Platform 成為新的主要業務支柱｜72/100</h3>
+</section><section class="analysis-card"><h3>3. Meta：Enterprise Platform 成為新的主要業務支柱</h3><div class="meta-chips"><span class="chip chip-score">72/100</span></div>
 <p>Meta 9/28 宣布 Meta Enterprise Platform，初期整合 Muse agent、Meta Business Agent、Muse API、Muse Code，並由前 MongoDB CEO Chirantan Desai 出任 Chief Enterprise Platform Officer。</p>
-<h4>市場解讀</h4>
+<h4 class="subheading-pill sub-market">市場解讀</h4>
 <p><strong>FACT：</strong> Meta 明確把企業 AI 定義為下一個主要業務支柱。<strong>MARKET EXPECTATION：</strong> Meta 可利用模型、Agent、基礎設施與既有商家關係切入企業軟體。<strong>INFERENCE：</strong> 缺乏價格、客戶與 ARR 前，不能把戰略宣布直接等同營收上修。</p>
-<h4>市場定價</h4>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
 <p>中期選擇權增加，但也提高與 Microsoft、Google、AWS、OpenAI、Anthropic 的競爭重疊；短期應以客戶與商業化證據驗證。</p>
-<h4>反向證據</h4>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
 <p>企業銷售、安全治理與額外算力可能增加成本；若收入轉換慢於投入，短期自由現金流可能承壓。</p>
-<h4>下一催化劑</h4>
+<h4 class="subheading-pill sub-catalyst">下一催化劑</h4>
 <p>首批企業客戶、定價、Muse API 使用量與下一次財報對 Enterprise Platform 的營收及資本支出（CapEx）說明。</p>
-<h2>重要個股事件掃描</h2>
+</section><h2>重要個股事件掃描</h2>
 <p>14 Stock Precheck 已完成研究階段檢查；正文只保留具有直接 material event 的 MSFT、NVDA、META。AAPL、GOOGL、AMZN、TSLA、AMD、TSM、AVGO、MU、ASML、DELL、SMCI 在本輪 coverage 未取得足以超越前三大 root events 的新一級證據，因此不硬創造排名事件。</p>
 <h2>其他重要市場事件</h2>
 <p>本輪未加入低於主要門檻、且缺乏官方＋獨立二次確認的事件，以避免同一 Agent/企業 AI root theme 被拆成多條灌榜。</p>
