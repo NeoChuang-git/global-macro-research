@@ -1,6 +1,78 @@
 {
-  "schema_version": 1,
+  "latest": {
+    "daily": {
+      "category": "daily",
+      "coverage_end_taipei": "2026-09-29T08:25:00+08:00",
+      "coverage_start_taipei": "2026-09-28T08:25:00+08:00",
+      "date": "2026-09-29",
+      "file": "reports/daily/Global_Daily_Brief_2026-09-29.html",
+      "generated_at_taipei": "2026-09-29T08:25:00+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-09-29.html",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-29.md",
+      "markdown_sha256": "73ef48f9690fc1ae9132afceea96601bed5310d7e45283dc1e8d7f55c1737b82",
+      "modified_time": "2026-09-29T08:25:00+08:00",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20260929-0825",
+      "sha256": "925d2b03da3ab02df38c3fdf179beabc0be5f30a57864cfa0f115870a8f0e10a",
+      "slug": "copilot-agent-runtime",
+      "source_document_id": null,
+      "source_kind": "google_doc_markdown",
+      "title": "Global Daily Brief｜Microsoft 把 Copilot 推向長時運行 Agent，企業 AI 競爭進入執行層",
+      "topic": null
+    },
+    "early-warning": {
+      "category": "early-warning",
+      "coverage_end_taipei": "2026-09-29T20:01:00+08:00",
+      "coverage_start_taipei": "2026-09-29T13:03:57+08:00",
+      "date": "2026-09-29",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_2001_rates-energy.html",
+      "generated_at_taipei": "2026-09-29T20:01:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_2001_rates-energy.html",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_2001_rates-energy.md",
+      "markdown_sha256": "56dfd8758d567ef7eea2c22c6a4b37d2c399459164c0e4747bf32549895b9a61",
+      "modified_time": "2026-09-29T20:01:00+08:00",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260929-2001-rates-energy",
+      "sha256": "5458c88003d1e5168a7b1779ca67d1aa1e9977a503013388b0ea6989548851f9",
+      "slug": "rates-energy",
+      "source_document_id": null,
+      "source_kind": "google_doc_markdown",
+      "title": "Global Macro Early Warning｜美債殖利率再創高、油價高檔共振，折現率衝擊擴散",
+      "topic": null
+    },
+    "weekly": {
+      "category": "weekly",
+      "date": "2026-09-27",
+      "file": "reports/weekly/Weekly_Strategy_2026-09-27.html",
+      "modified_time": null,
+      "sha256": "3610381dbba7db81e9b9a46ec2d045d1a65fd92557d7acd2608f39cd47f16731",
+      "title": "Weekly Global Macro & Investment Strategy｜AI獲利動能撐住風險資產，但5.2%美債殖利率把「折現率壓力」推成主導風險"
+    }
+  },
   "reports": [
+    {
+      "category": "early-warning",
+      "coverage_end_taipei": "2026-09-29T20:01:00+08:00",
+      "coverage_start_taipei": "2026-09-29T13:03:57+08:00",
+      "date": "2026-09-29",
+      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_2001_rates-energy.html",
+      "generated_at_taipei": "2026-09-29T20:01:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_2001_rates-energy.html",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_2001_rates-energy.md",
+      "markdown_sha256": "56dfd8758d567ef7eea2c22c6a4b37d2c399459164c0e4747bf32549895b9a61",
+      "modified_time": "2026-09-29T20:01:00+08:00",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260929-2001-rates-energy",
+      "sha256": "5458c88003d1e5168a7b1779ca67d1aa1e9977a503013388b0ea6989548851f9",
+      "slug": "rates-energy",
+      "source_document_id": null,
+      "source_kind": "google_doc_markdown",
+      "title": "Global Macro Early Warning｜美債殖利率再創高、油價高檔共振，折現率衝擊擴散",
+      "topic": null
+    },
     {
       "category": "daily",
       "coverage_end_taipei": "2026-09-29T08:25:00+08:00",
@@ -2327,56 +2399,5 @@
       "title": "台股現貨正式確認半導體去風險"
     }
   ],
-  "latest": {
-    "early-warning": {
-      "category": "early-warning",
-      "coverage_end_taipei": "2026-09-29 13:03:57+08:00",
-      "coverage_start_taipei": "2026-09-29 08:03:27+08:00",
-      "date": "2026-09-29",
-      "file": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_1303_global-rates-oil.html",
-      "generated_at_taipei": "2026-09-29 13:03:57+08:00",
-      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_1303_global-rates-oil.html",
-      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_1303_global-rates-oil.md",
-      "markdown_sha256": "48c982f1a4faa6aeb20b38d535449a9365bbc906210afb235da29673b9b79703",
-      "modified_time": "2026-09-29 13:03:57+08:00",
-      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
-      "risk_light": "ORANGE",
-      "run_id": "MTW-20260929-1303-global-rates-oil",
-      "sha256": "c10843fe4b9c55a142f02562252b9f9485ae89965cbecdcc189002e26a06b761",
-      "slug": "global-rates-oil",
-      "source_document_id": null,
-      "source_kind": "google_doc_markdown",
-      "title": "Global Macro Early Warning｜油價與全球升息共振，長端利率壓力再擴散",
-      "topic": null
-    },
-    "daily": {
-      "category": "daily",
-      "coverage_end_taipei": "2026-09-29T08:25:00+08:00",
-      "coverage_start_taipei": "2026-09-28T08:25:00+08:00",
-      "date": "2026-09-29",
-      "file": "reports/daily/Global_Daily_Brief_2026-09-29.html",
-      "generated_at_taipei": "2026-09-29T08:25:00+08:00",
-      "html_path": "reports/daily/Global_Daily_Brief_2026-09-29.html",
-      "markdown_path": "reports/daily/Global_Daily_Brief_2026-09-29.md",
-      "markdown_sha256": "73ef48f9690fc1ae9132afceea96601bed5310d7e45283dc1e8d7f55c1737b82",
-      "modified_time": "2026-09-29T08:25:00+08:00",
-      "report_type": "GLOBAL_DAILY_BRIEF",
-      "risk_light": "YELLOW",
-      "run_id": "GDB-20260929-0825",
-      "sha256": "925d2b03da3ab02df38c3fdf179beabc0be5f30a57864cfa0f115870a8f0e10a",
-      "slug": "copilot-agent-runtime",
-      "source_document_id": null,
-      "source_kind": "google_doc_markdown",
-      "title": "Global Daily Brief｜Microsoft 把 Copilot 推向長時運行 Agent，企業 AI 競爭進入執行層",
-      "topic": null
-    },
-    "weekly": {
-      "category": "weekly",
-      "date": "2026-09-27",
-      "file": "reports/weekly/Weekly_Strategy_2026-09-27.html",
-      "modified_time": null,
-      "sha256": "3610381dbba7db81e9b9a46ec2d045d1a65fd92557d7acd2608f39cd47f16731",
-      "title": "Weekly Global Macro & Investment Strategy｜AI獲利動能撐住風險資產，但5.2%美債殖利率把「折現率壓力」推成主導風險"
-    }
-  }
+  "schema_version": 1
 }

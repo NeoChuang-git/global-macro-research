@@ -1439,6 +1439,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜油價與全球升息共振，長端利率壓力再擴散",
       "topic": null
+    },
+    "MTW-20260929-2001-rates-energy": {
+      "coverage_end_taipei": "2026-09-29T20:01:00+08:00",
+      "coverage_start_taipei": "2026-09-29T13:03:57+08:00",
+      "generated_at_taipei": "2026-09-29T20:01:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_2001_rates-energy.html",
+      "html_sha256": "5458c88003d1e5168a7b1779ca67d1aa1e9977a503013388b0ea6989548851f9",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_2001_rates-energy.md",
+      "markdown_sha256": "56dfd8758d567ef7eea2c22c6a4b37d2c399459164c0e4747bf32549895b9a61",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260929-2001-rates-energy",
+      "slug": "rates-energy",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美債殖利率再創高、油價高檔共振，折現率衝擊擴散",
+      "topic": null
     }
   },
   "schema_version": 1
