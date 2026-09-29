@@ -135,19 +135,34 @@ class CanonicalBlockError(RuntimeError):
     """Exception raised when a canonical block is invalid."""
 
 
+def sanitize_canonical_markers(text: str) -> str:
+    """Normalize escaped canonical report delimiters."""
+    if not text or not isinstance(text, str):
+        return ""
+    text = re.sub(r"(?:\\+<|<){3}\s*REPORT(?:\\+_|_)?BEGIN\s*(?:\\+>|>){3}", REPORT_BEGIN_MARKER, text, flags=re.IGNORECASE)
+    text = re.sub(r"(?:\\+<|<){3}\s*REPORT(?:\\+_|_)?END\s*(?:\\+>|>){3}", REPORT_END_MARKER, text, flags=re.IGNORECASE)
+    return text
+
+
 def extract_latest_complete_report_block(text: str) -> Optional[str]:
     """
     Extract the first complete canonical report block starting from the beginning of text.
-    Ignores any trailing content or older blocks below.
+    Ignores any trailing content or older blocks below. Automatically normalizes escaped delimiters.
     """
     if not text or not isinstance(text, str):
         return None
+
+    if REPORT_BEGIN_MARKER not in text:
+        text = sanitize_canonical_markers(text)
 
     begin_idx = text.find(REPORT_BEGIN_MARKER)
     if begin_idx == -1:
         return None
 
     after_begin = begin_idx + len(REPORT_BEGIN_MARKER)
+    if REPORT_END_MARKER not in text[after_begin:]:
+        text = text[:after_begin] + sanitize_canonical_markers(text[after_begin:])
+
     end_idx = text.find(REPORT_END_MARKER, after_begin)
     if end_idx == -1:
         # Begin exists but no matching end marker found
@@ -162,6 +177,10 @@ def parse_frontmatter(block: str) -> Tuple[Dict[str, Any], str]:
     Parse YAML front matter between '---' markers.
     Returns (metadata_dict, markdown_body).
     """
+    # Normalize escaped frontmatter fences (e.g. \--- or \-\-\-)
+    block = re.sub(r"^\s*\\?-(?:\\?-){2,}\s*(?:\r?\n)", "---\n", block)
+    block = re.sub(r"(\r?\n)\s*\\?-(?:\\?-){2,}\s*(\r?\n)", r"\1---\2", block, count=1)
+
     if not block.startswith("---"):
         raise CanonicalBlockError("missing opening front matter '---'")
 
@@ -171,6 +190,9 @@ def parse_frontmatter(block: str) -> Tuple[Dict[str, Any], str]:
         raise CanonicalBlockError("missing closing front matter '---'")
 
     fm_raw = block[3:second_delim].strip()
+    # Unescape escaped underscores in front matter keys and values
+    fm_raw = fm_raw.replace(r"\_", "_")
+
     body = block[second_delim + 4:].strip()
 
     try:
@@ -182,7 +204,7 @@ def parse_frontmatter(block: str) -> Tuple[Dict[str, Any], str]:
         raise CanonicalBlockError("YAML front matter is not a valid mapping")
 
     # If markdown body has a specific full descriptive H1 title (e.g. "# Category | Full Subtitle"), use it
-    h1_match = re.search(r"^\s*#\s+(.+)$", body, flags=re.MULTILINE)
+    h1_match = re.search(r"^\s*\\?#\s+(.+)$", body, flags=re.MULTILINE)
     if h1_match:
         h1_text = h1_match.group(1).strip()
         if "｜" in h1_text or "|" in h1_text or len(h1_text) > len(str(metadata.get("title", ""))):
@@ -239,14 +261,15 @@ def validate_required_sections(markdown_body: str, report_type: str, format_vers
     if not sections:
         return
 
-    # Extract all headings (lines starting with #, ##, ###, etc.)
-    heading_lines = [
-        line.lstrip("#").strip().casefold()
-        for line in markdown_body.splitlines()
-        if line.strip().startswith("#")
-    ]
+    # Extract all headings (lines starting with #, ##, ###, etc., including escaped \#)
+    heading_lines = []
+    for line in markdown_body.splitlines():
+        stripped = line.strip()
+        m = re.match(r"^\\*#+\s*(.+)$", stripped)
+        if m:
+            heading_lines.append(m.group(1).strip().casefold())
     headings_blob = "\n".join(heading_lines)
-    body_cf = markdown_body.casefold()
+    body_cf = re.sub(r"\\([#*_])", r"\1", markdown_body).casefold()
 
     missing = []
     for section in sections:

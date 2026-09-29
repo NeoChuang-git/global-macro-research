@@ -196,5 +196,45 @@ format_version: 99
         self.assertEqual(determine_archive_filename(meta_weekly), "Weekly_Strategy_2026-09-06.md")
 
 
+class TestEscapedCanonicalBlockSanitization(unittest.TestCase):
+    def test_extract_and_parse_escaped_delimiters_and_frontmatter(self):
+        escaped_doc = f"""
+\\<\\<\\<REPORT\\_BEGIN\\>\\>\\>
+\\---
+research\\_status: COMPLETE
+report\\_type: GLOBAL\\_DAILY\\_BRIEF
+run\\_id: GDB-20260929-0730
+generated\\_at\\_taipei: 2026-09-29T07:30:00+08:00
+coverage\\_start\\_taipei: 2026-09-28T07:30:00+08:00
+coverage\\_end\\_taipei: 2026-09-29T07:30:00+08:00
+title: Global Daily Brief Escaped Test
+format\\_version: 1
+risk\\_light: GREEN
+\\---
+{SAMPLE_DAILY_BODY}
+\\<\\<\\<REPORT\\_END\\>\\>\\>
+"""
+        block = extract_latest_complete_report_block(escaped_doc)
+        self.assertIsNotNone(block, "Failed to extract canonical block from escaped delimiters")
+        metadata, body = parse_and_validate_canonical_block(block)
+        self.assertEqual(metadata["run_id"], "GDB-20260929-0730")
+        self.assertEqual(metadata["report_type"], "GLOBAL_DAILY_BRIEF")
+        self.assertEqual(metadata["risk_light"], "GREEN")
+        self.assertIn("1. Executive Intelligence Summary", body)
+
+    def test_extract_real_early_warning_escaped_document(self):
+        import pathlib
+        ew_file = pathlib.Path("reports/early-warning/Global_Macro_Early_Warning_2026-09-28_1859_oil-yield-confirmation.md")
+        if ew_file.exists():
+            content = ew_file.read_text(encoding="utf-8")
+            block = extract_latest_complete_report_block(content)
+            self.assertIsNotNone(block)
+            metadata, body = parse_and_validate_canonical_block(block)
+            self.assertEqual(metadata["run_id"], "MTW-20260928-1859-oil-yield-confirmation")
+            self.assertEqual(metadata["report_type"], "MACRO_TAIWAN_EARLY_WARNING")
+            self.assertEqual(metadata["risk_light"], "ORANGE")
+
+
+
 if __name__ == "__main__":
     unittest.main()
