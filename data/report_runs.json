@@ -1471,6 +1471,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜美債殖利率再創高、油價高檔共振，折現率衝擊擴散",
       "topic": null
+    },
+    "MTW-20260929-2304-stagflation-breadth": {
+      "coverage_end_taipei": "2026-09-29T23:04:26+08:00",
+      "coverage_start_taipei": "2026-09-28T23:04:26+08:00",
+      "generated_at_taipei": "2026-09-29T23:04:26+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_2304_stagflation-breadth.html",
+      "html_sha256": "33d9752725884d496e0ecdbeada4f319dd0126f9eeea7907c0bdcfd740846841",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_2304_stagflation-breadth.md",
+      "markdown_sha256": "7d7abea3718b7088cbce516819fb769d38797b60a75f854d5d427c5a4f2f5a40",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260929-2304-stagflation-breadth",
+      "slug": "stagflation-breadth",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜全球緊縮廣度擴大，美國信心轉弱形成停滯性通膨警訊",
+      "topic": null
     }
   },
   "schema_version": 1

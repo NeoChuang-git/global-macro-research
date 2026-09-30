@@ -1215,6 +1215,15 @@
       "sha256": "624d5866a223da631683f453ff90d94b2fe1244559fc307341e5f80fe86dc497",
       "size": 11271
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-09-29_2304_stagflation-breadth.md": {
+      "category": "early-warning",
+      "drive_file_id": "1au8CGl9qZfWwn6gR2COcoWB1y4wb-76m",
+      "md5_checksum": "6d966031c9073c5a747ef60113d48775",
+      "modified_time": "2026-09-30T10:59:51.133Z",
+      "name": "Global_Macro_Early_Warning_2026-09-29_2304_stagflation-breadth.md",
+      "sha256": "fc278159aee8d581447e6ea62cddf7ce93833e8caf7018ba6264003c6a1f5ba6",
+      "size": 14086
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
