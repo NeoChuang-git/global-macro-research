@@ -1,4 +1,4 @@
-<<<REPORT_BEGIN>>>
+﻿<<<REPORT_BEGIN>>>
 ---
 research_status: COMPLETE
 generated_at_taipei: 2026-09-30T07:50:05+08:00
@@ -328,4 +328,8 @@ Raw Data Change 是殖利率與美元 **↑ 上升**；經濟傳導是折現率�
 
 
 本報告為事件驅動市場研究與資訊整理，不構成投資建議、買賣邀約或報酬保證。事件分數是用於相對排序的研究判斷，不代表精確機率；法律申訴、公司前瞻指引（Guidance）與市場預期均可能快速改變。
+
+
+
+
 <<<REPORT_END>>>
