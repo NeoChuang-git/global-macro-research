@@ -1487,6 +1487,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜全球緊縮廣度擴大，美國信心轉弱形成停滯性通膨警訊",
       "topic": null
+    },
+    "MTW-20260930-2111-pce-counter-signal": {
+      "coverage_end_taipei": "2026-09-30T21:11:00+08:00",
+      "coverage_start_taipei": "2026-09-29T21:11:00+08:00",
+      "generated_at_taipei": "2026-09-30T21:11:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-30_2111_pce-counter-signal.html",
+      "html_sha256": "4238ce2bceb64ac28de6e4577ed4c3ce38a32f5aa079d134c1a41667dfdaab1e",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-09-30_2111_pce-counter-signal.md",
+      "markdown_sha256": "bec79af4be34e46a21f5da02b548910862851e030ffc82e913380a76df795d7c",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20260930-2111-pce-counter-signal",
+      "slug": "pce-counter-signal",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜核心PCE低於預期，Fed再緊縮鏈條出現反向確認",
+      "topic": null
     }
   },
   "schema_version": 1
