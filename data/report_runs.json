@@ -448,6 +448,22 @@
       "title": "Global Daily Brief｜OpenAI 推出常駐 Agent「dots」，企業 AI 競爭轉向自主執行",
       "topic": null
     },
+    "GDB-20261001-0731": {
+      "coverage_end_taipei": "2026-10-01T07:31:00+08:00",
+      "coverage_start_taipei": "2026-09-30T07:31:00+08:00",
+      "generated_at_taipei": "2026-10-01T07:31:00+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-01.html",
+      "html_sha256": "598062565ba7dc59a86863dd51698f86a0fa63c562756d6ad174d329d683f5f2",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-01.md",
+      "markdown_sha256": "94e2fd23a0252699c596e500663c4f8892c4c29dc2a9af332138e20ab7c945f0",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "ORANGE",
+      "run_id": "GDB-20261001-0731",
+      "slug": "micron-ai-memory",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Micron 財測再上修，AI 記憶體成為基礎設施核心瓶頸",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
