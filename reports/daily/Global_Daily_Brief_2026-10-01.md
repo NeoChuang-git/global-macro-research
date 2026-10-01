@@ -1,4 +1,4 @@
-<<<REPORT_BEGIN>>>
+﻿<<<REPORT_BEGIN>>>
 ---
 research_status: COMPLETE
 generated_at_taipei: 2026-10-01T07:31:00+08:00
@@ -187,4 +187,8 @@ EDA sign-off 仍需傳統驗證；模型準確性、IP 保密、客戶資料治�
 
 ## 免責聲明（DISCLAIMER）
 本報告為事件驅動市場研究，不構成投資建議。即時價格與盤後交易可能快速變動；推論已與事實、官方確認狀態分離，未確認消息不應視為公司正式決策。
+
+
+
+
 <<<REPORT_END>>>
