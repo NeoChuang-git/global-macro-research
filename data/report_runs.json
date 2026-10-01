@@ -1551,6 +1551,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜韓國9月出口與晶片出貨創紀錄，亞洲科技外需形成正向廣度確認",
       "topic": null
+    },
+    "MTW-20261001-2257-ism-cost-pressure": {
+      "coverage_end_taipei": "2026-10-01T22:57:58+08:00",
+      "coverage_start_taipei": "2026-10-01T22:00:00+08:00",
+      "generated_at_taipei": "2026-10-01T22:57:58+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-01_2257_ism-cost-pressure.html",
+      "html_sha256": "54917b122138987c2f3bd587ec92d6a15a7d604dee0c59af88dfd9633ecfcc14",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-01_2257_ism-cost-pressure.md",
+      "markdown_sha256": "70b4f5464b2b378e9ba59731aaa97d7ee33813f7557f74e821679127a123428d",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20261001-2257-ism-cost-pressure",
+      "slug": "ism-cost-pressure",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜ISM價格支付升至77.9，強需求把長端利率壓力轉成「成長＋成本」雙壓",
+      "topic": null
     }
   },
   "schema_version": 1
