@@ -1567,6 +1567,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜ISM價格支付升至77.9，強需求把長端利率壓力轉成「成長＋成本」雙壓",
       "topic": null
+    },
+    "MTW-20261002-0355-rates-relief-energy-risk": {
+      "coverage_end_taipei": "2026-10-02T03:55:13+08:00",
+      "coverage_start_taipei": "2026-10-02T02:55:13+08:00",
+      "generated_at_taipei": "2026-10-02T03:55:13+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-02_0355_rates-relief-energy-risk.html",
+      "html_sha256": "0fb20934c4d928a7009b55b1035e49edae382867b79d3d65881ce992f63c1646",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-02_0355_rates-relief-energy-risk.md",
+      "markdown_sha256": "81d1938d1269fb3717719eb89ee5a72ffd2c7b2fcc219a6708d01f7170a3eca5",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20261002-0355-rates-relief-energy-risk",
+      "slug": "rates-relief-energy-risk",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜長端殖利率急回但能源再通膨風險升溫：Fed近端壓力緩和、冬季能源尾部擴大",
+      "topic": null
     }
   },
   "schema_version": 1
