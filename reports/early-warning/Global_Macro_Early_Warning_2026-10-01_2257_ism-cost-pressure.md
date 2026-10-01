@@ -1,4 +1,4 @@
-<<<REPORT_BEGIN>>>
+﻿<<<REPORT_BEGIN>>>
 ---
 research_status: COMPLETE
 report_type: MACRO_TAIWAN_EARLY_WARNING
