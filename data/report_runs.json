@@ -464,6 +464,22 @@
       "title": "Global Daily Brief｜Micron 財測再上修，AI 記憶體成為基礎設施核心瓶頸",
       "topic": null
     },
+    "GDB-20261002-0728": {
+      "coverage_end_taipei": "2026-10-02T07:28:25+08:00",
+      "coverage_start_taipei": "2026-10-01T07:28:25+08:00",
+      "generated_at_taipei": "2026-10-02T07:28:25+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-02.html",
+      "html_sha256": "5ed6303a29c51c6d73516ede9600983d66c6b1a9089a6ca37735c4c493291707",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-02.md",
+      "markdown_sha256": "a494946aeb8616a5649736b2d46fd9662e14d1d290f7f08f6b8fb5a311f1bf14",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "ORANGE",
+      "run_id": "GDB-20261002-0728",
+      "slug": "broadcom-anthropic-ai-financing",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Broadcom 對 Anthropic 提供最高 420 億美元融資，AI 基建轉向「供應商＋資本」綁定",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
@@ -1582,6 +1598,22 @@
       "slug": "rates-relief-energy-risk",
       "source_document_id": null,
       "title": "Global Macro Early Warning｜長端殖利率急回但能源再通膨風險升溫：Fed近端壓力緩和、冬季能源尾部擴大",
+      "topic": null
+    },
+    "MTW-20261002-0756-fed-hawkish-rates-energy": {
+      "coverage_end_taipei": "2026-10-02T07:56:30+08:00",
+      "coverage_start_taipei": "2026-10-02T06:56:30+08:00",
+      "generated_at_taipei": "2026-10-02T07:56:30+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-02_0756_fed-hawkish-rates-energy.html",
+      "html_sha256": "a4b027a0312e69a5e7d9aebccffcc76cce859e8bb496d0023efaafe962abb226",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-02_0756_fed-hawkish-rates-energy.md",
+      "markdown_sha256": "a61f54015d0727def5f1dff6b78826ef4aba853f3a3d837e943cc198cadcbc41",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20261002-0756-fed-hawkish-rates-energy",
+      "slug": "fed-hawkish-rates-energy",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜Fed 鷹派分歧再升溫：Logan 要求至少再升 50bp，長端與能源壓力仍在",
       "topic": null
     }
   },

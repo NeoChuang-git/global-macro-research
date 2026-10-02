@@ -297,6 +297,15 @@
       "sha256": "4f8a3a5cb8fe28623186896d78d65a07b8725859686069ee22e65d7e9c603455",
       "size": 9610
     },
+    "reports/daily/Global_Daily_Brief_2026-10-02.md": {
+      "category": "daily",
+      "drive_file_id": "1Z_ATKQ-MJnaMpmnckmwaL8dwLzloXSdI",
+      "md5_checksum": "c8664538a282a527f6a5c756e665da94",
+      "modified_time": "2026-10-02T00:28:57.607Z",
+      "name": "Global_Daily_Brief_2026-10-02.md",
+      "sha256": "9c38d9ab9e56e73434903d855e16e7af54737c7e620f17234fb8781f92d50d3b",
+      "size": 9079
+    },
     "reports/daily/Global_Macro_Morning_2026-08-25.html": {
       "category": "daily",
       "drive_file_id": "10dgWjdJhW-HwSZRp8tFbQ_wSDiQLIiWu",
@@ -1277,6 +1286,15 @@
       "name": "Global_Macro_Early_Warning_2026-10-02_0355_rates-relief-energy-risk.md",
       "sha256": "5b3d7de54e2eca8c0764c1eb13b7fc084206af6d5027e9f8120ce660d779c0d2",
       "size": 16267
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-02_0756_fed-hawkish-rates-energy.md": {
+      "category": "early-warning",
+      "drive_file_id": "1p0PAWkjKrvtQFbN8wpKkYqK4EsIiFeZS",
+      "md5_checksum": "61401772eee5b06521d1f92171d9f9d4",
+      "modified_time": "2026-10-02T00:30:52.560Z",
+      "name": "Global_Macro_Early_Warning_2026-10-02_0756_fed-hawkish-rates-energy.md",
+      "sha256": "f4ce332bec9a0135a15ad01c6fb96e7ffd72e0451d75bbe13bee932cc64d4850",
+      "size": 12395
     },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
