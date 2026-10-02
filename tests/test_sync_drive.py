@@ -1,7 +1,10 @@
+import contextlib
 import hashlib
+import io
 import json
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 from scripts.sync_drive import (
@@ -10,12 +13,21 @@ from scripts.sync_drive import (
     build_reports_index,
     classify_drive_file,
     extract_report_title,
+    main,
+    render_markdown_file_to_html,
     resolve_doc_sources,
     resolve_folder_ids,
     sync_native_google_docs,
     sync_reports,
 )
-from scripts.storage_adapter import MemoryStorageAdapter, RemoteFile
+from scripts.storage_adapter import (
+    MemoryStorageAdapter,
+    RemoteFile,
+    StorageError,
+    StorageNotFoundError,
+    StoragePermissionError,
+)
+from scripts.report_ingestion import IngestionResult, IngestionStatus
 
 
 def md5(content):
@@ -202,7 +214,110 @@ class SyncDriveTests(unittest.TestCase):
         self.temp_dir.cleanup()
 
     def _service(self, contents=None, docs=None, list_error=None):
-        return FakeDrive(self.folders, contents or {}, docs or {}, list_error)
+        # Accessible, empty sources are different from missing/unreadable sources.
+        available_docs = {source["document_id"]: "" for source in self.doc_sources.values()}
+        available_docs.update(docs or {})
+        return FakeDrive(self.folders, contents or {}, available_docs, list_error)
+
+    def test_required_doc_fetch_failures_are_aggregated_and_classified(self):
+        class FailingAdapter(MemoryStorageAdapter):
+            def export_doc_text(self, doc_id, mime_type="text/plain"):
+                errors = {
+                    "doc-daily-1": StorageNotFoundError("not found or not visible"),
+                    "doc-ew-1": StoragePermissionError("permission denied"),
+                    "doc-weekly-1": StorageError("transport failure"),
+                }
+                raise errors[doc_id]
+
+        stderr = io.StringIO()
+        with contextlib.redirect_stderr(stderr), self.assertRaises(SyncError) as caught:
+            sync_native_google_docs(FailingAdapter(), self.root, self.doc_sources)
+        diagnostic = stderr.getvalue()
+        self.assertIn("SOURCE_DOC_NOT_FOUND_OR_NOT_VISIBLE: daily", diagnostic)
+        self.assertIn("SOURCE_DOC_PERMISSION_DENIED: early-warning", diagnostic)
+        self.assertIn("SOURCE_DOC_FETCH_FAILED: weekly", diagnostic)
+        self.assertNotIn("SOURCE_DOC_PERMISSION_DENIED: daily", diagnostic)
+        for source in self.doc_sources.values():
+            self.assertIn(source["document_id"], str(caught.exception))
+
+    def test_cli_fails_when_all_required_docs_fail_despite_unchanged_folder_reports(self):
+        legacy = b"<html><h1>Existing daily report</h1></html>"
+        remote = drive_file("one", "Daily_2026-08-28.html", legacy)
+        self.folders[self.folder_ids["daily"]] = [remote]
+        service = self._service({"one": legacy})
+        sync_reports(service, self.root, self.folder_ids, enable_native_docs=False)
+        service.files_api.docs.clear()
+        before = {p.relative_to(self.root): p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
+        stdout, stderr = io.StringIO(), io.StringIO()
+        environment = {"DRIVE_FOLDER_" + c.upper().replace("-", "_"): fid for c, fid in self.folder_ids.items()}
+        with patch.dict("os.environ", environment, clear=True), \
+             patch("scripts.sync_drive.create_drive_service", return_value=service), \
+             patch("scripts.sync_drive.resolve_doc_sources", return_value=self.doc_sources), \
+             contextlib.redirect_stdout(stdout), contextlib.redirect_stderr(stderr):
+            status = main(["--repo-root", str(self.root)])
+        self.assertEqual(status, 1)
+        self.assertNotIn("Sync complete", stdout.getvalue())
+        self.assertNotIn("BUILD_SUCCEEDED", stdout.getvalue())
+        diagnostics = stderr.getvalue().splitlines()
+        self.assertEqual(sum(line.startswith("SOURCE_DOC_NOT_FOUND_OR_NOT_VISIBLE:") for line in diagnostics), 3)
+        after = {p.relative_to(self.root): p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
+        self.assertEqual(before, after)
+
+    def test_one_failed_source_does_not_hide_valid_source_or_allow_success(self):
+        service = self._service(docs={
+            "doc-daily-1": make_sample_doc(),
+            "doc-weekly-1": RuntimeError("file not found"),
+        })
+        stdout = io.StringIO()
+        with contextlib.redirect_stdout(stdout), self.assertRaises(SyncError):
+            sync_reports(service, self.root, self.folder_ids, self.doc_sources)
+        self.assertEqual(len(service.files_api.doc_exports), 3)
+        self.assertTrue((self.root / "reports/daily/Global_Daily_Brief_2026-09-03.html").is_file())
+        self.assertNotIn("BUILD_SUCCEEDED", stdout.getvalue())
+
+    def test_invalid_canonical_block_fails_sync_without_replacing_existing_reports(self):
+        service = self._service(docs={"doc-daily-1": make_sample_doc().replace("research_status: COMPLETE", "research_status: INCOMPLETE")})
+        legacy_path = self.root / "reports/daily/Existing_2026-08-28.html"
+        legacy_path.parent.mkdir(parents=True)
+        legacy_path.write_bytes(b"existing report")
+        with self.assertRaisesRegex(SyncError, "CANONICAL_BLOCK_INVALID"):
+            sync_reports(service, self.root, self.folder_ids, self.doc_sources)
+        self.assertEqual(legacy_path.read_bytes(), b"existing report")
+
+    def test_ingestion_error_result_fails_sync(self):
+        with patch("scripts.sync_drive.ingest_report_content", return_value=IngestionResult(status=IngestionStatus.FAILED, error="render failed")), \
+             self.assertRaisesRegex(SyncError, "INGESTION_FAILED"):
+            sync_native_google_docs(self._service(), self.root, self.doc_sources)
+
+    def test_ingestion_exception_is_reported_as_sync_failure(self):
+        with patch("scripts.sync_drive.ingest_report_content", side_effect=OSError("disk write failed")), \
+             self.assertRaisesRegex(SyncError, "INGESTION_FAILED"):
+            sync_native_google_docs(self._service(), self.root, self.doc_sources)
+
+    def test_missing_processed_artifact_is_required_source_failure(self):
+        service = self._service(docs={"doc-daily-1": make_sample_doc()})
+        sync_reports(service, self.root, self.folder_ids, self.doc_sources)
+        html = self.root / "reports/daily/Global_Daily_Brief_2026-09-03.html"
+        html.unlink()
+        with self.assertRaisesRegex(SyncError, "missing recorded html artifact"):
+            sync_reports(service, self.root, self.folder_ids, self.doc_sources)
+
+    def test_folder_renderer_does_not_silently_ignore_ingestion_failure(self):
+        with patch("scripts.sync_drive.ingest_report_file", return_value=IngestionResult(status=IngestionStatus.FAILED, error="artifact missing")), \
+             self.assertRaisesRegex(SyncError, "folder report ingestion failed"):
+            render_markdown_file_to_html(self.root / "reports/weekly/weekly.md", "weekly", self.root / "data/report_runs.json")
+
+    def test_accessible_docs_without_complete_block_remain_valid_noop(self):
+        service = self._service(docs={"doc-daily-1": "Report is being prepared. <<<REPORT_BEGIN>>>"})
+        result = sync_reports(service, self.root, self.folder_ids, self.doc_sources)
+        self.assertEqual(result.updated, 0)
+        self.assertEqual(result.unchanged, 0)
+
+    def test_explicit_folder_only_sync_does_not_export_docs(self):
+        service = self._service()
+        service.files_api.docs.clear()
+        sync_reports(service, self.root, self.folder_ids, enable_native_docs=False)
+        self.assertEqual(service.files_api.doc_exports, [])
 
     def test_classifies_html_filename_and_extracts_date_without_trusting_paths(self):
         report = classify_drive_file(
@@ -418,6 +533,8 @@ class SyncDriveTests(unittest.TestCase):
         # Add a native Google Doc
         doc_payload = make_sample_doc(run_id="GDB-20260903-0730", title="Daily Memory Brief")
         adapter.add_doc("doc-daily-1", doc_payload)
+        adapter.add_doc("doc-ew-1", "")
+        adapter.add_doc("doc-weekly-1", "")
 
         # First sync
         first = sync_reports(adapter, self.root, self.folder_ids, self.doc_sources, enable_native_docs=True)

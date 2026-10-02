@@ -194,6 +194,25 @@ class TestGoogleDriveStorageAdapter(unittest.TestCase):
         with self.assertRaises(StorageError):
             self.adapter.export_doc_text("doc-err")
 
+    def test_http_status_takes_priority_over_error_message(self):
+        class HttpError(Exception):
+            def __init__(self, status, message):
+                super().__init__(message)
+                self.resp = type("Response", (), {"status": status})()
+
+        cases = (
+            (404, "File not found or permission not visible", StorageNotFoundError),
+            (401, "Not found", StoragePermissionError),
+            (403, "Not found", StoragePermissionError),
+            (500, "Unexpected permission backend error", StorageError),
+        )
+        for status, message, expected in cases:
+            with self.subTest(status=status):
+                self.service.files_api.export_error = HttpError(status, message)
+                with self.assertRaises(expected) as caught:
+                    self.adapter.export_doc_text("doc-1")
+                self.assertIs(type(caught.exception), expected)
+
 
 class TestFactoryFunction(unittest.TestCase):
     def test_create_storage_adapter(self):

@@ -3,6 +3,8 @@
 import unittest
 from scripts.canonical_block import (
     CanonicalBlockError,
+    REQUIRED_SECTIONS,
+    REQUIRED_SECTIONS_V2,
     determine_archive_filename,
     extract_latest_complete_report_block,
     parse_and_validate_canonical_block,
@@ -99,6 +101,48 @@ Older content here...
 
 
 class CanonicalBlockTests(unittest.TestCase):
+    def test_weekly_v2_accepts_equivalent_chinese_section_headings(self):
+        body = "\n".join("## " + heading for heading in (
+            "執行策略摘要（EXECUTIVE STRATEGY SUMMARY）",
+            "Regime 轉換矩陣",
+            "每週總經訊號板",
+            "三大持續性主題（TOP 3 PERSISTENT THEMES）",
+            "訊號持續性評分",
+            "總經資料與政策深度分析",
+            "全球跨資產傳導",
+            "台灣經濟與政策傳導",
+            "策略含意矩陣",
+            "情境矩陣與風險燈號",
+            "下週催化劑行事曆",
+            "SOURCE AUDIT",
+            "結論（BOTTOM LINE）",
+        ))
+        validate_required_sections(body, "WEEKLY_STRATEGY", 2)
+
+    def test_weekly_v2_chinese_aliases_do_not_make_sections_optional(self):
+        translations = {
+            "Weekly Regime Transition Matrix": "Regime 轉換矩陣",
+            "Weekly Macro Signal Board": "每週總經訊號板",
+            "Signal Persistence": "訊號持續性評分",
+            "Macro Data": "總經資料與政策深度分析",
+            "Transmission": "全球跨資產傳導",
+            "Risk Lights": "情境矩陣與風險燈號",
+            "Catalyst Calendar": "下週催化劑行事曆",
+        }
+        headings = [translations.get(section, section) for section in REQUIRED_SECTIONS_V2["WEEKLY_STRATEGY"]]
+        for section, translation in translations.items():
+            with self.subTest(section=section):
+                body = "\n".join("## " + h for h in headings if h != translation)
+                with self.assertRaisesRegex(CanonicalBlockError, section):
+                    validate_required_sections(body, "WEEKLY_STRATEGY", 2)
+
+    def test_weekly_chinese_v2_aliases_do_not_change_v1_contract(self):
+        body = "\n".join("## " + h for h in REQUIRED_SECTIONS["WEEKLY_STRATEGY"])
+        validate_required_sections(body, "WEEKLY_STRATEGY", 1)
+        body = body.replace("Weekly Regime Transition Matrix", "Regime 轉換矩陣")
+        with self.assertRaisesRegex(CanonicalBlockError, "Weekly Regime Transition Matrix"):
+            validate_required_sections(body, "WEEKLY_STRATEGY", 1)
+
     def test_extracts_first_complete_report_block(self):
         block = extract_latest_complete_report_block(SAMPLE_COMPLETE_DAILY_DOC)
         self.assertIsNotNone(block)
@@ -194,6 +238,19 @@ format_version: 99
             "generated_at_taipei": "2026-09-06T18:00:00+08:00",
         }
         self.assertEqual(determine_archive_filename(meta_weekly), "Weekly_Strategy_2026-09-06.md")
+
+    def test_archive_names_reserve_both_artifacts_and_all_rerun_candidates(self):
+        cases = (
+            ({"report_type": "GLOBAL_DAILY_BRIEF", "generated_at_taipei": "2026-09-29T07:30:00+08:00"}, "Global_Daily_Brief_2026-09-29", "_rerun_0730"),
+            ({"report_type": "WEEKLY_STRATEGY", "generated_at_taipei": "2026-09-29T07:30:00+08:00"}, "Weekly_Strategy_2026-09-29", "_rerun_0730"),
+            ({"report_type": "MACRO_TAIWAN_EARLY_WARNING", "generated_at_taipei": "2026-09-29T07:30:00+08:00"}, "Global_Macro_Early_Warning_2026-09-29", "_0730"),
+        )
+        for meta, base, rerun in cases:
+            with self.subTest(report_type=meta["report_type"]):
+                existing = {base + ".html", base + rerun + ".html", base + rerun + "_2.md"}
+                self.assertEqual(determine_archive_filename(meta, existing), base + rerun + "_3.md")
+        meta = {"report_type": "MACRO_TAIWAN_EARLY_WARNING", "generated_at_taipei": "2026-09-29T07:30:00+08:00", "slug": "rates"}
+        self.assertEqual(determine_archive_filename(meta, {"Global_Macro_Early_Warning_2026-09-29_0730_rates.html"}), "Global_Macro_Early_Warning_2026-09-29_0730_rates_2.md")
 
 
 class TestEscapedCanonicalBlockSanitization(unittest.TestCase):

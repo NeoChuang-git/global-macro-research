@@ -27,7 +27,7 @@ class StorageError(RuntimeError):
 
 
 class StorageNotFoundError(StorageError):
-    """Requested remote file or folder does not exist."""
+    """Remote resource was not found or is not visible to the calling identity."""
 
 
 class StoragePermissionError(StorageError):
@@ -195,10 +195,16 @@ class GoogleDriveStorageAdapter:
     def _translate_and_raise(self, exc: Exception, action: str) -> None:
         err_msg = str(exc)
         status_code = getattr(getattr(exc, "resp", None), "status", None)
-        if status_code in (401, 403) or "permission" in err_msg.lower() or "quota" in err_msg.lower():
+        if status_code in (401, 403):
             raise StoragePermissionError(f"Drive permission error during {action}: {exc}") from exc
-        if status_code == 404 or "not found" in err_msg.lower():
+        if status_code == 404:
             raise StorageNotFoundError(f"Drive resource not found during {action}: {exc}") from exc
+        # HTTP status is authoritative; text heuristics are only for non-HTTP errors.
+        if status_code is None:
+            if "permission" in err_msg.lower() or "quota" in err_msg.lower():
+                raise StoragePermissionError(f"Drive permission error during {action}: {exc}") from exc
+            if "not found" in err_msg.lower():
+                raise StorageNotFoundError(f"Drive resource not found during {action}: {exc}") from exc
         raise StorageError(f"Drive operation failed during {action}: {exc}") from exc
 
 

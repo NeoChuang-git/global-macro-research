@@ -284,7 +284,9 @@ def sync_native_google_docs(
     """
     Sync native Google Docs by exporting plain text, extracting latest canonical block,
     validating metadata/sections, checking idempotency, archiving markdown, and rendering HTML.
-    Returns (archived_count, skipped_count).
+    Returns (archived_count, skipped_count) only if all configured sources succeeded.
+    Accessible documents without a complete block are normal no-ops. Fetch,
+    validation, and ingestion failures are collected and raised as SyncError.
     """
     repo_root = Path(repo_root)
     adapter = create_storage_adapter(service)
@@ -293,6 +295,12 @@ def sync_native_google_docs(
 
     archived_count = 0
     skipped_count = 0
+    failures = []
+
+    def record_failure(code, category, doc_id, error):
+        diagnostic = f"{code}: {category} ({doc_id}): {error}"
+        print(diagnostic, file=sys.stderr)
+        failures.append(diagnostic)
 
     for name, source_info in sources.items():
         category = source_info["category"]
@@ -303,19 +311,29 @@ def sync_native_google_docs(
         try:
             text = adapter.export_doc_text(doc_id=doc_id, mime_type="text/plain")
             print(f"SOURCE_DOC_FETCHED: {category} ({doc_id})")
+        except StorageNotFoundError as exc:
+            record_failure("SOURCE_DOC_NOT_FOUND_OR_NOT_VISIBLE", category, doc_id, exc)
+            continue
+        except StoragePermissionError as exc:
+            record_failure("SOURCE_DOC_PERMISSION_DENIED", category, doc_id, exc)
+            continue
         except Exception as exc:
-            print(f"SOURCE_DOC_PERMISSION_DENIED: {category} ({doc_id}): {exc}", file=sys.stderr)
+            record_failure("SOURCE_DOC_FETCH_FAILED", category, doc_id, exc)
             continue
 
-        result = ingest_report_content(
-            content=text,
-            category=category,
-            repo_root=repo_root,
-            source_document_id=doc_id,
-            expected_type=expected_type,
-            runs_path=runs_path,
-            allow_fallback=False,
-        )
+        try:
+            result = ingest_report_content(
+                content=text,
+                category=category,
+                repo_root=repo_root,
+                source_document_id=doc_id,
+                expected_type=expected_type,
+                runs_path=runs_path,
+                allow_fallback=False,
+            )
+        except Exception as exc:
+            record_failure("INGESTION_FAILED", category, doc_id, exc)
+            continue
 
         if result.status == IngestionStatus.ARCHIVED_CANONICAL:
             print(f"CANONICAL_BLOCK_FOUND: {result.run_id} ({category})")
@@ -329,10 +347,15 @@ def sync_native_google_docs(
         elif result.status == IngestionStatus.NO_CANONICAL_BLOCK:
             print(f"NO_CANONICAL_BLOCK_YET: {category}")
         elif result.status == IngestionStatus.CANONICAL_BLOCK_INVALID:
-            print(f"CANONICAL_BLOCK_INVALID: {category}: {result.error}", file=sys.stderr)
+            record_failure("CANONICAL_BLOCK_INVALID", category, doc_id, result.error)
         else:
-            print(f"INGESTION_FAILED: {category} ({doc_id}): {result.error}", file=sys.stderr)
+            record_failure("INGESTION_FAILED", category, doc_id, result.error)
 
+    if failures:
+        raise SyncError(
+            f"{len(failures)} required native Google Doc source(s) failed: "
+            + "; ".join(failures)
+        )
     return archived_count, skipped_count
 
 
@@ -350,6 +373,8 @@ def render_markdown_file_to_html(md_path: Path, category: str, runs_path: Path) 
         print(f"MARKDOWN_RENDERED: {result.html_path.name}")
     elif result.status == IngestionStatus.ARCHIVED_FALLBACK:
         print(f"MARKDOWN_RENDERED_FALLBACK: {result.html_path.name}")
+    elif result.status != IngestionStatus.SKIPPED_EXISTING:
+        raise SyncError(f"folder report ingestion failed for {category}/{md_path.name}: {result.error}")
     return result.html_path or md_path.with_suffix(".html")
 
 
