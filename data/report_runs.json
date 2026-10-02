@@ -1616,6 +1616,22 @@
       "title": "Global Macro Early Warning｜Fed 鷹派分歧再升溫：Logan 要求至少再升 50bp，長端與能源壓力仍在",
       "topic": null
     },
+    "MTW-20261002-2159-us-jobs-cooling": {
+      "coverage_end_taipei": "2026-10-02T21:59:53+08:00",
+      "coverage_start_taipei": "2026-10-02T20:30:00+08:00",
+      "generated_at_taipei": "2026-10-02T21:59:53+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-02_2159_us-jobs-cooling.html",
+      "html_sha256": "648b94e45b9e899fdd6a64faad7ce30b63e95485ff6f5232375cd01669c50ba9",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-02_2159_us-jobs-cooling.md",
+      "markdown_sha256": "8631a2217f3c4bfdf283db2d74c295c447a481fe4a20c86dc258b56b86dc06d7",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20261002-2159-us-jobs-cooling",
+      "slug": "us-jobs-cooling",
+      "source_document_id": "1OudDZrY4Xdk3IKAtT-xvvUBwvkotU08ZwO6b-9OjRyk",
+      "title": "Global Macro Early Warning｜美國就業急降溫推遲升息，但長端利率與能源風險未解除",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
