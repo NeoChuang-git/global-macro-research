@@ -1615,6 +1615,22 @@
       "source_document_id": null,
       "title": "Global Macro Early Warning｜Fed 鷹派分歧再升溫：Logan 要求至少再升 50bp，長端與能源壓力仍在",
       "topic": null
+    },
+    "WKS-20260927-2000": {
+      "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
+      "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
+      "generated_at_taipei": "2026-09-27T20:00:58+08:00",
+      "html_path": "reports/weekly/Weekly_Strategy_2026-09-27_rerun_2000.html",
+      "html_sha256": "08c5e16f7d4c28461170d3afd658bb802234f4ceacf646ade917bf95a0671f38",
+      "markdown_path": "reports/weekly/Weekly_Strategy_2026-09-27_rerun_2000.md",
+      "markdown_sha256": "67843da5e2e29b18419ff3e5d558048c0891abc0f04320625bda04a1b38fb63d",
+      "report_type": "WEEKLY_STRATEGY",
+      "risk_light": "ORANGE",
+      "run_id": "WKS-20260927-2000",
+      "slug": "weekly_strategy",
+      "source_document_id": "15ZME47m_BAc3W7Z5Gcg97pHxiICULd-NRxe9Ox2NQrI",
+      "title": "Weekly Global Macro & Investment Strategy｜AI獲利動能撐住風險資產，但5.2%美債殖利率把「折現率壓力」推成主導風險",
+      "topic": null
     }
   },
   "schema_version": 1
