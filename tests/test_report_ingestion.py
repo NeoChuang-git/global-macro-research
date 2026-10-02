@@ -1,6 +1,7 @@
 import json
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 from scripts.report_ingestion import (
@@ -120,6 +121,69 @@ class TestReportIngestion(unittest.TestCase):
         self.assertTrue(runs_file.is_file())
         data = json.loads(runs_file.read_text(encoding="utf-8"))
         self.assertIn("GDB-20260929-0730", data.get("runs", {}))
+
+    def test_canonical_snapshots_never_overwrite_html_only_legacy_report(self):
+        directory = self.root / "reports/daily"
+        directory.mkdir()
+        legacy = directory / "Global_Daily_Brief_2026-09-29.html"
+        legacy.write_bytes(b"legacy html only")
+        result = ingest_report_content(SAMPLE_CANONICAL_BLOCK, "daily", self.root, allow_fallback=False)
+        self.assertEqual(legacy.read_bytes(), b"legacy html only")
+        self.assertNotEqual(result.html_path, legacy)
+
+    def test_same_time_distinct_run_ids_keep_every_snapshot(self):
+        snapshots = []
+        for i in range(3):
+            content = SAMPLE_CANONICAL_BLOCK.replace("GDB-20260929-0730", f"GDB-20260929-0730-{i}")
+            result = ingest_report_content(content, "daily", self.root, allow_fallback=False)
+            snapshots.append((result, result.markdown_path.read_bytes(), result.html_path.read_bytes()))
+        self.assertEqual(len({r.markdown_path for r, _, _ in snapshots}), 3)
+        for result, markdown, html in snapshots:
+            self.assertEqual(result.markdown_path.read_bytes(), markdown)
+            self.assertEqual(result.html_path.read_bytes(), html)
+
+    def test_processed_canonical_run_with_missing_or_corrupt_artifacts_fails(self):
+        result = ingest_report_content(SAMPLE_CANONICAL_BLOCK, "daily", self.root, allow_fallback=False)
+        markdown, html = result.markdown_path.read_bytes(), result.html_path.read_bytes()
+        for artifact, original in ((result.markdown_path, markdown), (result.html_path, html)):
+            for damage in ("missing", "corrupt"):
+                with self.subTest(artifact=artifact.suffix, damage=damage):
+                    if damage == "missing":
+                        artifact.unlink()
+                    else:
+                        artifact.write_bytes(b"changed bytes")
+                    failed = ingest_report_content(SAMPLE_CANONICAL_BLOCK, "daily", self.root, allow_fallback=False)
+                    self.assertEqual(failed.status, IngestionStatus.FAILED)
+                    self.assertIn("artifact", failed.error)
+                    artifact.write_bytes(original)
+
+    def test_canonical_render_failure_writes_no_artifacts_or_manifest(self):
+        with patch("scripts.report_ingestion.render_markdown_to_html", side_effect=RuntimeError("renderer failed")), \
+             self.assertRaisesRegex(RuntimeError, "renderer failed"):
+            ingest_report_content(SAMPLE_CANONICAL_BLOCK, "daily", self.root, allow_fallback=False)
+        self.assertFalse(any(p.is_file() for p in self.root.rglob("*")))
+
+    def test_processed_run_accepts_identical_raw_folder_block_and_crlf(self):
+        result = ingest_report_content(SAMPLE_CANONICAL_BLOCK, "daily", self.root, allow_fallback=False)
+        raw = ("Source note\r\n" + SAMPLE_CANONICAL_BLOCK.replace("\n", "\r\n") + "\r\nFooter").encode()
+        result.markdown_path.write_bytes(raw)
+        repeat = ingest_report_content(SAMPLE_CANONICAL_BLOCK, "daily", self.root, allow_fallback=False)
+        self.assertEqual(repeat.status, IngestionStatus.SKIPPED_EXISTING)
+        self.assertEqual(result.markdown_path.read_bytes(), raw)
+
+    def test_processed_run_does_not_accept_changed_body_with_same_run_id(self):
+        result = ingest_report_content(SAMPLE_CANONICAL_BLOCK, "daily", self.root, allow_fallback=False)
+        result.markdown_path.write_text(SAMPLE_CANONICAL_BLOCK.replace("Concluding summary.", "Changed conclusion."))
+        repeat = ingest_report_content(SAMPLE_CANONICAL_BLOCK, "daily", self.root, allow_fallback=False)
+        self.assertEqual(repeat.status, IngestionStatus.FAILED)
+        self.assertIn("checksum mismatch", repeat.error)
+
+    def test_processed_fallback_run_with_missing_html_fails(self):
+        result = ingest_report_content("# Weekly Strategy\nDetails", "weekly", self.root, original_filename="weekly.md")
+        result.html_path.unlink()
+        repeat = ingest_report_content("# Weekly Strategy\nDetails", "weekly", self.root, original_filename="weekly.md")
+        self.assertEqual(repeat.status, IngestionStatus.FAILED)
+        self.assertIn("missing recorded html artifact", repeat.error)
 
     def test_ingest_canonical_report_idempotency_and_force(self):
         # First ingestion
@@ -301,4 +365,3 @@ risk\\_light: GREEN
 
 if __name__ == "__main__":
     unittest.main()
-

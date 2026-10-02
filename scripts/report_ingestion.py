@@ -94,6 +94,46 @@ def hash_file(path: Path, algorithm: str = "sha256") -> str:
     return digest.hexdigest()
 
 
+def _processed_artifact_error(repo_root: Path, record: Any, category: str, run_id: str) -> Optional[str]:
+    """Check recorded artifacts before claiming that a run is already complete."""
+    if not isinstance(record, dict):
+        return "invalid recorded artifacts for processed run"
+    for kind, extension in (("markdown", ".md"), ("html", ".html")):
+        relative = record.get(f"{kind}_path")
+        expected_hash = record.get(f"{kind}_sha256")
+        if not isinstance(relative, str) or not isinstance(expected_hash, str):
+            return f"missing recorded {kind} artifact path or checksum"
+        pure = PurePosixPath(relative)
+        if pure.is_absolute() or ".." in pure.parts or pure.parts[:2] != ("reports", category) or pure.suffix != extension:
+            return f"unsafe recorded {kind} artifact path"
+        artifact = repo_root.joinpath(*pure.parts)
+        current = artifact
+        while current != repo_root:
+            if current.is_symlink():
+                return f"unsafe symlink in recorded {kind} artifact path"
+            current = current.parent
+        if not artifact.is_file():
+            return f"missing recorded {kind} artifact: {relative}"
+        try:
+            if hash_file(artifact) == expected_hash:
+                continue
+            if kind == "markdown":
+                # Folder mirroring can restore raw CRLF/outer source text after
+                # ingestion stored a normalized block hash. Accept only the
+                # identical validated canonical snapshot, not a matching run ID
+                # or folder checksum alone.
+                block = extract_latest_complete_report_block(artifact.read_text(encoding="utf-8"))
+                if block:
+                    metadata, _ = parse_and_validate_canonical_block(block, record.get("report_type"))
+                    snapshot = f"<<<REPORT_BEGIN>>>\n{block}\n<<<REPORT_END>>>\n".encode("utf-8")
+                    if metadata["run_id"] == run_id and hash_bytes(snapshot) == expected_hash:
+                        continue
+        except (OSError, UnicodeError, CanonicalBlockError) as exc:
+            return f"invalid recorded {kind} artifact: {relative}: {exc}"
+        return f"checksum mismatch for recorded {kind} artifact: {relative}"
+    return None
+
+
 def atomic_write_if_changed(path: Path, content: bytes) -> bool:
     if path.exists() and path.read_bytes() == content:
         return False
@@ -182,7 +222,7 @@ def ingest_report_content(
 
     category_dir = repo_root / "reports" / category
     category_dir.mkdir(parents=True, exist_ok=True)
-    existing_filenames = {p.name for p in category_dir.iterdir() if p.is_file()}
+    existing_filenames = {p.name for p in category_dir.iterdir()}
 
     # 1. Try canonical report block extraction
     block = extract_latest_complete_report_block(text)
@@ -216,6 +256,9 @@ def ingest_report_content(
         run_id = canonical_metadata["run_id"]
 
         if not force and is_run_id_processed(runs_data, run_id):
+            error = _processed_artifact_error(repo_root, runs_data["runs"][run_id], category, run_id)
+            if error:
+                return IngestionResult(status=IngestionStatus.FAILED, run_id=run_id, category=category, error=error)
             return IngestionResult(
                 status=IngestionStatus.SKIPPED_EXISTING,
                 run_id=run_id,
@@ -237,13 +280,11 @@ def ingest_report_content(
 
         # Archive canonical Markdown snapshot
         md_bytes = (f"<<<REPORT_BEGIN>>>\n{block}\n<<<REPORT_END>>>\n").encode("utf-8")
-        atomic_write_if_changed(md_full, md_bytes)
         md_sha256 = hash_bytes(md_bytes, "sha256")
 
         # Render HTML
         html_content = render_markdown_to_html(canonical_body, canonical_metadata)
         html_bytes = html_content.encode("utf-8")
-        atomic_write_if_changed(html_full, html_bytes)
         html_sha256 = hash_bytes(html_bytes, "sha256")
 
         # Record run in manifest
@@ -263,6 +304,10 @@ def ingest_report_content(
             "html_path": html_rel.as_posix(),
             "html_sha256": html_sha256,
         }
+        # Render before writing either artifact so rendering failures leave no
+        # orphan Markdown. Per-file writes/manifest updates remain non-transactional.
+        atomic_write_if_changed(md_full, md_bytes)
+        atomic_write_if_changed(html_full, html_bytes)
         record_report_run(runs_file, run_record)
 
         return IngestionResult(
@@ -287,6 +332,9 @@ def ingest_report_content(
     run_id = f"{category.upper()}-{stem}"
 
     if not force and is_run_id_processed(runs_data, run_id):
+        error = _processed_artifact_error(repo_root, runs_data["runs"][run_id], category, run_id)
+        if error:
+            return IngestionResult(status=IngestionStatus.FAILED, run_id=run_id, category=category, error=error)
         return IngestionResult(
             status=IngestionStatus.SKIPPED_EXISTING,
             run_id=run_id,
@@ -303,7 +351,6 @@ def ingest_report_content(
     html_full = repo_root.joinpath(*html_rel.parts)
 
     md_bytes = text.encode("utf-8")
-    atomic_write_if_changed(md_full, md_bytes)
     md_sha256 = hash_bytes(md_bytes, "sha256")
 
     meta = {
@@ -313,7 +360,6 @@ def ingest_report_content(
     }
     html_content = render_markdown_to_html(text, meta)
     html_bytes = html_content.encode("utf-8")
-    atomic_write_if_changed(html_full, html_bytes)
     html_sha256 = hash_bytes(html_bytes, "sha256")
 
     run_record = {
@@ -332,6 +378,8 @@ def ingest_report_content(
         "html_path": html_rel.as_posix(),
         "html_sha256": html_sha256,
     }
+    atomic_write_if_changed(md_full, md_bytes)
+    atomic_write_if_changed(html_full, html_bytes)
     record_report_run(runs_file, run_record)
 
     return IngestionResult(

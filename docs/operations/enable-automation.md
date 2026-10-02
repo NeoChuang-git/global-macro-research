@@ -73,6 +73,60 @@ global-macro-drive-reader@PROJECT_ID.iam.gserviceaccount.com
 
 Do not create or download a service-account key.
 
+### Native canonical Google Docs are separate required sources
+
+The default sync also exports these three native Google Docs as `text/plain`:
+
+| Category | Document ID |
+| --- | --- |
+| `daily` | `1NvDE2s4vqPERGOToh9sZHrp7y0_gmGEd4LjKNWfTVoM` |
+| `early-warning` | `1OudDZrY4Xdk3IKAtT-xvvUBwvkotU08ZwO6b-9OjRyk` |
+| `weekly` | `15ZME47m_BAc3W7Z5Gcg97pHxiICULd-NRxe9Ox2NQrI` |
+
+Sharing the report folders does not give the reader access to Docs outside
+those folders. Verify the IDs, native MIME types, export format, and the exact
+`GCP_SERVICE_ACCOUNT` identity before changing access. Drive HTTP 404 means
+either not found or not visible to that caller; it does not by itself prove a
+missing share. A successful export through a user's Drive connector does not
+prove access by the CI service account.
+
+When permission metadata confirms a gap, the minimum proposed change is Viewer
+access on the three Docs for the existing CI reader. Obtain owner approval
+before changing sharing; public sharing, editor access, new credentials, and
+broader folder access are unnecessary for this proposal.
+
+With native Docs enabled, any configured Doc fetch failure, invalid complete
+canonical block, or ingestion failure raises `SyncError` and exits non-zero.
+Diagnostics distinguish `SOURCE_DOC_NOT_FOUND_OR_NOT_VISIBLE` (404),
+`SOURCE_DOC_PERMISSION_DENIED` (401/403), and `SOURCE_DOC_FETCH_FAILED` (other
+fetch errors). All sources are attempted so one run reports the complete set of
+failures. An accessible Doc without a complete block remains a normal
+`NO_CANONICAL_BLOCK_YET` no-op; an already archived run is also successful.
+Neither proves that a fresh report was published.
+
+Weekly format version 2 accepts explicit Chinese equivalents for its seven
+otherwise unmatched required headings, including `Regime 轉換矩陣` and
+`下週催化劑行事曆`. This does not remove any required section or change the
+version 1 contract. A missing required section still fails validation.
+
+Generated native snapshots reserve both Markdown and HTML filenames. If a
+same-minute rerun name is occupied, an incrementing suffix preserves the older
+snapshot. A processed run is skipped only when its recorded artifacts still
+exist and match their checksums. For raw folder Markdown with CRLF or text
+outside its canonical markers, the identical validated canonical snapshot hash
+is also accepted; matching a run ID or Drive sync-state hash alone is not
+sufficient. Missing or changed artifacts fail ingestion instead of silently
+claiming completion. Rendering completes before artifact writes begin.
+
+Folder files and valid canonical artifacts may have been written locally before
+a later source fails; the sync is not a transaction across sources. The Actions
+commit step does not run after this failure, and the Pages `workflow_run` job
+requires a successful sync. The previously deployed site therefore stays
+available. No reports are deleted by this failure handling. Existing explicit
+folder-only mode (`--disable-native-docs`) remains available for intentional
+offline or folder-only use, but must not be used to hide a required source
+failure in production.
+
 ## 3. Add GitHub repository variables
 
 In **Settings → Secrets and variables → Actions → Variables**, add:

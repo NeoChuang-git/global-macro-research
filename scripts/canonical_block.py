@@ -4,6 +4,7 @@
 
 import re
 from datetime import datetime
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
 
 import yaml
@@ -249,6 +250,18 @@ SECTION_KEYWORD_ALIASES: Dict[str, List[str]] = {
     "source audit": ["source audit", "資料來源", "資料來源審計", "來源審計", "source"],
 }
 
+# Equivalent headings used by the bilingual Weekly v2 source. Keep these
+# scoped to that contract so v1 requirements and other report types are unchanged.
+WEEKLY_V2_SECTION_ALIASES: Dict[str, List[str]] = {
+    "weekly regime transition matrix": ["regime 轉換矩陣"],
+    "weekly macro signal board": ["每週總經訊號板"],
+    "signal persistence": ["訊號持續性評分"],
+    "macro data": ["總經資料與政策深度分析"],
+    "transmission": ["全球跨資產傳導"],
+    "risk lights": ["情境矩陣與風險燈號"],
+    "catalyst calendar": ["下週催化劑行事曆"],
+}
+
 
 def validate_required_sections(markdown_body: str, report_type: str, format_version: Any = 1) -> None:
     """
@@ -275,6 +288,8 @@ def validate_required_sections(markdown_body: str, report_type: str, format_vers
     for section in sections:
         sec_cf = section.casefold()
         aliases = SECTION_KEYWORD_ALIASES.get(sec_cf, [sec_cf])
+        if str(format_version) == "2" and report_type == "WEEKLY_STRATEGY":
+            aliases = aliases + WEEKLY_V2_SECTION_ALIASES.get(sec_cf, [])
         found = False
         for alias in aliases:
             a_cf = alias.casefold()
@@ -334,27 +349,41 @@ def determine_archive_filename(metadata: Dict[str, Any], existing_filenames: Opt
     slug = metadata.get("slug") or ""
     slug_clean = re.sub(r"[^a-zA-Z0-9_-]+", "_", slug).strip("_")
 
-    existing = existing_filenames or set()
+    # A snapshot owns both Markdown and HTML; an HTML-only legacy report also
+    # reserves its stem. Every rerun candidate must be checked for collisions.
+    existing = {
+        str(Path(name).with_suffix(".md"))
+        for name in (existing_filenames or set())
+    }
+
+    def available(candidate: str) -> str:
+        stem = candidate[:-3]
+        suffix = 2
+        unique = candidate
+        while unique in existing:
+            unique = f"{stem}_{suffix}.md"
+            suffix += 1
+        return unique
 
     if report_type == "GLOBAL_DAILY_BRIEF":
         primary = f"Global_Daily_Brief_{date_str}.md"
         if primary not in existing:
             return primary
-        return f"Global_Daily_Brief_{date_str}_rerun_{time_str}.md"
+        return available(f"Global_Daily_Brief_{date_str}_rerun_{time_str}.md")
 
     elif report_type == "MACRO_TAIWAN_EARLY_WARNING":
         if slug_clean:
-            return f"Global_Macro_Early_Warning_{date_str}_{time_str}_{slug_clean}.md"
+            return available(f"Global_Macro_Early_Warning_{date_str}_{time_str}_{slug_clean}.md")
         primary = f"Global_Macro_Early_Warning_{date_str}.md"
         if primary not in existing:
             return primary
-        return f"Global_Macro_Early_Warning_{date_str}_{time_str}.md"
+        return available(f"Global_Macro_Early_Warning_{date_str}_{time_str}.md")
 
     elif report_type == "WEEKLY_STRATEGY":
         primary = f"Weekly_Strategy_{date_str}.md"
         if primary not in existing:
             return primary
-        return f"Weekly_Strategy_{date_str}_rerun_{time_str}.md"
+        return available(f"Weekly_Strategy_{date_str}_rerun_{time_str}.md")
 
     # Default fallback
-    return f"Report_{date_str}_{time_str}.md"
+    return available(f"Report_{date_str}_{time_str}.md")
