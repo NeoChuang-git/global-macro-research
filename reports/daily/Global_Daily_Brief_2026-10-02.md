@@ -1,4 +1,4 @@
-<<<REPORT_BEGIN>>>
+﻿<<<REPORT_BEGIN>>>
 ---
 research_status: COMPLETE
 generated_at_taipei: 2026-10-02T07:28:25+08:00
