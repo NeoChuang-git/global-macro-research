@@ -1,5 +1,21 @@
 {
   "runs": {
+    "DAILY-Global_Daily_Brief_2026-10-03": {
+      "coverage_end_taipei": null,
+      "coverage_start_taipei": null,
+      "generated_at_taipei": null,
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-03.html",
+      "html_sha256": "d93c9f1693c40fb58163a17a73d50661452229fdd63a1a8ab3c776cc6427ef4f",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-03.md",
+      "markdown_sha256": "e22e4fab0483d7a57bf7eeb65d58e67cfff831614f8ca871c9db74dd25a48e96",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": null,
+      "run_id": "DAILY-Global_Daily_Brief_2026-10-03",
+      "slug": null,
+      "source_document_id": null,
+      "title": "Global Daily Brief｜就業降溫推升 Nasdaq、Amazon 將 Blackwell 資產化，AI 資本支出進入融資工程階段",
+      "topic": null
+    },
     "GDB-20260903-0150": {
       "coverage_end_taipei": "2026-09-03 01:50:00+08:00",
       "coverage_start_taipei": "2026-09-02 01:50:00+08:00",
@@ -478,6 +494,22 @@
       "slug": "broadcom-anthropic-ai-financing",
       "source_document_id": null,
       "title": "Global Daily Brief｜Broadcom 對 Anthropic 提供最高 420 億美元融資，AI 基建轉向「供應商＋資本」綁定",
+      "topic": null
+    },
+    "GDB-20261004-0816": {
+      "coverage_end_taipei": "2026-10-04T08:16:38+08:00",
+      "coverage_start_taipei": "2026-10-03T08:16:38+08:00",
+      "generated_at_taipei": "2026-10-04T08:16:38+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-04.html",
+      "html_sha256": "387591117bff32a7781644d3ebf627d67c72ed4eda050581462c8ab2c749f30e",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-04.md",
+      "markdown_sha256": "2a1414678a578e24430e05e2767405f9ed1afd195eff524ebd750e3168f35d86",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "ORANGE",
+      "run_id": "GDB-20261004-0816",
+      "slug": "ai-capex-roi-governance-power",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜AI 資本支出進入回報驗證期，治理與電力成為下一階段定價變數",
       "topic": null
     },
     "MEW-20260903-0003-LRD": {

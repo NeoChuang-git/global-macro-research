@@ -306,6 +306,24 @@
       "sha256": "9c38d9ab9e56e73434903d855e16e7af54737c7e620f17234fb8781f92d50d3b",
       "size": 9079
     },
+    "reports/daily/Global_Daily_Brief_2026-10-03.md": {
+      "category": "daily",
+      "drive_file_id": "1v_zjnFGRsnhciHWn3AU3cDXNLZIgifKv",
+      "md5_checksum": "1349e81863375b84e6dc9dcffc48f661",
+      "modified_time": "2026-10-03T01:26:27.772Z",
+      "name": "Global_Daily_Brief_2026-10-03.md",
+      "sha256": "e22e4fab0483d7a57bf7eeb65d58e67cfff831614f8ca871c9db74dd25a48e96",
+      "size": 12844
+    },
+    "reports/daily/Global_Daily_Brief_2026-10-04.md": {
+      "category": "daily",
+      "drive_file_id": "1XCer07NGh-KPdcKToGNKCX8C6YCKRWsJ",
+      "md5_checksum": "e83f8293067c8c3745f4d0aab707efa6",
+      "modified_time": "2026-10-04T02:29:20.991Z",
+      "name": "Global_Daily_Brief_2026-10-04.md",
+      "sha256": "e33816fe4924cdc2328702e4888f0410ad886e7a6652903c307bedd8eb504198",
+      "size": 14137
+    },
     "reports/daily/Global_Macro_Morning_2026-08-25.html": {
       "category": "daily",
       "drive_file_id": "10dgWjdJhW-HwSZRp8tFbQ_wSDiQLIiWu",
@@ -1295,6 +1313,15 @@
       "name": "Global_Macro_Early_Warning_2026-10-02_0756_fed-hawkish-rates-energy.md",
       "sha256": "f4ce332bec9a0135a15ad01c6fb96e7ffd72e0451d75bbe13bee932cc64d4850",
       "size": 12395
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-02_2159_us-jobs-cooling.md": {
+      "category": "early-warning",
+      "drive_file_id": "1TVeQVQV-SybVrY0YCwiidL3bzjsEtOPQ",
+      "md5_checksum": "0a91cd9c796563e145ec9301ed725674",
+      "modified_time": "2026-10-02T19:32:12.576Z",
+      "name": "Global_Macro_Early_Warning_2026-10-02_2159_us-jobs-cooling.md",
+      "sha256": "6b14e6adbdfff05bc0cd7b8d0b260d6a79f38c89cf0229d9ff61e42a6ecd74c2",
+      "size": 20603
     },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
