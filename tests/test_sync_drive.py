@@ -294,6 +294,42 @@ class SyncDriveTests(unittest.TestCase):
              self.assertRaisesRegex(SyncError, "INGESTION_FAILED"):
             sync_native_google_docs(self._service(), self.root, self.doc_sources)
 
+    def test_folder_replay_preserves_verified_journal_artifacts(self):
+        source = make_sample_doc()
+        service = self._service(docs={"doc-daily-1": source})
+        sync_reports(service, self.root, self.folder_ids, self.doc_sources)
+        report = self.root / "reports/daily/Global_Daily_Brief_2026-09-03.md"
+        html = report.with_suffix(".html")
+        runs = self.root / "data/report_runs.json"
+        before = [p.read_bytes() for p in (report, html, runs)]
+        raw = ("\ufeff" + source.replace("\n\n", "\n\n\n\n")).encode()
+        service.files_api.folders[self.folder_ids["daily"]] = [drive_file("replay", report.name, raw)]
+        service.files_api.contents["replay"] = raw
+        for _ in range(2):
+            sync_reports(service, self.root, self.folder_ids, self.doc_sources)
+            self.assertEqual([p.read_bytes() for p in (report, html, runs)], before)
+        self.assertIn("replay", service.files_api.downloads)
+
+        # A valid download must not heal or hide a corrupted recorded artifact.
+        report.write_bytes(b"corrupted snapshot")
+        with self.assertRaisesRegex(SyncError, "checksum mismatch"):
+            sync_reports(service, self.root, self.folder_ids, self.doc_sources)
+        self.assertEqual(report.read_bytes(), b"corrupted snapshot")
+        self.assertEqual(html.read_bytes(), before[1])
+        self.assertEqual(runs.read_bytes(), before[2])
+
+    def test_text_download_keeps_original_and_does_not_redownload(self):
+        name = "Global_Daily_Brief_2026-10-04.txt"
+        raw = b"# Daily report\n\nReport body.\n"
+        self.folders[self.folder_ids["daily"]] = [drive_file("text-report", name, raw)]
+        service = self._service(contents={"text-report": raw})
+        sync_reports(service, self.root, self.folder_ids, enable_native_docs=False)
+        self.assertEqual((self.root / "reports/daily" / name).read_bytes(), raw)
+        self.assertTrue((self.root / "reports/daily" / name.replace(".txt", ".html")).is_file())
+        result = sync_reports(service, self.root, self.folder_ids, enable_native_docs=False)
+        self.assertEqual(result.updated, 0)
+        self.assertEqual(service.files_api.downloads, ["text-report"])
+
     def test_missing_processed_artifact_is_required_source_failure(self):
         service = self._service(docs={"doc-daily-1": make_sample_doc()})
         sync_reports(service, self.root, self.folder_ids, self.doc_sources)
