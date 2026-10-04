@@ -359,16 +359,15 @@ def sync_native_google_docs(
     return archived_count, skipped_count
 
 
-def render_markdown_file_to_html(md_path: Path, category: str, runs_path: Path) -> Path:
+def render_markdown_file_to_html(md_path: Path, category: str, runs_path: Path, content: Optional[bytes] = None) -> Path:
     """Render a downloaded .md / .txt file to companion .html with institutional styling."""
     repo_root_dir = runs_path.parent.parent if runs_path.parent.name == "data" else runs_path.parent
-    result = ingest_report_file(
-        file_path=md_path,
-        category=category,
-        repo_root=repo_root_dir,
-        runs_path=runs_path,
-        allow_fallback=True,
-    )
+    options = dict(category=category, repo_root=repo_root_dir, runs_path=runs_path, allow_fallback=True)
+    if content is None:
+        result = ingest_report_file(file_path=md_path, **options)
+    else:
+        # Validate existing run artifacts before a folder download can replace them.
+        result = ingest_report_content(content, original_filename=md_path.name, **options)
     if result.status == IngestionStatus.ARCHIVED_CANONICAL:
         print(f"MARKDOWN_RENDERED: {result.html_path.name}")
     elif result.status == IngestionStatus.ARCHIVED_FALLBACK:
@@ -495,10 +494,13 @@ def sync_reports(
 
         for relative_text in sorted(staged):
             written_path = repo_root / relative_text
-            _atomic_write_if_changed(written_path, staged[relative_text])
             if relative_text.lower().endswith((".md", ".txt")):
                 runs_file = repo_root / RUNS_STATE_PATH
-                render_markdown_file_to_html(written_path, written_path.parent.name, runs_file)
+                render_markdown_file_to_html(written_path, written_path.parent.name, runs_file, staged[relative_text])
+                if written_path.suffix.lower() == ".txt":
+                    _atomic_write_if_changed(written_path, staged[relative_text])
+            else:
+                _atomic_write_if_changed(written_path, staged[relative_text])
 
         next_state = {"schema_version": 1, "files": dict(sorted(next_files.items()))}
         _atomic_write_if_changed(state_file, _json_bytes(next_state))
