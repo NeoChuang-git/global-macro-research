@@ -1680,6 +1680,22 @@
       "title": "Global Macro Early Warning｜美國就業急降溫推遲升息，但長端利率與能源風險未解除",
       "topic": null
     },
+    "MTW-20261005-1539-global-term-premium": {
+      "coverage_end_taipei": "2026-10-05T15:39:21+08:00",
+      "coverage_start_taipei": "2026-10-05T14:39:21+08:00",
+      "generated_at_taipei": "2026-10-05T15:39:21+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-05_1539_global-term-premium.html",
+      "html_sha256": "150e7d85b231e03c1c72a2704e983e88356815ef2ade5fe0e00a203e72d3e9df",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-05_1539_global-term-premium.md",
+      "markdown_sha256": "93731ad423196581ac1e8d227be5b9d6fd392b55fe563da76eac15043f284840",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "ORANGE",
+      "run_id": "MTW-20261005-1539-global-term-premium",
+      "slug": "global-term-premium",
+      "source_document_id": "1OudDZrY4Xdk3IKAtT-xvvUBwvkotU08ZwO6b-9OjRyk",
+      "title": "Global Macro Early Warning｜全球長端財政壓力擴散，台股創高但廣度明顯背離",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
