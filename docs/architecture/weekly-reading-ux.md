@@ -1,59 +1,104 @@
-# Weekly reading interface — phase 1
+# Weekly reading interface — original-style correction
 
-## Scope and acceptance
+## Current scope — 2026-10-06
 
-Improve the existing deterministic report presentation without changing research,
-canonical Markdown content, prompts, or iframe permissions. The original
-2026-10-04 preview scope excluded publication and changes to report snapshots or
-manifests. The authorized 2026-10-06 release continuation below uses the existing
-versioned rerun path while preserving every original report snapshot.
+The user rejected the broader candidate's overall rendering and requested the
+original production visual style. This scope supersedes the historical phase 1
+specification and its deployment approval. PR #18 stays draft. Do not merge or
+publish until the user reviews and approves this corrected candidate.
 
-- Recognize the bilingual Weekly executive strategy summary; retain every bullet.
-- Give H2/H3 headings stable, unique anchors and offer a keyboard-operable chapter
-  directory. Retain the complete heading text and section order.
-- Limit narrative width to 800px while tables can use the 1080px content width.
-- At 375/390px, preserve readable text and every table column, keep the first
-  column visible during horizontal scrolling, and explain keyboard/touch scrolling.
-- Keep headers attached to the table scrollport for long tables. Short tables
-  remain in normal page flow; do not promise page-sticky headers inside an
-  overflow wrapper. Use native, bounded two-axis scrolling only when necessary.
-- Work without JavaScript inside the existing sandboxed report iframe.
-- Verify 1440px desktop and 375/390px mobile, direct and iframe, keyboard/anchors,
-  long-table header behavior, and Daily/Macro renderer regressions.
-- Compare all existing research text before/after; hash canonical inputs and
-  verify tracked reports/data remain unchanged. Deliver real local screenshots.
+Use production main `9ad51a36cb70bd9badcdd1e98a16f88c5a962d39` as the visual
+baseline. Preserve its palette, typography, container widths, spacing, summary
+list, and cards. Remove the visible chapter directory and the previous candidate's
+narrow narrative, summary-card expansion, fixed first columns, scrolling hints,
+and bounded vertical table scrollports. Stable heading IDs may remain; no new
+visible navigation or interactions are added.
 
-## Decisions
+Only these three October 4 paragraphs become two-column tables:
 
-Use native details/summary for a compact chapter directory, ordinary
-fragment links, and focusable named table regions. The header and first column
-stick within each table's scrollport. The scrollport grows naturally up to a
-viewport-relative maximum height, so short tables need no inner vertical scroll.
-No guessed paragraph-to-table conversion, hidden columns, source edits, new
-dependencies, or smaller table fonts. Existing summary and table styles are
-extended, rather than adding a second renderer.
+1. 訊號持續性評分: 訊號 / 持續性評分; preserve the eight signal names, order,
+   and scores (91, 90, 88, 86, 83, 66, 64, 28). Do not invent a /100 scale.
+2. 總經資料與政策深度分析: 類別 / 內容; FACT, MARKET EXPECTATION, INFERENCE.
+   FACT has three lines replacing its two semicolon separators. Preserve every
+   number and qualifier, including 12月仍可能行動 and 不等於全面金融條件放鬆.
+3. 情境矩陣與風險燈號: retain the existing current ORANGE badge in a paragraph
+   before the table. The three scenario rows have visible GREEN / YELLOW / RED
+   labels with the existing colored badges and complete trigger conditions.
+   RED retains 信用利差擴張且AI財測下修. Do not invent an ORANGE scenario row or
+   imply the three scenarios are current states.
 
-## Local task graph
+Small readability corrections are limited to existing Previous/neutral text
+contrast and intact percentage ranges. Only the new two-column tables override
+the original 680px minimum table width and allow long labels to wrap. Original
+wide matrices retain their original horizontal scrolling and styling.
 
-1. RED: add behavior tests for Weekly summary recognition, anchors, table
-   accessibility, content preservation, and shared-renderer behavior.
-2. GREEN: implement deterministic presentation helpers and responsive CSS.
-3. Preview: render into a separate workspace directory; copy reader assets there
-   and create a preview-only catalog. Never write into tracked reports/data.
-4. Verify: unit suite, applicable static checks, browser checks, screenshots.
-5. Review: parallel Standards and Spec review; resolve findings and repeat only
-   affected checks. Document results and deferred deployment steps.
+## Implementation and preservation contract
 
-## Release contract
+`scripts/weekly_presentation.py` holds three explicit source-to-row mappings.
+They apply only to `WEEKLY_STRATEGY`, `WKS-20261004-2045`, a unique exact chapter
+heading, and a single plain paragraph matching the entire approved source.
+Additional paragraphs, links, markup, missing fields, changed numbers or
+qualifiers leave that section unchanged. There is no generic semicolon parser
+and no research-generation prompt change. Scenario labels are restored after
+legacy semantic enrichment, which otherwise renders standalone risk words as
+emoji only; current ORANGE processing remains unchanged.
 
-The stylesheet is embedded in generated HTML, so renderer changes apply to newly
-ingested reports. Existing HTML must remain unchanged. For the selected October 4
-Weekly, use the existing `ingest_report_content(force=True)` interface without
-`original_filename`; its collision-safe naming produces a separate rerun pair.
-Update the existing run's artifact pointers/checksums through ingestion and
+Canonical Markdown remains byte-for-byte identical. All 285 production report
+artifacts remain immutable. The unmerged candidate at `0ffe2c18` is preserved
+in Git history and `codex/weekly-reading-ux-before-style-correction`; local
+patches and archived previews remain in the evidence directory.
+
+Update only the existing unpublished `_rerun_2045` candidate pair through
+`ingest_report_content(force=True, original_filename=<existing rerun name>)`,
+preserving the run's source document ID. This explicit filename is allowed only
+for this unpublished candidate revision, not for immutable production reports.
+It avoids creating another `_2` candidate. Ingestion updates the run's checksum;
 rebuild the catalog through `ReportCatalog.build_from_scan`. Do not bypass
-checksum validation, change research metadata, invent a new run ID, or rewrite
-the original files. Do not repeat `force=True` once the rerun exists.
+checksum checks, change research metadata, or invent a run ID.
+
+## Acceptance and verification
+
+- Five tables total: the original two and the specified three. Preserve all
+  24 chapters, research links, numbers, conditions and original table cells.
+- Reconstruct the original paragraphs from actual visible table cells and
+  compare exact wording/punctuation; hidden copies are not preservation proof.
+- Negative cases must leave unmatched paragraphs unchanged. Daily and Macro
+  research, tables, and summary layouts retain baseline behavior.
+- Compare CSS against production; differences must be limited to the listed
+  contrast, numeric-range and new-table rules. No directory markup/CSS remains.
+- Full unit suite, deterministic render, original-file hashes, run/catalog
+  changes, and isolated site build must pass. Run Standards and Spec reviews.
+- Fresh visual acceptance is pending at desktop 1440px and mobile 375/390px,
+  direct and iframe: confirm original style, visible risk labels, no directory,
+  readable new tables, complete original wide tables and no text truncation.
+  No supported browser/CUA is available here. Do not install tools or change
+  browser/security settings; HTTP/DOM checks do not count as screenshots.
+
+## Corrected candidate verification — 2026-10-06
+
+- The 12 scoped tests were observed failing on the restored baseline, then
+  passed with the three approved mappings. Full suite: 122 tests passed.
+- Independent Standards and Spec reviews passed. Spec also exercised 18
+  malformed/format-changed source cases; all preserved the original DOM.
+- All 285 production artifact bytes match `9ad51a36`; candidate Markdown is
+  identical to canonical SHA-256 `bcb47f78c0fd28aa286b5b4c6d1054417683a345e47947afc52947f00d862d12`.
+- Corrected HTML SHA-256:
+  `70918b6913db9e2bc73a44ed0ad7dd2ef06745790759a012617a21ac9dd28cdd`.
+  Its visible cells reconstruct the original paragraphs; the report retains
+  24 chapters and five tables. Current ORANGE is unchanged.
+- Compared with the prior unpublished candidate, run manifest and catalog
+  change only the candidate HTML hash. Site build, Python compilation and
+  `git diff --check` pass.
+- The loopback Pages preview uses port 8768; isolated freshly rendered Daily
+  and Macro regression fixtures use 8769. Older preview archives are retained.
+- No fresh screenshots or visual acceptance are claimed. User confirmation
+  of this corrected candidate remains required before merge/deployment.
+
+## Historical evidence — superseded candidate only
+
+Everything below records the former candidate and its earlier authorization.
+It is retained for traceability, not current acceptance or deployment approval.
+Its screenshots and pass counts do not validate the corrected candidate.
 
 ## Verification results — 2026-10-04
 

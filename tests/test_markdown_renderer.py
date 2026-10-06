@@ -63,7 +63,7 @@ class MarkdownRendererTests(unittest.TestCase):
         self.assertIn("<table>", rendered)
         self.assertIn("<thead>", rendered)
         self.assertIn("<tbody>", rendered)
-        self.assertIn('<th scope="col">', rendered)
+        self.assertIn("<th>", rendered)
         self.assertIn("<td>", rendered)
         self.assertIn("10Y 殖利率（Yield）", rendered)
 
