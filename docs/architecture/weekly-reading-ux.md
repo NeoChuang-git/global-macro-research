@@ -14,7 +14,7 @@ narrow narrative, summary-card expansion, fixed first columns, scrolling hints,
 and bounded vertical table scrollports. Stable heading IDs may remain; no new
 visible navigation or interactions are added.
 
-Only these three October 4 paragraphs become two-column tables:
+The five approved October 4 paragraphs become compact tables:
 
 1. 訊號持續性評分: 訊號 / 持續性評分; preserve the eight signal names, order,
    and scores (91, 90, 88, 86, 83, 66, 64, 28). Do not invent a /100 scale.
@@ -26,15 +26,28 @@ Only these three October 4 paragraphs become two-column tables:
    labels with the existing colored badges and complete trigger conditions.
    RED retains 信用利差擴張且AI財測下修. Do not invent an ORANGE scenario row or
    imply the three scenarios are current states.
+4. Regime 轉換矩陣: 情境 / 前期機率 / 本期機率. Preserve all five pairs:
+   Soft Landing 28%→31%, Sticky Inflation 34%→32%, Growth Slowdown 17%→20%,
+   Funding/Liquidity Stress 13%→10%, Stagflation 8%→7%. Keep the complete
+   dual-peak and ORANGE conclusion in a paragraph after the table.
+5. 每週總經訊號板: 領域 / 訊號與判讀. Keep ten rows in original order,
+   including Growth's mixed directions, Inflation's 但 clause, Labor's 形成Trend,
+   Liquidity/Credit's 暫無系統性stress and FX funding's 中性. Do not infer missing
+   signal IDs, directions or values. Keep the original direction styling.
+
+The last two conversions were requested after candidate `4a3dd361`. The supplied
+screenshot was materialized to the local executor and visually inspected; its
+two paragraphs match canonical source. This extension changes no other chapter,
+CSS, renderer behavior, layout or previously approved table.
 
 Small readability corrections are limited to existing Previous/neutral text
-contrast and intact percentage ranges. Only the new two-column tables override
+contrast and intact percentage ranges. Only the approved compact tables override
 the original 680px minimum table width and allow long labels to wrap. Original
 wide matrices retain their original horizontal scrolling and styling.
 
 ## Implementation and preservation contract
 
-`scripts/weekly_presentation.py` holds three explicit source-to-row mappings.
+`scripts/weekly_presentation.py` holds five explicit source-to-row mappings.
 They apply only to `WEEKLY_STRATEGY`, `WKS-20261004-2045`, a unique exact chapter
 heading, and a single plain paragraph matching the entire approved source.
 Additional paragraphs, links, markup, missing fields, changed numbers or
@@ -48,24 +61,26 @@ artifacts remain immutable. The unmerged candidate at `0ffe2c18` is preserved
 in Git history and `codex/weekly-reading-ux-before-style-correction`; local
 patches and archived previews remain in the evidence directory.
 
-Update only the existing unpublished `_rerun_2045` candidate pair through
-`ingest_report_content(force=True, original_filename=<existing rerun name>)`,
-preserving the run's source document ID. This explicit filename is allowed only
-for this unpublished candidate revision, not for immutable production reports.
-It avoids creating another `_2` candidate. Ingestion updates the run's checksum;
-rebuild the catalog through `ReportCatalog.build_from_scan`. Do not bypass
+The previous original-style candidate `4a3dd361` and its `_rerun_2045` pair
+remain unchanged. For this two-section extension, use the existing
+`ingest_report_content(force=True)` API without `original_filename` once. Its
+collision-safe archive naming creates `_rerun_2045_2.{md,html}`. Preserve the
+source document ID and canonical bytes. Ingestion updates the same run's artifact
+pointers/checksums; rebuild the catalog through `ReportCatalog.build_from_scan`
+with existing Drive sync state. Both earlier report URLs remain available.
+Do not repeat force ingestion or overwrite a previous candidate. Do not bypass
 checksum checks, change research metadata, or invent a run ID.
 
 ## Acceptance and verification
 
-- Five tables total: the original two and the specified three. Preserve all
+- Seven tables total: the previous five plus these two new tables. Preserve all
   24 chapters, research links, numbers, conditions and original table cells.
 - Reconstruct the original paragraphs from actual visible table cells and
   compare exact wording/punctuation; hidden copies are not preservation proof.
 - Negative cases must leave unmatched paragraphs unchanged. Daily and Macro
   research, tables, and summary layouts retain baseline behavior.
-- Compare CSS against production; differences must be limited to the listed
-  contrast, numeric-range and new-table rules. No directory markup/CSS remains.
+- For this extension, CSS and all five prior tables must match `4a3dd361`
+  exactly. No directory markup/CSS or layout change is introduced.
 - Full unit suite, deterministic render, original-file hashes, run/catalog
   changes, and isolated site build must pass. Run Standards and Spec reviews.
 - Fresh visual acceptance is pending at desktop 1440px and mobile 375/390px,
@@ -74,7 +89,30 @@ checksum checks, change research metadata, or invent a run ID.
   No supported browser/CUA is available here. Do not install tools or change
   browser/security settings; HTTP/DOM checks do not count as screenshots.
 
-## Corrected candidate verification — 2026-10-06
+## Regime and signal-board extension verification — 2026-10-06
+
+- New requirements failed on `4a3dd361` (four RED failures); all 17 scoped
+  tests pass after implementation, including 11 new changed-source cases.
+  Full suite: 127 tests passed. Independent Standards and Spec reviews pass.
+- Regime's actual visible cells reconstruct the five original probability
+  transitions, with its full conclusion after the table. Macro's actual visible
+  cells reconstruct all ten original clauses including every qualifier.
+- The prior five table DOMs, CSS and shared renderer match `4a3dd361` exactly.
+  All 287 previous report files, including its candidate pair, remain unchanged.
+- New candidate: `reports/weekly/Weekly_Strategy_2026-10-04_rerun_2045_2.html`.
+  HTML SHA-256: `ab53d43b5d839c4c4531e1a24baaa79192bc94a822a0059cf66552a9ac00de66`.
+  Canonical Markdown SHA-256 remains
+  `bcb47f78c0fd28aa286b5b4c6d1054417683a345e47947afc52947f00d862d12`.
+- The same run's artifact pointers and HTML hash change; the catalog preserves
+  all three report URLs and selects `_2` as latest. Deterministic rendering,
+  site build, Python compilation and source/test/doc/data whitespace checks pass.
+- User-provided reference screenshot was downloaded with Library metadata and
+  inspected locally. It is source evidence, not a screenshot of the new UI.
+  Fresh output browser validation and user confirmation remain pending.
+- No research prompt changes, extra chapter transformations, tool installation,
+  browser/security changes, merge or deployment are included.
+
+## Previous five-table candidate verification — 2026-10-06 (4a3dd361)
 
 - The 12 scoped tests were observed failing on the restored baseline, then
   passed with the three approved mappings. Full suite: 122 tests passed.

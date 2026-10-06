@@ -39,6 +39,30 @@ SCENARIOS = [
     ["YELLOW", "長端回落但估值仍高。"],
     ["RED", "能源再升、10Y創高、信用利差擴張且AI財測下修。"],
 ]
+REGIMES = [
+    ["Soft Landing", "28%", "31%"],
+    ["Sticky Inflation", "34%", "32%"],
+    ["Growth Slowdown", "17%", "20%"],
+    ["Funding/Liquidity Stress", "13%", "10%"],
+    ["Stagflation", "8%", "7%"],
+]
+MACRO_SIGNALS = [
+    ["Growth", "us_growth_momentum → 持平/↘ 惡化"],
+    ["Inflation", "us_inflation_momentum ↗ 改善但energy_inflation ↘ 惡化"],
+    ["Labor", "labor_market_cooling形成Trend"],
+    ["Fed", "fed_policy_tightening ↗ 改善"],
+    ["Rates", "rates_shock ↘ 惡化"],
+    ["Liquidity/Credit", "暫無系統性stress"],
+    ["Fiscal", "treasury_supply_stress ↘ 惡化"],
+    ["FX funding", "中性"],
+    ["Trade", "global_trade_cycle ↗ 改善"],
+    ["Asia/Taiwan", "taiwan_leading_cycle ↗ 改善"],
+]
+
+
+def macro_paragraph(rows):
+    return "；".join(key + ("" if key in ("Liquidity/Credit", "FX funding") else "：") + value
+                    for key, value in rows) + "。"
 
 
 def source(stem=WEEKLY):
@@ -75,6 +99,10 @@ def reconstructed_research(soup):
             text = "".join(key + "：" + value.replace("\n", "；") for key, value in rows)
         elif schema == "risk-scenarios-v1":
             text = "".join(key + "：" + value for key, value in rows)
+        elif schema == "regime-transition-v1":
+            text = "；".join(f"{name} {prior}→{current}" for name, prior, current in rows) + "。"
+        elif schema == "macro-signal-board-v1":
+            text = macro_paragraph(rows)
         else:
             raise AssertionError(schema)
         replacement = clone.new_tag("p")
@@ -135,13 +163,96 @@ class WeeklyReadingTests(unittest.TestCase):
         risk = visible_rows(soup.select_one('[data-weekly-schema="risk-scenarios-v1"]'))
         self.assertEqual(paragraph(soup, "情境矩陣與風險燈號") + "".join(k + "：" + v for k, v in risk), paragraph(before, "情境矩陣與風險燈號"))
 
-    def test_only_three_sections_change_and_original_two_tables_are_preserved(self):
+    def test_only_five_sections_change_and_original_two_tables_are_preserved(self):
         before = BeautifulSoup((ROOT / "reports" / (WEEKLY + ".html")).read_text(), "html.parser")
         after = render()
-        self.assertEqual(len(after.select("table")), 5)
+        self.assertEqual(len(after.select("table")), 7)
         self.assertEqual(reconstructed_research(before), reconstructed_research(after))
         self.assertEqual([visible_rows(t) for t in before.select("table")], [visible_rows(t) for t in after.select('table:not([data-weekly-schema])')])
         self.assertEqual([(a.get_text(), a.get("href")) for a in before.select("main a")], [(a.get_text(), a.get("href")) for a in after.select("main a")])
+
+    def test_regime_table_keeps_five_probability_pairs_and_complete_conclusion(self):
+        soup = render()
+        table = soup.select_one('[data-weekly-schema="regime-transition-v1"]')
+        self.assertIsNotNone(table)
+        self.assertEqual([h.get_text() for h in table.select("th")], ["情境", "前期機率", "本期機率"])
+        self.assertEqual(visible_rows(table), REGIMES)
+        conclusion = table.parent.find_next_sibling("p")
+        self.assertEqual(conclusion.get_text(), "主Regime仍為Soft Landing / Sticky Inflation雙峰；Risk Light維持ORANGE。")
+        before = BeautifulSoup((ROOT / "reports" / (WEEKLY + ".html")).read_text(), "html.parser")
+        reconstructed = "；".join(f"{name} {prior}→{current}" for name, prior, current in visible_rows(table)) + "。" + conclusion.get_text()
+        self.assertEqual(reconstructed, paragraph(before, "Regime 轉換矩陣"))
+
+    def test_macro_signal_table_keeps_ten_domains_and_all_qualifiers(self):
+        table = render().select_one('[data-weekly-schema="macro-signal-board-v1"]')
+        self.assertIsNotNone(table)
+        self.assertEqual([h.get_text() for h in table.select("th")], ["領域", "訊號與判讀"])
+        rows = [[cell.get_text() for cell in row.find_all("td", recursive=False)] for row in table.select("tbody tr")]
+        self.assertEqual(rows, MACRO_SIGNALS)
+        before = BeautifulSoup((ROOT / "reports" / (WEEKLY + ".html")).read_text(), "html.parser")
+        self.assertEqual(macro_paragraph(rows), paragraph(before, "每週總經訊號板"))
+
+    def test_new_tables_preserve_previous_five_tables_and_original_style(self):
+        previous = BeautifulSoup((ROOT / "reports" / (WEEKLY + "_rerun_2045.html")).read_text(), "html.parser")
+        after = render()
+        unchanged = after.select('table:not([data-weekly-schema="regime-transition-v1"]):not([data-weekly-schema="macro-signal-board-v1"])')
+        self.assertEqual([str(t) for t in previous.select("table")], [str(t) for t in unchanged])
+        self.assertEqual(str(previous.select_one("style")), str(after.select_one("style")))
+
+    def test_new_sections_fail_closed_for_changed_data_structure_and_qualifiers(self):
+        metadata, body = source()
+        cases = (
+            ("Soft Landing 28%→31%", "Soft Landing 28%→30%", "regime-transition-v1"),
+            ("Stagflation 8%→7%。", "", "regime-transition-v1"),
+            ("雙峰；Risk Light", "單峰；Risk Light", "regime-transition-v1"),
+            ("Risk Light維持ORANGE。", "Risk Light維持ORANGE。\n\n額外條件。", "regime-transition-v1"),
+            ("## Regime 轉換矩陣", "## Regime 轉換矩陣（其他）", "regime-transition-v1"),
+            ("Soft Landing 28%", "[Soft Landing](https://example.com) 28%", "regime-transition-v1"),
+            ("↗但energy_inflation", "↗且energy_inflation", "macro-signal-board-v1"),
+            ("Liquidity/Credit暫無", "Liquidity/Credit已有", "macro-signal-board-v1"),
+            ("FX funding中性；", "", "macro-signal-board-v1"),
+            ("形成Trend", "**形成Trend**", "macro-signal-board-v1"),
+            ("## 每週總經訊號板", "## 每週總經訊號板\n\n另一段。", "macro-signal-board-v1"),
+        )
+        for old, new, schema in cases:
+            with self.subTest(schema=schema, new=new):
+                changed = body.replace(old, new)
+                self.assertNotEqual(changed, body)
+                actual = BeautifulSoup(render_markdown_to_html(changed, metadata), "html.parser")
+                self.assertIsNone(actual.select_one(f'[data-weekly-schema="{schema}"]'))
+                baseline = BeautifulSoup(render_markdown_to_html(changed, dict(metadata, run_id="UNRECOGNIZED")), "html.parser")
+                heading = "Regime 轉換矩陣" if schema == "regime-transition-v1" else "每週總經訊號板"
+                def section(document):
+                    h = next(h for h in document.select("main h2") if h.get_text().startswith(heading))
+                    blocks = []
+                    for node in h.next_siblings:
+                        if getattr(node, "name", None) == "h2": break
+                        if getattr(node, "name", None): blocks.append(str(node))
+                    return blocks
+                self.assertEqual(section(actual), section(baseline))
+
+    def test_next_candidate_versions_without_overwriting_previous_candidate(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            category = root / "reports/weekly"
+            category.mkdir(parents=True)
+            (root / "data").mkdir()
+            shutil.copyfile(ROOT / "data/report_runs.json", root / "data/report_runs.json")
+            originals = {}
+            for stem in (WEEKLY, WEEKLY + "_rerun_2045"):
+                for suffix in (".md", ".html"):
+                    source_path = ROOT / "reports" / (stem + suffix)
+                    target = category / source_path.name
+                    target.write_bytes(source_path.read_bytes())
+                    originals[target] = target.read_bytes()
+            raw = (ROOT / "reports" / (WEEKLY + ".md")).read_bytes()
+            result = ingest_report_content(raw, "weekly", root, force=True, allow_fallback=False)
+            self.assertEqual(result.html_path.name, "Weekly_Strategy_2026-10-04_rerun_2045_2.html")
+            self.assertEqual(result.markdown_path.read_bytes(), raw)
+            for path, content in originals.items(): self.assertEqual(path.read_bytes(), content)
+            soup = BeautifulSoup(result.html_path.read_text(), "html.parser")
+            self.assertEqual(len(soup.select("table")), 7)
+            self.assertEqual(ingest_report_content(raw, "weekly", root, allow_fallback=False).status, IngestionStatus.SKIPPED_EXISTING)
 
     def test_unknown_report_identity_never_receives_local_conversion(self):
         metadata, body = source()

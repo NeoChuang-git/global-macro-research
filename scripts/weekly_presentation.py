@@ -1,6 +1,6 @@
 """Exact, source-preserving tables for the approved October 4 Weekly preview.
 
-These are three reviewed presentation mappings, not a prose-to-table parser.
+These are reviewed presentation mappings, not a prose-to-table parser.
 Unrecognized reports, sections, or source text remain untouched.
 """
 
@@ -14,12 +14,45 @@ class SectionTable:
     heading: str
     schema: str
     source: str
-    headers: tuple[str, str]
-    rows: tuple[tuple[str, str], ...]
+    headers: tuple[str, ...]
+    rows: tuple[tuple[str, ...], ...]
     prefix: str = ""
+    suffix: str = ""
 
 
 SECTION_TABLES = (
+    SectionTable(
+        heading="Regime 轉換矩陣",
+        schema="regime-transition-v1",
+        source="Soft Landing 28%→31%；Sticky Inflation 34%→32%；Growth Slowdown 17%→20%；Funding/Liquidity Stress 13%→10%；Stagflation 8%→7%。主Regime仍為Soft Landing / Sticky Inflation雙峰；Risk Light維持ORANGE。",
+        headers=("情境", "前期機率", "本期機率"),
+        rows=(
+            ("Soft Landing", "28%", "31%"),
+            ("Sticky Inflation", "34%", "32%"),
+            ("Growth Slowdown", "17%", "20%"),
+            ("Funding/Liquidity Stress", "13%", "10%"),
+            ("Stagflation", "8%", "7%"),
+        ),
+        suffix="主Regime仍為Soft Landing / Sticky Inflation雙峰；Risk Light維持ORANGE。",
+    ),
+    SectionTable(
+        heading="每週總經訊號板",
+        schema="macro-signal-board-v1",
+        source="Growth：us_growth_momentum →/↘；Inflation：us_inflation_momentum ↗但energy_inflation ↘；Labor：labor_market_cooling形成Trend；Fed：fed_policy_tightening ↗；Rates：rates_shock ↘；Liquidity/Credit暫無系統性stress；Fiscal：treasury_supply_stress ↘；FX funding中性；Trade：global_trade_cycle ↗；Asia/Taiwan：taiwan_leading_cycle ↗。",
+        headers=("領域", "訊號與判讀"),
+        rows=(
+            ("Growth", "us_growth_momentum →/↘"),
+            ("Inflation", "us_inflation_momentum ↗但energy_inflation ↘"),
+            ("Labor", "labor_market_cooling形成Trend"),
+            ("Fed", "fed_policy_tightening ↗"),
+            ("Rates", "rates_shock ↘"),
+            ("Liquidity/Credit", "暫無系統性stress"),
+            ("Fiscal", "treasury_supply_stress ↘"),
+            ("FX funding", "中性"),
+            ("Trade", "global_trade_cycle ↗"),
+            ("Asia/Taiwan", "taiwan_leading_cycle ↗"),
+        ),
+    ),
     SectionTable(
         heading="訊號持續性評分",
         schema="signal-persistence-v1",
@@ -114,6 +147,10 @@ def apply_weekly_tables(soup: BeautifulSoup, metadata: dict) -> None:
             prefix.string = spec.prefix
             paragraph.insert_before(prefix)
         paragraph.replace_with(table)
+        if spec.suffix:
+            suffix = soup.new_tag("p")
+            suffix.string = spec.suffix
+            table.insert_after(suffix)
 
 
 def label_weekly_risk_badges(soup: BeautifulSoup) -> None:
