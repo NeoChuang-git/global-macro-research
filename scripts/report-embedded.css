@@ -120,6 +120,86 @@ body {
   margin-right: auto;
 }
 
+/* Keep prose readable while comparison tables use the full content width. */
+.report-content > :not(.table-scroll) {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.report-content > ul:not(.executive-points),
+.report-content > ol {
+  padding-left: 1.5rem;
+}
+
+.report-content p, .report-content li, .hero-title {
+  overflow-wrap: anywhere;
+}
+
+/* Long bilingual risk transitions must wrap inside cards on narrow screens. */
+.chip, .state-transition {
+  max-width: 100%;
+  flex-wrap: wrap;
+  overflow-wrap: anywhere;
+}
+
+.report-toc {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-surface);
+}
+
+.report-toc summary {
+  padding: 12px 16px;
+  min-height: 44px;
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.report-toc summary span {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.report-toc ol {
+  margin: 0;
+  padding: 0 16px 16px 42px;
+  columns: 2;
+  column-gap: 32px;
+}
+
+.report-toc li {
+  break-inside: avoid;
+  margin: 0;
+}
+
+.report-toc a {
+  display: block;
+  padding: 8px 0;
+  min-height: 44px;
+  border: 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.report-content h2, .report-content h3, .report-toc {
+  scroll-margin-top: 16px;
+}
+
+.report-content :target {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+}
+
+a:focus-visible, summary:focus-visible, .table-scroll:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
 /* Wide Content Presentation */
 .wide-content {
   width: 100%;
@@ -440,14 +520,40 @@ li {
 /* Tables */
 .table-scroll {
   width: 100%;
-  overflow-x: auto;
+  overflow: auto;
+  max-height: min(36rem, 65vh);
   -webkit-overflow-scrolling: touch;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--bg-surface);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+.report-content > .table-scroll-hint {
+  max-width: none;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Both sticky axes belong to this explicit scrollport, including in iframes. */
+.table-scroll th:first-child, .table-scroll td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 8rem;
+  width: 10rem;
+  background: var(--bg-surface);
+  border-right: 1px solid var(--border-subtle);
+}
+
+.table-scroll thead th:first-child {
+  z-index: 3;
+  background: var(--table-header-bg);
 }
 
 table {
@@ -477,6 +583,7 @@ td {
   border-bottom: 1px solid var(--border);
   vertical-align: top;
   line-height: 1.55;
+  overflow-wrap: anywhere;
 }
 
 tr:last-child td {
@@ -487,6 +594,14 @@ tr:nth-child(even) td {
   background: var(--table-zebra);
 }
 
+.table-scroll tr:nth-child(even) td:first-child {
+  background: var(--bg-surface-raised);
+}
+
+.table-scroll tr:hover td:first-child {
+  background: var(--bg-surface-hover);
+}
+
 tr:hover td {
   background: var(--table-hover);
 }
@@ -494,6 +609,7 @@ tr:hover td {
 .numeric {
   text-align: right;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 /* Executive Summary Grid */
@@ -513,7 +629,11 @@ tr:hover td {
   border: 1px solid var(--border);
   border-radius: 10px;
   line-height: 1.6;
-  font-size: 0.92rem;
+  font-size: 1em;
+}
+
+.executive-points > li:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 @media (max-width: 768px) {
@@ -605,6 +725,13 @@ footer {
   .report-narrative p {
     font-size: 16px;
   }
+  .report-container { padding: 12px 0 32px; }
+  .hero-header { padding: 20px 16px; }
+  .report-toc ol { columns: 1; }
+  .table-scroll th:first-child, .table-scroll td:first-child {
+    min-width: 7rem;
+    width: 8rem;
+  }
   h1.hero-title { font-size: 1.45rem; }
   h2 { font-size: 1.25rem; margin-top: 2.2rem; }
   h3 { font-size: 1.1rem; margin-top: 1.8rem; }
@@ -613,4 +740,12 @@ footer {
     padding: 1.1rem 1rem;
     border-radius: 10px;
   }
+}
+
+@media print {
+  .report-toc, .table-scroll-hint { display: none; }
+  .table-scroll { overflow: visible; max-height: none; }
+  table { min-width: 0; }
+  .table-scroll th, .table-scroll th:first-child,
+  .table-scroll td:first-child { position: static; }
 }

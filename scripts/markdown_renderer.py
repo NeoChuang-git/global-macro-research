@@ -384,7 +384,9 @@ def _enhance_executive_summary(soup: BeautifulSoup) -> None:
     """Enhance executive summary bullets into responsive compact card grid."""
     for h2 in soup.find_all("h2"):
         t = h2.get_text()
-        if "執行摘要" in t or "EXECUTIVE SUMMARY" in t.upper():
+        if any(label in t.upper() for label in (
+            "執行摘要", "執行策略摘要", "EXECUTIVE SUMMARY", "EXECUTIVE STRATEGY SUMMARY",
+        )):
             current = h2.next_sibling
             while current:
                 if isinstance(current, Tag):
@@ -401,13 +403,28 @@ def _enhance_executive_summary(soup: BeautifulSoup) -> None:
 
 def _enhance_tables(soup: BeautifulSoup) -> None:
     """Wrap tables with wide-content scrollable containers and auto-detect numeric columns."""
-    for table in soup.find_all("table"):
+    for index, table in enumerate(soup.find_all("table"), start=1):
         parent = table.parent
         if not (parent and parent.name == "div" and "table-scroll" in parent.get("class", [])):
             wrapper = soup.new_tag("div", attrs={"class": "table-scroll wide-content"})
             table.wrap(wrapper)
         elif "wide-content" not in parent.get("class", []):
             parent["class"] = list(dict.fromkeys(parent.get("class", []) + ["wide-content"]))
+
+        wrapper = table.parent
+        heading = table.find_previous(["h2", "h3", "h4"])
+        title = heading.get_text(" ", strip=True) if heading else "資料表"
+        wrapper["role"] = "region"
+        wrapper["tabindex"] = "0"
+        wrapper["aria-label"] = f"{title}，表格 {index}"
+        hint_id = f"report-table-hint-{index}"
+        wrapper["aria-describedby"] = hint_id
+        if not soup.find(id=hint_id):
+            hint = soup.new_tag("p", attrs={"id": hint_id, "class": "table-scroll-hint"})
+            hint.string = "左右滑動查看全部欄位；Tab 聚焦表格後可用方向鍵捲動。長表可上下捲動，表頭與首欄固定。"
+            wrapper.insert_before(hint)
+        for header in table.select("thead th"):
+            header["scope"] = "col"
 
         rows = table.find_all("tr")
         if not rows:
@@ -425,6 +442,7 @@ def _enhance_tables(soup: BeautifulSoup) -> None:
                 col_total[idx] = col_total.get(idx, 0) + 1
                 if re.match(r"^[\+\-]?\$?(?:US\$?)?[\d,\.]+(?:\s*(?:%|bp|bn|mn|k))?$", val, re.IGNORECASE) or \
                    re.match(r"^[\+\-]?\d+/\d+$", val) or \
+                   re.match(r"^[+\-]?\d+(?:\.\d+)?%\s*[～~–]\s*[+\-]?\d+(?:\.\d+)?%$", val) or \
                    re.match(r"^[↑↓→↗↘]?\s*[\+\-]?\d+(\.\d+)?(?:%|bp)?$", val):
                     col_numeric[idx] = col_numeric.get(idx, 0) + 1
 
@@ -650,6 +668,38 @@ def get_embedded_css() -> str:
     return _CACHED_EMBEDDED_CSS
 
 
+def _render_chapter_directory(soup: BeautifulSoup) -> str:
+    """Create deterministic fragment navigation without changing research text."""
+    used_ids = {element["id"] for element in soup.find_all(id=True)}
+    headings = soup.find_all(["h2", "h3"])
+    for heading in headings:
+        if not heading.get("id"):
+            slug = re.sub(r"[^\w-]+", "-", heading.get_text().casefold()).strip("-_")
+            base = f"section-{slug or 'untitled'}"
+            anchor = base
+            suffix = 2
+            while anchor in used_ids:
+                anchor = f"{base}-{suffix}"
+                suffix += 1
+            heading["id"] = anchor
+            used_ids.add(anchor)
+        heading["tabindex"] = "-1"
+
+    chapters = [heading for heading in headings if heading.name == "h2"]
+    if not chapters:
+        return ""
+    links = "".join(
+        f'<li><a href="#{html.escape(heading["id"], quote=True)}">'
+        f'{html.escape(heading.get_text())}</a></li>'
+        for heading in chapters
+    )
+    return (
+        '<details class="report-toc" id="report-toc">'
+        f'<summary>章節導覽 <span>{len(chapters)} 節</span></summary>'
+        f'<nav aria-label="報告章節"><ol>{links}</ol></nav></details>'
+    )
+
+
 def render_markdown_to_html(markdown_body: str, metadata: Dict[str, Any]) -> str:
     """
     Render canonical markdown body and front matter metadata into complete standalone HTML.
@@ -665,6 +715,7 @@ def render_markdown_to_html(markdown_body: str, metadata: Dict[str, Any]) -> str
     raw_html = MD_PARSER.render(cleaned_body)
     soup = BeautifulSoup(raw_html, "html.parser")
     _postprocess_soup(soup)
+    directory_html = _render_chapter_directory(soup)
     content_html = str(soup)
 
     hero_html = _render_hero_header(metadata)
@@ -686,6 +737,7 @@ def render_markdown_to_html(markdown_body: str, metadata: Dict[str, Any]) -> str
 <div class="report-container">
   <div class="report-narrative">
     {hero_html}
+    {directory_html}
     <main class="report-content">
       {content_html}
     </main>
