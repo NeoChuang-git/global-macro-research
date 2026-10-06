@@ -154,7 +154,20 @@ def apply_weekly_tables(soup: BeautifulSoup, metadata: dict) -> None:
 
 
 def label_weekly_risk_badges(soup: BeautifulSoup) -> None:
-    """Keep scenario labels visible after the legacy emoji-only enrichment."""
+    """Style approved risk labels while retaining their visible wording."""
+    regime = soup.select_one('table[data-weekly-schema="regime-transition-v1"]')
+    if regime is not None:
+        conclusion = regime.parent.find_next_sibling("p")
+        expected = "主Regime仍為Soft Landing / Sticky Inflation雙峰；Risk Light維持ORANGE。"
+        if conclusion is not None and conclusion.string == expected:
+            prefix, label, suffix = expected.partition("ORANGE")
+            conclusion.clear()
+            conclusion.append(prefix)
+            badge = soup.new_tag("span", attrs={"class": "risk risk-orange"})
+            badge.string = label
+            conclusion.append(badge)
+            conclusion.append(suffix)
+
     table = soup.select_one('table[data-weekly-schema="risk-scenarios-v1"]')
     if table is None:
         return

@@ -89,6 +89,21 @@ checksum checks, change research metadata, or invent a run ID.
   No supported browser/CUA is available here. Do not install tools or change
   browser/security settings; HTTP/DOM checks do not count as screenshots.
 
+## Regime ORANGE badge correction — 2026-10-07
+
+The user identified plain ORANGE in the Regime conclusion. Wrap only that
+approved conclusion's ORANGE in the existing `risk risk-orange` badge, retaining
+its exact visible text and the whole original sentence. No CSS or other DOM
+change is allowed. The scoped badge also works when the separate scenario
+paragraph is not converted. Full suite: 128 tests pass after observed RED.
+Unwrapping the new span reproduces the previous candidate DOM exactly.
+
+Revise the current unpublished `_rerun_2045_2` artifact with its explicit filename;
+its previous bytes remain in commit `bc4aa289`. Canonical Markdown, the 285
+production artifacts and the older candidate pair remain unchanged. Update only
+the current HTML hash in manifest/catalog. The same preview URL remains valid.
+No merge/deployment before user confirmation.
+
 ## Regime and signal-board extension verification — 2026-10-06
 
 - New requirements failed on `4a3dd361` (four RED failures); all 17 scoped

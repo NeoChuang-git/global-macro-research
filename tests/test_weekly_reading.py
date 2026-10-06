@@ -178,6 +178,9 @@ class WeeklyReadingTests(unittest.TestCase):
         self.assertEqual([h.get_text() for h in table.select("th")], ["情境", "前期機率", "本期機率"])
         self.assertEqual(visible_rows(table), REGIMES)
         conclusion = table.parent.find_next_sibling("p")
+        badge = conclusion.select_one(".risk.risk-orange")
+        self.assertIsNotNone(badge)
+        self.assertEqual(badge.get_text(), "ORANGE")
         self.assertEqual(conclusion.get_text(), "主Regime仍為Soft Landing / Sticky Inflation雙峰；Risk Light維持ORANGE。")
         before = BeautifulSoup((ROOT / "reports" / (WEEKLY + ".html")).read_text(), "html.parser")
         reconstructed = "；".join(f"{name} {prior}→{current}" for name, prior, current in visible_rows(table)) + "。" + conclusion.get_text()
@@ -191,6 +194,14 @@ class WeeklyReadingTests(unittest.TestCase):
         self.assertEqual(rows, MACRO_SIGNALS)
         before = BeautifulSoup((ROOT / "reports" / (WEEKLY + ".html")).read_text(), "html.parser")
         self.assertEqual(macro_paragraph(rows), paragraph(before, "每週總經訊號板"))
+
+    def test_regime_badge_does_not_depend_on_scenario_table_conversion(self):
+        metadata, body = source()
+        body = body.replace("## 情境矩陣與風險燈號", "## 其他情境")
+        soup = BeautifulSoup(render_markdown_to_html(body, metadata), "html.parser")
+        self.assertIsNone(soup.select_one('[data-weekly-schema="risk-scenarios-v1"]'))
+        conclusion = soup.select_one('[data-weekly-schema="regime-transition-v1"]').parent.find_next_sibling("p")
+        self.assertEqual(conclusion.select_one(".risk-orange").get_text(), "ORANGE")
 
     def test_new_tables_preserve_previous_five_tables_and_original_style(self):
         previous = BeautifulSoup((ROOT / "reports" / (WEEKLY + "_rerun_2045.html")).read_text(), "html.parser")
