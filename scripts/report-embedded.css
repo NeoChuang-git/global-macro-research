@@ -401,7 +401,7 @@ li {
 .direction-down { color: #7c3aed; }
 .direction-improving { color: #059669; }
 .direction-worsening { color: #dc2626; }
-.direction-flat { color: var(--text-muted); }
+.direction-flat { color: var(--text-secondary); }
 
 /* Risk Lights */
 .risk-chip, .risk {
@@ -433,7 +433,7 @@ li {
   border: 1px solid var(--border);
 }
 
-.state-prior { color: var(--text-muted); }
+.state-prior { color: var(--text-secondary); }
 .transition-arrow { color: var(--accent); font-weight: bold; }
 .state-current { color: var(--text-primary); font-weight: 600; }
 
@@ -494,6 +494,25 @@ tr:hover td {
 .numeric {
   text-align: right;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Only the three approved two-column Weekly tables fit the narrow viewport. */
+.weekly-local-table {
+  min-width: 0;
+}
+
+.weekly-local-table th,
+.weekly-local-table td {
+  overflow-wrap: anywhere;
+}
+
+.weekly-local-table th {
+  white-space: normal;
+}
+
+.weekly-local-table th:first-child {
+  width: 40%;
 }
 
 /* Executive Summary Grid */

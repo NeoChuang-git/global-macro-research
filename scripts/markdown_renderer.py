@@ -15,6 +15,8 @@ from typing import Any, Dict, List, Optional
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning, Tag
 from markdown_it import MarkdownIt
 
+from scripts.weekly_presentation import apply_weekly_tables, label_weekly_risk_badges
+
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 
@@ -425,6 +427,7 @@ def _enhance_tables(soup: BeautifulSoup) -> None:
                 col_total[idx] = col_total.get(idx, 0) + 1
                 if re.match(r"^[\+\-]?\$?(?:US\$?)?[\d,\.]+(?:\s*(?:%|bp|bn|mn|k))?$", val, re.IGNORECASE) or \
                    re.match(r"^[\+\-]?\d+/\d+$", val) or \
+                   re.match(r"^[+\-]?\d+(?:\.\d+)?%\s*[～~–]\s*[+\-]?\d+(?:\.\d+)?%$", val) or \
                    re.match(r"^[↑↓→↗↘]?\s*[\+\-]?\d+(\.\d+)?(?:%|bp)?$", val):
                     col_numeric[idx] = col_numeric.get(idx, 0) + 1
 
@@ -650,6 +653,22 @@ def get_embedded_css() -> str:
     return _CACHED_EMBEDDED_CSS
 
 
+def _add_heading_anchors(soup: BeautifulSoup) -> None:
+    """Retain stable deep links without adding a visible chapter directory."""
+    used = {element["id"] for element in soup.select("[id]")}
+    for heading in soup.find_all(["h2", "h3"]):
+        if heading.get("id"):
+            continue
+        slug = re.sub(r"[^\w]+", "-", heading.get_text().lower()).strip("-")
+        base = "section-" + (slug or "heading")
+        identifier, suffix = base, 2
+        while identifier in used:
+            identifier = f"{base}-{suffix}"
+            suffix += 1
+        heading["id"] = identifier
+        used.add(identifier)
+
+
 def render_markdown_to_html(markdown_body: str, metadata: Dict[str, Any]) -> str:
     """
     Render canonical markdown body and front matter metadata into complete standalone HTML.
@@ -664,7 +683,10 @@ def render_markdown_to_html(markdown_body: str, metadata: Dict[str, Any]) -> str
     cleaned_body = clean_markdown_body(markdown_body)
     raw_html = MD_PARSER.render(cleaned_body)
     soup = BeautifulSoup(raw_html, "html.parser")
+    apply_weekly_tables(soup, metadata)
     _postprocess_soup(soup)
+    label_weekly_risk_badges(soup)
+    _add_heading_anchors(soup)
     content_html = str(soup)
 
     hero_html = _render_hero_header(metadata)
