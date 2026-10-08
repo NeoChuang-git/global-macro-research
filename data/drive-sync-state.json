@@ -1359,6 +1359,15 @@
       "sha256": "3b5d0b2de40a95e2054079244ef27944bc6ef303d72c2d336f67d6b30d89a766",
       "size": 21646
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_0300_gulf-shutdown-expansion.md": {
+      "category": "early-warning",
+      "drive_file_id": "1yQ6cQC9nJQUpixBVRhttXkUi7DPvuWes",
+      "md5_checksum": "fcd3eb88920fcf9405823ee2dd690b64",
+      "modified_time": "2026-10-08T19:10:21.854Z",
+      "name": "Global_Macro_Early_Warning_2026-10-09_0300_gulf-shutdown-expansion.md",
+      "sha256": "857448a9f3f0381369665c0448b9bce19318f02ac85424bff55c82544cd9aa27",
+      "size": 20938
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
