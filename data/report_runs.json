@@ -1776,6 +1776,22 @@
       "title": "Global Macro Early Warning｜美國墨西哥灣海域原油停產占比擴大至逾六成，能源供給風險升高但尚未形成全面金融緊縮",
       "topic": null
     },
+    "MTW-20261009-0500-reserve-rebound": {
+      "coverage_end_taipei": "2026-10-09T05:00:00+08:00",
+      "coverage_start_taipei": "2026-10-08T05:00:00+08:00",
+      "generated_at_taipei": "2026-10-09T05:10:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_0500_reserve-rebound.html",
+      "html_sha256": "17b6359d74c8412560a4ca03d1d26e299064841c494438fe64c2a771a536fbd8",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_0500_reserve-rebound.md",
+      "markdown_sha256": "793195f1f438e690aacd9cfbb592e27897f97c0b0c271f4f430b08ccd70edd43",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261009-0500-reserve-rebound",
+      "slug": "reserve-rebound",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美元準備金回升，緩和資金壓力但未解除能源與晶片警戒",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
