@@ -1350,6 +1350,15 @@
       "sha256": "6946f1053e57d1fb7ec453d3ee17b00fc74e3efb58529ebc5ef470080f7fb3bd",
       "size": 29204
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_0200_semiconductor_divergence.md": {
+      "category": "early-warning",
+      "drive_file_id": "19YfKVeCLy-tx5taSPhXVTTNiM2OIA3OV",
+      "md5_checksum": "41082aca1a5c701aae7629e9f42f29ee",
+      "modified_time": "2026-10-08T18:08:56.163Z",
+      "name": "Global_Macro_Early_Warning_2026-10-09_0200_semiconductor_divergence.md",
+      "sha256": "3b5d0b2de40a95e2054079244ef27944bc6ef303d72c2d336f67d6b30d89a766",
+      "size": 21646
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
