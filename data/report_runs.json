@@ -1728,6 +1728,22 @@
       "title": "Global Macro Early Warning｜美國服務業成本壓力再升，長端利率維持 5.3% 高壓",
       "topic": null
     },
+    "MTW-20261008-1800-energy-taiwan-flow": {
+      "coverage_end_taipei": "2026-10-08T18:00:00+08:00",
+      "coverage_start_taipei": "2026-10-07T18:00:00+08:00",
+      "generated_at_taipei": "2026-10-08T18:16:24+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-08_1800_energy_taiwan_flow.html",
+      "html_sha256": "374e5b839ab439c78a3e9dedf2af8dda27e921af736ffa3bf3aa237609b3620a",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-08_1800_energy_taiwan_flow.md",
+      "markdown_sha256": "f7e933ff6b0f6f74bce5af12c93dd95ab4d992f4fa0c89db25408193e25ae578",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261008-1800-energy-taiwan-flow",
+      "slug": "energy_taiwan_flow",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜油價反彈疊加台灣外資撤出，先警戒資金壓力而非宣判晶片衰退",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
