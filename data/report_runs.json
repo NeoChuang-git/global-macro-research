@@ -1904,6 +1904,22 @@
       "title": "Global Macro Early Warning｜中國股市晨間廣泛弱勢延續，香港反彈限制區域風險外溢",
       "topic": null
     },
+    "MTW-20261009-1500-china-reversal-confirmed": {
+      "coverage_end_taipei": "2026-10-09T15:00:00+08:00",
+      "coverage_start_taipei": "2026-10-09T14:00:00+08:00",
+      "generated_at_taipei": "2026-10-09T15:01:21+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_1500_china-reversal-confirmed.html",
+      "html_sha256": "fc3a1c06fcc0160cc53a4475223cedfc377f173b9ea654545960914b8cf7ca27",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_1500_china-reversal-confirmed.md",
+      "markdown_sha256": "2b58b0e34a8065947ef1f793054e67c44eb27e4148df4c974a251d88c9a239e4",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261009-1500-china-reversal-confirmed",
+      "slug": "china-reversal-confirmed",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜中國主要指數午後翻紅，晨間賣壓延續論出現戰術反證",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",

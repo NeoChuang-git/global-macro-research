@@ -1440,6 +1440,15 @@
       "sha256": "0ed528eeb500e52c5d4ef879a5d226e80da8de0f463918c7f67b6cbe6ad6a638",
       "size": 15521
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_1500_china-reversal-confirmed.md": {
+      "category": "early-warning",
+      "drive_file_id": "1IotoB4w3oih7-lyfZuKEvP1SU5imgn06",
+      "md5_checksum": "e16ed53de80496d44c7d6f550bf8f035",
+      "modified_time": "2026-10-09T07:05:59.635Z",
+      "name": "Global_Macro_Early_Warning_2026-10-09_1500_china-reversal-confirmed.md",
+      "sha256": "ee8a31eeba32d91d36ab45dbb04c3ecc73757a787ab350e4f103007e15209500",
+      "size": 22108
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
