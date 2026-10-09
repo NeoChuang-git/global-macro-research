@@ -333,6 +333,33 @@
       "sha256": "a69c049db1c5384565a84f714a6607f6c7830ac25f34387c5452610fa9931b2a",
       "size": 11126
     },
+    "reports/daily/Global_Daily_Brief_2026-10-06.md": {
+      "category": "daily",
+      "drive_file_id": "1hQMeCGG5PY8ShwyrOotkBYoqBEH6XA6V",
+      "md5_checksum": "dabcf270be985150404a5a91a041c54d",
+      "modified_time": "2026-10-09T04:59:14.644Z",
+      "name": "Global_Daily_Brief_2026-10-06.md",
+      "sha256": "84ef9ff80c61310b8fe86d30ca0e05d5a727d9ef3de493df9fedf9a6af9995cc",
+      "size": 22449
+    },
+    "reports/daily/Global_Daily_Brief_2026-10-07.md": {
+      "category": "daily",
+      "drive_file_id": "1BbZkHLUS1d94NAB7iMK_AW9i27h1JAuE",
+      "md5_checksum": "a3abf2800a7c5910fd8cfdf1f1d2a54b",
+      "modified_time": "2026-10-09T05:06:03.929Z",
+      "name": "Global_Daily_Brief_2026-10-07.md",
+      "sha256": "8e9d691c52a79e524ddb18ff435105aafecfd73a9c0c6adf067bbb722e93e2c4",
+      "size": 24265
+    },
+    "reports/daily/Global_Daily_Brief_2026-10-08.md": {
+      "category": "daily",
+      "drive_file_id": "1tZdzXl8DdK_kdDOTrQDa-_mZ29eroCJ9",
+      "md5_checksum": "61821f83b8ba517c92477b4a971bcdad",
+      "modified_time": "2026-10-09T05:06:43.335Z",
+      "name": "Global_Daily_Brief_2026-10-08.md",
+      "sha256": "4fc557eb2edf6a544d07720d02e5c4887e3947f2d2df84ace9d5ec827e595937",
+      "size": 24334
+    },
     "reports/daily/Global_Daily_Brief_2026-10-09.md": {
       "category": "daily",
       "drive_file_id": "1nP6iwyuwpAho-JoOc0iQlJbdLaN8IkwP",
@@ -1341,6 +1368,24 @@
       "sha256": "6b14e6adbdfff05bc0cd7b8d0b260d6a79f38c89cf0229d9ff61e42a6ecd74c2",
       "size": 20603
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-05_1539_taiwan-breadth-recovery.md": {
+      "category": "early-warning",
+      "drive_file_id": "1T-Dxxfxh6tymLiCHbwNdrLtusQz0dIQt",
+      "md5_checksum": "94403bfd2fd05486d507ebd916c240e4",
+      "modified_time": "2026-10-09T05:07:31.540Z",
+      "name": "Global_Macro_Early_Warning_2026-10-05_1539_taiwan-breadth-recovery.md",
+      "sha256": "0852ec91abdf500feafe195e7f2b658b22ed9a09ff7f5465b93dd69d8c60c816",
+      "size": 20014
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-05_2300_services-cost-recovery.md": {
+      "category": "early-warning",
+      "drive_file_id": "1H6y1t44RIEcj_C-2u2b4dGipaFMnoYWM",
+      "md5_checksum": "8c33506590f09036c2196110d0443188",
+      "modified_time": "2026-10-09T05:01:05.708Z",
+      "name": "Global_Macro_Early_Warning_2026-10-05_2300_services-cost-recovery.md",
+      "sha256": "23f4bbb511393903c42e60b61494bf3dea2a262a85634747a5e7b327818cfa7d",
+      "size": 17066
+    },
     "reports/early-warning/Global_Macro_Early_Warning_2026-10-08_1001_preliminary.md": {
       "category": "early-warning",
       "drive_file_id": "1qkrJTYcSuhZJSek4aw5kBHI5fjRiChKh",
@@ -1385,6 +1430,15 @@
       "name": "Global_Macro_Early_Warning_2026-10-09_0500_reserve-rebound.md",
       "sha256": "4db5a5ad5056b67bf3ed24268205312dc4b041e87b5f0b830f05308ac03af626",
       "size": 21633
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_1200_china_equity_divergence.md": {
+      "category": "early-warning",
+      "drive_file_id": "1wDoH3gCE6DlAC23_hLu0PzFeAGUHbRD7",
+      "md5_checksum": "7a367b66bcd18aabe5f42e2557e1e8a8",
+      "modified_time": "2026-10-09T04:18:52.863Z",
+      "name": "Global_Macro_Early_Warning_2026-10-09_1200_china_equity_divergence.md",
+      "sha256": "0ed528eeb500e52c5d4ef879a5d226e80da8de0f463918c7f67b6cbe6ad6a638",
+      "size": 15521
     },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",

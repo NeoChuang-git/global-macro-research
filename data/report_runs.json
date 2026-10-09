@@ -544,6 +544,54 @@
       "title": "Global Daily Brief｜美國 AI 治理進入制度化觀察窗，AI 熱潮開始反向影響金融條件",
       "topic": null
     },
+    "GDB-20261006-0730-recovery-20261009": {
+      "coverage_end_taipei": "2026-10-06T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-05T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-09T12:58:25+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-06.html",
+      "html_sha256": "5534e89227896b0b469cac80f505b19bb690b6f7a5e9565aeae1f1f5cd89c937",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-06.md",
+      "markdown_sha256": "2a0cd9d5f162611fc5f5bbecd2cc7f33f43d10661d1ee6062330c60c0178aabc",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261006-0730-recovery-20261009",
+      "slug": "foxconn-ai-delivery-recovery",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜鴻海營收優於預期，AI 硬體交付與軟體變現走向不同驗證關卡",
+      "topic": null
+    },
+    "GDB-20261007-0730-recovery-20261009": {
+      "coverage_end_taipei": "2026-10-07T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-06T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-09T13:02:34+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-07.html",
+      "html_sha256": "7d15b6a6adac96d32a7b90661906cc9b948118c6b1546f86c6ade04dbf7efccd",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-07.md",
+      "markdown_sha256": "d2907f1bf1e768a6bafb0943eb032135402e9228613de2e570d5df9738cc1820",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261007-0730-recovery-20261009",
+      "slug": "ai-chip-power",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Marvell上修AI營收目標，核電長約凸顯算力擴張的電力門檻",
+      "topic": null
+    },
+    "GDB-20261008-0730-recovery-20261009": {
+      "coverage_end_taipei": "2026-10-08T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-07T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-09T13:03:49+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-08.html",
+      "html_sha256": "606547b2f31d25161d28c2aa9788b885d9dc94695c8745d85083d95ff19d8208",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-08.md",
+      "markdown_sha256": "685d06388fc08018068883284aded1909afc81b0c9633a27d2771ca127fc7bd5",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261008-0730-recovery-20261009",
+      "slug": "windows-local-ai",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Microsoft 與 NVIDIA 推進本地 AI 電腦，訂單兌現仍待驗證",
+      "topic": null
+    },
     "GDB-20261009-0730": {
       "coverage_end_taipei": "2026-10-09T07:30:00+08:00",
       "coverage_start_taipei": "2026-10-08T07:30:00+08:00",
@@ -1728,6 +1776,22 @@
       "title": "Global Macro Early Warning｜全球長端財政壓力擴散，台股創高但廣度明顯背離",
       "topic": null
     },
+    "MTW-20261005-1539-taiwan-breadth-recovery": {
+      "coverage_end_taipei": "2026-10-05T15:39:21+08:00",
+      "coverage_start_taipei": "2026-10-05T14:39:21+08:00",
+      "generated_at_taipei": "2026-10-09T13:00:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-05_1539_taiwan-breadth-recovery.html",
+      "html_sha256": "3652eae6a873490c7cfe44abfb31f7ec0af88e0101e4c215337ea78361cd01b7",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-05_1539_taiwan-breadth-recovery.md",
+      "markdown_sha256": "5a3caa2c0c61234c7640722fc69d5b9ded97b279465093c59c18bcd8c160e53c",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261005-1539-taiwan-breadth-recovery",
+      "slug": "taiwan-breadth-recovery",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台股資金流改善但漲勢集中，長端利率風險尚未全面共振（10月5日回溯補驗）",
+      "topic": null
+    },
     "MTW-20261005-2300-services-cost-pressure": {
       "coverage_end_taipei": "2026-10-05T23:00:00+08:00",
       "coverage_start_taipei": "2026-10-05T22:00:00+08:00",
@@ -1742,6 +1806,22 @@
       "slug": "services-cost-pressure",
       "source_document_id": "1OudDZrY4Xdk3IKAtT-xvvUBwvkotU08ZwO6b-9OjRyk",
       "title": "Global Macro Early Warning｜美國服務業成本壓力再升，長端利率維持 5.3% 高壓",
+      "topic": null
+    },
+    "MTW-20261005-2300-services-cost-recovery": {
+      "coverage_end_taipei": "2026-10-05T23:00:00+08:00",
+      "coverage_start_taipei": "2026-10-05T22:00:00+08:00",
+      "generated_at_taipei": "2026-10-09T12:59:31+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-05_2300_services-cost-recovery.html",
+      "html_sha256": "b37904cfbfb1596e906d0ab8f2671ecd2ba6055dfa06881fade64904600f0310",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-05_2300_services-cost-recovery.md",
+      "markdown_sha256": "6b2f6235cbac674bfcbb2db8912c04b321f8ca6bf724f0e9d42e771da01d74c9",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261005-2300-services-cost-recovery",
+      "slug": "services-cost-recovery",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜回溯重建：服務成本續升，尚不足確認全面金融緊縮",
       "topic": null
     },
     "MTW-20261008-1800-energy-taiwan-flow": {
@@ -1806,6 +1886,22 @@
       "slug": "reserve-rebound",
       "source_document_id": null,
       "title": "Global Macro Early Warning｜美元準備金回升，緩和資金壓力但未解除能源與晶片警戒",
+      "topic": null
+    },
+    "MTW-20261009-1200-china_equity_divergence": {
+      "coverage_end_taipei": "2026-10-09T12:00:00+08:00",
+      "coverage_start_taipei": "2026-10-09T11:00:00+08:00",
+      "generated_at_taipei": "2026-10-09T12:14:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_1200_china_equity_divergence.html",
+      "html_sha256": "84a609f314460d2c4187e7373982eb78ce983a907bb782a076c9ed670d9b0c79",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_1200_china_equity_divergence.md",
+      "markdown_sha256": "b072e88ac24d0262002ea4360da0d32ed605898159b11d2ada1c398906e223ef",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261009-1200-china_equity_divergence",
+      "slug": "china_equity_divergence",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜中國股市晨間廣泛弱勢延續，香港反彈限制區域風險外溢",
       "topic": null
     },
     "WKS-20260927-2000": {
