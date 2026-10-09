@@ -1920,6 +1920,22 @@
       "title": "Global Macro Early Warning｜中國主要指數午後翻紅，晨間賣壓延續論出現戰術反證",
       "topic": null
     },
+    "MTW-20261009-1900-eu-gas-buffer-confirmed": {
+      "coverage_end_taipei": "2026-10-09T19:00:00+08:00",
+      "coverage_start_taipei": "2026-10-09T18:00:00+08:00",
+      "generated_at_taipei": "2026-10-09T19:10:24.166617+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_1900_eu-gas-buffer-confirmed.html",
+      "html_sha256": "6822a0a270af18e060575046c149855643793bcb96a99b94c44631412d9e1a54",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_1900_eu-gas-buffer-confirmed.md",
+      "markdown_sha256": "253c909dba92e9cd57ac1c057db356b0975cdcb078cdb058cb1177bd6a37a13b",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261009-1900-eu-gas-buffer-confirmed",
+      "slug": "eu-gas-buffer-confirmed",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜歐洲冬季天然氣庫存緩衝偏薄獲主源確認，市場價格尚未同步惡化",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",

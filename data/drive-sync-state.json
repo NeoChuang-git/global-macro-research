@@ -1449,6 +1449,15 @@
       "sha256": "ee8a31eeba32d91d36ab45dbb04c3ecc73757a787ab350e4f103007e15209500",
       "size": 22108
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-09_1900_eu-gas-buffer-confirmed.md": {
+      "category": "early-warning",
+      "drive_file_id": "10TkMsRN0rrPFnT3bgXD4GuTVPJ66p8e_",
+      "md5_checksum": "8c9c5fd2beafe358cbe802d41ef474e1",
+      "modified_time": "2026-10-09T11:11:34.425Z",
+      "name": "Global_Macro_Early_Warning_2026-10-09_1900_eu-gas-buffer-confirmed.md",
+      "sha256": "178ab4a4435b56a0136bcdff5e91d8c00efb361fb1007e2006dd0c3c4eb8a12c",
+      "size": 18137
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
