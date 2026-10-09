@@ -1467,6 +1467,15 @@
       "sha256": "679bd8788fa6e969e1dc883925a9646efb6401d0153f63996999021dcec01f0d",
       "size": 20919
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-10_0300_gulf-outage-expansion.md": {
+      "category": "early-warning",
+      "drive_file_id": "1nPK8-ZuKCAMmULlKQNJ7gK1pGey4qmqk",
+      "md5_checksum": "3252a38ca4458729458e977b747bac8b",
+      "modified_time": "2026-10-09T19:09:47.354Z",
+      "name": "Global_Macro_Early_Warning_2026-10-10_0300_gulf-outage-expansion.md",
+      "sha256": "72f5769196381aa5dfec645b1ceba164ecdaedfe2e571c0feee291b8c7d12ce3",
+      "size": 23614
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
