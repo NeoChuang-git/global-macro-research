@@ -624,6 +624,22 @@
       "title": "Global Daily Brief｜SpaceX頻譜協議重估電信競爭，AI資本與安全門檻同步受檢驗",
       "topic": null
     },
+    "GDB-20261011-0730": {
+      "coverage_end_taipei": "2026-10-11T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-10T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-11T07:34:00+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-11.html",
+      "html_sha256": "43be7319cf44b5f4397a4b6fab1d409265f8c944d67b05140d92695ead5dea3e",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-11.md",
+      "markdown_sha256": "f6d525b2fc9b0963106638b84c70d004791dd035089f05018523d8b3291b3112",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261011-0730",
+      "slug": "nvidia-reflection-talks",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Nvidia 傳洽 Reflection AI，模型層整合仍待官方確認",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",

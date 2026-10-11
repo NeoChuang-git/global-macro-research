@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Daily Brief｜Nvidia 傳洽 Reflection AI，模型層整合仍待官方確認 · 2026-10-11 07:34:00</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --accent: #0284c7;
+  --accent-light: #e0f2fe;
+  --accent-glow: rgba(2, 132, 199, 0.08);
+
+  /* Callout Colors */
+  --callout-bg: #f8fafc;
+  --callout-thesis-border: #0284c7;
+  --callout-thesis-bg: #f0f9ff;
+  --callout-risk-border: #f97316;
+  --callout-risk-bg: #fff7ed;
+  --callout-strategy-border: #8b5cf6;
+  --callout-strategy-bg: #f5f3ff;
+  --callout-catalyst-border: #10b981;
+  --callout-catalyst-bg: #ecfdf5;
+
+  /* Card & Chips */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
+  --chip-border: #cbd5e1;
+
+  /* Risk Lights */
+  --risk-green-bg: #ecfdf5; --risk-green-text: #059669; --risk-green-border: #a7f3d0;
+  --risk-yellow-bg: #fefce8; --risk-yellow-text: #d97706; --risk-yellow-border: #fef08a;
+  --risk-orange-bg: #fff7ed; --risk-orange-text: #ea580c; --risk-orange-border: #fed7aa;
+  --risk-red-bg: #fef2f2; --risk-red-text: #dc2626; --risk-red-border: #fecaca;
+
+  /* Table */
+  --table-zebra: #f8fafc;
+  --table-hover: #f1f5f9;
+  --table-header-bg: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --bg-surface-raised: #334155;
+    --bg-surface-hover: #475569;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #334155;
+    --border-subtle: #475569;
+    --accent: #38bdf8;
+    --accent-light: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.12);
+
+    --callout-bg: #1e293b;
+    --callout-thesis-border: #38bdf8;
+    --callout-thesis-bg: rgba(56, 189, 248, 0.08);
+    --callout-risk-border: #fb923c;
+    --callout-risk-bg: rgba(249, 115, 22, 0.08);
+    --callout-strategy-border: #a78bfa;
+    --callout-strategy-bg: rgba(167, 139, 250, 0.08);
+    --callout-catalyst-border: #34d399;
+    --callout-catalyst-bg: rgba(52, 211, 153, 0.08);
+
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --chip-bg: #334155;
+    --chip-text: #cbd5e1;
+    --chip-border: #475569;
+
+    --risk-green-bg: rgba(16, 185, 129, 0.15); --risk-green-text: #34d399; --risk-green-border: rgba(16, 185, 129, 0.3);
+    --risk-yellow-bg: rgba(245, 158, 11, 0.15); --risk-yellow-text: #fbbf24; --risk-yellow-border: rgba(245, 158, 11, 0.3);
+    --risk-orange-bg: rgba(249, 115, 22, 0.15); --risk-orange-text: #fb923c; --risk-orange-border: rgba(249, 115, 22, 0.3);
+    --risk-red-bg: rgba(239, 68, 68, 0.15); --risk-red-text: #f87171; --risk-red-border: rgba(239, 68, 68, 0.3);
+
+    --table-zebra: rgba(255, 255, 255, 0.02);
+    --table-hover: rgba(56, 189, 248, 0.06);
+    --table-header-bg: #334155;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 17px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+/* Layout Containers: Narrative & Content Presentation */
+.report-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  position: relative;
+}
+
+.report-narrative {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Content Presentation */
+.wide-content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Typography & Headings */
+.report-narrative p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 100%;
+}
+
+ul, ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
+}
+
+/* Callouts */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.35rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--callout-bg);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.callout p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.callout-thesis {
+  border-left-color: var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.callout-risk {
+  border-left-color: var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.callout-strategy {
+  border-left-color: var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.callout-catalyst {
+  border-left-color: var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Analysis Cards */
+.analysis-card {
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.analysis-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Meta Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  line-height: 1.35;
+}
+
+.chip-score {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.chip-evidence, .chip-confidence, .chip-severity, .chip-persistence {
+  color: var(--text-secondary);
+}
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.direction-up { color: #0284c7; }
+.direction-down { color: #7c3aed; }
+.direction-improving { color: #059669; }
+.direction-worsening { color: #dc2626; }
+.direction-flat { color: var(--text-secondary); }
+
+/* Risk Lights */
+.risk-chip, .risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.risk-green { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.risk-yellow { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.risk-orange { background: var(--risk-orange-bg); color: var(--risk-orange-text); border: 1px solid var(--risk-orange-border); }
+.risk-red { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* State Transitions */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.state-prior { color: var(--text-secondary); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  text-align: left;
+  min-width: 680px;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--text-primary);
+  font-weight: 650;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+td {
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Only the three approved two-column Weekly tables fit the narrow viewport. */
+.weekly-local-table {
+  min-width: 0;
+}
+
+.weekly-local-table th,
+.weekly-local-table td {
+  overflow-wrap: anywhere;
+}
+
+.weekly-local-table th {
+  white-space: normal;
+}
+
+.weekly-local-table th:first-child {
+  width: 40%;
+}
+
+/* Executive Summary Grid */
+.executive-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 0;
+}
+
+.executive-points > li {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .executive-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.badge-grade-B { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent); }
+.badge-grade-C { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.badge-grade-D { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(2, 132, 199, 0.4);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+    font-size: 16px;
+  }
+  .report-narrative p {
+    font-size: 16px;
+  }
+  h1.hero-title { font-size: 1.45rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  h4 { font-size: 1rem; }
+  .analysis-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="report-container">
+  <div class="report-narrative">
+    
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">GLOBAL_DAILY_BRIEF</span>
+      <span class="risk-chip risk-yellow">🟡 Risk: YELLOW</span>
+      
+    </div>
+    <div class="hero-run-id">RUN_ID: <code>GDB-20261011-0730</code></div>
+  </div>
+  <h1 class="hero-title">Global Daily Brief｜Nvidia 傳洽 Reflection AI，模型層整合仍待官方確認</h1>
+  <div class="hero-meta-row">
+    <span class="hero-chip">發布時間：2026-10-11 07:34:00</span>
+    <span class="hero-chip hero-chip-cov">涵蓋：2026-10-10 07:30:00 ~ 2026-10-11 07:30:00</span>
+  </div>
+</header>
+
+    <main class="report-content">
+      
+<h2 id="section-執行摘要-executive-summary">執行摘要（EXECUTIVE SUMMARY）</h2>
+<blockquote class="callout">
+<p>本輪主要變化是 Nvidia 可能加深對模型公司的控制，而非已確認的新增 GPU 訂單。交易傳聞仍來自單一報導根源，美股週末休市，應先確認交易形式，再評估科技股及台灣供應鏈的獲利影響。</p>
+</blockquote>
+<ul class="executive-points">
+<li><strong>事件焦點：</strong> FT 傳 Nvidia 與 Reflection AI 初步洽談；Reuters 轉述但未獨立核實。尚未取得官方確認（Official confirmation unavailable），不把可能交易寫成已成交。</li>
+<li><strong>定價狀態：</strong> 本窗以週末為主。週五收盤早於洽談新聞，無法代表消息後反應；交易價格、稀釋及新增資本支出（CapEx）均未確認。</li>
+<li><strong>台灣外溢：</strong> 模型與 GPU 共同優化可能增加部署，也可能降低單次任務算力。先進封裝（Advanced Packaging）、記憶體與伺服器需求，仍要看實際訂單（Order）。</li>
+<li><strong>排名紀律：</strong> 本輪僅一件具主要排名價值的新事件。SMCI 認罪、Deno 併入及筆電成本報導多為較早事件再傳播，不補列第二、第三名。</li>
+</ul>
+<p>研究範圍為台北時間 10 月 10 日 07:30 至 10 月 11 日 07:30。完成 14 檔固定預檢、另查 INTC／ARM 與七個 AI／雲端平台；來源缺口保留為未知，不解讀為確定沒有事件。</p>
+<h2 id="section-今日三大市場訊號-today-top-3-market-signals">今日三大市場訊號（TODAY TOP 3 MARKET SIGNALS）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>訊號</th>
+<th>新資訊與解讀</th>
+<th>方向</th>
+<th>下一驗證</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>模型層垂直整合</td>
+<td>收購或增資洽談報導；競爭邊界可能擴大</td>
+<td><span class="direction direction-flat">→ 持平</span> 尚不能判定整體風險資產改善</td>
+<td>官方形式、價格與商業路線</td>
+</tr>
+<tr>
+<td>事件尚未定價</td>
+<td>週末沒有消息後正常盤交易</td>
+<td><span class="direction direction-flat">→ 持平</span> 定價狀態未知</td>
+<td>NVDA 相對 SOX／QQQ、成交量</td>
+</tr>
+<tr>
+<td>台灣需求傳導未落地</td>
+<td>本窗未取得新增機櫃、晶圓或 HBM 採購證據</td>
+<td><span class="direction direction-flat">→ 持平</span> 訂單方向未定</td>
+<td>雲端部署及供應商前瞻指引</td>
+</tr>
+</tbody>
+</table></div>
+<p>三項為同一主要事件的不同驗證層，不是三件獨立新聞，也不構成跨資產風險升級。原始股價升降與訊號好壞分開處理。</p>
+<h2 id="section-市場影響力前三大事件-top-3-market-impact-events">市場影響力前三大事件（TOP 3 MARKET IMPACT EVENTS）</h2>
+<p>本輪只列一件；沒有合格第二、第三名，不以舊聞填滿。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th class="numeric">排名</th>
+<th>事件</th>
+<th style="text-align:right">影響分數</th>
+<th>證據／信心</th>
+<th>價格反應</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="numeric">1</td>
+<td>Nvidia 傳洽 Reflection AI</td>
+<td style="text-align:right">67／100</td>
+<td>C+／中低；官方交易確認不可得</td>
+<td>待市場驗證（Pending / Market Closed）</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-事件一-nvidia-傳洽-reflection-ai-晶片供應商的模型選擇權">事件一｜Nvidia 傳洽 Reflection AI：晶片供應商的模型選擇權</h3>
+<div class="meta-chips"><span class="chip">潛在高影響</span><span class="chip">67／100</span><span class="chip chip-confidence">信心中低</span><span class="chip">美股休市</span></div>
+<ul>
+<li><strong>發生什麼：</strong> Reuters 於 10 月 10 日 19:32 UTC、即台北 11 日 03:32，轉述 FT 的初步洽談消息。可選形式包含收購、進一步投資或人才／技術安排，尚未定案。</li>
+<li><strong>事實邊界：</strong> 可以確認「可靠媒體報導洽談」；交易確實存在、可獲批准或必定成交仍未經官方核驗。Reuters 自述不能立即獨立證實，公司未即時回應。</li>
+<li><strong>相對先前預期：</strong> 已有投資關係與取得模型控制權是不同經濟曝險。沒有可核驗的市場共識、交易價或修訂財測，不能量化預期差。</li>
+<li><strong>產品背景：</strong> Reflection 已有 Beam 開放權重模型。官方產品頁支持模型存在與部署方向，不支持收購傳聞；其發布屬本窗以前的背景。<a href="https://www.reflection.ai/blog/introducing-beam" rel="noopener noreferrer" target="_blank">官方產品頁</a></li>
+<li><strong>來源獨立性：</strong> Bloomberg 同樣援引 FT，不能與 Reuters 合算兩次獨立消息確認。FT 全文受限，採用其可見標題及 Reuters 可讀轉述。<a href="https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a" rel="noopener noreferrer" target="_blank">FT</a>／<a href="https://www.aol.com/articles/nvidia-talks-invest-further-reflection-193237000.html" rel="noopener noreferrer" target="_blank">Reuters 轉載</a></li>
+</ul>
+<h4>市場解讀</h4>
+<p><strong>推論（INFERENCE）：</strong> 如果 Nvidia 得以把模型、推論軟體與硬體優化放在同一產品路線，企業採用門檻可能下降。價值可能來自部署效率及平台黏著度，而不是立即增加晶片單價。</p>
+<p>基本面傳導須走完以下因果鏈：</p>
+<ol>
+<li>模型／人才整合提高部署可用性。</li>
+<li>客戶導入及付費使用增加，形成可量化工作負載。</li>
+<li>增量運算需求超過效率提升帶來的節省。</li>
+<li>GPU、互連與機櫃採購增加，才傳到供應商營收（Revenue）。</li>
+<li>台灣晶圓、封裝及伺服器出貨落地後，再核對毛利率（Gross Margin）與每股盈餘（EPS）。</li>
+</ol>
+<p><strong>估值（Valuation）機制：</strong> 投資人可能給予軟體及模型平台更高選擇權價值；但買價、整合費用、雲端客戶競爭衝突與監管成本均可能抵銷。現階段不調升收入或 EPS 假設。</p>
+<p><strong>分數理由：</strong> 規模 17／25、廣度 14／20、基本面 13／20、估值傳導 10／15、持續性 7／10、台灣外溢 6／10。這是條件成立時的潛在重要性評級，並非精準成交機率；缺乏官方確認限制可採取的結論。</p>
+<h4>市場定價</h4>
+<p><strong>市場預期（MARKET EXPECTATION）：</strong> 尚無可核驗的交易機率定價、合併套利價格或共識估值。也沒有本事件之後的正常美股交易，因此不能聲稱市場已接受或否定平台整合論點。</p>
+<p>查得 NVDA 10 月 9 日正常盤二手收盤值為 229.28 美元，前值 230.48，原始方向為 <span class="direction direction-down">↓ 下降</span> 約 0.52%。此觀察早於週六報導，僅記為背景，不作消息反應或買賣依據。<a href="https://www.statmuse.com/money/ask?q=best+performance+in+the+last+year+aapl%2Cmsft%2Camzn%2Cnvda%2Cgoogl%2Cmeta%2Ctsla" rel="noopener noreferrer" target="_blank">價格來源</a></p>
+<p>NVDA 是直接曝險；AMD、AVGO、MSFT、AMZN、GOOGL 為競爭或客戶關係的間接觀察對象。沒有證據足以把它們全部標成受益者或受害者。</p>
+<h4>反向證據</h4>
+<ul>
+<li>洽談可能破局，或只完成少數股權增資；這會削弱「取得模型控制權」解讀。</li>
+<li>人才與技術授權不等於免除監管。形式、實質控制及市場效果仍需正式文件，不能預設審查結果。</li>
+<li>模型效率提高可能減少每項任務的算力需求；使用量成長是否足以抵銷尚未知。</li>
+<li>本窗未取得新 GPU 訂單、供應商庫存（Inventory）、財測或雲端資本支出修訂，供應鏈收入增量仍未確認。</li>
+</ul>
+<h4>下一催化劑</h4>
+<p>先看公司公告或正式申報中的交易形式、資金用途與商業部署，再看美股開盤後 NVDA 對 SOX／QQQ 的相對表現。單日股價上升仍需排除大盤、利率及部位因素。</p>
+<p><strong>確認條件：</strong> 官方確認加上可量化部署／支出，再有消息後成交量及相對報酬支持。<strong>失效條件：</strong> 正式否認、洽談終止，或最終僅財務投資且無新增產品／部署，使強整合論點失效。</p>
+<hr/>
+<h2 id="section-重要個股事件掃描">重要個股事件掃描</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>股票</th>
+<th>為何列入正文</th>
+<th>可確認程度</th>
+<th>下一觀察</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NVDA</td>
+<td>唯一主要排名事件</td>
+<td>洽談未官方確認</td>
+<td>交易形式、客戶採用</td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>模型與硬體整合的競爭外溢；OCP 催化</td>
+<td>官方已公告 OCP 主題演講</td>
+<td>開放生態與實際採購證據</td>
+</tr>
+<tr>
+<td>TSM</td>
+<td>晶圓、先進製程與封裝高關聯</td>
+<td>本窗無新增訂單確認</td>
+<td>實際產能、出貨及客戶資本支出</td>
+</tr>
+</tbody>
+</table></div>
+<p>AMD 的 OCP 活動公告屬較早已知催化，不能算本輪新交易；TSM 的供應鏈敏感度也不等於已新增收入。<a href="https://newsroom.amd.com/news/media-alert-ceo-lisa-su-keynote-2026-ocp/" rel="noopener noreferrer" target="_blank">AMD 官方</a></p>
+<h2 id="section-美國科技股策略-us-tech-strategy">美國科技股策略（US TECH STRATEGY）</h2>
+<blockquote class="callout">
+<p>先區分「平台競爭邊界可能改變」與「盈利數字已改變」。本輪可以增加觀察優先度，尚不足以用收購敘事上調整條 AI 供應鏈估值。</p>
+</blockquote>
+<ul>
+<li><strong>直接與間接曝險分開：</strong> NVDA 觀察官方交易；其他半導體及雲端股票需額外公司證據，不能只依關聯度外推。</li>
+<li><strong>價格驗證分兩步：</strong> 先看消息後相對報酬，再看成交量與持續性。大盤同步上升不足以證明收購事件獲肯定。</li>
+<li><strong>風險燈號：</strong> YELLOW，代表事件待證實、定價待驗證的觀察狀態。未取得可比前值，燈號變化為 UNKNOWN <span class="direction direction-flat">→ 持平</span> YELLOW，不宣稱升級或體制轉變。</li>
+</ul>
+<h3 id="section-跨資產定價背景">跨資產定價背景</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>指標</th>
+<th>最新可核驗背景</th>
+<th>時點／限制</th>
+<th>對事件解讀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S&amp;P 500／Nasdaq</td>
+<td>7,811.54／27,366.17；均 <span class="direction direction-up">↑ 上升</span> 約 0.6%</td>
+<td>10 月 9 日正常盤，早於洽談報導</td>
+<td>正向大盤背景不能當收購反應</td>
+</tr>
+<tr>
+<td>美國 10 年殖利率</td>
+<td>5.24%，前日 5.22%</td>
+<td>AP 週五收盤報導</td>
+<td>折現率仍是模型平台估值限制</td>
+</tr>
+<tr>
+<td>美國 2 年／實質殖利率</td>
+<td>官方同時點值未取得</td>
+<td>二手值不升格正式基準</td>
+<td>無法完整剝離利率因子</td>
+</tr>
+<tr>
+<td>DXY／USD/TWD</td>
+<td>統一時點核驗不足</td>
+<td>台幣二手報價口徑分歧</td>
+<td>不以混合報價推導資金流</td>
+</tr>
+<tr>
+<td>VIX／MOVE／SOX</td>
+<td>可靠同時點完整組合未取得</td>
+<td>不同時段或低等級來源僅留作核查</td>
+<td>尚無合格跨資產確認</td>
+</tr>
+</tbody>
+</table></div>
+<p><a href="https://apnews.com/article/dafbd0c4037ee10e2a9e305f3cfa8e70" rel="noopener noreferrer" target="_blank">AP 指數收盤</a>／<a href="https://apnews.com/article/5d0f953dbf96febb0690c1aef23fa8a9" rel="noopener noreferrer" target="_blank">AP 利率與市場背景</a></p>
+<p>殖利率（Yield） <span class="direction direction-up">↑ 上升</span> 不自動等於本事件訊號惡化；必須檢查折現率上升是否抵銷未來盈利增量。當前無事件後盈利及價格資料，淨方向保持未定。</p>
+<h2 id="section-台灣-ai-半導體-記憶體-伺服器影響">台灣 AI／半導體／記憶體／伺服器影響</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>環節</th>
+<th>傳導機制</th>
+<th>時間</th>
+<th>證據與反證</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>晶圓代工／先進製程</td>
+<td>增量 GPU 部署才形成投片需求</td>
+<td>1–3 季</td>
+<td>本窗未得新增投片；既有算力重配可抵銷</td>
+</tr>
+<tr>
+<td>CoWoS／先進封裝</td>
+<td>GPU 出貨與配置決定封裝量</td>
+<td>1–3 季</td>
+<td>收購法律架構不直接增加封裝訂單</td>
+</tr>
+<tr>
+<td>HBM／DRAM／NAND</td>
+<td>模型容量、併發量與伺服器配置決定用量</td>
+<td>1–3 季</td>
+<td>稀疏模型與效率改善可能節省需求</td>
+</tr>
+<tr>
+<td>伺服器 ODM、PCB／CCL</td>
+<td>新機櫃與板級採購影響出貨</td>
+<td>數週至數月</td>
+<td>需客戶下單與交期，非新聞熱度</td>
+</tr>
+<tr>
+<td>散熱／電源、網通／光通訊</td>
+<td>功耗密度及互連架構決定單機價值</td>
+<td>數週至數月</td>
+<td>尚無確定新配置，不指定單股贏家</td>
+</tr>
+<tr>
+<td>資料中心／雲端</td>
+<td>付費工作負載支撐新增建置</td>
+<td>1–3 季</td>
+<td>先看利用率及資本支出，非單一模型發布</td>
+</tr>
+<tr>
+<td>出口管制／匯率／估值</td>
+<td>可銷市場與進口成本影響盈利</td>
+<td>即時至數季</td>
+<td>開放權重不解除硬體限制；台幣數據待核對</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>證據邊界：</strong> 現有來源支持模型產品存在與交易洽談新聞；尚不支持台灣公司新增訂單。對前瞻指引（Guidance）、毛利率及庫存的判斷，需等待供應商或客戶正式披露。</p>
+<p><strong>需求反證：</strong> 較早 TrendForce 筆電研究指出零組件成本可能壓抑終端需求。該資料只提醒記憶體供應商與 PC／ODM 的利益方向不同，不能把「AI 模型熱度」等同所有台灣科技股共同改善。<a href="https://www.trendforce.com/presscenter/news/20261008-13264.html" rel="noopener noreferrer" target="_blank">TrendForce，10 月 8 日</a></p>
+<h2 id="section-下一階段催化劑-next-catalysts">下一階段催化劑（NEXT CATALYSTS）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>催化劑</th>
+<th>日期／窗口</th>
+<th>要驗證什麼</th>
+<th>失效或限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nvidia／Reflection 公告</td>
+<td>未定；未來 24–72 小時持續關注</td>
+<td>形式、對價、產品與資金用途</td>
+<td>沒有公告不等於談判不存在</td>
+</tr>
+<tr>
+<td>美國股票正常盤</td>
+<td>10 月 12 日 09:30 EDT／台北 21:30</td>
+<td>消息後 NVDA 相對表現</td>
+<td>股市與債市假日日曆不同</td>
+</tr>
+<tr>
+<td>AMD／Broadcom OCP 資訊</td>
+<td>10 月中旬；依官方活動安排</td>
+<td>開放架構、互連與真實部署</td>
+<td>產品展示不等於訂單</td>
+</tr>
+<tr>
+<td>ASML 第三季結果</td>
+<td>10 月 14 日，超出本輪 72 小時核心窗</td>
+<td>接單、設備需求與前瞻指引</td>
+<td>以官方發表為準，未預填結果</td>
+</tr>
+</tbody>
+</table></div>
+<p><a href="https://www.nyse.com/trade/hours-calendars?source=CASH_PLUS" rel="noopener noreferrer" target="_blank">NYSE 交易時間與日曆</a>／<a href="https://investor.asml.com/quarterly-results" rel="noopener noreferrer" target="_blank">ASML 官方結果日程</a>／<a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-redefines-ai-infrastructure-industry-leading-networking" rel="noopener noreferrer" target="_blank">Broadcom OCP 公告</a></p>
+<h2 id="section-source-audit">SOURCE AUDIT</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Publication / observation</th>
+<th>Evidence use</th>
+<th>Limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.aol.com/articles/nvidia-talks-invest-further-reflection-193237000.html" rel="noopener noreferrer" target="_blank">Reuters / AOL</a></td>
+<td>2026-10-10 19:32 UTC</td>
+<td>Reflection talks</td>
+<td>Search text obtained; direct refresh failed; Reuters could not independently verify</td>
+</tr>
+<tr>
+<td><a href="https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a" rel="noopener noreferrer" target="_blank">Financial Times</a></td>
+<td>2026-10-10</td>
+<td>Original reporting root</td>
+<td>Paywall; title accessible</td>
+</tr>
+<tr>
+<td><a href="https://news.bloomberglaw.com/mergers-and-acquisitions/nvidia-in-talks-to-acquire-reflection-ai-ft" rel="noopener noreferrer" target="_blank">Bloomberg Law</a></td>
+<td>2026-10-10 18:21 UTC</td>
+<td>Same story cross-check</td>
+<td>FT relay; not independent confirmation</td>
+</tr>
+<tr>
+<td><a href="https://www.reflection.ai/blog/introducing-beam" rel="noopener noreferrer" target="_blank">Reflection Beam</a></td>
+<td>Product background</td>
+<td>Official product evidence</td>
+<td>Does not confirm a transaction</td>
+</tr>
+<tr>
+<td><a href="https://nvidianews.nvidia.com/" rel="noopener noreferrer" target="_blank">NVIDIA Newsroom</a></td>
+<td>Checked after coverage end</td>
+<td>Official announcement check</td>
+<td>No verified transaction announcement retrieved</td>
+</tr>
+<tr>
+<td><a href="https://apnews.com/article/dafbd0c4037ee10e2a9e305f3cfa8e70" rel="noopener noreferrer" target="_blank">AP market close</a></td>
+<td>2026-10-09 regular close</td>
+<td>S&amp;P / Nasdaq</td>
+<td>Pre-event background</td>
+</tr>
+<tr>
+<td><a href="https://apnews.com/article/5d0f953dbf96febb0690c1aef23fa8a9" rel="noopener noreferrer" target="_blank">AP markets</a></td>
+<td>2026-10-09 close</td>
+<td>10Y yield</td>
+<td>Pre-event background</td>
+</tr>
+<tr>
+<td><a href="https://www.nyse.com/trade/hours-calendars?source=CASH_PLUS" rel="noopener noreferrer" target="_blank">NYSE</a></td>
+<td>2026 calendar</td>
+<td>CLOSED / next stock session</td>
+<td>Equity calendar</td>
+</tr>
+<tr>
+<td><a href="https://www.anthropic.com/research/investigating-unintended-model-actions" rel="noopener noreferrer" target="_blank">Anthropic</a></td>
+<td>2026-10-09</td>
+<td>Duplicate-event check</td>
+<td>Publication minute unavailable; not a customer-wide outage</td>
+</tr>
+<tr>
+<td><a href="https://blog.cloudflare.com/deno-joins-cloudflare/" rel="noopener noreferrer" target="_blank">Cloudflare</a></td>
+<td>2026-10-09</td>
+<td>Deno duplicate-event check</td>
+<td>No verified new in-window transaction delta</td>
+</tr>
+<tr>
+<td><a href="https://status.openai.com/history" rel="noopener noreferrer" target="_blank">OpenAI Status</a></td>
+<td>2026-10-10 00:26 displayed</td>
+<td>Android partial-content recovery</td>
+<td>No quantified material revenue impact</td>
+</tr>
+<tr>
+<td><a href="https://www.trendforce.com/presscenter/news/20261008-13264.html" rel="noopener noreferrer" target="_blank">TrendForce</a></td>
+<td>2026-10-08</td>
+<td>Taiwan counter-evidence</td>
+<td>Older industry research</td>
+</tr>
+<tr>
+<td><a href="https://investor.asml.com/quarterly-results" rel="noopener noreferrer" target="_blank">ASML</a></td>
+<td>Scheduled 2026-10-14</td>
+<td>Catalyst date</td>
+<td>Results not yet released</td>
+</tr>
+</tbody>
+</table></div>
+<p>完成掃描不代表全市場事件可被窮盡。部分 TSM、MU、DELL 投資人關係頁面讀取失敗，已搭配新聞與日期搜尋；缺失維持 UNKNOWN。報價版本有時間或來源品質差異時不擇一拼接，不沿用舊價冒充目前成交。</p>
+<h2 id="section-免責聲明-disclaimer">免責聲明（DISCLAIMER）</h2>
+<p>本報告為事件驅動研究，不構成個別投資建議。分數表示潛在市場重要性，不代表成交機率、預期報酬或買賣訊號；未經官方確認的交易應視為待驗證資訊。</p>
+
+    </main>
+    <footer>
+      Global Macro Signal Report · 2026-10-11 07:34:00 · Generated Deterministically
+    </footer>
+  </div>
+</div>
+</body>
+</html>
