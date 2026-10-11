@@ -1592,6 +1592,15 @@
       "name": "Weekly_Strategy_2026-10-04.md",
       "sha256": "24559f206816efc2485867001a6cc0f150ad3026455758cc4bb755b7bf93180e",
       "size": 9785
+    },
+    "reports/weekly/Weekly_Strategy_2026-10-11.md": {
+      "category": "weekly",
+      "drive_file_id": "1EKCGRd1-JOHWL1YDnuwa5khmyYyRZR3g",
+      "md5_checksum": "4443c1f1942433e473a838921bacc392",
+      "modified_time": "2026-10-11T17:54:51.457Z",
+      "name": "Weekly_Strategy_2026-10-11.md",
+      "sha256": "ea036d34277e5423114fef061591e2f5148b94a94b95f88030dbc1dc4400caa2",
+      "size": 73395
     }
   },
   "schema_version": 1

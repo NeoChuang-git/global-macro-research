@@ -2031,6 +2031,22 @@
       "source_document_id": null,
       "title": "Weekly Global Macro & Investment Strategy｜就業降溫壓低再升息風險，但高油價與5%長債殖利率迫使AI基本面與估值分流",
       "topic": null
+    },
+    "WKS-20261011-2000": {
+      "coverage_end_taipei": "2026-10-11T20:00:00+08:00",
+      "coverage_start_taipei": "2026-10-04T20:00:00+08:00",
+      "generated_at_taipei": "2026-10-12T01:53:45+08:00",
+      "html_path": "reports/weekly/Weekly_Strategy_2026-10-11.html",
+      "html_sha256": "68cccd37cbb0758d13724de03a4146375b3b53bee3f4a4602a01dbed98f420e7",
+      "markdown_path": "reports/weekly/Weekly_Strategy_2026-10-11.md",
+      "markdown_sha256": "2fc9db8c626ff44a410fec9faca4af5c0eb2178782b2ee660e841bd42a121710",
+      "report_type": "WEEKLY_STRATEGY",
+      "risk_light": "YELLOW",
+      "run_id": "WKS-20261011-2000",
+      "slug": "weekly_strategy",
+      "source_document_id": null,
+      "title": "Weekly Global Macro & Investment Strategy｜AI出貨延續，通膨與專利事件限制追價",
+      "topic": null
     }
   },
   "schema_version": 1
