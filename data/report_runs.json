@@ -2000,6 +2000,22 @@
       "title": "Global Macro Early Warning｜美國墨西哥灣停產再擴大，價格與金融市場尚未確認全面能源衝擊",
       "topic": null
     },
+    "MTW-20261012-0400-storage_buffer": {
+      "coverage_end_taipei": "2026-10-12T04:00:00+08:00",
+      "coverage_start_taipei": "2026-10-12T03:00:00+08:00",
+      "generated_at_taipei": "2026-10-12T04:16:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-12_0400_storage_buffer.html",
+      "html_sha256": "7976a0b9bde1fd7615478775bc2e523b269c1c3f40002cf391221134217aeb52",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-12_0400_storage_buffer.md",
+      "markdown_sha256": "e883d9d21306f4f47b23b8134833dd4a91b72416a0327402a03421ccf7af1212",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261012-0400-storage_buffer",
+      "slug": "storage_buffer",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜歐洲儲氣季節缺口獲確認，能源安全邊際偏薄但未形成全面避險",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
