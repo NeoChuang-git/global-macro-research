@@ -2048,6 +2048,22 @@
       "title": "Global Macro Early Warning｜南亞科長約重訂價落實獲利，記憶體價量分歧擴大",
       "topic": null
     },
+    "MTW-20261012-2300-semi-relative-weakness": {
+      "coverage_end_taipei": "2026-10-12T23:00:00+08:00",
+      "coverage_start_taipei": "2026-10-12T22:00:00+08:00",
+      "generated_at_taipei": "2026-10-12T23:25:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-12_2300_semi-relative-weakness.html",
+      "html_sha256": "99c07b8249a3d4b8a18400981dd807ed59785686b3a6ead26619292a5c4955d4",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-12_2300_semi-relative-weakness.md",
+      "markdown_sha256": "15163dd8262729c3dd1d1040d90b4ce8942d775dfd20ce9e47546c140e8b909b",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261012-2300-semi-relative-weakness",
+      "slug": "semi-relative-weakness",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜半導體相對弱勢延續，台灣外資賣壓與基本面強勢分岔",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
