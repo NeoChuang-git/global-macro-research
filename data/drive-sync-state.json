@@ -1512,6 +1512,15 @@
       "sha256": "7d1315edf23a4a78cdce8a5c9d1cd34ae2c25fa9364861832d7c1afea55c9789",
       "size": 22244
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-12_1600_memory-lta-repricing.md": {
+      "category": "early-warning",
+      "drive_file_id": "1dJP8P1Ttzmlegkm82WrtaTC9OZqgHBS2",
+      "md5_checksum": "fa60424d4d807fae0e081cf22f42118c",
+      "modified_time": "2026-10-12T08:47:12.415Z",
+      "name": "Global_Macro_Early_Warning_2026-10-12_1600_memory-lta-repricing.md",
+      "sha256": "3a92ad185fc9fd9ab5e34c67b92d91ed02ea0782a4601a70e7b3f70c4a2bb74a",
+      "size": 21745
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
