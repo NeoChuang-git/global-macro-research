@@ -1,0 +1,1077 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Daily Brief｜Yandex 資料中心遇襲停運，雲端韌性風險仍屬區域性 · 2026-10-12 07:38:00</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --accent: #0284c7;
+  --accent-light: #e0f2fe;
+  --accent-glow: rgba(2, 132, 199, 0.08);
+
+  /* Callout Colors */
+  --callout-bg: #f8fafc;
+  --callout-thesis-border: #0284c7;
+  --callout-thesis-bg: #f0f9ff;
+  --callout-risk-border: #f97316;
+  --callout-risk-bg: #fff7ed;
+  --callout-strategy-border: #8b5cf6;
+  --callout-strategy-bg: #f5f3ff;
+  --callout-catalyst-border: #10b981;
+  --callout-catalyst-bg: #ecfdf5;
+
+  /* Card & Chips */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
+  --chip-border: #cbd5e1;
+
+  /* Risk Lights */
+  --risk-green-bg: #ecfdf5; --risk-green-text: #059669; --risk-green-border: #a7f3d0;
+  --risk-yellow-bg: #fefce8; --risk-yellow-text: #d97706; --risk-yellow-border: #fef08a;
+  --risk-orange-bg: #fff7ed; --risk-orange-text: #ea580c; --risk-orange-border: #fed7aa;
+  --risk-red-bg: #fef2f2; --risk-red-text: #dc2626; --risk-red-border: #fecaca;
+
+  /* Table */
+  --table-zebra: #f8fafc;
+  --table-hover: #f1f5f9;
+  --table-header-bg: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --bg-surface-raised: #334155;
+    --bg-surface-hover: #475569;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #334155;
+    --border-subtle: #475569;
+    --accent: #38bdf8;
+    --accent-light: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.12);
+
+    --callout-bg: #1e293b;
+    --callout-thesis-border: #38bdf8;
+    --callout-thesis-bg: rgba(56, 189, 248, 0.08);
+    --callout-risk-border: #fb923c;
+    --callout-risk-bg: rgba(249, 115, 22, 0.08);
+    --callout-strategy-border: #a78bfa;
+    --callout-strategy-bg: rgba(167, 139, 250, 0.08);
+    --callout-catalyst-border: #34d399;
+    --callout-catalyst-bg: rgba(52, 211, 153, 0.08);
+
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --chip-bg: #334155;
+    --chip-text: #cbd5e1;
+    --chip-border: #475569;
+
+    --risk-green-bg: rgba(16, 185, 129, 0.15); --risk-green-text: #34d399; --risk-green-border: rgba(16, 185, 129, 0.3);
+    --risk-yellow-bg: rgba(245, 158, 11, 0.15); --risk-yellow-text: #fbbf24; --risk-yellow-border: rgba(245, 158, 11, 0.3);
+    --risk-orange-bg: rgba(249, 115, 22, 0.15); --risk-orange-text: #fb923c; --risk-orange-border: rgba(249, 115, 22, 0.3);
+    --risk-red-bg: rgba(239, 68, 68, 0.15); --risk-red-text: #f87171; --risk-red-border: rgba(239, 68, 68, 0.3);
+
+    --table-zebra: rgba(255, 255, 255, 0.02);
+    --table-hover: rgba(56, 189, 248, 0.06);
+    --table-header-bg: #334155;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 17px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+/* Layout Containers: Narrative & Content Presentation */
+.report-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  position: relative;
+}
+
+.report-narrative {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Content Presentation */
+.wide-content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Typography & Headings */
+.report-narrative p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 100%;
+}
+
+ul, ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
+}
+
+/* Callouts */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.35rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--callout-bg);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.callout p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.callout-thesis {
+  border-left-color: var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.callout-risk {
+  border-left-color: var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.callout-strategy {
+  border-left-color: var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.callout-catalyst {
+  border-left-color: var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Analysis Cards */
+.analysis-card {
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.analysis-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Meta Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  line-height: 1.35;
+}
+
+.chip-score {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.chip-evidence, .chip-confidence, .chip-severity, .chip-persistence {
+  color: var(--text-secondary);
+}
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.direction-up { color: #0284c7; }
+.direction-down { color: #7c3aed; }
+.direction-improving { color: #059669; }
+.direction-worsening { color: #dc2626; }
+.direction-flat { color: var(--text-secondary); }
+
+/* Risk Lights */
+.risk-chip, .risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.risk-green { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.risk-yellow { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.risk-orange { background: var(--risk-orange-bg); color: var(--risk-orange-text); border: 1px solid var(--risk-orange-border); }
+.risk-red { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* State Transitions */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.state-prior { color: var(--text-secondary); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  text-align: left;
+  min-width: 680px;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--text-primary);
+  font-weight: 650;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+td {
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Only the three approved two-column Weekly tables fit the narrow viewport. */
+.weekly-local-table {
+  min-width: 0;
+}
+
+.weekly-local-table th,
+.weekly-local-table td {
+  overflow-wrap: anywhere;
+}
+
+.weekly-local-table th {
+  white-space: normal;
+}
+
+.weekly-local-table th:first-child {
+  width: 40%;
+}
+
+/* Executive Summary Grid */
+.executive-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 0;
+}
+
+.executive-points > li {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .executive-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.badge-grade-B { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent); }
+.badge-grade-C { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.badge-grade-D { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(2, 132, 199, 0.4);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+    font-size: 16px;
+  }
+  .report-narrative p {
+    font-size: 16px;
+  }
+  h1.hero-title { font-size: 1.45rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  h4 { font-size: 1rem; }
+  .analysis-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="report-container">
+  <div class="report-narrative">
+    
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">GLOBAL_DAILY_BRIEF</span>
+      <span class="risk-chip risk-yellow">🟡 Risk: YELLOW</span>
+      
+    </div>
+    <div class="hero-run-id">RUN_ID: <code>GDB-20261012-0730</code></div>
+  </div>
+  <h1 class="hero-title">Global Daily Brief｜Yandex 資料中心遇襲停運，雲端韌性風險仍屬區域性</h1>
+  <div class="hero-meta-row">
+    <span class="hero-chip">發布時間：2026-10-12 07:38:00</span>
+    <span class="hero-chip hero-chip-cov">涵蓋：2026-10-11 07:30:00 ~ 2026-10-12 07:30:00</span>
+  </div>
+</header>
+
+    <main class="report-content">
+      
+<h2 id="section-執行摘要-executive-summary">執行摘要（EXECUTIVE SUMMARY）</h2>
+<blockquote class="callout">
+<p>本窗最值得追蹤的是俄羅斯 Yandex 的實體營運中斷；目前證據支持區域性可靠性風險，尚不足以推導全球 AI 算力短缺或台灣供應鏈新增訂單。美股仍休市，事件後定價尚待確認。</p>
+</blockquote>
+<ul class="executive-points">
+<li><strong>事件強度與市場廣度分開。</strong> 新站點停運具有營運意義，但受損容量、財務占比及恢復時間未充分披露，僅列中度事件觀察。</li>
+<li><strong>只保留一個合格根事件。</strong> Reflection 洽談、立訊回應及 AI 安全報導的根事件均在窗口外；週日轉載不重新計分，也不湊足三則。</li>
+<li><strong>未來催化劑更接近美股基本面。</strong> OCP 的客戶採用與出貨時程、ASML 財報的新訂單（New Orders）及前瞻指引（Guidance），比單純產品規格更具定價價值。</li>
+<li><strong>風險燈號 YELLOW。</strong> 這是本次有條件觀察判斷，並非全球風險升級。尚未取得美國雲端或台灣供應商受到本事件實質損害的證據。</li>
+</ul>
+<p>涵蓋時間：台北 2026 年 10 月 11 日 07:30 至 10 月 12 日 07:30。事件按發生／首次可靠發布時間納入，檢索時間較晚不改變事件歸屬。</p>
+<h2 id="section-今日三大市場訊號-today-top-3-market-signals">今日三大市場訊號（TODAY TOP 3 MARKET SIGNALS）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>訊號</th>
+<th>原始變化</th>
+<th>經濟與市場解讀</th>
+<th>方向／信心</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>區域資料中心韌性</td>
+<td>新增站點停運，受影響容量未知</td>
+<td>付費服務與復原成本面臨風險；全球資產傳導尚未確認</td>
+<td>區域營運受損；美股影響未定／中低</td>
+</tr>
+<tr>
+<td>事件價格尚未形成</td>
+<td>美國現貨週日休市</td>
+<td>星期五指數不能當作星期日事故的市場反應</td>
+<td>不評方向／高</td>
+</tr>
+<tr>
+<td>新聞熱度與根事件錯位</td>
+<td>多篇週日文章重述較早公告</td>
+<td>缺少新增條款或財測時，不把重複報導當需求改善</td>
+<td><span class="direction direction-flat">→ 持平</span> 中性／中</td>
+</tr>
+</tbody>
+</table></div>
+<p>上述三項是不同層次的觀察，不是三個被迫填滿的重大事件，也不構成跨資產共同惡化。</p>
+<h2 id="section-市場影響力前三大事件-top-3-market-impact-events">市場影響力前三大事件（TOP 3 MARKET IMPACT EVENTS）</h2>
+<p>本窗只有 <strong>1 個</strong>達到納入門檻的根事件。無第二、第三名；沒有其他足夠重要且通過時間去重的事件。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>排名／事件</th>
+<th>事件時間</th>
+<th>影響分數</th>
+<th>證據／信心</th>
+<th>市場定價</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1｜Yandex Vladimir 站點停運</td>
+<td>10 月 11 日；事故精確時分未得</td>
+<td>55／100，區域性戰術事件</td>
+<td>B-；營運中、全球傳導低</td>
+<td>美股待驗證；YDEX 合格事件報價未得</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-事件-1-yandex-停運考驗災備能力-尚無全球算力衝擊證據">事件 #1｜Yandex 停運考驗災備能力，尚無全球算力衝擊證據</h3>
+<div class="meta-chips"><span class="chip chip-score">影響分數 55／100</span><span class="chip">區域性／戰術</span><span class="chip chip-confidence">信心：中低</span><span class="chip">美股：待市場驗證</span></div>
+<ul>
+<li><strong>事實（FACT）：</strong> Reuters 引述公司表示 Vladimir 資料中心停運，部分服務不可用；RBC、DW 亦報導相關營運問題。首次可核驗 Reuters 報導為 10 月 11 日 07:21 UTC，更新於 07:39 UTC。</li>
+<li><strong>事件預期差：</strong> 未取得事故前可量化的市場共識，不能計算超預期幅度。重要性在於營運連續性受影響，而非媒體篇數增加。</li>
+<li><strong>證據限制：</strong> 尚未取得官方確認原文（Official confirmation unavailable）。多家媒體引述公司不等同多份獨立容量調查，可靠性高於社群傳聞，但未達官方原始資料完整驗證。</li>
+<li><strong>價格窗口：</strong> 截止時點美國現貨休市。俄羅斯 YDEX 可參與週末交易，但取得的二手頁面缺少一致的比較基準及精確報價時間，不採其漲跌作因果證據。</li>
+<li><strong>分數理由：</strong> 區域服務停運具經濟重要性，廣度與台灣外溢有限。量級、廣度、基本面、估值、持續性、台灣外溢分項為 70／40／70／35／70／20，按既定權重約為 55；屬研究判斷，非精密預測。</li>
+</ul>
+<p>來源：<a href="https://uk.marketscreener.com/news/russia-s-yandex-says-data-centre-in-vladimir-area-shut-down-after-drone-attack-ce785ddcdc89ff20" rel="noopener noreferrer" target="_blank">Reuters／MarketScreener</a>、<a href="https://www.rbc.ru/business/11/10/2026/6acaf11307bfa152cc7626c7?from=my_rbc" rel="noopener noreferrer" target="_blank">RBC</a>、<a href="https://amp.dw.com/ru/datacentr-andeksa-vo-vladimire-polnostu-ostanovlen-posle-ataki-dronov-cast-servisov-kompanii-perevedena-v-avarijnyj-rezim-raboty/a-79631597" rel="noopener noreferrer" target="_blank">DW</a>。</p>
+<h4>市場解讀</h4>
+<ol>
+<li><strong>營運衝擊：</strong> 停機若持續，付費工作負載與服務承諾可能受損；但本窗未取得可核驗受影響 MW、GPU 數量、營收（Revenue）占比或賠償額。</li>
+<li><strong>基本面傳導：</strong> 客戶遷移、服務水準協議賠付及恢復費用可能影響毛利率（Gross Margin）；這是推論（INFERENCE），尚無財測調整或每股盈餘（EPS）修正可佐證。</li>
+<li><strong>估值機制：</strong> 若客戶留存下降，可靠性折價可能壓低估值（Valuation）；若迅速復原，短期費用可能不足以改變長期現金流。</li>
+<li><strong>供應鏈門檻：</strong> 災備投資必須先轉化為合法、可服務的採購與訂單（Order），才能連結設備商收入，不能直接把損害視為台灣受益。</li>
+</ol>
+<h4>市場定價</h4>
+<p><strong>市場預期（MARKET EXPECTATION）：</strong> 未取得可驗證事故共識、期權隱含影響或分析師一致財測修正，市場定價（Market Pricing）狀態為未確認。</p>
+<p>俄羅斯上市 Yandex 為 <strong>MOEX：YDEX</strong>。Nebius 已於 2024 年 7 月完成俄羅斯業務出售，不能把 NASDAQ：NBIS 當成此次受損站點的同一上市公司，也不把其未來股價變化直接歸因於事故。來源：<a href="https://nebius.com/newsroom/ynv-announces-successful-completion-of-the-divestment-of-its-russia-based-businesses" rel="noopener noreferrer" target="_blank">Nebius</a>、<a href="https://www.moex.com/en/stocks/ydex?board=psrp" rel="noopener noreferrer" target="_blank">MOEX</a>。</p>
+<h4>反向證據</h4>
+<ul>
+<li><strong>範圍限制：</strong> 尚無可核驗資料證明美國大型雲端客戶、跨境付費負載或台灣出貨受到影響。</li>
+<li><strong>恢復可能：</strong> 備援與快速復原可能縮短影響；恢復時間未知不能自動視為長期停機。</li>
+<li><strong>供應能力未知：</strong> 不採社群流傳的容量、服務數量或流量降幅，也不把設施停運等同所有 GPU 損毀。</li>
+<li><strong>全球平台反證：</strong> OpenAI 狀態頁的成本資料積壓明示不影響 ChatGPT 使用及 API 請求；Claude 狀態頁列示 10 月 11 日無事故。不能合併為全球 AI 雲端中斷。來源：<a href="https://status.openai.com" rel="noopener noreferrer" target="_blank">OpenAI status</a>、<a href="https://status.claude.com" rel="noopener noreferrer" target="_blank">Claude status</a>。</li>
+</ul>
+<h4>下一催化劑</h4>
+<p><strong>確認條件：</strong> 公司披露持續停機、客戶流失、實際財務損失或恢復採購，並取得可追溯原始資料及獨立確認，才提高基本面影響評估。</p>
+<p><strong>失效條件：</strong> 服務迅速恢復且無重大賠付／留存／財測影響，或沒有跨市場傳導，則維持區域性短期事件；不延伸為全球科技股風險制度改變。</p>
+<hr/>
+<h2 id="section-重要個股事件掃描">重要個股事件掃描</h2>
+<p>僅列未來 24–72 小時具一級催化劑的股票；預告並非本窗新增事件，不另行評分。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>股票</th>
+<th>催化劑</th>
+<th>需要看到什麼</th>
+<th>不能先行假定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AMD</td>
+<td>10 月 12–15 日 OCP</td>
+<td>客戶導入、系統供貨、軟體與機架部署進展</td>
+<td>規格展示等於收入入帳</td>
+</tr>
+<tr>
+<td>AVGO</td>
+<td>OCP 演講，台北 10 月 13 日 08:30</td>
+<td>交換器、互連及光通訊的量產／採用證據</td>
+<td>新網路產品等於立即擴大總體 CapEx</td>
+</tr>
+<tr>
+<td>ASML</td>
+<td>10 月 14 日第三季財報</td>
+<td>新訂單、客戶投資廣度、出貨／認列與指引</td>
+<td>單季訂單可直接代表全產業週期</td>
+</tr>
+</tbody>
+</table></div>
+<p>來源：<a href="https://www.amd.com/en/corporate/events.html" rel="noopener noreferrer" target="_blank">AMD events</a>、<a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-redefines-ai-infrastructure-industry-leading-networking" rel="noopener noreferrer" target="_blank">Broadcom IR</a>、<a href="https://www.investor.asml.com/quarterly-results" rel="noopener noreferrer" target="_blank">ASML IR</a>。ASML 原頁使用 CET 標記；此處僅保留官方日期，避免夏令時間換算歧義。</p>
+<h2 id="section-美國科技股策略-us-tech-strategy">美國科技股策略（US TECH STRATEGY）</h2>
+<blockquote class="callout">
+<p>本窗應先守住事件與實體辨識，再等可交易時段和公司數據。新聞造成的營運風險、全球科技需求與利率估值壓力，需分別驗證。</p>
+</blockquote>
+<p><strong>基準策略：</strong> 沒有證據支持僅憑這次區域事故全面調整美國 AI／雲端曝險。OCP 與財報應以新增商業資訊判讀，避免追逐窗口外傳聞的重複熱度。</p>
+<p><strong>風險情境：</strong> 若後續出現跨區客戶損失、其他大型業者實際中斷，再檢查雲端股相對 Nasdaq、半導體股相對 SOX 的變化及成交廣度；只有共同跌價不足以證明共同原因。</p>
+<h3 id="section-跨資產只作定價背景">跨資產只作定價背景</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>指標</th>
+<th>最近核驗值</th>
+<th>觀察日期／窗口</th>
+<th>與本事件關係</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美國 2Y／10Y 殖利率</td>
+<td>4.80%／5.24%</td>
+<td>10 月 9 日官方日值</td>
+<td>事件前折現率背景</td>
+</tr>
+<tr>
+<td>10Y 實質殖利率</td>
+<td>2.87%</td>
+<td>10 月 8 日；較舊</td>
+<td>不與星期五數據作精確同步推論</td>
+</tr>
+<tr>
+<td>S&amp;P 500／Nasdaq</td>
+<td>7,811.54／27,366.17</td>
+<td>10 月 9 日收盤</td>
+<td>不是星期日事件反應</td>
+</tr>
+<tr>
+<td>SOX</td>
+<td>12,572.4；<span class="direction direction-down">↓ 下降</span> 0.41%</td>
+<td>10 月 9 日收盤</td>
+<td>事件前半導體相對背景</td>
+</tr>
+<tr>
+<td>DXY／VIX</td>
+<td>102.21／14.84</td>
+<td>10 月 9 日</td>
+<td>無事件後共同確認</td>
+</tr>
+<tr>
+<td>MOVE</td>
+<td>98.47</td>
+<td>10 月 9 日二手日值</td>
+<td>變動欄符號不一致，不採其變動數</td>
+</tr>
+<tr>
+<td>USD/TWD</td>
+<td>UNAVAILABLE</td>
+<td>未取得可比在岸觀察</td>
+<td>不用不同供應商／假日值拼接方向</td>
+</tr>
+</tbody>
+</table></div>
+<p>來源：<a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">US Treasury nominal</a>、<a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_real_yield_curve" rel="noopener noreferrer" target="_blank">US Treasury real</a>、<a href="https://apnews.com/article/dafbd0c4037ee10e2a9e305f3cfa8e70" rel="noopener noreferrer" target="_blank">AP</a>、<a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">Investing SOX</a>、<a href="https://www.investing.com/indices/usdollar-historical-data" rel="noopener noreferrer" target="_blank">Investing DXY</a>、<a href="https://www.investing.com/indices/volatility-s-p-500-historical-data" rel="noopener noreferrer" target="_blank">Investing VIX</a>、<a href="https://www.eoddata.com/stockquote/INDEX/MOVE.htm" rel="noopener noreferrer" target="_blank">EODData MOVE index</a>。</p>
+<p>美股截止狀態為 <strong>CLOSED</strong>，台北 10 月 12 日 07:30 對應紐約星期日 19:30 EDT。NYSE 官方行事曆未將 10 月 12 日列為股市休市日；下一正常現貨開盤為台北 10 月 12 日 21:30，債市假日安排不可直接套用。來源：<a href="https://www.nyse.com/trade/hours-calendars" rel="noopener noreferrer" target="_blank">NYSE</a>。</p>
+<h2 id="section-台灣-ai-半導體-記憶體-伺服器影響">台灣 AI／半導體／記憶體／伺服器影響</h2>
+<p><strong>傳導判斷：</strong> 事件首先影響服務可靠性。資本支出（CapEx）若增加，仍須區分俄羅斯復原、其他地區預防性災備，以及原訂投資挪用；三者對可取得訂單與供應商毛利並不相同。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>環節</th>
+<th>機制／時間</th>
+<th>現有證據</th>
+<th>反證與確認門檻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>晶圓代工／先進製程／CoWoS 先進封裝（Advanced Packaging）</td>
+<td>替換運算設備可能拉貨；1–3 季</td>
+<td>無事件專屬採購證據</td>
+<td>未知設備損失；須客戶訂單與交期</td>
+</tr>
+<tr>
+<td>HBM／DRAM／NAND</td>
+<td>恢復伺服器可能需求；數週至數季</td>
+<td>無容量或庫存（Inventory）數據</td>
+<td>停機不等於晶片損毀；不能推升報價</td>
+</tr>
+<tr>
+<td>伺服器 ODM／PCB／CCL</td>
+<td>新災備站點擴建才有增量；數月</td>
+<td>無供應商公告</td>
+<td>可能只是既有機房工作負載搬移</td>
+</tr>
+<tr>
+<td>散熱／電源／網通／光通訊</td>
+<td>韌性與冗餘設計重估；數月至數季</td>
+<td>僅一般工程機制推論</td>
+<td>需招標、認證、量產或客戶採用佐證</td>
+</tr>
+<tr>
+<td>資料中心（Data Center）／雲端 CapEx</td>
+<td>多區部署需求評估；即時至數季</td>
+<td>區域性事故可作風險案例</td>
+<td>未證明全球預算上修或台廠可服務市場</td>
+</tr>
+<tr>
+<td>出口管制／匯率／估值</td>
+<td>影響合法供貨及折現；即時</td>
+<td>無新增制裁措施可核驗</td>
+<td>不把重建需求等同可合法承接；匯率資料缺口</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>股票敏感度：</strong> 本窗沒有足夠公司證據指定單一台股為直接受益／受害者。外需重點仍是已揭露客戶採購、良率、出貨、毛利與投資回收，而非把地緣事故套成供應鏈訂單故事。</p>
+<h2 id="section-下一階段催化劑-next-catalysts">下一階段催化劑（NEXT CATALYSTS）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>時間（台北）</th>
+<th>事件</th>
+<th>確認條件</th>
+<th>失效／降權條件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>後續公告，時間未定</td>
+<td>Yandex 恢復與損失資料</td>
+<td>原始通告、付費服務與財務影響</td>
+<td>快速恢復且影響有限</td>
+</tr>
+<tr>
+<td>10 月 12 日 21:30</td>
+<td>美國正常現貨開盤</td>
+<td>相對價格、成交與公司資訊一致</td>
+<td>只有廣泛 beta 波動</td>
+</tr>
+<tr>
+<td>10 月 12–15 日活動期；AVGO 13 日 08:30</td>
+<td>OCP</td>
+<td>可量化客戶、量產與部署</td>
+<td>只重述既有路線圖</td>
+</tr>
+<tr>
+<td>10 月 14 日</td>
+<td>ASML 財報</td>
+<td>新訂單、收入認列、指引一致</td>
+<td>一次性訂單或時點挪移</td>
+</tr>
+<tr>
+<td>10 月 15 日 14:00，超出 72 小時</td>
+<td>TSMC 法說</td>
+<td>先進製程／封裝需求與毛利指引</td>
+<td>需求與認列脫節</td>
+</tr>
+</tbody>
+</table></div>
+<p>TSMC 時間來源：<a href="https://investor.tsmc.com/english/financial-calendar" rel="noopener noreferrer" target="_blank">TSMC calendar</a>。本表為已知催化劑，不預設結果方向。</p>
+<h2 id="section-source-audit">SOURCE AUDIT</h2>
+<p><strong>方法與限制：</strong> 已預檢 16 家指定股票及 7 個平台，並完成 14 檔固定股票清單。公開搜尋與可讀官方頁面不保證全市場無遺漏；索引偏舊、全文不可得和不一致報價均降低結論強度。</p>
+<ul>
+<li>
+<p><strong>事件證據等級 B-：</strong> Reuters、RBC、DW 提供交叉報導，但事故內容共同依賴公司口徑；未取得官方原始完整公告。官方狀態站出現 CAPTCHA／讀取錯誤後未繞過，不能以此推定事故不存在。</p>
+</li>
+<li>
+<p><strong>去重：</strong> Reflection 的 Bloomberg 根報導最後更新為 10 月 10 日 20:22 UTC，早於本窗；立訊 10 月 10 日公告、Microsoft 10 月 7 日架構文章亦不因週日轉載重新排名。</p>
+</li>
+<li>
+<p><strong>資訊缺口：</strong> Microsoft 10 月 11 日 IDC 文章僅讀到標題，未把未取得的研究數字列入論點；ARM 公告索引偏舊，未找到新事件不等於確定沒有事件。</p>
+</li>
+<li>
+<p><strong>價格驗證：</strong> YDEX 二手頁面的日期標頭不能證明成交時刻，其變動基準亦不一致；故不報事件漲跌。所有美國星期五價格只作背景。</p>
+</li>
+<li>
+<p><strong>研究完成界線：</strong> 完成的是指定範圍內的檢索、去重、分析與缺口揭露；不代表公司原始事故資料或全部市場數值均已取得。</p>
+</li>
+<li>
+<p><strong>R1｜Reuters／MarketScreener</strong>｜2026-10-11T07:39:00+00:00｜Yandex事件，轉載Reuters；非公司原始公告。<a href="https://uk.marketscreener.com/news/russia-s-yandex-says-data-centre-in-vladimir-area-shut-down-after-drone-attack-ce785ddcdc89ff20" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>R2｜RBC</strong>｜2026-10-11｜引用Yandex Cloud Alerts；時區未明。<a href="https://www.rbc.ru/business/11/10/2026/6acaf11307bfa152cc7626c7?from=my_rbc" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>R3｜DW</strong>｜2026-10-11｜公司引述交叉確認；與Reuters共同依賴公司口徑。<a href="https://amp.dw.com/ru/datacentr-andeksa-vo-vladimire-polnostu-ostanovlen-posle-ataki-dronov-cast-servisov-kompanii-perevedena-v-avarijnyj-rezim-raboty/a-79631597" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>P1｜Nebius</strong>｜2024-07-15｜俄羅斯業務出售完成，僅用於實體辨識。<a href="https://nebius.com/newsroom/ynv-announces-successful-completion-of-the-divestment-of-its-russia-based-businesses" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>P2｜MOEX</strong>｜retrieved 2026-10-11｜YDEX俄羅斯上市實體；頁面允許週末交易，無合格事件價格。<a href="https://www.moex.com/en/stocks/ydex?board=psrp" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>P3｜NYSE</strong>｜2026 calendar｜週日休市；10月12日非列示股市假日。<a href="https://www.nyse.com/trade/hours-calendars" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>M1｜US Treasury nominal</strong>｜2026-10-09｜2Y4.80%，10Y5.24%。<a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>M2｜US Treasury real</strong>｜2026-10-08｜10Y實質2.87%；未取得10月9日同時點。<a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_real_yield_curve" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>M3｜AP</strong>｜2026-10-09T20:16:28Z｜美股星期五收盤，非事件反應。<a href="https://apnews.com/article/dafbd0c4037ee10e2a9e305f3cfa8e70" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>M4｜Investing SOX</strong>｜2026-10-09｜SOX12572.4，-0.41%。<a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>M5｜Investing DXY</strong>｜2026-10-09｜DXY102.21；不採無時間戳週日列。<a href="https://www.investing.com/indices/usdollar-historical-data" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>M6｜Investing VIX</strong>｜2026-10-09｜VIX14.84。<a href="https://www.investing.com/indices/volatility-s-p-500-historical-data" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>M7｜EODData MOVE index</strong>｜2026-10-09｜98.47，前值100.70；資料商變動符號不一致，僅採水準。<a href="https://www.eoddata.com/stockquote/INDEX/MOVE.htm" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>C1｜AMD events</strong>｜2026 OCP｜OCP10月12–15日。<a href="https://www.amd.com/en/corporate/events.html" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>C2｜Broadcom IR</strong>｜2026-10-08｜OCP主題演講10月12日17:30Pacific。<a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-redefines-ai-infrastructure-industry-leading-networking" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>C3｜ASML IR</strong>｜2026 Q3 calendar｜10月14日財報；原頁CET標示與夏令時需留意。<a href="https://www.investor.asml.com/quarterly-results" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>C4｜TSMC calendar</strong>｜2026 calendar｜10月15日14:00台北，超出72小時。<a href="https://investor.tsmc.com/english/financial-calendar" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>X1｜Bloomberg Reflection</strong>｜2026-10-10T20:22:00Z｜根事件在本窗開始前；不重複排名。<a href="https://bloomberg.com/news/articles/2026-10-10/nvidia-is-in-talks-to-acquire-reflection-ai-the-ft-reports" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>X2｜Luxshare announcement mirror</strong>｜2026-10-10｜公司公告鏡像，不是新違法裁決。<a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?CompanyCode=80150802&amp;gather=1&amp;id=12636263" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>X3｜Axios</strong>｜2026-10-09T23:34:00Z｜窗口外AI安全報導，未取得本窗新法規。<a href="https://www.axios.com/2026/10/09/anthropic-ai-security-white-house" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>X4｜Microsoft Windows</strong>｜2026-10-07｜混合AI架構舊發布。<a href="https://blogs.windows.com/windowsexperience/2026/10/07/building-windows-for-hybrid-intelligence/" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>O1｜OpenAI status</strong>｜checked 2026-10-11｜成本資料積壓，官方表示API請求及ChatGPT使用未受影響。<a href="https://status.openai.com" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>O2｜Claude status</strong>｜checked 2026-10-11｜10月11日列示無事故。<a href="https://status.claude.com" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>O3｜Anthropic newsroom</strong>｜checked 2026-10-11｜可讀索引最近公告10月8日。<a href="https://www.anthropic.com/news?subjects=announcements" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>O4｜OpenAI newsroom</strong>｜checked 2026-10-11｜可讀索引最近10月8日。<a href="https://openai.com/news/?topics=announcements" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>O5｜Microsoft Asia IDC study</strong>｜2026-10-11｜僅標題可讀，未取得正文量化結果；不列重大候選。<a href="https://news.microsoft.com/source/asia/2026/10/11/business-opportunity-of-ai-study-idc-survey-october-2026/" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>O6｜Google Cloud newsroom</strong>｜checked 2026-10-11｜最近10月9日舊事件。<a href="https://www.googlecloudpresscorner.com/press-releases?l=50" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>O7｜AWS / Amazon newsroom</strong>｜checked 2026-10-11｜10月8日研究補助舊事件。<a href="https://press.aboutamazon.com/press-release-archive?f0=en-US&amp;q=" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>O8｜Azure blog</strong>｜checked 2026-10-11｜10月7日基建舊事件。<a href="https://azure.microsoft.com/en-us/blog/" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>O9｜Microsoft blog</strong>｜checked 2026-10-11｜Copilot相關可讀公告窗口外。<a href="https://blogs.microsoft.com/" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+<li>
+<p><strong>O10｜Gemini at Work</strong>｜2026-10-08｜舊發布。<a href="https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026/" rel="noopener noreferrer" target="_blank">來源</a></p>
+</li>
+</ul>
+<h2 id="section-免責聲明-disclaimer">免責聲明（DISCLAIMER）</h2>
+<p>本報告為市場情報與情境研究，不構成個人化投資建議。事件影響分數與風險燈號屬有條件研究判斷；來源限制、交易時段及後續公司披露可能改變結論。</p>
+
+    </main>
+    <footer>
+      Global Macro Signal Report · 2026-10-12 07:38:00 · Generated Deterministically
+    </footer>
+  </div>
+</div>
+</body>
+</html>

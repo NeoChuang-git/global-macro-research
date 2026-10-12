@@ -640,6 +640,22 @@
       "title": "Global Daily Brief｜Nvidia 傳洽 Reflection AI，模型層整合仍待官方確認",
       "topic": null
     },
+    "GDB-20261012-0730": {
+      "coverage_end_taipei": "2026-10-12T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-11T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-12T07:38:00+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-12.html",
+      "html_sha256": "f7ad22951373f7edf14efdb08de6a25eedc5e10594c4398c4a6b89e46db23704",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-12.md",
+      "markdown_sha256": "0e6fbc58854400a46fae5f1e7069567a9b92456c8f0635df2d93779d7cca919b",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261012-0730",
+      "slug": "yandex-regional-outage",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Yandex 資料中心遇襲停運，雲端韌性風險仍屬區域性",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
