@@ -2112,6 +2112,22 @@
       "title": "Global Macro Early Warning｜台股收盤確認科技賣壓擴散，基本面與估值走勢分岔",
       "topic": null
     },
+    "MTW-20261013-1700-foreign-flow-confirmation": {
+      "coverage_end_taipei": "2026-10-13T17:00:00+08:00",
+      "coverage_start_taipei": "2026-10-13T16:00:00+08:00",
+      "generated_at_taipei": "2026-10-13T17:13:12+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-13_1700_foreign-flow-confirmation.html",
+      "html_sha256": "186fddcf2fa9035f8275642d02292b32626ffc8dcfe29c1d0b60e428b2479192",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-13_1700_foreign-flow-confirmation.md",
+      "markdown_sha256": "3fd78e9621f0292627d3394dfddc5a22c2fede9fdfd07fe9a057a8aabe47ba0e",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261013-1700-foreign-flow-confirmation",
+      "slug": "foreign-flow-confirmation",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜外資賣超放大至三倍，台灣股期匯確認曝險收縮",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
