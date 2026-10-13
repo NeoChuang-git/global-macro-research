@@ -2096,6 +2096,22 @@
       "title": "Global Macro Early Warning｜台灣電子開盤賣壓擴散，半導體相對弱勢進入戰術警戒",
       "topic": null
     },
+    "MTW-20261013-1500-close-breadth-confirmation": {
+      "coverage_end_taipei": "2026-10-13T15:00:00+08:00",
+      "coverage_start_taipei": "2026-10-13T14:00:00+08:00",
+      "generated_at_taipei": "2026-10-13T15:14:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-13_1500_close-breadth-confirmation.html",
+      "html_sha256": "b4d9273ad28a0d0d4b47c0ba1a9c29aedf6ac43ca361cce55a48bd38f8cf59d2",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-13_1500_close-breadth-confirmation.md",
+      "markdown_sha256": "8905ec77e20494754667f926f7acf7450c6f8aff403293339b12830b189e1378",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261013-1500-close-breadth-confirmation",
+      "slug": "close-breadth-confirmation",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台股收盤確認科技賣壓擴散，基本面與估值走勢分岔",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
