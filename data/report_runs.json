@@ -2080,6 +2080,22 @@
       "title": "Global Macro Early Warning｜半導體相對弱勢延續，台灣外資賣壓與基本面強勢分岔",
       "topic": null
     },
+    "MTW-20261013-1000-taiwan-tech-transmission": {
+      "coverage_end_taipei": "2026-10-13T10:00:00+08:00",
+      "coverage_start_taipei": "2026-10-13T09:00:00+08:00",
+      "generated_at_taipei": "2026-10-13T10:15:43+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-13_1000_taiwan-tech-transmission.html",
+      "html_sha256": "3ea85bb19b10062b30ae89b3b0185a3688f774eaa699df2a7af2e25d0162ebe5",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-13_1000_taiwan-tech-transmission.md",
+      "markdown_sha256": "df48d53e52b6de84fc0b0940c9efe72296e11a649221ffbc1e0c55b7f7894be1",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261013-1000-taiwan-tech-transmission",
+      "slug": "taiwan-tech-transmission",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台灣電子開盤賣壓擴散，半導體相對弱勢進入戰術警戒",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
