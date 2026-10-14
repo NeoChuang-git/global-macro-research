@@ -2208,6 +2208,22 @@
       "title": "Global Macro Early Warning｜ASML 第四季展望優於預期，AI 基本面與市場修復仍不同步",
       "topic": null
     },
+    "MTW-20261014-1600-taiwan-selling-eases": {
+      "coverage_end_taipei": "2026-10-14T16:00:00+08:00",
+      "coverage_start_taipei": "2026-10-14T15:00:00+08:00",
+      "generated_at_taipei": "2026-10-14T16:07:36.352570+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-14_1600_taiwan-selling-eases.html",
+      "html_sha256": "6ee7f3e71b3e3f22fbc6431fbca2ddd0042d4ff974bedceac392973914b37ea9",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-14_1600_taiwan-selling-eases.md",
+      "markdown_sha256": "4f82a224b0ea1e7edf8a6f014269611822d81c58b1c2d514105b244cdb697ffb",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261014-1600-taiwan-selling-eases",
+      "slug": "taiwan-selling-eases",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜外資賣壓收斂近九成，台灣曝險修復仍欠匯率確認",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
