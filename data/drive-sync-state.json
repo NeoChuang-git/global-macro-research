@@ -1647,6 +1647,24 @@
       "sha256": "14c552258eb153e3ff1ddba892cd882ea2f255dffa71b6057627d924362cce01",
       "size": 18866
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-15_0200_semi-risk-premium.md": {
+      "category": "early-warning",
+      "drive_file_id": "1qXoETb7ZIRhH_VZboIq8UNfFGRwmLXE1",
+      "md5_checksum": "12469db2159d37875e14ff4caff65f85",
+      "modified_time": "2026-10-14T18:14:12.570Z",
+      "name": "Global_Macro_Early_Warning_2026-10-15_0200_semi-risk-premium.md",
+      "sha256": "2b9bc51d4b393b321fa9fc05efd7d262815e71b98ebfd3cf9dc602634abe8b2e",
+      "size": 20987
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-15_0300_energy-pass-through.md": {
+      "category": "early-warning",
+      "drive_file_id": "1XxzpoLDU3ZXJJKfmCJXzqPnsXaP-Cngj",
+      "md5_checksum": "738d9984199800be97e1454d5366f8a5",
+      "modified_time": "2026-10-14T19:10:00.383Z",
+      "name": "Global_Macro_Early_Warning_2026-10-15_0300_energy-pass-through.md",
+      "sha256": "34a0a60c7e9b1c5c2cab298da8cc718baa6fa75d420aa997bdc95a7a0bbdd432",
+      "size": 19727
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
