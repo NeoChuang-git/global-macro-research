@@ -2176,6 +2176,22 @@
       "title": "Global Macro Early Warning｜中國上游成本超預期，終端價格偏弱增加製造毛利壓力",
       "topic": null
     },
+    "MTW-20261014-1200-asia-trade-resilience": {
+      "coverage_end_taipei": "2026-10-14T12:00:00+08:00",
+      "coverage_start_taipei": "2026-10-14T11:00:00+08:00",
+      "generated_at_taipei": "2026-10-14T12:14:38.182863+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-14_1200_asia-trade-resilience.html",
+      "html_sha256": "e336b1feb64e89fde7cc687734b84dc3327ccaf88652ec6cc5e1c0bd82d6436c",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-14_1200_asia-trade-resilience.md",
+      "markdown_sha256": "84bf68f071c805dd0e79b3750bb4a5bff53ef30ec11317338662d2ad44ac5092",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261014-1200-asia-trade-resilience",
+      "slug": "asia-trade-resilience",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜中國進出口雙雙超預期，外需韌性與成本壓力並存",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
