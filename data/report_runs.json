@@ -2256,6 +2256,22 @@
       "title": "Global Macro Early Warning｜核心CPI未如預期降溫，能源通膨加重利率與購買力壓力",
       "topic": null
     },
+    "MTW-20261015-0000-post-cpi-audit": {
+      "coverage_end_taipei": "2026-10-15T00:00:00+08:00",
+      "coverage_start_taipei": "2026-10-14T23:00:00+08:00",
+      "generated_at_taipei": "2026-10-15T00:18:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-15_0000_post-cpi-audit.html",
+      "html_sha256": "f9c9b5e08470ed06b3ae224bfa501c7964c846b8ea9b692c7506868862b7b8f7",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-15_0000_post-cpi-audit.md",
+      "markdown_sha256": "ec2e8fc9ec2878858d6714e182b0fa9bed2402254a23997593c72ff67bd5dd59",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261015-0000-post-cpi-audit",
+      "slug": "post-cpi-audit",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜半導體賣壓再擴大，估值壓力與設備需求背離",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
