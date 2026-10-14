@@ -2240,6 +2240,22 @@
       "title": "Global Macro Early Warning｜TTF五日漲幅門檻獲確認，日內回落仍不足解除冬季成本風險",
       "topic": null
     },
+    "MTW-20261014-2100-core-cpi-surprise": {
+      "coverage_end_taipei": "2026-10-14T21:00:00+08:00",
+      "coverage_start_taipei": "2026-10-14T20:00:00+08:00",
+      "generated_at_taipei": "2026-10-14T21:12:16+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-14_2100_core-cpi-surprise.html",
+      "html_sha256": "2a8c07ad4c181a542f56102221b47841dd424ae32b94559e8406597c411c1d60",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-14_2100_core-cpi-surprise.md",
+      "markdown_sha256": "8e4454f9f5480b09d7cf10738caa827150ef536bec344b8bba1ceb0800ae77d5",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261014-2100-core-cpi-surprise",
+      "slug": "core-cpi-surprise",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜核心CPI未如預期降溫，能源通膨加重利率與購買力壓力",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
