@@ -2224,6 +2224,22 @@
       "title": "Global Macro Early Warning｜外資賣壓收斂近九成，台灣曝險修復仍欠匯率確認",
       "topic": null
     },
+    "MTW-20261014-1800-ttf-threshold-confirmation": {
+      "coverage_end_taipei": "2026-10-14T18:00:00+08:00",
+      "coverage_start_taipei": "2026-10-14T17:00:00+08:00",
+      "generated_at_taipei": "2026-10-14T18:12:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-14_1800_ttf-threshold-confirmation.html",
+      "html_sha256": "2755574364310719a1488421af42d1eaeaa7f3467921d9ebd060b59dbe73e54e",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-14_1800_ttf-threshold-confirmation.md",
+      "markdown_sha256": "db9b8db17fc095d159465ce785e82934512d43c4346d55ebb92c82af64831f17",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261014-1800-ttf-threshold-confirmation",
+      "slug": "ttf-threshold-confirmation",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜TTF五日漲幅門檻獲確認，日內回落仍不足解除冬季成本風險",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
