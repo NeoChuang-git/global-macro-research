@@ -2192,6 +2192,22 @@
       "title": "Global Macro Early Warning｜中國進出口雙雙超預期，外需韌性與成本壓力並存",
       "topic": null
     },
+    "MTW-20261014-1400-asml-demand-validation": {
+      "coverage_end_taipei": "2026-10-14T14:00:00+08:00",
+      "coverage_start_taipei": "2026-10-14T13:00:00+08:00",
+      "generated_at_taipei": "2026-10-14T14:13:00.444860+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-14_1400_asml-demand-validation.html",
+      "html_sha256": "4b728f02512b26150fd046503591c23a8168969d58932a14696ab8d053b4d774",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-14_1400_asml-demand-validation.md",
+      "markdown_sha256": "b0eaca2094e206679b1ce15e9c6c7220a32462282852d4ca5e8e069c3e7dbe90",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261014-1400-asml-demand-validation",
+      "slug": "asml-demand-validation",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜ASML 第四季展望優於預期，AI 基本面與市場修復仍不同步",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
