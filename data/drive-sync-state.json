@@ -1584,6 +1584,15 @@
       "sha256": "bd6bf34495d53cb7b52ef09fdea4e1cb10f50ac2763991bd82d2c72f466e2d9b",
       "size": 18491
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-14_1100_china-cost-divergence.md": {
+      "category": "early-warning",
+      "drive_file_id": "1-BQ_T1LXBiYYj_fk1PDRrUXYM59Yv6IH",
+      "md5_checksum": "dfb1c0064a91b182ec1392620d1fa8b7",
+      "modified_time": "2026-10-14T03:16:17.188Z",
+      "name": "Global_Macro_Early_Warning_2026-10-14_1100_china-cost-divergence.md",
+      "sha256": "da822aae71ea97b54328650ef7f2b96172eef4fcb279bd74090392d724a75351",
+      "size": 20541
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
