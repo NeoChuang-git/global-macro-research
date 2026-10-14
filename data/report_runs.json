@@ -2304,6 +2304,22 @@
       "title": "Global Macro Early Warning｜能源成本擴散至企業定價，褐皮書補強通膨持續性風險",
       "topic": null
     },
+    "MTW-20261015-0700-semi-afterhours": {
+      "coverage_end_taipei": "2026-10-15T07:00:00+08:00",
+      "coverage_start_taipei": "2026-10-15T06:00:00+08:00",
+      "generated_at_taipei": "2026-10-15T07:07:48+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-15_0700_semi-afterhours.html",
+      "html_sha256": "44d367d8c6c74cd9e7253a629e999deb8b643a8483851d86976697d91401e15d",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-15_0700_semi-afterhours.md",
+      "markdown_sha256": "21359ebe51ffbc5ac5b855bddaef801b389471f1899e51f0fa4c50f5852ab3e8",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261015-0700-semi-afterhours",
+      "slug": "semi-afterhours",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜半導體盤後續跌，台灣開盤估值壓力升高",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
