@@ -52,9 +52,16 @@ report therefore requires an explicit reviewed Git change.
 
 Default maximum report size is 25 MiB and can be lowered with
 `MAX_REPORT_BYTES`. To protect the runner from resource exhaustion, batch limits
-enforce at most 200 total Drive files (`DEFAULT_MAX_BATCH_FILES`), 100 MiB total
-Drive bytes (`DEFAULT_MAX_BATCH_BYTES`), and 50 MiB staged changes per run
-(`DEFAULT_MAX_STAGED_BYTES`). Parent symlink checking ensures no ancestor path
+enforce at most 200 downloaded Drive files (`DEFAULT_MAX_BATCH_FILES`), 100 MiB
+of transfer bytes (`DEFAULT_MAX_BATCH_BYTES`, counting the larger of declared
+and downloaded size per file), and 50 MiB staged changes per run
+(`DEFAULT_MAX_STAGED_BYTES`). These transfer limits apply across all categories
+after filename deduplication and local checksum verification. Verified unchanged
+reports consume neither file nor byte transfer budget. The complete paginated
+listing and all archived reports remain eligible for state/index publication;
+the archive is never truncated to the transfer limit. Exceeding a transfer limit
+fails before staged folder reports, state, or index are written.
+Parent symlink checking ensures no ancestor path
 can escape the report directory root. The sync never uploads, edits, trashes, or
 changes Drive permissions.
 
