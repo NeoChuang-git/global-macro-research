@@ -399,8 +399,8 @@ def sync_reports(
 
     next_files = dict(state["files"])
     staged = {}
-    total_remote_files = 0
-    total_remote_bytes = 0
+    total_transfer_files = 0
+    total_transfer_bytes = 0
     total_staged_bytes = 0
     updated = 0
     unchanged = 0
@@ -441,22 +441,6 @@ def sync_reports(
                 name = remote.name if hasattr(remote, "name") else remote.get("name")
                 size = remote.size if hasattr(remote, "size") else remote.get("size", 0)
                 md5_chk = remote.md5_checksum if hasattr(remote, "md5_checksum") else remote.get("md5Checksum")
-                total_remote_files += 1
-                if total_remote_files > max_batch_files:
-                    raise SyncError(
-                        f"total Drive reports exceed batch limit of {max_batch_files} files"
-                    )
-
-                try:
-                    declared_size = int(size)
-                except (TypeError, ValueError):
-                    declared_size = 0
-                total_remote_bytes += max(0, declared_size)
-                if total_remote_bytes > max_batch_bytes:
-                    raise SyncError(
-                        f"total Drive reports size exceeds batch limit of {max_batch_bytes} bytes"
-                    )
-
                 relative = PurePosixPath("reports", category, name)
                 relative_text = relative.as_posix()
                 local_path = repo_root.joinpath(*relative.parts)
@@ -477,7 +461,28 @@ def sync_reports(
                     content_sha256 = _hash_file(local_path, "sha256")
                     unchanged += 1
                 else:
+                    # Bound downloads, not the complete historical listing. Verified
+                    # local reports remain in state/index without consuming budget.
+                    total_transfer_files += 1
+                    if total_transfer_files > max_batch_files:
+                        raise SyncError(
+                            f"Drive report transfers exceed batch limit of {max_batch_files} files"
+                        )
+                    try:
+                        declared_size = max(0, int(size))
+                    except (TypeError, ValueError):
+                        declared_size = 0
+                    if total_transfer_bytes + declared_size > max_batch_bytes:
+                        raise SyncError(
+                            f"Drive report transfer size exceeds batch limit of {max_batch_bytes} bytes"
+                        )
                     content = _download_file(adapter, remote, category, max_report_bytes)
+                    # Missing or understated Drive size must not bypass the byte cap.
+                    total_transfer_bytes += max(declared_size, len(content))
+                    if total_transfer_bytes > max_batch_bytes:
+                        raise SyncError(
+                            f"Drive report transfer size exceeds batch limit of {max_batch_bytes} bytes"
+                        )
                     content_sha256 = _hash_bytes(content, "sha256")
                     if local_path.is_file() and _hash_file(local_path, "sha256") == content_sha256:
                         unchanged += 1
