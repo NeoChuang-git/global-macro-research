@@ -2352,6 +2352,22 @@
       "title": "Global Macro Early Warning｜日韓現貨賣壓擴散，半導體估值風險進入亞洲",
       "topic": null
     },
+    "MTW-20261015-1000-taiwan-cash-transmission": {
+      "coverage_end_taipei": "2026-10-15T10:00:00+08:00",
+      "coverage_start_taipei": "2026-10-15T09:00:00+08:00",
+      "generated_at_taipei": "2026-10-15T10:16:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-15_1000_taiwan-cash-transmission.html",
+      "html_sha256": "b8f6b003c18770919ae25791671344e4dbb153363c1c892fd32efb044ac744f6",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-15_1000_taiwan-cash-transmission.md",
+      "markdown_sha256": "f34d202f8a5329b9c93c108c58b4bdbc673eb452d93fe959beb48dbbdf5edb47",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261015-1000-taiwan-cash-transmission",
+      "slug": "taiwan-cash-transmission",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台灣現貨承接亞洲賣壓，台積電法說前估值壓力落地",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
