@@ -2336,6 +2336,22 @@
       "title": "Global Macro Early Warning｜半導體盤後續跌，台灣開盤估值壓力升高",
       "topic": null
     },
+    "MTW-20261015-0900-asia-selloff-spread": {
+      "coverage_end_taipei": "2026-10-15T09:00:00+08:00",
+      "coverage_start_taipei": "2026-10-15T08:00:00+08:00",
+      "generated_at_taipei": "2026-10-15T09:09:20+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-15_0900_asia-selloff-spread.html",
+      "html_sha256": "a9b5a905aacb976b4c1d0257d48eddb90293dd2dd6df28d577345ff8f8eab6a7",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-15_0900_asia-selloff-spread.md",
+      "markdown_sha256": "d61d51af8c8a2821c4fb2256d5491c7bf318336e857b1ecf38e5b8eb78d4109c",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261015-0900-asia-selloff-spread",
+      "slug": "asia-selloff-spread",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜日韓現貨賣壓擴散，半導體估值風險進入亞洲",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
