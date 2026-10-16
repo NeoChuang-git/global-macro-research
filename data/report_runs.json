@@ -2400,6 +2400,22 @@
       "title": "Global Macro Early Warning｜美國生產者物價加速，服務價格擴散但市場確認未齊",
       "topic": null
     },
+    "MTW-20261017-0100-tech-hedging": {
+      "coverage_end_taipei": "2026-10-17T01:01:12+08:00",
+      "coverage_start_taipei": "2026-10-17T00:00:00+08:00",
+      "generated_at_taipei": "2026-10-17T01:03:52+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-17_0100_tech-hedging.html",
+      "html_sha256": "f77ed49f5e32dca2d30a8773bf70c45e64e30940ba9f62db6fbe17ed9143ad9f",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-17_0100_tech-hedging.md",
+      "markdown_sha256": "3ee977f57f41ce1c055a3ef9d71c6f61fb1fcf13ed3f582082d3909b4d021073",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261017-0100-tech-hedging",
+      "slug": "tech-hedging",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜科技股弱勢伴隨避險需求升高，基本面尚未轉折",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",

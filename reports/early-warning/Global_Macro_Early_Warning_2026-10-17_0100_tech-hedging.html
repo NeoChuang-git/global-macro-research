@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Macro Early Warning｜科技股弱勢伴隨避險需求升高，基本面尚未轉折 · 2026-10-17 01:03:52</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --accent: #0284c7;
+  --accent-light: #e0f2fe;
+  --accent-glow: rgba(2, 132, 199, 0.08);
+
+  /* Callout Colors */
+  --callout-bg: #f8fafc;
+  --callout-thesis-border: #0284c7;
+  --callout-thesis-bg: #f0f9ff;
+  --callout-risk-border: #f97316;
+  --callout-risk-bg: #fff7ed;
+  --callout-strategy-border: #8b5cf6;
+  --callout-strategy-bg: #f5f3ff;
+  --callout-catalyst-border: #10b981;
+  --callout-catalyst-bg: #ecfdf5;
+
+  /* Card & Chips */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
+  --chip-border: #cbd5e1;
+
+  /* Risk Lights */
+  --risk-green-bg: #ecfdf5; --risk-green-text: #059669; --risk-green-border: #a7f3d0;
+  --risk-yellow-bg: #fefce8; --risk-yellow-text: #d97706; --risk-yellow-border: #fef08a;
+  --risk-orange-bg: #fff7ed; --risk-orange-text: #ea580c; --risk-orange-border: #fed7aa;
+  --risk-red-bg: #fef2f2; --risk-red-text: #dc2626; --risk-red-border: #fecaca;
+
+  /* Table */
+  --table-zebra: #f8fafc;
+  --table-hover: #f1f5f9;
+  --table-header-bg: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --bg-surface-raised: #334155;
+    --bg-surface-hover: #475569;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #334155;
+    --border-subtle: #475569;
+    --accent: #38bdf8;
+    --accent-light: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.12);
+
+    --callout-bg: #1e293b;
+    --callout-thesis-border: #38bdf8;
+    --callout-thesis-bg: rgba(56, 189, 248, 0.08);
+    --callout-risk-border: #fb923c;
+    --callout-risk-bg: rgba(249, 115, 22, 0.08);
+    --callout-strategy-border: #a78bfa;
+    --callout-strategy-bg: rgba(167, 139, 250, 0.08);
+    --callout-catalyst-border: #34d399;
+    --callout-catalyst-bg: rgba(52, 211, 153, 0.08);
+
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --chip-bg: #334155;
+    --chip-text: #cbd5e1;
+    --chip-border: #475569;
+
+    --risk-green-bg: rgba(16, 185, 129, 0.15); --risk-green-text: #34d399; --risk-green-border: rgba(16, 185, 129, 0.3);
+    --risk-yellow-bg: rgba(245, 158, 11, 0.15); --risk-yellow-text: #fbbf24; --risk-yellow-border: rgba(245, 158, 11, 0.3);
+    --risk-orange-bg: rgba(249, 115, 22, 0.15); --risk-orange-text: #fb923c; --risk-orange-border: rgba(249, 115, 22, 0.3);
+    --risk-red-bg: rgba(239, 68, 68, 0.15); --risk-red-text: #f87171; --risk-red-border: rgba(239, 68, 68, 0.3);
+
+    --table-zebra: rgba(255, 255, 255, 0.02);
+    --table-hover: rgba(56, 189, 248, 0.06);
+    --table-header-bg: #334155;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 17px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+/* Layout Containers: Narrative & Content Presentation */
+.report-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  position: relative;
+}
+
+.report-narrative {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Content Presentation */
+.wide-content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Typography & Headings */
+.report-narrative p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 100%;
+}
+
+ul, ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
+}
+
+/* Callouts */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.35rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--callout-bg);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.callout p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.callout-thesis {
+  border-left-color: var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.callout-risk {
+  border-left-color: var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.callout-strategy {
+  border-left-color: var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.callout-catalyst {
+  border-left-color: var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Analysis Cards */
+.analysis-card {
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.analysis-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Meta Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  line-height: 1.35;
+}
+
+.chip-score {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.chip-evidence, .chip-confidence, .chip-severity, .chip-persistence {
+  color: var(--text-secondary);
+}
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.direction-up { color: #0284c7; }
+.direction-down { color: #7c3aed; }
+.direction-improving { color: #059669; }
+.direction-worsening { color: #dc2626; }
+.direction-flat { color: var(--text-secondary); }
+
+/* Risk Lights */
+.risk-chip, .risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.risk-green { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.risk-yellow { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.risk-orange { background: var(--risk-orange-bg); color: var(--risk-orange-text); border: 1px solid var(--risk-orange-border); }
+.risk-red { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* State Transitions */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.state-prior { color: var(--text-secondary); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  text-align: left;
+  min-width: 680px;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--text-primary);
+  font-weight: 650;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+td {
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Only the three approved two-column Weekly tables fit the narrow viewport. */
+.weekly-local-table {
+  min-width: 0;
+}
+
+.weekly-local-table th,
+.weekly-local-table td {
+  overflow-wrap: anywhere;
+}
+
+.weekly-local-table th {
+  white-space: normal;
+}
+
+.weekly-local-table th:first-child {
+  width: 40%;
+}
+
+/* Executive Summary Grid */
+.executive-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 0;
+}
+
+.executive-points > li {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .executive-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.badge-grade-B { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent); }
+.badge-grade-C { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.badge-grade-D { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(2, 132, 199, 0.4);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+    font-size: 16px;
+  }
+  .report-narrative p {
+    font-size: 16px;
+  }
+  h1.hero-title { font-size: 1.45rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  h4 { font-size: 1rem; }
+  .analysis-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="report-container">
+  <div class="report-narrative">
+    
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">MACRO_TAIWAN_EARLY_WARNING</span>
+      <span class="risk-chip risk-yellow">🟡 Risk: YELLOW</span>
+      
+    </div>
+    <div class="hero-run-id">RUN_ID: <code>MTW-20261017-0100-tech-hedging</code></div>
+  </div>
+  <h1 class="hero-title">Global Macro Early Warning｜科技股弱勢伴隨避險需求升高，基本面尚未轉折</h1>
+  <div class="hero-meta-row">
+    <span class="hero-chip">發布時間：2026-10-17 01:03:52</span>
+    <span class="hero-chip hero-chip-cov">涵蓋：2026-10-17 00:00:00 ~ 2026-10-17 01:01:12</span>
+  </div>
+</header>
+
+    <main class="report-content">
+      
+<h2 id="section-核心警報摘要-executive-take">核心警報摘要（EXECUTIVE TAKE）</h2>
+<blockquote class="callout">
+<p>科技股相對弱勢延續，選擇權避險需求重新升高，足以形成戰術性警報；但信用利差與企業前瞻指引尚未確認全面金融壓力，風險判斷維持局部、可撤回。</p>
+</blockquote>
+<ul>
+<li><strong>新增變化：</strong> 本輪盤中股價與波動率同步惡化，半導體落後大盤；這是風險溢酬重新定價，並非將先前公布的進口物價重新當作事件。</li>
+<li><strong>重要反證：</strong> 美股多數個股仍上漲，亞洲現貨市場較早收盤反彈；台積電營收（Revenue）前瞻指引（Guidance）仍支持基本面擴張。</li>
+<li><strong>能源側翼：</strong> 油價回升與原油去庫存支持成本壓力，但缺少一致的天然氣即時資料及可比季節路徑，暫不獨立升級能源警報。</li>
+<li><strong>台灣連結：</strong> 首先影響科技估值（Valuation）與外資資金流（Flow），外需與毛利率（Gross Margin）衝擊仍須未來訂單及成本證據確認。</li>
+</ul>
+<h2 id="section-訊號變化總覽-signal-delta">訊號變化總覽（SIGNAL DELTA）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>訊號</th>
+<th>前值→目前</th>
+<th>方向／Delta</th>
+<th>嚴重度</th>
+<th>信心</th>
+<th>跨資產確認</th>
+<th>台灣關聯</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>semiconductor_relative_weakness</td>
+<td>SOX 11,581.2→11,376.6</td>
+<td>原始<span class="direction direction-down">↓ 下降</span>1.77%；影響<span class="direction direction-worsening">↘ 惡化</span></td>
+<td>3/5</td>
+<td>中</td>
+<td>VIX升、Nasdaq弱</td>
+<td>半導體估值與外資</td>
+</tr>
+<tr>
+<td>避險確認，非新增canonical id</td>
+<td><span class="state-transition"><span class="state-prior">VIX16.46</span><span class="transition-arrow">→</span><span class="state-current">18.32</span></span></td>
+<td>原始<span class="direction direction-up">↑ 上升</span>11.30%；支持上述訊號</td>
+<td>—</td>
+<td>中</td>
+<td>股價與選擇權兩類指標</td>
+<td>次交易日風險溢酬</td>
+</tr>
+</tbody>
+</table></div>
+<section class="analysis-card"><h3 id="section-signal-1-半導體弱勢伴隨避險需求回升">Signal #1｜半導體弱勢伴隨避險需求回升</h3>
+<div class="meta-chips"><span class="chip chip-score">Severity 3/5</span><span class="chip chip-confidence">Confidence 中</span><span class="chip">TACTICAL</span><span class="chip direction direction-flat">Risk Light：UNKNOWN <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> YELLOW</span></div>
+<ul>
+<li><strong>What changed：</strong> 科技股弱勢跨越多個交易日；本輪可讀盤中資料顯示避險需求上升，大盤逐步接近日內低點，形成新的市場確認。</li>
+<li><strong>比較基準：</strong> 前值採同一報價頁前收，非上一輪報告。市場共識（Consensus）不適用於指數；歷史報價修訂不可得，未假設為零。</li>
+<li><strong>廣度與持續性：</strong> Reuters與AP獨立描述科技及AI融資疑慮；銀行、防禦板塊與部分半導體仍有支撐，不能等同全面拋售。</li>
+<li><strong>市場反應：</strong> Nasdaq跌幅大於S&amp;P；VIX升高提供不同市場指標確認。報價時間不完全同步，故不宣稱精準同時相關或事件因果識別。</li>
+<li><strong>台灣傳導：</strong> 立即作用於折現率、部位（Positioning）及風險溢酬；數週至數月觀察外資，1–3季才驗證訂單與獲利影響。</li>
+</ul>
+<h4 class="subheading-pill">機制</h4>
+<p>原始股價下降與避險價格上升，反映投資人要求更高風險補償。若AI客戶融資成本影響資本支出（CapEx），科技估值可能先降，實際訂單（Order）才隨後調整；目前後半段傳導仍屬推論。</p>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
+<p>Reuters報導AI融資疑慮與科技股承壓，AP亦描述科技領跌及多數股票上漲。兩者支持「集中性風險重估」，VIX補充避險確認；不能據此認定所有企業信用惡化。</p>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
+<p>台積電季度結果與後續指引仍強；最新可得高收益債信用利差（Credit Spread）較前日收斂。股市下跌尚未伴隨普遍信用緊縮，因此不採基本面衰退或制度轉折分類。</p>
+<h4 class="subheading-pill">台灣傳導</h4>
+<p>台灣科技權重高，海外相對弱勢可能提高外資要求報酬。台積電ADR與台股收盤不同時，且匯率也不同步，不把兩者價差當成可直接套利或下次開盤預測。</p>
+<h4 class="subheading-pill">下一確認條件</h4>
+<p>觀察美股收盤是否仍由科技領跌、VIX是否維持升幅，以及下一台股交易日外資與匯率是否同步惡化。若半導體相對表現修復、波動率回到前收附近且信用穩定，撤回戰術性警報。</p>
+<hr/>
+</section><h2 id="section-為何重要-why-it-matters">為何重要（WHY IT MATTERS）</h2>
+<ol>
+<li><strong>資料／政策：</strong> 成長仍有韌性、成本壓力偏高，降低快速政策紓壓的可見度。</li>
+<li><strong>利率／匯率／信用：</strong> 殖利率（Yield）小幅回升，AI融資疑慮提高局部風險溢酬，但廣泛美元流動性（Liquidity）緊縮尚未確認。</li>
+<li><strong>產業／資金流：</strong> 科技股與防禦板塊分化，選擇權避險需求增加，使高集中持倉更容易受到再平衡影響。</li>
+<li><strong>獲利／估值：</strong> 估值可先於每股盈餘（EPS）預估調降，強勁財報不保證短期股價承接。</li>
+<li><strong>台灣：</strong> 海外折現率與風險偏好先傳入台股，外需、庫存（Inventory）及毛利率的實際變化需另行驗證。</li>
+</ol>
+<h2 id="section-總經與政策細節-macro-policy-detail">總經與政策細節（MACRO / POLICY DETAIL）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>家族</th>
+<th>本輪可得事實／市場預期</th>
+<th>解讀與限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Growth</td>
+<td>9月工業生產月增0.7%，8月修訂為0.1%；製造業增0.3%</td>
+<td>公用事業增幅較大，不把總量全視為終端需求</td>
+</tr>
+<tr>
+<td>Inflation</td>
+<td>9月進口物價月增1.1%，前月0.5%，共識0.8%</td>
+<td>成本壓力仍高；屬較早發布資料，未重複觸發</td>
+</tr>
+<tr>
+<td>Labor</td>
+<td>最新初領失業救濟199千，前值198千</td>
+<td>小幅變化，不支持勞動市場急凍</td>
+</tr>
+<tr>
+<td>Fed / Monetary Policy</td>
+<td>Warsh未預先承諾後續會議決策</td>
+<td>報價頁機率缺乏一致時間基準，不計算政策Delta</td>
+</tr>
+<tr>
+<td>Rates / Term Premium</td>
+<td>名目殖利率小幅上升，最新實質殖利率下降</td>
+<td>無法拆出期限溢酬（Term Premium）的獨立貢獻</td>
+</tr>
+<tr>
+<td>Liquidity / Market Plumbing</td>
+<td>週均準備金約3.022兆美元，週減75.19億</td>
+<td>貼現窗口使用增加需追蹤；尚無普遍資金短缺證據</td>
+</tr>
+<tr>
+<td>Credit / Bank Credit</td>
+<td>HY日收斂、IG持平；SLOOS企業標準大致不變</td>
+<td>調查與利差均落後即時市場</td>
+</tr>
+<tr>
+<td>Fiscal / Treasury Supply</td>
+<td>財政部現金餘額週均增加31.20億美元</td>
+<td>未取得可核驗新公債標售尾差，不認定供給失序</td>
+</tr>
+<tr>
+<td>FX / Global Dollar</td>
+<td>美元指數較前收低，台幣本地收盤貶值</td>
+<td>雙邊匯率分化，非普遍美元搶購</td>
+</tr>
+<tr>
+<td>Commodities / Inflation Chain</td>
+<td>油價反彈，天然氣與庫存資料較落後</td>
+<td>能源壓力候選，獨立觸發門檻未充分確認</td>
+</tr>
+<tr>
+<td>Global Trade / Supply Chain</td>
+<td>台韓出口與台灣外銷訂單仍強</td>
+<td>名目價格、工作日與AI集中度須調整</td>
+</tr>
+<tr>
+<td>China / Asia / Taiwan Cycle</td>
+<td>中國PPI加快；台灣領先指標升、日本股市反彈</td>
+<td>成本與需求分化，未形成全面區域衰退</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>FACT：</strong> 美國工業生產與進口物價於10月16日較早公布；中國9月PPI年增5%、前月3.8%，核心CPI持平於1%。不同發布時點與頻率不得拼成單一小時的新衝擊。</p>
+<p><strong>MARKET EXPECTATION：</strong> 台積電第四季營收指引與記憶體報價預測均屬未來預期，並非已實現營收。TrendForce的第四季傳統DRAM季增10–15%、NAND季增15–20%預測，不能視為即時成交價格。</p>
+<p><strong>INFERENCE：</strong> 本輪較符合科技風險溢酬重估。成長與通膨拉扯仍在，尚無足夠證據將折現率壓力升格為全面融資危機。</p>
+<h2 id="section-跨資產確認-cross-asset-confirmation">跨資產確認（CROSS-ASSET CONFIRMATION）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>資產</th>
+<th>最新可讀值</th>
+<th>比較／時點</th>
+<th>對警報的意義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UST 2Y／10Y／30Y</td>
+<td>4.768%／5.131%／5.455%</td>
+<td>約+1.7／+4.1／+2.7bp；盤中不同步</td>
+<td>小幅折現率逆風，不是獨立利率劇震</td>
+</tr>
+<tr>
+<td>10Y實質殖利率／損益兩平通膨</td>
+<td>2.84%／2.32%</td>
+<td>分別10/14、10/15；較前值下降</td>
+<td>不支持已確認即時再通膨交易</td>
+</tr>
+<tr>
+<td>S&amp;P／Nasdaq</td>
+<td>7,682.44／26,335.93</td>
+<td>−0.80%／−1.41%</td>
+<td>科技承壓較大</td>
+</tr>
+<tr>
+<td>HY／IG利差</td>
+<td>3.23%／0.84%</td>
+<td>10/15；−2bp／持平</td>
+<td>反對全面信用衝擊</td>
+</tr>
+<tr>
+<td>MOVE</td>
+<td>102.49</td>
+<td>10/15延遲；頁面前值不一致</td>
+<td>排除變化率，不能作升級依據</td>
+</tr>
+<tr>
+<td>DXY／USDJPY／EURUSD</td>
+<td>101.88／158.19／1.1218</td>
+<td>各頁不同盤中時間</td>
+<td>未見一致美元資金擠壓</td>
+</tr>
+<tr>
+<td>黃金</td>
+<td>4,186.22美元</td>
+<td>期貨較前收+0.39%</td>
+<td>幅度有限，非獨立通膨證明</td>
+</tr>
+<tr>
+<td>日／韓／港／滬股市</td>
+<td>+1.39%／+2.05%／+0.52%／+0.24%</td>
+<td>10/16亞洲現貨收盤</td>
+<td>較早反彈，非同期全球風險偏好確認</td>
+</tr>
+</tbody>
+</table></div>
+<p>報價頁12:29至12:57等時鐘未明列時區，保留原始時間並降低同步判斷信心。本輪於17:00 UTC後再次讀取；讀取時間不是報價成交時間，亦不是美股收盤。</p>
+<h3 id="section-能源五項強制檢查">能源五項強制檢查</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>輸入</th>
+<th>最新值／單位</th>
+<th>1D／5D</th>
+<th>新鮮度與限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lng_jkm</td>
+<td>UNAVAILABLE，USD/MMBtu</td>
+<td>UNAVAILABLE</td>
+<td>舊評估與換月資料衝突，未冒充當日值</td>
+</tr>
+<tr>
+<td>gas_ttf</td>
+<td>88.595 EUR/MWh</td>
+<td>+2.42%／+8.79%</td>
+<td>延遲報價、時區未明；非每小時assessment</td>
+</tr>
+<tr>
+<td>oil_brent</td>
+<td>109.19 USD/bbl</td>
+<td>+3.09%／+4.27%</td>
+<td>盤中指示值；連續歷史換月限制20日突破判讀</td>
+</tr>
+<tr>
+<td>oil_wti</td>
+<td>100.49 USD/bbl</td>
+<td>+2.57%／+9.41%</td>
+<td>尚未達5日10%候選門檻</td>
+</tr>
+<tr>
+<td>eu_gas_storage</td>
+<td>74.1%；837.84TWh</td>
+<td>可比官方變化率UNAVAILABLE</td>
+<td>GIE狀態10/15 06:00 CEST；非即時庫存</td>
+</tr>
+</tbody>
+</table></div>
+<p>Brent達中度幅度，兩種原油同向且EIA原油庫存下降，符合能源廣度確認條件；但未達單日5%或5日10%的油價衝擊門檻。20日突破受連續合約換月影響，不據此機械觸發。</p>
+<p>EIA原油減少860萬桶伴隨汽油增加350萬桶，颶風及進口變動可能造成暫時缺口。IEA加速釋出剩餘緊急儲備、需求破壞及供給恢復為反證；運價與完整曲線結構未充分取得。</p>
+<p>五年季節庫存差僅次級資料支持，未當作官方確證。7D、20D、區間、百分位及z-score凡缺乏可比序列者均為UNAVAILABLE；完整逐輸入檢查保留於研究物件。</p>
+<h2 id="section-證據與反向證據-evidence-vs-counter-evidence">證據與反向證據（EVIDENCE VS COUNTER-EVIDENCE）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>支持警報</th>
+<th>反向證據</th>
+<th>判讀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>半導體落後大盤、避險需求升高</td>
+<td>多數股票仍上漲、防禦板塊有承接</td>
+<td>戰術性而非全面風險撤退</td>
+</tr>
+<tr>
+<td>AI融資擔憂跨日延續</td>
+<td>台積電前瞻指引與亞洲出口仍強</td>
+<td>市場週期先弱，基本面尚未反轉</td>
+</tr>
+<tr>
+<td>油價回升、原油庫存減少</td>
+<td>成品油累庫、緊急釋儲、需求破壞</td>
+<td>能源風險候選，不直接推導升息</td>
+</tr>
+<tr>
+<td>台幣貶值、外資淨賣超</td>
+<td>台股整體收紅且上漲家數較多</td>
+<td>傳導存在但廣度尚未全面惡化</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote class="callout">
+<p>兩項獨立市場指標提供警報依據，不等於兩個獨立總經家族已完成制度轉折確認。信用、資金市場與企業指引的反證目前仍有效。</p>
+</blockquote>
+<h2 id="section-台灣傳導-taiwan-transmission">台灣傳導（TAIWAN TRANSMISSION）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>通道</th>
+<th>可能影響</th>
+<th>Horizon</th>
+<th>下一驗證</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>估值（Valuation）</td>
+<td>美國科技風險溢酬傳入台灣半導體</td>
+<td>即時</td>
+<td>SOX相對表現、台股科技相對強弱</td>
+</tr>
+<tr>
+<td>外需</td>
+<td>AI客戶融資若影響資本支出，才傳入訂單</td>
+<td>1–3季</td>
+<td>新訂單（New Orders）、取消訂單與交期</td>
+</tr>
+<tr>
+<td>金融條件</td>
+<td>外資賣出與避險部位壓抑承接</td>
+<td>即時／數週至數月</td>
+<td>現貨資金流及期貨未平倉同步變化</td>
+</tr>
+<tr>
+<td>匯率</td>
+<td>台幣貶值提高進口能源本幣成本</td>
+<td>即時／數週至數月</td>
+<td>匯率與實際採購合約、避險比率</td>
+</tr>
+<tr>
+<td>日本／中國放大器</td>
+<td>日圓與競爭力、中國上游成本傳導</td>
+<td>數週至數月／1–3季</td>
+<td>政策、出口量與價格拆解</td>
+</tr>
+</tbody>
+</table></div>
+<p>10月16日外資現貨淨賣超461.47億元；期交所外資台指未平倉淨額為−93,675口，未取得一致前值，不將成交淨額誤當未平倉增減。中央銀行台幣收盤由32.265變32.338。</p>
+<p>台股收盤47,111.26、上漲0.30%，台積電收2,420、下跌20元。不同來源上漲／下跌家數口徑不一致，但均支持正向廣度；PCB強勢與台積電偏弱形成產業分化。</p>
+<p>台灣9月出口、8月外銷訂單（Export Orders）及韓國半導體出口仍提供外需支撐。台灣領先指標與同時指標上升，但均有發布落差；官方景氣燈號不可混同本報告風險燈號。</p>
+<h2 id="section-產業-股票敏感度-industry-equity-sensitivity">產業／股票敏感度（INDUSTRY / EQUITY SENSITIVITY）</h2>
+<ul>
+<li><strong>科技製造：</strong> 先檢查估值壓縮與客戶融資，再檢查營收（Revenue）、毛利率（Gross Margin）、每股盈餘（EPS）及資本支出（CapEx）；未觀察到足以直接宣稱個別公司訂單轉弱的證據。</li>
+<li><strong>記憶體／消費裝置：</strong> 伺服器需求與供給配置支持上游價格，較高零組件成本則可能壓抑下游客戶需求；價格上升不能一律視為整體科技利多。</li>
+<li><strong>能源敏感產業：</strong> LNG、電力與輸入性通膨影響台塑化、航運及電力密集產業的成本條件，但煉油價差、運費、避險及電價政策不同，不能直接指定受益或受害股票。</li>
+<li><strong>公司資料限制：</strong> 台積電指引可核驗，完整公司庫存（Inventory）、訂單與毛利率面板及最新WSTS／SEMI量化資料未取得；未使用單家公司替代全產業基本面。</li>
+</ul>
+<h2 id="section-市場週期-vs-基本面週期">市場週期 vs 基本面週期</h2>
+<p>市場週期（Market Cycle）呈現科技估值與融資疑慮的壓力，基本面週期（Fundamental Cycle）仍有出口、台積電指引與記憶體需求支撐。兩者分離使短期波動可能放大，並不自動意味未來獲利即將下滑。</p>
+<p>真正轉折需看到客戶資本支出削減、訂單取消、庫存累積或毛利率下修，再與信用市場共同確認。現階段以戰術監測處理，避免把價格下跌直接寫成基本面衰退。</p>
+<h2 id="section-分類與風險燈號變化-classification-risk-light-delta">分類與風險燈號變化（CLASSIFICATION &amp; RISK LIGHT DELTA）</h2>
+<ul>
+<li><strong>Classification：</strong> UNKNOWN <span class="direction direction-flat">→ 持平</span> TACTICAL。本輪是獨立重建的分類，非聲稱已驗證上一輪分類。</li>
+<li><strong>Risk Light：</strong> UNKNOWN <span class="direction direction-flat">→ 持平</span> YELLOW。前一已驗證燈號不可得；這是目前風險程度評估，不宣稱已發生升級。</li>
+<li><strong>觸發理由：</strong> 跨日科技相對弱勢加上本輪盤中避險需求回升，具有傳導機制及多來源支持。</li>
+<li><strong>不採REGIME_SHIFT：</strong> 家族共振、資金市場擴散與原核心反證失效尚未齊備；強勁企業指引及穩定廣泛信用仍構成限制。</li>
+</ul>
+<h2 id="section-情境矩陣-scenario-matrix">情境矩陣（SCENARIO MATRIX）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>情境</th>
+<th>確認條件</th>
+<th>傳導</th>
+<th>研究處理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>局部估值調整</td>
+<td>科技偏弱，信用穩定、指引維持</td>
+<td>台股科技波動先於獲利</td>
+<td>維持戰術警報，不擴大系統性判斷</td>
+</tr>
+<tr>
+<td>壓力向外擴散</td>
+<td>VIX持續高、HY／IG擴大、融資指標惡化</td>
+<td>金融條件與外資同步緊縮</td>
+<td>至少兩項獨立指標確認後重評燈號</td>
+</tr>
+<tr>
+<td>風險修復</td>
+<td>科技相對回升、VIX回落、資金市場穩定</td>
+<td>風險溢酬回落</td>
+<td>撤回本次戰術訊號</td>
+</tr>
+<tr>
+<td>能源再通膨</td>
+<td>可比油氣衝擊門檻及供需證據成立</td>
+<td>電力／進口成本與政策壓力</td>
+<td>分列能源訊號，不能覆蓋核心通膨反證</td>
+</tr>
+</tbody>
+</table></div>
+<p>情境為條件式推論，未配置缺乏證據的精確機率。</p>
+<h2 id="section-下一確認條件-next-confirmation">下一確認條件（NEXT CONFIRMATION）</h2>
+<ol>
+<li>美國10月16日收盤的科技相對報酬、波動率與市場廣度是否保留目前訊號。</li>
+<li>最新信用利差、SOFR相對政策利率與跨幣別基差是否共同惡化；未取得的資料不得以零壓力代替。</li>
+<li>下一台股現貨交易日之外資、台幣、期貨未平倉與科技板塊是否同步確認。</li>
+<li>JKM同合約評估、TTF時間戳與GIE季節可比序列補齊後，再判斷能源門檻與突破有效性。</li>
+<li>企業訂單、庫存及資本支出是否出現實際下修；若市場修復且上述反證維持，終止本次警報。</li>
+</ol>
+<h2 id="section-source-audit">SOURCE AUDIT</h2>
+<p>以下來源於本輪重新讀取。市場頁報價時間未明列時區，未自行補成紐約時間；月／季資料保留發布日，未當作即時觀測。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>來源</th>
+<th>觀測／發布時點</th>
+<th>用途與限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://apnews.com/article/d2655f64db7ec8ae450525d58f97b628" rel="noopener noreferrer" target="_blank">AP市場報導</a></td>
+<td>10/16正文12:23 ET</td>
+<td>科技領跌、正向廣度；後續重讀Internal Error，保留先前成功取得內容</td>
+</tr>
+<tr>
+<td><a href="https://www.investing.com/news/economy-news/most-asian-stocks-rise-as-calm-returns-after-coreweave-shock-indonesia-faces-market-downgrade-4952993" rel="noopener noreferrer" target="_blank">Reuters市場報導</a></td>
+<td>10/16頁面更新12:24，時區未明</td>
+<td>獨立產業與融資敘事；正文與動態側欄分開</td>
+</tr>
+<tr>
+<td><a href="https://www.investing.com/indices/phlx-semiconductor" rel="noopener noreferrer" target="_blank">SOX</a>／<a href="https://www.investing.com/indices/nasdaq-composite" rel="noopener noreferrer" target="_blank">Nasdaq</a>／<a href="https://www.investing.com/indices/us-spx-500" rel="noopener noreferrer" target="_blank">S&amp;P</a></td>
+<td>12:40:15／12:46:00／12:57:11，未標時區</td>
+<td>日內指示值，非同步收盤</td>
+</tr>
+<tr>
+<td><a href="https://www.investing.com/indices/volatility-s-p-500" rel="noopener noreferrer" target="_blank">VIX</a></td>
+<td>12:54:46，未標時區</td>
+<td>與股價不同市場指標；共同供應商不當獨立新聞來源</td>
+</tr>
+<tr>
+<td><a href="https://www.investing.com/rates-bonds/u.s.-10-year-bond-yield" rel="noopener noreferrer" target="_blank">10Y</a>／<a href="https://www.investing.com/rates-bonds/u.s.-2-year-bond-yield" rel="noopener noreferrer" target="_blank">2Y</a>／<a href="https://www.investing.com/rates-bonds/u.s.-30-year-bond-yield" rel="noopener noreferrer" target="_blank">30Y</a></td>
+<td>10/16盤中</td>
+<td>不同時點，曲線僅近似</td>
+</tr>
+<tr>
+<td><a href="https://fred.stlouisfed.org/series/DFII10" rel="noopener noreferrer" target="_blank">FRED實質利率</a>／<a href="https://fred.stlouisfed.org/series/T10YIE" rel="noopener noreferrer" target="_blank">損益兩平通膨</a></td>
+<td>10/14／10/15</td>
+<td>非盤中通膨確認</td>
+</tr>
+<tr>
+<td><a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" rel="noopener noreferrer" target="_blank">HY</a>／<a href="https://fred.stlouisfed.org/series/BAMLC0A0CM" rel="noopener noreferrer" target="_blank">IG</a></td>
+<td>10/15觀測，10/16更新</td>
+<td>信用反證有一日落差</td>
+</tr>
+<tr>
+<td><a href="https://www.federalreserve.gov/releases/h41/current/" rel="noopener noreferrer" target="_blank">H.4.1</a>／<a href="https://www.federalreserve.gov/releases/h8/Current/" rel="noopener noreferrer" target="_blank">H.8</a>／<a href="https://www.federalreserve.gov/data/sloos/sloos-202607.htm" rel="noopener noreferrer" target="_blank">SLOOS</a></td>
+<td>10/15發布／10/9最新可讀／8/3發布</td>
+<td>週均與單日存量不混用；貸款資產移轉不當需求崩跌</td>
+</tr>
+<tr>
+<td><a href="https://www.bls.gov/news.release/archives/ximpim_10162026.htm" rel="noopener noreferrer" target="_blank">BLS進口物價</a>／<a href="https://www.federalreserve.gov/releases/g17/current/default.htm" rel="noopener noreferrer" target="_blank">Fed工業生產</a></td>
+<td>10/16 08:30／09:15 ET</td>
+<td>官方事實，早於本輪新增盤中訊號</td>
+</tr>
+<tr>
+<td><a href="https://apnews.com/article/bd04e6fd3f9f191e10d95f921e2b4084" rel="noopener noreferrer" target="_blank">初領救濟</a>／<a href="https://apnews.com/article/4c80750c113a82a464a46f58a4fdab43" rel="noopener noreferrer" target="_blank">Warsh談話</a></td>
+<td>10/15／10/16</td>
+<td>非新政策決議</td>
+</tr>
+<tr>
+<td><a href="https://www.cbc.gov.tw/tw/lp-645-1.html" rel="noopener noreferrer" target="_blank">CBC匯率</a>／<a href="https://www.taifex.com.tw/cht/3/futContractsDate" rel="noopener noreferrer" target="_blank">TAIFEX</a></td>
+<td>10/16台灣收盤／日資料</td>
+<td>官方匯率、外資未平倉</td>
+</tr>
+<tr>
+<td><a href="https://www.skis.com.tw/Report/market/%E5%8F%B0%E8%82%A1%E7%9B%A4%E5%BE%8C%E6%95%B4%E7%90%86_20261016.html" rel="noopener noreferrer" target="_blank">台股盤後</a></td>
+<td>10/16</td>
+<td>券商轉述現貨資金流；廣度口徑不一致</td>
+</tr>
+<tr>
+<td><a href="https://investor.tsmc.com/chinese/quarterly-results/2026/q3" rel="noopener noreferrer" target="_blank">台積電季度資料</a>／<a href="https://pr.tsmc.com/chinese/news/3346" rel="noopener noreferrer" target="_blank">官方新聞稿</a></td>
+<td>10/15</td>
+<td>實績與公司指引分開；未稱當日CapEx再上修</td>
+</tr>
+<tr>
+<td><a href="https://www.trendforce.com/presscenter/news/20260930-13258.html" rel="noopener noreferrer" target="_blank">TrendForce</a></td>
+<td>9/30預測</td>
+<td>傳統DRAM與NAND價格預期，非即時成交</td>
+</tr>
+<tr>
+<td><a href="https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=856cf6c5ea4646208d3b8345b3bb46e2" rel="noopener noreferrer" target="_blank">台灣出口</a>／<a href="https://www.moea.gov.tw/Mns/populace/news/EpaperDetail.aspx?volume=20260922" rel="noopener noreferrer" target="_blank">外銷訂單</a></td>
+<td>10/8／9/22發布</td>
+<td>分別9月與8月觀測</td>
+</tr>
+<tr>
+<td><a href="https://english.motir.go.kr/eng/article/EATCLdfa319ada/2743/view" rel="noopener noreferrer" target="_blank">韓國MOTIR</a>／<a href="https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261014_1965475.html" rel="noopener noreferrer" target="_blank">中國NBS</a>／<a href="https://www.ndc.gov.tw/nc_332_40495" rel="noopener noreferrer" target="_blank">台灣NDC</a></td>
+<td>10/1／10/14／9/29</td>
+<td>月資料，非新小時事件</td>
+</tr>
+<tr>
+<td><a href="https://www.investing.com/commodities/brent-oil-historical-data" rel="noopener noreferrer" target="_blank">Brent</a>／<a href="https://www.investing.com/commodities/crude-oil" rel="noopener noreferrer" target="_blank">WTI</a>／<a href="https://www.investing.com/commodities/dutch-ttf-gas-c1-futures-historical-data" rel="noopener noreferrer" target="_blank">TTF</a></td>
+<td>10/16可讀報價</td>
+<td>指示、延遲與換月限制；JKM未取得合格當日值</td>
+</tr>
+<tr>
+<td><a href="https://www.gie.eu/" rel="noopener noreferrer" target="_blank">GIE</a>／<a href="https://www.eia.gov/petroleum/supply/weekly/pdf/table1.pdf" rel="noopener noreferrer" target="_blank">EIA表1</a>／<a href="https://www.iea.org/news/iea-governing-board-statement-on-energy-markets-and-security" rel="noopener noreferrer" target="_blank">IEA</a></td>
+<td>GIE10/15 06:00 CEST；EIA週資料；IEA10/15</td>
+<td>原始庫存與政策反證；季節平均仍有限制</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>限制與品質：</strong> 12家族與21個canonical signals均完成檢查；來源不足的欄位保留UNAVAILABLE，不將未知等同中性。無當期WSTS／SEMI完整量化資料、最新SOFR政策利差及完整企業面板，限制系統性與基本面轉折判定，但不否定可獨立驗證的科技戰術警報。</p>
+<p>Markdown僅核對原始結構；未取得指定renderer基準與實際渲染結果，不宣稱顏色、間距或像素一致。</p>
+<h2 id="section-結論-bottom-line">結論（BOTTOM LINE）</h2>
+<blockquote class="callout">
+<p>科技股弱勢與避險需求升高構成可撤回的戰術性警報。台灣首先承受估值與資金流傳導；只有信用、融資及訂單證據跟進，才有理由擴大為更高層級的總體風險判斷。</p>
+</blockquote>
+
+    </main>
+    <footer>
+      Global Macro Signal Report · 2026-10-17 01:03:52 · Generated Deterministically
+    </footer>
+  </div>
+</div>
+</body>
+</html>
