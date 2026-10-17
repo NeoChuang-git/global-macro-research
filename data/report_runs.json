@@ -720,6 +720,22 @@
       "title": "Global Daily Brief｜台積電強勁財測難救晶片股，AI市場轉向檢驗融資與變現",
       "topic": null
     },
+    "GDB-20261017-0730": {
+      "coverage_end_taipei": "2026-10-17T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-16T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-17T07:35:53+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-17.html",
+      "html_sha256": "455a124d5ef3ebe5fbe7a3dc8c1d3e73dd29248e0fc01a37ca2104edde904240",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-17.md",
+      "markdown_sha256": "002c84eada8a5d6f619c0c91286f56cd866ae15773b7244c8cd900e846949c31",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261017-0730",
+      "slug": "ai-financing-power-controls",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜AI 融資疑慮再壓科技股，微軟鎖電與中國技術出口新規分化投資鏈",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
