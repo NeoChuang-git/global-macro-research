@@ -736,6 +736,22 @@
       "title": "Global Daily Brief｜AI 融資疑慮再壓科技股，微軟鎖電與中國技術出口新規分化投資鏈",
       "topic": null
     },
+    "GDB-20261018-0730": {
+      "coverage_end_taipei": "2026-10-18T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-17T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-18T07:37:00+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-18.html",
+      "html_sha256": "5afe6a7ecfbb87a6a344f4aafbabec93d38aa63e336d76335254dac2220d8127",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-18.md",
+      "markdown_sha256": "51a7d5c57f244efbf5284d4680ae03350a9cc4362b9944dbfe2bd13906b8d450",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261018-0730",
+      "slug": "iphone-delivery-check",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜iPhone Duo首賣供貨警示，交付驗證比缺貨敘事重要",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
