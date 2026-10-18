@@ -2511,6 +2511,22 @@
       "source_document_id": null,
       "title": "Weekly Global Macro & Investment Strategy｜AI出貨延續，通膨與專利事件限制追價",
       "topic": null
+    },
+    "WKS-20261018-2000": {
+      "coverage_end_taipei": "2026-10-18T20:00:00+08:00",
+      "coverage_start_taipei": "2026-10-11T20:00:00+08:00",
+      "generated_at_taipei": "2026-10-18T20:10:11+08:00",
+      "html_path": "reports/weekly/Weekly_Strategy_2026-10-18.html",
+      "html_sha256": "d98423b31a843ad54d4b901cbcf0f2b147d27f8554d5671eaf0ee226c1899974",
+      "markdown_path": "reports/weekly/Weekly_Strategy_2026-10-18.md",
+      "markdown_sha256": "c777631694bcd7e5677747039b63247d7c2d4d91cc113829d29e74aadf147d38",
+      "report_type": "WEEKLY_STRATEGY",
+      "risk_light": "YELLOW",
+      "run_id": "WKS-20261018-2000",
+      "slug": "weekly_strategy",
+      "source_document_id": null,
+      "title": "Weekly Global Macro & Investment Strategy｜利率回落未救科技股，通膨擴散下等待獲利與資金流雙重確認",
+      "topic": null
     }
   },
   "schema_version": 1
