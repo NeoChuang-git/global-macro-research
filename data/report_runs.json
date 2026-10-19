@@ -2480,6 +2480,22 @@
       "title": "Global Macro Early Warning｜半導體跌勢與避險需求再擴大，基本面尚未轉折",
       "topic": null
     },
+    "MTW-20261019-1700-taiwan-flow-fx": {
+      "coverage_end_taipei": "2026-10-19T17:00:00+08:00",
+      "coverage_start_taipei": "2026-10-19T16:00:00+08:00",
+      "generated_at_taipei": "2026-10-19T17:13:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-19_1700_taiwan-flow-fx.html",
+      "html_sha256": "48093684e72eef6b0eb2d97971f9fcf94f4d258a11fa8435823cec207f77946a",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-19_1700_taiwan-flow-fx.md",
+      "markdown_sha256": "05f163d4936a64d8bca87d567f889828ef2469b1608e8074d62e8cf6c1b0728d",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261019-1700-taiwan-flow-fx",
+      "slug": "taiwan-flow-fx",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台股外資連賣與台幣走貶共振，基本面尚未轉折",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
