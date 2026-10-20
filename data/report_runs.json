@@ -2592,6 +2592,22 @@
       "title": "Global Macro Early Warning｜外銷訂單超越官方預測，科技估值壓力尚未解除",
       "topic": null
     },
+    "MTW-20261020-2000-france-spread": {
+      "coverage_end_taipei": "2026-10-20T20:00:00+08:00",
+      "coverage_start_taipei": "2026-10-20T19:00:00+08:00",
+      "generated_at_taipei": "2026-10-20T20:11:36+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_2000_france-spread.html",
+      "html_sha256": "f5ff3f801f6f7ede57d60d9f2c2580af23dd38e182fa34b1f7de2a5f8541d122",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_2000_france-spread.md",
+      "markdown_sha256": "f28198c6f64041617131560781a8c46b7366570edd244fd3867764beb7fae3d2",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261020-2000-france-spread",
+      "slug": "france-spread",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜法義公債利差擴大，美元融資壓力尚未確認",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",

@@ -1827,6 +1827,15 @@
       "sha256": "6ffefc8f1e505f395504a42a90d773153c498ad7c85451c51648b431a29603f5",
       "size": 15603
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_2000_france-spread.md": {
+      "category": "early-warning",
+      "drive_file_id": "1b60vZcaxxMe3C3_k58KvVEG52GFRP9JL",
+      "md5_checksum": "07fb11c42a391d246ee8b80b63b69ad5",
+      "modified_time": "2026-10-20T12:14:12.201Z",
+      "name": "Global_Macro_Early_Warning_2026-10-20_2000_france-spread.md",
+      "sha256": "2d87b85336b502e1c44c806bc7941af7b574a38804d671d41e4111276762f51d",
+      "size": 29032
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
