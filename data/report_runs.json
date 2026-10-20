@@ -2512,6 +2512,22 @@
       "title": "Global Macro Early Warning｜台股外資連賣與台幣走貶共振，基本面尚未轉折",
       "topic": null
     },
+    "MTW-20261020-0900-asia-semi-relapse": {
+      "coverage_end_taipei": "2026-10-20T09:00:00+08:00",
+      "coverage_start_taipei": "2026-10-20T08:00:00+08:00",
+      "generated_at_taipei": "2026-10-20T09:11:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_0900_asia-semi-relapse.html",
+      "html_sha256": "f7b81f1b0c39c8d6c3acd2936eca8bc451407304a9d77a378ba4358a7072309b",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_0900_asia-semi-relapse.md",
+      "markdown_sha256": "4babef1573fe93f934a73460a91b559c8b7c0078251ddd3e8d6bd33c44621f5a",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261020-0900-asia-semi-relapse",
+      "slug": "asia-semi-relapse",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美晶片反彈未傳至亞洲，韓日早盤再跌",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
