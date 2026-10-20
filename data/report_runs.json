@@ -2640,6 +2640,22 @@
       "title": "Global Macro Early Warning｜半導體賣壓延伸至美股開盤，債匯尚未確認全面避險",
       "topic": null
     },
+    "MTW-20261020-2300-pending-sales": {
+      "coverage_end_taipei": "2026-10-20T23:00:00+08:00",
+      "coverage_start_taipei": "2026-10-20T22:00:00+08:00",
+      "generated_at_taipei": "2026-10-20T23:14:02+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_2300_pending-sales.html",
+      "html_sha256": "a5e98eaab62f52657d7c06f34f489f9f316137135ec89ea57c16af044ee5bf40",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_2300_pending-sales.md",
+      "markdown_sha256": "2f6936361c4c7a40891a8d9e750a34dc99d8b9ea8a8fb26363dc0acc3f3e0e6e",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261020-2300-pending-sales",
+      "slug": "pending-sales",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美國待完成房屋銷售創低，股市反彈限制全面避險判讀",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
