@@ -768,6 +768,22 @@
       "title": "Global Daily Brief｜Microsoft 據報退出 Nscale 英國據點，AI 建置轉向交付品質檢驗",
       "topic": null
     },
+    "GDB-20261020-0730": {
+      "coverage_end_taipei": "2026-10-20T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-19T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-20T07:36:13+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-20.html",
+      "html_sha256": "26b23f558015a28a18cda404e5b3f057f0a8d0af245079b4ada083b6bebec60d",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-20.md",
+      "markdown_sha256": "ffa221720e9e9a1434398b7cf8489db54e452d8f1d855ccb59197c543264e0c0",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261020-0730",
+      "slug": "trainium-access",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜AWS 開放 Trainium 軟體入口，AI 反彈仍待訂單與現金流驗證",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
