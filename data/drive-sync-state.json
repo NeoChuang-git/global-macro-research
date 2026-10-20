@@ -1836,6 +1836,15 @@
       "sha256": "2d87b85336b502e1c44c806bc7941af7b574a38804d671d41e4111276762f51d",
       "size": 29032
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_2100_housing-softness.md": {
+      "category": "early-warning",
+      "drive_file_id": "1L8-prTkVk4VG_eVbn7jBpRkvgSVtetAM",
+      "md5_checksum": "1cd2f2f6ef6c9f711265d648aa9bf8ff",
+      "modified_time": "2026-10-20T13:32:29.768Z",
+      "name": "Global_Macro_Early_Warning_2026-10-20_2100_housing-softness.md",
+      "sha256": "969e5a691cae7a6e100070f3003beb3988e2ac3bbd274121e42c9b87a3e8d3e9",
+      "size": 25252
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",

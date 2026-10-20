@@ -2608,6 +2608,22 @@
       "title": "Global Macro Early Warning｜法義公債利差擴大，美元融資壓力尚未確認",
       "topic": null
     },
+    "MTW-20261020-2100-housing-softness": {
+      "coverage_end_taipei": "2026-10-20T21:00:00+08:00",
+      "coverage_start_taipei": "2026-10-20T20:00:00+08:00",
+      "generated_at_taipei": "2026-10-20T21:30:07+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_2100_housing-softness.html",
+      "html_sha256": "ea8e4f3a717cab086894789ec46bfb1dd1c7144f5f3ff5c1ef4808bf93e87fbb",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_2100_housing-softness.md",
+      "markdown_sha256": "29686187683ddf66b9afb73a091f173932903a5c40098fc3927fd98595d3bda7",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261020-2100-housing-softness",
+      "slug": "housing-softness",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美國獨棟住宅開工與建照轉弱，高利率壓力仍待市場確認",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
