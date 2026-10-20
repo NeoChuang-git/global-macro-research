@@ -2624,6 +2624,22 @@
       "title": "Global Macro Early Warning｜美國獨棟住宅開工與建照轉弱，高利率壓力仍待市場確認",
       "topic": null
     },
+    "MTW-20261020-2200-us-cash-semi": {
+      "coverage_end_taipei": "2026-10-20T22:00:00+08:00",
+      "coverage_start_taipei": "2026-10-20T21:00:00+08:00",
+      "generated_at_taipei": "2026-10-20T22:16:03+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_2200_us-cash-semi.html",
+      "html_sha256": "1718daffe61c7353ec6b46dd4e951801f8281d6b74f0b8a95a08f9c01bb5aa0f",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_2200_us-cash-semi.md",
+      "markdown_sha256": "17a14894e587540fb41fa25cac6229eaac1503e3ea7f6078577b849645764a35",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261020-2200-us-cash-semi",
+      "slug": "us-cash-semi",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜半導體賣壓延伸至美股開盤，債匯尚未確認全面避險",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
