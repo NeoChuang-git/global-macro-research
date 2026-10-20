@@ -2560,6 +2560,38 @@
       "title": "Global Macro Early Warning｜台股收盤跌破早低、賣壓擴及金融與市場廣度",
       "topic": null
     },
+    "MTW-20261020-1600-foreign-flow-confirmation": {
+      "coverage_end_taipei": "2026-10-20T16:00:00+08:00",
+      "coverage_start_taipei": "2026-10-20T15:00:00+08:00",
+      "generated_at_taipei": "2026-10-20T16:12:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_1600_foreign-flow-confirmation.html",
+      "html_sha256": "c3cddaf5847f45f1a1f938950208bcec2da9c28870c6a314ddb10438fa836f03",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_1600_foreign-flow-confirmation.md",
+      "markdown_sha256": "63a8bf82b3465b2915f84bb435754c6ea314333cd9e568c194d819240a78caa5",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261020-1600-foreign-flow-confirmation",
+      "slug": "foreign-flow-confirmation",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜外資賣超近八百億，台灣股匯壓力獲資金流確認",
+      "topic": null
+    },
+    "MTW-20261020-1700-orders_surprise": {
+      "coverage_end_taipei": "2026-10-20T17:00:00+08:00",
+      "coverage_start_taipei": "2026-10-20T16:00:00+08:00",
+      "generated_at_taipei": "2026-10-20T17:05:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_1700_orders_surprise.html",
+      "html_sha256": "ac14432a3a804864b238ca3431e7f17926dae2af14021a422551b2f70a7e14ce",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_1700_orders_surprise.md",
+      "markdown_sha256": "3c46b7525879027e0728fa882417638986978e1dd82c1029ff052f127b2fe5b3",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261020-1700-orders_surprise",
+      "slug": "orders_surprise",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜外銷訂單超越官方預測，科技估值壓力尚未解除",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
