@@ -2544,6 +2544,22 @@
       "title": "Global Macro Early Warning｜台股開盤未接棒美晶片反彈，股匯轉弱確認區域壓力",
       "topic": null
     },
+    "MTW-20261020-1500-taiwan-close-breadth": {
+      "coverage_end_taipei": "2026-10-20T15:00:00+08:00",
+      "coverage_start_taipei": "2026-10-20T14:00:00+08:00",
+      "generated_at_taipei": "2026-10-20T15:03:31+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_1500_taiwan-close-breadth.html",
+      "html_sha256": "846a294332ca52566e60a9f5aebf9ebee361c07abf6ab22208b862f4785833b2",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-20_1500_taiwan-close-breadth.md",
+      "markdown_sha256": "6557189aff0b6de707874d842bfcf87a3896e78119c4df26283d01052d5fab96",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261020-1500-taiwan-close-breadth",
+      "slug": "taiwan-close-breadth",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台股收盤跌破早低、賣壓擴及金融與市場廣度",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
