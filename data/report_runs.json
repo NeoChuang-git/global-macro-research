@@ -2688,6 +2688,22 @@
       "title": "Global Macro Early Warning｜SMCI營收與毛利率上修，AI需求崩落論出現反證",
       "topic": null
     },
+    "MTW-20261021-0800-ai-capex-expansion": {
+      "coverage_end_taipei": "2026-10-21T08:00:00+08:00",
+      "coverage_start_taipei": "2026-10-21T07:00:00+08:00",
+      "generated_at_taipei": "2026-10-21T08:23:18+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-21_0800_ai-capex-expansion.html",
+      "html_sha256": "a6cc1e6efc570df3e63b73450ae0f02297016c10727cb9660739d88e5ed48850",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-21_0800_ai-capex-expansion.md",
+      "markdown_sha256": "c61cc7c3dadc8f6bca09805a01636eef1ff5aa60f560a25fae10bb306536e71c",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261021-0800-ai-capex-expansion",
+      "slug": "ai-capex-expansion",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜SpaceX資本支出擴張，AI需求能見度改善但融資風險未解",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
