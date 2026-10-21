@@ -1,0 +1,1347 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Macro Early Warning｜SMCI營收與毛利率上修，AI需求崩落論出現反證 · 2026-10-21 07:12:56</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --accent: #0284c7;
+  --accent-light: #e0f2fe;
+  --accent-glow: rgba(2, 132, 199, 0.08);
+
+  /* Callout Colors */
+  --callout-bg: #f8fafc;
+  --callout-thesis-border: #0284c7;
+  --callout-thesis-bg: #f0f9ff;
+  --callout-risk-border: #f97316;
+  --callout-risk-bg: #fff7ed;
+  --callout-strategy-border: #8b5cf6;
+  --callout-strategy-bg: #f5f3ff;
+  --callout-catalyst-border: #10b981;
+  --callout-catalyst-bg: #ecfdf5;
+
+  /* Card & Chips */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
+  --chip-border: #cbd5e1;
+
+  /* Risk Lights */
+  --risk-green-bg: #ecfdf5; --risk-green-text: #059669; --risk-green-border: #a7f3d0;
+  --risk-yellow-bg: #fefce8; --risk-yellow-text: #d97706; --risk-yellow-border: #fef08a;
+  --risk-orange-bg: #fff7ed; --risk-orange-text: #ea580c; --risk-orange-border: #fed7aa;
+  --risk-red-bg: #fef2f2; --risk-red-text: #dc2626; --risk-red-border: #fecaca;
+
+  /* Table */
+  --table-zebra: #f8fafc;
+  --table-hover: #f1f5f9;
+  --table-header-bg: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --bg-surface-raised: #334155;
+    --bg-surface-hover: #475569;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #334155;
+    --border-subtle: #475569;
+    --accent: #38bdf8;
+    --accent-light: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.12);
+
+    --callout-bg: #1e293b;
+    --callout-thesis-border: #38bdf8;
+    --callout-thesis-bg: rgba(56, 189, 248, 0.08);
+    --callout-risk-border: #fb923c;
+    --callout-risk-bg: rgba(249, 115, 22, 0.08);
+    --callout-strategy-border: #a78bfa;
+    --callout-strategy-bg: rgba(167, 139, 250, 0.08);
+    --callout-catalyst-border: #34d399;
+    --callout-catalyst-bg: rgba(52, 211, 153, 0.08);
+
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --chip-bg: #334155;
+    --chip-text: #cbd5e1;
+    --chip-border: #475569;
+
+    --risk-green-bg: rgba(16, 185, 129, 0.15); --risk-green-text: #34d399; --risk-green-border: rgba(16, 185, 129, 0.3);
+    --risk-yellow-bg: rgba(245, 158, 11, 0.15); --risk-yellow-text: #fbbf24; --risk-yellow-border: rgba(245, 158, 11, 0.3);
+    --risk-orange-bg: rgba(249, 115, 22, 0.15); --risk-orange-text: #fb923c; --risk-orange-border: rgba(249, 115, 22, 0.3);
+    --risk-red-bg: rgba(239, 68, 68, 0.15); --risk-red-text: #f87171; --risk-red-border: rgba(239, 68, 68, 0.3);
+
+    --table-zebra: rgba(255, 255, 255, 0.02);
+    --table-hover: rgba(56, 189, 248, 0.06);
+    --table-header-bg: #334155;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 17px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+/* Layout Containers: Narrative & Content Presentation */
+.report-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  position: relative;
+}
+
+.report-narrative {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Content Presentation */
+.wide-content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Typography & Headings */
+.report-narrative p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 100%;
+}
+
+ul, ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
+}
+
+/* Callouts */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.35rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--callout-bg);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.callout p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.callout-thesis {
+  border-left-color: var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.callout-risk {
+  border-left-color: var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.callout-strategy {
+  border-left-color: var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.callout-catalyst {
+  border-left-color: var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Analysis Cards */
+.analysis-card {
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.analysis-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Meta Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  line-height: 1.35;
+}
+
+.chip-score {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.chip-evidence, .chip-confidence, .chip-severity, .chip-persistence {
+  color: var(--text-secondary);
+}
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.direction-up { color: #0284c7; }
+.direction-down { color: #7c3aed; }
+.direction-improving { color: #059669; }
+.direction-worsening { color: #dc2626; }
+.direction-flat { color: var(--text-secondary); }
+
+/* Risk Lights */
+.risk-chip, .risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.risk-green { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.risk-yellow { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.risk-orange { background: var(--risk-orange-bg); color: var(--risk-orange-text); border: 1px solid var(--risk-orange-border); }
+.risk-red { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* State Transitions */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.state-prior { color: var(--text-secondary); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  text-align: left;
+  min-width: 680px;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--text-primary);
+  font-weight: 650;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+td {
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Only the three approved two-column Weekly tables fit the narrow viewport. */
+.weekly-local-table {
+  min-width: 0;
+}
+
+.weekly-local-table th,
+.weekly-local-table td {
+  overflow-wrap: anywhere;
+}
+
+.weekly-local-table th {
+  white-space: normal;
+}
+
+.weekly-local-table th:first-child {
+  width: 40%;
+}
+
+/* Executive Summary Grid */
+.executive-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 0;
+}
+
+.executive-points > li {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .executive-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.badge-grade-B { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent); }
+.badge-grade-C { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.badge-grade-D { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(2, 132, 199, 0.4);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+    font-size: 16px;
+  }
+  .report-narrative p {
+    font-size: 16px;
+  }
+  h1.hero-title { font-size: 1.45rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  h4 { font-size: 1rem; }
+  .analysis-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="report-container">
+  <div class="report-narrative">
+    
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">MACRO_TAIWAN_EARLY_WARNING</span>
+      <span class="risk-chip risk-yellow">🟡 Risk: YELLOW</span>
+      
+    </div>
+    <div class="hero-run-id">RUN_ID: <code>MTW-20261021-0700-ai-server-surprise</code></div>
+  </div>
+  <h1 class="hero-title">Global Macro Early Warning｜SMCI營收與毛利率上修，AI需求崩落論出現反證</h1>
+  <div class="hero-meta-row">
+    <span class="hero-chip">發布時間：2026-10-21 07:12:56</span>
+    <span class="hero-chip hero-chip-cov">涵蓋：2026-10-21 06:00:00 ~ 2026-10-21 07:00:00</span>
+  </div>
+</header>
+
+    <main class="report-content">
+      
+<h2 id="section-核心警報摘要-executive-take">核心警報摘要（EXECUTIVE TAKE）</h2>
+<blockquote class="callout">
+<p>AI伺服器出現可量化的營運上修，而非只有股價反彈；這削弱「需求全面崩落」論，但不足以解除高利率、能源與台灣外資賣壓，維持戰術性黃燈。</p>
+</blockquote>
+<ul>
+<li>Supermicro 營收與毛利率初估同步高於原指引，使先前「基本面有韌性、股價偏弱」的分歧得到更強反證；仍須正式財報確認。</li>
+<li>伺服器同業與輝達盤後反應提供價格廣度，不代表同業訂單或獲利已上修；盤後延續亦不能代替次日正常交易驗證。</li>
+<li>台灣供應鏈首先受情緒與估值影響，實際獲利仍取決於接單歸屬、成本轉嫁與現金回收；競爭對手搶占份額也可能抵銷外溢。</li>
+<li>美國通膨、歐洲能源緩衝不足與台灣股匯偏弱仍在，債匯信用尚未同步轉好；本輪不升級全球風險，也不把黃燈降為綠燈。</li>
+</ul>
+<p><strong>範圍與時鐘。</strong> 覆蓋台北 10 月 21 日 06:00–07:00，即 UTC 10 月 20 日 22:00–23:00。以下市場時鐘均為 UTC；研究可於截止後回讀，但不納入截止後觀測。重新讀取不等於數據在本小時發布。</p>
+<p>公司更新最遲於 Reuters 20:39 首報時已公開，早於本報時窗；本輪新增的是正式營運證據納入研究，以及 22:37 報導、22:39 報價的窗內確認。公司發布頁未揭露可獨立核驗的精確發稿時鐘。</p>
+<h2 id="section-訊號變化總覽-signal-delta">訊號變化總覽（SIGNAL DELTA）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>訊號</th>
+<th>前值→目前</th>
+<th>方向／Delta</th>
+<th class="numeric">嚴重度</th>
+<th>信心</th>
+<th>跨資產確認</th>
+<th>台灣關聯</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ai_fundamental_cycle</td>
+<td>原指引→明顯較高季度初估</td>
+<td><span class="direction direction-improving">↗ 改善</span>；營收、毛利率雙上修</td>
+<td class="numeric">3/5</td>
+<td>中高</td>
+<td>同業價格廣度；非獨立債匯確認</td>
+<td>AI硬體獲利預期與競爭分化</td>
+</tr>
+</tbody>
+</table></div>
+<section class="analysis-card"><h3 id="section-signal-1-ai伺服器營運上修-需求崩落論遭到反證">Signal #1｜AI伺服器營運上修，需求崩落論遭到反證</h3>
+<div class="meta-chips"><span class="chip">狀態：TRIGGERED</span><span class="chip">分類：TACTICAL</span><span class="chip direction direction-improving">方向：<span class="direction direction-improving"><span class="direction direction-improving">↗ 改善</span></span></span><span class="chip chip-score">嚴重度：3/5</span><span class="chip chip-confidence">信心：中高</span><span class="chip direction direction-flat">Risk Light：<span class="state-transition"><span class="risk risk-yellow"><span class="risk risk-yellow">🟡 Yellow</span> YELLOW</span> <span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span> <span class="risk risk-yellow"><span class="risk risk-yellow">🟡 Yellow</span> YELLOW</span></span>。</span></div>
+<ul>
+<li><strong>變化。</strong> Supermicro（SMCI）截至 9 月 30 日的 FY2027 第一季營收（Revenue）初估為 185–195 億美元，原前瞻指引（Guidance）為 145–155 億；不是新一季預測，也不是已審計實績。</li>
+<li><strong>前值、共識與修訂。</strong> 營收中點 <span class="state-transition"><span class="state-prior">150</span><span class="transition-arrow">→</span><span class="state-current">190</span></span> 億美元，上修 26.7%，較 LSEG 共識 152.3 億高約 24.8%；毛利率（Gross Margin）由 10.4%–10.8% 改為 12.0%–12.5%，中點增加 165 基點，亦高於 LSEG 毛利率共識 10.15%。</li>
+<li><strong>持續性。</strong> 季度數據屬一次初估，尚待結帳程序；22:39 的 SMCI 盤後 37.20 美元、較正常收盤漲 14.57%，確認反應延續進入時窗，不能推定多日趨勢。</li>
+<li><strong>廣度與市場反應。</strong> Reuters 21:16 報導 Dell／HPE 盤後漲幅落在 3.5%–4.9%，輝達約漲 1.5%；另於 22:18:33 核驗輝達漲 2.04%。這是跨公司價格反應，並非各公司營運同步上修。</li>
+<li><strong>下一確認與失效。</strong> 11 月 3 日正式財報須守住初估，並由現金流、應收帳款、庫存及同業指引補強；若大幅下修、需求集中後回落，或營收未轉化為現金，改善論點即需撤回。</li>
+</ul>
+<h4 class="subheading-pill">機制</h4>
+<p>公司把較高初估歸因於 AI 平台需求及產品、客戶組合。營收與毛利率同向改善，比單純增收更能反對「出貨靠降價支撐」的推論；但組合改善不等於全產業定價權恢復，也不能由毛利率直接推算每股盈餘（EPS）。</p>
+<p>本輪沒有新的量化訂單（Orders）、庫存（Inventory）、資本支出（CapEx）或現金轉換資料。因而可確認的是公司對已結束季度的營運估計上調，不能延伸成所有客戶投資報酬良好，或未來數季訂單均已鎖定。[S01–S03]</p>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
+<p>市場定價（Market Pricing）先反映盈餘預期修復，但盤後流動性（Liquidity）較薄，部位（Positioning）回補亦可能放大漲幅。SMCI 22:39 與輝達 22:18:33 報價並不同步，不能用兩點估算共同事件報酬或成交強度。[S02–S03]</p>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
+<p>初估未經獨立會計師查核、核閱或其他程序，仍可能修訂。出貨時點、客戶集中度或產品組合皆可能放大單季變化；沒有新的自由現金流證據，亦不能排除成長消耗營運資金的風險。[S01]</p>
+<p>美股現貨費半仍相對落後，台灣外資連續賣超；高實質殖利率、能源成本和估值（Valuation）壓力並未因一家公司上修而消失。這些是改善論點的限制，不是把已核驗營運上修否定掉的理由。</p>
+<h4 class="subheading-pill">台灣傳導</h4>
+<p>即時影響先到伺服器、散熱、電源與先進封裝的獲利想像；數週至數月須看各家接單與月營收。SMCI 的需求增長可能帶動供應鏈（Supply Chain），也可能反映從其他整機商取得份額，不能認定所有台灣 ODM 同時受益。</p>
+<h4 class="subheading-pill">下一確認條件</h4>
+<p>正式財報、同業訂單與毛利率、客戶資本支出及現金回收，應形成可追蹤的營運驗證鏈。價格端則需正常交易中費半相對強弱修復、台灣科技股廣度改善與外資賣壓緩和；只有盤後上漲不夠。</p>
+</section><h2 id="section-為何重要-why-it-matters">為何重要（WHY IT MATTERS）</h2>
+<ol>
+<li><strong>資料／政策。</strong> 本輪增量是公司季度營運估計，不是央行轉向。先前「科技市場偏弱」不能單獨證明「AI需求崩落」；營收與毛利率同時上調，直接提高後者成立所需的證據門檻。</li>
+<li><strong>利率／匯率／信用／流動性。</strong> 利多作用於盈餘分子，不自動降低折現率。較早長端與實質殖利率略降、信用利差（Credit Spread）方向混合，未形成新一輪全球金融條件寬鬆。</li>
+<li><strong>產業與資金流。</strong> 同業盤後上漲顯示市場願意把訊息外推到硬體，但仍是相關性很高的股票風險。資金流（Flow）能否由短線回補轉為持續買盤，必須看正常交易、成交與跨市場廣度。</li>
+<li><strong>獲利／估值。</strong> 較高毛利率可增加獲利緩衝，卻未提供費用、稅率或現金流的完整橋接。估值修復須有可持續獲利支撐，不能用單日股價漲幅倒推出基本面改善幅度。</li>
+<li><strong>台灣。</strong> 美國伺服器出貨、台灣零組件與晶圓需求之間仍有客戶和生產地差異。驗證順序應是接單歸屬、月營收、毛利率與現金流，再到一至三季的設備及產能配置。</li>
+</ol>
+<h2 id="section-總經與政策細節-macro-policy-detail">總經與政策細節（MACRO / POLICY DETAIL）</h2>
+<h3 id="section-成長-通膨與就業">成長、通膨與就業</h3>
+<p><strong>成長（Growth）。</strong> 10 月 20 日 GDPNow 對第三季年率估計為 3.5%，低於 15 日的 3.6%，不是正式 GDP。9 月新屋開工月減 5.2%，但誤差範圍 ±11.8%；待完成房屋銷售月減 7.3%，房市疲弱不能忽略。[S04]</p>
+<p>費城非製造業調查的企業活動 0.3→12.9、新訂單（New Orders）−2.2→2.8，與房市形成反向訊息；區域觀感仍弱。這支持成長不均衡，而非以區域樣本宣告全國景氣加速或衰退。[S04]</p>
+<p><strong>通膨（Inflation）。</strong> 9 月 CPI 年增 3.7%，核心月增 0.3% 與前月相同；能源月增 5.2%。PPI 月增 1.3%，排除食品、能源與貿易服務後增 0.5%，上游壓力仍是既有約束，並非本小時新發布。[S05]</p>
+<p><strong>就業（Labor）。</strong> 9 月非農增加 2.9 萬，8 月由 16.2 萬修至 13.3 萬，7 月由 2.1 萬修至減少 1 萬；失業率維持 4.2%。ADP 四週平均每週增 1.85 萬，但本輪可比前值未核實，不能自行算加速或減速。[S06]</p>
+<h3 id="section-貨幣政策-利率與市場資金機制">貨幣政策、利率與市場資金機制</h3>
+<p><strong>Fed／貨幣政策。</strong> 已生效的是 9 月升息 25 基點至 3.75%–4.00%。Reuters 調查 94／100 預期 10 月不動、100／100 預期 12 月升息；這是經濟學家分布，不是期貨機率。10 月 20 日閉門簡報公告亦非新政策決定。[S07]</p>
+<p><strong>利率／期限溢酬（Rates / Term Premium）。</strong> 較早市場報價顯示長端略降、短端略升；每日 10 年減 2 年曲線為 33 基點，前日 38。期限溢酬（Term Premium）本輪未取得數值，不能由曲線變平推定財政風險已解除。[S08]</p>
+<p><strong>流動性／市場機制。</strong> 最新 SOFR 3.87%、較前值低 1 基點；一般回購操作使用量為零，逆回購由 3.30 億降至 2.27 億美元。另有 6,700 萬美元小額測試，不是緊急救助；準備金週平均下降也不能單獨當成融資危機。[S09]</p>
+<h3 id="section-信用-財政與全球美元">信用、財政與全球美元</h3>
+<p><strong>信用／銀行信用。</strong> 最新可得 HY／IG 利差一縮一擴；H.8 銀行信用週增約 571 億美元。SLOOS 顯示工商貸款標準大致不變、商用不動產較寬、信用卡較緊，不支持「所有銀行貸款全面收縮」。[S10]</p>
+<p>Capital One 第三季提列 29 億美元、淨沖銷 31 億，並釋放 2.25 億準備金，存款季減 1%。準備金釋放是單一公司的預期損失判斷，與整體消費信用已修復不同，不能由此產生第二張改善警報。[S11]</p>
+<p><strong>財政／國債供給。</strong> 三個月國庫券投標倍數 2.77，前次 2.68，未顯示新失序。六週券原始結果未成功核驗，次級來源只能參考；10 月 21 日二十年券、22 日五年期 TIPS 尚屬待發生拍賣，回購不同券種上限不可當政策縮減幅度。[S12]</p>
+<p><strong>匯率／全球美元。</strong> 歐元窗內報價略強，但日圓僅取得較早觀測，DXY 現貨及跨幣種基差不足。法國公債利差仍偏高，義大利利差卻收窄；區域財政壓力值得追蹤，但不能稱全球美元融資同步緊縮。[S13–S14]</p>
+<h3 id="section-商品-貿易與亞洲循環">商品、貿易與亞洲循環</h3>
+<p><strong>商品／通膨鏈。</strong> 同契約油價未觸發新的日幅或五日極端門檻，天然氣合格現值缺漏。歐洲儲氣低於季節代理範圍，卻同時有較強注氣反證；因此保留脆弱性，不另開能源警報，也不宣告解除。[S15–S18]</p>
+<p><strong>全球貿易／供應鏈。</strong> 美國 8 月出口、進口分別月增 1.4%、4.3%，皆屬名目值；價格、提前拉貨與實際需求不能拆分。俄羅斯柴油船路由出現恢復跡象，但不是本小時已量化的全球新增運量。[S19]</p>
+<p><strong>中國／亞洲／台灣週期。</strong> 中國第三季 GDP 年增 4.5%，高於第二季 4.3%；9 月工業增 5.5%，零售僅增 1.1%，房地產投資年初迄今減 20.6%。工業改善、內需偏弱並存，不能視為全面再通膨。[S20]</p>
+<p>日本 22:07 新調查中，54／78 預期第四季升至 1.50%，前次為 24／66；指定月份的 54 人約八成選 12 月。這不是央行決定或市場隱含機率；缺乏同期日圓、日債反應，不另觸發套利平倉警報。[S20]</p>
+<p>台韓出口與台灣科技訂單仍強，是原有基本面支撐；但集中度、海外生產與價格因素限制外推。這些月季資料可與 SMCI 初估互相對照，不能當成 06:00–07:00 新增訂單，亦不代表台灣所有產業均衡復甦。[S21–S23]</p>
+<h3 id="section-能源固定檢查">能源固定檢查</h3>
+<p>下表油價均使用 <strong>2026 年 12 月同契約</strong>，不把到期的 11 月 WTI 與 12 月拼接。日變動相對 10 月 19 日收盤；頁面相對當日結算價的漲跌另屬不同基準。百分位、Z分數與油價五年季節分布均未取得，不填造數值。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>核心項目／單位</th>
+<th>最新可採觀測</th>
+<th>1日</th>
+<th>5交易日／7日</th>
+<th>20交易日</th>
+<th>前20日區間／季節背景</th>
+<th>核驗狀態</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WTI／美元每桶</td>
+<td>97.98；10/20 22:18</td>
+<td>−0.57%</td>
+<td>+5.16%</td>
+<td>+11.37%</td>
+<td>86.00–99.71</td>
+<td>延遲報價，中信心</td>
+</tr>
+<tr>
+<td>Brent／美元每桶</td>
+<td>109.11；10/20 21:07</td>
+<td>−0.40%</td>
+<td>+3.24%</td>
+<td>+14.36%</td>
+<td>93.68–110.70</td>
+<td>延遲報價</td>
+</tr>
+<tr>
+<td>JKM／美元每MMBtu</td>
+<td>合格現值未取得</td>
+<td>未核驗</td>
+<td>未核驗</td>
+<td>未核驗</td>
+<td>同契約與評價時區不足</td>
+<td>不當作小時報價</td>
+</tr>
+<tr>
+<td>TTF／歐元每MWh</td>
+<td>合格現值未取得</td>
+<td>未核驗</td>
+<td>未核驗</td>
+<td>未核驗</td>
+<td>契約、日期列及時區有疑義</td>
+<td>不當作小時報價</td>
+</tr>
+<tr>
+<td>歐盟儲氣／滿儲率</td>
+<td>74.58%；10/19氣日</td>
+<td>未取得</td>
+<td>未取得</td>
+<td>未取得</td>
+<td>代理均值89.2%；區間77.1%–98.0%</td>
+<td>GIE 10/20 04:00更新；季節代理低至中信心</td>
+</tr>
+</tbody>
+</table></div>
+<p>JKM 頁面雖列 29.55、TTF 列 86.395，但換月、評價時區或表頭口徑未排除疑義；不同網站還有不一致值，不能平均成「現價」。儲氣百分點缺口亦不能由庫存量百分比或未定義的 Trend 欄位換算。[S15–S17]</p>
+<p><strong>門檻檢驗。</strong> 油價日幅皆低於 5%、五日低於 10%，未達極端；日幅亦低於 3%，且最新值低於前二十日高點，未確認廣度或突破。天然氣日幅 8%及同契約五日檢查因資料不合格而未知，不是「確認未達」。</p>
+<p><strong>季節候選已評估。</strong> 儲氣代理缺口約 −14.6 個百分點，超過 5 個百分點觀察門檻；但當期為 10 月 19 日，基準為 18 日，容量標準化未完整公開。它支持既有冬季脆弱性，不能精確證明本小時新惡化。[S17]</p>
+<p>較新的週頻代理顯示注氣 8.4 TWh，高於季節正常 4.1 TWh，構成重要反證；來源沿用 GIE，並非三套獨立資料。庫存水位低與邊際回補改善可同時成立，不能只選其中一邊。[S17]</p>
+<p><strong>庫存與供給反證。</strong> API 原油庫存減少 493 萬桶，較預期減少 130 萬桶多，但小於前次減少 1,112 萬桶；這不是 EIA 結果。Birol 的長期正常化警告提高持續期風險，並非新的已測量停產或運量損失。[S18]</p>
+<p>既有 Kpler 海灣流量約每日 850 萬桶、原先逾 2,000 萬，衡量的是流量而非名目產能；本窗未核實新增損失。需求破壞量、可比船運費仍未知，季節回補與可能供給恢復必須並看。[S18–S19]</p>
+<p>Brent 十二月至一月當日結算逆價差為每桶 3.69 美元；缺前日同口徑差值，不能宣稱曲線變陡。不同時刻近遠月報價也不能替代同步曲線。小幅油跌未解除能源風險，亦不足以新增升級。[S15]</p>
+<h2 id="section-跨資產確認-cross-asset-confirmation">跨資產確認（CROSS-ASSET CONFIRMATION）</h2>
+<blockquote class="callout">
+<p>目前確認的是「公司營運上修＋相關硬體股票反應」；不是「利率、信用與資金市場共同轉好」。資料過時或缺漏，都不能當成風險不存在。</p>
+</blockquote>
+<p>殖利率（Yield）、實質殖利率（Real Yield）與價格採各來源原始時鐘；下表的日變動不是本小時報酬。官方 H.15 最新仍為 10 月 19 日，不與 20 日即期報價混算通膨補償，也不由曲線倒推缺失利率。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>資產／檢查</th>
+<th>最新可得值</th>
+<th>比較基準／變化</th>
+<th>觀測日期或UTC時鐘</th>
+<th>對本輪的判讀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美國2年債</td>
+<td>4.791%</td>
+<td>4.772%；+1.9基點</td>
+<td>10/20 21:39:36</td>
+<td>短端未跟隨寬鬆；窗外</td>
+</tr>
+<tr>
+<td>美國10年債</td>
+<td>5.115%</td>
+<td>5.140%；−2.5基點</td>
+<td>10/20 21:30:39</td>
+<td>較早長端略降；非事件反應證明</td>
+</tr>
+<tr>
+<td>美國30年債</td>
+<td>5.431%</td>
+<td>5.470%；−3.9基點</td>
+<td>10/20 17:41:14</td>
+<td>更早觀測；小時續行未知</td>
+</tr>
+<tr>
+<td>10年實質殖利率</td>
+<td>2.769%</td>
+<td>2.795%；−2.6基點</td>
+<td>10/20 21:39:36</td>
+<td>對久期邊際友善，水位仍高</td>
+</tr>
+<tr>
+<td>10年−2年曲線</td>
+<td>+33基點</td>
+<td>+38；日減5基點</td>
+<td>10/20日值；21:03發布</td>
+<td>每日變平，不等於流動性改善</td>
+</tr>
+<tr>
+<td>期限溢酬</td>
+<td>未取得</td>
+<td>無可比值</td>
+<td>本輪未露數字</td>
+<td>財政溢酬不可判定消退</td>
+</tr>
+<tr>
+<td>DXY／美元指數</td>
+<td>合格現貨未取得</td>
+<td>12月期貨非現貨</td>
+<td>衍生頁時區不明</td>
+<td>不把期貨101.52當即期DXY</td>
+</tr>
+<tr>
+<td>USD/JPY</td>
+<td>158.126</td>
+<td>158.525；−0.25%</td>
+<td>10/20 17:45:34</td>
+<td>早於BOJ新調查，不能歸因</td>
+</tr>
+<tr>
+<td>EUR/USD</td>
+<td>1.1230</td>
+<td>1.1214；+0.15%</td>
+<td>10/20 22:26:54</td>
+<td>窗內可得；單一匯率非融資指標</td>
+</tr>
+<tr>
+<td>USD/TWD</td>
+<td>32.617</td>
+<td>32.445；+0.53%</td>
+<td>10/20台北收盤</td>
+<td>台幣偏弱；非SMCI消息後反應</td>
+</tr>
+<tr>
+<td>黃金／美元每盎司</td>
+<td>4,124.96</td>
+<td>4,132.28；−0.17%</td>
+<td>10/20 21:25:15</td>
+<td>未見新金漲債跌共振；窗外</td>
+</tr>
+<tr>
+<td>HY／IG信用利差</td>
+<td>329／87基點</td>
+<td>前值331／85</td>
+<td>10/19收盤；10/20發布</td>
+<td>一縮一擴；非當日即時信用狀況</td>
+</tr>
+<tr>
+<td>VIX</td>
+<td>頁面17.31，前值18.44</td>
+<td>指示跌6.13%</td>
+<td>10/20「8:15PM」時區未露</td>
+<td>截止歸屬不明，不作同步確認</td>
+</tr>
+<tr>
+<td>MOVE</td>
+<td>101.30</td>
+<td>101.10</td>
+<td>10/19；前值10/16</td>
+<td>10/20新值未取得</td>
+</tr>
+<tr>
+<td>S&amp;P 500／Nasdaq</td>
+<td>7,712.57／26,424.82</td>
+<td>+0.28%／−0.02%</td>
+<td>10/20美股正常收盤</td>
+<td>輪動而非普漲；早於盤後更新</td>
+</tr>
+<tr>
+<td>費半SOX</td>
+<td>11,283.81</td>
+<td>−0.29%；顯示5日−7.52%</td>
+<td>10/20美股正常收盤</td>
+<td>對S&amp;P落後0.57百分點，尚未反轉</td>
+</tr>
+<tr>
+<td>SMCI／輝達盤後</td>
+<td>37.20／220.89美元</td>
+<td>+14.57%／+2.04%</td>
+<td>22:39／22:18:33</td>
+<td>有窗內延續，但不同時點、同族風險</td>
+</tr>
+<tr>
+<td>台積電ADR盤後</td>
+<td>432.75美元</td>
+<td>較425.08正常收盤+1.80%</td>
+<td>10/20 22:36</td>
+<td>額外股票反應，仍非新的公司營運指引</td>
+</tr>
+<tr>
+<td>亞洲股市</td>
+<td>日經64,075.42；台股46,292.93</td>
+<td>−1.30%／−1.13%</td>
+<td>10/20現貨收盤</td>
+<td>10/21亞洲尚未開盤；其他指數未核驗</td>
+</tr>
+</tbody>
+</table></div>
+<p>來源：利率與黃金 S08，美元及波動 S13，股市與個股 S02–S03、S14，台灣與日本 S20、S24。SOX 原始指數頁變動欄位內部不一致，採其指數水準，再以兩個報價來源交叉確認日跌幅；不採頁面的零變動顯示。</p>
+<p>法國十年公債約 4.88%，對德利差約 150 基點、日擴 2.5；義大利利差約 109.5、收窄 1.57。158.67 的高點發生在十月初，不是當日新高。這是局部財政壓力，未確認全面歐洲傳染。[S14]</p>
+<h2 id="section-證據與反向證據-evidence-vs-counter-evidence">證據與反向證據（EVIDENCE VS COUNTER-EVIDENCE）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>判斷命題</th>
+<th>支持證據</th>
+<th>主要反證／限制</th>
+<th>目前結論</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI需求全面崩落</td>
+<td>先前半導體股價持續偏弱</td>
+<td>SMCI營運雙上修；台積電及台灣科技訂單仍強</td>
+<td>全面崩落說法的可信度下降</td>
+</tr>
+<tr>
+<td>硬體基本面全面復甦</td>
+<td>已有公司上修與跨公司價格反應</td>
+<td>同業尚無新營運數據；時點、組合與份額可能主導</td>
+<td>只能確認局部正向增量</td>
+</tr>
+<tr>
+<td>全球金融條件改善</td>
+<td>較早長端、實質殖利率略降</td>
+<td>短端略升、信用混合、基差與期限溢酬缺漏</td>
+<td>不足以降低整體風險燈號</td>
+</tr>
+<tr>
+<td>台灣訂單必然受惠</td>
+<td>AI平台出貨與既有外銷訂單強</td>
+<td>海外生產、競爭與客戶分配可能不同</td>
+<td>需逐公司接單及毛利驗證</td>
+</tr>
+<tr>
+<td>能源新一輪再通膨</td>
+<td>儲氣季節代理偏低、供給持續期風險</td>
+<td>油價幅度未達門檻、注氣較強、天然氣資料不足</td>
+<td>保留風險，未確認本輪新升級</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>事實、預期與推論分開。</strong> 公司初估與歷史數據是已發布事實，但初估本身不是最終結果；LSEG 共識與央行調查屬預期。從上修推導台灣獲利外溢，或從價格修復推導信心回升，均是有條件推論。</p>
+<p>FactSet 149.4 億美元與 Investing 149.9 億美元等不同營收共識，不是 LSEG 152.3 億的前後修訂序列。本報比較固定使用 LSEG，避免把供應商樣本差異寫成市場預期上修。[S01–S02]</p>
+<h2 id="section-台灣傳導-taiwan-transmission">台灣傳導（TAIWAN TRANSMISSION）</h2>
+<h3 id="section-五條傳導鏈與時間差">五條傳導鏈與時間差</h3>
+<ol>
+<li><strong>估值｜即時。</strong> AI硬體獲利預期修復可抵銷部分折現率壓力；若實質殖利率再升或外資縮風險，基本面利多仍可能無法主導股價。正常交易的族群廣度比單一開盤跳漲更重要。</li>
+<li><strong>外需｜數週至數月。</strong> 美國伺服器出貨經客戶、ODM、零組件及晶圓環節傳導。外銷訂單（Export Orders）不等於台灣境內生產或當期出口；應看接單歸屬、交貨期與取消率，不把競爭對手成長直接乘到台廠。</li>
+<li><strong>金融條件｜即時至數月。</strong> 信用、美元融資與客戶籌資能力影響庫存和應收週轉；季度增收若伴隨現金占用，獲利品質仍受限。須由自由現金流與融資成本補強，不只看帳面營收。</li>
+<li><strong>匯率與輸入成本｜即時至數月。</strong> 台幣偏弱可提高美元營收換算，也提高美元能源及材料成本，淨效果取決於避險、採購幣別與產地。LNG、電價與輸入性通膨另受合約及政策調整時差制約。</li>
+<li><strong>日本／中國放大器｜數週至一至三季。</strong> 日本正常化可能影響日圓資金與設備材料成本，中國工業改善但內需偏弱影響非AI訂單；兩者需分開驗證，不能由BOJ調查直接宣稱套利已平倉。</li>
+</ol>
+<h3 id="section-台灣固定檢查表">台灣固定檢查表</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>固定檢查</th>
+<th>最新可核驗資訊</th>
+<th>日期／口徑</th>
+<th>對本輪的意義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWSE外資現貨資金流</td>
+<td>賣超795.4億元，連續10日</td>
+<td>10/20；中央社報導，非本輪TWSE總額直取</td>
+<td>既有壓力；賣股不等於等額淨匯出</td>
+</tr>
+<tr>
+<td>TAIFEX外資台指部位</td>
+<td>多11,524、空101,272；淨空89,748口</td>
+<td>10/20未平倉</td>
+<td>當日淨交易+1,450口不等於未平倉變動</td>
+</tr>
+<tr>
+<td>TAIEX與市場廣度</td>
+<td>46,292.93；跌1.13%；269漲、701跌、104平</td>
+<td>10/20股票口徑</td>
+<td>前日風險承擔偏弱，未反映盤後利多</td>
+</tr>
+<tr>
+<td>台灣類股相對強弱</td>
+<td>上市半導體−0.94%、電子−0.92%；電腦周邊+1.34%、金融−2.36%</td>
+<td>10/20台灣現貨；電腦周邊對大盤領先2.47百分點</td>
+<td>硬體局部有韌性，但早於SMCI公告，不是其反應</td>
+</tr>
+<tr>
+<td>台積電ADR／台灣現貨</td>
+<td>現貨2,405元、−0.62%；ADR收425.08美元、+1.16%，盤後432.75、+1.80%</td>
+<td>台灣10/20收盤；美股20:00收盤／22:36盤後</td>
+<td>美國時段較強，但不得計算非同步套利溢價</td>
+</tr>
+<tr>
+<td>SOX／台灣半導體</td>
+<td>SOX −0.29%；台灣上市半導體−0.94%，全市場半導體−1.57%</td>
+<td>10/20不同時區；上市／全市場成分不同</td>
+<td>費半較上市半導體少跌0.65百分點，非窗內相對報酬</td>
+</tr>
+<tr>
+<td>WSTS／SEMI</td>
+<td>WSTS上半年銷售年增102%；SEMI預測2026邏輯／晶圓代工設備+18.9%、DRAM +39%、NAND +30.7%</td>
+<td>舊統計／前瞻預測，非本小時實績</td>
+<td>支持結構需求，不能當新增加速</td>
+</tr>
+<tr>
+<td>台灣外銷訂單／出口</td>
+<td>9月訂單1,142.1億美元、年增62.4%；出口872.2億、增60.9%</td>
+<td>訂單與實際出口不同統計</td>
+<td>海外生產與價格需拆分</td>
+</tr>
+<tr>
+<td>韓國出口</td>
+<td>9月出口年增83.5%；半導體增263%、非半導體增23%</td>
+<td>10/1發布的月資料</td>
+<td>有科技以外廣度，仍非窗內新數據</td>
+</tr>
+<tr>
+<td>記憶體</td>
+<td>DDR5 16Gb +0.11%；DDR4 16Gb −0.06%、8Gb +0.84%</td>
+<td>10/20 18:10台北評價</td>
+<td>品項分化；行動需求／庫存仍有壓力</td>
+</tr>
+<tr>
+<td>公司訂單／庫存／毛利／CapEx／指引</td>
+<td>SMCI僅新營收與毛利初估；其新訂單、庫存、CapEx未披露</td>
+<td>正式財報待11/3</td>
+<td>不補造營運橋接或公司獲利彈性</td>
+</tr>
+<tr>
+<td>台積電／領先循環</td>
+<td>第三季庫存天數82、前季87；最新NDC值未取得</td>
+<td>台積電10/15；NDC未重試既有受限來源</td>
+<td>不能用月產出或訂單冒充官方領先指數</td>
+</tr>
+</tbody>
+</table></div>
+<p>來源：公司及產業 S01、S21，外需與記憶體 S22–S23，台灣市場 S24。台積電庫存天數下降並不等於庫存金額下降；第三季金額約 4,277.5 億元，前季約 3,855.3 億元，分母的出貨增加亦影響週轉天數。</p>
+<h2 id="section-產業-股票敏感度-industry-equity-sensitivity">產業／股票敏感度（INDUSTRY / EQUITY SENSITIVITY）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>產業／曝險</th>
+<th>有利傳導</th>
+<th>限制與反向風險</th>
+<th>驗證重點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>伺服器ODM與整機</td>
+<td>平台需求、出貨節奏改善</td>
+<td>SMCI份額增長可能排擠其他整機商</td>
+<td>客戶別訂單、營收、毛利及應收</td>
+</tr>
+<tr>
+<td>散熱、電源、機櫃</td>
+<td>高算力平台提高配套需求</td>
+<td>規格切換、單價競爭、交付與付款風險</td>
+<td>設計導入與量產轉換，而非股價聯想</td>
+</tr>
+<tr>
+<td>晶圓、先進封裝</td>
+<td>一至三季算力投資提供產能需求</td>
+<td>客戶集中、資本密度與擴產節奏</td>
+<td>稼動、接單、現金流及CapEx紀律</td>
+</tr>
+<tr>
+<td>記憶體及終端電子</td>
+<td>伺服器需求可能支持特定規格</td>
+<td>記憶體漲價提高下游成本，行動需求未同步轉強</td>
+<td>合約價／現貨價、庫存與成本轉嫁</td>
+</tr>
+<tr>
+<td>煉油、航運及電力密集產業</td>
+<td>部分價差或運能約束可改變收入</td>
+<td>原料、燃料、運費及需求破壞方向可能抵銷</td>
+<td>裂解價差、實際運價、採購合約及政策</td>
+</tr>
+<tr>
+<td>科技製造整體</td>
+<td>需求規模可改善固定成本吸收</td>
+<td>LNG、電力與進口材料成本可能侵蝕毛利</td>
+<td>能源成本落後傳導與公司避險差異</td>
+</tr>
+</tbody>
+</table></div>
+<p>以上為敏感度，不是個股目標價或買賣指令。未取得特定台廠供貨關係、成本占比與訂單增量前，不把 SMCI 更新轉換為個別公司的獲利上修；匯率與能源亦不能一概歸類為利多或利空。</p>
+<h2 id="section-市場週期-vs-基本面週期">市場週期 vs 基本面週期</h2>
+<p><strong>市場週期（Market Cycle）仍偏脆弱。</strong> 費半正常交易相對落後、台灣外資連賣與台幣走弱，是資金與估值層面的警訊。盤後反彈增加反轉可能，卻尚未消除先前趨勢；同一風險族群反彈也不是跨資產全面修復。</p>
+<p><strong>基本面週期（Fundamental Cycle）獲得正向增量。</strong> SMCI 雙上修與既有台積電指引、台韓科技外需相容。台積電第三季營收 467.2 億美元、第四季指引 523–543 億，已是此前的獨立公司背景，不是本小時新增上修。[S21]</p>
+<p>兩個週期可以背離：更高折現率、擁擠部位與現金回收疑慮，足以壓低仍在成長的企業估值。本輪修正的是「股價跌便代表需求已崩潰」的解讀，不是改成「營收增便保證股價上漲」。</p>
+<h2 id="section-分類與風險燈號變化-classification-risk-light-delta">分類與風險燈號變化（CLASSIFICATION &amp; RISK LIGHT DELTA）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>判定項目</th>
+<th>前次→本次</th>
+<th>判定理由</th>
+<th>尚未滿足條件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>訊號方向</td>
+<td>基本面韌性／市場偏弱→新增營運反證</td>
+<td>ai_fundamental_cycle <span class="direction direction-improving">↗ 改善</span></td>
+<td>跨公司新營運與現金流確認</td>
+</tr>
+<tr>
+<td>分類</td>
+<td><span class="state-transition"><span class="state-prior">TACTICAL</span><span class="transition-arrow">→</span><span class="state-current">TACTICAL</span></span></td>
+<td>公司層級重大增量，足以發報</td>
+<td>多類別、持續與獨立跨資產證據</td>
+</tr>
+<tr>
+<td>整體風險燈號</td>
+<td><span class="state-transition"><span class="risk risk-yellow">🟡 YELLOW</span> <span class="transition-arrow">→</span> <span class="risk risk-yellow">🟡 YELLOW</span></span></td>
+<td>改善不等於整體風險降低</td>
+<td>通膨、能源、外資壓力未解除</td>
+</tr>
+<tr>
+<td>升級風險門檻</td>
+<td>未達</td>
+<td>無兩項獨立且同期新增惡化確認</td>
+<td>仍須監察未知資料，非宣告安全</td>
+</tr>
+<tr>
+<td>降低風險門檻</td>
+<td>不支持</td>
+<td>單一初估與相關股票反應不足</td>
+<td>廣度、持續性、信用與融資共同修復</td>
+</tr>
+<tr>
+<td>Regime Shift</td>
+<td>未達</td>
+<td>核心風險反論未失效，未形成兩類獨立週期轉向</td>
+<td>跨類別持續確認及反向證據失效</td>
+</tr>
+</tbody>
+</table></div>
+<p>嚴重度 3／5 衡量訊息對既有判斷的重要性，不代表這是新增負面衝擊。信心中高針對「公司已上調初估且市場有反應」；對整條供應鏈、未來季度及全球環境的外推信心明顯較低。</p>
+<h2 id="section-情境矩陣-scenario-matrix">情境矩陣（SCENARIO MATRIX）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>情境</th>
+<th>需要看到的證據</th>
+<th>傳導與台灣含義</th>
+<th>失效／轉換條件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基準：改善侷限AI硬體</td>
+<td>初估大致守住；正常交易局部修復，利率信用仍混合</td>
+<td>獲利支撐與估值壓力並存；台廠分化</td>
+<td>多家營運連續上修則轉上行；初估撤回則轉下行</td>
+</tr>
+<tr>
+<td>上行：基本面復甦擴散</td>
+<td>同業訂單、毛利、自由現金流同步改善；費半及台灣廣度持續修復</td>
+<td>需求由整機傳至零組件、晶圓與設備，外資壓力緩和</td>
+<td>成長只靠提前出貨或現金回收落後，否定擴散</td>
+</tr>
+<tr>
+<td>下行：初估反轉或利率再緊</td>
+<td>正式結果下修、客戶拉貨後回落；實質利率／信用同步惡化</td>
+<td>盈餘與折現率雙壓力，台灣外資與匯率放大波動</td>
+<td>營運、現金流與金融條件持續改善，削弱下行情境</td>
+</tr>
+</tbody>
+</table></div>
+<p>不配置主觀精確機率。三條路徑由可觀測條件區分；能源或日本資金成本若提供新的獨立衝擊，需重新評估，而不是用本次單一公司改善覆蓋其他風險。</p>
+<h2 id="section-下一確認條件-next-confirmation">下一確認條件（NEXT CONFIRMATION）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>時間／觀察窗</th>
+<th>要確認的結果</th>
+<th>支持改善的條件</th>
+<th>撤回或重新升級條件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>次一正常交易日</td>
+<td>費半相對表現、硬體族群廣度</td>
+<td>非僅SMCI上漲；強勢延續正常成交</td>
+<td>盤後漲幅消退、半導體弱勢擴散</td>
+</tr>
+<tr>
+<td>台灣10/21及後續數日</td>
+<td>現貨外資、台指部位、台幣與廣度</td>
+<td>扣除結算影響後，出現持續修復</td>
+<td>賣壓、弱匯與跌家數同步加劇</td>
+</tr>
+<tr>
+<td>10/21–22</td>
+<td>EIA、長券與TIPS拍賣</td>
+<td>庫存／供給改善，長債吸收有序</td>
+<td>能源價量共振或拍賣疲弱伴信用壓力</td>
+</tr>
+<tr>
+<td>10/27–30</td>
+<td>Fed與BOJ實際政策及市場反應</td>
+<td>政策路徑不引發新融資緊縮</td>
+<td>日圓／日債、美元融資與信用同步承壓</td>
+</tr>
+<tr>
+<td>11/3公司正式結果</td>
+<td>SMCI營收、毛利、應收、庫存與現金流</td>
+<td>守住初估且現金轉換可解釋</td>
+<td>重大下修、回款惡化或異常營運資金占用</td>
+</tr>
+<tr>
+<td>數週至數月／一至三季</td>
+<td>同業與台廠接單、毛利、CapEx紀律</td>
+<td>成長跨公司且有現金回報</td>
+<td>提前拉貨後回落、庫存累積、同業指引轉弱</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>核心撤回條件。</strong> 營運上修若在正式財報被實質推翻，或證明只是時點與份額轉移、未擴大終端需求，應撤回廣泛改善推論；若現金流不跟隨，也不得以營收成長替代獲利品質。</p>
+<p><strong>風險再評估條件。</strong> 若高實質利率、信用利差或美元融資出現兩個獨立且持續惡化訊號，即使 AI 營收仍強，也可能需要提高整體風險判斷。相反地，降低黃燈須更廣泛金融與市場確認，而非一次財報驚喜。</p>
+<h2 id="section-source-audit">SOURCE AUDIT</h2>
+<p><strong>資料截止。</strong> 可採觀測截止 UTC 2026-10-20 23:00。主要來源本輪於 22:58–23:07 重新讀取；晚於截止的讀取只核驗已發布資料。以下按證據用途分組，同一公司轉載或同源資料不重複計作獨立確認。</p>
+<ol>
+<li><strong>S01｜SMCI原始公告。</strong> <a href="https://www.businesswire.com/news/home/20261020024291/en/Supermicro-Provides-First-Quarter-of-Fiscal-Year-2027-Preliminary-Business-Update" rel="noopener noreferrer" target="_blank">公司發布的Business Wire全文</a>與<a href="https://ir.supermicro.com/news/news-details/2026/Supermicro-Provides-First-Quarter-of-Fiscal-Year-2027-Preliminary-Business-Update/default.aspx" rel="noopener noreferrer" target="_blank">公司IR頁</a>。10/20發布、季度截至9/30；BW全文直接讀取成功，IR直讀失敗但索引可讀。會計師未核閱、初估可修訂；兩者為同一公司來源。</li>
+<li><strong>S02｜獨立新聞與時間定位。</strong> <a href="https://www.marketscreener.com/news/super-micro-expects-first-quarter-revenue-above-estimates-ce785cd8dc89fe27" rel="noopener noreferrer" target="_blank">Reuters 20:39首報</a>確認時窗前已公開；<a href="https://uk.marketscreener.com/news/super-micro-sees-quarterly-revenue-soaring-on-ai-server-boom-ce785cd8dc8bf225" rel="noopener noreferrer" target="_blank">Reuters 21:16版本</a>提供LSEG與當時同業反應；<a href="https://www.marketwatch.com/story/super-micros-stock-soars-after-surprise-update-with-dell-and-hpe-shares-joining-the-rally-1837a69f?mod=mw_latestnews" rel="noopener noreferrer" target="_blank">MarketWatch</a>22:37僅核驗標題及導言，不引用未讀內文或由其取得同業數值。</li>
+<li><strong>S03｜窗內個股價格。</strong> <a href="https://stockanalysis.com/stocks/smci/" rel="noopener noreferrer" target="_blank">SMCI報價</a>22:39；<a href="https://www.marketscreener.com/quote/stock/NVIDIA-CORPORATION-57355629/news/?mode=pertinence" rel="noopener noreferrer" target="_blank">輝達報價頁</a>22:18:33。皆為盤後、相對正常收盤；不同時點，不當成同步事件研究。</li>
+<li><strong>S04｜成長與房市。</strong> <a href="https://www.atlantafed.org/research-and-data/data/gdpnow/current-and-past-gdpnow-commentaries" rel="noopener noreferrer" target="_blank">Atlanta Fed GDPNow</a>、<a href="https://www.census.gov/construction/nrc/pdf/newresconst.pdf" rel="noopener noreferrer" target="_blank">Census新屋</a>、<a href="https://www.nar.realtor/newsroom/pending-home-sales-decreased-7-3-percent-in-september" rel="noopener noreferrer" target="_blank">NAR待完成銷售</a>、<a href="https://www.philadelphiafed.org/surveys-and-data/regional-economic-analysis/nbos-2026-10" rel="noopener noreferrer" target="_blank">費城Fed非製造業</a>。均屬10/20既有發布；NAR與費城Fed以原始索引核驗，直接頁面失敗。</li>
+<li><strong>S05｜通膨與消費。</strong> <a href="https://www.bls.gov/news.release/archives/cpi_10142026.htm" rel="noopener noreferrer" target="_blank">BLS 9月CPI</a>、<a href="https://www.bls.gov/news.release/archives/ppi_10152026.htm" rel="noopener noreferrer" target="_blank">BLS 9月PPI</a>、<a href="https://www.bea.gov/news/2026/personal-income-and-outlays-august-2026" rel="noopener noreferrer" target="_blank">BEA 8月PCE</a>。發布日分別10/14、10/15、9/30；PPI過去月份有修訂，但本輪未取得完整幅度，不補算。</li>
+<li><strong>S06｜就業。</strong> <a href="https://www.bls.gov/news.release/archives/empsit_10022026.htm" rel="noopener noreferrer" target="_blank">BLS全國就業</a>、<a href="https://www.bls.gov/news.release/laus.nr0.htm" rel="noopener noreferrer" target="_blank">州失業率</a>、<a href="https://mediacenter.adp.com/press-releases" rel="noopener noreferrer" target="_blank">ADP發布索引</a>。全國為9月、10/2發布；州資料10/20，ADP為截至10/3四週平均。ADP可比前值及修訂未知。</li>
+<li><strong>S07｜貨幣政策。</strong> <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm" rel="noopener noreferrer" target="_blank">Fed 9/16聲明</a>、<a href="https://www.federalreserve.gov/recentpostings.htm" rel="noopener noreferrer" target="_blank">近期公告</a>、<a href="https://www.marketscreener.com/news/fed-to-skip-october-but-raise-rates-again-in-december-nearly-all-economists-say-ce785cd8db88f22d" rel="noopener noreferrer" target="_blank">Reuters經濟學家調查</a>。調查10/20 12:44發布，以索引核驗；會議通知與問卷均非新利率決策。</li>
+<li><strong>S08｜利率、曲線與黃金。</strong> <a href="https://www.marketscreener.com/quote/interest/US-2Y-CASH-146043345/" rel="noopener noreferrer" target="_blank">美債2年</a>、<a href="https://www.marketscreener.com/quote/interest/US-10Y-CASH-146043317/" rel="noopener noreferrer" target="_blank">10年</a>、<a href="https://www.marketscreener.com/quote/interest/US-30Y-CASH-146043318/" rel="noopener noreferrer" target="_blank">30年</a>、<a href="https://www.marketscreener.com/quote/interest/US-10Y-INFLATION-INDEXED-146043308/" rel="noopener noreferrer" target="_blank">10年實質</a>、<a href="https://fred.stlouisfed.org/series/T10Y2Y" rel="noopener noreferrer" target="_blank">FRED曲線</a>、<a href="https://www.federalreserve.gov/releases/h15/" rel="noopener noreferrer" target="_blank">H.15</a>、<a href="https://www.newyorkfed.org/research/data_indicators/term-premia-tabs" rel="noopener noreferrer" target="_blank">期限溢酬</a>、<a href="https://www.marketscreener.com/quote/commodity/GOLD-4947/" rel="noopener noreferrer" target="_blank">黃金</a>。觀測時鐘詳跨資產表；期限溢酬僅得導覽，無數值。</li>
+<li><strong>S09｜融資與準備金。</strong> <a href="https://markets.newyorkfed.org/api/rates/secured/sofr/last/5.json" rel="noopener noreferrer" target="_blank">SOFR</a>、<a href="https://markets.newyorkfed.org/api/rp/repo/all/results/last/10.json" rel="noopener noreferrer" target="_blank">回購</a>、<a href="https://markets.newyorkfed.org/api/rp/reverserepo/all/results/last/10.json" rel="noopener noreferrer" target="_blank">逆回購</a>、<a href="https://www.federalreserve.gov/releases/cp/rates.htm" rel="noopener noreferrer" target="_blank">商業本票</a>、<a href="https://www.federalreserve.gov/releases/h41/20261015/" rel="noopener noreferrer" target="_blank">H.4.1</a>。SOFR／CP為10/19，操作為10/20，準備金為截至10/14週平均；操作更新時區未露，沒有當成窗內新事件。</li>
+<li><strong>S10｜信用總量與利差。</strong> <a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" rel="noopener noreferrer" target="_blank">HY OAS</a>、<a href="https://fred.stlouisfed.org/series/BAMLC0A0CM" rel="noopener noreferrer" target="_blank">IG OAS</a>、<a href="https://www.federalreserve.gov/releases/h8/current/default.htm" rel="noopener noreferrer" target="_blank">H.8</a>、<a href="https://www.federalreserve.gov/data/sloos/sloos-202607.htm" rel="noopener noreferrer" target="_blank">SLOOS</a>、<a href="https://www.federalreserve.gov/releases/g19/current/" rel="noopener noreferrer" target="_blank">G.19</a>。利差最新10/19；銀行信用截至10/7；SLOOS為7月調查，消費信用為8月初值，不能當10/20即時總體信用。</li>
+<li><strong>S11｜Capital One。</strong> <a href="https://investor.capitalone.com/news-releases/news-release-details/capital-one-reports-third-quarter-2026-net-income-35-billion-or" rel="noopener noreferrer" target="_blank">公司第三季結果</a>。10/20發布、季度比較；公司索引與可讀內容交叉核驗，直接頁面讀取有失敗。單一公司準備金變動不可外推整體銀行。</li>
+<li><strong>S12｜國債供給。</strong> <a href="https://www.cmegroup.com/education/events/econoday/692941" rel="noopener noreferrer" target="_blank">三個月券</a>、<a href="https://www.cmegroup.com/education/events/econoday/702131" rel="noopener noreferrer" target="_blank">回購公告</a>、<a href="https://home.treasury.gov/system/files/221/Tentative-Auction-Schedule.pdf" rel="noopener noreferrer" target="_blank">Treasury拍賣日程</a>、<a href="https://helious.io/news/auc-912797VA2-2026-10-20/6-week-bill-auction-in-line" rel="noopener noreferrer" target="_blank">六週券次級報導</a>、<a href="https://www.treasurydirect.gov/auctions/auction-announcements/" rel="noopener noreferrer" target="_blank">TreasuryDirect</a>。六週原始結果無法讀取，維持低信心；未來拍賣不當成結果。</li>
+<li><strong>S13｜匯率與波動。</strong> <a href="https://www.marketscreener.com/quote/currency/EURO-US-DOLLAR-EUR-USD-4591/" rel="noopener noreferrer" target="_blank">EUR/USD</a>、<a href="https://www.marketscreener.com/quote/currency/US-DOLLAR-JAPANESE-YEN-US-4596/" rel="noopener noreferrer" target="_blank">USD/JPY</a>、<a href="https://www.investing.com/currencies/us-dollar-index" rel="noopener noreferrer" target="_blank">美元指數頁</a>、<a href="https://www.cboe.com/tradable-products/vix" rel="noopener noreferrer" target="_blank">Cboe VIX</a>、<a href="https://www.investing.com/indices/ice-bofaml-move-historical-data" rel="noopener noreferrer" target="_blank">MOVE歷史</a>。EUR為22:26:54；JPY早於時窗，美元頁為期貨且時區不明；VIX截止歸屬不明，MOVE僅10/19。</li>
+<li><strong>S14｜現貨股市與歐洲利差。</strong> <a href="https://in.marketscreener.com/news/dow-outperforms-as-wall-street-rises-healthcare-stocks-lead-gains-ce785cd8dc8bf224" rel="noopener noreferrer" target="_blank">Reuters美股收盤</a>、<a href="https://indexes.nasdaq.com/Index/Overview/SOX" rel="noopener noreferrer" target="_blank">Nasdaq SOX原始頁</a>、<a href="https://www.marketscreener.com/quote/index/PHLX-SEMICONDUCTOR-5333609/quotes/" rel="noopener noreferrer" target="_blank">SOX報價</a>、<a href="https://www.google.com/finance/beta/quote/SOX%3AINDEXNASDAQ?hl=en" rel="noopener noreferrer" target="_blank">Google SOX交叉核驗</a>、<a href="https://live.euronext.com/en/financial-news/french-bond-yields-dip-remain-near-24-year-high-volatile-trading" rel="noopener noreferrer" target="_blank">Reuters法債</a>。股票為10/20正常收盤；法債為歐洲較早時段，158.67基點高點為十月初。</li>
+<li><strong>S15｜原油與曲線。</strong> <a href="https://www.marketwatch.com/investing/future/clz26/download-data" rel="noopener noreferrer" target="_blank">WTI十二月歷史</a>、<a href="https://www.marketwatch.com/investing/future/brnz26/download-data?countrycode=uk&amp;mod=mw_quote_tab" rel="noopener noreferrer" target="_blank">Brent十二月歷史</a>、<a href="https://www.marketwatch.com/investing/future/brnf27?countrycode=uk" rel="noopener noreferrer" target="_blank">Brent一月</a>。WTI22:18、Brent21:07；WTI再次讀取返回較舊20:59值98.18，保留本輪較晚時戳97.98並降為中信心，不拼接兩筆。</li>
+<li><strong>S16｜天然氣資格限制。</strong> <a href="https://www.investing.com/commodities/lng-japan-korea-marker-platts-futures-historical-data" rel="noopener noreferrer" target="_blank">JKM日表</a>、<a href="https://www.investing.com/commodities/ice-dutch-ttf-gas-c1-futures-historical-data" rel="noopener noreferrer" target="_blank">TTF日表</a>、<a href="https://lnginsights.com/" rel="noopener noreferrer" target="_blank">替代顯示頁</a>。10/20日期可見，但評價UTC、同契約歷史未完整核實；替代值亦不一致，故合格現值及變動留空。</li>
+<li><strong>S17｜歐洲儲氣。</strong> <a href="https://www.gie.eu/" rel="noopener noreferrer" target="_blank">GIE</a>、<a href="https://agsi.gie.eu/" rel="noopener noreferrer" target="_blank">AGSI</a>、<a href="https://voltstack.energy/insights/eu-gas-storage-tracker-winter-2026" rel="noopener noreferrer" target="_blank">季節代理</a>、<a href="https://storagecurve.com/natural-gas/europe/storage/" rel="noopener noreferrer" target="_blank">週頻代理</a>。GIE氣日10/19、10/20 04:00更新；代理基準10/18，且沿用同源資料。AGSI歷史數列未露，不能推造日、五日、二十日變動。</li>
+<li><strong>S18｜庫存與供給持續期。</strong> <a href="https://www.investing.com/economic-calendar/api-weekly-crude-stock-656" rel="noopener noreferrer" target="_blank">API日曆</a>、<a href="https://www.eia.gov/petroleum/supply/weekly/" rel="noopener noreferrer" target="_blank">EIA週報</a>、<a href="https://kvia.com/news/business-technology/cnn-business-consumer/2026/10/20/oil-parked-above-110-a-barrel-as-iea-warns-energy-markets-wont-return-to-normal-next-year/" rel="noopener noreferrer" target="_blank">CNN／KVIA報導</a>、<a href="https://www.energyintel.com/000001a1-5a08-db0e-adb1-da1e6f5a0000" rel="noopener noreferrer" target="_blank">Energy Intelligence</a>、<a href="https://live.euronext.com/en/financial-news/oil-slips-five-month-highs-hormuz-crossings-russian-sanctions-waiver-focus" rel="noopener noreferrer" target="_blank">Reuters既有實物流量</a>。API是較早發布；EIA最新列表10/15，下一次待10/21；長期警告不當新減產實績。</li>
+<li><strong>S19｜貿易與航運。</strong> <a href="https://www.bea.gov/news/2026/us-international-trade-goods-and-services-august-2026" rel="noopener noreferrer" target="_blank">BEA 8月貿易</a>、<a href="https://www.marinelink.com/news/maritime/reuters" rel="noopener noreferrer" target="_blank">Reuters海運索引</a>。BEA於10/6發布名目額，7月有修訂；10/20船舶路由資訊屬有限供給背景，未核實新的總量恢復，未證實攻擊亦不列作產能損失。</li>
+<li><strong>S20｜中國與日本。</strong> <a href="https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261019_1965618.html" rel="noopener noreferrer" target="_blank">中國統計局</a>、<a href="https://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi260918.pdf" rel="noopener noreferrer" target="_blank">BOJ意見摘要</a>、<a href="https://www.marketscreener.com/news/boj-to-raise-rates-to-1-50-in-december-sticking-to-quarterly-pace-ce785cd8dc8df121" rel="noopener noreferrer" target="_blank">Reuters新調查</a>、<a href="https://kfgo.com/2026/09/09/boj-to-raise-rates-to-1-25-this-month-reach-1-75-faster-than-expected-reuters-poll/" rel="noopener noreferrer" target="_blank">前次調查</a>、<a href="https://indexes.nikkei.co.jp/nkave/archives/data/" rel="noopener noreferrer" target="_blank">日經歷史</a>。中國10/19發布；BOJ摘要為9月會議，新調查22:07發布，直讀失敗但完整索引可核驗。</li>
+<li><strong>S21｜台積電與半導體產業。</strong> <a href="https://investor.tsmc.com/english/quarterly-results/2026/q3" rel="noopener noreferrer" target="_blank">台積電第三季結果</a>、<a href="https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/f83780000ddc0c3b48e57a87eab6814c4ab35058/3Q26%20ManagementReport.pdf" rel="noopener noreferrer" target="_blank">管理報告</a>、<a href="https://www.wsts.org/76/Global-Semiconductor-Market-records-exceptional-growth-in-Q2-2026" rel="noopener noreferrer" target="_blank">WSTS</a>、<a href="https://www.semi.org/en/taxonomy/term/45726" rel="noopener noreferrer" target="_blank">SEMI</a>。台積電10/15、WSTS上半年統計；SEMI為預測且發布時鐘未露，不列小時觸發。</li>
+<li><strong>S22｜台灣外需與產出。</strong> <a href="https://www.moea.gov.tw/MNS/english/news/News.aspx?kind=6&amp;menu_id=176&amp;news_id=124304" rel="noopener noreferrer" target="_blank">經濟部9月外銷訂單</a>、<a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">中央社訂單報導</a>、<a href="https://www.moea.gov.tw/Mns/dos_e/home/Home.aspx" rel="noopener noreferrer" target="_blank">經濟部統計</a>。訂單10/20 08:00發布、中央社10:01；原始頁以索引核驗。8月工業生產與9月實際出口是不同統計期與定義。</li>
+<li><strong>S23｜韓國與記憶體。</strong> <a href="https://english.motir.go.kr/eng/article/EATCLdfa319ada/2743/view" rel="noopener noreferrer" target="_blank">韓國9月出口</a>、<a href="https://www.trendforce.com/price/dram/lpddr_spot" rel="noopener noreferrer" target="_blank">TrendForce日評價</a>。韓國10/1發布；記憶體10/20 10:10 UTC評價，不是小時即時價格。品項分化與行動需求弱勢保留為反證。</li>
+<li><strong>S24｜台灣市場固定層。</strong> <a href="https://www.cbc.gov.tw/tw/lp-645-1-1-60.html" rel="noopener noreferrer" target="_blank">央行匯率</a>、<a href="https://www.taifex.com.tw/cht/3/futContractsDate?doQuery=1&amp;queryType=1" rel="noopener noreferrer" target="_blank">TAIFEX</a>、<a href="https://www.twse.com.tw/zh/trading/historical/mi-index.html" rel="noopener noreferrer" target="_blank">TWSE市場統計</a>、<a href="https://tw.stock.yahoo.com/news/%E5%A4%96%E8%B3%87%E9%80%A310%E8%B3%A3%E5%8F%B0%E8%82%A1-%E4%BB%8A%E5%B9%B4%E7%B4%AF%E8%A8%88%E8%B3%A3%E8%B6%85%E8%A6%8F%E6%A8%A1%E9%80%BE2-1%E5%85%86%E5%85%83-084835196.html/" rel="noopener noreferrer" target="_blank">中央社外資報導轉載</a>、<a href="https://www.twse.com.tw/exchangeReport/MI_INDEX?date=%25s&amp;response=html&amp;type=ALLBUT0999" rel="noopener noreferrer" target="_blank">TWSE類股與現貨當日表</a>、<a href="https://stockanalysis.com/stocks/tsm/" rel="noopener noreferrer" target="_blank">台積電ADR</a>。台灣資料均為10/20，當日表明示115年10月20日；外資總額取中央社，廣度用股票口徑。ADR盤後22:36，與台灣收盤不同步；未平倉、交易淨額亦分開。</li>
+</ol>
+<p><strong>研究限制。</strong> 天然氣合格現值、即時跨幣種基差、期限溢酬、部分亞洲指數與最新 NDC 指標未取得；美債、黃金及日圓缺窗內新觀測。這些空缺限制「全面改善／全面惡化」的結論，並非可用零變動替代。</p>
+<p>公司估計未審計、盤後量能限制及資料不同時鐘，亦限制事件歸因。來源直接讀取失敗不等於資料必定不存在；可讀索引、同源轉載與獨立核驗的層級已分開，不將來源數量誤算成獨立證據廣度。</p>
+<h2 id="section-結論-bottom-line">結論（BOTTOM LINE）</h2>
+<blockquote class="callout">
+<p>本輪應提高對AI硬體基本面韌性的評價，而不是提高對全球市場已解除警報的信心。單一改善訊號成立；TACTICAL與YELLOW維持不變。</p>
+</blockquote>
+<p>接下來最有價值的確認，不是再找一檔同向上漲的股票，而是正式財報的現金轉換、同業與台廠實際接單，以及正常交易中的相對強弱與資金流。這些證據決定本次正向增量能否由單季驚喜，延伸為可持續的基本面改善。</p>
+
+    </main>
+    <footer>
+      Global Macro Signal Report · 2026-10-21 07:12:56 · Generated Deterministically
+    </footer>
+  </div>
+</div>
+</body>
+</html>
