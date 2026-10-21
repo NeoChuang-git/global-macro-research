@@ -2704,6 +2704,22 @@
       "title": "Global Macro Early Warning｜SpaceX資本支出擴張，AI需求能見度改善但融資風險未解",
       "topic": null
     },
+    "MTW-20261021-0900-ai-power-delay": {
+      "coverage_end_taipei": "2026-10-21T09:00:00+08:00",
+      "coverage_start_taipei": "2026-10-21T08:00:00+08:00",
+      "generated_at_taipei": "2026-10-21T09:21:56+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-21_0900_ai-power-delay.html",
+      "html_sha256": "2467cdd211a7622b6a2e942f0c547764de5a3fc81d5d2fc0ee047073d06b9cba",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-21_0900_ai-power-delay.md",
+      "markdown_sha256": "47bab1d07824895ee7ea418832e4e776de0b4a280ad0ca350157d9abd3a9e9ad",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261021-0900-ai-power-delay",
+      "slug": "ai-power-delay",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜NEXTDC電力延誤拖累指引，AI投資轉為營收的風險浮現",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
