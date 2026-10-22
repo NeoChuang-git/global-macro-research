@@ -2768,6 +2768,22 @@
       "title": "Global Macro Early Warning｜台股收盤確認科技去風險，金融撐盤仍不足證明全面危機",
       "topic": null
     },
+    "MTW-20261022-1600-foreign-flow-confirmation": {
+      "coverage_end_taipei": "2026-10-22T16:00:00+08:00",
+      "coverage_start_taipei": "2026-10-22T15:00:00+08:00",
+      "generated_at_taipei": "2026-10-22T16:10:03+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-22_1600_foreign-flow-confirmation.html",
+      "html_sha256": "6c400e25195f646475b3ff142b26799cf6e784fcdfc9bc2090d66002ea577d2e",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-22_1600_foreign-flow-confirmation.md",
+      "markdown_sha256": "4d056ca0e52c42f278cd5a29e39b845a9e6bc3d3c16213c502cee3c644c6019d",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261022-1600-foreign-flow-confirmation",
+      "slug": "foreign-flow-confirmation",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜外資現貨轉大賣、期貨淨空增加，台灣去風險取得籌碼確認",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
