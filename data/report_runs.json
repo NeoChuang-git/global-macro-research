@@ -800,6 +800,22 @@
       "title": "Global Daily Brief｜SMCI營收與毛利率雙上修，AI硬體盤後重新定價",
       "topic": null
     },
+    "GDB-20261022-0730": {
+      "coverage_end_taipei": "2026-10-22T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-21T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-22T07:46:00+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-22.html",
+      "html_sha256": "d2da3915d783e41ee2707acc47b500c6a435a64740a575c0dbe23ad911c1a561",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-22.md",
+      "markdown_sha256": "62ccb2a870cac24c3a3098056d7004ff1d6e7cf0c1156a69c1f5903f2c4da053",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261022-0730",
+      "slug": "ai-cashflow-legal-risk",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Meta提高AI支出下限，現金流與250億美元判決形成雙重考驗",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
