@@ -2784,6 +2784,22 @@
       "title": "Global Macro Early Warning｜外資現貨轉大賣、期貨淨空增加，台灣去風險取得籌碼確認",
       "topic": null
     },
+    "MTW-20261022-2300-us-chip-selloff": {
+      "coverage_end_taipei": "2026-10-22T23:00:00+08:00",
+      "coverage_start_taipei": "2026-10-22T22:00:00+08:00",
+      "generated_at_taipei": "2026-10-22T23:21:21+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-22_2300_us-chip-selloff.html",
+      "html_sha256": "628bcf4c8638e728866fd6f9ef9e65d5661748f65cc554740b80b08016db29b7",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-22_2300_us-chip-selloff.md",
+      "markdown_sha256": "ecda4cbf4cffa3d754b8084bfac81bb6fb6510ff87daae881a764eb2f5d81b98",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261022-2300-us-chip-selloff",
+      "slug": "us-chip-selloff",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美國晶片股開盤後續跌，台灣科技估值壓力獲現貨確認",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",

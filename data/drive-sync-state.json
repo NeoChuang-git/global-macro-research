@@ -1935,6 +1935,15 @@
       "sha256": "a8d667f3a77dc9c4347ca6c4d9e70230a7d83cb046e5cfb1155fe383eb0eb9f0",
       "size": 26870
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-22_2300_us-chip-selloff.md": {
+      "category": "early-warning",
+      "drive_file_id": "1GebfkwX_yQiH3no2s4Qa2_5V0d7os8ty",
+      "md5_checksum": "163072510542534cfd57d58ea4889b55",
+      "modified_time": "2026-10-22T15:24:40.876Z",
+      "name": "Global_Macro_Early_Warning_2026-10-22_2300_us-chip-selloff.md",
+      "sha256": "3288bd2efe02be3f0135f54d7f50b93871af56b9325b729992f77fa90c64a359",
+      "size": 31231
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
