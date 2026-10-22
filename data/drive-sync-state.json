@@ -1944,6 +1944,15 @@
       "sha256": "3288bd2efe02be3f0135f54d7f50b93871af56b9325b729992f77fa90c64a359",
       "size": 31231
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-23_0400_chip-pressure-persistence.md": {
+      "category": "early-warning",
+      "drive_file_id": "1xzs9pVscbcq9yT4EtXjcYvtZvKJZOTB_",
+      "md5_checksum": "2a1d634e0faa809dfeeb1487d9992178",
+      "modified_time": "2026-10-22T20:15:56.954Z",
+      "name": "Global_Macro_Early_Warning_2026-10-23_0400_chip-pressure-persistence.md",
+      "sha256": "2b59a37d4c1e49120198571738589b0a9c0d992fd9e3ccbabbdfa1117b82a2c9",
+      "size": 34572
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",

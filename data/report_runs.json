@@ -2800,6 +2800,22 @@
       "title": "Global Macro Early Warning｜美國晶片股開盤後續跌，台灣科技估值壓力獲現貨確認",
       "topic": null
     },
+    "MTW-20261023-0400-chip-pressure-persistence": {
+      "coverage_end_taipei": "2026-10-23T04:06:01+08:00",
+      "coverage_start_taipei": "2026-10-23T03:00:00+08:00",
+      "generated_at_taipei": "2026-10-23T04:13:26.397917+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-23_0400_chip-pressure-persistence.html",
+      "html_sha256": "208674cda5f423b855632aaf63084253288267edcb5f05b0c39c61f956d08d51",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-23_0400_chip-pressure-persistence.md",
+      "markdown_sha256": "1c88c15113eed8c8d17b942d56d11584ce06411ba1b50c61e83e1481f5ce4c4f",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261023-0400-chip-pressure-persistence",
+      "slug": "chip-pressure-persistence",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜晶片股弱勢延伸至交易尾段，估值壓力獲持續性確認",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
