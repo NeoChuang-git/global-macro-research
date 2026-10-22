@@ -2736,6 +2736,22 @@
       "title": "Global Macro Early Warning｜NEXTDC電力延誤拖累指引，AI投資轉為營收的風險浮現",
       "topic": null
     },
+    "MTW-20261022-1400-asia-tech-derating": {
+      "coverage_end_taipei": "2026-10-22T14:00:00+08:00",
+      "coverage_start_taipei": "2026-10-22T13:00:00+08:00",
+      "generated_at_taipei": "2026-10-22T14:07:08+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-22_1400_asia-tech-derating.html",
+      "html_sha256": "ba91448c2cdcba2402fa8a760d02cd6101d9749841b577f43c0d5651244edb76",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-22_1400_asia-tech-derating.md",
+      "markdown_sha256": "5c24328eccfbdce21fe6613d60dc0848a0846db4017f36508906f44784e7a965",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261022-1400-asia-tech-derating",
+      "slug": "asia-tech-derating",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜亞洲科技股相對弱勢擴散，台幣轉弱但未確認資金危機",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
