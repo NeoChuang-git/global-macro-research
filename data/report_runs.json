@@ -816,6 +816,22 @@
       "title": "Global Daily Brief｜Meta提高AI支出下限，現金流與250億美元判決形成雙重考驗",
       "topic": null
     },
+    "GDB-20261023-0730": {
+      "coverage_end_taipei": "2026-10-23T07:33:00+08:00",
+      "coverage_start_taipei": "2026-10-22T07:33:00+08:00",
+      "generated_at_taipei": "2026-10-23T07:47:45+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-23.html",
+      "html_sha256": "ba3e9069a9182d655259eb66895d7c1108d6598ce6b8ec6adb9182c9177d87d6",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-23.md",
+      "markdown_sha256": "f3f2325c5f4e683756d18ceefe47d2c37d80cb12346267ad929f763e255919c6",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261023-0730",
+      "slug": "meta-ai-cashflow-repricing",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Meta AI 現金負擔引發科技估值重估",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",

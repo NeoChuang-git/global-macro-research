@@ -486,6 +486,15 @@
       "sha256": "3e6ab7464b8f5bb12819c21b11a74bba426c1f431f784bef56d2e57030772678",
       "size": 26819
     },
+    "reports/daily/Global_Daily_Brief_2026-10-23.md": {
+      "category": "daily",
+      "drive_file_id": "1NtczfOXebFKAr4W5eJZupxhIpAr6DlSd",
+      "md5_checksum": "7592688b10a8444dc96a98332529bde1",
+      "modified_time": "2026-10-23T09:45:07.507Z",
+      "name": "Global_Daily_Brief_2026-10-23.md",
+      "sha256": "9927a695f56b05b21d698851b1225d02f14cf9a1ef4cb70843efb269d952eb63",
+      "size": 45829
+    },
     "reports/daily/Global_Macro_Morning_2026-08-25.html": {
       "category": "daily",
       "drive_file_id": "10dgWjdJhW-HwSZRp8tFbQ_wSDiQLIiWu",
