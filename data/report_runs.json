@@ -2832,6 +2832,22 @@
       "title": "Global Macro Early Warning｜晶片股弱勢延伸至交易尾段，估值壓力獲持續性確認",
       "topic": null
     },
+    "MTW-20261023-2300-price-passthrough": {
+      "coverage_end_taipei": "2026-10-23T23:03:25+08:00",
+      "coverage_start_taipei": "2026-10-23T22:00:00+08:00",
+      "generated_at_taipei": "2026-10-23T23:17:57+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-23_2300_price-passthrough.html",
+      "html_sha256": "26c493eac7cc21a4b2caaf470e3c08ceee2b0146c87c4c3867c17118beffd493",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-23_2300_price-passthrough.md",
+      "markdown_sha256": "8e69d6920def7009a09b1ec5c165b2096ec728adb7ef465f4936a679ba9d5204",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261023-2300-price-passthrough",
+      "slug": "price-passthrough",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美國企業售價升至四年高點，通膨轉嫁風險再獲確認",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
