@@ -2864,6 +2864,22 @@
       "title": "Global Macro Early Warning｜美國企業售價升至四年高點，通膨轉嫁風險再獲確認",
       "topic": null
     },
+    "MTW-20261024-2000-signal-review": {
+      "coverage_end_taipei": "2026-10-24T20:05:44.120344+08:00",
+      "coverage_start_taipei": "2026-10-24T19:00:00+08:00",
+      "generated_at_taipei": "2026-10-24T20:15:50+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-24_2000_signal-review.html",
+      "html_sha256": "5068b6bf49b57210938500608b088fc1fe5d6d05a67f01b430a1be67ffb5d27d",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-24_2000_signal-review.md",
+      "markdown_sha256": "fbe97887d764d7da140ae39c23a042b6bc85b1d141f8bc0af6dc3e7cae5795d8",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261024-2000-signal-review",
+      "slug": "signal-review",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜歐洲天然氣庫存不足獲季節性佐證，能源脆弱性升高",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
