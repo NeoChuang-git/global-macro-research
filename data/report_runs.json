@@ -832,6 +832,22 @@
       "title": "Global Daily Brief｜Meta AI 現金負擔引發科技估值重估",
       "topic": null
     },
+    "GDB-20261024-0730": {
+      "coverage_end_taipei": "2026-10-24T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-23T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-24T07:41:26+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-24.html",
+      "html_sha256": "dab5a18916617407f2ee0cc6f77a4a6eb6bc80cc7d1a7866c802a5b2565c6b42",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-24.md",
+      "markdown_sha256": "fb312d98fd0d37a431457261e314aa617ceb061670b2e43b60f0f185b9ed88c8",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261024-0730",
+      "slug": "wireless-cyber-repricing",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜SpaceX 建網傳聞首次完整定價，電信與鐵塔股分化",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
