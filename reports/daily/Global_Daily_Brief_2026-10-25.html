@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Daily Brief｜Starlink 恢復烏克蘭服務，科技股增量仍待驗證 · 2026-10-25 07:37:47</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --accent: #0284c7;
+  --accent-light: #e0f2fe;
+  --accent-glow: rgba(2, 132, 199, 0.08);
+
+  /* Callout Colors */
+  --callout-bg: #f8fafc;
+  --callout-thesis-border: #0284c7;
+  --callout-thesis-bg: #f0f9ff;
+  --callout-risk-border: #f97316;
+  --callout-risk-bg: #fff7ed;
+  --callout-strategy-border: #8b5cf6;
+  --callout-strategy-bg: #f5f3ff;
+  --callout-catalyst-border: #10b981;
+  --callout-catalyst-bg: #ecfdf5;
+
+  /* Card & Chips */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
+  --chip-border: #cbd5e1;
+
+  /* Risk Lights */
+  --risk-green-bg: #ecfdf5; --risk-green-text: #059669; --risk-green-border: #a7f3d0;
+  --risk-yellow-bg: #fefce8; --risk-yellow-text: #d97706; --risk-yellow-border: #fef08a;
+  --risk-orange-bg: #fff7ed; --risk-orange-text: #ea580c; --risk-orange-border: #fed7aa;
+  --risk-red-bg: #fef2f2; --risk-red-text: #dc2626; --risk-red-border: #fecaca;
+
+  /* Table */
+  --table-zebra: #f8fafc;
+  --table-hover: #f1f5f9;
+  --table-header-bg: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --bg-surface-raised: #334155;
+    --bg-surface-hover: #475569;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #334155;
+    --border-subtle: #475569;
+    --accent: #38bdf8;
+    --accent-light: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.12);
+
+    --callout-bg: #1e293b;
+    --callout-thesis-border: #38bdf8;
+    --callout-thesis-bg: rgba(56, 189, 248, 0.08);
+    --callout-risk-border: #fb923c;
+    --callout-risk-bg: rgba(249, 115, 22, 0.08);
+    --callout-strategy-border: #a78bfa;
+    --callout-strategy-bg: rgba(167, 139, 250, 0.08);
+    --callout-catalyst-border: #34d399;
+    --callout-catalyst-bg: rgba(52, 211, 153, 0.08);
+
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --chip-bg: #334155;
+    --chip-text: #cbd5e1;
+    --chip-border: #475569;
+
+    --risk-green-bg: rgba(16, 185, 129, 0.15); --risk-green-text: #34d399; --risk-green-border: rgba(16, 185, 129, 0.3);
+    --risk-yellow-bg: rgba(245, 158, 11, 0.15); --risk-yellow-text: #fbbf24; --risk-yellow-border: rgba(245, 158, 11, 0.3);
+    --risk-orange-bg: rgba(249, 115, 22, 0.15); --risk-orange-text: #fb923c; --risk-orange-border: rgba(249, 115, 22, 0.3);
+    --risk-red-bg: rgba(239, 68, 68, 0.15); --risk-red-text: #f87171; --risk-red-border: rgba(239, 68, 68, 0.3);
+
+    --table-zebra: rgba(255, 255, 255, 0.02);
+    --table-hover: rgba(56, 189, 248, 0.06);
+    --table-header-bg: #334155;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 17px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+/* Layout Containers: Narrative & Content Presentation */
+.report-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  position: relative;
+}
+
+.report-narrative {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Content Presentation */
+.wide-content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Typography & Headings */
+.report-narrative p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 100%;
+}
+
+ul, ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
+}
+
+/* Callouts */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.35rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--callout-bg);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.callout p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.callout-thesis {
+  border-left-color: var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.callout-risk {
+  border-left-color: var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.callout-strategy {
+  border-left-color: var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.callout-catalyst {
+  border-left-color: var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Analysis Cards */
+.analysis-card {
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.analysis-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Meta Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  line-height: 1.35;
+}
+
+.chip-score {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.chip-evidence, .chip-confidence, .chip-severity, .chip-persistence {
+  color: var(--text-secondary);
+}
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.direction-up { color: #0284c7; }
+.direction-down { color: #7c3aed; }
+.direction-improving { color: #059669; }
+.direction-worsening { color: #dc2626; }
+.direction-flat { color: var(--text-secondary); }
+
+/* Risk Lights */
+.risk-chip, .risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.risk-green { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.risk-yellow { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.risk-orange { background: var(--risk-orange-bg); color: var(--risk-orange-text); border: 1px solid var(--risk-orange-border); }
+.risk-red { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* State Transitions */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.state-prior { color: var(--text-secondary); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  text-align: left;
+  min-width: 680px;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--text-primary);
+  font-weight: 650;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+td {
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Only the three approved two-column Weekly tables fit the narrow viewport. */
+.weekly-local-table {
+  min-width: 0;
+}
+
+.weekly-local-table th,
+.weekly-local-table td {
+  overflow-wrap: anywhere;
+}
+
+.weekly-local-table th {
+  white-space: normal;
+}
+
+.weekly-local-table th:first-child {
+  width: 40%;
+}
+
+/* Executive Summary Grid */
+.executive-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 0;
+}
+
+.executive-points > li {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .executive-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.badge-grade-B { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent); }
+.badge-grade-C { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.badge-grade-D { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(2, 132, 199, 0.4);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+    font-size: 16px;
+  }
+  .report-narrative p {
+    font-size: 16px;
+  }
+  h1.hero-title { font-size: 1.45rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  h4 { font-size: 1rem; }
+  .analysis-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="report-container">
+  <div class="report-narrative">
+    
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">GLOBAL_DAILY_BRIEF</span>
+      <span class="risk-chip risk-yellow">🟡 Risk: YELLOW</span>
+      
+    </div>
+    <div class="hero-run-id">RUN_ID: <code>GDB-20261025-0730</code></div>
+  </div>
+  <h1 class="hero-title">Global Daily Brief｜Starlink 恢復烏克蘭服務，科技股增量仍待驗證</h1>
+  <div class="hero-meta-row">
+    <span class="hero-chip">發布時間：2026-10-25 07:37:47</span>
+    <span class="hero-chip hero-chip-cov">涵蓋：2026-10-24 07:30:00 ~ 2026-10-25 07:30:00</span>
+  </div>
+</header>
+
+    <main class="report-content">
+      
+<h2 id="section-執行摘要-executive-summary">執行摘要（EXECUTIVE SUMMARY）</h2>
+<blockquote class="callout">
+<p>本窗沒有足以進入主要排行的已核驗新事件，不補滿三則。Starlink 恢復是營運更新，台灣稀土目標是遠期規劃；兩者都尚未證明科技公司的新增現金流。</p>
+</blockquote>
+<ul class="executive-points">
+<li><strong>恢復不等於成長：</strong> 烏克蘭官方確認 Starlink／Starshield 恢復此前受限運作，但未公布新增訂單（Order）、營收（Revenue）或補償金額。服務治理風險仍需另行驗證。</li>
+<li><strong>週末反應尚未形成：</strong> 截止時美股休市（CLOSED）。週五正常盤收盤全部早於本窗；少數窗內盤後報價也早於週六消息，不能當作事件反應。</li>
+<li><strong>台灣先看落地條件：</strong> 稀土示範量產目標延伸至 2030 年，不能當成現有供給或台積電採購。近期判斷仍以客戶拉貨、毛利率（Gross Margin）與前瞻指引（Guidance）為準。</li>
+</ul>
+<p><strong>範圍與結論：</strong> 台北時間 10 月 24 日 07:30 至 25 日 07:30。風險燈號為 YELLOW：新事件的財務傳導與市場定價（Market Pricing）均待驗證；沒有重大新消息，不代表風險已降低。</p>
+<p><strong>時間邊界：</strong> 窗口起點對應美東週五 19:30，僅前半小時與盤後交易重疊，其餘為週末。依一般交易時段，下一個美股正常盤預定為台北 10 月 26 日 21:30。<a href="https://www.nasdaq.com/market-activity/stock-market-holiday-schedule" rel="noopener noreferrer" target="_blank">Nasdaq 交易時段</a></p>
+<h2 id="section-今日三大市場訊號-today-top-3-market-signals">今日三大市場訊號（TODAY TOP 3 MARKET SIGNALS）</h2>
+<p>本日保留兩項有證據支持的訊號，不為固定章名創造第三項。它們是研究結論與定價背景，不是兩個已確認的高影響催化劑。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>訊號</th>
+<th>已觀察事實</th>
+<th>對美股／風險環境的含義</th>
+<th>下一驗證</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>營運修復尚未轉成財務增量</td>
+<td>烏克蘭官方稱恢復受限連線；未公布新採購</td>
+<td>局部營運風險改善，但不足上修整體科技盈利</td>
+<td>服務持續性、採購及成本變更</td>
+</tr>
+<tr>
+<td>折現率背景仍有約束，週末缺乏新定價</td>
+<td>週五實質殖利率上升；本窗新消息後沒有正常盤</td>
+<td>既有估值（Valuation）壓力未解除；不能宣稱週末風險環境再惡化</td>
+<td>首個流動交易時段與公司財務指引</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>淨判斷：</strong> 服務恢復對局部可靠性有利，卻不足抵銷既有資金成本約束，也不足改判美股風險環境全面改善。這是條件式推論，不是已觀察到的資金流向或估值重估。</p>
+<h2 id="section-市場影響力前三大事件-top-3-market-impact-events">市場影響力前三大事件（TOP 3 MARKET IMPACT EVENTS）</h2>
+<p><strong>本窗主榜留白。</strong> 研究未找到同時符合時間、來源品質與重要性門檻的核心事件。Starlink 與 Railway 為非排名觀察，沒有評分；台灣稀土計畫雖作候選評估，但 45 分未達 50 分門檻。</p>
+<p><strong>評分規則：</strong> 僅對合格研究候選比較影響幅度 25、涵蓋廣度 20、基本面 20、估值傳導 15、持續性 10、台灣外溢 10，總分 100。分數不是成功機率；低於 50 分不進主榜，也不替非候選補分。</p>
+<h3 id="section-觀察焦點-starlink-恢復受限運作-仍須確認服務治理">觀察焦點｜Starlink 恢復受限運作，仍須確認服務治理</h3>
+<p><strong>性質：</strong> 非排名營運更新；不計分。官方與獨立媒體的可讀索引支持恢復說法，但部分全文不可得，證據不能延伸成所有區域、所有終端均已完成服務水準驗收。</p>
+<h4>發生什麼、何時發生</h4>
+<p><strong>已確認事實（FACT）：</strong> 烏克蘭國防部表示，Starlink／Starshield 已恢復此前受限的運作，可在移動速度超過每小時 400 公里時維持連線。這是終端移動速度，不是資料傳輸速率。<a href="https://mod.gov.ua/en/news/starlink-and-starshield-speed-restored-in-ukraine" rel="noopener noreferrer" target="_blank">國防部公告</a></p>
+<p><strong>時間與當日增量：</strong> 官方公告為 10 月 24 日 12:18（UTC+3），即台北 17:18；本窗新增資訊是恢復確認，不是新採購或首次發生中斷。Reuters 當日另報導恢復情況。<a href="https://theprint.in/world/starlink-in-ukraine-back-to-normal-after-week-of-throttling/3080644/" rel="noopener noreferrer" target="_blank">Reuters／ThePrint</a></p>
+<p><strong>為何現在重要：</strong> 先前限制讓服務可控性成為主權客戶的營運議題。恢復降低當下中斷風險，但是否修改限制政策、契約保障或備援安排，尚無可量化的新證據。</p>
+<p><strong>市場預期：</strong> 未取得市場共識、分析師財務修正或新增合約金額。可確認的差異是「受限轉為官方稱恢復」，不能稱為超預期成長，也不能據此上修每股盈餘（EPS）。</p>
+<h4>基本面與估值如何傳導</h4>
+<p><strong>基本面推論（INFERENCE）：</strong> 若恢復持續，可減少交付中斷與客戶維運負擔；但目前沒有補償、退訂或採購增減的量化資料。服務設定恢復本身不必增加資本支出（CapEx）或硬體量。</p>
+<p><strong>估值與相關標的：</strong> 直接觀察對象為 SpaceX（SPCX）與衛星通信服務業。可靠性改善可能降低治理折價，限制政策的不確定性也可能使折價持續；兩者尚未量化。TSLA 不是此合約的直接受益標的。</p>
+<p><strong>評分理由：</strong> 恢復具有營運重要性，卻欠缺科技股新增盈利、成本與台灣訂單證據，因此不列排名候選，也不給出看似精確的影響分數。上市身分可由 <a href="https://content.spacex.com/cms-assets/FINAL_Documents%20and%20Updates/SpaceX_PricingAnnouncement.pdf?embed=true" rel="noopener noreferrer" target="_blank">SpaceX 官方文件</a> 與現有行情交叉核對。</p>
+<h4>市場反應與是否已定價</h4>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>SPCX 報價</th>
+<th>相對基準</th>
+<th>台北時間</th>
+<th>與恢復消息的關係</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>147.49 美元</td>
+<td><span class="direction direction-up">↑ 上升</span>1.89%，對前一正常盤收盤</td>
+<td>10 月 24 日 04:00</td>
+<td>窗前正常盤，不是本事件反應</td>
+</tr>
+<tr>
+<td>147.58 美元</td>
+<td><span class="direction direction-up">↑ 上升</span>0.06%，對當日正常盤收盤</td>
+<td>10 月 24 日 07:59</td>
+<td>在本窗內，但早於 17:18 官方恢復公告</td>
+</tr>
+</tbody>
+</table></div>
+<p><a href="https://stockanalysis.com/stocks/spcx/history/" rel="noopener noreferrer" target="_blank">StockAnalysis 歷史行情</a>、<a href="https://www.marketbeat.com/stocks/NASDAQ/SPCX/chart/" rel="noopener noreferrer" target="_blank">MarketBeat 行情</a>。價格反應為「待市場驗證」；是否充分定價未知。兩筆漲幅的基準不同，不相加，也不把消息前報價歸因消息後的恢復。</p>
+<h4>反向證據與台灣外溢</h4>
+<p><strong>反向證據：</strong> CNN 報導週六上午 Donetsk 部分使用者仍受每小時 160 公里限制，之後才有較晚的恢復確認。時序與地區差異意味不能宣稱所有終端均已完全解除限制。<a href="https://kesq.com/news/national-world/cnn-world/2026/10/24/trump-claims-musk-restored-starshield-access-but-ukrainians-say-restrictions-still-in-place/" rel="noopener noreferrer" target="_blank">CNN／KESQ</a></p>
+<p><strong>台灣傳導：</strong> 若主權客戶增加多供應商備援，數週至數月才可能出現終端、天線或網通設計變更，1–3 季再看出貨。尚無具名台灣新訂單；若只是恢復服務設定，就沒有新增硬體需求的必然鏈結。</p>
+<p><strong>下一催化與確認條件：</strong> 追蹤官方服務治理、採購、補償或服務水準契約變更，以及首個正常交易日的相對表現。只有可量化的現金流或成本變更，才足以提高財務重要性。</p>
+<p><strong>失效條件：</strong> 若服務持續恢復、契約與成本均未變，應維持低市場重要性；若再出現可核驗限制，才重估可靠性風險。單日股價上漲或其他公司的衛星題材熱度，都不構成訂單確認。</p>
+<h2 id="section-美國科技股策略-us-tech-strategy">美國科技股策略（US TECH STRATEGY）</h2>
+<blockquote class="callout">
+<p>先驗證消息能否改變現金流，再看首次可交易反應。週末沒有主榜事件，不是追價理由；週五價格也不能替週六消息提供因果證據。</p>
+</blockquote>
+<h3 id="section-最新已知定價背景-不是本窗新增反應">最新已知定價背景，不是本窗新增反應</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>指標</th>
+<th>最新可核驗觀察</th>
+<th>觀測日／口徑</th>
+<th>對科技股的用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S&amp;P 500／Nasdaq</td>
+<td><span class="direction direction-down">↓ 下降</span>0.52%／<span class="direction direction-down">↓ 下降</span>0.21%</td>
+<td>10 月 23 日正常盤收盤</td>
+<td>比較後續事件是否真正超越市場因素</td>
+</tr>
+<tr>
+<td>SOX</td>
+<td>10,779.46；<span class="direction direction-up">↑ 上升</span>0.44%</td>
+<td>10 月 23 日收盤</td>
+<td>前日仍跌 6.72%，小幅修復不是新需求證明</td>
+</tr>
+<tr>
+<td>美國 2 年／10 年債</td>
+<td>4.69%／5.00%，各 <span class="direction direction-up">↑ 上升</span>4bp</td>
+<td>10 月 23 日官方每日平價殖利率</td>
+<td>名目融資與折現成本背景</td>
+</tr>
+<tr>
+<td>美國 10 年實質殖利率</td>
+<td>2.66%，<span class="direction direction-up">↑ 上升</span>2bp</td>
+<td>10 月 23 日官方每日資料</td>
+<td>長久期盈利的估值約束</td>
+</tr>
+<tr>
+<td>VIX／MOVE</td>
+<td>19.45／103.31</td>
+<td>10 月 23 日；MOVE 為次級來源</td>
+<td>波動訊號不一致，不推論同步融資危機</td>
+</tr>
+<tr>
+<td>Brent／WTI</td>
+<td>116.72／103.27 美元</td>
+<td>10 月 23 日結算／期貨收盤</td>
+<td>能源成本與通膨壓力背景，非週末成交</td>
+</tr>
+</tbody>
+</table></div>
+<p>股指見 <a href="https://apnews.com/article/e07c72bc5cbe5dffe352ddf30054e35f" rel="noopener noreferrer" target="_blank">AP 收盤報導</a>、<a href="https://fred.stlouisfed.org/series/NASDAQSOX" rel="noopener noreferrer" target="_blank">FRED SOX</a>；利率見 <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;field_tdr_date_value_month=202610&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">美國財政部名目殖利率</a> 與 <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;field_tdr_date_value_month=202610&amp;type=daily_treasury_real_yield_curve" rel="noopener noreferrer" target="_blank">實質殖利率</a>。</p>
+<p>波動見 <a href="https://www.cboe.com/delayed_quotes/vix/quote_table/" rel="noopener noreferrer" target="_blank">Cboe VIX</a>、<a href="https://streetstats.finance/markets/volatility" rel="noopener noreferrer" target="_blank">StreetStats</a>；油價見 <a href="https://apnews.com/article/7b47ef3b037bfba4e34f685329b9b963" rel="noopener noreferrer" target="_blank">AP</a>、<a href="https://www.kiplinger.com/investing/stocks/dow-drops-652-points-as-oil-treasury-yields-rise-stock-market-today" rel="noopener noreferrer" target="_blank">Kiplinger</a>。表內均為週五交易日的既有定價背景；部分次級來源更新時點不明，均不得當成本窗週六事件後反應。</p>
+<ul>
+<li><strong>比較相對反應：</strong> 下一正常盤先比較個股與 Nasdaq／SOX，而非只看絕對漲跌；同時確認消息發布後才形成的成交。未有財務增量時，相對強勢仍可能只是輪動。</li>
+<li><strong>把財報變成驗證點：</strong> 近期關注 Cadence、Celestica 與 F5 的需求、交付、毛利與現金流。訂單簿、產能預訂與合作公告，不等於同期間已確認收入。</li>
+<li><strong>不由營運事件外推硬體週期：</strong> 服務恢復、金鑰輪替與短時錯誤，不直接證明 GPU、HBM 或伺服器需求上修。反之，沒有新事故也不能排除既有資金回收壓力。</li>
+</ul>
+<h2 id="section-台灣-ai-半導體-記憶體-伺服器影響">台灣 AI／半導體／記憶體／伺服器影響</h2>
+<h3 id="section-稀土在地化目標值得追蹤-但不是當期產能">稀土在地化目標值得追蹤，但不是當期產能</h3>
+<p><strong>事實與時點：</strong> CNA 10 月 24 日 08:53 的專訪，以及公視同日 19:21 的官員訪問，說明 2030 年底年產 500 噸稀土氧化物、滿足約半數內需的示範量產目標。<a href="https://www.cna.com.tw/news/afe/202610240025.aspx" rel="noopener noreferrer" target="_blank">CNA</a>、<a href="https://news.pts.org.tw/article/832808" rel="noopener noreferrer" target="_blank">公視</a></p>
+<p><strong>來源與預期差：</strong> 這是具名訪談中的規劃，未取得官方獨立公告、核定預算或商業客戶名單；訪談精確發生時間亦不可得。未核驗先前市場共識，不能稱為超預期供給。</p>
+<p><strong>為何重要：</strong> 稀土管制使設備零件的單一來源風險受到關注。若示範量產與客戶認證成功，長期可提高供應韌性；但 500 噸不是目前在產數量，也不是台積電採購或 CoWoS 產能。</p>
+<p><strong>候選評分 45／100，未入主榜：</strong> 幅度 8／25、廣度 9／20、基本面 9／20、估值傳導 3／15、持續性 8／10、台灣外溢 8／10。長期政策方向具價值，但落地多年、無合約與近期盈利增量，限制分數。</p>
+<p><strong>市場反應與定價：</strong> 首篇可核驗報導發布時，美股盤後已結束，台股亦為週末；價格反應待市場驗證，是否已定價未知。不用前一交易日台積電或設備股走勢歸因這項遠期規劃。</p>
+<p><strong>基本面與估值推論：</strong> 若原料、成本與認證均達標，設備、磁材等產業長期尾端風險可能下降；目前沒有可確認的上市受益個股，也沒有台積電收入或毛利上修依據。短期風險溢酬不會因遠期目標自動消失。</p>
+<p><strong>反證與時間：</strong> 純度、品項、成本、原料來源及資本投入仍不明，1–3 季不假設新增供給。確認條件為正式預算、選址、客戶認證及實際產量；若延期、缺少所需品項或原料仍單一來源，韌性改善假說應下修。</p>
+<h3 id="section-供應鏈傳導要經過哪些關卡">供應鏈傳導要經過哪些關卡</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>環節</th>
+<th>可成立的條件式機制</th>
+<th>觀察期間</th>
+<th>必要確認／主要反證</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>晶圓代工、先進製程</td>
+<td>客戶實際拉貨改變產能利用</td>
+<td>數週至數月／1–3 季</td>
+<td>新訂單與交付；本窗未核驗需求上修</td>
+</tr>
+<tr>
+<td>CoWoS、先進封裝（Advanced Packaging）</td>
+<td>新加速器採購轉成封裝需求</td>
+<td>1–3 季</td>
+<td>客戶採購與瓶頸解除；不能由稀土目標推導</td>
+</tr>
+<tr>
+<td>HBM／DRAM／NAND</td>
+<td>各產品需求、庫存（Inventory）與價格共同變化</td>
+<td>數週至數月／1–3 季</td>
+<td>合約價與拉貨；不可把 NAND 與 HBM 混為同一週期</td>
+</tr>
+<tr>
+<td>伺服器 ODM、PCB／CCL</td>
+<td>平台投資落實為交付與產品組合</td>
+<td>數週至數月／1–3 季</td>
+<td>訂單、毛利與應收款；預訂不等於收入</td>
+</tr>
+<tr>
+<td>散熱、電源、網通、光通訊</td>
+<td>機櫃配置或備援設計增加物料需求</td>
+<td>數週至數月／1–3 季</td>
+<td>設計導入及採購；服務設定恢復可能不需新硬體</td>
+</tr>
+<tr>
+<td>資料中心（Data Center）、雲端</td>
+<td>資本支出轉成可收費容量與利用率</td>
+<td>1–3 季以上</td>
+<td>投資、啟用、用量與現金流；不能只看建置金額</td>
+</tr>
+<tr>
+<td>出口管制、設備材料</td>
+<td>多來源與在地化降低供應中斷風險</td>
+<td>長期；本案至 2030 年</td>
+<td>可用品項、來源與認證；計畫不是已解除管制</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>匯率與估值：</strong> 央行最新可核驗美元兌台幣觀測仍為 10 月 22 日 32.508，不是週末新報價。美元、實質利率對估值與成本的影響，還須考慮各公司避險、幣別及定價權，不能一律映射為台股利多。<a href="https://www.cbc.gov.tw/tw/lp-645-1.html" rel="noopener noreferrer" target="_blank">央行資料</a></p>
+<h2 id="section-下一階段催化劑-next-catalysts">下一階段催化劑（NEXT CATALYSTS）</h2>
+<p>下表以本報截止後 72 小時，即台北 10 月 28 日 07:30 前為近期觀察窗。時間來自公司公告；財報結果與市場共識差尚未發生，不先寫成利多或利空。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>催化劑</th>
+<th>台北時間</th>
+<th>應確認的內容</th>
+<th>失效／降級條件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verizon 財報／電話會議</td>
+<td>10 月 26 日 19:00／20:30</td>
+<td>網路需求與資本配置，不當作 AI 盈利代理</td>
+<td>沒有新增投資或競爭策略變化</td>
+</tr>
+<tr>
+<td>Cadence 財報網路會議</td>
+<td>10 月 27 日 05:00</td>
+<td>設計活動、訂單與收入確認節奏</td>
+<td>強勁訂單未轉成指引或現金流</td>
+</tr>
+<tr>
+<td>Celestica 財報／電話會議</td>
+<td>10 月 27 日 04:00 後；確切發布分鐘未載／20:00</td>
+<td>AI、網通成長、毛利、營運資金與 2027 展望</td>
+<td>交付限制、客戶集中或資金占用抵銷成長</td>
+</tr>
+<tr>
+<td>F5 財報網路會議</td>
+<td>10 月 28 日 04:30</td>
+<td>安全與應用交付需求、部署及指引</td>
+<td>預算未轉成新增採購</td>
+</tr>
+</tbody>
+</table></div>
+<p>日期來源為 <a href="https://www.verizon.com/about/news/verizon-q3-2026-earnings-report-date" rel="noopener noreferrer" target="_blank">Verizon</a>、<a href="https://investor.cadence.com/news/news-details/2026/Cadence-Announces-Third-Quarter-2026-Financial-Results-Webcast/default.aspx" rel="noopener noreferrer" target="_blank">Cadence</a>、<a href="https://celestica.gcs-web.com/news-releases/news-release-details/celestica-hold-q3-2026-financial-results-and-2026-investor-and" rel="noopener noreferrer" target="_blank">Celestica</a>、<a href="https://www.f5.com/company/news/press-releases/f5-to-report-fourth-quarter-and-fiscal-year-2026-financial-results" rel="noopener noreferrer" target="_blank">F5</a>。F5 以官方 10 月 27 日美東盤後時程為準，不採次級行事曆的前一日日期。</p>
+<p><strong>未定日期的事件驗證：</strong> Starlink 的服務治理與採購變更、台灣稀土的正式預算及客戶認證，均須等新文件，不臆測發布日。若沒有財務條件改變，維持觀察而非升格為主要催化。</p>
+<p><strong>較後階段：</strong> Microsoft 為美國日期 10 月 28 日，Amazon 與 Intel 為 10 月 29 日，均在上述 72 小時窗外。應看雲端成長、投資回收與交付，而不是把排定財報當本窗新事件。<a href="https://www.microsoft.com/en-us/investor/default?DocType=Current&amp;SortOrder=Date+Ascending" rel="noopener noreferrer" target="_blank">Microsoft</a>、<a href="https://www.aboutamazon.com/news/company-news/amazon-earnings-q3-2026-report" rel="noopener noreferrer" target="_blank">Amazon</a>、<a href="https://www.intc.com/news-events/press-releases/detail/1782/intel-to-report-third-quarter-2026-financial-results" rel="noopener noreferrer" target="_blank">Intel</a></p>
+<h2 id="section-source-audit">SOURCE AUDIT</h2>
+<p><strong>研究範圍：</strong> 已完成必要 14 檔個股預檢，另檢查 INTC、ARM 及七個 AI／雲端平台；完整欄位留於內部研究物件，不把全為否定結果的長表搬入正文。事件搜尋涵蓋財報、產品、合作、併購、募資、政策、資安與服務中斷。</p>
+<p><strong>完成的含義：</strong> 研究流程與交叉檢查已完成，不代表每個來源全文均可讀，也不是「全市場沒有事件」的證明。讀取發生於截止後；正文只採用截止前已發布資訊，並區分原始事件、轉載與舊行情。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>來源／日期</th>
+<th>用途</th>
+<th>證據限制與處理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>烏克蘭國防部，10 月 24 日 12:18 UTC+3</td>
+<td>恢復受限運作與移動速度</td>
+<td>實質索引可讀，直接全文開啟不可得；不宣稱全區驗收</td>
+</tr>
+<tr>
+<td>Reuters／ThePrint、CNN／KESQ，10 月 24 日</td>
+<td>獨立報導與恢復前局部限制反證</td>
+<td>索引內容與不同時點並列，不把先前限制當作否定後來恢復</td>
+</tr>
+<tr>
+<td>CNA 08:53、公視 19:21，10 月 24 日台北</td>
+<td>稀土目標的兩次具名採訪</td>
+<td>全文開啟不可得；未取得官方獨立公告，不稱現有產能</td>
+</tr>
+<tr>
+<td>Railway 官方，10 月 24 日 13:57 UTC</td>
+<td>新替換金鑰遭預防性撤銷的說明</td>
+<td>官方明確否認新攻擊；狀態鏡像不是獨立調查</td>
+</tr>
+<tr>
+<td>美國財政部／FRED／AP，10 月 23 日觀測</td>
+<td>利率與股指定價背景</td>
+<td>全部早於窗口，不歸因本窗事件</td>
+</tr>
+<tr>
+<td>公司投資人關係公告</td>
+<td>近期財報時程</td>
+<td>是預定時程，不是已公布結果或獲利驚喜</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Railway 去誤讀：</strong> 本窗增量為金鑰撤銷處理的澄清，不是新入侵；官方稱先前攻擊者權限已移除，社群支援網站問題也不是整個建置／部署平台停擺。沒有量化上市公司財務影響，故不計分、不列主榜。<a href="https://status.railway.com/" rel="noopener noreferrer" target="_blank">Railway 官方狀態</a></p>
+<p><strong>平台低重要性更新：</strong> Claude 官方列出的短時錯誤已解決；未見可量化客戶流失、賠償或持續全平台影響。這些更新留作營運監測，不外推成 AWS／Azure 基礎設施中斷或新增硬體採購。<a href="https://status.claude.com/" rel="noopener noreferrer" target="_blank">Claude 官方狀態</a></p>
+<p><strong>邊界排除：</strong> 英國 AI 安全方案的 Reuters 原稿為 10 月 23 日 23:02 UTC，早於窗口 28 分鐘；AWS 容量訪談為 23:06 UTC，早 24 分鐘。不因台北日期或週末轉載重新列榜。<a href="https://uk.marketscreener.com/news/uk-government-sets-out-800-million-of-ai-security-funding-ce785cdfdc81f326" rel="noopener noreferrer" target="_blank">英國方案 Reuters</a>、<a href="https://www.investing.com/news/stock-market-news/amazon-cloud-capacity-sold-out-through-2027-ceo-jassy-says-4970506" rel="noopener noreferrer" target="_blank">AWS 訪談 Reuters</a></p>
+<p><strong>其他去重：</strong> NVIDIA／Dell 的既有擴充公告、Supermicro 新機櫃、Broadcom 合約、OpenAI 訓練恢復及 Amazon 單一園區撤案，均不因新評論而重列。未核驗的 Anthropic 上市文件傳聞、基準測試與台積電替代採購傳聞不作事實。</p>
+<p><strong>報價限制：</strong> TSM、DELL 部分來源收盤數字不一致，未採精確值；DXY 歷史表與頁首口徑不同，黃金亦有差異，不用於核心結論。MOVE 為次級資料且時區標示不清；SPCX 來源中的未來週六盤後標頭已排除。</p>
+<p><strong>存取限制：</strong> CNBC 原文遭 robots.txt 限制，Google Workspace 部分頁面轉向不可讀頁，未重試或繞過。國防部、CNA、公視等部分頁面僅可核驗搜尋索引；Micron 新聞列表回傳 404、AMD 列表讀取異常，未推論公司沒有公告。</p>
+<p><strong>不可得項目：</strong> 本窗新事件後的可歸因價格反應、量化市場共識差、Starlink 契約變更、稀土核定資本額與台灣具名新訂單均未取得。相關缺口以未知保留，不用推論補成事實。</p>
+<h2 id="section-免責聲明-disclaimer">免責聲明（DISCLAIMER）</h2>
+<p>本報為事件研究與情境分析，不是個人化投資建議或報酬保證。公開資料可能延遲或修訂；預定財報、遠期產能目標與供應鏈推論均不是確定結果。Markdown 僅核對原始內容與結構，不宣稱已驗證特定渲染器的顏色或版面。</p>
+
+    </main>
+    <footer>
+      Global Macro Signal Report · 2026-10-25 07:37:47 · Generated Deterministically
+    </footer>
+  </div>
+</div>
+</body>
+</html>
