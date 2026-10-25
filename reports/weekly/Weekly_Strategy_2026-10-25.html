@@ -1,0 +1,5400 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Global Macro &amp; Investment Strategy｜利率緩和未解能源壓力與科技股價分岔 · N/A</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --accent: #0284c7;
+  --accent-light: #e0f2fe;
+  --accent-glow: rgba(2, 132, 199, 0.08);
+
+  /* Callout Colors */
+  --callout-bg: #f8fafc;
+  --callout-thesis-border: #0284c7;
+  --callout-thesis-bg: #f0f9ff;
+  --callout-risk-border: #f97316;
+  --callout-risk-bg: #fff7ed;
+  --callout-strategy-border: #8b5cf6;
+  --callout-strategy-bg: #f5f3ff;
+  --callout-catalyst-border: #10b981;
+  --callout-catalyst-bg: #ecfdf5;
+
+  /* Card & Chips */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
+  --chip-border: #cbd5e1;
+
+  /* Risk Lights */
+  --risk-green-bg: #ecfdf5; --risk-green-text: #059669; --risk-green-border: #a7f3d0;
+  --risk-yellow-bg: #fefce8; --risk-yellow-text: #d97706; --risk-yellow-border: #fef08a;
+  --risk-orange-bg: #fff7ed; --risk-orange-text: #ea580c; --risk-orange-border: #fed7aa;
+  --risk-red-bg: #fef2f2; --risk-red-text: #dc2626; --risk-red-border: #fecaca;
+
+  /* Table */
+  --table-zebra: #f8fafc;
+  --table-hover: #f1f5f9;
+  --table-header-bg: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --bg-surface-raised: #334155;
+    --bg-surface-hover: #475569;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #334155;
+    --border-subtle: #475569;
+    --accent: #38bdf8;
+    --accent-light: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.12);
+
+    --callout-bg: #1e293b;
+    --callout-thesis-border: #38bdf8;
+    --callout-thesis-bg: rgba(56, 189, 248, 0.08);
+    --callout-risk-border: #fb923c;
+    --callout-risk-bg: rgba(249, 115, 22, 0.08);
+    --callout-strategy-border: #a78bfa;
+    --callout-strategy-bg: rgba(167, 139, 250, 0.08);
+    --callout-catalyst-border: #34d399;
+    --callout-catalyst-bg: rgba(52, 211, 153, 0.08);
+
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --chip-bg: #334155;
+    --chip-text: #cbd5e1;
+    --chip-border: #475569;
+
+    --risk-green-bg: rgba(16, 185, 129, 0.15); --risk-green-text: #34d399; --risk-green-border: rgba(16, 185, 129, 0.3);
+    --risk-yellow-bg: rgba(245, 158, 11, 0.15); --risk-yellow-text: #fbbf24; --risk-yellow-border: rgba(245, 158, 11, 0.3);
+    --risk-orange-bg: rgba(249, 115, 22, 0.15); --risk-orange-text: #fb923c; --risk-orange-border: rgba(249, 115, 22, 0.3);
+    --risk-red-bg: rgba(239, 68, 68, 0.15); --risk-red-text: #f87171; --risk-red-border: rgba(239, 68, 68, 0.3);
+
+    --table-zebra: rgba(255, 255, 255, 0.02);
+    --table-hover: rgba(56, 189, 248, 0.06);
+    --table-header-bg: #334155;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 17px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+/* Layout Containers: Narrative & Content Presentation */
+.report-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  position: relative;
+}
+
+.report-narrative {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Content Presentation */
+.wide-content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Typography & Headings */
+.report-narrative p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 100%;
+}
+
+ul, ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
+}
+
+/* Callouts */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.35rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--callout-bg);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.callout p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.callout-thesis {
+  border-left-color: var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.callout-risk {
+  border-left-color: var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.callout-strategy {
+  border-left-color: var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.callout-catalyst {
+  border-left-color: var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Analysis Cards */
+.analysis-card {
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.analysis-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Meta Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  line-height: 1.35;
+}
+
+.chip-score {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.chip-evidence, .chip-confidence, .chip-severity, .chip-persistence {
+  color: var(--text-secondary);
+}
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.direction-up { color: #0284c7; }
+.direction-down { color: #7c3aed; }
+.direction-improving { color: #059669; }
+.direction-worsening { color: #dc2626; }
+.direction-flat { color: var(--text-secondary); }
+
+/* Risk Lights */
+.risk-chip, .risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.risk-green { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.risk-yellow { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.risk-orange { background: var(--risk-orange-bg); color: var(--risk-orange-text); border: 1px solid var(--risk-orange-border); }
+.risk-red { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* State Transitions */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.state-prior { color: var(--text-secondary); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  text-align: left;
+  min-width: 680px;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--text-primary);
+  font-weight: 650;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+td {
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Only the three approved two-column Weekly tables fit the narrow viewport. */
+.weekly-local-table {
+  min-width: 0;
+}
+
+.weekly-local-table th,
+.weekly-local-table td {
+  overflow-wrap: anywhere;
+}
+
+.weekly-local-table th {
+  white-space: normal;
+}
+
+.weekly-local-table th:first-child {
+  width: 40%;
+}
+
+/* Executive Summary Grid */
+.executive-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 0;
+}
+
+.executive-points > li {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .executive-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.badge-grade-B { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent); }
+.badge-grade-C { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.badge-grade-D { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(2, 132, 199, 0.4);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+    font-size: 16px;
+  }
+  .report-narrative p {
+    font-size: 16px;
+  }
+  h1.hero-title { font-size: 1.45rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  h4 { font-size: 1rem; }
+  .analysis-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="report-container">
+  <div class="report-narrative">
+    
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">WEEKLY_STRATEGY</span>
+      <span class="risk-chip risk-yellow">🟡 Risk: YELLOW</span>
+      
+    </div>
+    <div class="hero-run-id">RUN_ID: <code>WEEKLY-Weekly_Strategy_2026-10-25</code></div>
+  </div>
+  <h1 class="hero-title">Weekly Global Macro &amp; Investment Strategy｜利率緩和未解能源壓力與科技股價分岔</h1>
+  <div class="hero-meta-row">
+    <span class="hero-chip">發布時間：N/A</span>
+    
+  </div>
+</header>
+
+    <main class="report-content">
+      
+<h2 id="section-本週策略摘要-executive-strategy-summary">本週策略摘要（Executive Strategy Summary）</h2>
+<p>利率緩和與企業成長尚未轉成股價確認，能源、信用及台灣資金壓力仍在。本週維持黃色燈號與分化框架，先驗證盈利、估值（Valuation）及資金的連接，不做全面抄底或全面避險的強結論。</p>
+<ul>
+<li><strong>本週變化：</strong> 美債殖利率（Yield）下降，科技股及信用表現卻較弱；四類能源週漲，成本壓力未解除。</li>
+<li><strong>主導情境：</strong> 黏性通膨權重維持 50%；四種情境合計 100%，屬分析者配置而非經驗證概率。</li>
+<li><strong>三大主題：</strong> AI 基本面與股價分岔、能源進口成本與政策緩衝、亞洲科技外需與內需分化。</li>
+<li><strong>研究與行動：</strong> 21 項標準訊號（Canonical Signal）、12 家族、5 檔篩選；行動狀態（Action State）全為 null，支持行動及有效價格估計皆為零。</li>
+<li><strong>下一驗證：</strong> 聯準會與核心物價、公司現金盈利、外資廣度及能源實體庫存（Inventory）；持續性分數（Persistence Score）不是買點或勝率。</li>
+</ul>
+<blockquote class="callout">
+<p>基本面改善不是買點，股價下跌也不是需求崩潰。必要因果尚未確認時，保留觀察（Watch），而不是補上一個行動（Action）。</p>
+</blockquote>
+<h2 id="section-每週儀表板-weekly-dashboard">每週儀表板（Weekly Dashboard）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>核心判斷</th>
+<th>上週</th>
+<th>本週</th>
+<th>決策含意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>風險燈號</td>
+<td><span class="risk risk-yellow">🟡</span></td>
+<td><span class="risk risk-yellow">🟡</span></td>
+<td>成本與資金風險未退，但未確認系統融資危機</td>
+</tr>
+<tr>
+<td>主導情境</td>
+<td>黏性通膨 50%</td>
+<td>黏性通膨 50%</td>
+<td>主觀情境權重；非實證概率</td>
+</tr>
+<tr>
+<td>研究與交易覆蓋</td>
+<td>上週五檔均 Watch</td>
+<td>5 檔篩選／0 支持行動／0 有效價格估計</td>
+<td>Action=null；不將 Watch 填作 Neutral</td>
+</tr>
+<tr>
+<td>資料完整度</td>
+<td>週報比較基準已核對</td>
+<td>21 訊號／12 家族；3 深度個股</td>
+<td>關鍵公司估值（Valuation）與資金彈性仍缺</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>週度證據</th>
+<th class="numeric">前值</th>
+<th class="numeric">最新值</th>
+<th>變化與解讀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美國 10 年期／實質 10 年期</td>
+<td class="numeric">5.09%／2.74%</td>
+<td class="numeric">5.00%／2.66%</td>
+<td><span class="direction direction-down">↓ 下降</span>9／8bp；折現率緩和</td>
+</tr>
+<tr>
+<td>高收益信用利差（Credit Spread）</td>
+<td class="numeric">3.31%</td>
+<td class="numeric">3.40%</td>
+<td><span class="direction direction-up">↑ 上升</span>9bp；信用風險溢酬惡化</td>
+</tr>
+<tr>
+<td>半導體指數 SOX</td>
+<td class="numeric">11,137.3</td>
+<td class="numeric">10,779.5</td>
+<td><span class="direction direction-down">↓ 下降</span>3.21%；盈利強不等於價格強</td>
+</tr>
+<tr>
+<td>能源 JKM／TTF</td>
+<td class="numeric">29.925／87.547</td>
+<td class="numeric">31.420／93.853</td>
+<td><span class="direction direction-up">↑ 上升</span>5.00%／7.20%；成本壓力增加</td>
+</tr>
+<tr>
+<td>美元兌台幣</td>
+<td class="numeric">32.338</td>
+<td class="numeric">32.508</td>
+<td><span class="direction direction-up">↑ 上升</span>0.53%；台幣貶值放大進口成本</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>三大主題</th>
+<th class="numeric">持續性分數</th>
+<th>最強證據</th>
+<th>最重要反證</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 基本面擴張、股價下跌</td>
+<td class="numeric">72.50</td>
+<td>設備獲利、台韓外需</td>
+<td>科技相對弱、公司倍數未核驗</td>
+</tr>
+<tr>
+<td>能源成本與台灣緩衝</td>
+<td class="numeric">66.50</td>
+<td>四能源同向、歐洲季節庫存（Inventory）缺口</td>
+<td>美債殖利率（Yield）下降、歐洲仍注氣</td>
+</tr>
+<tr>
+<td>亞洲科技外需與內需分化</td>
+<td class="numeric">68.67</td>
+<td>台灣製造與韓國出口</td>
+<td>服務信心、中國投資偏弱</td>
+</tr>
+</tbody>
+</table></div>
+<p>儀表板數字來源如下；報價是可比觀察值，不是同步即時行情。能源單位及合約在能源專節列明，價格變化箭頭只表示數值方向，改善或惡化另以文字說明。</p>
+<p><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a> <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;field_tdr_date_value_month=202610&amp;type=daily_treasury_real_yield_curve" rel="noopener noreferrer" target="_blank">M02</a> <a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" rel="noopener noreferrer" target="_blank">M13</a> <a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">M28</a> <a href="https://www.investing.com/commodities/lng-japan-korea-marker-platts-futures-historical-data" rel="noopener noreferrer" target="_blank">A22</a> <a href="https://www.investing.com/commodities/dutch-ttf-gas-c1-futures-historical-data" rel="noopener noreferrer" target="_blank">A23</a> <a href="https://www.cbc.gov.tw/tw/lp-645-1.html" rel="noopener noreferrer" target="_blank">A04</a></p>
+<h2 id="section-總體情境轉換-regime-transition">總體情境轉換（Regime Transition）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>情境</th>
+<th class="numeric">上週權重</th>
+<th class="numeric">本週權重</th>
+<th>支持證據</th>
+<th>反證／轉換門檻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>軟著陸 Soft Landing</td>
+<td class="numeric">25%</td>
+<td class="numeric">25%</td>
+<td>PMI 擴張、GDPNow 偏強、初領低</td>
+<td>實質需求須持續；通膨與信用限制上調</td>
+</tr>
+<tr>
+<td>黏性通膨 Sticky Inflation</td>
+<td class="numeric">50%</td>
+<td class="numeric">50%</td>
+<td>能源與家庭通膨預期上升</td>
+<td>利率及近端升息定價下降；等核心 PCE</td>
+</tr>
+<tr>
+<td>成長放慢 Growth Slowdown</td>
+<td class="numeric">20%</td>
+<td class="numeric">20%</td>
+<td>消費現況弱、信用擴大</td>
+<td>貸款量仍增；須見需求與就業同步轉弱</td>
+</tr>
+<tr>
+<td>融資壓力 Funding/Liquidity Stress</td>
+<td class="numeric">5%</td>
+<td class="numeric">5%</td>
+<td>財政現金吸收準備金、MOVE 上升</td>
+<td>SOFR=IORB；須見持續融資脫錨才升級</td>
+</tr>
+<tr>
+<td>合計</td>
+<td class="numeric">100%</td>
+<td class="numeric">100%</td>
+<td>無已確認的情境切換</td>
+<td>不因單一新聞重新配權</td>
+</tr>
+</tbody>
+</table></div>
+<p>上述權重為分析者情境配置，並非市場隱含概率或校準後預測。相較已核驗的上週報告，本週證據互相抵銷，故四項權重不變；降低近期升息定價，不足以抵銷能源與通膨預期的持續性。</p>
+<p>市場預期另有獨立口徑：十月二十八日升息二十五基點機率，由上週約三十一降至九個百分點。此為十月二十二日晚間市場定價（Market Pricing），既不是聯準會承諾，也不能與十二月前累計升息機率混為一談。</p>
+<p><a href="https://www.fhlbny.com/w/fi/msd/2026/261023" rel="noopener noreferrer" target="_blank">M15</a> <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm" rel="noopener noreferrer" target="_blank">M09</a> <a href="https://www.atlantafed.org/data/research-data" rel="noopener noreferrer" target="_blank">M16</a></p>
+<h2 id="section-二十一項標準訊號-weekly-macro-board">二十一項標準訊號（Weekly Macro Board）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>家族</th>
+<th class="numeric">標準訊號數</th>
+<th>涵蓋範圍</th>
+<th>本週狀態</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成長 Growth</td>
+<td class="numeric">1</td>
+<td>美國成長動能</td>
+<td>已覆蓋；缺值明示</td>
+</tr>
+<tr>
+<td>通膨 Inflation</td>
+<td class="numeric">1</td>
+<td>美國通膨動能</td>
+<td>已覆蓋；缺值明示</td>
+</tr>
+<tr>
+<td>勞動 Labor</td>
+<td class="numeric">1</td>
+<td>勞動市場降溫</td>
+<td>已覆蓋；缺值明示</td>
+</tr>
+<tr>
+<td>貨幣政策 Fed / Monetary Policy</td>
+<td class="numeric">1</td>
+<td>聯準會政策緊縮</td>
+<td>已覆蓋；缺值明示</td>
+</tr>
+<tr>
+<td>利率與期限溢酬（Term Premium） Rates / Term Premium</td>
+<td class="numeric">2</td>
+<td>利率衝擊、黃金與公債背離</td>
+<td>已覆蓋；缺值明示</td>
+</tr>
+<tr>
+<td>流動性（Liquidity） Liquidity / Market Plumbing</td>
+<td class="numeric">1</td>
+<td>美元流動性</td>
+<td>已覆蓋；缺值明示</td>
+</tr>
+<tr>
+<td>信用 Credit / Bank Credit</td>
+<td class="numeric">2</td>
+<td>信用週期、銀行信貸緊縮</td>
+<td>已覆蓋；缺值明示</td>
+</tr>
+<tr>
+<td>財政與公債 Fiscal / Treasury Supply</td>
+<td class="numeric">1</td>
+<td>國債供給壓力</td>
+<td>已覆蓋；缺值明示</td>
+</tr>
+<tr>
+<td>美元與外匯 FX / Global Dollar</td>
+<td class="numeric">1</td>
+<td>外匯融資壓力</td>
+<td>已覆蓋；缺值明示</td>
+</tr>
+<tr>
+<td>商品與成本 Commodities / Inflation Chain</td>
+<td class="numeric">1</td>
+<td>能源通膨</td>
+<td>已覆蓋；缺值明示</td>
+</tr>
+<tr>
+<td>貿易與供應鏈（Supply Chain） Global Trade / Supply Chain</td>
+<td class="numeric">1</td>
+<td>全球貿易週期</td>
+<td>已覆蓋；缺值明示</td>
+</tr>
+<tr>
+<td>中亞台週期 China / Asia / Taiwan Cycle</td>
+<td class="numeric">8</td>
+<td>半導體相對弱勢、AI 基本面週期（Fundamental Cycle）、記憶體週期、亞洲出口週期、中國週期、日本週期、台灣外資流向、台灣領先週期</td>
+<td>已覆蓋；缺值明示</td>
+</tr>
+</tbody>
+</table></div>
+<p>每個訊號的現值、前值與差額屬 FACT；共識欄屬 MARKET EXPECTATION；趨勢、因果、投資含意與門檻屬 INFERENCE。</p>
+<p>未取得共識、前值或修訂分布即保留 null，不把未查到修訂等同沒有修訂。</p>
+<h3 id="section-01-美國成長動能-us_growth_momentum">01 美國成長動能｜<code>us_growth_momentum</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10月綜合 PMI 57.6；Q3 GDPNow 3.5%；消費信心 48.0</td>
+<td>9月 PMI 58.4；信心 48.1；GDPNow 前值 null</td>
+<td>PMI <span class="direction direction-down">↓ 下降</span>0.8；信心 <span class="direction direction-down">↓ 下降</span>0.1；現況月減8.3%</td>
+<td>Q3 GDP 年化3.0%；GDPNow 是模型非共識</td>
+<td>信心終值48.0，初值46.3；其餘未核實</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 10月flashPMI降溫仍擴張、Michigan現況弱，成長與感受分化</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 十月初值活動放慢但仍擴張；製造改善、服務放慢，消費現況偏弱。</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 股票與信用走弱支持風險提高，但初領下降、八月實質消費增加，不足以證明衰退。</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 需求與 AI 投資支撐營收（Revenue），能源及高利率侵蝕購買力；名目成長不能直接當作實質需求。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 1–3季外需；台灣科技與傳產分化</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 優先驗證訂單（Order）、毛利與實質消費，而非追逐普遍再通膨敘事。</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 十月二十九日 GDP、PCE 及後續新訂單（New Orders）。</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 若需求及 PMI 廣泛轉弱，且初領持續增加，則下調成長信心。</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 60.00/100；中性／成長支撐與成本風險並存；嚴重度 3/5；信心 中。 <strong>來源：</strong> <a href="https://www.aol.com/articles/us-business-activity-cools-october-134947000.html" rel="noopener noreferrer" target="_blank">M22</a> <a href="https://www.atlantafed.org/data/research-data" rel="noopener noreferrer" target="_blank">M16</a> <a href="https://www.sca.isr.umich.edu/" rel="noopener noreferrer" target="_blank">M17</a> <a href="https://www.dol.gov/ui/data.pdf" rel="noopener noreferrer" target="_blank">M08</a> <a href="https://www.bea.gov/news/2026/personal-income-and-outlays-August-2026" rel="noopener noreferrer" target="_blank">M07</a></p>
+<h3 id="section-02-美國通膨動能-us_inflation_momentum">02 美國通膨動能｜<code>us_inflation_momentum</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1年／長期通膨預期4.7%／3.5%；9月 CPI 月增0.6%、年增3.7%</td>
+<td>9月預期4.6%／3.4%；8月 CPI 月增0.4%</td>
+<td>兩項預期各<span class="direction direction-up">↑ 上升</span>0.1pp；核心 CPI 月增維持0.3%</td>
+<td>null；未取得可核驗同口徑共識</td>
+<td>CPI 為10/14舊資料；非本週新公布</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 本週Michigan長短通膨預期連升第二月；9月CPI是較早背景不是本週新公布</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 家庭長短期通膨預期連升第二月，價格壓力有廣度；核心通膨尚非全面加速。</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 名目與實質殖利率（Real Yield）週降是反證；兩者簡單差距由2.35%降至2.34%，不能宣稱通膨補償全面上行。</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 能源成本及預期升高可能延長政策限制，也壓縮實質可支配收入；簡單利差不等於純通膨預期。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 數週輸入通膨/電力成本；1–3季製造毛利，TWD決定放大</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 保留成本壓力情境，不從油價單獨推定任何公司的獲利損失。</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 核心 PCE、企業價格分項與聯準會說法。</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 核心物價放慢、預期持續回落且能源緩解時，降低此論點權重。</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 68.25/100；惡化；嚴重度 4/5；信心 中高。 <strong>來源：</strong> <a href="https://www.sca.isr.umich.edu/" rel="noopener noreferrer" target="_blank">M17</a> <a href="https://www.bls.gov/news.release/cpi.nr0.htm" rel="noopener noreferrer" target="_blank">M05</a> <a href="https://www.aol.com/articles/us-business-activity-cools-october-134947000.html" rel="noopener noreferrer" target="_blank">M22</a> <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a> <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;field_tdr_date_value_month=202610&amp;type=daily_treasury_real_yield_curve" rel="noopener noreferrer" target="_blank">M02</a></p>
+<h3 id="section-03-勞動市場降溫-labor_market_cooling">03 勞動市場降溫｜<code>labor_market_cooling</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初領19.4萬；續領172.8萬；9月非農2.9萬</td>
+<td>修訂後初領20.0萬；續領170.3萬；8月非農13.3萬</td>
+<td>初領<span class="direction direction-down">↓ 下降</span>0.6萬、續領<span class="direction direction-up">↑ 上升</span>2.5萬；月度招聘放慢</td>
+<td>null</td>
+<td>初領19.9→20.0萬；續領171.0→170.3萬</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 初領續降但續領上升；本週新增就業證據混合</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 招聘偏弱但裁員尚未廣泛增加；初領與續領方向相反，不能稱勞動全面崩潰。</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 利率下降與招聘降溫一致，但低初領、偏強成長模型及溫和薪資增加構成反證。</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 低裁員支持消費；續領增加可能反映再就業較慢，須與就業及消費資料共同判斷。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 1–3季終端需求/出口；即時Fed定價</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 不由單月新增就業偏低直接推導台灣出口崩潰。</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 十月二十九日初領，及其後月度就業報告。</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 初領、續領持續同步上升且實質消費下降，才確認更負面傳導。</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 52.75/100；中性／降溫非崩潰；嚴重度 3/5；信心 中。 <strong>來源：</strong> <a href="https://www.dol.gov/ui/data.pdf" rel="noopener noreferrer" target="_blank">M08</a> <a href="https://www.bls.gov/news.release/empsit.nr0.htm" rel="noopener noreferrer" target="_blank">M06</a> <a href="https://www.atlantafed.org/data/research-data" rel="noopener noreferrer" target="_blank">M16</a></p>
+<h3 id="section-04-聯準會政策緊縮-fed_policy_tightening">04 聯準會政策緊縮｜<code>fed_policy_tightening</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>實際區間3.75–4.00%；10/28升息定價9%；年底4.10%</td>
+<td>上週近期升息31%；年底4.165%</td>
+<td>機率<span class="direction direction-down">↓ 下降</span>22pp；年底遠期<span class="direction direction-down">↓ 下降</span>6.5bp</td>
+<td>市場隱含；不是調查或政策承諾</td>
+<td>本週無新政策決定；9/16為既有決策</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 本週近期升息定價顯著下降，但不是Fed已降息</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 市場更傾向近期暫停，但年底仍包含升息風險；短端及實質利率下降支持近期定價緩和。</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 十月近期升息定價下降；九月已升息、通膨預期再升，年底累計升息機率不可當近期機率。</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 較少升息預期降低折現率，通膨黏性卻保留日後政策限制；市場價格不等於官方承諾。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 即時台股折現率；數週TWD利差與外資</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 先等待正式決策，不能把近期升息機率降低解讀為已降息。</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 台北十月二十九日凌晨二時決定、二時半記者會。</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 實際升息或通膨措辭比市場定價（Market Pricing）更緊，則撤回近期緩和的強解讀。</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 60.50/100；改善（近期定價）；嚴重度 3/5；信心 中。 <strong>來源：</strong> <a href="https://www.fhlbny.com/w/fi/msd/2026/261023" rel="noopener noreferrer" target="_blank">M15</a> <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm" rel="noopener noreferrer" target="_blank">M09</a> <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm" rel="noopener noreferrer" target="_blank">M10</a> <a href="https://www.atlantafed.org/data/research-data" rel="noopener noreferrer" target="_blank">M16</a> <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a></p>
+<h3 id="section-05-利率衝擊-rates_shock">05 利率衝擊｜<code>rates_shock</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2／10／30年4.69／5.00／5.33%；實質10年2.66%</td>
+<td>4.74／5.09／5.43%；實質2.74%</td>
+<td><span class="direction direction-down">↓ 下降</span>5／9／10bp；實質<span class="direction direction-down">↓ 下降</span>8bp；2s10s <span class="state-transition"><span class="state-prior">35</span><span class="transition-arrow">→</span><span class="state-current">31bp</span></span></td>
+<td>null</td>
+<td>未識別新修訂；期限溢酬模型 null</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 週內先升後降；週末折現率較上週緩和，不把星期五反彈當全週利率衝擊</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 名目與實質殖利率連續兩週回落，2、10、30年均下降，但絕對水準仍高。</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 股票週跌而公債價格上升，比純利率上衝更像避險；週五名目利率回升、MOVE 週升仍是反證。</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 折現率下降可支撐估值（Valuation），但避險買債也可能反映成長疑慮，不能等同盈利改善。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 即時估值緩衝；金融條件仍受信用/外資影響</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 保留品質及流動性篩選，不因殖利率（Yield）下降便全面提高科技股研究權重。</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> FOMC、GDP、PCE 後利率與股價能否同時改善。</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 10年利率持續高於5.15%、實質10年高於2.80%，將削弱緩和論。</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 58.25/100；改善（僅折現率分量）；嚴重度 3/5；信心 日期高；因果中。 <strong>來源：</strong> <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a> <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;field_tdr_date_value_month=202610&amp;type=daily_treasury_real_yield_curve" rel="noopener noreferrer" target="_blank">M02</a> <a href="https://www.investing.com/indices/us-spx-500-historical-data" rel="noopener noreferrer" target="_blank">M26</a> <a href="https://www.investing.com/indices/nasdaq-composite-historical-data" rel="noopener noreferrer" target="_blank">M27</a> <a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">M28</a></p>
+<h3 id="section-06-黃金與公債背離-gold_treasury_divergence">06 黃金與公債背離｜<code>gold_treasury_divergence</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>黃金4,007.90美元／盎司；10年5.00%</td>
+<td>4,181.10；10年5.09%</td>
+<td>金價<span class="direction direction-down">↓ 下降</span>4.14%；殖利率<span class="direction direction-down">↓ 下降</span>9bp</td>
+<td>null</td>
+<td>歷史列與頁首有差異；沿用歷史列</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 黃金週跌而公債收益率週降，並非黃金上漲/公債下跌的財政信用恐慌</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 金價下跌、公債價格上升形成分歧；沒有黃金與債券共同反映財政恐慌的確認。</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 美元近乎持平，不能充分解釋金價下跌；報價頁首與歷史列不同，合約連續性仍有限。</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 實質利率下降原應提供支持，金價反向可能涉及部位（Positioning）調整，但尚無持倉資料識別原因。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 即時避險資產配置；不能直接推導台灣個股</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 僅作低信心觀察，不據此建立黃金或台灣個股行動。</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 核對同合約結算與 ETF、期貨持倉。</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 若價格基準修正後分歧消失，撤回此觀察。</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 27.75/100；中性／未能判定宏觀淨影響；嚴重度 2/5；信心 低。 <strong>來源：</strong> <a href="https://www.investing.com/commodities/gold-historical-data" rel="noopener noreferrer" target="_blank">M25</a> <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a> <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;field_tdr_date_value_month=202610&amp;type=daily_treasury_real_yield_curve" rel="noopener noreferrer" target="_blank">M02</a> <a href="https://www.investing.com/indices/usdollar-historical-data" rel="noopener noreferrer" target="_blank">M21</a></p>
+<h3 id="section-07-美元流動性-usd_liquidity">07 美元流動性｜<code>usd_liquidity</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>準備金2,962.607；TGA 952.002；主要信貸8.935</td>
+<td>3,022.140；883.373；11.312；單位十億美元</td>
+<td>準備金<span class="direction direction-down">↓ 下降</span>59.533；TGA <span class="direction direction-up">↑ 上升</span>68.629；信貸<span class="direction direction-down">↓ 下降</span>2.377</td>
+<td>null</td>
+<td>同為10/21週均值對前週；不混用日值</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> TGA回補吸收準備金；尚非已確認資金市場危機</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 準備金下降主要伴隨財政現金增加；聯準會證券持有略增，不支持全部歸因縮表。</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> SOFR 與準備金利息同為3.90%；主要信貸及央行交換下降，未支持已發生融資危機。</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 財政部帳戶吸收銀行準備金會降低緩衝，但是否形成壓力須看資金價格及工具使用。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 即時金融條件/外資，數週美元融資成本</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 維持流動性風險觀察；逆回購合計主要屬外國官方，不能當作可用隔夜逆回購緩衝。</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 下一次 H.4.1、隔夜利率與月末結算。</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 財政現金回落、準備金回升且回購利率正常時，降低壓力判斷。</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 52.25/100；惡化（緩衝下降，非危機）；嚴重度 3/5；信心 事實高；推論中。 <strong>來源：</strong> <a href="https://www.federalreserve.gov/releases/h41/current/" rel="noopener noreferrer" target="_blank">M03</a> <a href="https://fred.stlouisfed.org/series/SOFR" rel="noopener noreferrer" target="_blank">M14</a> <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm" rel="noopener noreferrer" target="_blank">M10</a></p>
+<h3 id="section-08-信用週期-credit_cycle">08 信用週期｜<code>credit_cycle</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HY 3.40%；IG 0.89%；截至10/22</td>
+<td>10/16為3.31%；0.85%</td>
+<td><span class="direction direction-up">↑ 上升</span>9bp／<span class="direction direction-up">↑ 上升</span>4bp；非10/23資料</td>
+<td>null</td>
+<td>未識別新修訂；違約率新值 null</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> HY與IG本週到最新10月22皆擴大，程度尚非金融危機</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 高收益與投資級利差均擴大，週後段風險溢酬增加，但程度不等於金融危機。</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 股跌、債券避險支持謹慎；VIX 週降、貸款量增加與融資未脫錨則否定全面凍結。</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 利差上升增加再融資成本與風險折現，對高槓桿、弱現金流公司較敏感。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 數週外資風險預算；1–3季客戶融資/資本支出（CapEx）</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 優先檢查槓桿與現金流，不由市場利差直接給出個人交易指令。</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 利差能否連續擴大，並與銀行融資及股票廣度共同惡化。</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 利差回到上週以下且融資穩定，則降低此風險。</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 51.50/100；惡化；嚴重度 3/5；信心 中。 <strong>來源：</strong> <a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" rel="noopener noreferrer" target="_blank">M13</a> <a href="https://fred.stlouisfed.org/series/BAMLC0A0CM" rel="noopener noreferrer" target="_blank">M12</a> <a href="https://www.federalreserve.gov/releases/h8/current/" rel="noopener noreferrer" target="_blank">M04</a> <a href="https://fred.stlouisfed.org/series/SOFR" rel="noopener noreferrer" target="_blank">M14</a> <a href="https://www.investing.com/indices/us-spx-500-historical-data" rel="noopener noreferrer" target="_blank">M26</a></p>
+<h3 id="section-09-銀行信貸緊縮-bank_credit_tightening">09 銀行信貸緊縮｜<code>bank_credit_tightening</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/14銀行信用19,995.1；貸款14,213.7十億美元</td>
+<td>10/7為19,949.4；14,184.4</td>
+<td>信用<span class="direction direction-up">↑ 上升</span>45.7、貸款<span class="direction direction-up">↑ 上升</span>29.3；9月年化增速3.3%</td>
+<td>null</td>
+<td>8月年化5.0%；SLOOS 為7月舊調查</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 本週H8貸款量仍增，不能把信貸增速放慢等同新緊縮信貸標準</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 銀行信貸總量擴張而增速放慢；七月調查的商工、商用不動產及信用卡標準方向不同。</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 高收益利差擴大，但貸款增量反駁全面信貸凍結；舊調查不能排除新近標準惡化。</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 信貸量不等於供給意願，需求下降與銀行收緊標準須分開確認。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 1–3季美國客戶營運資金/耐久財訂單</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 不支持一概避開金融或出口產業，應辨別融資結構與客戶需求。</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 下一次放款調查與 H.8 商工貸款分項。</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 只有標準普遍收緊且信貸收縮共同出現，才確認新緊縮。</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 43.00/100；中性／新緊縮未確認；嚴重度 2/5；信心 中。 <strong>來源：</strong> <a href="https://www.federalreserve.gov/releases/h8/current/" rel="noopener noreferrer" target="_blank">M04</a> <a href="https://www.federalreserve.gov/data/sloos/sloos-202607.htm" rel="noopener noreferrer" target="_blank">M11</a> <a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" rel="noopener noreferrer" target="_blank">M13</a></p>
+<h3 id="section-10-國債供給壓力-treasury_supply_stress">10 國債供給壓力｜<code>treasury_supply_stress</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>下週2／5／7年拍賣；TGA 952.0十億美元</td>
+<td>上次同口徑拍賣比較 null；TGA 883.4</td>
+<td>預告供給非已實現現金流；本週長債殖利率<span class="direction direction-down">↓ 下降</span></td>
+<td>金額69／70／44十億美元為次級資料</td>
+<td>官方暫定日程已核；金額非官方核驗</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 下週國債供給/結算與FOMC相遇；週末收益率較上週降，未證實供給失序</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 下週供給與政策會議交會，是前瞻風險；MOVE 上升但長債利率下降，未確認供給失序。</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 財政現金增加屬事實；官方暫定日程只確認日期，金額次級核驗，公債買盤反駁恐慌。</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 供給需要承接存續期間風險，現金交割增加準備金需求；要看尾差與承接者，不只看總額。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 即時折現率/台灣外資，數週美元流動性</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 不由拍賣規模機械升級燈號，區分公告、拍賣結果及交割三個時點。</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 各場尾差、投標倍數、一級交易商占比與十一月二日準備金。</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 拍賣承接強、回購利率正常且殖利率穩定，則否定供給壓力。</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 39.25/100；中性／等待實現；嚴重度 2/5；信心 中低。 <strong>來源：</strong> <a href="https://www.fhlbny.com/w/fi/msd/2026/261023" rel="noopener noreferrer" target="_blank">M15</a> <a href="https://www.federalreserve.gov/releases/h41/current/" rel="noopener noreferrer" target="_blank">M03</a> <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a> <a href="https://www.eoddata.com/stockquote/INDEX/MOVE.htm" rel="noopener noreferrer" target="_blank">M20</a> <a href="https://www.treasurydirect.gov/instit/annceresult/press/preanre/TreasuryCUSIPRelease.pdf" rel="noopener noreferrer" target="_blank">M32</a> <a href="https://www.treasury.gov/resource-center/data-chart-center/quarterly-refunding/Documents/auctions.pdf" rel="noopener noreferrer" target="_blank">M34</a></p>
+<h3 id="section-11-外匯融資壓力-fx_funding_stress">11 外匯融資壓力｜<code>fx_funding_stress</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DXY 101.81；EURUSD 1.1203；USDJPY 156.87；SOFR 3.90%</td>
+<td>101.84；1.1240；158.01；3.88%</td>
+<td>美元指數<span class="direction direction-down">↓ 下降</span>0.03%；日圓升值；SOFR <span class="direction direction-up">↑ 上升</span>2bp</td>
+<td>null</td>
+<td>歷史列優先；跨幣別基差 null</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 美元指數週近持平、日圓走強，未見廣泛美元擠兌證據</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 美元近乎持平、貨幣分化，SOFR 貼近準備金利息，央行交換用量下降。</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 日圓升值與公債買盤並非美元擠兌證據；跨幣別基差缺值、信用利差（Credit Spread）擴大仍須注意。</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 政策預期、日圓避險與美元融資短缺是不同機制，不能從美元指數單點辨別。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 即時TWD與外資；日本carry若急反轉放大波動</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 觀察台幣與融資基差是否共同惡化，不機械使用美元指數作風險開關。</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> SOFR 相對 IORB、跨幣別基差及日圓快速升值。</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 隔夜利率持續高於政策利率且央行交換激增，則推翻非系統壓力判斷。</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 48.50/100；中性／無廣泛融資危機確認；嚴重度 2/5；信心 中。 <strong>來源：</strong> <a href="https://www.investing.com/indices/usdollar-historical-data" rel="noopener noreferrer" target="_blank">M21</a> <a href="https://www.investing.com/currencies/eur-usd-historical-data" rel="noopener noreferrer" target="_blank">M29</a> <a href="https://www.investing.com/currencies/usd-jpy-historical-data" rel="noopener noreferrer" target="_blank">M30</a> <a href="https://fred.stlouisfed.org/series/SOFR" rel="noopener noreferrer" target="_blank">M14</a> <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm" rel="noopener noreferrer" target="_blank">M10</a> <a href="https://www.federalreserve.gov/releases/h41/current/" rel="noopener noreferrer" target="_blank">M03</a></p>
+<h3 id="section-12-能源通膨-energy_inflation">12 能源通膨｜<code>energy_inflation</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JKM 31.42；TTF 93.853；12月 Brent 116.72；WTI 103.27</td>
+<td>10/16：29.925；87.547；109.86；99.02</td>
+<td>週<span class="direction direction-up">↑ 上升</span>5.00／7.20／6.24／4.29%；歐儲74.6%</td>
+<td>null；季節庫存（Inventory）均值89.5%不是共識</td>
+<td>12月與1月合約分開；儲氣週變化 null</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 四種能源週漲、歐儲低於季節常態；供給與成本風險持續，非Oseberg單事件觸發</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 能源再通膨壓力持續；四價格同向+季節庫存不足；不能以同一家報價當四個獨立來源</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 資料支持並不等於因果識別；EU仍注氣511GWh/d；US天然氣庫存正常、需求破壞可能；CPC補貼緩衝CPI不代表成本消失</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 投入成本與進口帳單上升→通膨/利率壓力與實質購買力受損；美國breakeven需跨資產研究交叉確認</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 即時TWD進口成本、數週LNG電力與航空成本、1–3季科技製造毛利；不在無公司證據下指定贏家</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 油氣回落、EU注氣恢復季節軌跡及跨資產通膨預期緩解才降低防守</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 油氣回落、EU注氣恢復季節軌跡及跨資產通膨預期緩解才降低防守</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 油氣兩週回落與實體供給恢復、庫存缺口縮小</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 80.50/100；惡化；嚴重度 4/5；信心 中。 <strong>來源：</strong> <a href="https://www.investing.com/commodities/lng-japan-korea-marker-platts-futures-historical-data" rel="noopener noreferrer" target="_blank">A22</a> <a href="https://www.investing.com/commodities/dutch-ttf-gas-c1-futures-historical-data" rel="noopener noreferrer" target="_blank">A23</a> <a href="https://www.investing.com/commodities/brent-oil-historical-data" rel="noopener noreferrer" target="_blank">A24</a> <a href="https://www.investing.com/commodities/brent-oil-contracts" rel="noopener noreferrer" target="_blank">A25</a> <a href="https://www.investing.com/commodities/crude-oil-historical-data" rel="noopener noreferrer" target="_blank">A26</a> <a href="https://voltstack.energy/days-of-gas" rel="noopener noreferrer" target="_blank">A27</a> <a href="https://www.cpc.com.tw/News_Content.aspx?n=28&amp;s=112945&amp;sms=8920" rel="noopener noreferrer" target="_blank">A20</a> <a href="https://ir.eia.gov/ngs/ngs.html" rel="noopener noreferrer" target="_blank">A29</a></p>
+<h3 id="section-13-全球貿易週期-global_trade_cycle">13 全球貿易週期｜<code>global_trade_cycle</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/22對外投資規則提案；WTO貨貿2026年3.9%</td>
+<td>3月貨貿預測1.9%；10/8已上修</td>
+<td>貨貿<span class="direction direction-up">↑ 上升</span>2pp為10/8修訂，非本週新修訂</td>
+<td>null</td>
+<td>提案非生效禁令；服務預測4.8→3.3%</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 10月22對外投資規則提案提高政策不確定；WTO10月8上修貨貿是既有背景</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 商品與服務貿易方向分化；本週新的是投資規則提案，不是十月八日既有預測上修。</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 半導體指數偏弱但無法單獨歸因提案；全球貨貿上修與供應鏈調整是反證。</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 投資規則可能改變技術與資本路徑，須先確認公司適用範圍、曝險及生效時間。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 1–3季中國曝險/科技投資合規；日本中國放大器需公司鏈驗證</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 保留政策觀察，不把所有台灣半導體公司同列受益或受害。</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 最終條文、公司曝險揭露、出口與訂單。</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 公司不在實質適用範圍，或最終規則縮限時，撤回公司衝擊假說。</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 52.50/100；中性／分化；嚴重度 3/5；信心 中。 <strong>來源：</strong> <a href="https://www-server1.wto.org/english/news_e/news26_e/stat_08oct26_510_e.htm" rel="noopener noreferrer" target="_blank">M18</a> <a href="https://home.treasury.gov/news/press-releases/sb0667" rel="noopener noreferrer" target="_blank">M24</a> <a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">M28</a></p>
+<h3 id="section-14-半導體相對弱勢-semiconductor_relative_weakness">14 半導體相對弱勢｜<code>semiconductor_relative_weakness</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/23 SOX 10,779.5；台股10/22為46,041.43</td>
+<td>10/16 SOX 11,137.3；台股同口徑週前值 null</td>
+<td>SOX <span class="direction direction-down">↓ 下降</span>3.21%；台金融較半導體單日強2.53pp</td>
+<td>null</td>
+<td>台美收盤不同日；不作同步比較</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> SOX週跌而Lam本週獲利擴張，市場與基本面分岔；不能把單日反彈稱趨勢反轉</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 市場週期（Market Cycle）走弱、盈利週期未全面走弱；上市櫃393漲1415跌；只有37.3%站上季線；電子股非孤立但跌幅較大</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 資料支持並不等於因果識別；SOX週五+0.44%；Lam季度營收+22%與毛利改善，否定已證實全面AI需求崩潰</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 估值與部位退潮可壓過盈利；需要與跨資產研究rates/credit確認，不能已斷言純利率造成</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 即時估值與資金流（Flow）；1–3季訂單對獲利需另驗證</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> SOX相對Nasdaq持續改善、台股廣度&gt;50%且外資轉買才提高風險曝險</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> SOX相對Nasdaq持續改善、台股廣度&gt;50%且外資轉買才提高風險曝險</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 供應鏈前瞻指引（Guidance）連續下修及庫存週轉惡化才轉基本面降級</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 66.50/100；惡化；嚴重度 4/5；信心 中。 <strong>來源：</strong> <a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">A01</a> <a href="https://breadthdaily.com/tw/" rel="noopener noreferrer" target="_blank">A05</a> <a href="https://www.wantgoo.com/index/0000" rel="noopener noreferrer" target="_blank">A06</a> <a href="https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026" rel="noopener noreferrer" target="_blank">A07</a></p>
+<h3 id="section-15-ai-基本面週期-ai_fundamental_cycle">15 AI 基本面週期｜<code>ai_fundamental_cycle</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lam營收82.194億美元、毛利52.3%、GAAP 每股盈餘（EPS）2.19</td>
+<td>前季67.222億、51.7%、EPS1.81</td>
+<td>營收季增約22%；台積電Q3為窗口前基線</td>
+<td>null</td>
+<td>台積電10/15財報非本週新上修</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> Lam10/21本週業績提供設備端新增驗證；台積電10/15僅本週已知基線</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 盈利擴張仍持續；設備、晶圓代工、出口訂單三類證據；不是所有AI公司</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 資料支持並不等於因果識別；TSM毛利QoQ−1.3pp；市場跌勢與非科技需求弱勢；基建投資不保證終端回報</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 設備安裝/晶圓需求→營收與獲利支撐，但市場倍數可壓縮</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 1–3季先進製程/設備/封測；即時需降低倍數假設</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 新季度指引、客戶資本支出及現金回收共同確認後選擇性布局</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 新季度指引、客戶資本支出及現金回收共同確認後選擇性布局</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 兩季營收/指引下修且庫存天數升高</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 74.75/100；改善；嚴重度 3/5；信心 中高。 <strong>來源：</strong> <a href="https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026" rel="noopener noreferrer" target="_blank">A07</a> <a href="https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/9f58506f6f114f91cefbf86820cc63297b39b130/3Q26%20Presentation%20(E).pdf" rel="noopener noreferrer" target="_blank">A08</a> <a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a> <a href="https://focustaiwan.tw/business/202610230013" rel="noopener noreferrer" target="_blank">A19</a></p>
+<h3 id="section-16-記憶體週期-memory_cycle">16 記憶體週期｜<code>memory_cycle</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/23 DDR5 16Gb 61.267美元；DDR4 82.87美元</td>
+<td>可比週前值 null；HBM及NAND新值 null</td>
+<td>當日+0.27%／−0.30%；完整週變化 null</td>
+<td>null</td>
+<td>不以單日現貨推週合約價；不沿用舊模組價</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 週五DDR5現貨小升但DDR4下跌；公開頁不能建立完整週報價</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 分化；不是全記憶體缺貨已確認；僅公開spot品項；合約/HBM、NAND本輪新值缺</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 資料支持並不等於因果識別；DDR4反向；模組頁更新10月12已過期；HBM不能由DDR5替代</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 現貨改善可能促盈利，但產品組合、合約價與供給擴產有落差</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 數週至1–3季，產品/公司曝光需逐家核對</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 取得可比週合約價、HBM出貨與各廠庫存後再做Action</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 取得可比週合約價、HBM出貨與各廠庫存後再做Action</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 合約價下跌、庫存堆高且需求下修</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 35.50/100；中性／無明顯變化；嚴重度 2/5；信心 低。 <strong>來源：</strong> <a href="https://www.dramexchange.com/" rel="noopener noreferrer" target="_blank">A10</a> <a href="https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026" rel="noopener noreferrer" target="_blank">A07</a></p>
+<h3 id="section-17-亞洲出口週期-asia_export_cycle">17 亞洲出口週期｜<code>asia_export_cycle</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>台9月訂單1,142.1億美元、年增62.4%；韓前20日616.12億</td>
+<td>台前月年增71.4%；韓9月前20日年增78.3%</td>
+<td>台年增率<span class="direction direction-down">↓ 下降</span>9pp；韓年增105.4%、日均65.9%</td>
+<td>台灣訂單年增58.7%；高出3.7pp</td>
+<td>韓國為月內初值非全月；未核實其他修訂</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 台灣外銷訂單（Export Orders）與韓國初旬出口本週發布，亞洲AI外需維持強勢</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 高位擴張而非普遍加速；台韓兩國，台灣訂單有海外生產不能全算台灣出口</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 資料支持並不等於因果識別；基期/工作日差異；韓國20天非整月；中國內需及台灣服務情緒弱</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> AI投資→訂單→區域出貨，需以實際營收轉換驗證</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 1–3季外需，台灣高階製造優於廣泛內需</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 11月台韓全月出口、訂單轉營收及毛利驗證</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 11月台韓全月出口、訂單轉營收及毛利驗證</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 兩國科技出口同時持續轉弱、取消訂單</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 76.25/100；改善；嚴重度 3/5；信心 中高。 <strong>來源：</strong> <a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a> <a href="https://uk.marketscreener.com/news/taiwan-september-export-orders-hit-record-value-on-solid-ai-demand-ce785cdbd08cf32d" rel="noopener noreferrer" target="_blank">A12</a> <a href="https://customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&amp;mi=2891&amp;nttSn=10180465&amp;nttSnUrl=3b279b0d8ae0387ac138c4741fb65b67" rel="noopener noreferrer" target="_blank">A13</a> <a href="https://rki.kbs.co.kr/service/news_view.htm?Seq_Code=205005&amp;lang=e" rel="noopener noreferrer" target="_blank">A14</a></p>
+<h3 id="section-18-中國週期-china_cycle">18 中國週期｜<code>china_cycle</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q3 GDP年增4.5%、季增1.2%；9月零售年增1.1%</td>
+<td>Q2 GDP年增4.3%；8月零售約0.4%</td>
+<td>GDP年增率<span class="direction direction-up">↑ 上升</span>0.2pp；零售<span class="direction direction-up">↑ 上升</span>0.7pp</td>
+<td>null</td>
+<td>民間／房地產累計投資−10.4／−20.6%</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 本週Q3GDP改善，但民間與房地產投資明顯疲弱</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 出口/製造支撐、內需投資疲弱；GDP改善未延伸到房地產與民間投資</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 資料支持並不等於因果識別；GDP/零售邊際改善，不能把投資負值解讀本週全面衰退</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 外需可支持供應鏈，但財富效應與內需弱限制台灣傳產回升</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 1–3季中國需求放大器；傳產/消費選股需保守</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 房銷、民間投資與新訂單同步改善</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 房銷、民間投資與新訂單同步改善</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 投資及消費持續轉正且政策傳導可驗證</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 62.75/100；中性／無明顯變化；嚴重度 3/5；信心 中。 <strong>來源：</strong> <a href="https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965618.html" rel="noopener noreferrer" target="_blank">A15</a> <a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a></p>
+<h3 id="section-19-日本週期-japan_cycle">19 日本週期｜<code>japan_cycle</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9月總／核心／核心核心年增2.1／2.1／2.4%</td>
+<td>前月1.9／1.7／1.9%</td>
+<td>核心<span class="direction direction-up">↑ 上升</span>0.4pp、核心核心<span class="direction direction-up">↑ 上升</span>0.5pp；核心月增0.5%</td>
+<td>核心年增2.1%；符合預期</td>
+<td>未核實修訂；不能據單月推定升息</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 9月核心通膨回2%以上且核心核心更高；本週發布符合預期</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 通膨面壓力增加但不是意外數據；排能源核心亦上升，不能全歸油價</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 資料支持並不等於因果識別；核心符合2.1共識；單一CPI不能斷言BOJ會升息</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> BOJ正常化風險→日圓融資與區域折現率；尚未取得本段證據JPY同步反應</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 即時/數週日本資金與匯率放大器</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> BOJ決策、JPY和日債共同確認</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> BOJ決策、JPY和日債共同確認</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 通膨回落且政策預期轉鴿、資金條件未緊</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 52.50/100；惡化；嚴重度 3/5；信心 中。 <strong>來源：</strong> <a href="https://www.stat.go.jp/data/cpi/sokuhou/tsuki/pdf/zenkoku.pdf" rel="noopener noreferrer" target="_blank">A16</a> <a href="https://www.marketscreener.com/news/japan-core-inflation-exceeds-boj-target-cements-near-term-rate-hike-chance-ce785cdede88f02d" rel="noopener noreferrer" target="_blank">A17</a></p>
+<h3 id="section-20-台灣外資流向-taiwan_foreign_flow">20 台灣外資流向｜<code>taiwan_foreign_flow</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/22外資−816.56億元；期貨淨空87,297口；匯率32.508</td>
+<td>10/16匯率32.338；外資週合計／前期OI null</td>
+<td>美元兌台幣<span class="direction direction-up">↑ 上升</span>0.53%；單日現貨不是週流量</td>
+<td>null</td>
+<td>完整週累計及淨空週變化 null</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 最後交易日外資大賣、外資期貨淨空且本週TWD貶值</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 資金面偏弱；完整週累計缺；現貨/期貨/匯率/廣度同向但相互關聯，不是四個獨立衝擊</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 資料支持並不等於因果識別；ETF交易、對沖、休市前風險縮減；基本面強</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 外資撤退及避險壓低估值；期貨對沖不等於全部方向性看空</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 即時金融條件/匯率，數週估值</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 恢復交易後至少兩日外資與廣度改善才確認</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 恢復交易後至少兩日外資與廣度改善才確認</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 外資買超、淨空持續縮減與TWD回穩</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 68.50/100；惡化；嚴重度 4/5；信心 中。 <strong>來源：</strong> <a href="https://anuenews.cnyes.com/news/id/6635866" rel="noopener noreferrer" target="_blank">A02</a> <a href="https://www.taifex.com.tw/cht/3/futContractsDate" rel="noopener noreferrer" target="_blank">A03</a> <a href="https://www.cbc.gov.tw/tw/lp-645-1.html" rel="noopener noreferrer" target="_blank">A04</a> <a href="https://breadthdaily.com/tw/" rel="noopener noreferrer" target="_blank">A05</a></p>
+<h3 id="section-21-台灣領先週期-taiwan_leading_cycle">21 台灣領先週期｜<code>taiwan_leading_cycle</code></h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>現值 FACT</th>
+<th>前值／參考期 FACT</th>
+<th>變化速度 FACT</th>
+<th>共識 MARKET EXPECTATION</th>
+<th>修訂與口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>製造情緒101.39；服務92.65；工業生產年增19.17%</td>
+<td>製造100.89；服務95.80；展望淨樂觀9.1pp</td>
+<td>情緒+0.50／−3.15；淨樂觀降至4.2pp</td>
+<td>null</td>
+<td>前值部分由已公布差額回推；不冒充新NDC</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>本週真正新增：</strong> 本週台經院製造情緒升但服務與未來六個月展望偏弱；工業生產仍增</p>
+</li>
+<li>
+<p><strong>趨勢與廣度：</strong> 當期好、前瞻分化；舊NDC8月非本週新數據；科技和機械增；化工−4.29%YoY，服務情緒退</p>
+</li>
+<li>
+<p><strong>跨資產驗證與反證：</strong> 資料支持並不等於因果識別；製造生產YoY+20.21%，不是已轉衰退</p>
+</li>
+<li>
+<p><strong>因果機制 INFERENCE：</strong> 外需帶動當期產出，但油價/金融條件侵蝕未來信心</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 1–3季外需與內需分化；政策能源緩衝不等於成本消失</p>
+</li>
+<li>
+<p><strong>投資含意：</strong> 新NDC指標與10月工業生產、外銷訂單</p>
+</li>
+<li>
+<p><strong>下一驗證：</strong> 新NDC指標與10月工業生產、外銷訂單</p>
+</li>
+<li>
+<p><strong>降級或推翻條件：</strong> 科技與服務共同惡化且新訂單連續下滑</p>
+</li>
+</ul>
+<p><strong>持續性／風險：</strong> 67.00/100；中性／無明顯變化；嚴重度 3/5；信心 中。 <strong>來源：</strong> <a href="https://focustaiwan.tw/business/202610230009" rel="noopener noreferrer" target="_blank">A18</a> <a href="https://focustaiwan.tw/business/202610230013" rel="noopener noreferrer" target="_blank">A19</a> <a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a></p>
+<h2 id="section-三大主題-top-3-themes">三大主題（Top 3 Themes）</h2>
+<h3 id="section-主題-1-ai基本面擴張與科技股回落並存">主題 1｜AI基本面擴張與科技股回落並存</h3>
+<ul>
+<li>
+<p><strong>本週變化：</strong> 設備獲利與客戶容量承諾新增證據；台積電財報仍是窗口前基線。</p>
+</li>
+<li>
+<p><strong>市場定價（Market Pricing）：</strong> SOX 週跌與企業擴張同時存在；可確認股價走弱，不能直接宣稱倍數已收縮。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 先進製程、測試與封裝各有曝險，但產業成長不代表五家公司 每股盈餘（EPS） 同幅上修。</p>
+</li>
+<li>
+<p><strong>策略：</strong> 五檔皆 Watch；等待公司獲利、可比估值（Valuation）及資金流（Flow）接通，不發布條件式買入行動。</p>
+</li>
+<li>
+<p><strong>反證：</strong> AI 資本開支可增加供給，終端投資回報、價格與現金回收仍可能不足。</p>
+</li>
+</ul>
+<h4>持續性與定價判讀</h4>
+<p>持續性 72.50 分；組成訊號為「AI 基本面週期（Fundamental Cycle）、半導體相對弱勢、亞洲出口週期」。已部分反映（Partially Priced）僅為低至中信心推論，因未取得完整估值與預期分布，不能換算低估幅度。</p>
+<h4>下一步可驗證條件</h4>
+<p>客戶承諾須轉為公司可認列收入及現金回收；同時觀察科技相對強弱、台股廣度與外資是否持續改善。三者缺一，主題可以成立，價格與行動仍可保持未確認。</p>
+<h3 id="section-主題-2-能源成本持續走升-台灣零售緩衝並未消除進口壓力">主題 2｜能源成本持續走升，台灣零售緩衝並未消除進口壓力</h3>
+<ul>
+<li>
+<p><strong>本週變化：</strong> 四種能源同向上升，歐洲儲氣低於季節常態，能源成本訊號持續。</p>
+</li>
+<li>
+<p><strong>市場定價：</strong> 油氣部分已反映成本風險，但美債殖利率（Yield）下降，不支持所有通膨資產同向重估。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 台幣偏弱與能源進口價上升疊加；零售吸收把成本延後或轉移，不使成本消失。</p>
+</li>
+<li>
+<p><strong>策略：</strong> 優先核對轉嫁、長約與避險比例；不由能源上升直接指定個股受惠或受害。</p>
+</li>
+<li>
+<p><strong>反證：</strong> 歐洲仍淨注氣，美國天然氣庫存（Inventory）不低；需求破壞是待驗情境。</p>
+</li>
+</ul>
+<h4>持續性與定價判讀</h4>
+<p>持續性 66.50 分；組成訊號為「能源通膨、日本週期」。已部分反映（Partially Priced）僅為低至中信心推論，因未取得完整估值與預期分布，不能換算低估幅度。</p>
+<h4>下一步可驗證條件</h4>
+<p>核對同合約油氣價格、歐洲庫存季節缺口及公司成本轉嫁。Oseberg 未確認的增量流量損失不列入基準，預期修復時間亦不能作已恢復供給的證據。</p>
+<h3 id="section-主題-3-亞洲科技外需強-內需與前瞻信心尚未全面共振">主題 3｜亞洲科技外需強，內需與前瞻信心尚未全面共振</h3>
+<ul>
+<li>
+<p><strong>本週變化：</strong> 台韓外需與台灣產出強，但服務信心、中國民間與房地產投資仍弱。</p>
+</li>
+<li>
+<p><strong>市場定價：</strong> 數據改善尚未帶來廣泛資金回流；不能把製造領先等同全市場復甦買點。</p>
+</li>
+<li>
+<p><strong>台灣傳導：</strong> 外銷訂單（Export Orders）含海外生產，須分辨台灣 GDP、台商收入及個別股東獲利。</p>
+</li>
+<li>
+<p><strong>策略：</strong> 按訂單（Order）轉營收（Revenue）、毛利與現金轉換逐家公司篩選，不做普遍傳產或消費押注。</p>
+</li>
+<li>
+<p><strong>反證：</strong> 中國 GDP 與零售邊際改善；當期強與前瞻弱可以同時成立。</p>
+</li>
+</ul>
+<h4>持續性與定價判讀</h4>
+<p>持續性 68.67 分；組成訊號為「亞洲出口週期、台灣領先週期、中國週期」。已部分反映（Partially Priced）僅為低至中信心推論，因未取得完整估值與預期分布，不能換算低估幅度。</p>
+<h4>下一步可驗證條件</h4>
+<p>待全月出口、後續外銷訂單與各家公司財報交叉驗證。若高科技訂單仍強而服務信心弱，維持分化框架；只有需求與現金回收共同擴散才提高廣泛復甦信心。</p>
+<h2 id="section-持續性評分-persistence-scorecard">持續性評分（Persistence Scorecard）</h2>
+<p>分數使用持續時間二十五、廣度二十、跨資產二十五、基本面二十及台灣傳導十的權重，各分項為零至一百分。這是分析量尺，不是預測成功機率；未核驗同口徑上週單訊號分數，故不捏造二十一項分數週差。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>訊號</th>
+<th class="numeric">時間25%</th>
+<th class="numeric">廣度20%</th>
+<th class="numeric">跨資產25%</th>
+<th class="numeric">基本面20%</th>
+<th class="numeric">台灣10%</th>
+<th>總分／分類</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美國成長動能</td>
+<td class="numeric">65</td>
+<td class="numeric">60</td>
+<td class="numeric">45</td>
+<td class="numeric">65</td>
+<td class="numeric">75</td>
+<td>60.00／趨勢形成</td>
+</tr>
+<tr>
+<td>美國通膨動能</td>
+<td class="numeric">80</td>
+<td class="numeric">70</td>
+<td class="numeric">45</td>
+<td class="numeric">75</td>
+<td class="numeric">80</td>
+<td>68.25／趨勢形成</td>
+</tr>
+<tr>
+<td>勞動市場降溫</td>
+<td class="numeric">65</td>
+<td class="numeric">40</td>
+<td class="numeric">40</td>
+<td class="numeric">65</td>
+<td class="numeric">55</td>
+<td>52.75／戰術觀察</td>
+</tr>
+<tr>
+<td>聯準會政策緊縮</td>
+<td class="numeric">50</td>
+<td class="numeric">70</td>
+<td class="numeric">70</td>
+<td class="numeric">50</td>
+<td class="numeric">65</td>
+<td>60.50／趨勢形成</td>
+</tr>
+<tr>
+<td>利率衝擊</td>
+<td class="numeric">55</td>
+<td class="numeric">85</td>
+<td class="numeric">50</td>
+<td class="numeric">40</td>
+<td class="numeric">70</td>
+<td>58.25／戰術觀察</td>
+</tr>
+<tr>
+<td>黃金與公債背離</td>
+<td class="numeric">40</td>
+<td class="numeric">30</td>
+<td class="numeric">25</td>
+<td class="numeric">15</td>
+<td class="numeric">25</td>
+<td>27.75／雜訊或部位（Positioning）</td>
+</tr>
+<tr>
+<td>美元流動性（Liquidity）</td>
+<td class="numeric">40</td>
+<td class="numeric">55</td>
+<td class="numeric">35</td>
+<td class="numeric">80</td>
+<td class="numeric">65</td>
+<td>52.25／戰術觀察</td>
+</tr>
+<tr>
+<td>信用週期</td>
+<td class="numeric">45</td>
+<td class="numeric">60</td>
+<td class="numeric">55</td>
+<td class="numeric">40</td>
+<td class="numeric">65</td>
+<td>51.50／戰術觀察</td>
+</tr>
+<tr>
+<td>銀行信貸緊縮</td>
+<td class="numeric">45</td>
+<td class="numeric">35</td>
+<td class="numeric">35</td>
+<td class="numeric">55</td>
+<td class="numeric">50</td>
+<td>43.00／戰術觀察</td>
+</tr>
+<tr>
+<td>國債供給壓力</td>
+<td class="numeric">35</td>
+<td class="numeric">40</td>
+<td class="numeric">30</td>
+<td class="numeric">45</td>
+<td class="numeric">60</td>
+<td>39.25／雜訊或部位</td>
+</tr>
+<tr>
+<td>外匯融資壓力</td>
+<td class="numeric">40</td>
+<td class="numeric">45</td>
+<td class="numeric">60</td>
+<td class="numeric">45</td>
+<td class="numeric">55</td>
+<td>48.50／戰術觀察</td>
+</tr>
+<tr>
+<td>能源通膨</td>
+<td class="numeric">90</td>
+<td class="numeric">90</td>
+<td class="numeric">60</td>
+<td class="numeric">80</td>
+<td class="numeric">90</td>
+<td>80.50／持續且具情境意義</td>
+</tr>
+<tr>
+<td>全球貿易週期</td>
+<td class="numeric">60</td>
+<td class="numeric">45</td>
+<td class="numeric">40</td>
+<td class="numeric">55</td>
+<td class="numeric">75</td>
+<td>52.50／戰術觀察</td>
+</tr>
+<tr>
+<td>半導體相對弱勢</td>
+<td class="numeric">80</td>
+<td class="numeric">80</td>
+<td class="numeric">60</td>
+<td class="numeric">35</td>
+<td class="numeric">85</td>
+<td>66.50／趨勢形成</td>
+</tr>
+<tr>
+<td>AI 基本面週期（Fundamental Cycle）</td>
+<td class="numeric">90</td>
+<td class="numeric">80</td>
+<td class="numeric">35</td>
+<td class="numeric">90</td>
+<td class="numeric">95</td>
+<td>74.75／趨勢形成</td>
+</tr>
+<tr>
+<td>記憶體週期</td>
+<td class="numeric">40</td>
+<td class="numeric">30</td>
+<td class="numeric">20</td>
+<td class="numeric">45</td>
+<td class="numeric">55</td>
+<td>35.50／雜訊或部位</td>
+</tr>
+<tr>
+<td>亞洲出口週期</td>
+<td class="numeric">90</td>
+<td class="numeric">75</td>
+<td class="numeric">45</td>
+<td class="numeric">90</td>
+<td class="numeric">95</td>
+<td>76.25／趨勢形成</td>
+</tr>
+<tr>
+<td>中國週期</td>
+<td class="numeric">75</td>
+<td class="numeric">65</td>
+<td class="numeric">30</td>
+<td class="numeric">80</td>
+<td class="numeric">75</td>
+<td>62.75／趨勢形成</td>
+</tr>
+<tr>
+<td>日本週期</td>
+<td class="numeric">55</td>
+<td class="numeric">65</td>
+<td class="numeric">25</td>
+<td class="numeric">70</td>
+<td class="numeric">55</td>
+<td>52.50／戰術觀察</td>
+</tr>
+<tr>
+<td>台灣外資流向</td>
+<td class="numeric">65</td>
+<td class="numeric">80</td>
+<td class="numeric">75</td>
+<td class="numeric">40</td>
+<td class="numeric">95</td>
+<td>68.50／趨勢形成</td>
+</tr>
+<tr>
+<td>台灣領先週期</td>
+<td class="numeric">80</td>
+<td class="numeric">60</td>
+<td class="numeric">40</td>
+<td class="numeric">80</td>
+<td class="numeric">90</td>
+<td>67.00／趨勢形成</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>上週已核主題</th>
+<th class="numeric">上週分數</th>
+<th>本週可比性</th>
+<th>處理方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成本通膨</td>
+<td class="numeric">82.25</td>
+<td>主題組成不同</td>
+<td>保留比較基準；不硬算週差</td>
+</tr>
+<tr>
+<td>AI 基本面</td>
+<td class="numeric">75.5</td>
+<td>本週三訊號組合不同</td>
+<td>不將72.50與75.50作同口徑下降</td>
+</tr>
+<tr>
+<td>能源與台灣成本</td>
+<td class="numeric">73.0</td>
+<td>本週組合含日本週期</td>
+<td>與單一能源80.50分開</td>
+</tr>
+</tbody>
+</table></div>
+<p>三大主題先對其成分訊號的五項分數等權平均，再套用上述權重；分別為七十二點五、六十六點五及六十八點六七。弱跨資產確認拉低主題分數，不能因公司營收（Revenue）強便省略價格與資金反證。</p>
+<h2 id="section-總體與政策深析-macro-policy-deep-dive">總體與政策深析（Macro Policy Deep Dive）</h2>
+<p>美國成長不是已確認衰退：綜合採購經理指數仍在擴張區間，初領失業救濟低，銀行貸款總量增加。可是消費現況、續領與信用溢酬提醒，實體韌性未必能保護高估值（Valuation）或高槓桿資產。</p>
+<p><a href="https://www.aol.com/articles/us-business-activity-cools-october-134947000.html" rel="noopener noreferrer" target="_blank">M22</a> <a href="https://www.dol.gov/ui/data.pdf" rel="noopener noreferrer" target="_blank">M08</a> <a href="https://www.federalreserve.gov/releases/h8/current/" rel="noopener noreferrer" target="_blank">M04</a> <a href="https://www.sca.isr.umich.edu/" rel="noopener noreferrer" target="_blank">M17</a></p>
+<p>政策矛盾在於家庭長短期通膨預期上升，而近端升息定價及實質殖利率（Real Yield）下降。先把通膨資料、政策承諾與市場定價（Market Pricing）分開，下一次核心 PCE 及聯準會措辭才有機會判定這是暫停還是壓力累積。</p>
+<p><a href="https://www.sca.isr.umich.edu/" rel="noopener noreferrer" target="_blank">M17</a> <a href="https://www.fhlbny.com/w/fi/msd/2026/261023" rel="noopener noreferrer" target="_blank">M15</a> <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm" rel="noopener noreferrer" target="_blank">M09</a> <a href="https://www.bea.gov/news/schedule" rel="noopener noreferrer" target="_blank">M31</a></p>
+<p>日本核心與排除能源後通膨同時回升，但核心數字符合共識；這增加政策正常化風險，並非已宣布升息。日圓週度升值可放大區域部位（Positioning）波動，尚不能從相關變化識別套利平倉規模。</p>
+<p><a href="https://www.stat.go.jp/data/cpi/sokuhou/tsuki/pdf/zenkoku.pdf" rel="noopener noreferrer" target="_blank">A16</a> <a href="https://www.marketscreener.com/news/japan-core-inflation-exceeds-boj-target-cements-near-term-rate-hike-chance-ce785cdede88f02d" rel="noopener noreferrer" target="_blank">A17</a> <a href="https://www.investing.com/currencies/usd-jpy-historical-data" rel="noopener noreferrer" target="_blank">M30</a></p>
+<p>美國對外投資新規目前是提案，不能當作已生效的全面禁令。公司是否受影響須核對投資對象、技術活動及生效條文；同週半導體股下跌，並不足以把跌幅單獨歸因政策。</p>
+<p><a href="https://home.treasury.gov/news/press-releases/sb0667" rel="noopener noreferrer" target="_blank">M24</a> <a href="https://www-server1.wto.org/english/news_e/news26_e/stat_08oct26_510_e.htm" rel="noopener noreferrer" target="_blank">M18</a> <a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">M28</a></p>
+<h2 id="section-敘事驗證-narrative-validation">敘事驗證（Narrative Validation）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>敘事</th>
+<th>官方／企業證據</th>
+<th>市場與反證</th>
+<th>狀態／等級</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 需求已崩潰</td>
+<td>設備盈利與外需仍強</td>
+<td>股價弱是真的；需求崩潰未成立</td>
+<td>Contradicted／A</td>
+<td><a href="https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026" rel="noopener noreferrer" target="_blank">A07</a> <a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a> <a href="https://customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&amp;mi=2891&amp;nttSn=10180465&amp;nttSnUrl=3b279b0d8ae0387ac138c4741fb65b67" rel="noopener noreferrer" target="_blank">A13</a></td>
+</tr>
+<tr>
+<td>台灣全面景氣上升</td>
+<td>製造產出強</td>
+<td>服務信心與前瞻淨樂觀下降</td>
+<td>Partial／B</td>
+<td><a href="https://focustaiwan.tw/business/202610230009" rel="noopener noreferrer" target="_blank">A18</a> <a href="https://focustaiwan.tw/business/202610230013" rel="noopener noreferrer" target="_blank">A19</a></td>
+</tr>
+<tr>
+<td>Brent 跌到111.70代表油價回落</td>
+<td>12月116.72、1月111.70為不同合約</td>
+<td>換月不是同合約大跌</td>
+<td>Contradicted／B</td>
+<td><a href="https://www.investing.com/commodities/brent-oil-contracts" rel="noopener noreferrer" target="_blank">A25</a> <a href="https://www.investing.com/commodities/brent-oil-historical-data" rel="noopener noreferrer" target="_blank">A24</a></td>
+</tr>
+<tr>
+<td>Oseberg 已損失12.7mcm/d出口</td>
+<td>僅有次級停用容量訊息</td>
+<td>實際流量資料早於事件</td>
+<td>Unconfirmed／D</td>
+<td><a href="https://voltstack.energy/norway-gas-flows" rel="noopener noreferrer" target="_blank">A28</a></td>
+</tr>
+<tr>
+<td>客戶預付款等同供應商 每股盈餘（EPS）</td>
+<td>客戶提供資金與容量承諾</td>
+<td>須扣服務抵付、折舊與營運成本</td>
+<td>Contradicted／A</td>
+<td><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>公開敘事僅用來建立可驗證命題，沒有取得具代表性的原始社群樣本或完整互動數。因此不提供虛構聲量、轉貼率、參與度或情緒百分比，也不把搜尋結果排序當投資證據。</p>
+<h2 id="section-完整因果鏈稽核-causal-chain-audit">完整因果鏈稽核（Causal Chain Audit）</h2>
+<p>因果鏈有十一個節點、十條箭頭。Confirmed 代表該段有直接支持，Partial 代表方向合理但尚有未識別因素，Unconfirmed 代表缺少關鍵驗證，Contradicted 代表與證據衝突；</p>
+<p>狀態不因前段成立而自動傳遞。</p>
+<p>證據 A 為原始官方或公司資料；B 為可核驗次級資料、有限原始摘錄或部分交叉支持；C 為未校準模型或缺橋接的推論；D 為傳聞或缺乏直接核驗。來源等級高，不代表該因果箭頭一定已確認。</p>
+<p><code>Signal/Event → Canonical Signal → Global Market → Taiwan Macro → Industry → Company Exposure → Earnings → Valuation → Flow/Positioning → Price Impact → Action</code></p>
+<p>依序是事件、標準訊號、全球市場、台灣總體、產業、公司曝險、獲利、估值（Valuation）、資金部位（Positioning）、股價影響與行動。任何必要末端橋接未確認，都不發布個股 Action；D 級事件完全隔離於行動與量化價格模型之外。</p>
+<h3 id="section-主題-1-的十條因果箭頭">主題 1 的十條因果箭頭</h3>
+<ol>
+<li>
+<p><strong>Signal/Event <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Canonical Signal｜Confirmed／A</strong></p>
+<ul>
+<li>機制 INFERENCE：Lam季度增長與區域新訂單（New Orders）成為AI需求訊號</li>
+<li>證據：Lam10/21營收（Revenue）8.219bn+22%；TW訂單（Order）+62.4%</li>
+<li>反證／缺口：訂單非全部在台生產</li>
+<li>來源與界線：<a href="https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026" rel="noopener noreferrer" target="_blank">A07</a> <a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a></li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Canonical Signal</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Global</span></span> Market｜Confirmed／B</strong></p>
+<ul>
+<li>機制 INFERENCE：基本面支撐但SOX週跌，價格反映其他風險</li>
+<li>證據：SOX週−3.21%，Lam毛利+60bp</li>
+<li>反證／缺口：股票跌不能證明基本面崩潰</li>
+<li>來源與界線：<a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">A01</a> <a href="https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026" rel="noopener noreferrer" target="_blank">A07</a></li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Global Market</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Taiwan</span></span> Macro｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：海外科技估值與外資風險偏好傳至台灣</li>
+<li>證據：CBCUSD/TWD週+0.526%；TWSE外資單日−81.656bn</li>
+<li>反證／缺口：台美收盤不一致、未識別共同因子</li>
+<li>來源與界線：<a href="https://www.cbc.gov.tw/tw/lp-645-1.html" rel="noopener noreferrer" target="_blank">A04</a> <a href="https://anuenews.cnyes.com/news/id/6635866" rel="noopener noreferrer" target="_blank">A02</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Taiwan Macro <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Industry｜Confirmed／B</strong></p>
+<ul>
+<li>機制 INFERENCE：台灣科技外需強於廣泛內需</li>
+<li>證據：台灣製造+20.21%YoY、服務情緒下降</li>
+<li>反證／缺口：化工−4.29%、當期不等於前景</li>
+<li>來源與界線：<a href="https://focustaiwan.tw/business/202610230013" rel="noopener noreferrer" target="_blank">A19</a> <a href="https://focustaiwan.tw/business/202610230009" rel="noopener noreferrer" target="_blank">A18</a></li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Industry</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Company</span></span> Exposure｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：先進製程/設備比泛AI標籤有直接業務曝險</li>
+<li>證據：TSM公司財報；Lam公司設備營收</li>
+<li>反證／缺口：供應鏈（Supply Chain）各家公司比例未知</li>
+<li>來源與界線：<a href="https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/9f58506f6f114f91cefbf86820cc63297b39b130/3Q26%20Presentation%20(E).pdf" rel="noopener noreferrer" target="_blank">A08</a> <a href="https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026" rel="noopener noreferrer" target="_blank">A07</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Company Exposure <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Earnings｜Confirmed／A</strong></p>
+<ul>
+<li>機制 INFERENCE：Lam已公布盈利；台積電本週舊基線顯示營收及周轉</li>
+<li>證據：TSM庫存（Inventory）天數87→82；Lam每股盈餘（EPS）1.81→2.19</li>
+<li>反證／缺口：TSM毛利下降1.3pp</li>
+<li>來源與界線：<a href="https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/9f58506f6f114f91cefbf86820cc63297b39b130/3Q26%20Presentation%20(E).pdf" rel="noopener noreferrer" target="_blank">A08</a> <a href="https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026" rel="noopener noreferrer" target="_blank">A07</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Earnings <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Valuation｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：盈利成長與股價下跌並存，疑似倍數壓縮但完整同步forwardPE未取得，尚未量化</li>
+<li>證據：SOX與盈利方向不同</li>
+<li>反證／缺口：未取得完整同步forwardPE</li>
+<li>來源與界線：<a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">A01</a> <a href="https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026" rel="noopener noreferrer" target="_blank">A07</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Valuation <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Flow/Positioning｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：股價回落與外資淨賣一致，但未識別多重因子與因果方向</li>
+<li>證據：外資現貨/期貨/廣度弱</li>
+<li>反證／缺口：ETF/避險交易不能全作方向押注</li>
+<li>來源與界線：<a href="https://anuenews.cnyes.com/news/id/6635866" rel="noopener noreferrer" target="_blank">A02</a> <a href="https://www.taifex.com.tw/cht/3/futContractsDate" rel="noopener noreferrer" target="_blank">A03</a> <a href="https://breadthdaily.com/tw/" rel="noopener noreferrer" target="_blank">A05</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Flow/Positioning <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Price Impact｜Partial／C</strong></p>
+<ul>
+<li>機制 INFERENCE：賣壓提高短期下行區間；不由單日流量回歸單點目標</li>
+<li>證據：SOX五日歷史與台灣最後交易日跌幅</li>
+<li>反證／缺口：完整波動/同業敏感度另核驗</li>
+<li>來源與界線：<a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">A01</a> <a href="https://www.wantgoo.com/index/0000" rel="noopener noreferrer" target="_blank">A06</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Price Impact <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Action｜Partial／B</strong></p>
+</li>
+</ol>
+<ul>
+<li>機制 INFERENCE：確認廣度與資金穩定後才執行公司層級條件式Action</li>
+<li>證據：公司層級證據需提供入場/減碼/kill及完整情境</li>
+<li>反證／缺口：本段證據不授予自動買入</li>
+<li>來源與界線：INFERENCE；缺必要公司橋接，無可獨立驗證的數值證據。</li>
+</ul>
+<h3 id="section-主題-2-的十條因果箭頭">主題 2 的十條因果箭頭</h3>
+<ol>
+<li>
+<p><strong>Signal/Event <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Canonical Signal｜Confirmed／B</strong></p>
+<ul>
+<li>機制 INFERENCE：油氣四品種週升與低儲氣構成持續性成本訊號</li>
+<li>證據：JKM+5.00%TTF+7.20%DecBrent+6.24%WTI+4.29%；EU74.6%</li>
+<li>反證／缺口：同報價商非多獨立供應消息；GIE原頁未取得原始頁</li>
+<li>來源與界線：<a href="https://www.investing.com/commodities/lng-japan-korea-marker-platts-futures-historical-data" rel="noopener noreferrer" target="_blank">A22</a> <a href="https://www.investing.com/commodities/dutch-ttf-gas-c1-futures-historical-data" rel="noopener noreferrer" target="_blank">A23</a> <a href="https://www.investing.com/commodities/brent-oil-historical-data" rel="noopener noreferrer" target="_blank">A24</a> <a href="https://www.investing.com/commodities/crude-oil-historical-data" rel="noopener noreferrer" target="_blank">A26</a> <a href="https://voltstack.energy/days-of-gas" rel="noopener noreferrer" target="_blank">A27</a></li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Canonical Signal</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Global</span></span> Market｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：成本/通膨尾部風險牽動折現率與實質成長</li>
+<li>證據：日本corecore2.4%，其餘全球rates由跨資產研究確認</li>
+<li>反證／缺口：日本CPI符合預期不是意外政策衝擊</li>
+<li>來源與界線：<a href="https://www.stat.go.jp/data/cpi/sokuhou/tsuki/pdf/zenkoku.pdf" rel="noopener noreferrer" target="_blank">A16</a> <a href="https://www.marketscreener.com/news/japan-core-inflation-exceeds-boj-target-cements-near-term-rate-hike-chance-ce785cdede88f02d" rel="noopener noreferrer" target="_blank">A17</a></li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Global Market</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Taiwan</span></span> Macro｜Confirmed／A</strong></p>
+<ul>
+<li>機制 INFERENCE：TWD貶與美元能源價格升疊加進口負擔</li>
+<li>證據：CBC32.338→32.508，能源同週上升</li>
+<li>反證／缺口：匯率與油價並非完全獨立事件</li>
+<li>來源與界線：<a href="https://www.cbc.gov.tw/tw/lp-645-1.html" rel="noopener noreferrer" target="_blank">A04</a> <a href="https://www.investing.com/commodities/lng-japan-korea-marker-platts-futures-historical-data" rel="noopener noreferrer" target="_blank">A22</a> <a href="https://www.investing.com/commodities/brent-oil-historical-data" rel="noopener noreferrer" target="_blank">A24</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Taiwan Macro <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Industry｜Confirmed／A</strong></p>
+<ul>
+<li>機制 INFERENCE：政策吸收汽柴油售價波動，成本留在政府/CPC或供應鏈</li>
+<li>證據：CPC10/24正式聲明零售維持不變、稅與企業吸收</li>
+<li>反證／缺口：補貼延緩CPI傳導但不能假設永遠補貼</li>
+<li>來源與界線：<a href="https://www.cpc.com.tw/News_Content.aspx?n=28&amp;s=112945&amp;sms=8920" rel="noopener noreferrer" target="_blank">A20</a></li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Industry</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Company</span></span> Exposure｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：航空/石化/電力密集業存在能源曝險，但係數不同</li>
+<li>證據：CPC政策/企業公告；EVA正式受訪來源需個股研究補足</li>
+<li>反證／缺口：各公司長約和避險比例未知</li>
+<li>來源與界線：<a href="https://www.cpc.com.tw/News_Content.aspx?n=28&amp;s=112945&amp;sms=8920" rel="noopener noreferrer" target="_blank">A20</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Company Exposure <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Earnings｜Partial／C</strong></p>
+<ul>
+<li>機制 INFERENCE：成本能否轉嫁決定盈利，不用原油價直接替代毛利</li>
+<li>證據：需每家公司毛利與避險揭露；未以Oseberg估算</li>
+<li>反證／缺口：需求旺可轉嫁，收入上升可抵成本</li>
+<li>來源與界線：INFERENCE；缺必要公司橋接，無可獨立驗證的數值證據。</li>
+</ul>
+</li>
+<li>
+<p><strong>Earnings <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Valuation｜Partial／C</strong></p>
+<ul>
+<li>機制 INFERENCE：盈利不確定加大所需風險溢酬</li>
+<li>證據：成本壓力情境+折現率研究</li>
+<li>反證／缺口：估值已部分反映不可重複扣價</li>
+<li>來源與界線：INFERENCE；缺必要公司橋接，無可獨立驗證的數值證據。</li>
+</ul>
+</li>
+<li>
+<p><strong>Valuation <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Flow/Positioning｜Partial／C</strong></p>
+<ul>
+<li>機制 INFERENCE：能源/防禦輪動與科技減碼可能伴隨，尚無完整因子歸因</li>
+<li>證據：台股金融相對半導體+2.53pp單日但非能源因子完整測試</li>
+<li>反證／缺口：欠缺同步跨產業完整資金流（Flow）</li>
+<li>來源與界線：<a href="https://www.wantgoo.com/index/0000" rel="noopener noreferrer" target="_blank">A06</a> <a href="https://anuenews.cnyes.com/news/id/6635866" rel="noopener noreferrer" target="_blank">A02</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Flow/Positioning <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Price Impact｜Partial／C</strong></p>
+<ul>
+<li>機制 INFERENCE：價格區間須加入成本轉嫁及匯率情境而非單點油價外推</li>
+<li>證據：個股研究條件情境模型，非已驗證歷史beta</li>
+<li>反證／缺口：Oseberg未確認因此不入情境基準</li>
+<li>來源與界線：INFERENCE；缺必要公司橋接，無可獨立驗證的數值證據。</li>
+</ul>
+</li>
+<li>
+<p><strong>Price Impact <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Action｜Partial／B</strong></p>
+</li>
+</ol>
+<ul>
+<li>機制 INFERENCE：先驗證企業轉嫁能力與避險再決定Action</li>
+<li>證據：待財報/油價/儲氣/匯率同驗證</li>
+<li>反證／缺口：未證實單一公司必受害</li>
+<li>來源與界線：INFERENCE；缺必要公司橋接，無可獨立驗證的數值證據。</li>
+</ul>
+<h3 id="section-主題-3-的十條因果箭頭">主題 3 的十條因果箭頭</h3>
+<ol>
+<li>
+<p><strong>Signal/Event <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Canonical Signal｜Confirmed／A</strong></p>
+<ul>
+<li>機制 INFERENCE：台韓出口訂單與中國分項揭示科技/內需分化</li>
+<li>證據：TW訂單114.21bn；Korea61.612bn；中國投資疲弱</li>
+<li>反證／缺口：工作日/基期差異</li>
+<li>來源與界線：<a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a> <a href="https://customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&amp;mi=2891&amp;nttSn=10180465&amp;nttSnUrl=3b279b0d8ae0387ac138c4741fb65b67" rel="noopener noreferrer" target="_blank">A13</a> <a href="https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965618.html" rel="noopener noreferrer" target="_blank">A15</a></li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Canonical Signal</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Global</span></span> Market｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：外需強支撐收入但未轉為全面風險偏好改善</li>
+<li>證據：SOX週跌與出口擴張相反</li>
+<li>反證／缺口：同期市場受多因素影響</li>
+<li>來源與界線：<a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">A01</a> <a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a></li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Global Market</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Taiwan</span></span> Macro｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：全球AI資本支出（CapEx）經訂單傳至台灣製造</li>
+<li>證據：台灣工業生產+19.17%</li>
+<li>反證／缺口：海外生產比率導致訂單≠出口</li>
+<li>來源與界線：<a href="https://focustaiwan.tw/business/202610230013" rel="noopener noreferrer" target="_blank">A19</a> <a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Taiwan Macro <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Industry｜Confirmed／B</strong></p>
+<ul>
+<li>機制 INFERENCE：製造與服務情緒分歧限制廣泛產業擴散</li>
+<li>證據：TIER製造101.39服務92.65；未來淨樂觀4.2pp</li>
+<li>反證／缺口：服務情緒不是已實現消費量</li>
+<li>來源與界線：<a href="https://focustaiwan.tw/business/202610230009" rel="noopener noreferrer" target="_blank">A18</a></li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Industry</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Company</span></span> Exposure｜Confirmed／B</strong></p>
+<ul>
+<li>機制 INFERENCE：高科技/設備與中國內需曝險有差異</li>
+<li>證據：生產電子+23.62%、機械+26.02%、化工−4.29%</li>
+<li>反證／缺口：產業指數不能代替特定企業曝險</li>
+<li>來源與界線：<a href="https://focustaiwan.tw/business/202610230013" rel="noopener noreferrer" target="_blank">A19</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Company Exposure <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Earnings｜Partial／C</strong></p>
+<ul>
+<li>機制 INFERENCE：營收認列與成本決定訂單轉EPS</li>
+<li>證據：台韓新訂單與公司財報分開核對</li>
+<li>反證／缺口：取消訂單/收入時點風險</li>
+<li>來源與界線：<a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a> <a href="https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/9f58506f6f114f91cefbf86820cc63297b39b130/3Q26%20Presentation%20(E).pdf" rel="noopener noreferrer" target="_blank">A08</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Earnings <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Valuation｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：缺乏廣泛獲利上修不能給整體市場倍數擴張</li>
+<li>證據：TSM營收擴張但毛利QoQ下降</li>
+<li>反證／缺口：不同行業估值不能同倍數</li>
+<li>來源與界線：<a href="https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/9f58506f6f114f91cefbf86820cc63297b39b130/3Q26%20Presentation%20(E).pdf" rel="noopener noreferrer" target="_blank">A08</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Valuation <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Flow/Positioning｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：弱外資/廣度說明資金尚未接受全面復甦</li>
+<li>證據：外資−81.656bn、弱廣度</li>
+<li>反證／缺口：避險及ETF可能擴大單日賣超</li>
+<li>來源與界線：<a href="https://anuenews.cnyes.com/news/id/6635866" rel="noopener noreferrer" target="_blank">A02</a> <a href="https://breadthdaily.com/tw/" rel="noopener noreferrer" target="_blank">A05</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Flow/Positioning <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Price Impact｜Partial／C</strong></p>
+<ul>
+<li>機制 INFERENCE：保留寬情境，避免由高YoY機械推高股價</li>
+<li>證據：價格影響缺可比估值與歷史敏感度</li>
+<li>反證／缺口：沒有完整已驗證beta不可偽精準</li>
+<li>來源與界線：INFERENCE；缺必要公司橋接，無可獨立驗證的數值證據。</li>
+</ul>
+</li>
+<li>
+<p><strong>Price Impact <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Action｜Partial／B</strong></p>
+</li>
+</ol>
+<ul>
+<li>機制 INFERENCE：公司層級驗證再選股，不把中國GDP反彈當傳產全面買訊</li>
+<li>證據：下一全月出口、NDC與公司展望</li>
+<li>反證／缺口：宏觀好不等於入場價好</li>
+<li>來源與界線：INFERENCE；缺必要公司橋接，無可獨立驗證的數值證據。</li>
+</ul>
+<h2 id="section-跨資產驗證-crossasset">跨資產驗證（Crossasset）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>資產與單位</th>
+<th class="numeric">前值 10/16</th>
+<th class="numeric">最新值</th>
+<th class="numeric">週變化</th>
+<th>最新觀察日</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UST2Y（%）</td>
+<td class="numeric">4.74</td>
+<td class="numeric">4.69</td>
+<td class="numeric">-5 bp</td>
+<td>2026-10-23</td>
+<td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a></td>
+</tr>
+<tr>
+<td>UST10Y（%）</td>
+<td class="numeric">5.09</td>
+<td class="numeric">5</td>
+<td class="numeric">-9 bp</td>
+<td>2026-10-23</td>
+<td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a></td>
+</tr>
+<tr>
+<td>UST30Y（%）</td>
+<td class="numeric">5.43</td>
+<td class="numeric">5.33</td>
+<td class="numeric">-10 bp</td>
+<td>2026-10-23</td>
+<td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a></td>
+</tr>
+<tr>
+<td>實質10年（%）</td>
+<td class="numeric">2.74</td>
+<td class="numeric">2.66</td>
+<td class="numeric">-8 bp</td>
+<td>2026-10-23</td>
+<td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;field_tdr_date_value_month=202610&amp;type=daily_treasury_real_yield_curve" rel="noopener noreferrer" target="_blank">M02</a></td>
+</tr>
+<tr>
+<td>DXY（點）</td>
+<td class="numeric">101.84</td>
+<td class="numeric">101.81</td>
+<td class="numeric">-0.03%</td>
+<td>2026-10-23</td>
+<td><a href="https://www.investing.com/indices/usdollar-historical-data" rel="noopener noreferrer" target="_blank">M21</a></td>
+</tr>
+<tr>
+<td>EURUSD（美元／歐元）</td>
+<td class="numeric">1.124</td>
+<td class="numeric">1.1203</td>
+<td class="numeric">-0.33%</td>
+<td>2026-10-23</td>
+<td><a href="https://www.investing.com/currencies/eur-usd-historical-data" rel="noopener noreferrer" target="_blank">M29</a></td>
+</tr>
+<tr>
+<td>USDJPY（日圓／美元）</td>
+<td class="numeric">158.01</td>
+<td class="numeric">156.87</td>
+<td class="numeric">-0.72%</td>
+<td>2026-10-23</td>
+<td><a href="https://www.investing.com/currencies/usd-jpy-historical-data" rel="noopener noreferrer" target="_blank">M30</a></td>
+</tr>
+<tr>
+<td>Gold（美元／盎司）</td>
+<td class="numeric">4181.1</td>
+<td class="numeric">4007.9</td>
+<td class="numeric">-4.14%</td>
+<td>2026-10-23</td>
+<td><a href="https://www.investing.com/commodities/gold-historical-data" rel="noopener noreferrer" target="_blank">M25</a></td>
+</tr>
+<tr>
+<td>SP500（點）</td>
+<td class="numeric">7659.44</td>
+<td class="numeric">7623.68</td>
+<td class="numeric">-0.47%</td>
+<td>2026-10-23</td>
+<td><a href="https://www.investing.com/indices/us-spx-500-historical-data" rel="noopener noreferrer" target="_blank">M26</a></td>
+</tr>
+<tr>
+<td>Nasdaq（點）</td>
+<td class="numeric">26140.03</td>
+<td class="numeric">25955.34</td>
+<td class="numeric">-0.71%</td>
+<td>2026-10-23</td>
+<td><a href="https://www.investing.com/indices/nasdaq-composite-historical-data" rel="noopener noreferrer" target="_blank">M27</a></td>
+</tr>
+<tr>
+<td>SOX（點（四捨五入））</td>
+<td class="numeric">11137.3</td>
+<td class="numeric">10779.5</td>
+<td class="numeric">-3.21%</td>
+<td>2026-10-23</td>
+<td><a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">M28</a></td>
+</tr>
+<tr>
+<td>VIX（點）</td>
+<td class="numeric">19.99</td>
+<td class="numeric">19.45</td>
+<td class="numeric">-2.70%</td>
+<td>2026-10-23</td>
+<td><a href="https://www.cboe.com/tradable-products/vix" rel="noopener noreferrer" target="_blank">M19</a></td>
+</tr>
+<tr>
+<td>MOVE（點）</td>
+<td class="numeric">101.1</td>
+<td class="numeric">103.3</td>
+<td class="numeric">+2.18%</td>
+<td>2026-10-23</td>
+<td><a href="https://www.eoddata.com/stockquote/INDEX/MOVE.htm" rel="noopener noreferrer" target="_blank">M20</a></td>
+</tr>
+<tr>
+<td>HY_OAS（%）</td>
+<td class="numeric">3.31</td>
+<td class="numeric">3.4</td>
+<td class="numeric">+9 bp</td>
+<td>2026-10-22</td>
+<td><a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" rel="noopener noreferrer" target="_blank">M13</a></td>
+</tr>
+<tr>
+<td>IG_OAS（%）</td>
+<td class="numeric">0.85</td>
+<td class="numeric">0.89</td>
+<td class="numeric">+4 bp</td>
+<td>2026-10-22</td>
+<td><a href="https://fred.stlouisfed.org/series/BAMLC0A0CM" rel="noopener noreferrer" target="_blank">M12</a></td>
+</tr>
+<tr>
+<td>SOFR（%）</td>
+<td class="numeric">3.88</td>
+<td class="numeric">3.9</td>
+<td class="numeric">+2 bp</td>
+<td>2026-10-22</td>
+<td><a href="https://fred.stlouisfed.org/series/SOFR" rel="noopener noreferrer" target="_blank">M14</a></td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>補充公司跨市場觀察</th>
+<th class="numeric">前值</th>
+<th class="numeric">最新值</th>
+<th>變化</th>
+<th>日期／限制</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TSM ADR（美元／ADR）</td>
+<td class="numeric">412.61</td>
+<td class="numeric">418.51</td>
+<td>週+1.43%；單日+1.49%</td>
+<td>10/16→10/23；非台股同步價格</td>
+<td><a href="https://stockanalysis.com/stocks/tsm/history/" rel="noopener noreferrer" target="_blank">E99</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>台積電美國存託憑證（ADR）本週上漲，是半導體指數偏弱的重要反證；因此本報只說廣泛科技及台灣現貨偏弱，不宣稱所有科技市場或台積電各市場均下跌。跨市場日期、匯率與換股比率未同步核驗，不計套利溢價。</p>
+<p><a href="https://stockanalysis.com/stocks/tsm/history/" rel="noopener noreferrer" target="_blank">E99</a></p>
+<p>美債價格上升、股票下跌與信用利差（Credit Spread）擴大，比單純利率衝擊更接近避險與風險溢酬重估。可是 VIX 週降、美元指數近乎不變及融資利率未脫錨，又否定了全面恐慌或美元危機的強結論。</p>
+<p>黃金歷史列與頁首報價不同，日圓、美元指數及 MOVE 亦存在頁首與日期列差異，本報一致採日期列。長期連續合約調整及跨幣別基差未驗證，黃金背離只保留低信心觀察。</p>
+<h2 id="section-流動性與財政公債-liquidity-fiscal-treasury">流動性與財政公債（Liquidity Fiscal Treasury）</h2>
+<p>準備金單週減少與財政部一般帳戶增加同時出現，顯示財政現金時點吸收銀行流動性（Liquidity）緩衝。同期聯準會證券持有略增，不應把準備金下降全部稱為量化緊縮，也不能直接換算台股跌幅。</p>
+<p><a href="https://www.federalreserve.gov/releases/h41/current/" rel="noopener noreferrer" target="_blank">M03</a></p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>資金市場項目</th>
+<th>最新事實</th>
+<th>反證或口徑</th>
+<th>下一驗證</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SOFR／IORB</td>
+<td>3.90%／3.90%</td>
+<td>未確認隔夜融資脫錨</td>
+<td>月末能否持續貼近政策利率</td>
+</tr>
+<tr>
+<td>主要信貸／央行交換</td>
+<td>8.935／0.170十億美元</td>
+<td>均較前週下降</td>
+<td>是否連續增加並伴利差擴大</td>
+</tr>
+<tr>
+<td>逆回購負債</td>
+<td>合計327.238十億美元</td>
+<td>外國官方326.910；其他0.328</td>
+<td>不可把全部視作可用 ON RRP 緩衝</td>
+</tr>
+<tr>
+<td>2／5／7年供給</td>
+<td>暫定10/26、27、29；11/2交割</td>
+<td>規模取自次級日程；非拍賣失敗</td>
+<td>尾差、投標倍數、一級交易商承接</td>
+</tr>
+</tbody>
+</table></div>
+<p>公債供給壓力須經拍賣尾差、承接結構與結算後融資利率確認，不因公告總額而升級風險燈號。官方暫定日程支持日期，二年、五年、七年金額分別為六百九十、七百、四百四十億美元，僅獲次級核驗。</p>
+<p><a href="https://www.treasury.gov/resource-center/data-chart-center/quarterly-refunding/Documents/auctions.pdf" rel="noopener noreferrer" target="_blank">M34</a> <a href="https://www.fhlbny.com/w/fi/msd/2026/261023" rel="noopener noreferrer" target="_blank">M15</a> <a href="https://fred.stlouisfed.org/series/SOFR" rel="noopener noreferrer" target="_blank">M14</a> <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm" rel="noopener noreferrer" target="_blank">M10</a></p>
+<h2 id="section-台灣經濟與政策-taiwan-economy-policy">台灣經濟與政策（Taiwan Economy Policy）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>傳導層</th>
+<th>本週判斷</th>
+<th>時間尺度</th>
+<th>限制與反證</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>經濟</td>
+<td>科技外需強，服務與中國內需較弱</td>
+<td>1–3季</td>
+<td>外銷訂單（Export Orders）不全在台灣生產</td>
+</tr>
+<tr>
+<td>政策</td>
+<td>汽柴油售價吸收緩衝消費物價</td>
+<td>數週至數季</td>
+<td>不等於能源成本消失或央行將寬鬆</td>
+</tr>
+<tr>
+<td>產業</td>
+<td>先進製程及設備較有實體支持</td>
+<td>1–3季</td>
+<td>航空、化工等須個別核對轉嫁</td>
+</tr>
+<tr>
+<td>公司與估值（Valuation）</td>
+<td>股價先反映利率、外資及部位（Positioning）</td>
+<td>即時至數週</td>
+<td>宏觀曝險不是已核驗 每股盈餘（EPS）</td>
+</tr>
+<tr>
+<td>匯率與亞洲</td>
+<td>弱台幣增進口成本；日圓／中國放大風險</td>
+<td>即時至1–3季</td>
+<td>出口換算受避險與美元成本抵銷</td>
+</tr>
+</tbody>
+</table></div>
+<p>最後交易日台股廣度偏弱，上市櫃上漲三百九十三家、下跌一千四百一十五家，僅百分之三十七點三站上季線。這是市場參與度證據，不能以少數 AI 財報強勢取代廣度修復。</p>
+<p><a href="https://breadthdaily.com/tw/" rel="noopener noreferrer" target="_blank">A05</a> <a href="https://www.wantgoo.com/index/0000" rel="noopener noreferrer" target="_blank">A06</a> <a href="https://anuenews.cnyes.com/news/id/6635866" rel="noopener noreferrer" target="_blank">A02</a> <a href="https://www.taifex.com.tw/cht/3/futContractsDate" rel="noopener noreferrer" target="_blank">A03</a> <a href="https://www.cbc.gov.tw/tw/lp-645-1.html" rel="noopener noreferrer" target="_blank">A04</a></p>
+<h3 id="section-能源價格與實體庫存">能源價格與實體庫存</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>標的與單位</th>
+<th class="numeric">10/23現值</th>
+<th class="numeric">1日</th>
+<th class="numeric">5交易日／7日窗</th>
+<th class="numeric">20交易間隔</th>
+<th>20日低／高</th>
+<th>資料口徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lng_jkm USD/MMBtu</td>
+<td class="numeric">31.42</td>
+<td class="numeric">+2.60%</td>
+<td class="numeric">+5.00%</td>
+<td class="numeric">+21.71%</td>
+<td>25.435／31.42</td>
+<td>次級日價；非週末即時</td>
+</tr>
+<tr>
+<td>gas_ttf EUR/MWh</td>
+<td class="numeric">93.853</td>
+<td class="numeric">+4.23%</td>
+<td class="numeric">+7.20%</td>
+<td class="numeric">+30.22%</td>
+<td>69.0／94.025</td>
+<td>次級日價；非週末即時</td>
+</tr>
+<tr>
+<td>oil_brent USD/bbl</td>
+<td class="numeric">116.72</td>
+<td class="numeric">+3.14%</td>
+<td class="numeric">+6.24%</td>
+<td class="numeric">+18.11%</td>
+<td>95.12／117.45</td>
+<td>次級日價；非週末即時</td>
+</tr>
+<tr>
+<td>oil_wti USD/bbl</td>
+<td class="numeric">103.27</td>
+<td class="numeric">+3.82%</td>
+<td class="numeric">+4.29%</td>
+<td class="numeric">+11.75%</td>
+<td>86.86／103.92</td>
+<td>次級日價；非週末即時</td>
+</tr>
+</tbody>
+</table></div>
+<p>二十日變動以九月二十五日至十月二十三日二十個交易間隔計算；短窗高低不是長期百分位。完整五年季節價格帶、標準分數與長期百分位皆為 null，連續合約換月調整亦未全面核驗。</p>
+<p><a href="https://www.investing.com/commodities/lng-japan-korea-marker-platts-futures-historical-data" rel="noopener noreferrer" target="_blank">A22</a> <a href="https://www.investing.com/commodities/dutch-ttf-gas-c1-futures-historical-data" rel="noopener noreferrer" target="_blank">A23</a> <a href="https://www.investing.com/commodities/brent-oil-historical-data" rel="noopener noreferrer" target="_blank">A24</a> <a href="https://www.investing.com/commodities/crude-oil-historical-data" rel="noopener noreferrer" target="_blank">A26</a></p>
+<p>Brent 十二月、次年一月及二月為一百一十六點七二、一百一十一點七〇及一百零七點三二美元；近月較高的逆價差與供應偏緊一致。它不能證明某一地緣事件的獨立貢獻，也不是換月後油價驟跌。</p>
+<p><a href="https://www.investing.com/commodities/brent-oil-contracts" rel="noopener noreferrer" target="_blank">A25</a></p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>實體項目</th>
+<th>最新觀察</th>
+<th>比較基準</th>
+<th>解讀與缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>歐洲儲氣</td>
+<td>10/23為74.6%</td>
+<td>同日五年均值89.5%；差−14.9pp</td>
+<td>次級資料；每日與週變化 null</td>
+</tr>
+<tr>
+<td>歐洲注氣</td>
+<td>近7日511 GWh／日</td>
+<td>季節正常715 GWh／日</td>
+<td>仍在注氣，不能稱連續去庫存（Inventory）</td>
+</tr>
+<tr>
+<td>美國天然氣</td>
+<td>10/16庫存3,644 Bcf；週增77</td>
+<td>五年均值3,609 Bcf</td>
+<td>美國正常庫存不等同全球 LNG 過剩</td>
+</tr>
+<tr>
+<td>Oseberg</td>
+<td>次級訊息稱停用容量12.7 mcm／日</td>
+<td>實際出口流量僅到事件前10/23</td>
+<td>增量損失 null；Unconfirmed／D</td>
+</tr>
+</tbody>
+</table></div>
+<p>Oseberg 的停用容量約占其技術容量四成六，但容量比例不是挪威出口減量比例。預計結束時間不等於已恢復生產；缺少事件後實際流量，故不作行動、風險燈號升級或價格量化的依據。</p>
+<p><a href="https://voltstack.energy/norway-gas-flows" rel="noopener noreferrer" target="_blank">A28</a> <a href="https://voltstack.energy/days-of-gas" rel="noopener noreferrer" target="_blank">A27</a> <a href="https://ir.eia.gov/ngs/ngs.html" rel="noopener noreferrer" target="_blank">A29</a></p>
+<p>中油十月二十四日宣布下週零售價格不變，稅負與公司吸收分擔部分上升成本。累計吸收金額不是單週支出；本週亦未核驗新電價決議，不能由凍漲推導科技公司電力成本已全面下降。</p>
+<p><a href="https://www.cpc.com.tw/News_Content.aspx?n=28&amp;s=112945&amp;sms=8920" rel="noopener noreferrer" target="_blank">A20</a></p>
+<h2 id="section-產業與個股-industry-equity">產業與個股（Industry Equity）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>產業環節</th>
+<th>新增證據</th>
+<th>盈利傳導</th>
+<th>主要缺口</th>
+<th>研究狀態</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>晶圓代工／設備</td>
+<td>Lam 新財報；台積電既有前瞻指引（Guidance）</td>
+<td>利用率、產品組合與現金轉換</td>
+<td>估值（Valuation）與公司資金彈性</td>
+<td>Watch</td>
+</tr>
+<tr>
+<td>測試</td>
+<td>客戶量化美國新廠預付款</td>
+<td>服務量扣成本折舊後才成 每股盈餘（EPS）</td>
+<td>合約量、利用率、毛利</td>
+<td>Watch</td>
+</tr>
+<tr>
+<td>CPO 封裝</td>
+<td>客戶量化未來擴產倍數</td>
+<td>絕對量與良率決定集團貢獻</td>
+<td>基數、價格、控股公司占比</td>
+<td>Watch</td>
+</tr>
+<tr>
+<td>基板</td>
+<td>多供應商容量預訂</td>
+<td>材料、稼動與折舊決定利潤</td>
+<td>不可把合計倍數配給一家</td>
+<td>Watch</td>
+</tr>
+<tr>
+<td>電源與散熱</td>
+<td>既有營收（Revenue）及產品展示</td>
+<td>交付與毛利而非缺電敘事</td>
+<td>本週盈利上修、AI 拆分</td>
+<td>Watch</td>
+</tr>
+</tbody>
+</table></div>
+<p>同一 NVIDIA 公告及其新聞轉述是一件需求事件，不能因多個連結而計作多重獨立驗證。Dell 的企業採用觀察提供不同來源的需求廣度，但也不是台灣供應商單價、毛利或每股盈餘的直接證明。</p>
+<p><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a> <a href="https://www.cna.com.tw/news/afe/202610210339.aspx" rel="noopener noreferrer" target="_blank">E05</a> <a href="https://www.dell.com/en-us/dt/corporate/newsroom/announcements/detailpage.press-releases~usa~2026~10~dell-technologies-and-nvidia-advance-enterprise-agentic-ai-from-the-deskside-to-data-center.htm" rel="noopener noreferrer" target="_blank">E19</a></p>
+<h2 id="section-市場週期與基本面週期-market-vs-fundamental-cycle">市場週期與基本面週期（Market vs Fundamental Cycle）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>層次</th>
+<th>市場週期（Market Cycle）</th>
+<th>基本面週期（Fundamental Cycle）</th>
+<th>策略含意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全球半導體</td>
+<td>SOX 相對偏弱</td>
+<td>設備及部分代工盈利擴張</td>
+<td>不把股跌定義需求崩潰</td>
+</tr>
+<tr>
+<td>台灣 AI 供應鏈（Supply Chain）</td>
+<td>外資、廣度與匯率偏弱</td>
+<td>產能承諾增加，兌現時間各異</td>
+<td>不把建廠定義當季獲利</td>
+</tr>
+<tr>
+<td>亞洲總體</td>
+<td>未形成全面風險偏好改善</td>
+<td>科技出口強、內需分化</td>
+<td>避免總體成長一把尺</td>
+</tr>
+<tr>
+<td>能源</td>
+<td>四品種週漲</td>
+<td>庫存（Inventory）低、仍有注氣與供給反證</td>
+<td>逐家核對成本轉嫁</td>
+</tr>
+</tbody>
+</table></div>
+<p>市場通常早於獲利反映風險，但領先不等於每次都正確。當價格與基本面相反時，將原因拆為盈利修訂、估值（Valuation）、資金與殘差；缺乏同步估值資料時，只能說股價弱，不能宣稱已量化的降評價（De-rating）。</p>
+<p>再評價（Re-rating）與降評價應由可比盈利和估值倍數證實，不以股價漲跌直接命名。台積電 ADR 週升而台灣現貨週跌，亦顯示市場週期存在不同收盤時間與區域資金差異，不能抹去反證以維持單一敘事。</p>
+<h2 id="section-策略矩陣-strategy-matrix">策略矩陣（Strategy Matrix）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>時間尺度</th>
+<th>最重要因子</th>
+<th>目前判斷</th>
+<th>可研究方向</th>
+<th>確認條件</th>
+<th>撤回條件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–5交易日</td>
+<td>FOMC、資金、相對強弱</td>
+<td>波動風險仍高</td>
+<td>觀察而非自動執行</td>
+<td>外資及廣度至少兩日修復</td>
+<td>融資脫錨、信用與股價同步惡化</td>
+</tr>
+<tr>
+<td>1–4週</td>
+<td>PCE、全月出口、公司前瞻指引（Guidance）</td>
+<td>分化延續</td>
+<td>先驗盈利與現金轉換</td>
+<td>每股盈餘（EPS）／估值（Valuation）／Flow 同口徑補齊</td>
+<td>指引或現金轉換下修</td>
+</tr>
+<tr>
+<td>1–2季</td>
+<td>量產、利用率、折舊與交付</td>
+<td>AI 基本面較強但尚需兌現</td>
+<td>逐家公司更新研究</td>
+<td>收入毛利與現金回收一致</td>
+<td>延後、取消或資本支出（CapEx）回報惡化</td>
+</tr>
+</tbody>
+</table></div>
+<p>本矩陣是一般研究框架，沒有假定個人資產、成本、槓桿或持倉。風險燈號為 YELLOW，不等於要求清倉；同樣，對 AI 基本面的較高信心，也不構成任何一家公司的買入或加碼指令。</p>
+<h2 id="section-台股行動矩陣-taiwan-equity-action-matrix">台股行動矩陣（Taiwan Equity Action Matrix）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>公司</th>
+<th class="numeric">10/22收盤元</th>
+<th>單日／可比週變化</th>
+<th>曝險</th>
+<th>已反映程度</th>
+<th>觀察／Action</th>
+<th>證據／信心</th>
+<th>下一缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2330 台積電</td>
+<td class="numeric">2385</td>
+<td>-1.45%／-1.45%</td>
+<td>先進製程與封裝</td>
+<td>部分反映；未量化</td>
+<td>Watch／null</td>
+<td>C／財務事實中高；價格/Action因果低</td>
+<td>增量每股盈餘（EPS）、估值（Valuation）及資金因果</td>
+</tr>
+<tr>
+<td>2449 京元電子</td>
+<td class="numeric">262.5</td>
+<td>-5.58%／null</td>
+<td>晶片測試、AeternZ美國新廠</td>
+<td>部分反映；未量化</td>
+<td>Watch／null</td>
+<td>C／營建承諾高；EPS/Action低</td>
+<td>增量EPS、估值及資金因果</td>
+</tr>
+<tr>
+<td>3711 日月光投控</td>
+<td class="numeric">654</td>
+<td>-4.39%／null</td>
+<td>矽品CPO光學引擎；集團尚有其他封測/EMS</td>
+<td>部分反映；未量化</td>
+<td>Watch／null</td>
+<td>C／產能規劃高；集團獲利映射低</td>
+<td>增量EPS、估值及資金因果</td>
+</tr>
+<tr>
+<td>3037 欣興</td>
+<td class="numeric">1085</td>
+<td>-1.36%／null</td>
+<td>台灣KF基板擴產</td>
+<td>部分反映；未量化</td>
+<td>Watch／null</td>
+<td>C／客戶預約高；每股獲利橋接低</td>
+<td>增量EPS、估值及資金因果</td>
+</tr>
+<tr>
+<td>2308 台達電</td>
+<td class="numeric">1560</td>
+<td>-4.00%／-4.59%</td>
+<td>AI電源/配電與散熱</td>
+<td>部分反映；未量化</td>
+<td>Watch／null</td>
+<td>C／營收（Revenue）及價格中高；Action低</td>
+<td>增量EPS、估值及資金因果</td>
+</tr>
+</tbody>
+</table></div>
+<p>合法行動狀態包含 Overweight/Aggressive Positive、Positive、Buy-on-Weakness Setup、Hold、Neutral、Trim-on-Strength、Reduce 與 Avoid。</p>
+<p>本期不符合支持門檻，全部為 Watch、Action=null；不拿 Neutral 或 Hold 充當缺證據的替代碼。</p>
+<p>下列 Entry、Add、Reduce 與 Kill 是未來研究解鎖、風險重評及論點失效條件，並非本期下單指令。尤其價格回升或外資改善只是必要觀察之一，不能代替尚缺的公司遠期盈利、估值及資金彈性證據。</p>
+<h3 id="section-2330-台積電-的驗證條件">2330 台積電 的驗證條件</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>Entry 研究解鎖</th>
+<th>Add 提高信心</th>
+<th>Reduce 風險重評</th>
+<th>Kill 論點失效</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>未觸發：至少兩交易日不創10/22低點並收復2420；同期外資由淨賣轉為連兩日非負；重新核實CFO/存貨與Q4前瞻指引（Guidance）且不需倍數擴張</td>
+<td>沿用舊研究較嚴條件：Q4實現營收較目前指引中點再高&gt;5%、營業利益率&gt;58%且現金流支持；目前未發生</td>
+<td>若反彈僅倍數擴張但新Q4訂單（Order）/營益率下修，降低研究配置；單純價格高不等於減碼</td>
+<td>公司Q4營收指引下緣下調且CFO/庫存（Inventory）周轉同步轉差；單日股價下跌不作基本面kill</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>來源：</strong> <a href="https://pr.tsmc.com/english/news/3346" rel="noopener noreferrer" target="_blank">E01</a> <a href="https://investor.tsmc.com/schinese/encrypt/files/encrypt_file/reports/2026-10/4cd2e3da18b32b94af7f114c7f27b5291fceea66/3Q26%20Presentation%20%28E%29.pdf" rel="noopener noreferrer" target="_blank">E02</a> <a href="https://www.stocktitan.net/sec-filings/TSMWF/6-k-taiwan-semiconductor-manufacturing-co-ltd-current-report-foreign--e503d3f14bce.html" rel="noopener noreferrer" target="_blank">E03</a> <a href="https://www.cna.com.tw/news/afe/202610220177.aspx" rel="noopener noreferrer" target="_blank">E06</a> <a href="https://histock.tw/index/TSL" rel="noopener noreferrer" target="_blank">E15</a> <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a> <a href="https://www.dell.com/en-us/dt/corporate/newsroom/announcements/detailpage.press-releases~usa~2026~10~dell-technologies-and-nvidia-advance-enterprise-agentic-ai-from-the-deskside-to-data-center.htm" rel="noopener noreferrer" target="_blank">E19</a></p>
+<h3 id="section-2449-京元電子-的驗證條件">2449 京元電子 的驗證條件</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>Entry 研究解鎖</th>
+<th>Add 提高信心</th>
+<th>Reduce 風險重評</th>
+<th>Kill 論點失效</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>取得新廠毛利、折舊、利用率與合約最低量；核驗Q3CFO/EPS及估值後，再要求連兩日外資/相對強弱確認</td>
+<td>2027/4投產按時且已確認服務收入與毛利達董事會/法說可比目標；尚無可執行加碼</td>
+<td>已持有者若反彈但預付款條件轉差或投產延後，先檢討風險曝險</td>
+<td>產能預約撤回/重大延遲且資金缺口擴大；非把付款當不可取消保證</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>來源：</strong> <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a> <a href="https://www.cna.com.tw/news/afe/202610210339.aspx" rel="noopener noreferrer" target="_blank">E05</a> <a href="https://news.pchome.com.tw/finance/cna/20261013/index-17918769863048718003.html" rel="noopener noreferrer" target="_blank">E18</a> <a href="https://tw.finance.yahoo.com/quote/2449" rel="noopener noreferrer" target="_blank">E07</a> <a href="https://histock.tw/stock/tchart.aspx?m=m520&amp;no=2449" rel="noopener noreferrer" target="_blank">E08</a></p>
+<h3 id="section-3711-日月光投控-的驗證條件">3711 日月光投控 的驗證條件</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>Entry 研究解鎖</th>
+<th>Add 提高信心</th>
+<th>Reduce 風險重評</th>
+<th>Kill 論點失效</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>先取得CPO量產良率、可交付絕對量與獲利拆分，再核估值；需封測相對強弱停止下滑</td>
+<td>公司正式揭露CPO收入與毛利且上修整體獲利，不以15倍產能直接觸發</td>
+<td>反彈先行而收入/良率低於公司目標、集團營益率下修時檢討減碼</td>
+<td>主要客戶取消或延後CPO平台、良率未改善且擴產形成減損</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>來源：</strong> <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a> <a href="https://www.cna.com.tw/news/afe/202610210339.aspx" rel="noopener noreferrer" target="_blank">E05</a> <a href="https://superpy.kgieworld.com.tw/kgipythonapi/stockInfo/stockCalendar?stockCode=3711" rel="noopener noreferrer" target="_blank">E09</a> <a href="https://gfe-desktop.cnyes.com/news/id/6628388/print" rel="noopener noreferrer" target="_blank">E17</a></p>
+<h3 id="section-3037-欣興-的驗證條件">3037 欣興 的驗證條件</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>Entry 研究解鎖</th>
+<th>Add 提高信心</th>
+<th>Reduce 風險重評</th>
+<th>Kill 論點失效</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公司確認量產時程、折舊/資本支出（CapEx）、材料供應及毛利指引；外資至少兩日回流而非單日28張</td>
+<td>量產達利用率門檻且公司毛利/自由現金流均改善；門檻待公司披露後訂定</td>
+<td>反彈但材料成本上升無法轉嫁或產能預約轉弱時審視</td>
+<td>KF延期超一季並伴客戶撤單或現金流缺口擴大</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>來源：</strong> <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a> <a href="https://www.cna.com.tw/news/afe/202610210339.aspx" rel="noopener noreferrer" target="_blank">E05</a> <a href="https://superpy.kgieworld.com.tw/kgipythonapi/stockInfo/dayIISBList?stockCode=3037" rel="noopener noreferrer" target="_blank">E10</a></p>
+<h3 id="section-2308-台達電-的驗證條件">2308 台達電 的驗證條件</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>Entry 研究解鎖</th>
+<th>Add 提高信心</th>
+<th>Reduce 風險重評</th>
+<th>Kill 論點失效</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>先核完整Q3財報、AI收入/毛利拆分與現金流，沿用前報營益率≥16%驗證；再看外資連兩日停止淨賣</td>
+<td>AI電源訂單成為已交付收入、毛利改善且營益率門檻成立；目前不具加碼依據</td>
+<td>已持有者若反彈但公司下修營益率/延後大型項目且外資繼續流出再檢討</td>
+<td>已確認大型AI電源訂單取消且連兩季營益率惡化；不是把股價下跌當需求消失</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>來源：</strong> <a href="https://www.deltaww.com/en-US/press/41160" rel="noopener noreferrer" target="_blank">E11</a> <a href="https://www.deltaww.com/en-US/press/41167" rel="noopener noreferrer" target="_blank">E12</a> <a href="https://tweb.money-link.com.tw/TWStock/StockChips.aspx?SymId=2308&amp;TWMId=Chips_STK04" rel="noopener noreferrer" target="_blank">E13</a> <a href="https://www.cna.com.tw/news/afe/202610220177.aspx" rel="noopener noreferrer" target="_blank">E06</a> <a href="https://news.nextapple.com/finance/20261016/1431DA3A2CA5E75FE824CD7E37929AD5" rel="noopener noreferrer" target="_blank">E14</a></p>
+<h2 id="section-重點個股深析-top-stock-deep-dives">重點個股深析（Top Stock Deep Dives）</h2>
+<h3 id="section-2330-台積電-深度分析">2330 台積電 深度分析</h3>
+<ul>
+<li>
+<p><strong>本週新增與窗口前基線：</strong> 本週新客戶端擴產承諾延續AI需求；舊Q3強財報未轉成股價修復</p>
+</li>
+<li>
+<p><strong>財務基線：</strong> Q3美元營收（Revenue）46.72bn、每股盈餘（EPS）29.43；Q4前瞻指引（Guidance）52.3–54.3bn、OPM56.5–58.5%；均10/15發布，不是本週上修</p>
+</li>
+<li>
+<p><strong>公司反證：</strong> Q3GM66.4%較Q2低1.3ppt；營運強但價格仍受折現率/資金壓力</p>
+</li>
+</ul>
+<p>TSMC本期最完整的財務錨在10/15已發布，新增的不是另一份公司指引，而是客戶供應鏈（Supply Chain）承諾與本週價格仍弱。</p>
+<p>Q3 CFO919.77、FCF476.56十億元相對Q2改善，但現金流表本期只獲6K鏡像摘錄；部分官方財務表全文未取得不得稱全文核驗。庫存（Inventory）金額上升與周轉天數下降可同時存在；不能只讀金額便稱需求惡化。</p>
+<p>目前Action=null，僅Watch；未來研究進場設定須先補足估值（Valuation）/Flow/價格因果證據且不得自稱原報告Entry已觸發。短週期模型以倍數/Flow為主，長週期才提高EPS敏感度；</p>
+<p>所有效果與概率是明示假設，沒有歷史校準。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>財務基線</th>
+<th class="numeric">Q2</th>
+<th class="numeric">Q3</th>
+<th>口徑／判讀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>毛利率（Gross Margin）</td>
+<td class="numeric">67.7%</td>
+<td class="numeric">66.4%</td>
+<td>下降1.3pp；不是本週修訂</td>
+</tr>
+<tr>
+<td>庫存天數</td>
+<td class="numeric">87</td>
+<td class="numeric">82</td>
+<td>周轉改善與庫存金額上升可並存</td>
+</tr>
+<tr>
+<td>庫存十億元</td>
+<td class="numeric">385.53</td>
+<td class="numeric">427.75</td>
+<td>金額不能單獨判需求</td>
+</tr>
+<tr>
+<td>CFO 十億元</td>
+<td class="numeric">783.36</td>
+<td class="numeric">919.77</td>
+<td>部分財務表採索引／6K鏡像；有限核驗</td>
+</tr>
+</tbody>
+</table></div>
+<p>ADR 十月二十三日收盤418.51美元，對十六日412.61美元上漲1.43%；台灣現貨二十二日收盤2,385元，對十六日下跌1.45%。</p>
+<p>兩者觀察終點不同，折溢價為 null，不以未核驗的換股比率及非同步匯率推出套利。 <a href="https://stockanalysis.com/stocks/tsm/history/" rel="noopener noreferrer" target="_blank">E99</a></p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>盈利貢獻</th>
+<th>估值貢獻</th>
+<th>資金與部位（Positioning）</th>
+<th>歷史／同業敏感度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q4管理層營收範圍與Q3獲利支持成長，但季度EPS不等於遠期EPS；模型只作條件敏感度</td>
+<td>折現率與風險偏好可壓低倍數；不由價格下跌推定估值便宜</td>
+<td>公司或市場報價顯示利多未帶來買盤確認；完整公司資金流（Flow）基準不足</td>
+<td>null；缺可重現跨週期日價、估值及同業樣本；不得套用 beta</td>
+</tr>
+</tbody>
+</table></div>
+<h4>十條公司專屬因果箭頭</h4>
+<ol>
+<li>
+<p><strong>Signal/Event <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Canonical Signal｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：事件映射到AI基本面而非直接風險偏好</li>
+<li>證據：本節「本週新增與窗口前基線」已列明事件與日期；不是另一件新增事件。</li>
+<li>反證／缺口：商業承諾不保證準時量產或盈利；須與本節公司特定風險合讀。</li>
+<li>來源與界線：<a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a> <a href="https://www.dell.com/en-us/dt/corporate/newsroom/announcements/detailpage.press-releases~usa~2026~10~dell-technologies-and-nvidia-advance-enterprise-agentic-ai-from-the-deskside-to-data-center.htm" rel="noopener noreferrer" target="_blank">E19</a>；事件事實，不保證盈利。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Canonical Signal</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Global</span></span> Market｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：增加潛在供應/需求可見度，與美國科技市場折現率競爭</li>
+<li>證據：前述公司事件提高業務能見度；全球科技價格並未同步轉強。</li>
+<li>反證／缺口：共同宏觀因子可能壓過公司事件；不能把指數變化全部歸因本事件。</li>
+<li>來源與界線：<a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">M28</a>；公司事件基線見本節開頭，因果仍為推論。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Global Market</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Taiwan</span></span> Macro｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：全球AI資本形成經出口/台商海外獲利傳入，不等同所有台灣產業</li>
+<li>證據：台灣外需與製造資料提供產業背景；不是公司收入的直接證明。</li>
+<li>反證／缺口：外銷訂單（Export Orders）含海外生產；台灣總體成長不等於特定公司 EPS。</li>
+<li>來源與界線：<a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a> <a href="https://focustaiwan.tw/business/202610230013" rel="noopener noreferrer" target="_blank">A19</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Taiwan Macro <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Industry｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：高階晶片外需透過台積電晶圓製造/封裝產能轉入台灣生產；海外製造占比與匯率效果須分開</li>
+<li>證據：前述公司產品與產能基線；營運時程及海外生產須獨立核對。</li>
+<li>反證／缺口：產業需求亦可能被競爭者承接，或受成本、材料與時程限制。</li>
+<li>來源與界線：公司產品與容量曝險見本節事件基線；新增份額尚未核驗。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Industry</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Company</span></span> Exposure｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：公司受惠取決產品與客戶份額</li>
+<li>證據：前述公司曝險已確認存在；新增份額與集團貢獻尚未量化。</li>
+<li>反證／缺口：產能、訂單（Order）與產品曝險不等於已實現收入，更非已實現利潤。</li>
+<li>來源與界線：公司產品與容量曝險見本節事件基線；新增份額尚未核驗。</li>
+</ul>
+</li>
+<li>
+<p><strong>Company Exposure <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Earnings｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：產能×利用率×價格−成本/折舊才成為EPS；預付款非營收</li>
+<li>證據：前述財務基線或客戶承諾；尚缺本週新增可持續 EPS 的完整橋接。</li>
+<li>反證／缺口：折舊、良率、價格、產品組合與現金回收可抵銷營收增量。</li>
+<li>來源與界線：<a href="https://pr.tsmc.com/english/news/3346" rel="noopener noreferrer" target="_blank">E01</a> <a href="https://www.stocktitan.net/sec-filings/TSMWF/6-k-taiwan-semiconductor-manufacturing-co-ltd-current-report-foreign--e503d3f14bce.html" rel="noopener noreferrer" target="_blank">E03</a>；未取得新增可持續 EPS 的完整橋接。</li>
+</ul>
+</li>
+<li>
+<p><strong>Earnings <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Valuation｜Unconfirmed／B</strong></p>
+<ul>
+<li>機制 INFERENCE：EPS與利率共同決定估值；不機械給倍數</li>
+<li>證據：未取得同口徑遠期 EPS 與可比估值分布；不由價格下跌推算便宜。</li>
+<li>反證／缺口：折現率及所需風險溢酬可改變；尚未量化市場已反映多少。</li>
+<li>來源與界線：<a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a>；遠期 EPS 與估值分布仍為 null。</li>
+</ul>
+</li>
+<li>
+<p><strong>Valuation <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Flow/Positioning｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：估值不保證資金回流，機構風險預算會迫售</li>
+<li>證據：本節報價及資金觀察；不是由估值變動識別出的資金回流。</li>
+<li>反證／缺口：避險、ETF 與風險預算調整可帶來非估值驅動的買賣。</li>
+<li>來源與界線：<a href="https://histock.tw/index/TSL" rel="noopener noreferrer" target="_blank">E15</a> <a href="https://www.cna.com.tw/news/afe/202610220177.aspx" rel="noopener noreferrer" target="_blank">E06</a>；報價與資金相關不等於方向因果。</li>
+</ul>
+</li>
+<li>
+<p><strong>Flow/Positioning <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Price Impact｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：資金流與估值/盈餘共同影響股價，但欠可識別彈性</li>
+<li>證據：歷史與同業敏感度樣本未建立，資金到股價的彈性不可得。</li>
+<li>反證／缺口：缺少可重現樣本，不能用相關性作因果或把假設當預測。</li>
+<li>來源與界線：INFERENCE；未建立可驗證數值模型，亦無已確認觸發。</li>
+</ul>
+</li>
+<li>
+<p><strong>Price Impact <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Action｜Unconfirmed／C</strong></p>
+</li>
+</ol>
+<ul>
+<li>機制 INFERENCE：僅有完整證據與未來條件才將觀察轉為Action</li>
+<li>證據：研究條件列於行動矩陣；尚未完成全部必要證據，無有效觸發。</li>
+<li>反證／缺口：任何必要末端橋接未確認，皆維持 Watch／Action=null。</li>
+<li>來源與界線：INFERENCE；未建立可驗證數值模型，亦無已確認觸發。</li>
+</ul>
+<p>末端價格與行動橋接尚未確認，故保持 Watch／Action=null。公司業務存在、客戶產能承諾或歷史財務強，皆不能跨越缺少遠期 EPS、估值基準與可識別資金彈性的限制。</p>
+<h3 id="section-2449-京元電子-深度分析">2449 京元電子 深度分析</h3>
+<ul>
+<li>
+<p><strong>本週新增與窗口前基線：</strong> 10/13未量化預付款→10/21明確US$1.1bn、2027/4量產目標</p>
+</li>
+<li>
+<p><strong>財務基線：</strong> 客戶預付抵減未來服務，先改善建廠融資可見度；不得認列為本期收入或自由現金流</p>
+</li>
+<li>
+<p><strong>公司反證：</strong> 美國建廠折舊/成本、客戶集中及量產驗證；新廠距今約半年且非保證時程</p>
+</li>
+</ul>
+<p>KYEC本週真正變化是原本董事會預付款合作被客戶量化為11億美元與2027年四月目標。資金來源更清楚不等於費用/折舊消失，預收款日後抵服務款，不能把現金入帳直接年化EPS。</p>
+<p>10月22跌5.58%顯示市場並未即時確認利多；完整法說/合約不可取消條件、新廠成本、預留產能量和利用率尚未取得，故只Watch而非以同業PE硬估。</p>
+<p>前期同口徑完整財務值、可核驗市場共識及盈利修訂分布均為 null；事件前後的新聞差異不能冒充財務前值。管理層或客戶產能規劃亦不是賣方共識，須待收入、利潤率與現金回收分別驗證。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>盈利貢獻</th>
+<th>估值貢獻</th>
+<th>資金與部位</th>
+<th>歷史／同業敏感度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>尚缺公司級增量EPS/利潤率及現金流，不給量化效果</td>
+<td>折現率與風險偏好可壓低倍數；不由價格下跌推定估值便宜</td>
+<td>公司或市場報價顯示利多未帶來買盤確認；完整公司資金流基準不足</td>
+<td>null；缺可重現跨週期日價、估值及同業樣本；不得套用 beta</td>
+</tr>
+</tbody>
+</table></div>
+<h4>十條公司專屬因果箭頭</h4>
+<ol>
+<li>
+<p><strong>Signal/Event <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Canonical Signal｜Confirmed／A</strong></p>
+<ul>
+<li>機制 INFERENCE：事件映射到AI基本面而非直接風險偏好</li>
+<li>證據：本節「本週新增與窗口前基線」已列明事件與日期；不是另一件新增事件。</li>
+<li>反證／缺口：商業承諾不保證準時量產或盈利；須與本節公司特定風險合讀。</li>
+<li>來源與界線：<a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a> <a href="https://news.pchome.com.tw/finance/cna/20261013/index-17918769863048718003.html" rel="noopener noreferrer" target="_blank">E18</a>；事件事實，不保證盈利。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Canonical Signal</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Global</span></span> Market｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：增加潛在供應/需求可見度，與美國科技市場折現率競爭</li>
+<li>證據：前述公司事件提高業務能見度；全球科技價格並未同步轉強。</li>
+<li>反證／缺口：共同宏觀因子可能壓過公司事件；不能把指數變化全部歸因本事件。</li>
+<li>來源與界線：<a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">M28</a>；公司事件基線見本節開頭，因果仍為推論。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Global Market</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Taiwan</span></span> Macro｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：全球AI資本形成經出口/台商海外獲利傳入，不等同所有台灣產業</li>
+<li>證據：台灣外需與製造資料提供產業背景；不是公司收入的直接證明。</li>
+<li>反證／缺口：外銷訂單含海外生產；台灣總體成長不等於特定公司 EPS。</li>
+<li>來源與界線：<a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a> <a href="https://focustaiwan.tw/business/202610230013" rel="noopener noreferrer" target="_blank">A19</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Taiwan Macro <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Industry｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：出口/資本支出（CapEx）支持設備/供應鏈，但能源/匯率可抵銷</li>
+<li>證據：前述公司產品與產能基線；營運時程及海外生產須獨立核對。</li>
+<li>反證／缺口：產業需求亦可能被競爭者承接，或受成本、材料與時程限制。</li>
+<li>來源與界線：公司產品與容量曝險見本節事件基線；新增份額尚未核驗。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Industry</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Company</span></span> Exposure｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：公司受惠取決產品與客戶份額</li>
+<li>證據：前述公司曝險已確認存在；新增份額與集團貢獻尚未量化。</li>
+<li>反證／缺口：產能、訂單與產品曝險不等於已實現收入，更非已實現利潤。</li>
+<li>來源與界線：公司產品與容量曝險見本節事件基線；新增份額尚未核驗。</li>
+</ul>
+</li>
+<li>
+<p><strong>Company Exposure <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Earnings｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：產能×利用率×價格−成本/折舊才成為EPS；預付款非營收</li>
+<li>證據：前述財務基線或客戶承諾；尚缺本週新增可持續 EPS 的完整橋接。</li>
+<li>反證／缺口：折舊、良率、價格、產品組合與現金回收可抵銷營收增量。</li>
+<li>來源與界線：<a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a>；未取得新增可持續 EPS 的完整橋接。</li>
+</ul>
+</li>
+<li>
+<p><strong>Earnings <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Valuation｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：EPS與利率共同決定估值；不機械給倍數</li>
+<li>證據：未取得同口徑遠期 EPS 與可比估值分布；不由價格下跌推算便宜。</li>
+<li>反證／缺口：折現率及所需風險溢酬可改變；尚未量化市場已反映多少。</li>
+<li>來源與界線：<a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a>；遠期 EPS 與估值分布仍為 null。</li>
+</ul>
+</li>
+<li>
+<p><strong>Valuation <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Flow/Positioning｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：估值不保證資金回流，機構風險預算會迫售</li>
+<li>證據：本節報價及資金觀察；不是由估值變動識別出的資金回流。</li>
+<li>反證／缺口：避險、ETF 與風險預算調整可帶來非估值驅動的買賣。</li>
+<li>來源與界線：<a href="https://tw.finance.yahoo.com/quote/2449" rel="noopener noreferrer" target="_blank">E07</a> <a href="https://histock.tw/stock/tchart.aspx?m=m520&amp;no=2449" rel="noopener noreferrer" target="_blank">E08</a>；報價與資金相關不等於方向因果。</li>
+</ul>
+</li>
+<li>
+<p><strong>Flow/Positioning <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Price Impact｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：資金流與估值/盈餘共同影響股價，但欠可識別彈性</li>
+<li>證據：歷史與同業敏感度樣本未建立，資金到股價的彈性不可得。</li>
+<li>反證／缺口：缺少可重現樣本，不能用相關性作因果或把假設當預測。</li>
+<li>來源與界線：INFERENCE；未建立可驗證數值模型，亦無已確認觸發。</li>
+</ul>
+</li>
+<li>
+<p><strong>Price Impact <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Action｜Unconfirmed／C</strong></p>
+</li>
+</ol>
+<ul>
+<li>機制 INFERENCE：僅有完整證據與未來條件才將觀察轉為Action</li>
+<li>證據：研究條件列於行動矩陣；尚未完成全部必要證據，無有效觸發。</li>
+<li>反證／缺口：任何必要末端橋接未確認，皆維持 Watch／Action=null。</li>
+<li>來源與界線：INFERENCE；未建立可驗證數值模型，亦無已確認觸發。</li>
+</ul>
+<p>末端價格與行動橋接尚未確認，故保持 Watch／Action=null。公司業務存在、客戶產能承諾或歷史財務強，皆不能跨越缺少遠期 EPS、估值基準與可識別資金彈性的限制。</p>
+<h3 id="section-3711-日月光投控-深度分析">3711 日月光投控 深度分析</h3>
+<ul>
+<li>
+<p><strong>本週新增與窗口前基線：</strong> 10/21客戶首次量化矽品CPO擴產：2027年中15倍、2028年底再倍增</p>
+</li>
+<li>
+<p><strong>財務基線：</strong> 9月合併營收881.30億元是10/12舊基準；未披露CPO絕對基數/單價/集團獲利占比</p>
+</li>
+<li>
+<p><strong>公司反證：</strong> 小基數倍數巨大未必集團EPS大幅增加；光學良率、採用進度及設備折舊先行</p>
+</li>
+</ul>
+<p>ASE要把矽品CPO小基數成長與控股公司獲利嚴格分開。15倍對應2027年中產能，另一次翻倍是2028年底，不是同年倍增、更不是集團營收15倍。</p>
+<p>9月合併收入較強只證明整體業務背景，未拆CPO。若光學引擎良率提升但量產時間後移，基本面需求可維持而估值仍壓縮；未核驗絕對產能、價格與毛利以前不發Action/數字股價幅度。</p>
+<p>前期同口徑完整財務值、可核驗市場共識及盈利修訂分布均為 null；事件前後的新聞差異不能冒充財務前值。管理層或客戶產能規劃亦不是賣方共識，須待收入、利潤率與現金回收分別驗證。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>盈利貢獻</th>
+<th>估值貢獻</th>
+<th>資金與部位</th>
+<th>歷史／同業敏感度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>尚缺公司級增量EPS/利潤率及現金流，不給量化效果</td>
+<td>折現率與風險偏好可壓低倍數；不由價格下跌推定估值便宜</td>
+<td>公司或市場報價顯示利多未帶來買盤確認；完整公司資金流基準不足</td>
+<td>null；缺可重現跨週期日價、估值及同業樣本；不得套用 beta</td>
+</tr>
+</tbody>
+</table></div>
+<h4>十條公司專屬因果箭頭</h4>
+<ol>
+<li>
+<p><strong>Signal/Event <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Canonical Signal｜Confirmed／A</strong></p>
+<ul>
+<li>機制 INFERENCE：事件映射到AI基本面而非直接風險偏好</li>
+<li>證據：本節「本週新增與窗口前基線」已列明事件與日期；不是另一件新增事件。</li>
+<li>反證／缺口：商業承諾不保證準時量產或盈利；須與本節公司特定風險合讀。</li>
+<li>來源與界線：<a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a>；事件事實，不保證盈利。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Canonical Signal</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Global</span></span> Market｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：增加潛在供應/需求可見度，與美國科技市場折現率競爭</li>
+<li>證據：前述公司事件提高業務能見度；全球科技價格並未同步轉強。</li>
+<li>反證／缺口：共同宏觀因子可能壓過公司事件；不能把指數變化全部歸因本事件。</li>
+<li>來源與界線：<a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">M28</a>；公司事件基線見本節開頭，因果仍為推論。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Global Market</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Taiwan</span></span> Macro｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：全球AI資本形成經出口/台商海外獲利傳入，不等同所有台灣產業</li>
+<li>證據：台灣外需與製造資料提供產業背景；不是公司收入的直接證明。</li>
+<li>反證／缺口：外銷訂單含海外生產；台灣總體成長不等於特定公司 EPS。</li>
+<li>來源與界線：<a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a> <a href="https://focustaiwan.tw/business/202610230013" rel="noopener noreferrer" target="_blank">A19</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Taiwan Macro <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Industry｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：出口/資本支出支持設備/供應鏈，但能源/匯率可抵銷</li>
+<li>證據：前述公司產品與產能基線；營運時程及海外生產須獨立核對。</li>
+<li>反證／缺口：產業需求亦可能被競爭者承接，或受成本、材料與時程限制。</li>
+<li>來源與界線：公司產品與容量曝險見本節事件基線；新增份額尚未核驗。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Industry</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Company</span></span> Exposure｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：公司受惠取決產品與客戶份額</li>
+<li>證據：前述公司曝險已確認存在；新增份額與集團貢獻尚未量化。</li>
+<li>反證／缺口：產能、訂單與產品曝險不等於已實現收入，更非已實現利潤。</li>
+<li>來源與界線：公司產品與容量曝險見本節事件基線；新增份額尚未核驗。</li>
+</ul>
+</li>
+<li>
+<p><strong>Company Exposure <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Earnings｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：產能×利用率×價格−成本/折舊才成為EPS；預付款非營收</li>
+<li>證據：前述財務基線或客戶承諾；尚缺本週新增可持續 EPS 的完整橋接。</li>
+<li>反證／缺口：折舊、良率、價格、產品組合與現金回收可抵銷營收增量。</li>
+<li>來源與界線：<a href="https://gfe-desktop.cnyes.com/news/id/6628388/print" rel="noopener noreferrer" target="_blank">E17</a> <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a>；未取得新增可持續 EPS 的完整橋接。</li>
+</ul>
+</li>
+<li>
+<p><strong>Earnings <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Valuation｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：EPS與利率共同決定估值；不機械給倍數</li>
+<li>證據：未取得同口徑遠期 EPS 與可比估值分布；不由價格下跌推算便宜。</li>
+<li>反證／缺口：折現率及所需風險溢酬可改變；尚未量化市場已反映多少。</li>
+<li>來源與界線：<a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a>；遠期 EPS 與估值分布仍為 null。</li>
+</ul>
+</li>
+<li>
+<p><strong>Valuation <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Flow/Positioning｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：估值不保證資金回流，機構風險預算會迫售</li>
+<li>證據：本節報價及資金觀察；不是由估值變動識別出的資金回流。</li>
+<li>反證／缺口：避險、ETF 與風險預算調整可帶來非估值驅動的買賣。</li>
+<li>來源與界線：<a href="https://superpy.kgieworld.com.tw/kgipythonapi/stockInfo/stockCalendar?stockCode=3711" rel="noopener noreferrer" target="_blank">E09</a>；報價與資金相關不等於方向因果。</li>
+</ul>
+</li>
+<li>
+<p><strong>Flow/Positioning <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Price Impact｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：資金流與估值/盈餘共同影響股價，但欠可識別彈性</li>
+<li>證據：歷史與同業敏感度樣本未建立，資金到股價的彈性不可得。</li>
+<li>反證／缺口：缺少可重現樣本，不能用相關性作因果或把假設當預測。</li>
+<li>來源與界線：INFERENCE；未建立可驗證數值模型，亦無已確認觸發。</li>
+</ul>
+</li>
+<li>
+<p><strong>Price Impact <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Action｜Unconfirmed／C</strong></p>
+</li>
+</ol>
+<ul>
+<li>機制 INFERENCE：僅有完整證據與未來條件才將觀察轉為Action</li>
+<li>證據：研究條件列於行動矩陣；尚未完成全部必要證據，無有效觸發。</li>
+<li>反證／缺口：任何必要末端橋接未確認，皆維持 Watch／Action=null。</li>
+<li>來源與界線：INFERENCE；未建立可驗證數值模型，亦無已確認觸發。</li>
+</ul>
+<p>末端價格與行動橋接尚未確認，故保持 Watch／Action=null。公司業務存在、客戶產能承諾或歷史財務強，皆不能跨越缺少遠期 EPS、估值基準與可識別資金彈性的限制。</p>
+<h3 id="section-3037-欣興-觀察鏈補充">3037 欣興 觀察鏈補充</h3>
+<ul>
+<li>
+<p><strong>本週新增與窗口前基線：</strong> 10/21客戶確認容量預訂；Q2'27開始增加、mid'28滿載；2.5倍為三家合計不是欣興單家公司</p>
+</li>
+<li>
+<p><strong>財務基線：</strong> 產能約定提高需求能見度但材料/設備/稼動率決定盈利；本輪未取得可比Q3完整EPS/CFO</p>
+</li>
+<li>
+<p><strong>公司反證：</strong> 產能距現在兩季以上；競爭者同擴供給可能壓價；10/22外資微買不足反轉整週賣出</p>
+</li>
+</ul>
+<p>前期同口徑完整財務值、可核驗市場共識及盈利修訂分布均為 null；事件前後的新聞差異不能冒充財務前值。管理層或客戶產能規劃亦不是賣方共識，須待收入、利潤率與現金回收分別驗證。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>盈利貢獻</th>
+<th>估值貢獻</th>
+<th>資金與部位</th>
+<th>歷史／同業敏感度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>尚缺公司級增量EPS/利潤率及現金流，不給量化效果</td>
+<td>折現率與風險偏好可壓低倍數；不由價格下跌推定估值便宜</td>
+<td>10/22外資+28張、投信+1415張；此前3日外資仍淨賣，尚非持續逆轉</td>
+<td>null；缺可重現跨週期日價、估值及同業樣本；不得套用 beta</td>
+</tr>
+</tbody>
+</table></div>
+<h4>十條公司專屬因果箭頭</h4>
+<ol>
+<li>
+<p><strong>Signal/Event <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Canonical Signal｜Confirmed／A</strong></p>
+<ul>
+<li>機制 INFERENCE：事件映射到AI基本面而非直接風險偏好</li>
+<li>證據：本節「本週新增與窗口前基線」已列明事件與日期；不是另一件新增事件。</li>
+<li>反證／缺口：商業承諾不保證準時量產或盈利；須與本節公司特定風險合讀。</li>
+<li>來源與界線：<a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a>；事件事實，不保證盈利。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Canonical Signal</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Global</span></span> Market｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：增加潛在供應/需求可見度，與美國科技市場折現率競爭</li>
+<li>證據：前述公司事件提高業務能見度；全球科技價格並未同步轉強。</li>
+<li>反證／缺口：共同宏觀因子可能壓過公司事件；不能把指數變化全部歸因本事件。</li>
+<li>來源與界線：<a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">M28</a>；公司事件基線見本節開頭，因果仍為推論。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Global Market</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Taiwan</span></span> Macro｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：全球AI資本形成經出口/台商海外獲利傳入，不等同所有台灣產業</li>
+<li>證據：台灣外需與製造資料提供產業背景；不是公司收入的直接證明。</li>
+<li>反證／缺口：外銷訂單含海外生產；台灣總體成長不等於特定公司 EPS。</li>
+<li>來源與界線：<a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a> <a href="https://focustaiwan.tw/business/202610230013" rel="noopener noreferrer" target="_blank">A19</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Taiwan Macro <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Industry｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：出口/資本支出支持設備/供應鏈，但能源/匯率可抵銷</li>
+<li>證據：前述公司產品與產能基線；營運時程及海外生產須獨立核對。</li>
+<li>反證／缺口：產業需求亦可能被競爭者承接，或受成本、材料與時程限制。</li>
+<li>來源與界線：公司產品與容量曝險見本節事件基線；新增份額尚未核驗。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Industry</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Company</span></span> Exposure｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：公司受惠取決產品與客戶份額</li>
+<li>證據：前述公司曝險已確認存在；新增份額與集團貢獻尚未量化。</li>
+<li>反證／缺口：產能、訂單與產品曝險不等於已實現收入，更非已實現利潤。</li>
+<li>來源與界線：公司產品與容量曝險見本節事件基線；新增份額尚未核驗。</li>
+</ul>
+</li>
+<li>
+<p><strong>Company Exposure <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Earnings｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：產能×利用率×價格−成本/折舊才成為EPS；預付款非營收</li>
+<li>證據：前述財務基線或客戶承諾；尚缺本週新增可持續 EPS 的完整橋接。</li>
+<li>反證／缺口：折舊、良率、價格、產品組合與現金回收可抵銷營收增量。</li>
+<li>來源與界線：<a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a>；未取得新增可持續 EPS 的完整橋接。</li>
+</ul>
+</li>
+<li>
+<p><strong>Earnings <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Valuation｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：EPS與利率共同決定估值；不機械給倍數</li>
+<li>證據：未取得同口徑遠期 EPS 與可比估值分布；不由價格下跌推算便宜。</li>
+<li>反證／缺口：折現率及所需風險溢酬可改變；尚未量化市場已反映多少。</li>
+<li>來源與界線：<a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a>；遠期 EPS 與估值分布仍為 null。</li>
+</ul>
+</li>
+<li>
+<p><strong>Valuation <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Flow/Positioning｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：估值不保證資金回流，機構風險預算會迫售</li>
+<li>證據：本節報價及資金觀察；不是由估值變動識別出的資金回流。</li>
+<li>反證／缺口：避險、ETF 與風險預算調整可帶來非估值驅動的買賣。</li>
+<li>來源與界線：<a href="https://superpy.kgieworld.com.tw/kgipythonapi/stockInfo/dayIISBList?stockCode=3037" rel="noopener noreferrer" target="_blank">E10</a>；報價與資金相關不等於方向因果。</li>
+</ul>
+</li>
+<li>
+<p><strong>Flow/Positioning <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Price Impact｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：資金流與估值/盈餘共同影響股價，但欠可識別彈性</li>
+<li>證據：歷史與同業敏感度樣本未建立，資金到股價的彈性不可得。</li>
+<li>反證／缺口：缺少可重現樣本，不能用相關性作因果或把假設當預測。</li>
+<li>來源與界線：INFERENCE；未建立可驗證數值模型，亦無已確認觸發。</li>
+</ul>
+</li>
+<li>
+<p><strong>Price Impact <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Action｜Unconfirmed／C</strong></p>
+</li>
+</ol>
+<ul>
+<li>機制 INFERENCE：僅有完整證據與未來條件才將觀察轉為Action</li>
+<li>證據：研究條件列於行動矩陣；尚未完成全部必要證據，無有效觸發。</li>
+<li>反證／缺口：任何必要末端橋接未確認，皆維持 Watch／Action=null。</li>
+<li>來源與界線：INFERENCE；未建立可驗證數值模型，亦無已確認觸發。</li>
+</ul>
+<p>末端價格與行動橋接尚未確認，故保持 Watch／Action=null。公司業務存在、客戶產能承諾或歷史財務強，皆不能跨越缺少遠期 EPS、估值基準與可識別資金彈性的限制。</p>
+<h3 id="section-2308-台達電-觀察鏈補充">2308 台達電 觀察鏈補充</h3>
+<ul>
+<li>
+<p><strong>本週新增與窗口前基線：</strong> 本週價格/外資走弱；未核驗到本週新的公司獲利上修。10/14SST產品展示為窗口前事件</p>
+</li>
+<li>
+<p><strong>財務基線：</strong> 9月營收654億元官方10/12題名可核；不能將產品推出當新訂單（New Orders），更不能由電力短缺自動推導毛利增加</p>
+</li>
+<li>
+<p><strong>公司反證：</strong> 客戶資料中心延期可能傷出貨；產品產品組合與研發/擴產費用；估值壓縮可超過成長</p>
+</li>
+</ul>
+<p>前期同口徑完整財務值、可核驗市場共識及盈利修訂分布均為 null；事件前後的新聞差異不能冒充財務前值。管理層或客戶產能規劃亦不是賣方共識，須待收入、利潤率與現金回收分別驗證。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>盈利貢獻</th>
+<th>估值貢獻</th>
+<th>資金與部位</th>
+<th>歷史／同業敏感度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>尚缺公司級增量EPS/利潤率及現金流，不給量化效果</td>
+<td>折現率與風險偏好可壓低倍數；不由價格下跌推定估值便宜</td>
+<td>10/19–22外資日表連負，僅作方向、未獨立稽核全部筆數</td>
+<td>null；缺可重現跨週期日價、估值及同業樣本；不得套用 beta</td>
+</tr>
+</tbody>
+</table></div>
+<h4>十條公司專屬因果箭頭</h4>
+<ol>
+<li>
+<p><strong>Signal/Event <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Canonical Signal｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：事件映射到AI基本面而非直接風險偏好</li>
+<li>證據：本節「本週新增與窗口前基線」已列明事件與日期；不是另一件新增事件。</li>
+<li>反證／缺口：商業承諾不保證準時量產或盈利；須與本節公司特定風險合讀。</li>
+<li>來源與界線：<a href="https://www.deltaww.com/en-US/press/41160" rel="noopener noreferrer" target="_blank">E11</a> <a href="https://www.deltaww.com/en-US/press/41167" rel="noopener noreferrer" target="_blank">E12</a>；事件事實，不保證盈利。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Canonical Signal</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Global</span></span> Market｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：增加潛在供應/需求可見度，與美國科技市場折現率競爭</li>
+<li>證據：前述公司事件提高業務能見度；全球科技價格並未同步轉強。</li>
+<li>反證／缺口：共同宏觀因子可能壓過公司事件；不能把指數變化全部歸因本事件。</li>
+<li>來源與界線：<a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">M28</a>；公司事件基線見本節開頭，因果仍為推論。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Global Market</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Taiwan</span></span> Macro｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：全球AI資本形成經出口/台商海外獲利傳入，不等同所有台灣產業</li>
+<li>證據：台灣外需與製造資料提供產業背景；不是公司收入的直接證明。</li>
+<li>反證／缺口：外銷訂單含海外生產；台灣總體成長不等於特定公司 EPS。</li>
+<li>來源與界線：<a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">A11</a> <a href="https://focustaiwan.tw/business/202610230013" rel="noopener noreferrer" target="_blank">A19</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Taiwan Macro <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Industry｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：出口/資本支出支持設備/供應鏈，但能源/匯率可抵銷</li>
+<li>證據：前述公司產品與產能基線；營運時程及海外生產須獨立核對。</li>
+<li>反證／缺口：產業需求亦可能被競爭者承接，或受成本、材料與時程限制。</li>
+<li>來源與界線：公司產品與容量曝險見本節事件基線；新增份額尚未核驗。</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="state-transition"><span class="state-prior">Industry</span><span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span><span class="state-current">Company</span></span> Exposure｜Partial／B</strong></p>
+<ul>
+<li>機制 INFERENCE：公司受惠取決產品與客戶份額</li>
+<li>證據：前述公司曝險已確認存在；新增份額與集團貢獻尚未量化。</li>
+<li>反證／缺口：產能、訂單與產品曝險不等於已實現收入，更非已實現利潤。</li>
+<li>來源與界線：公司產品與容量曝險見本節事件基線；新增份額尚未核驗。</li>
+</ul>
+</li>
+<li>
+<p><strong>Company Exposure <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Earnings｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：產能×利用率×價格−成本/折舊才成為EPS；預付款非營收</li>
+<li>證據：前述財務基線或客戶承諾；尚缺本週新增可持續 EPS 的完整橋接。</li>
+<li>反證／缺口：折舊、良率、價格、產品組合與現金回收可抵銷營收增量。</li>
+<li>來源與界線：<a href="https://www.deltaww.com/en-US/press/41160" rel="noopener noreferrer" target="_blank">E11</a>；未取得新增可持續 EPS 的完整橋接。</li>
+</ul>
+</li>
+<li>
+<p><strong>Earnings <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Valuation｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：EPS與利率共同決定估值；不機械給倍數</li>
+<li>證據：未取得同口徑遠期 EPS 與可比估值分布；不由價格下跌推算便宜。</li>
+<li>反證／缺口：折現率及所需風險溢酬可改變；尚未量化市場已反映多少。</li>
+<li>來源與界線：<a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">M01</a>；遠期 EPS 與估值分布仍為 null。</li>
+</ul>
+</li>
+<li>
+<p><strong>Valuation <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Flow/Positioning｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：估值不保證資金回流，機構風險預算會迫售</li>
+<li>證據：本節報價及資金觀察；不是由估值變動識別出的資金回流。</li>
+<li>反證／缺口：避險、ETF 與風險預算調整可帶來非估值驅動的買賣。</li>
+<li>來源與界線：<a href="https://tweb.money-link.com.tw/TWStock/StockChips.aspx?SymId=2308&amp;TWMId=Chips_STK04" rel="noopener noreferrer" target="_blank">E13</a> <a href="https://www.cna.com.tw/news/afe/202610220177.aspx" rel="noopener noreferrer" target="_blank">E06</a>；報價與資金相關不等於方向因果。</li>
+</ul>
+</li>
+<li>
+<p><strong>Flow/Positioning <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Price Impact｜Unconfirmed／C</strong></p>
+<ul>
+<li>機制 INFERENCE：資金流與估值/盈餘共同影響股價，但欠可識別彈性</li>
+<li>證據：歷史與同業敏感度樣本未建立，資金到股價的彈性不可得。</li>
+<li>反證／缺口：缺少可重現樣本，不能用相關性作因果或把假設當預測。</li>
+<li>來源與界線：INFERENCE；未建立可驗證數值模型，亦無已確認觸發。</li>
+</ul>
+</li>
+<li>
+<p><strong>Price Impact <span class="direction direction-flat"><span class="direction direction-flat">→ 持平</span></span> Action｜Unconfirmed／C</strong></p>
+</li>
+</ol>
+<ul>
+<li>機制 INFERENCE：僅有完整證據與未來條件才將觀察轉為Action</li>
+<li>證據：研究條件列於行動矩陣；尚未完成全部必要證據，無有效觸發。</li>
+<li>反證／缺口：任何必要末端橋接未確認，皆維持 Watch／Action=null。</li>
+<li>來源與界線：INFERENCE；未建立可驗證數值模型，亦無已確認觸發。</li>
+</ul>
+<p>末端價格與行動橋接尚未確認，故保持 Watch／Action=null。公司業務存在、客戶產能承諾或歷史財務強，皆不能跨越缺少遠期 EPS、估值基準與可識別資金彈性的限制。</p>
+<h2 id="section-價格影響情境-price-impact-scenarios">價格影響情境（Price Impact Scenarios）</h2>
+<p>正式價格影響與概率全部保留 null；下表完整列出五檔、三個期限、三個情境，共四十五筆。這不是零漲跌預測，也不是零概率，而是現有證據不能支持數值估計；驅動因素只保留條件式研究方向。</p>
+<h3 id="section-2330-台積電-正式情境">2330 台積電 正式情境</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>期限</th>
+<th>情境</th>
+<th>價格區間%</th>
+<th>概率%</th>
+<th>驅動因素</th>
+<th>信心</th>
+<th>缺值原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–5D</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>營運前瞻指引（Guidance）實現但倍數/資金流（Flow）未確認</td>
+<td>低</td>
+<td>缺公司每股盈餘（EPS）／估值（Valuation）／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–5D</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>增量EPS上修且倍數與資金流改善</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–5D</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>公司指引下修或折現率/資金壓力擴大</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>營運指引實現但倍數/資金流未確認</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>增量EPS上修且倍數與資金流改善</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>公司指引下修或折現率/資金壓力擴大</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>營運指引實現但倍數/資金流未確認</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>增量EPS上修且倍數與資金流改善</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>公司指引下修或折現率/資金壓力擴大</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-2449-京元電子-正式情境">2449 京元電子 正式情境</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>期限</th>
+<th>情境</th>
+<th>價格區間%</th>
+<th>概率%</th>
+<th>驅動因素</th>
+<th>信心</th>
+<th>缺值原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–5D</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>建廠/出貨依原時程，金融條件無額外惡化</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–5D</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>需求/實現獲利上修且風險溢酬收斂</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–5D</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>交付延期、成本上升或市場倍數壓縮</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>建廠/出貨依原時程，金融條件無額外惡化</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>需求/實現獲利上修且風險溢酬收斂</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>交付延期、成本上升或市場倍數壓縮</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>建廠/出貨依原時程，金融條件無額外惡化</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>需求/實現獲利上修且風險溢酬收斂</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>交付延期、成本上升或市場倍數壓縮</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-3711-日月光投控-正式情境">3711 日月光投控 正式情境</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>期限</th>
+<th>情境</th>
+<th>價格區間%</th>
+<th>概率%</th>
+<th>驅動因素</th>
+<th>信心</th>
+<th>缺值原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–5D</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>建廠/出貨依原時程，金融條件無額外惡化</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–5D</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>需求/實現獲利上修且風險溢酬收斂</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–5D</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>交付延期、成本上升或市場倍數壓縮</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>建廠/出貨依原時程，金融條件無額外惡化</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>需求/實現獲利上修且風險溢酬收斂</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>交付延期、成本上升或市場倍數壓縮</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>建廠/出貨依原時程，金融條件無額外惡化</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>需求/實現獲利上修且風險溢酬收斂</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>交付延期、成本上升或市場倍數壓縮</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-3037-欣興-正式情境">3037 欣興 正式情境</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>期限</th>
+<th>情境</th>
+<th>價格區間%</th>
+<th>概率%</th>
+<th>驅動因素</th>
+<th>信心</th>
+<th>缺值原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–5D</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>建廠/出貨依原時程，金融條件無額外惡化</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–5D</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>需求/實現獲利上修且風險溢酬收斂</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–5D</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>交付延期、成本上升或市場倍數壓縮</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>建廠/出貨依原時程，金融條件無額外惡化</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>需求/實現獲利上修且風險溢酬收斂</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>交付延期、成本上升或市場倍數壓縮</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>建廠/出貨依原時程，金融條件無額外惡化</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>需求/實現獲利上修且風險溢酬收斂</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>交付延期、成本上升或市場倍數壓縮</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-2308-台達電-正式情境">2308 台達電 正式情境</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>期限</th>
+<th>情境</th>
+<th>價格區間%</th>
+<th>概率%</th>
+<th>驅動因素</th>
+<th>信心</th>
+<th>缺值原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–5D</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>建廠/出貨依原時程，金融條件無額外惡化</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–5D</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>需求/實現獲利上修且風險溢酬收斂</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–5D</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>交付延期、成本上升或市場倍數壓縮</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>建廠/出貨依原時程，金融條件無額外惡化</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>需求/實現獲利上修且風險溢酬收斂</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>交付延期、成本上升或市場倍數壓縮</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Base</td>
+<td>null</td>
+<td>null</td>
+<td>建廠/出貨依原時程，金融條件無額外惡化</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Bull</td>
+<td>null</td>
+<td>null</td>
+<td>需求/實現獲利上修且風險溢酬收斂</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Bear</td>
+<td>null</td>
+<td>null</td>
+<td>交付延期、成本上升或市場倍數壓縮</td>
+<td>低</td>
+<td>缺公司EPS／估值／資金彈性及歷史同業校準；末端未確認</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-台積電純假設敏感度附表">台積電純假設敏感度附表</h3>
+<p>以下不是正式預測、目標價或行動依據，只展示假設怎樣影響算式。五十、二十、三十為分析者指定的情境權重，各期限合計一百，沒有經歷史樣本校準，不得與前面的有效價格估計數混計。</p>
+<p><code>示意變動 = (1 + 盈利效果) × (1 + 估值效果) × (1 + 資金殘差) − 1</code></p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>期限</th>
+<th>情境／假設權重</th>
+<th>盈利假設%</th>
+<th>估值假設%</th>
+<th>資金殘差%</th>
+<th>算式結果%</th>
+<th>用途／信心</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–5D</td>
+<td>Base／50%</td>
+<td>-1 至 1</td>
+<td>-3 至 2</td>
+<td>-1 至 1</td>
+<td>-4.9 至 4.1</td>
+<td>INFERENCE 敏感度；低、未校準</td>
+</tr>
+<tr>
+<td>1–5D</td>
+<td>Bull／20%</td>
+<td>0 至 1</td>
+<td>2 至 5</td>
+<td>0 至 1</td>
+<td>2 至 7.1</td>
+<td>INFERENCE 敏感度；低、未校準</td>
+</tr>
+<tr>
+<td>1–5D</td>
+<td>Bear／30%</td>
+<td>-2 至 0</td>
+<td>-7 至 -3</td>
+<td>-2 至 0</td>
+<td>-10.7 至 -3</td>
+<td>INFERENCE 敏感度；低、未校準</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Base／50%</td>
+<td>0 至 3</td>
+<td>-5 至 2</td>
+<td>-2 至 1</td>
+<td>-6.9 至 6.1</td>
+<td>INFERENCE 敏感度；低、未校準</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Bull／20%</td>
+<td>3 至 6</td>
+<td>3 至 8</td>
+<td>0 至 2</td>
+<td>6.1 至 16.8</td>
+<td>INFERENCE 敏感度；低、未校準</td>
+</tr>
+<tr>
+<td>1–4W</td>
+<td>Bear／30%</td>
+<td>-5 至 0</td>
+<td>-12 至 -6</td>
+<td>-3 至 0</td>
+<td>-18.9 至 -6</td>
+<td>INFERENCE 敏感度；低、未校準</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Base／50%</td>
+<td>3 至 10</td>
+<td>-8 至 2</td>
+<td>-2 至 2</td>
+<td>-7.1 至 14.4</td>
+<td>INFERENCE 敏感度；低、未校準</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Bull／20%</td>
+<td>10 至 18</td>
+<td>3 至 10</td>
+<td>0 至 3</td>
+<td>13.3 至 33.7</td>
+<td>INFERENCE 敏感度；低、未校準</td>
+</tr>
+<tr>
+<td>1–2Q</td>
+<td>Bear／30%</td>
+<td>-12 至 -3</td>
+<td>-20 至 -8</td>
+<td>-4 至 0</td>
+<td>-32.4 至 -10.8</td>
+<td>INFERENCE 敏感度；低、未校準</td>
+</tr>
+</tbody>
+</table></div>
+<p>短期假設以倍數及資金為主，長期才提高盈利敏感度；這只是模型設計，不能作實證歸因。沒有用 Oseberg、未驗證社群聲量或價格單點回推權重，也不以示意區間包住事後走勢來宣稱命中。</p>
+<h2 id="section-滾動驗證-rolling-validation">滾動驗證（Rolling Validation）</h2>
+<p>上週五檔皆為 Watch、Action=null，沒有已核驗進場日期；本週不得事後創造觸發。以下僅列十月十六日收盤至其後已完成交易日的未調整價格變化，不是成交績效、含息總報酬或策略命中率。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>上週觀察公司</th>
+<th>原行動／觸發</th>
+<th>原預期性質</th>
+<th class="numeric">+1D價格</th>
+<th class="numeric">+4D價格</th>
+<th>+5D</th>
+<th>+20D</th>
+<th>Hit/Miss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2330 台積電</td>
+<td>null／未核驗</td>
+<td>示意條件壓力，非預測</td>
+<td class="numeric">+0.00%</td>
+<td class="numeric">-1.45%</td>
+<td>null 未成熟</td>
+<td>null 未成熟</td>
+<td>N/A 無觸發</td>
+</tr>
+<tr>
+<td>2317 鴻海</td>
+<td>null／未核驗</td>
+<td>示意條件壓力，非預測</td>
+<td class="numeric">-1.84%</td>
+<td class="numeric">+0.41%</td>
+<td>null 未成熟</td>
+<td>null 未成熟</td>
+<td>N/A 無觸發</td>
+</tr>
+<tr>
+<td>2454 聯發科</td>
+<td>null／未核驗</td>
+<td>示意條件壓力，非預測</td>
+<td class="numeric">-1.06%</td>
+<td class="numeric">-5.65%</td>
+<td>null 未成熟</td>
+<td>null 未成熟</td>
+<td>N/A 無觸發</td>
+</tr>
+<tr>
+<td>2308 台達電</td>
+<td>null／未核驗</td>
+<td>示意條件壓力，非預測</td>
+<td class="numeric">+0.31%</td>
+<td class="numeric">-4.59%</td>
+<td>null 未成熟</td>
+<td>null 未成熟</td>
+<td>N/A 無觸發</td>
+</tr>
+<tr>
+<td>2382 廣達</td>
+<td>null／未核驗</td>
+<td>示意條件壓力，非預測</td>
+<td class="numeric">-2.33%</td>
+<td class="numeric">+0.00%</td>
+<td>null 未成熟</td>
+<td>null 未成熟</td>
+<td>N/A 無觸發</td>
+</tr>
+</tbody>
+</table></div>
+<p>台灣本窗口僅十月十九日至二十二日四個交易日，二十三日因颱風休市，二十六日為既定休假。若正常開市，二十七日才可能完成第五個交易日；不能前填休市價格或把第四日改標第五日。</p>
+<p><a href="https://www.twse.com.tw/holidaySchedule/holidaySchedule?queryYear=115&amp;response=html" rel="noopener noreferrer" target="_blank">交易日來源</a> <a href="https://www.taifex.com.tw/cht/11/announcement" rel="noopener noreferrer" target="_blank">交易日來源</a> <a href="https://www.twfhcsec.com.tw/News/NewsContent?ID=1502&amp;List=%E6%9C%80%E6%96%B0%E6%B6%88%E6%81%AF" rel="noopener noreferrer" target="_blank">交易日來源</a></p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>公司</th>
+<th>上週主要驗證條件</th>
+<th>本週可確認事項</th>
+<th>歸因與教訓</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2330 台積電</td>
+<td>Q4 OPM、現金轉換及估值（Valuation）</td>
+<td>僅價格觀察；本週仍無合格觸發</td>
+<td>股價弱不能證明盈利失效</td>
+</tr>
+<tr>
+<td>2317 鴻海</td>
+<td>OPM≥3.6%、CFO及風險曝險</td>
+<td>價格+0.41%只是四日變化</td>
+<td>本期未重新完成公司研究，不補 Action</td>
+</tr>
+<tr>
+<td>2454 聯發科</td>
+<td>ASIC認列、手機庫存（Inventory）與估值</td>
+<td>價格−5.65%只是四日變化</td>
+<td>不能事後挑 Bear 情境當命中</td>
+</tr>
+<tr>
+<td>2308 台達電</td>
+<td>OPM≥16%、現金獲利與交付</td>
+<td>仍缺完整盈利與資金橋接</td>
+<td>產品展示不等於新訂單（New Orders）</td>
+</tr>
+<tr>
+<td>2382 廣達</td>
+<td>OPM≥3.1%、每股盈餘（EPS）／CFO與驗收</td>
+<td>四日價格0.00%；非策略零報酬</td>
+<td>未觸發就不算勝負</td>
+</tr>
+</tbody>
+</table></div>
+<p>上週情境區間屬示意壓力分析，無法直接作考核門檻；本週新增京元電子、日月光及欣興亦無歷史觸發。盈利、估值與資金對實際價格的貢獻尚未識別，故不提供偽造歸因比例或累計勝率。</p>
+<p><strong>價格來源與觀察日期：</strong> <a href="https://www.cnyes.com/twstock/ps_historyprice.aspx?code=2330" rel="noopener noreferrer" target="_blank">2330 10/16–10/22</a> <a href="https://www.cnyes.com/twstock/ps_historyprice.aspx?code=2317" rel="noopener noreferrer" target="_blank">2317 10/16–10/22</a> <a href="https://www.cnyes.com/twstock/ps_historyprice.aspx?code=2454" rel="noopener noreferrer" target="_blank">2454 10/16–10/22</a> <a href="https://www.cnyes.com/twstock/ps_historyprice.aspx?code=2308" rel="noopener noreferrer" target="_blank">2308 10/16–10/22</a> <a href="https://www.cnyes.com/twstock/ps_historyprice.aspx?code=2382" rel="noopener noreferrer" target="_blank">2382 10/16–10/22</a></p>
+<h2 id="section-情境與風險燈號-scenario-risk-lights">情境與風險燈號（Scenario Risk Lights）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>燈號</th>
+<th>需確認的條件</th>
+<th>目前證據</th>
+<th>研究反應</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="risk risk-green">🟢</span></td>
+<td>能源緩解、信用收斂、廣度與公司盈利共振</td>
+<td>尚未滿足</td>
+<td>可提高風險研究權重，不自動下單</td>
+</tr>
+<tr>
+<td><span class="risk risk-yellow">🟡</span></td>
+<td>成長有支撐、成本與資金反證並存</td>
+<td>本週適用</td>
+<td>保持品質篩選與驗證紀律</td>
+</tr>
+<tr>
+<td><span class="risk risk-orange">🟠</span></td>
+<td>信用持續擴大且廣度、現金轉換共同惡化</td>
+<td>尚未全面確認</td>
+<td>縮短研究再評估周期；逐項檢討風險</td>
+</tr>
+<tr>
+<td><span class="risk risk-red">🔴</span></td>
+<td>融資持續脫錨、信用及實體需求同時惡化</td>
+<td>SOFR、信貸量與央行工具尚不支持</td>
+<td>須確認系統性壓力，不能由單一新聞啟動</td>
+</tr>
+</tbody>
+</table></div>
+<p>黃色燈號的理由是多項成本與市場風險持續，但實體成長、公司盈利及融資正常仍構成反證。紅橙轉換需要不同來源的持續共振，並非一項報價跳升、單一設備停用或單日外資賣超即可完成。</p>
+<h2 id="section-論點確認與失效-thesis-confirm-downgrade-kill">論點確認與失效（Thesis Confirm Downgrade Kill）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>論點</th>
+<th>Confirm 確認</th>
+<th>Downgrade 降級</th>
+<th>Kill 撤回</th>
+<th>目前狀態</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI基本面與股價分岔</td>
+<td>訂單（Order）、營收（Revenue）、毛利與現金支持，價格仍弱</td>
+<td>前瞻指引（Guidance）或現金轉換部分轉弱</td>
+<td>需求／指引連續下修且庫存（Inventory）周轉惡化</td>
+<td>基本面部分確認；價格橋接缺</td>
+</tr>
+<tr>
+<td>能源成本持續</td>
+<td>同合約油氣及季節缺口維持</td>
+<td>價格回落、供給改善但不持續</td>
+<td>兩週價格回落且實體供給、庫存缺口改善</td>
+<td>支持；Oseberg D不入論點</td>
+</tr>
+<tr>
+<td>亞洲科技與內需分化</td>
+<td>科技外需強、服務／投資弱</td>
+<td>外需與內需差距縮小</td>
+<td>兩端共同改善或共同惡化</td>
+<td>支持；不能推全市場Action</td>
+</tr>
+<tr>
+<td>非系統融資危機</td>
+<td>SOFR貼近IORB，工具需求不升</td>
+<td>利差或工具使用個別惡化</td>
+<td>持續脫錨並與信用／實體壓力共振</td>
+<td>目前仍成立，非保證無壓力</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-下週催化與驗證-next-week-catalysts">下週催化與驗證（Next Week Catalysts）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>台北時間／日期</th>
+<th>事件</th>
+<th>已知預期與口徑</th>
+<th>要驗證甚麼</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/26</td>
+<td>台股休市</td>
+<td>既定假日；非多一天交易</td>
+<td>不要前填價格</td>
+<td><a href="https://www.twse.com.tw/holidaySchedule/holidaySchedule?queryYear=115&amp;response=html" rel="noopener noreferrer" target="_blank">TWSE</a></td>
+</tr>
+<tr>
+<td>10/27 起視正常開市</td>
+<td>台股第五交易日與資金觀察</td>
+<td>不是已發生結果</td>
+<td>外資、廣度、相對強弱能否兩日改善</td>
+<td><a href="https://anuenews.cnyes.com/news/id/6635866" rel="noopener noreferrer" target="_blank">A02</a> <a href="https://www.taifex.com.tw/cht/3/futContractsDate" rel="noopener noreferrer" target="_blank">A03</a> <a href="https://breadthdaily.com/tw/" rel="noopener noreferrer" target="_blank">A05</a></td>
+</tr>
+<tr>
+<td>10/29 02:00／02:30</td>
+<td>FOMC 決定／記者會</td>
+<td>近端升息定價約9%；非保證</td>
+<td>政策與通膨／成長措辭</td>
+<td><a href="https://www.federalreserve.gov/newsevents/2026-october.htm?view=calendar" rel="noopener noreferrer" target="_blank">M23</a> <a href="https://www.fhlbny.com/w/fi/msd/2026/261023" rel="noopener noreferrer" target="_blank">M15</a></td>
+</tr>
+<tr>
+<td>10/29 20:30</td>
+<td>Q3 GDP 初估、9月所得支出</td>
+<td>GDP年化3.0%；所得+0.3%、支出+0.5%為次級共識</td>
+<td>實質成長與核心PCE；通膨共識null</td>
+<td><a href="https://www.bea.gov/news/schedule" rel="noopener noreferrer" target="_blank">M31</a> <a href="https://www.fhlbny.com/w/fi/msd/2026/261023" rel="noopener noreferrer" target="_blank">M15</a></td>
+</tr>
+<tr>
+<td>美國10/26、27、29</td>
+<td>2／5／7年公債拍賣</td>
+<td>日期官方暫定；金額次級核驗</td>
+<td>尾差、承接；11/2交割資金</td>
+<td><a href="https://www.treasury.gov/resource-center/data-chart-center/quarterly-refunding/Documents/auctions.pdf" rel="noopener noreferrer" target="_blank">M34</a> <a href="https://www.fhlbny.com/w/fi/msd/2026/261023" rel="noopener noreferrer" target="_blank">M15</a></td>
+</tr>
+<tr>
+<td>美國10/29</td>
+<td>初領、4／8週短券拍賣</td>
+<td>初領日程次級；短券11/3發行</td>
+<td>招聘/裁員及融資供需</td>
+<td><a href="https://www.dol.gov/ui/data.pdf" rel="noopener noreferrer" target="_blank">M08</a> <a href="https://www.treasurydirect.gov/instit/annceresult/press/preanre/TreasuryCUSIPRelease.pdf" rel="noopener noreferrer" target="_blank">M32</a></td>
+</tr>
+<tr>
+<td>下週持續；公司時點待公告</td>
+<td>公司季報與量產細節</td>
+<td>未核驗日期不填確切時間</td>
+<td>增量每股盈餘（EPS）、毛利、現金流與估值（Valuation）</td>
+<td><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">E04</a> <a href="https://pr.tsmc.com/english/news/3346" rel="noopener noreferrer" target="_blank">E01</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-來源與口徑稽核-source-audit">來源與口徑稽核（Source Audit）</h2>
+<h3 id="section-觀察截止與資料標籤">觀察截止與資料標籤</h3>
+<p>本報觀察窗口固定為台北時間 2026-10-18 20:00 至 2026-10-25 20:00，足七日。後續讀取只核對截止前發布或成交的事實，沒有把較晚讀取時間當作較晚事件時間。</p>
+<p>美國價格通常截至十月二十三日，台灣現貨截至二十二日；信用與隔夜融資部分亦截至二十二日。月季資料保留實際參考期，窗口前財報與通膨資料僅作基線，不算本週新增。</p>
+<p>事實（FACT）、市場預期（MARKET EXPECTATION）與分析推論（INFERENCE）分開列示。已反映程度（Pricing State）、持續性及行動判斷均為研究判斷，不是經回測的勝率。</p>
+<p>年增率（YoY）、月增率（MoM）、季增率（QoQ）及基點（bp）各有分母。每股盈餘（EPS）、營業利益率（OPM）、營業現金流（CFO）與自由現金流（FCF）分開，營收（Revenue）或預收款不等於盈利。</p>
+<p>估值（Valuation）倍數（Valuation）、資金與部位（Positioning）（Flow/Positioning）、信用利差（Credit Spread）（OAS）及利率波動（MOVE）用於傳導判斷。殖利率（Yield）下降提供折現率緩衝，但不能單獨證明風險偏好改善。</p>
+<p>資料檢索晚於觀察截止，僅用來核對日期在截止以前的事實；沒有把二十時後的新事件加進本週差額。來源的發布日、參考期及讀取時間分開，動態頁面可能日後更新，因此所有結論以本文標示觀察值為準。</p>
+<p>原始頁面或完整表格未取得的部分，採明示日期的次級資料或有限摘錄，降低信心而不宣稱全文核驗。相同底層資料的轉載不算獨立確認；不以資料缺口建立行動，也不把研究完成解讀為來源毫無缺失。</p>
+<h3 id="section-全球總體與市場">全球總體與市場</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>編號／資料</th>
+<th>發布／觀察日期</th>
+<th>等級</th>
+<th>使用限制</th>
+<th>完整來源URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M01 ust</td>
+<td>2026-10-23</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" rel="noopener noreferrer" target="_blank">https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve</a></td>
+</tr>
+<tr>
+<td>M02 real</td>
+<td>2026-10-23</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;field_tdr_date_value_month=202610&amp;type=daily_treasury_real_yield_curve" rel="noopener noreferrer" target="_blank">https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;field_tdr_date_value_month=202610&amp;type=daily_treasury_real_yield_curve</a></td>
+</tr>
+<tr>
+<td>M03 h41</td>
+<td>2026-10-21; release 10月22</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.federalreserve.gov/releases/h41/current/" rel="noopener noreferrer" target="_blank">https://www.federalreserve.gov/releases/h41/current/</a></td>
+</tr>
+<tr>
+<td>M04 h8</td>
+<td>2026-10-14; release 10月23</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.federalreserve.gov/releases/h8/current/" rel="noopener noreferrer" target="_blank">https://www.federalreserve.gov/releases/h8/current/</a></td>
+</tr>
+<tr>
+<td>M05 cpi</td>
+<td>2026-09; release 10月14</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.bls.gov/news.release/cpi.nr0.htm" rel="noopener noreferrer" target="_blank">https://www.bls.gov/news.release/cpi.nr0.htm</a></td>
+</tr>
+<tr>
+<td>M06 labor</td>
+<td>2026-09; release 10月2</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.bls.gov/news.release/empsit.nr0.htm" rel="noopener noreferrer" target="_blank">https://www.bls.gov/news.release/empsit.nr0.htm</a></td>
+</tr>
+<tr>
+<td>M07 pce</td>
+<td>2026-08; release 9月30</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.bea.gov/news/2026/personal-income-and-outlays-August-2026" rel="noopener noreferrer" target="_blank">https://www.bea.gov/news/2026/personal-income-and-outlays-August-2026</a></td>
+</tr>
+<tr>
+<td>M08 claims</td>
+<td>2026-10-17 initial / 10月10 continued; release 10月22</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.dol.gov/ui/data.pdf" rel="noopener noreferrer" target="_blank">https://www.dol.gov/ui/data.pdf</a></td>
+</tr>
+<tr>
+<td>M09 fed</td>
+<td>2026-09-16</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm" rel="noopener noreferrer" target="_blank">https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm</a></td>
+</tr>
+<tr>
+<td>M10 fedimpl</td>
+<td>2026-09-17 效果ive</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm" rel="noopener noreferrer" target="_blank">https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm</a></td>
+</tr>
+<tr>
+<td>M11 sloos</td>
+<td>2026-07 survey Q2</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.federalreserve.gov/data/sloos/sloos-202607.htm" rel="noopener noreferrer" target="_blank">https://www.federalreserve.gov/data/sloos/sloos-202607.htm</a></td>
+</tr>
+<tr>
+<td>M12 ig</td>
+<td>2026-10-22; updated 10月23 08:32 CDT</td>
+<td>B</td>
+<td>次級／市場資料；口徑見正文</td>
+<td><a href="https://fred.stlouisfed.org/series/BAMLC0A0CM" rel="noopener noreferrer" target="_blank">https://fred.stlouisfed.org/series/BAMLC0A0CM</a></td>
+</tr>
+<tr>
+<td>M13 hy</td>
+<td>2026-10-22; updated 10月23 08:34 CDT</td>
+<td>B</td>
+<td>次級／市場資料；口徑見正文</td>
+<td><a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" rel="noopener noreferrer" target="_blank">https://fred.stlouisfed.org/series/BAMLH0A0HYM2</a></td>
+</tr>
+<tr>
+<td>M14 sofr</td>
+<td>2026-10-22; updated 10月23 07:02 CDT</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://fred.stlouisfed.org/series/SOFR" rel="noopener noreferrer" target="_blank">https://fred.stlouisfed.org/series/SOFR</a></td>
+</tr>
+<tr>
+<td>M15 fhlb</td>
+<td>10月23 note using 10月22 afternoon pricing</td>
+<td>B</td>
+<td>次級／市場資料；口徑見正文</td>
+<td><a href="https://www.fhlbny.com/w/fi/msd/2026/261023" rel="noopener noreferrer" target="_blank">https://www.fhlbny.com/w/fi/msd/2026/261023</a></td>
+</tr>
+<tr>
+<td>M16 atlanta</td>
+<td>GDPNow 10月20; probability 10月23 10:17 timezone 未揭露</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.atlantafed.org/data/research-data" rel="noopener noreferrer" target="_blank">https://www.atlantafed.org/data/research-data</a></td>
+</tr>
+<tr>
+<td>M17 michigan</td>
+<td>2026-10-23 final; fresh primary body includes inflationexpectations4.7/3.5</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.sca.isr.umich.edu/" rel="noopener noreferrer" target="_blank">https://www.sca.isr.umich.edu/</a></td>
+</tr>
+<tr>
+<td>M18 wto</td>
+<td>2026-10-08</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www-server1.wto.org/english/news_e/news26_e/stat_08oct26_510_e.htm" rel="noopener noreferrer" target="_blank">https://www-server1.wto.org/english/news_e/news26_e/stat_08oct26_510_e.htm</a></td>
+</tr>
+<tr>
+<td>M19 vix</td>
+<td>2026-10-23</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.cboe.com/tradable-products/vix" rel="noopener noreferrer" target="_blank">https://www.cboe.com/tradable-products/vix</a></td>
+</tr>
+<tr>
+<td>M20 move</td>
+<td>2026-10-23</td>
+<td>B</td>
+<td>次級／市場資料；口徑見正文</td>
+<td><a href="https://www.eoddata.com/stockquote/INDEX/MOVE.htm" rel="noopener noreferrer" target="_blank">https://www.eoddata.com/stockquote/INDEX/MOVE.htm</a></td>
+</tr>
+<tr>
+<td>M21 dxy</td>
+<td>2026-10-23 daily history row; header conflicting Closed22/10</td>
+<td>B</td>
+<td>次級／市場資料；口徑見正文</td>
+<td><a href="https://www.investing.com/indices/usdollar-historical-data" rel="noopener noreferrer" target="_blank">https://www.investing.com/indices/usdollar-historical-data</a></td>
+</tr>
+<tr>
+<td>M22 pmi</td>
+<td>10月23 13:49 UTC</td>
+<td>B</td>
+<td>次級／市場資料；口徑見正文</td>
+<td><a href="https://www.aol.com/articles/us-business-activity-cools-october-134947000.html" rel="noopener noreferrer" target="_blank">https://www.aol.com/articles/us-business-activity-cools-october-134947000.html</a></td>
+</tr>
+<tr>
+<td>M23 fedcalendar</td>
+<td>十月2026 calendar; webpage lastupdateJune24,2025</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.federalreserve.gov/newsevents/2026-october.htm?view=calendar" rel="noopener noreferrer" target="_blank">https://www.federalreserve.gov/newsevents/2026-october.htm?view=calendar</a></td>
+</tr>
+<tr>
+<td>M24 coins</td>
+<td>2026-10-22</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://home.treasury.gov/news/press-releases/sb0667" rel="noopener noreferrer" target="_blank">https://home.treasury.gov/news/press-releases/sb0667</a></td>
+</tr>
+<tr>
+<td>M25 gold_history</td>
+<td>10/23觀察、10/16比較</td>
+<td>B</td>
+<td>次級／市場資料；口徑見正文</td>
+<td><a href="https://www.investing.com/commodities/gold-historical-data" rel="noopener noreferrer" target="_blank">https://www.investing.com/commodities/gold-historical-data</a></td>
+</tr>
+<tr>
+<td>M26 spx</td>
+<td>10/23觀察、10/16比較</td>
+<td>B</td>
+<td>次級／市場資料；口徑見正文</td>
+<td><a href="https://www.investing.com/indices/us-spx-500-historical-data" rel="noopener noreferrer" target="_blank">https://www.investing.com/indices/us-spx-500-historical-data</a></td>
+</tr>
+<tr>
+<td>M27 nasdaq</td>
+<td>10/23觀察、10/16比較</td>
+<td>B</td>
+<td>次級／市場資料；口徑見正文</td>
+<td><a href="https://www.investing.com/indices/nasdaq-composite-historical-data" rel="noopener noreferrer" target="_blank">https://www.investing.com/indices/nasdaq-composite-historical-data</a></td>
+</tr>
+<tr>
+<td>M28 sox</td>
+<td>10/23觀察、10/16比較</td>
+<td>B</td>
+<td>次級／市場資料；口徑見正文</td>
+<td><a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">https://www.investing.com/indices/phlx-semiconductor-historical-data</a></td>
+</tr>
+<tr>
+<td>M29 eur</td>
+<td>10/23觀察、10/16比較</td>
+<td>B</td>
+<td>次級／市場資料；口徑見正文</td>
+<td><a href="https://www.investing.com/currencies/eur-usd-historical-data" rel="noopener noreferrer" target="_blank">https://www.investing.com/currencies/eur-usd-historical-data</a></td>
+</tr>
+<tr>
+<td>M30 jpy</td>
+<td>10/23觀察、10/16比較</td>
+<td>B</td>
+<td>次級／市場資料；口徑見正文</td>
+<td><a href="https://www.investing.com/currencies/usd-jpy-historical-data" rel="noopener noreferrer" target="_blank">https://www.investing.com/currencies/usd-jpy-historical-data</a></td>
+</tr>
+<tr>
+<td>M31 bea_calendar</td>
+<td>2026官方日程；下週事件</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.bea.gov/news/schedule" rel="noopener noreferrer" target="_blank">https://www.bea.gov/news/schedule</a></td>
+</tr>
+<tr>
+<td>M32 treasury_cusip</td>
+<td>10/23發布</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.treasurydirect.gov/instit/annceresult/press/preanre/TreasuryCUSIPRelease.pdf" rel="noopener noreferrer" target="_blank">https://www.treasurydirect.gov/instit/annceresult/press/preanre/TreasuryCUSIPRelease.pdf</a></td>
+</tr>
+<tr>
+<td>M33 vix_prior</td>
+<td>10/16觀察</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://fred.stlouisfed.org/series/VIXCLS" rel="noopener noreferrer" target="_blank">https://fred.stlouisfed.org/series/VIXCLS</a></td>
+</tr>
+<tr>
+<td>M34 treasury_schedule</td>
+<td>2026官方暫定日程</td>
+<td>A</td>
+<td>官方／原始公開資料；動態頁保留觀察期</td>
+<td><a href="https://www.treasury.gov/resource-center/data-chart-center/quarterly-refunding/Documents/auctions.pdf" rel="noopener noreferrer" target="_blank">https://www.treasury.gov/resource-center/data-chart-center/quarterly-refunding/Documents/auctions.pdf</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-亞洲-台灣及能源">亞洲、台灣及能源</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>編號／資料</th>
+<th>發布／觀察日期</th>
+<th>等級</th>
+<th>使用限制</th>
+<th>完整來源URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01 sox</td>
+<td>10/23／10/16</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" rel="noopener noreferrer" target="_blank">https://www.investing.com/indices/phlx-semiconductor-historical-data</a></td>
+</tr>
+<tr>
+<td>A02 flow</td>
+<td>10/22</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://anuenews.cnyes.com/news/id/6635866" rel="noopener noreferrer" target="_blank">https://anuenews.cnyes.com/news/id/6635866</a></td>
+</tr>
+<tr>
+<td>A03 oi</td>
+<td>10/22</td>
+<td>A</td>
+<td>原始資料</td>
+<td><a href="https://www.taifex.com.tw/cht/3/futContractsDate" rel="noopener noreferrer" target="_blank">https://www.taifex.com.tw/cht/3/futContractsDate</a></td>
+</tr>
+<tr>
+<td>A04 fx</td>
+<td>10/22／10/16</td>
+<td>A</td>
+<td>原始資料</td>
+<td><a href="https://www.cbc.gov.tw/tw/lp-645-1.html" rel="noopener noreferrer" target="_blank">https://www.cbc.gov.tw/tw/lp-645-1.html</a></td>
+</tr>
+<tr>
+<td>A05 市場廣度</td>
+<td>10/22</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://breadthdaily.com/tw/" rel="noopener noreferrer" target="_blank">https://breadthdaily.com/tw/</a></td>
+</tr>
+<tr>
+<td>A06 sector</td>
+<td>10/22</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://www.wantgoo.com/index/0000" rel="noopener noreferrer" target="_blank">https://www.wantgoo.com/index/0000</a></td>
+</tr>
+<tr>
+<td>A07 lam</td>
+<td>10/21發布；截至9/27季度</td>
+<td>A</td>
+<td>原始資料</td>
+<td><a href="https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026" rel="noopener noreferrer" target="_blank">https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026</a></td>
+</tr>
+<tr>
+<td>A08 tsm</td>
+<td>10/15發布；Q3</td>
+<td>A</td>
+<td>原始資料</td>
+<td><a href="https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/9f58506f6f114f91cefbf86820cc63297b39b130/3Q26%20Presentation%20(E).pdf" rel="noopener noreferrer" target="_blank">https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/9f58506f6f114f91cefbf86820cc63297b39b130/3Q26%20Presentation%20(E).pdf</a></td>
+</tr>
+<tr>
+<td>A09 wsts</td>
+<td>截至8月；舊基線</td>
+<td>A</td>
+<td>原始資料</td>
+<td><a href="https://www.semiconductors.org/year-to-date-global-semiconductor-sales-top-1-trillion-through-august/" rel="noopener noreferrer" target="_blank">https://www.semiconductors.org/year-to-date-global-semiconductor-sales-top-1-trillion-through-august/</a></td>
+</tr>
+<tr>
+<td>A10 memory</td>
+<td>10/23 18:10台北</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://www.dramexchange.com/" rel="noopener noreferrer" target="_blank">https://www.dramexchange.com/</a></td>
+</tr>
+<tr>
+<td>A11 orders</td>
+<td>10/20發布；9月</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">https://focustaiwan.tw/business/202610200019</a></td>
+</tr>
+<tr>
+<td>A12 orders_cons</td>
+<td>10/20；9月</td>
+<td>B</td>
+<td>索引或有限摘錄；未宣稱全文</td>
+<td><a href="https://uk.marketscreener.com/news/taiwan-september-export-orders-hit-record-value-on-solid-ai-demand-ce785cdbd08cf32d" rel="noopener noreferrer" target="_blank">https://uk.marketscreener.com/news/taiwan-september-export-orders-hit-record-value-on-solid-ai-demand-ce785cdbd08cf32d</a></td>
+</tr>
+<tr>
+<td>A13 korea</td>
+<td>10/21發布；10/1–20</td>
+<td>A</td>
+<td>原始資料</td>
+<td><a href="https://customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&amp;mi=2891&amp;nttSn=10180465&amp;nttSnUrl=3b279b0d8ae0387ac138c4741fb65b67" rel="noopener noreferrer" target="_blank">https://customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&amp;mi=2891&amp;nttSn=10180465&amp;nttSnUrl=3b279b0d8ae0387ac138c4741fb65b67</a></td>
+</tr>
+<tr>
+<td>A14 korea_chips</td>
+<td>10/21；10/1–20</td>
+<td>B</td>
+<td>索引或有限摘錄；未宣稱全文</td>
+<td><a href="https://rki.kbs.co.kr/service/news_view.htm?Seq_Code=205005&amp;lang=e" rel="noopener noreferrer" target="_blank">https://rki.kbs.co.kr/service/news_view.htm?Seq_Code=205005&amp;lang=e</a></td>
+</tr>
+<tr>
+<td>A15 china</td>
+<td>10/19發布；Q3／9月</td>
+<td>A</td>
+<td>原始資料</td>
+<td><a href="https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965618.html" rel="noopener noreferrer" target="_blank">https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965618.html</a></td>
+</tr>
+<tr>
+<td>A16 japan</td>
+<td>10/23發布；9月</td>
+<td>A</td>
+<td>原始資料</td>
+<td><a href="https://www.stat.go.jp/data/cpi/sokuhou/tsuki/pdf/zenkoku.pdf" rel="noopener noreferrer" target="_blank">https://www.stat.go.jp/data/cpi/sokuhou/tsuki/pdf/zenkoku.pdf</a></td>
+</tr>
+<tr>
+<td>A17 japan_cons</td>
+<td>10/23；9月</td>
+<td>B</td>
+<td>索引或有限摘錄；未宣稱全文</td>
+<td><a href="https://www.marketscreener.com/news/japan-core-inflation-exceeds-boj-target-cements-near-term-rate-hike-chance-ce785cdede88f02d" rel="noopener noreferrer" target="_blank">https://www.marketscreener.com/news/japan-core-inflation-exceeds-boj-target-cements-near-term-rate-hike-chance-ce785cdede88f02d</a></td>
+</tr>
+<tr>
+<td>A18 tier</td>
+<td>10/23發布；9月調查</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://focustaiwan.tw/business/202610230009" rel="noopener noreferrer" target="_blank">https://focustaiwan.tw/business/202610230009</a></td>
+</tr>
+<tr>
+<td>A19 production</td>
+<td>10/23發布；9月</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://focustaiwan.tw/business/202610230013" rel="noopener noreferrer" target="_blank">https://focustaiwan.tw/business/202610230013</a></td>
+</tr>
+<tr>
+<td>A20 cpc</td>
+<td>10/24決定；10/26–11/1適用</td>
+<td>A</td>
+<td>原始資料</td>
+<td><a href="https://www.cpc.com.tw/News_Content.aspx?n=28&amp;s=112945&amp;sms=8920" rel="noopener noreferrer" target="_blank">https://www.cpc.com.tw/News_Content.aspx?n=28&amp;s=112945&amp;sms=8920</a></td>
+</tr>
+<tr>
+<td>A21 eva</td>
+<td>10/25；未用作新數字</td>
+<td>B</td>
+<td>未用於新增數字或Action</td>
+<td><a href="https://www.cna.com.tw/news/afe/202610250131.aspx" rel="noopener noreferrer" target="_blank">https://www.cna.com.tw/news/afe/202610250131.aspx</a></td>
+</tr>
+<tr>
+<td>A22 jkm</td>
+<td>10/23收盤</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://www.investing.com/commodities/lng-japan-korea-marker-platts-futures-historical-data" rel="noopener noreferrer" target="_blank">https://www.investing.com/commodities/lng-japan-korea-marker-platts-futures-historical-data</a></td>
+</tr>
+<tr>
+<td>A23 ttf</td>
+<td>10/23收盤</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://www.investing.com/commodities/dutch-ttf-gas-c1-futures-historical-data" rel="noopener noreferrer" target="_blank">https://www.investing.com/commodities/dutch-ttf-gas-c1-futures-historical-data</a></td>
+</tr>
+<tr>
+<td>A24 brent</td>
+<td>10/23收盤；12月合約</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://www.investing.com/commodities/brent-oil-historical-data" rel="noopener noreferrer" target="_blank">https://www.investing.com/commodities/brent-oil-historical-data</a></td>
+</tr>
+<tr>
+<td>A25 curve</td>
+<td>10/23合約表</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://www.investing.com/commodities/brent-oil-contracts" rel="noopener noreferrer" target="_blank">https://www.investing.com/commodities/brent-oil-contracts</a></td>
+</tr>
+<tr>
+<td>A26 wti</td>
+<td>10/23收盤</td>
+<td>B</td>
+<td>次級資料；非獨立重複事件</td>
+<td><a href="https://www.investing.com/commodities/crude-oil-historical-data" rel="noopener noreferrer" target="_blank">https://www.investing.com/commodities/crude-oil-historical-data</a></td>
+</tr>
+<tr>
+<td>A27 storage</td>
+<td>10/23氣日</td>
+<td>B</td>
+<td>原始儲氣頁未取得；有日期次級值</td>
+<td><a href="https://voltstack.energy/days-of-gas" rel="noopener noreferrer" target="_blank">https://voltstack.energy/days-of-gas</a></td>
+</tr>
+<tr>
+<td>A28 norway</td>
+<td>10/25訊息；流量僅10/23</td>
+<td>D</td>
+<td>未確認增量流量；隔離於Action</td>
+<td><a href="https://voltstack.energy/norway-gas-flows" rel="noopener noreferrer" target="_blank">https://voltstack.energy/norway-gas-flows</a></td>
+</tr>
+<tr>
+<td>A29 eia</td>
+<td>10/16參考週</td>
+<td>A</td>
+<td>原始資料</td>
+<td><a href="https://ir.eia.gov/ngs/ngs.html" rel="noopener noreferrer" target="_blank">https://ir.eia.gov/ngs/ngs.html</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-個股與企業">個股與企業</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>編號／資料</th>
+<th>發布／觀察日期</th>
+<th>等級</th>
+<th>使用限制</th>
+<th>完整來源URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E01 tsm</td>
+<td>2026-10-15</td>
+<td>A</td>
+<td>財務/前瞻指引（Guidance）；窗口前基準非本週新發布</td>
+<td><a href="https://pr.tsmc.com/english/news/3346" rel="noopener noreferrer" target="_blank">https://pr.tsmc.com/english/news/3346</a></td>
+</tr>
+<tr>
+<td>E02 tsm_pdf</td>
+<td>2026-10-15</td>
+<td>B</td>
+<td>庫存（Inventory）427.75/385.53 primaryindexed；有限摘錄／索引</td>
+<td><a href="https://investor.tsmc.com/schinese/encrypt/files/encrypt_file/reports/2026-10/4cd2e3da18b32b94af7f114c7f27b5291fceea66/3Q26%20Presentation%20%28E%29.pdf" rel="noopener noreferrer" target="_blank">https://investor.tsmc.com/schinese/encrypt/files/encrypt_file/reports/2026-10/4cd2e3da18b32b94af7f114c7f27b5291fceea66/3Q26%20Presentation%20%28E%29.pdf</a></td>
+</tr>
+<tr>
+<td>E03 tsm_mirror</td>
+<td>2026-10-15</td>
+<td>B</td>
+<td>CFO/FCF/庫存天數口徑；有限摘錄／索引</td>
+<td><a href="https://www.stocktitan.net/sec-filings/TSMWF/6-k-taiwan-semiconductor-manufacturing-co-ltd-current-report-foreign--e503d3f14bce.html" rel="noopener noreferrer" target="_blank">https://www.stocktitan.net/sec-filings/TSMWF/6-k-taiwan-semiconductor-manufacturing-co-ltd-current-report-foreign--e503d3f14bce.html</a></td>
+</tr>
+<tr>
+<td>E04 nv</td>
+<td>2026-10-21</td>
+<td>A</td>
+<td>客戶產能承諾；非已實現供應商獲利</td>
+<td><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx" rel="noopener noreferrer" target="_blank">https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx</a></td>
+</tr>
+<tr>
+<td>E05 cna_nv</td>
+<td>2026-10-21T21:11+08:00</td>
+<td>B</td>
+<td>同一NV公告轉述，非第二獨立需求證據</td>
+<td><a href="https://www.cna.com.tw/news/afe/202610210339.aspx" rel="noopener noreferrer" target="_blank">https://www.cna.com.tw/news/afe/202610210339.aspx</a></td>
+</tr>
+<tr>
+<td>E06 cna_price</td>
+<td>2026-10-22T14:19+08:00</td>
+<td>B</td>
+<td>TSM/Delta收盤；跨股電子/金融相反</td>
+<td><a href="https://www.cna.com.tw/news/afe/202610220177.aspx" rel="noopener noreferrer" target="_blank">https://www.cna.com.tw/news/afe/202610220177.aspx</a></td>
+</tr>
+<tr>
+<td>E07 kyec_price</td>
+<td>2026-10-22T14:30+08:00</td>
+<td>B</td>
+<td>262.5/278.0；有限摘錄／索引</td>
+<td><a href="https://tw.finance.yahoo.com/quote/2449" rel="noopener noreferrer" target="_blank">https://tw.finance.yahoo.com/quote/2449</a></td>
+</tr>
+<tr>
+<td>E08 kyec_cross</td>
+<td>2026-10-22</td>
+<td>B</td>
+<td>OHLC262.5；有限摘錄／索引</td>
+<td><a href="https://histock.tw/stock/tchart.aspx?m=m520&amp;no=2449" rel="noopener noreferrer" target="_blank">https://histock.tw/stock/tchart.aspx?m=m520&amp;no=2449</a></td>
+</tr>
+<tr>
+<td>E09 ase_price</td>
+<td>2026-10-22</td>
+<td>B</td>
+<td>654/684；有限摘錄／索引</td>
+<td><a href="https://superpy.kgieworld.com.tw/kgipythonapi/stockInfo/stockCalendar?stockCode=3711" rel="noopener noreferrer" target="_blank">https://superpy.kgieworld.com.tw/kgipythonapi/stockInfo/stockCalendar?stockCode=3711</a></td>
+</tr>
+<tr>
+<td>E10 unimicron_price</td>
+<td>2026-10-22</td>
+<td>B</td>
+<td>1085/1100；外資+28投信+1415；有限摘錄／索引</td>
+<td><a href="https://superpy.kgieworld.com.tw/kgipythonapi/stockInfo/dayIISBList?stockCode=3037" rel="noopener noreferrer" target="_blank">https://superpy.kgieworld.com.tw/kgipythonapi/stockInfo/dayIISBList?stockCode=3037</a></td>
+</tr>
+<tr>
+<td>E11 delta</td>
+<td>2026-10-12</td>
+<td>A</td>
+<td>九月營收65400百萬；窗口前基準；官方題名，非完整財表</td>
+<td><a href="https://www.deltaww.com/en-US/press/41160" rel="noopener noreferrer" target="_blank">https://www.deltaww.com/en-US/press/41160</a></td>
+</tr>
+<tr>
+<td>E12 delta_product</td>
+<td>2026-10-14</td>
+<td>A</td>
+<td>SST電源展示非本週新訂單（New Orders）；官方題名，非完整財表</td>
+<td><a href="https://www.deltaww.com/en-US/press/41167" rel="noopener noreferrer" target="_blank">https://www.deltaww.com/en-US/press/41167</a></td>
+</tr>
+<tr>
+<td>E13 delta_flow</td>
+<td>2026-10-22</td>
+<td>B</td>
+<td>10/19-22外資皆負；有限摘錄／索引</td>
+<td><a href="https://tweb.money-link.com.tw/TWStock/StockChips.aspx?SymId=2308&amp;TWMId=Chips_STK04" rel="noopener noreferrer" target="_blank">https://tweb.money-link.com.tw/TWStock/StockChips.aspx?SymId=2308&amp;TWMId=Chips_STK04</a></td>
+</tr>
+<tr>
+<td>E14 prior_price</td>
+<td>2026-10-16T13:35+08:00</td>
+<td>B</td>
+<td>週期前最後交易TSM2420Delta1635</td>
+<td><a href="https://news.nextapple.com/finance/20261016/1431DA3A2CA5E75FE824CD7E37929AD5" rel="noopener noreferrer" target="_blank">https://news.nextapple.com/finance/20261016/1431DA3A2CA5E75FE824CD7E37929AD5</a></td>
+</tr>
+<tr>
+<td>E15 tsm_daily</td>
+<td>2026-10-22</td>
+<td>B</td>
+<td>10/19-22為2420/2405/2420/2385</td>
+<td><a href="https://histock.tw/index/TSL" rel="noopener noreferrer" target="_blank">https://histock.tw/index/TSL</a></td>
+</tr>
+<tr>
+<td>E16 market_flow</td>
+<td>2026-10-22T17:23+08:00</td>
+<td>B</td>
+<td>外資TWSE−816.56億；台幣32.508</td>
+<td><a href="https://news.cnyes.com/news/id/6635866" rel="noopener noreferrer" target="_blank">https://news.cnyes.com/news/id/6635866</a></td>
+</tr>
+<tr>
+<td>E17 ase_revenue</td>
+<td>2026-10-12</td>
+<td>B</td>
+<td>9月881.30億+45.52YoY/+7.15MoM，非CPO拆分；有限摘錄／索引</td>
+<td><a href="https://gfe-desktop.cnyes.com/news/id/6628388/print" rel="noopener noreferrer" target="_blank">https://gfe-desktop.cnyes.com/news/id/6628388/print</a></td>
+</tr>
+<tr>
+<td>E18 kyec_old</td>
+<td>2026-10-13</td>
+<td>B</td>
+<td>董事會預付款舊聞；本週才量化金額與時間</td>
+<td><a href="https://news.pchome.com.tw/finance/cna/20261013/index-17918769863048718003.html" rel="noopener noreferrer" target="_blank">https://news.pchome.com.tw/finance/cna/20261013/index-17918769863048718003.html</a></td>
+</tr>
+<tr>
+<td>E19 dell</td>
+<td>2026-10-21</td>
+<td>A</td>
+<td>6500AI客戶vs5000上季；需求廣度另一公司口徑非晶片單價；有限摘錄／索引</td>
+<td><a href="https://www.dell.com/en-us/dt/corporate/newsroom/announcements/detailpage.press-releases~usa~2026~10~dell-technologies-and-nvidia-advance-enterprise-agentic-ai-from-the-deskside-to-data-center.htm" rel="noopener noreferrer" target="_blank">https://www.dell.com/en-us/dt/corporate/newsroom/announcements/detailpage.press-releases~usa~2026~10~dell-technologies-and-nvidia-advance-enterprise-agentic-ai-from-the-deskside-to-data-center.htm</a></td>
+</tr>
+<tr>
+<td>E99 tsm_adr</td>
+<td>2026-10-23 close；10/16比較</td>
+<td>B</td>
+<td>ADR 歷史收盤；10/25 20:36:59台北核對；與台灣現貨非同步</td>
+<td><a href="https://stockanalysis.com/stocks/tsm/history/" rel="noopener noreferrer" target="_blank">https://stockanalysis.com/stocks/tsm/history/</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>主要檢索始於台北二十時零五分，ADR 歷史表補核至二十時三十六分五十九秒；均為觀察截止前的價格或資料。財報完整性、公司估值、全週外資流與歷史同業敏感度仍有限；正式行動及價格預測因此留空。</p>
+<h2 id="section-結論-bottom-line">結論（Bottom Line）</h2>
+<p>利率緩和沒有消除能源與信用壓力，AI 基本面強也未轉成市場確認。本週維持 YELLOW 與分化框架，五檔僅觀察；下一步是補足可驗證的盈利、估值（Valuation）及資金橋接，而不是用更精確的數字掩蓋不確定。</p>
+<ul>
+<li>驗證 FOMC 與核心 PCE：政策定價緩和是否有持續通膨改善支持。</li>
+<li>驗證公司與市場共振：收入、毛利、現金回收及外資廣度是否同向改善。</li>
+<li>驗證能源實體鏈：同合約價格、庫存（Inventory）季節缺口及事件後實際流量，不以預告代替結果。</li>
+</ul>
+
+    </main>
+    <footer>
+      Global Macro Signal Report · N/A · Generated Deterministically
+    </footer>
+  </div>
+</div>
+</body>
+</html>

@@ -2896,6 +2896,22 @@
       "title": "Global Macro Early Warning｜歐洲天然氣庫存不足獲季節性佐證，能源脆弱性升高",
       "topic": null
     },
+    "WEEKLY-Weekly_Strategy_2026-10-25": {
+      "coverage_end_taipei": null,
+      "coverage_start_taipei": null,
+      "generated_at_taipei": null,
+      "html_path": "reports/weekly/Weekly_Strategy_2026-10-25.html",
+      "html_sha256": "a57513bddacee31d7a55d8ec69bde7c1eaa556b6f80abd4e124fcbd3349571c1",
+      "markdown_path": "reports/weekly/Weekly_Strategy_2026-10-25.md",
+      "markdown_sha256": "114991a45d94fc879e019fdfa01683239c8290596eabe16210e64300ee79a9f3",
+      "report_type": "WEEKLY_STRATEGY",
+      "risk_light": null,
+      "run_id": "WEEKLY-Weekly_Strategy_2026-10-25",
+      "slug": null,
+      "source_document_id": null,
+      "title": "Weekly Global Macro & Investment Strategy｜利率緩和未解能源壓力與科技股價分岔",
+      "topic": null
+    },
     "WKS-20260927-2000": {
       "coverage_end_taipei": "2026-09-27T20:00:58+08:00",
       "coverage_start_taipei": "2026-09-20T20:00:58+08:00",
