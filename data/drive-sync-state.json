@@ -2043,6 +2043,15 @@
       "sha256": "e506175dcf06efb297c37e861594201b099496d8cca1ef142dfab864da4955ea",
       "size": 29758
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-26_1800_brazil-repricing.md": {
+      "category": "early-warning",
+      "drive_file_id": "1G5UJBrguMAWA5VEq25fR6UFWpLP_cXy8",
+      "md5_checksum": "22d3bb84bd4e23e2818dcf91a8c2905f",
+      "modified_time": "2026-10-26T10:11:15.440Z",
+      "name": "Global_Macro_Early_Warning_2026-10-26_1800_brazil-repricing.md",
+      "sha256": "e1427bd5ee03b8da55e810b4f63e882e5066b6cce72c3c284e5eb15ae650b854",
+      "size": 16255
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",

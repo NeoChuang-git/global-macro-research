@@ -2976,6 +2976,22 @@
       "title": "Global Macro Early Warning｜日本半導體午盤弱勢擴散，戰術警報觸發但不升燈",
       "topic": null
     },
+    "MTW-20261026-1800-brazil-repricing": {
+      "coverage_end_taipei": "2026-10-26T18:08:52.162068+08:00",
+      "coverage_start_taipei": "2026-10-26T17:00:00+08:00",
+      "generated_at_taipei": "2026-10-26T18:08:52+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-26_1800_brazil-repricing.html",
+      "html_sha256": "23dc7468c4da864735fde00e76417c428580e9756cbc6dc96f01914b59fd1bb8",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-26_1800_brazil-repricing.md",
+      "markdown_sha256": "067f25aeeabfc29006caa79705e9308fcb731b0ec0bfcafa0dc01db3139ea510",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261026-1800-brazil-repricing",
+      "slug": "brazil-repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜巴西選舉引爆離岸匯股重定價，全球融資傳染尚未確認",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
