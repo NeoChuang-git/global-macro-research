@@ -2992,6 +2992,22 @@
       "title": "Global Macro Early Warning｜巴西選舉引爆離岸匯股重定價，全球融資傳染尚未確認",
       "topic": null
     },
+    "MTW-20261026-2100-brazil-auction-halt": {
+      "coverage_end_taipei": "2026-10-26T21:46:17+08:00",
+      "coverage_start_taipei": "2026-10-26T20:00:00+08:00",
+      "generated_at_taipei": "2026-10-26T21:47:03+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-26_2100_brazil-auction-halt.html",
+      "html_sha256": "843eb2e2443c631f185e064beafbf8a09b140bf7a40cd46683f8a5361c710e5e",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-26_2100_brazil-auction-halt.md",
+      "markdown_sha256": "ddbe908c08b3870695adb641ea9fa9c1ae7a49762755678e1901066daca86f24",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261026-2100-brazil-auction-halt",
+      "slug": "brazil-auction-halt",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜巴西開盤競價觸發熔斷，局部交易壓力獲官方確認",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
