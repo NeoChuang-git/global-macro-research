@@ -880,6 +880,22 @@
       "title": "Global Daily Brief｜SpaceX 宣稱完成 GPU 融資，資金到位仍不等於交付兌現",
       "topic": null
     },
+    "GDB-20261027-0730": {
+      "coverage_end_taipei": "2026-10-27T07:30:13+08:00",
+      "coverage_start_taipei": "2026-10-26T07:30:13+08:00",
+      "generated_at_taipei": "2026-10-27T07:40:03+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-27.html",
+      "html_sha256": "63d4b0c5f35daea60d1f461ae4bf292c3a8eaab4fbef21e3200f4aee5ccd8e4b",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-27.md",
+      "markdown_sha256": "79b8e8cb10586d74e0619dcfc3a4ebf0d1886667381c1ec516bdb3cfa17cee4d",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261027-0730",
+      "slug": "anthropic-ipo-cash-quality",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Anthropic 公開上市申報，AI 成長接受現金品質檢驗",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
