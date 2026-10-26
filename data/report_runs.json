@@ -864,6 +864,22 @@
       "title": "Global Daily Brief｜Starlink 恢復烏克蘭服務，科技股增量仍待驗證",
       "topic": null
     },
+    "GDB-20261026-0730": {
+      "coverage_end_taipei": "2026-10-26T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-25T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-26T07:35:26.997539+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-26.html",
+      "html_sha256": "58e614be6c2562f34391dd1c0d5c44a80576e0929cb99df04857a0f970016968",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-26.md",
+      "markdown_sha256": "271e997ed1cc208dc49e3e31f71405a7c1cb66153105f17a7bea0b9703da83a7",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261026-0730",
+      "slug": "gpu-financing-governance",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜SpaceX 宣稱完成 GPU 融資，資金到位仍不等於交付兌現",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
