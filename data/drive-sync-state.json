@@ -1989,6 +1989,33 @@
       "sha256": "2b59a37d4c1e49120198571738589b0a9c0d992fd9e3ccbabbdfa1117b82a2c9",
       "size": 34572
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-23_0800_stock-bond-volatility.md": {
+      "category": "early-warning",
+      "drive_file_id": "1-o26dBl9ORYty25fUOAxorLtWYWmy1PS",
+      "md5_checksum": "a74c069345b44e6c3158f525b9766787",
+      "modified_time": "2026-10-26T00:55:37.224Z",
+      "name": "Global_Macro_Early_Warning_2026-10-23_0800_stock-bond-volatility.md",
+      "sha256": "87461323584202378482b6f346401b6e16ad6ab8731908ad573bb4d97b0edf16",
+      "size": 40381
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-23_1100_chip-financing-pressure.md": {
+      "category": "early-warning",
+      "drive_file_id": "1-lUKMmTfvOTF71LZN1ZYA5sYiNv1czmU",
+      "md5_checksum": "e59bd88ed164adeb310fbde60ffadc9b",
+      "modified_time": "2026-10-26T00:55:48.062Z",
+      "name": "Global_Macro_Early_Warning_2026-10-23_1100_chip-financing-pressure.md",
+      "sha256": "ba72f3c319d34adbf90b1011501741ebc4b4221aa9477842c424ae1bd8a18ee7",
+      "size": 45844
+    },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-23_1400_chip-risk-repair.md": {
+      "category": "early-warning",
+      "drive_file_id": "1-6_-15l3q8UyqOfsQPYpnqjArb_ULIMj",
+      "md5_checksum": "b7b4b3ac2ef40d41a57ce90fdac1901f",
+      "modified_time": "2026-10-26T00:55:55.266Z",
+      "name": "Global_Macro_Early_Warning_2026-10-23_1400_chip-risk-repair.md",
+      "sha256": "1b53d4ec22a172c091fcd956cad1325d77d318fe89bf4ed85336dc67274bd902",
+      "size": 45834
+    },
     "reports/early-warning/Global_Macro_Early_Warning_2026-10-23_2300_price-passthrough.md": {
       "category": "early-warning",
       "drive_file_id": "1ahqaxcLO2ZuNtZJqMR7a0wQHcNzE-DKM",
