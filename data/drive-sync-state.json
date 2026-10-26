@@ -2034,6 +2034,15 @@
       "sha256": "fbac921b28f5ada57f12274e84d208d45616c9dd365d05da22a63d24139551da",
       "size": 52269
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-26_1100_japan-chip-weakness.md": {
+      "category": "early-warning",
+      "drive_file_id": "1kCdrbUZFclf3iK2xFeVdC6gJpqqiIouf",
+      "md5_checksum": "59710681e7edeca0eeb5ca4543965708",
+      "modified_time": "2026-10-26T03:22:17.912Z",
+      "name": "Global_Macro_Early_Warning_2026-10-26_1100_japan-chip-weakness.md",
+      "sha256": "e506175dcf06efb297c37e861594201b099496d8cca1ef142dfab864da4955ea",
+      "size": 29758
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",

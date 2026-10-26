@@ -2960,6 +2960,22 @@
       "title": "Global Macro Early Warning｜歐洲天然氣庫存不足獲季節性佐證，能源脆弱性升高",
       "topic": null
     },
+    "MTW-20261026-1100-japan-chip-weakness": {
+      "coverage_end_taipei": "2026-10-26T11:08:34.744933+08:00",
+      "coverage_start_taipei": "2026-10-26T10:00:00+08:00",
+      "generated_at_taipei": "2026-10-26T11:19:49+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-26_1100_japan-chip-weakness.html",
+      "html_sha256": "0e2ebfaea814775a4c69c30ddb50d53c7603cfae263466c8bae5bf08e57e9dd9",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-26_1100_japan-chip-weakness.md",
+      "markdown_sha256": "6fcd002d20e74b3dc3efacfe265422f8315f8485637ade30df638a0a739b3c3d",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261026-1100-japan-chip-weakness",
+      "slug": "japan-chip-weakness",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜日本半導體午盤弱勢擴散，戰術警報觸發但不升燈",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
