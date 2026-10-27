@@ -3152,6 +3152,22 @@
       "title": "Global Macro Early Warning｜ASM實績與2027指引上修，AI設備需求延續但現金轉換待驗",
       "topic": null
     },
+    "MTW-20261028-0600-earnings-price-divergence": {
+      "coverage_end_taipei": "2026-10-28T06:08:11+08:00",
+      "coverage_start_taipei": "2026-10-28T05:00:00+08:00",
+      "generated_at_taipei": "2026-10-28T06:08:11+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-28_0600_earnings-price-divergence.html",
+      "html_sha256": "4cbd11bf9ae1b28b0e8508cdf6683096536ceacfb13b3f85905e270d2b055c5f",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-28_0600_earnings-price-divergence.md",
+      "markdown_sha256": "fd270f094e6d72fb9dc27c6f919f85de03d2d478f943d7c481edbab00a8bdce9",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261028-0600-earnings-price-divergence",
+      "slug": "earnings-price-divergence",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜AI財報兌現卻遭盤後賣壓：基本面與估值分歧",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
