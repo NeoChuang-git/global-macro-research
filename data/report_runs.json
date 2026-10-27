@@ -3072,6 +3072,22 @@
       "title": "Global Macro Early Warning｜中國股市弱勢獲收盤確認，區域估值壓力尚未擴散",
       "topic": null
     },
+    "MTW-20261027-1900-taiwan-outflow-evidence": {
+      "coverage_end_taipei": "2026-10-27T19:11:51+08:00",
+      "coverage_start_taipei": "2026-10-27T18:00:00+08:00",
+      "generated_at_taipei": "2026-10-27T19:11:51+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-27_1900_taiwan-outflow-evidence.html",
+      "html_sha256": "6a662b94f769d7f294209b749655b7d72f808725b6d201c65d9a88a50f6421d9",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-27_1900_taiwan-outflow-evidence.md",
+      "markdown_sha256": "aed572e4743a20a35fc3bc4dfef64fead9070cb23cd7b066a0fd1d7cd980bfc9",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261027-1900-taiwan-outflow-evidence",
+      "slug": "taiwan-outflow-evidence",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台灣外資累積匯出壓力獲確認，單日修復尚不足以翻轉",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
