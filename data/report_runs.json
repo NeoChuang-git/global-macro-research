@@ -3088,6 +3088,38 @@
       "title": "Global Macro Early Warning｜台灣外資累積匯出壓力獲確認，單日修復尚不足以翻轉",
       "topic": null
     },
+    "MTW-20261027-2200-europe-credit-demand": {
+      "coverage_end_taipei": "2026-10-27T22:08:41+08:00",
+      "coverage_start_taipei": "2026-10-27T21:00:00+08:00",
+      "generated_at_taipei": "2026-10-27T22:20:29+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-27_2200_europe-credit-demand.html",
+      "html_sha256": "4681a7f96bbd3ca893a432fc28a7702b7516e57b5ac0baa286a851957a0aa9a8",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-27_2200_europe-credit-demand.md",
+      "markdown_sha256": "c1e0bd542da827576c7cb871a6c5b9bb0c71b309b896af1867d7188b28de1e2e",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261027-2200-europe-credit-demand",
+      "slug": "europe-credit-demand",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜歐洲信貸與消費轉弱，台灣外需風險待接單確認",
+      "topic": null
+    },
+    "MTW-20261027-2300-us-demand-rebound": {
+      "coverage_end_taipei": "2026-10-27T23:09:57+08:00",
+      "coverage_start_taipei": "2026-10-27T22:00:00+08:00",
+      "generated_at_taipei": "2026-10-27T23:11:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-27_2300_us-demand-rebound.html",
+      "html_sha256": "75605f66efee370ab29c816707a6e554e193270295cc81e3c20dd8e0845161ac",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-27_2300_us-demand-rebound.md",
+      "markdown_sha256": "1e36de38fbc69ae0d5df7830c2a1bb4f5aeece45108036afb19469b2ff81f1cb",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261027-2300-us-demand-rebound",
+      "slug": "us-demand-rebound",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜美國信心反彈緩解需求尾部風險，台灣電子接單仍待確認",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
