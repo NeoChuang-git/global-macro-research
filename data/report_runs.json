@@ -3136,6 +3136,22 @@
       "title": "Global Macro Early Warning｜智原2奈米AI設計得標，需求承接改善但現金轉換仍待驗證",
       "topic": null
     },
+    "MTW-20261028-0400-ai-equipment-upgrade": {
+      "coverage_end_taipei": "2026-10-28T04:13:42+08:00",
+      "coverage_start_taipei": "2026-10-28T03:00:00+08:00",
+      "generated_at_taipei": "2026-10-28T04:13:42+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-28_0400_ai-equipment-upgrade.html",
+      "html_sha256": "5f8da34bc62bc90ab7ee0ae808a03aa2afe3bdf59295c7451fc3ec9cc369c51b",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-28_0400_ai-equipment-upgrade.md",
+      "markdown_sha256": "0223563d6b1acdedadb1d88b9e7a41c7f71459f25922b053c297003d1436856b",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261028-0400-ai-equipment-upgrade",
+      "slug": "ai-equipment-upgrade",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜ASM實績與2027指引上修，AI設備需求延續但現金轉換待驗",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
