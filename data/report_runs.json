@@ -3024,6 +3024,22 @@
       "title": "Global Macro Early Warning｜巴西開盤競價觸發熔斷，局部交易壓力獲官方確認",
       "topic": null
     },
+    "MTW-20261027-0800-ai-demand-confirmation": {
+      "coverage_end_taipei": "2026-10-27T08:09:05+08:00",
+      "coverage_start_taipei": "2026-10-27T07:00:00+08:00",
+      "generated_at_taipei": "2026-10-27T08:09:05+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-27_0800_ai-demand-confirmation.html",
+      "html_sha256": "cd46470ad53ea873bb50cc5a13c7c3ce728ca7e34302758a27a66893c1426a41",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-27_0800_ai-demand-confirmation.md",
+      "markdown_sha256": "ebeb9720672cec29b9a142c0033829e69462c6ebabf2d7aa6b91e790fac984f1",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261027-0800-ai-demand-confirmation",
+      "slug": "ai-demand-confirmation",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜AI 實際需求與指引轉強，現金品質仍限制風險修復",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
