@@ -3056,6 +3056,22 @@
       "title": "Global Macro Early Warning｜日本半導體相對弱勢逆轉，台灣開盤尚未同步領漲",
       "topic": null
     },
+    "MTW-20261027-1800-china-equity-pressure": {
+      "coverage_end_taipei": "2026-10-27T18:10:38+08:00",
+      "coverage_start_taipei": "2026-10-27T17:00:00+08:00",
+      "generated_at_taipei": "2026-10-27T18:10:38+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-27_1800_china-equity-pressure.html",
+      "html_sha256": "ec27ea429a7281ab240eb6306435d40dccbe38abd782b362f72cfec2c46c47bc",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-27_1800_china-equity-pressure.md",
+      "markdown_sha256": "2bfbf74c9a47e39ff60d3728738d4ed01f109899c34cce8a1f7d106290466448",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261027-1800-china-equity-pressure",
+      "slug": "china-equity-pressure",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜中國股市弱勢獲收盤確認，區域估值壓力尚未擴散",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
