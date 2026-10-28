@@ -3200,6 +3200,22 @@
       "title": "Global Macro Early Warning｜ASMPT封裝設備訂單超越原展望，AI需求廣度增加但拉貨前置限制外推",
       "topic": null
     },
+    "MTW-20261028-2300-energy-policy-pass-through": {
+      "coverage_end_taipei": "2026-10-28T23:17:29.424569+08:00",
+      "coverage_start_taipei": "2026-10-28T22:00:00+08:00",
+      "generated_at_taipei": "2026-10-28T23:17:29.424569+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-28_2300_energy-policy-pass-through.html",
+      "html_sha256": "26a1acee0e175ec445bce2853936b03a6f58be06c056cfabca1eb52c53a9a46b",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-28_2300_energy-policy-pass-through.md",
+      "markdown_sha256": "527940fc2ea35b643017636bb0039a646b0c60f097467657f1ac1ae9b4baa78c",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261028-2300-energy-policy-pass-through",
+      "slug": "energy-policy-pass-through",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜加拿大升息確認能源成本傳導，全球風險尚未同步升級",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
