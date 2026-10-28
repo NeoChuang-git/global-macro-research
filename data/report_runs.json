@@ -896,6 +896,22 @@
       "title": "Global Daily Brief｜Anthropic 公開上市申報，AI 成長接受現金品質檢驗",
       "topic": null
     },
+    "GDB-20261028-0730": {
+      "coverage_end_taipei": "2026-10-28T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-27T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-28T07:38:10+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-28.html",
+      "html_sha256": "b591730797abf8859772f367f93c102194e64627f3f6a3cc7712835a3b7832ca",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-28.md",
+      "markdown_sha256": "3a07f2b74f1ac8d20c0ec51880613dea8f9bad5efb8b79e5e86d264771ad40e9",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261028-0730",
+      "slug": "ai-cloud-funding-divergence",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Oracle 擴大多晶片雲端，Meta 融資與 ASM 展望凸顯 AI 定價分歧",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",

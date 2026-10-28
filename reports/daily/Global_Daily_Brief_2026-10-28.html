@@ -1,0 +1,1135 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Daily Brief｜Oracle 擴大多晶片雲端，Meta 融資與 ASM 展望凸顯 AI 定價分歧 · 2026-10-28 07:38:10</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --accent: #0284c7;
+  --accent-light: #e0f2fe;
+  --accent-glow: rgba(2, 132, 199, 0.08);
+
+  /* Callout Colors */
+  --callout-bg: #f8fafc;
+  --callout-thesis-border: #0284c7;
+  --callout-thesis-bg: #f0f9ff;
+  --callout-risk-border: #f97316;
+  --callout-risk-bg: #fff7ed;
+  --callout-strategy-border: #8b5cf6;
+  --callout-strategy-bg: #f5f3ff;
+  --callout-catalyst-border: #10b981;
+  --callout-catalyst-bg: #ecfdf5;
+
+  /* Card & Chips */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
+  --chip-border: #cbd5e1;
+
+  /* Risk Lights */
+  --risk-green-bg: #ecfdf5; --risk-green-text: #059669; --risk-green-border: #a7f3d0;
+  --risk-yellow-bg: #fefce8; --risk-yellow-text: #d97706; --risk-yellow-border: #fef08a;
+  --risk-orange-bg: #fff7ed; --risk-orange-text: #ea580c; --risk-orange-border: #fed7aa;
+  --risk-red-bg: #fef2f2; --risk-red-text: #dc2626; --risk-red-border: #fecaca;
+
+  /* Table */
+  --table-zebra: #f8fafc;
+  --table-hover: #f1f5f9;
+  --table-header-bg: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --bg-surface-raised: #334155;
+    --bg-surface-hover: #475569;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #334155;
+    --border-subtle: #475569;
+    --accent: #38bdf8;
+    --accent-light: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.12);
+
+    --callout-bg: #1e293b;
+    --callout-thesis-border: #38bdf8;
+    --callout-thesis-bg: rgba(56, 189, 248, 0.08);
+    --callout-risk-border: #fb923c;
+    --callout-risk-bg: rgba(249, 115, 22, 0.08);
+    --callout-strategy-border: #a78bfa;
+    --callout-strategy-bg: rgba(167, 139, 250, 0.08);
+    --callout-catalyst-border: #34d399;
+    --callout-catalyst-bg: rgba(52, 211, 153, 0.08);
+
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --chip-bg: #334155;
+    --chip-text: #cbd5e1;
+    --chip-border: #475569;
+
+    --risk-green-bg: rgba(16, 185, 129, 0.15); --risk-green-text: #34d399; --risk-green-border: rgba(16, 185, 129, 0.3);
+    --risk-yellow-bg: rgba(245, 158, 11, 0.15); --risk-yellow-text: #fbbf24; --risk-yellow-border: rgba(245, 158, 11, 0.3);
+    --risk-orange-bg: rgba(249, 115, 22, 0.15); --risk-orange-text: #fb923c; --risk-orange-border: rgba(249, 115, 22, 0.3);
+    --risk-red-bg: rgba(239, 68, 68, 0.15); --risk-red-text: #f87171; --risk-red-border: rgba(239, 68, 68, 0.3);
+
+    --table-zebra: rgba(255, 255, 255, 0.02);
+    --table-hover: rgba(56, 189, 248, 0.06);
+    --table-header-bg: #334155;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 17px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+/* Layout Containers: Narrative & Content Presentation */
+.report-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  position: relative;
+}
+
+.report-narrative {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Content Presentation */
+.wide-content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Typography & Headings */
+.report-narrative p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 100%;
+}
+
+ul, ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
+}
+
+/* Callouts */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.35rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--callout-bg);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.callout p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.callout-thesis {
+  border-left-color: var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.callout-risk {
+  border-left-color: var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.callout-strategy {
+  border-left-color: var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.callout-catalyst {
+  border-left-color: var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Analysis Cards */
+.analysis-card {
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.analysis-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Meta Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  line-height: 1.35;
+}
+
+.chip-score {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.chip-evidence, .chip-confidence, .chip-severity, .chip-persistence {
+  color: var(--text-secondary);
+}
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.direction-up { color: #0284c7; }
+.direction-down { color: #7c3aed; }
+.direction-improving { color: #059669; }
+.direction-worsening { color: #dc2626; }
+.direction-flat { color: var(--text-secondary); }
+
+/* Risk Lights */
+.risk-chip, .risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.risk-green { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.risk-yellow { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.risk-orange { background: var(--risk-orange-bg); color: var(--risk-orange-text); border: 1px solid var(--risk-orange-border); }
+.risk-red { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* State Transitions */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.state-prior { color: var(--text-secondary); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  text-align: left;
+  min-width: 680px;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--text-primary);
+  font-weight: 650;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+td {
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Only the three approved two-column Weekly tables fit the narrow viewport. */
+.weekly-local-table {
+  min-width: 0;
+}
+
+.weekly-local-table th,
+.weekly-local-table td {
+  overflow-wrap: anywhere;
+}
+
+.weekly-local-table th {
+  white-space: normal;
+}
+
+.weekly-local-table th:first-child {
+  width: 40%;
+}
+
+/* Executive Summary Grid */
+.executive-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 0;
+}
+
+.executive-points > li {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .executive-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.badge-grade-B { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent); }
+.badge-grade-C { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.badge-grade-D { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(2, 132, 199, 0.4);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+    font-size: 16px;
+  }
+  .report-narrative p {
+    font-size: 16px;
+  }
+  h1.hero-title { font-size: 1.45rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  h4 { font-size: 1rem; }
+  .analysis-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="report-container">
+  <div class="report-narrative">
+    
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">GLOBAL_DAILY_BRIEF</span>
+      <span class="risk-chip risk-yellow">🟡 Risk: YELLOW</span>
+      
+    </div>
+    <div class="hero-run-id">RUN_ID: <code>GDB-20261028-0730</code></div>
+  </div>
+  <h1 class="hero-title">Global Daily Brief｜Oracle 擴大多晶片雲端，Meta 融資與 ASM 展望凸顯 AI 定價分歧</h1>
+  <div class="hero-meta-row">
+    <span class="hero-chip">發布時間：2026-10-28 07:38:10</span>
+    <span class="hero-chip hero-chip-cov">涵蓋：2026-10-27 07:30:00 ~ 2026-10-28 07:30:00</span>
+  </div>
+</header>
+
+    <main class="report-content">
+      
+<h2 id="section-執行摘要-executive-summary">執行摘要（EXECUTIVE SUMMARY）</h2>
+<blockquote class="callout">
+<p>AI 投資沒有同步轉弱，但「誰取得訂單、誰支付資金、誰承擔稀釋」開始分開定價。Oracle 擴大多晶片平台、Meta 引進供應商股權資金與 ASM 上修展望，是本輪三個不同的基本面事件。</p>
+</blockquote>
+<ul class="executive-points">
+<li><strong>需求與競爭並行：</strong> Oracle 擴充 NVIDIA 合作，同時納入 Google TPU 與 Cerebras；不是 GPU 被全面取代，而是訓練與推論架構競爭加深。</li>
+<li><strong>融資不等於獲利：</strong> Meta 的合作資金提高建置可行性，但新增股權供給與資本回報疑慮，使需求端和供應商股價可能反向。</li>
+<li><strong>設備證據較具體：</strong> ASM 上修明年營收門檻提供製程投資佐證；仍須看出貨認列、現金轉換與客戶集中度，不能外推所有設備商。</li>
+<li><strong>盤後另有考驗：</strong> Seagate 財報與展望強於公開預期，股價卻下跌；這是預期與估值門檻的提醒，不是已證實 AI 訂單崩落。</li>
+</ul>
+<p>研究區間：台北時間 2026-10-27 07:30 至 2026-10-28 07:30。美股狀態：盤後（AFTER_HOURS）；現貨收盤與盤後報價分開列示。</p>
+<h2 id="section-今日三大市場訊號-today-top-3-market-signals">今日三大市場訊號（TODAY TOP 3 MARKET SIGNALS）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>市場訊號</th>
+<th>已核實事實</th>
+<th>邊際解讀</th>
+<th>不能推導的結論</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>算力供應走向多架構</td>
+<td>Oracle 同時擴充 GPU、TPU 與推論平台</td>
+<td>對供應鏈需求 <span class="direction direction-improving">↗ 改善</span>；晶片間競爭升高</td>
+<td>所有晶片、封裝與 ODM 同比例受益</td>
+</tr>
+<tr>
+<td>資金取得與股東回報分離</td>
+<td>Meta 引入供應商投資，股價弱於科技市場</td>
+<td>對風險資產 <span class="direction direction-flat">→ 持平</span> 混合；建置資金改善被稀釋疑慮抵銷</td>
+<td>募資額全數已收現，或等同新增採購</td>
+</tr>
+<tr>
+<td>財報門檻高於指引比較</td>
+<td>ASM 上修中期展望；STX 盤後逆財報走弱</td>
+<td>基本面支撐 <span class="direction direction-improving">↗ 改善</span>，短線定價仍脆弱</td>
+<td>單一盤後跌幅證實產業景氣反轉</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="section-跨資產只是事件定價背景">跨資產只是事件定價背景</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>觀察</th>
+<th>最新可核驗值</th>
+<th>比較／時點</th>
+<th>對事件歸因的限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nasdaq／S&amp;P 500</td>
+<td>26,477.81／7,722.67</td>
+<td>10/27 現貨 <span class="direction direction-up">↑ 上升</span>1.18%／<span class="direction direction-up">↑ 上升</span>0.60%</td>
+<td>廣泛市場漲勢須與公司事件拆開</td>
+</tr>
+<tr>
+<td>SOX／VIX</td>
+<td>11,482.5／17.52</td>
+<td>SOX 收盤 <span class="direction direction-up">↑ 上升</span>3.60%；VIX <span class="direction direction-down">↓ 下降</span>4.73%</td>
+<td>半導體強於大盤，不是全面避險</td>
+</tr>
+<tr>
+<td>美國 2Y／10Y 殖利率（Yield）</td>
+<td>4.739%／4.984%</td>
+<td>指示報價；相對前值 +0.2／−0.2bp</td>
+<td>平台時間未揭露時區，不作同步事件研究</td>
+</tr>
+<tr>
+<td>10Y 實質殖利率（Real Yield）</td>
+<td>2.66%</td>
+<td>FRED 最新觀察 10/26，與 10/23 持平</td>
+<td>落後資料，不能冒稱當日變動</td>
+</tr>
+<tr>
+<td>美元指數／美元兌新台幣</td>
+<td>102.35／32.452</td>
+<td>DXY 頁面 +0.03%；台幣 10/27 收盤</td>
+<td>DXY 與頁尾報價不混用；台幣前列為 10/22</td>
+</tr>
+<tr>
+<td>MOVE</td>
+<td>未取得可靠當期原始值</td>
+<td>已搜尋，第三方數值未納入結論</td>
+<td>不以缺值判斷資金壓力不存在</td>
+</tr>
+</tbody>
+</table></div>
+<p>資料為不同交易時段的觀察，不是同步截面。Reuters 收盤敘事將部分晶片反彈歸於先前 Anthropic IPO 消息；該公告不在本輪事件窗，僅作市場背景，不重複排名。<a href="#source-audit">市場與匯率來源</a></p>
+<h2 id="section-市場影響力前三大事件-top-3-market-impact-events">市場影響力前三大事件（TOP 3 MARKET IMPACT EVENTS）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>排名／事件</th>
+<th>分數與信心</th>
+<th>新增事實</th>
+<th>價格驗證</th>
+<th>台灣主要環節</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1｜Oracle 多晶片雲端擴張</td>
+<td>86／中高（來源有全文限制）</td>
+<td>擴大 NVIDIA，加入 TPU／Cerebras 等架構</td>
+<td>ORCL 收盤 <span class="direction direction-up">↑ 上升</span>3.55%</td>
+<td>先進製程、封裝、伺服器與網通</td>
+</tr>
+<tr>
+<td>2｜Meta 供應商股權資金</td>
+<td>83／高（承諾非全部交割）</td>
+<td>NVIDIA 30 億、AMD 10 億美元承諾</td>
+<td>META 收盤 <span class="direction direction-down">↓ 下降</span>1.64%</td>
+<td>GPU／ASIC 供應鏈、ODM、電力</td>
+</tr>
+<tr>
+<td>3｜ASM 上修明年營收門檻</td>
+<td>79／高（公司展望）</td>
+<td>2027 年 &gt;57 億歐元，原 &gt;46 億</td>
+<td>公告後主要現貨市場已收盤</td>
+<td>先進節點設備與晶圓廠投資</td>
+</tr>
+</tbody>
+</table></div>
+<p>分數為研究排序，不是預測報酬率或機率。依規模、影響廣度、基本面、估值傳導、持續性與台灣外溢綜合評估；同一 Oracle 大會的相關公告合併，不分拆灌榜。</p>
+<h3 id="section-事件-1-oracle-把雲端算力擴張與多架構競爭綁在一起">事件 #1｜Oracle 把雲端算力擴張與多架構競爭綁在一起</h3>
+<ul>
+<li><strong>事實（FACT）：</strong> 10/27 宣布 NVIDIA Vera Rubin 合作擴至多 GW，並引入 Vera CPU；Google TPU 與 Cerebras 亦加入 OCI 路線。</li>
+<li><strong>時間與預期差：</strong> 多家夥伴同日公告（精確時間依來源）；新增差異是規模、架構與渠道擴張，不是首次宣布 Oracle 使用 Rubin。TPU 服務面向 2027 年。</li>
+<li><strong>公司目標而非已實現收入：</strong> 公告尚不足以計算增量訂單（Order）、營收（Revenue）、毛利率（Gross Margin）或每股盈餘（EPS）。</li>
+<li><strong>影響分數 86：</strong> 跨越雲端、晶片、伺服器與網路，廣度與台灣關聯最高；金額與利用率不足，限制確定性。</li>
+</ul>
+<h4>市場解讀</h4>
+<ol>
+<li>多種晶片進入同一雲端渠道，降低客戶採用新架構的摩擦。</li>
+<li>算力選擇增加，可能擴大推論工作負載，也提高單位成本與效能競爭。</li>
+<li>訂單轉化取決於實際部署、客戶使用及機房供電，不能把合作清單相加為新增需求。</li>
+<li>對估值（Valuation）的支持來自未來現金流可見度，而非公告數量。</li>
+</ol>
+<p>Intel 的多年度 Xeon 合作與 OpenAI 的企業應用整合，也歸入同一 Oracle 生態系事件；產品整合改善採用渠道，但尚無足夠數字拆算各供應商增量收入。</p>
+<h4>市場定價</h4>
+<p>ORCL 現貨收盤 130.53 美元；同日 NVIDIA、Alphabet 也上漲，但落後 SOX。這與市場接受雲端擴張相容，卻無法隔離 Oracle 大會、既有 AI 反彈及其他公司消息各自貢獻。</p>
+<p>市場定價（Market Pricing）已反映部分正面預期；Google TPU 商業化可能增進雲端渠道價值，同時對 GPU 定價形成競爭。不能只用供應商股價同漲推論所有合作均具正淨現值。</p>
+<h4>反向證據</h4>
+<p>Rubin 已在先前合作路線內，部分增量是擴充而非全新平台；多架構也可能是替代既有支出。未取得具約束力的採購金額、付款節奏或客戶利用率，不能直接上修特定台廠獲利。</p>
+<h4>台灣外溢</h4>
+<p>即時影響以估值與題材輪動為主；數週至數月看伺服器 ODM、PCB／CCL、散熱／電源、網通／光通訊設計導入。1–3 季則看先進製程、先進封裝（Advanced Packaging）與 HBM 的實際配置及產能認列。</p>
+<p>多晶片不等於全由同一家晶圓代工或封裝廠承接；Cerebras 架構亦不可直接套用 GPU 的 CoWoS／HBM 含量。資料中心（Data Center）建置延誤、出口許可與匯率，均可能抵銷帳面需求。</p>
+<h4>下一催化劑</h4>
+<p>確認條件是 2027 服務正式可用、部署規模與可核驗客戶負載；失效條件是重大延期、需求由替代而非擴張構成，或利用率與現金回收低於資本支出（CapEx）承諾。官方合作公告與 Reuters 的交叉確認見來源 O1–O4。</p>
+<hr/>
+<h3 id="section-事件-2-meta-引入-nvidia-amd-股權資金-供應商與客戶的風險不同">事件 #2｜Meta 引入 NVIDIA／AMD 股權資金，供應商與客戶的風險不同</h3>
+<ul>
+<li><strong>事實：</strong> 10/27 NVIDIA 承諾投資 30 億美元，AMD 承諾 10 億美元；與模型、基礎設施合作一併公布。</li>
+<li><strong>新增差異：</strong> 本窗確認兩家供應商承諾；定價文件載普通股由 225 億增至 250 億美元，供應商 40 億包含其中。文件內文日期為 10/26、精確時間不明，僅作融資背景，不冒稱本窗新增定價，也不能重算為晶片收入。</li>
+<li><strong>基本面機制：</strong> 股權資金改善建置資金可得性，卻可能增加每股稀釋；供應商的客戶需求與投資風險同步加深。</li>
+<li><strong>影響分數 83：</strong> 大型需求端、兩家晶片商與廣泛供應鏈連動；因供應商資金投入不等於獨立最終需求，低於 Oracle 的渠道廣度。</li>
+</ul>
+<h4>市場解讀</h4>
+<p>另有 125 億美元、6.50% 優先股與最快 2027 年首季啟動的 600 億美元 ATM 額度；媒體合計的 975 億不是當日收現。普通股初始出售不取得現金，遠期最晚於 2027 年 11 月 19 日交割，優先股預計 10/29 交割仍有條件。</p>
+<p>資金籌措方式改變，不能被直接標成需求上修。對供應商，合作有助部署可見度；對 Meta 股東，還需比較新增股數、資金成本、模型收入與自由現金流回收期。</p>
+<p><strong>市場預期（MARKET EXPECTATION）：</strong> 投資人可能要求 AI 支出轉成可持續收入，而非只有容量擴張。<strong>推論（INFERENCE）：</strong> 客戶融資與供應商銷售綁得更緊，會提高需求品質與集中度檢驗的重要性。</p>
+<h4>市場定價</h4>
+<p>META 收盤 620.19 美元，與上漲的 Nasdaq／SOX 分歧；NVIDIA 與 AMD 則分別上漲 0.90% 與 5.45%。這提供客戶端稀釋／資本回報與供應端需求題材分離的證據，但不是每段漲跌的單一因果識別。</p>
+<h4>反向證據</h4>
+<p>AMD 初期 Helios 系統安裝測試不等於全面部署；先前披露的長期 GW 規模不可當成本日新增訂單。合作承諾仍需交割與執行，新增資金若只支應既有計畫，對總需求的增量會較小。</p>
+<h4>台灣外溢</h4>
+<p>數週至數月關注 ODM 排程、GPU／ASIC 比重、PCB／CCL 與散熱電源規格；1–3 季追蹤晶圓、封裝與 HBM 拉貨是否轉成收入。網通光通訊受網路拓樸影響，DRAM／NAND 不能與 HBM 等量外推。</p>
+<p>新台幣波動會改變台廠美元收入換算與進口設備成本，並非單向利多。沒有台灣供應商具體訂單、份額或毛利證據，不提供個股受益保證。</p>
+<h4>下一催化劑</h4>
+<p>確認投資交割、融資工具條件、實際部署及模型商業化；若稀釋超出回報、建置延後、自由現金流持續惡化，則「資金到位帶動可獲利需求」的論點失效。原始投資公告與 SiliconANGLE 見 M1–M3。</p>
+<hr/>
+<h3 id="section-事件-3-asm-的展望上修-比設備股同日漲幅更有基本面含量">事件 #3｜ASM 的展望上修，比設備股同日漲幅更有基本面含量</h3>
+<ul>
+<li><strong>事實：</strong> 10/27 歐洲收盤後公布第三季營收 11.594 億歐元，第四季指引 12.3 億歐元、上下 5%。</li>
+<li><strong>與預期差：</strong> 第四季市場比較約 11.8 億歐元；2027 年目標高於 57 億，對照先前高於 46 億與 LSEG 約 54.1 億。</li>
+<li><strong>比較限制：</strong> 公司部分展望為固定匯率口徑，共識口徑未完全一致；兩個「高於」門檻不是精確點估值，不能據此聲稱精確百分比上修；7 月已預期下半年 1.4nm 貢獻，本季是進度兌現。</li>
+<li><strong>影響分數 79：</strong> 具公司數字、需求與中期展望支撐，台灣先進製程關聯高；仍是單一設備供應商且待新交易時段驗證。</li>
+</ul>
+<h4>市場解讀</h4>
+<p>先進製程投資提高關鍵製程設備需求，對原子層沉積等技術的收入能見度有利。設備收入認列仍有交付、驗收與客戶進度差，不能由 ASM 展望等比例上修 ASML 或台灣整體半導體獲利。</p>
+<h4>市場定價</h4>
+<p>ASML 美國 ADR 當日上漲 2.92%，但不是 ASM 公告後同標的的完整價格反應。ASM 歐洲現貨已收盤，正式事件反應需下一交易日驗證；不把公告前上漲當財報利多的證明。</p>
+<h4>反向證據</h4>
+<p>自由現金流較前季下降、庫存（Inventory）增加，提醒出貨成長與現金轉換未必同步；同時營運資金天數下降，不能只挑庫存上升就判斷積壓。高集中度需求與交付時間仍可能造成季間波動。</p>
+<h4>台灣外溢</h4>
+<p>1–3 季主要連結為先進節點晶圓廠設備投資及供應鏈（Supply Chain）驗收；短期先反映設備與製程類股估值。CoWoS、HBM、伺服器及散熱是共同 AI 需求的間接關聯，不是 ASM 設備營收的直接等比例受益者。</p>
+<h4>下一催化劑</h4>
+<p>台北 10/28 22:00 法說進一步確認訂單、產能及前瞻指引（Guidance）；之後看交付、毛利與現金轉換。若客戶延後投資、目標下修或現金轉換持續落後，則成長可見度論點減弱。公司報告與 Reuters／Dow Jones 見 A1–A3。</p>
+<h2 id="section-重要個股事件掃描">重要個股事件掃描</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>股票</th>
+<th>本輪應關注原因</th>
+<th>價格／時段</th>
+<th>判讀限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NVDA／AMD／GOOGL／INTC</td>
+<td>Oracle 或 Meta 根事件的直接參與者</td>
+<td>10/27 現貨反應</td>
+<td>已合併根事件，不再另列排行榜</td>
+</tr>
+<tr>
+<td>TSM</td>
+<td>CoWoS 報價傳聞與 Top 3 高關聯</td>
+<td>收盤 436.87，<span class="direction direction-up">↑ 上升</span>2.95%；19:00 EDT 436.90</td>
+<td>傳聞未獲公司確認，不能直接上修毛利</td>
+</tr>
+<tr>
+<td>AAPL</td>
+<td>M6 產品與創作工具發布，60 分戰術事件</td>
+<td>收盤 347.10，<span class="direction direction-up">↑ 上升</span>0.93%</td>
+<td>換機及 PC 供應鏈有關聯，但尚無新增銷量／獲利指引</td>
+</tr>
+<tr>
+<td>MSFT／AMZN</td>
+<td>未來 24–72 小時財報一級催化劑</td>
+<td>收盤 531.33／253.10</td>
+<td>財報未發布，不提前補造雲端結果</td>
+</tr>
+<tr>
+<td>DELL</td>
+<td>AI 環境資安／韌性產品更新，60 分</td>
+<td>收盤 <span class="direction direction-up">↑ 上升</span>7.47%</td>
+<td>產品收入未量化，漲幅混合伺服器 beta</td>
+</tr>
+<tr>
+<td>SMCI</td>
+<td>Argentum 融資洽談與伺服器外溢</td>
+<td>收盤 <span class="direction direction-up">↑ 上升</span>7.34%</td>
+<td>洽談非交割，相對強勢不等於已獲訂單</td>
+</tr>
+</tbody>
+</table></div>
+<p>其餘固定名單已在內部逐股預檢；無重大新事件者不硬列正文。INTC 與 ARM 亦已檢查，不能用固定 14 檔子清單取代完整研究範圍。</p>
+<h2 id="section-其他重要市場事件">其他重要市場事件</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>事件</th>
+<th>分數／證據</th>
+<th>真正新增資訊</th>
+<th>投資意義與反證</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seagate 財報與展望超預期、盤後走弱</td>
+<td>75／中高</td>
+<td>季營收 42.33 億美元、調整 EPS 7.68；下季 48 億／9.20</td>
+<td>19:15 EDT 629.00，<span class="direction direction-down">↓ 下降</span>5.82%；價格／組合不等於容量出貨同增</td>
+</tr>
+<tr>
+<td>Teradyne 財報與季間節奏</td>
+<td>72／中高</td>
+<td>Q3 營收與 EPS 超過原指引上緣，Q4 EPS 中點高於公開預期</td>
+<td>19:00 EDT 305.92，<span class="direction direction-down">↓ 下降</span>5.49%；季減不等於低於共識</td>
+</tr>
+<tr>
+<td>TSMC CoWoS 報價消息</td>
+<td>68／中低</td>
+<td>媒體稱可能漲價 10–20%</td>
+<td>尚未取得官方確認；多篇轉載同一根來源，不算獨立交叉確認</td>
+</tr>
+<tr>
+<td>NXP 展望與盤後修正</td>
+<td>65／中高</td>
+<td>Q4 營收中點約與預期相當</td>
+<td>19:23 EDT 235.00，<span class="direction direction-down">↓ 下降</span>7.30%；不能把標題「弱指引」當全面未達標</td>
+</tr>
+<tr>
+<td>SMCI／Argentum 融資洽談</td>
+<td>64／中低</td>
+<td>Reuters 稱約 50 億美元 AI 晶片融資洽談</td>
+<td>尚未取得官方確認；洽談不是成交或已認列收入</td>
+</tr>
+</tbody>
+</table></div>
+<p>Seagate 的財報比較支持儲存需求與獲利能力，但盤後反應顯示市場可能採更高門檻；具體賣壓成因仍未被隔離。HDD 與 NAND 亦有替代、互補及不同供給約束，不能將單一公司展望等同所有記憶體報價上升。</p>
+<h2 id="section-美國科技股策略-us-tech-strategy">美國科技股策略（US TECH STRATEGY）</h2>
+<blockquote class="callout">
+<p>優先驗證「收入與現金流轉化」，而不是追逐所有帶有 AI 標籤的股價反彈。</p>
+</blockquote>
+<ul>
+<li><strong>供應鏈選擇：</strong> 關注已量化出貨或展望改善、同時現金轉換可驗證的公司；僅有合作名單者保留執行折扣。</li>
+<li><strong>客戶端風險：</strong> 供應商投資客戶不一定是不良交易，但須另看稀釋、付款能力與資本回報，避免重複計入同一筆需求。</li>
+<li><strong>事件風險：</strong> 財報前不以盤後薄量價格代表翌日完整定價；雲端成長、資本支出及自由現金流應聯合判讀。</li>
+</ul>
+<p>風險燈號為 <strong>YELLOW</strong>：這是本輪獨立的審慎評估，不聲稱相對不可得前輪燈號升降。基本面有支持，但融資、估值與財報門檻仍有張力；不構成跨資產全面危機判斷。</p>
+<h2 id="section-台灣-ai-半導體-記憶體-伺服器影響">台灣 AI／半導體／記憶體／伺服器影響</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>傳導環節</th>
+<th>主要機制</th>
+<th>時間</th>
+<th>確認證據</th>
+<th>反向條件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>晶圓代工／先進製程</td>
+<td>GPU、TPU、ASIC 設計需求與設備投資</td>
+<td>1–3 季</td>
+<td>晶圓投入、製程組合、客戶展望</td>
+<td>多架構替代、客戶延後</td>
+</tr>
+<tr>
+<td>CoWoS／先進封裝</td>
+<td>算力密度與晶片配置提高複雜度</td>
+<td>數週至數月</td>
+<td>真實報價、交期、產能認列</td>
+<td>傳聞不實、架構改變封裝含量</td>
+</tr>
+<tr>
+<td>HBM／DRAM／NAND</td>
+<td>工作負載、記憶體容量與儲存層分工</td>
+<td>1–3 季</td>
+<td>公司拉貨、合約價格、庫存</td>
+<td>HDD 與 NAND 不同循環、需求替代</td>
+</tr>
+<tr>
+<td>ODM／PCB／CCL</td>
+<td>系統設計與機櫃部署</td>
+<td>數週至數月</td>
+<td>客戶訂單、出貨及良率</td>
+<td>交付／驗收遞延、份額競爭</td>
+</tr>
+<tr>
+<td>散熱／電源／機房</td>
+<td>功率密度與供電限制</td>
+<td>數月至 1–3 季</td>
+<td>實際建置、規格與認證</td>
+<td>電網、許可與場地瓶頸</td>
+</tr>
+<tr>
+<td>網通／光通訊</td>
+<td>多機櫃互連與網路拓樸</td>
+<td>數週至數月</td>
+<td>網路配置、採購及單機含量</td>
+<td>拓樸變動、成本壓力</td>
+</tr>
+<tr>
+<td>匯率／估值／出口限制</td>
+<td>美元收入換算、折現率與可交付市場</td>
+<td>即時至數月</td>
+<td>台幣、利率、許可與公司揭露</td>
+<td>新台幣升值或政策收緊抵銷營收</td>
+</tr>
+</tbody>
+</table></div>
+<p>上述是條件式產業傳導，不是台灣個股訂單認證。Oracle 的多架構選擇、Meta 的資金與部署、ASM 的先進製程展望，各自提供不同證據，不能加總成重複的需求增量。</p>
+<h2 id="section-下一階段催化劑-next-catalysts">下一階段催化劑（NEXT CATALYSTS）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>催化劑</th>
+<th>台北時間／觀察窗</th>
+<th>必看項目</th>
+<th>確認／失效</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Teradyne 法說</td>
+<td>10/28 20:30</td>
+<td>季間節奏與測試需求</td>
+<td>高於預期不等於所有環節同步加速</td>
+</tr>
+<tr>
+<td>ASM 法說與歐洲交易</td>
+<td>10/28，法說 22:00</td>
+<td>交付、需求與現金轉換</td>
+<td>目標可落地才支持中期估值</td>
+</tr>
+<tr>
+<td>FOMC</td>
+<td>10/29 凌晨美國公告時段</td>
+<td>利率與金融條件對長久期股票影響</td>
+<td>預期不等於決策，公布後再重估</td>
+</tr>
+<tr>
+<td>Microsoft／Alphabet 財報</td>
+<td>美國 10/28，台北 10/29 盤後對應時段</td>
+<td>雲端成長、AI 收入、CapEx 與自由現金流</td>
+<td>成長不足以覆蓋支出則削弱回報論點</td>
+</tr>
+<tr>
+<td>Intel 財報</td>
+<td>美國 10/29 收盤後，台北 10/30</td>
+<td>產品需求、代工與現金流</td>
+<td>以正式財報確認，不把合作公告當已實現銷售</td>
+</tr>
+<tr>
+<td>Amazon 財報</td>
+<td>美國 10/29，台北 10/30 對應時段</td>
+<td>AWS 需求與資金回收</td>
+<td>客戶採用與收入實現須共同確認</td>
+</tr>
+<tr>
+<td>Oracle／Meta 部署</td>
+<td>後續數週至 2027</td>
+<td>可用性、交割、利用率、供應商實際訂單</td>
+<td>延期或替代性需求使增量假設失效</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-source-audit">SOURCE AUDIT</h2>
+<ul>
+<li><strong>O1｜NVIDIA／Oracle</strong>：<a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Oracle-Expand-NVIDIA-Vera-Rubin-to-Multi-Gigawatt-Scale-and-Bring-NVIDIA-Vera-CPU-to-Oracle-Cloud-Infrastructure/default.aspx" rel="noopener noreferrer" target="_blank">原始連結</a>。10/27；本輪原始路徑 HTTP403，保留 hold；以可見索引摘要及夥伴公告交叉核對，不宣稱完整讀取。</li>
+<li><strong>O2｜Google Cloud TPU</strong>：<a href="https://cloud.google.com/blog/products/infrastructure/bringing-google-tpus-to-oracle-cloud-infrastructure" rel="noopener noreferrer" target="_blank">原始連結</a>。10/27；原始頁 HTTP200 但僅 Site Unavailable，不是全文；索引摘要可得，2027 部署屬前瞻。</li>
+<li><strong>O3｜Reuters／Oracle</strong>：<a href="https://www.investing.com/news/stock-market-news/oracle-expands-chip-supply-deal-with-nvidia-adds-google-and-cerebras-offerings-4976437" rel="noopener noreferrer" target="_blank">原始連結</a>。10/27；搜尋摘要可得、原始路徑 HTTP403，保留 hold。</li>
+<li><strong>O4｜Oracle／OpenAI</strong>：<a href="https://www.oracle.com/asean/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/" rel="noopener noreferrer" target="_blank">原始連結</a>。10/27 官方；另見 OpenAI 與 Benzinga。</li>
+<li><strong>O5｜OpenAI</strong>：<a href="https://openai.com/index/oracle-apps-in-chatgpt/" rel="noopener noreferrer" target="_blank">原始連結</a>。</li>
+<li><strong>O6｜Benzinga</strong>：<a href="https://www.benzinga.com/trading-ideas/movers/26/10/62628674/oracle-stock-jumps-whats-going-on" rel="noopener noreferrer" target="_blank">原始連結</a>。</li>
+<li><strong>O7｜Intel</strong>：<a href="https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-oracle-collaborate-on-enterprise-and-agentic-ai.html" rel="noopener noreferrer" target="_blank">原始連結</a>。</li>
+<li><strong>M1｜NVIDIA／Meta</strong>：<a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Meta-to-Expand-Collaboration-on-Muse-and-Muse-Family-of-Models-Amid-Robust-Growth/default.aspx" rel="noopener noreferrer" target="_blank">原始連結</a>。10/27 官方；承諾與交割分開。</li>
+<li><strong>M2｜AMD／Meta</strong>：<a href="https://ir.amd.com/news-events/press-releases/detail/1302/amd-and-meta-advance-strategic-partnership-to-power-metas-superintelligence-infrastructure" rel="noopener noreferrer" target="_blank">原始連結</a>。10/27 09:20 EDT 官方。</li>
+<li><strong>M3｜SiliconANGLE</strong>：<a href="https://siliconangle.com/2026/10/27/nvidia-amd-to-buy-4b-in-meta-shares-as-part-of-expanded-chip-partnerships/" rel="noopener noreferrer" target="_blank">原始連結</a>。10/27 獨立科技財經確認。</li>
+<li><strong>M4｜Meta pricing</strong>：<a href="https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx" rel="noopener noreferrer" target="_blank">原始連結</a>。官方全文可得；內文 dateline 為 10/26、發布精確時刻不明，只作背景融資條款，不列本窗新增定價。</li>
+<li><strong>D1｜Dell official</strong>：<a href="https://investors.delltechnologies.com/news-events/press-releases/detail/1660/dell-technologies-strengthens-cybersecurity-and-resilience-across-ai-environments-identity-and-infrastructure" rel="noopener noreferrer" target="_blank">原始連結</a>。10/27 資安產品公告。</li>
+<li><strong>A1｜ASM issuer release</strong>：<a href="https://www.globenewswire.com/news-release/2026/10/27/3389491/0/en/asm-reports-third-quarter-2026-results.html" rel="noopener noreferrer" target="_blank">原始連結</a>。10/27 17:00 UTC；原始財報與公司展望。</li>
+<li><strong>A2｜Reuters／ASM</strong>：<a href="https://www.aol.com/articles/asm-international-expects-q4-sales-175027000.html" rel="noopener noreferrer" target="_blank">原始連結</a>。10/27；市場預期比較。</li>
+<li><strong>A3｜Dow Jones／ASM</strong>：<a href="https://www.marketscreener.com/news/chip-equipment-supplier-asm-international-lifts-guidance-again-amid-ai-spending-frenzy-update-ce785cddde89f127" rel="noopener noreferrer" target="_blank">原始連結</a>。輔助交叉來源。</li>
+<li><strong>E-STX｜STX</strong>：<a href="https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-First-Quarter-2027-Financial-Results/default.aspx" rel="noopener noreferrer" target="_blank">原始連結</a>。STX 原始 URL 既有 403 hold 保留；本輪數字以可讀原始紀錄與獨立報導比對。</li>
+<li><strong>E-STXsecondary｜STXsecondary</strong>：<a href="https://finance.yahoo.com/markets/stocks/articles/seagate-nasdaq-stx-surprises-q3-202625694.html" rel="noopener noreferrer" target="_blank">原始連結</a>。</li>
+<li><strong>E-TER｜TER</strong>：<a href="https://investors.teradyne.com/news-events/press-releases/detail/455/teradyne-reports-third-quarter-2026-results" rel="noopener noreferrer" target="_blank">原始連結</a>。</li>
+<li><strong>E-TERsecondary｜TERsecondary</strong>：<a href="https://www.streetinsider.com/Earnings/Teradyne%2B%28TER%29%2BTops%2BQ3%2BEPS%2Bby%2B21c%2C%2BBeats%2Bon%2BRevenue%3B%2BOffers%2BQ4%2BEPS%2BGuidance/27241953.html" rel="noopener noreferrer" target="_blank">原始連結</a>。</li>
+<li><strong>E-NXPI｜NXPI</strong>：<a href="https://www.globenewswire.com/news-release/2026/10/27/3389631/0/en/nxp-semiconductors-reports-third-quarter-2026-results.html" rel="noopener noreferrer" target="_blank">原始連結</a>。</li>
+<li><strong>E-NXPIsecondary｜NXPIsecondary</strong>：<a href="https://ca.investing.com/news/earnings/nxp-semiconductors-falls-on-weak-fourth-quarter-guidance-4907021" rel="noopener noreferrer" target="_blank">原始連結</a>。</li>
+<li><strong>E-TSM｜TSM</strong>：<a href="https://www.trendforce.com/news/2026/10/27/news-tsmc-reportedly-eyes-20-cowos-price-hike-skips-equipment-price-renegotiations-amid-ai-demand-surge/" rel="noopener noreferrer" target="_blank">原始連結</a>。同 Commercial Times 根來源，非獨立確認。</li>
+<li><strong>E-TSMsecondary｜TSMsecondary</strong>：<a href="https://www.tomshardware.com/tech-industry/semiconductors/tsmc-reportedly-weighs-20-percent-cowos-price-increase-as-nvidia-blackwell-and-rubin-chips-put-pressure-on-packaging-capacity-equipment-lead-times-stretch-to-eight-months" rel="noopener noreferrer" target="_blank">原始連結</a>。同 Commercial Times 根來源，非獨立確認。</li>
+<li><strong>E-SMCIsecondary｜SMCIsecondary</strong>：<a href="https://www.investing.com/news/stock-market-news/exclusiveneocloud-firm-argentum-ai-in-talks-for-5-billion-ai-chip-financing-sources-say-4976170" rel="noopener noreferrer" target="_blank">原始連結</a>。</li>
+<li><strong>P1｜Apple</strong>：<a href="https://www.apple.com/newsroom/2026/10/apple-unveils-new-imac-with-m6/" rel="noopener noreferrer" target="_blank">原始連結</a>。</li>
+<li><strong>P2｜Reuters／Apple</strong>：<a href="https://ca.marketscreener.com/news/apple-launches-m6-macbook-pro-and-imac-pitches-faster-on-device-ai-ce785cdddd81f420" rel="noopener noreferrer" target="_blank">原始連結</a>。</li>
+<li><strong>C1｜Microsoft IR</strong>：<a href="https://www.microsoft.com/en-us/investor/default?o=200" rel="noopener noreferrer" target="_blank">原始連結</a>。</li>
+<li><strong>C3｜Intel earnings date</strong>：<a href="https://www.intc.com/news-events/press-releases/detail/1782/intel-to-report-third-quarter-2026-financial-results" rel="noopener noreferrer" target="_blank">原始連結</a>。10/29 美國收盤後。</li>
+<li><strong>C2｜Amazon</strong>：<a href="https://www.aboutamazon.com/news/company-news/amazon-earnings-q3-2026-report" rel="noopener noreferrer" target="_blank">原始連結</a>。官方 10/29 17:00 EDT；Alphabet 日期本輪僅取得二手確認。</li>
+<li><strong>Q1｜StockAnalysis 個股</strong>：<a href="https://stockanalysis.com/stocks/orcl/" rel="noopener noreferrer" target="_blank">原始連結</a>。公司報價依各 ticker 頁面，現貨 16:00 EDT；盤後明列觀察時間。</li>
+<li><strong>Q2｜市場指數</strong>：<a href="https://www.investing.com/indices/major-indices" rel="noopener noreferrer" target="_blank">原始連結</a>。本輪重新檢查；各資產觀察時點與延遲限制見跨資產表。</li>
+<li><strong>Q3｜SOX</strong>：<a href="https://www.investing.com/indices/phlx-semiconductor" rel="noopener noreferrer" target="_blank">原始連結</a>。本輪重新檢查；各資產觀察時點與延遲限制見跨資產表。</li>
+<li><strong>Q4｜美國公債</strong>：<a href="https://www.investing.com/rates-bonds/usa-government-bonds" rel="noopener noreferrer" target="_blank">原始連結</a>。本輪重新檢查；各資產觀察時點與延遲限制見跨資產表。</li>
+<li><strong>Q5｜DXY</strong>：<a href="https://www.investing.com/indices/usdollar" rel="noopener noreferrer" target="_blank">原始連結</a>。本輪重新檢查；各資產觀察時點與延遲限制見跨資產表。</li>
+<li><strong>Q6｜FRED DFII10</strong>：<a href="https://fred.stlouisfed.org/series/DFII10" rel="noopener noreferrer" target="_blank">原始連結</a>。本輪重新檢查；各資產觀察時點與延遲限制見跨資產表。</li>
+<li><strong>Q7｜CBC USD/TWD</strong>：<a href="https://www.cbc.gov.tw/tw/lp-645-1.html" rel="noopener noreferrer" target="_blank">原始連結</a>。本輪重新檢查；各資產觀察時點與延遲限制見跨資產表。</li>
+<li><strong>Q8｜Reuters 收盤</strong>：<a href="https://www.investing.com/news/economy-news/us-stock-futures-muted-as-oil-holds-near-april-highs-ahead-of-fed-decision-4974650" rel="noopener noreferrer" target="_blank">原始連結</a>。本輪重新檢查；各資產觀察時點與延遲限制見跨資產表。</li>
+</ul>
+<p><strong>查核限制：</strong> 報價來源可能為延遲或指示資料；現貨、盤後、歐洲收盤後及落後官方序列分開使用。TSMC 報價傳聞只有共同媒體根源；MOVE 未取得可靠當期原始值。先前受限的來源未因其他頁面成功而視為解除，不繞過存取限制。</p>
+<p><strong>方法：</strong> 事實、公司／市場預期與研究推論分離；主要事件至少原始公告加獨立媒體確認。價格反應僅作相容性檢查，不以同日相關性識別單一因果。研究內部保留全名單預檢、未入榜原因與來源限制；本文只展開具實際市場價值的事件。</p>
+<h2 id="section-免責聲明-disclaimer">免責聲明（DISCLAIMER）</h2>
+<p>本報告為一般市場研究，不是個人化投資建議或交易指令。公司展望、供應鏈傳聞與研究推論均可能失效；投資決策須自行評估風險、流動性及持有期間。</p>
+
+    </main>
+    <footer>
+      Global Macro Signal Report · 2026-10-28 07:38:10 · Generated Deterministically
+    </footer>
+  </div>
+</div>
+</body>
+</html>
