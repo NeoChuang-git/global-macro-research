@@ -3216,6 +3216,22 @@
       "title": "Global Macro Early Warning｜加拿大升息確認能源成本傳導，全球風險尚未同步升級",
       "topic": null
     },
+    "MTW-20261029-0400-azure-demand-beat": {
+      "coverage_end_taipei": "2026-10-29T04:15:19+08:00",
+      "coverage_start_taipei": "2026-10-29T03:00:00+08:00",
+      "generated_at_taipei": "2026-10-29T04:15:19+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_0400_azure-demand-beat.html",
+      "html_sha256": "63c92e1a1a5e0e359b7cff68e9b1c531127e45d6d0d53af4a04a615d7e3d12b2",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_0400_azure-demand-beat.md",
+      "markdown_sha256": "e805606b53e6d8f3402faae80cdd8b2f5b646250ce276b354df3736bc2d6b09c",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261029-0400-azure-demand-beat",
+      "slug": "azure-demand-beat",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜Azure 實現需求超預期，現金回收仍是 AI 擴張約束",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,

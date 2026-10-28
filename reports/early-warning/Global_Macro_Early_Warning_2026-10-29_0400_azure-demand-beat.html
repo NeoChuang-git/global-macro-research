@@ -1,0 +1,1229 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Macro Early Warning｜Azure 實現需求超預期，現金回收仍是 AI 擴張約束 · 2026-10-29 04:15:19</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --accent: #0284c7;
+  --accent-light: #e0f2fe;
+  --accent-glow: rgba(2, 132, 199, 0.08);
+
+  /* Callout Colors */
+  --callout-bg: #f8fafc;
+  --callout-thesis-border: #0284c7;
+  --callout-thesis-bg: #f0f9ff;
+  --callout-risk-border: #f97316;
+  --callout-risk-bg: #fff7ed;
+  --callout-strategy-border: #8b5cf6;
+  --callout-strategy-bg: #f5f3ff;
+  --callout-catalyst-border: #10b981;
+  --callout-catalyst-bg: #ecfdf5;
+
+  /* Card & Chips */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
+  --chip-border: #cbd5e1;
+
+  /* Risk Lights */
+  --risk-green-bg: #ecfdf5; --risk-green-text: #059669; --risk-green-border: #a7f3d0;
+  --risk-yellow-bg: #fefce8; --risk-yellow-text: #d97706; --risk-yellow-border: #fef08a;
+  --risk-orange-bg: #fff7ed; --risk-orange-text: #ea580c; --risk-orange-border: #fed7aa;
+  --risk-red-bg: #fef2f2; --risk-red-text: #dc2626; --risk-red-border: #fecaca;
+
+  /* Table */
+  --table-zebra: #f8fafc;
+  --table-hover: #f1f5f9;
+  --table-header-bg: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --bg-surface-raised: #334155;
+    --bg-surface-hover: #475569;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #334155;
+    --border-subtle: #475569;
+    --accent: #38bdf8;
+    --accent-light: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.12);
+
+    --callout-bg: #1e293b;
+    --callout-thesis-border: #38bdf8;
+    --callout-thesis-bg: rgba(56, 189, 248, 0.08);
+    --callout-risk-border: #fb923c;
+    --callout-risk-bg: rgba(249, 115, 22, 0.08);
+    --callout-strategy-border: #a78bfa;
+    --callout-strategy-bg: rgba(167, 139, 250, 0.08);
+    --callout-catalyst-border: #34d399;
+    --callout-catalyst-bg: rgba(52, 211, 153, 0.08);
+
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --chip-bg: #334155;
+    --chip-text: #cbd5e1;
+    --chip-border: #475569;
+
+    --risk-green-bg: rgba(16, 185, 129, 0.15); --risk-green-text: #34d399; --risk-green-border: rgba(16, 185, 129, 0.3);
+    --risk-yellow-bg: rgba(245, 158, 11, 0.15); --risk-yellow-text: #fbbf24; --risk-yellow-border: rgba(245, 158, 11, 0.3);
+    --risk-orange-bg: rgba(249, 115, 22, 0.15); --risk-orange-text: #fb923c; --risk-orange-border: rgba(249, 115, 22, 0.3);
+    --risk-red-bg: rgba(239, 68, 68, 0.15); --risk-red-text: #f87171; --risk-red-border: rgba(239, 68, 68, 0.3);
+
+    --table-zebra: rgba(255, 255, 255, 0.02);
+    --table-hover: rgba(56, 189, 248, 0.06);
+    --table-header-bg: #334155;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 17px;
+  font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+/* Layout Containers: Narrative & Content Presentation */
+.report-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  position: relative;
+}
+
+.report-narrative {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Content Presentation */
+.wide-content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Header */
+.hero-header {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-type-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-run-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-run-id code {
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Typography & Headings */
+.report-narrative p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 100%;
+}
+
+ul, ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
+}
+
+/* Callouts */
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.35rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--callout-bg);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.callout p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.callout-thesis {
+  border-left-color: var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.callout-risk {
+  border-left-color: var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.callout-strategy {
+  border-left-color: var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.callout-catalyst {
+  border-left-color: var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Analysis Cards */
+.analysis-card {
+  margin: 2.4rem 0;
+  padding: 1.8rem 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: var(--border-subtle);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.analysis-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Analysis Card Subsections */
+.analysis-card h4.subheading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border);
+  margin: 1.6rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.analysis-card h4.sub-market {
+  color: var(--callout-thesis-border);
+  border-left: 3px solid var(--callout-thesis-border);
+  background: var(--callout-thesis-bg);
+}
+
+.analysis-card h4.sub-pricing {
+  color: var(--callout-strategy-border);
+  border-left: 3px solid var(--callout-strategy-border);
+  background: var(--callout-strategy-bg);
+}
+
+.analysis-card h4.sub-counter {
+  color: var(--callout-risk-border);
+  border-left: 3px solid var(--callout-risk-border);
+  background: var(--callout-risk-bg);
+}
+
+.analysis-card h4.sub-catalyst {
+  color: var(--callout-catalyst-border);
+  border-left: 3px solid var(--callout-catalyst-border);
+  background: var(--callout-catalyst-bg);
+}
+
+/* Meta Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  line-height: 1.35;
+}
+
+.chip-score {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.chip-evidence, .chip-confidence, .chip-severity, .chip-persistence {
+  color: var(--text-secondary);
+}
+
+/* Direction Indicators */
+.direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.direction-up { color: #0284c7; }
+.direction-down { color: #7c3aed; }
+.direction-improving { color: #059669; }
+.direction-worsening { color: #dc2626; }
+.direction-flat { color: var(--text-secondary); }
+
+/* Risk Lights */
+.risk-chip, .risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.risk-green { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.risk-yellow { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.risk-orange { background: var(--risk-orange-bg); color: var(--risk-orange-text); border: 1px solid var(--risk-orange-border); }
+.risk-red { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* State Transitions */
+.state-transition {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.state-prior { color: var(--text-secondary); }
+.transition-arrow { color: var(--accent); font-weight: bold; }
+.state-current { color: var(--text-primary); font-weight: 600; }
+
+/* Tables */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+  text-align: left;
+  min-width: 680px;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--text-primary);
+  font-weight: 650;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+td {
+  padding: 11px 15px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-zebra);
+}
+
+tr:hover td {
+  background: var(--table-hover);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Only the three approved two-column Weekly tables fit the narrow viewport. */
+.weekly-local-table {
+  min-width: 0;
+}
+
+.weekly-local-table th,
+.weekly-local-table td {
+  overflow-wrap: anywhere;
+}
+
+.weekly-local-table th {
+  white-space: normal;
+}
+
+.weekly-local-table th:first-child {
+  width: 40%;
+}
+
+/* Executive Summary Grid */
+.executive-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 0;
+}
+
+.executive-points > li {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .executive-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.badge-type {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge-topic {
+  background: var(--bg-surface-raised);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badge-grade-A { background: var(--risk-green-bg); color: var(--risk-green-text); border: 1px solid var(--risk-green-border); }
+.badge-grade-B { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent); }
+.badge-grade-C { background: var(--risk-yellow-bg); color: var(--risk-yellow-text); border: 1px solid var(--risk-yellow-border); }
+.badge-grade-D { background: var(--risk-red-bg); color: var(--risk-red-text); border: 1px solid var(--risk-red-border); }
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(2, 132, 199, 0.4);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--bg-surface-raised);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px;
+    font-size: 16px;
+  }
+  .report-narrative p {
+    font-size: 16px;
+  }
+  h1.hero-title { font-size: 1.45rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+  h4 { font-size: 1rem; }
+  .analysis-card {
+    padding: 1.1rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="report-container">
+  <div class="report-narrative">
+    
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-type-row">
+      <span class="badge badge-type">MACRO_TAIWAN_EARLY_WARNING</span>
+      <span class="risk-chip risk-yellow">🟡 Risk: YELLOW</span>
+      
+    </div>
+    <div class="hero-run-id">RUN_ID: <code>MTW-20261029-0400-azure-demand-beat</code></div>
+  </div>
+  <h1 class="hero-title">Global Macro Early Warning｜Azure 實現需求超預期，現金回收仍是 AI 擴張約束</h1>
+  <div class="hero-meta-row">
+    <span class="hero-chip">發布時間：2026-10-29 04:15:19</span>
+    <span class="hero-chip hero-chip-cov">涵蓋：2026-10-29 03:00:00 ~ 2026-10-29 04:15:19</span>
+  </div>
+</header>
+
+    <main class="report-content">
+      
+<h2 id="section-核心警報摘要-executive-take">核心警報摘要（EXECUTIVE TAKE）</h2>
+<blockquote class="callout">
+<p>Microsoft 新一季雲端收入提供真實需求高於預期的證據，本輪觸發範圍是 AI 基本面需求的戰術性改善；不是全球景氣轉折，也不是資本支出（CapEx）已全面轉為股東現金回報。Risk Light 維持 YELLOW。</p>
+</blockquote>
+<ul>
+<li><strong>新增訊號：</strong> Azure 已實現營收（Revenue）優於同口徑獨立預期；這是季度需求的確認，不是單一股價跳動或尚未交付的訂單故事。</li>
+<li><strong>改善有邊界：</strong> 營業利益率提高，但毛利率（Gross Margin）與自由現金流承壓；需求改善不能直接等同所有 AI 投資回報同步改善。</li>
+<li><strong>總經未共振：</strong> 美國公債曲線呈扭轉變化，美元偏弱，股票未顯示廣泛避險；不把長端利率上升單獨升格為資金壓力。</li>
+<li><strong>台灣含意：</strong> 雲端收入化支持供應鏈（Supply Chain）外需能見度，仍須以台廠新訂單及營收驗證；能源成本與估值（Valuation）折現率的約束並未消失。</li>
+</ul>
+<h2 id="section-訊號變化總覽-signal-delta">訊號變化總覽（SIGNAL DELTA）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>訊號</th>
+<th>前值→目前</th>
+<th>方向／Delta</th>
+<th class="numeric">嚴重度</th>
+<th>信心</th>
+<th>跨資產確認</th>
+<th>台灣關聯</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 基本面需求</td>
+<td>Azure 預期 32.3→實現 33.165 十億美元</td>
+<td>原始營收 <span class="direction direction-up">↑ 上升</span> 2.68% 高於預期；訊號 <span class="direction direction-improving">↗ 改善</span></td>
+<td class="numeric">3/5</td>
+<td>中</td>
+<td>未取得發布後同步反應</td>
+<td>算力收入化支持外需</td>
+</tr>
+<tr>
+<td>能源通膨</td>
+<td>新 JKM 期貨代理觀察；油價回吐部分漲幅</td>
+<td><span class="direction direction-flat">→ 持平</span> 無新增重大變化</td>
+<td class="numeric">新增 1/5</td>
+<td>中／TTF 低</td>
+<td>當下油價未達廣度中度門檻</td>
+<td>輸入成本風險仍在</td>
+</tr>
+<tr>
+<td>利率／政策</td>
+<td>短端日降、長端日升</td>
+<td><span class="direction direction-flat">→ 持平</span> 未形成新廣泛緊縮</td>
+<td class="numeric">2/5</td>
+<td>中</td>
+<td>美元偏弱、股票偏強</td>
+<td>折現率與匯率須分拆</td>
+</tr>
+</tbody>
+</table></div>
+<section class="analysis-card"><h3 id="section-signal-1-雲端需求實現高於預期-尚非全面投資回收轉折">Signal #1｜雲端需求實現高於預期，尚非全面投資回收轉折</h3>
+<div class="meta-chips"><span class="chip chip-score">Severity 3/5</span><span class="chip chip-confidence">Confidence 中</span><span class="chip">TACTICAL</span><span class="chip direction direction-flat">Risk Light：<span class="state-transition"><span class="risk risk-yellow"><span class="risk risk-yellow">🟡 Yellow</span> YELLOW</span> <span class="transition-arrow"><span class="direction direction-flat">→ 持平</span></span> <span class="risk risk-yellow"><span class="risk risk-yellow">🟡 Yellow</span> YELLOW</span></span></span></div>
+<ul>
+<li><strong>What changed：</strong> Microsoft FY27 Q1 的 Azure 實現值高於公司先前約 45% 定匯成長指引，也高於獨立 BofA 預期；本輪才取得正式結果。</li>
+<li><strong>比較基準：</strong> Azure 定匯成長 48%，相對獨立預期 44.8% 高 3.2 個百分點；這不等於營收高出 3.2%，亦不使用成長率相除誇大收入驚喜。</li>
+<li><strong>公司整體：</strong> 總營收 92.279 十億美元，較獨立預期 90.61 高約 1.84%；調整後每股盈餘（EPS）4.89，較預期 4.72 高約 3.60%。</li>
+<li><strong>持續性與廣度：</strong> 這是整季實現收入而非單點噪音，但只有一個大型平台；不能把同一公司的多項指標當成多個獨立產業來源。</li>
+<li><strong>修訂與限制：</strong> FY27 分部及部分 KPI 已重編。舊「Azure and other cloud services」與新 Azure 不直接拼接成精確連續增速；新前瞻指引（Guidance）尚待法說。</li>
+</ul>
+<h4 class="subheading-pill">機制</h4>
+<p>已部署算力轉為收入，比單純提高資本支出（CapEx）更直接支持需求假設。公司營業利益率同比改善，增加這個需求訊號的可信度；因此本輪作為單一訊號家族的正向戰術觸發，而非等待全球同步轉折。</p>
+<h4 class="subheading-pill sub-pricing">市場定價</h4>
+<p>獨立 BofA 預期是事前的市場預期，不是另一份實際財報；公司實現值與獨立預期共同支持「超預期」判斷。尚未取得可靠的發布後同步報價，因此不宣稱股價已確認、估值已重估或市場完全消化消息。</p>
+<h4 class="subheading-pill sub-counter">反向證據</h4>
+<p>剩餘履約義務（RPO）季減約 0.15%；其年增率不能當成新增訂單（New Orders）的增速。公司總毛利率年減約 1.25 個百分點，而營業利益率年增約 0.88 個百分點，顯示成本與營運槓桿並不同向。</p>
+<p>現金營運流量減購置不動產設備所得的自由現金流年減約 27.4%。現金設備支出不能直接比較含融資租賃的資本支出預測；這限制回收速度與估值上修，不機械抹除已發生的需求改善。</p>
+<h4 class="subheading-pill">台灣傳導</h4>
+<p>先進製程、封裝及伺服器鏈的外需能見度邊際改善，時間尺度為數週至數月及 1–3 季。這是傳導推論，並非已驗證任何台廠獲得特定新增訂單（Order），也未證明 Azure 全部增長都來自 AI。</p>
+<h4 class="subheading-pill">下一確認條件</h4>
+<p>台北 05:30 的 Microsoft 法說需補充雲端毛利、可比 KPI 歷史、租賃資本支出及下一季指引；其後以其他平台與台廠實現收入檢驗廣度。若同口徑重算消除收入驚喜，或後續指引／取消訂單抵銷需求，撤銷本戰術改善。</p>
+<hr/>
+</section><h2 id="section-為何重要-why-it-matters">為何重要（WHY IT MATTERS）</h2>
+<ol>
+<li><strong>資料／政策：</strong> 正式財報把雲端成長預期轉為可觀察的實現需求；聯準會當日預期內暫停升息則是另一條政策線索。</li>
+<li><strong>利率／匯率／信用利差（Credit Spread）／流動性（Liquidity）：</strong> 長端殖利率（Yield）仍限制估值；短端與美元未同步惡化，不宜把公司需求改善解釋成金融條件全面放鬆。</li>
+<li><strong>產業／資金流：</strong> 雲端收入化支持算力供應商的需求論述，但本輪沒有發布後新增資金流（Flow）的證據。</li>
+<li><strong>獲利／估值：</strong> 營收超預期支持獲利能見度，投資回收與折現率決定多少能轉成估值（Valuation）上修。</li>
+<li><strong>台灣：</strong> 先追蹤訂單交付、月營收與毛利，再判斷需求是否擴散；不能由單一美國平台財報推導整體台股必然受益。</li>
+</ol>
+<h2 id="section-總經與政策細節-macro-policy-detail">總經與政策細節（MACRO / POLICY DETAIL）</h2>
+<p><strong>事實（FACT）：</strong> 聯準會當日維持利率區間 3.75%–4.00%，兩位委員傾向升息。這是已知且大致符合預期的決策，不因本輪重新讀取就成為新政策衝擊。<a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm" rel="noopener noreferrer" target="_blank">官方決策</a></p>
+<p><strong>市場預期（MARKET EXPECTATION）：</strong> 當前可比的 12 月利率機率未取得，不補造數字。Microsoft 事前預期與實際結果分列；尚未發布／取得的下一季指引也不填為「持平」。</p>
+<p><strong>推論（INFERENCE）：</strong> 新取得的實際記者會片段談到 AI 投資對利率敏感、較高生產力容許較強成長；這是傳導機制補充，不足以證明新的政策路徑承諾。完整官方逐字稿仍不可讀。<a href="https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-october-2026" rel="noopener noreferrer" target="_blank">實際記者會分時報導</a></p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>固定家族</th>
+<th>本輪增量判斷</th>
+<th>主要限制</th>
+<th>下一觀察</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Growth</td>
+<td>未確認新總需求衝擊</td>
+<td>雲端單一公司非整體 GDP</td>
+<td>GDP／消費</td>
+</tr>
+<tr>
+<td>Inflation</td>
+<td>核心與能源分開，未新增全面惡化</td>
+<td>低頻發布不冒充即時</td>
+<td>PCE 與通膨補償</td>
+</tr>
+<tr>
+<td>Labor</td>
+<td>未出現新勞動市場轉折證據</td>
+<td>當前統計仍有發布落差</td>
+<td>初領／非農</td>
+</tr>
+<tr>
+<td>Fed / Monetary Policy</td>
+<td>預期內暫停；新增溝通有條件</td>
+<td>完整逐字稿來源受限</td>
+<td>可核驗後續實際表述</td>
+</tr>
+<tr>
+<td>Rates / Term Premium</td>
+<td>曲線扭轉，非全期限同步緊縮</td>
+<td>期限溢酬（Term Premium）未單獨識別</td>
+<td>實質殖利率／曲線</td>
+</tr>
+<tr>
+<td>Liquidity / Market Plumbing</td>
+<td>未確認新美元資金壓力</td>
+<td>即時工具資料不完整</td>
+<td>SOFR／回購</td>
+</tr>
+<tr>
+<td>Credit / Bank Credit</td>
+<td>已公布利差收斂，非當下危機證據</td>
+<td>銀行放貸調查低頻</td>
+<td>新貸款與利差</td>
+</tr>
+<tr>
+<td>Fiscal / Treasury Supply</td>
+<td>未確認新發債壓力</td>
+<td>本輪拍賣資料讀取不完整</td>
+<td>配售／尾差</td>
+</tr>
+<tr>
+<td>FX / Global Dollar</td>
+<td>美元偏弱，非廣泛融資擠壓</td>
+<td>各報價不同步</td>
+<td>跨幣種與 TWD</td>
+</tr>
+<tr>
+<td>Commodities / Inflation Chain</td>
+<td>能源高位風險在，新增衝擊未確認</td>
+<td>TTF 正式報酬未知</td>
+<td>庫存與實際流量</td>
+</tr>
+<tr>
+<td>Global Trade / Supply Chain</td>
+<td>已知亞洲出口強，非新小時資料</td>
+<td>交付與訂單非同義</td>
+<td>外銷訂單與出口</td>
+</tr>
+<tr>
+<td>China / Asia / Taiwan Cycle</td>
+<td>Azure 需求改善為本輪觸發</td>
+<td>仍非多國／多公司共振</td>
+<td>台廠營收與廣度</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="section-跨資產確認-cross-asset-confirmation">跨資產確認（CROSS-ASSET CONFIRMATION）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>資產／指標</th>
+<th>最新可得觀察</th>
+<th>比較／日期</th>
+<th>判讀限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UST 2Y／10Y／30Y</td>
+<td>4.716%／5.042%／5.358%</td>
+<td>日變動 −2.1／+5.6／+5.3 bp</td>
+<td>非同步；報價時區未暴露</td>
+</tr>
+<tr>
+<td>曲線／實質殖利率（Real Yield）</td>
+<td>10Y–2Y 約 32.6 bp；實質 10Y 2.66%</td>
+<td>實質資料為 10/26</td>
+<td>不冒充即時實質利率</td>
+</tr>
+<tr>
+<td>美元／歐元／日圓</td>
+<td>DXY 102.16；EURUSD 1.1155；USDJPY 157.97</td>
+<td>各頁日變動 −0.16%／+0.26%／+0.01%</td>
+<td>無同步事件因果識別</td>
+</tr>
+<tr>
+<td>黃金／波動</td>
+<td>GCZ6 4,084.02；VIX 16.70；MOVE 97.87</td>
+<td>MOVE 為 10/27</td>
+<td>黃金前收基準、MOVE 算術疑點保留</td>
+</tr>
+<tr>
+<td>信用利差（Credit Spread）</td>
+<td>HY 3.18%；IG 0.88%</td>
+<td>10/27，前值 3.30%／0.90%</td>
+<td>同一 ICE 上游；非兩獨立來源</td>
+</tr>
+<tr>
+<td>美國股票</td>
+<td>SPX 7,750.88；Nasdaq 26,549.85；SOX 11,655.72</td>
+<td>日漲約 0.37%／0.27%／1.51%</td>
+<td>前兩者接近收盤，非認證最終收盤</td>
+</tr>
+<tr>
+<td>亞洲／台灣</td>
+<td>台股半導體 +2.29%；電子零組件 +4.38%</td>
+<td>10/28 日收盤；亞洲主要市場詳研究物件</td>
+<td>不與美股盤中直接當同步相對強弱</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reuters 的事件報導亦指出記者會開始後美股小幅上揚、美元偏弱，短端與長端分歧；與廣泛美元融資危機不相符。這是不同資料管道的方向確認，不是完整記者會逐句佐證，也不是 MSFT 財報後反應。<a href="https://au.investing.com/news/economy-news/fomc-holds-rates-steady-markets-mostly-follow-suit-4722684" rel="noopener noreferrer" target="_blank">Reuters 事件報導</a></p>
+<h3 id="section-能源五項更新">能源五項更新</h3>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>核心輸入</th>
+<th>最新值／單位</th>
+<th class="numeric">前比較值</th>
+<th class="numeric">1D</th>
+<th>5D／7D</th>
+<th>新鮮度與限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JKM proxy</td>
+<td>32.355 USD/MMBtu</td>
+<td class="numeric">31.735</td>
+<td class="numeric">+1.954%</td>
+<td>指示性 +7.635%／+7.635%</td>
+<td>10/28 每日期貨代理，非現貨評價</td>
+</tr>
+<tr>
+<td>TTF proxy</td>
+<td>98.880 EUR/MWh；列值 98.925</td>
+<td class="numeric">基準未調和</td>
+<td class="numeric">UNKNOWN</td>
+<td>UNKNOWN／UNKNOWN</td>
+<td>原頁與歷史列口徑差異保留</td>
+</tr>
+<tr>
+<td>Brent Dec</td>
+<td>115.11 USD/bbl</td>
+<td class="numeric">113.88</td>
+<td class="numeric">+1.080%</td>
+<td>UNAVAILABLE</td>
+<td>延遲報價；不宣稱最終結算</td>
+</tr>
+<tr>
+<td>WTI Dec</td>
+<td>102.72 USD/bbl</td>
+<td class="numeric">99.90</td>
+<td class="numeric">+2.823%</td>
+<td>UNAVAILABLE</td>
+<td>延遲報價；前收獨立核對</td>
+</tr>
+<tr>
+<td>EU storage</td>
+<td>74.9% full</td>
+<td class="numeric">74.9%</td>
+<td class="numeric">0.0 pp</td>
+<td>+0.3／+0.3 pp</td>
+<td>10/26 氣日；API 快照非新氣日</td>
+</tr>
+</tbody>
+</table></div>
+<p>JKM 期貨代理的指示性 20D 漲幅約 25.70%，但新高的單日幅度未達突破確認門檻；跨期連續性未確認，不能冒充現貨 JKM assessment。TTF 僅能計算指示性 5D 約 13.1%，不得當成正式報酬；油價當下不滿足廣度中度門檻。能源風險未因此自動改善。</p>
+<p>EU 庫存較同季五年平均低約 14.66 個百分點，但七日變化相對正常路徑僅弱約 0.04 個百分點；缺口已知，非本輪新增惡化。LNG 七日資料完整性恢復不是供給恢復，挪威 10/27 實際流量也不能驗證 10/28 設施限制的影響。</p>
+<p>完整 20D 高低、歷史位置、來源時間與不可得欄位保留於本輪研究物件；資料不足者為 UNAVAILABLE，未填造季節百分位。上述能源變化與 AI 需求改善並列，不能互相覆蓋。</p>
+<h2 id="section-證據與反向證據-evidence-vs-counter-evidence">證據與反向證據（EVIDENCE VS COUNTER-EVIDENCE）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>支持證據</th>
+<th>反向／限制</th>
+<th>對結論的影響</th>
+<th>證據角色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正式 Azure 收入高於可比預期</td>
+<td>KPI 歷史口徑改變</td>
+<td>接受當季驚喜，拒絕虛假長序列</td>
+<td>事實＋事前預期</td>
+</tr>
+<tr>
+<td>公司營業槓桿改善</td>
+<td>毛利及自由現金流承壓</td>
+<td>需求 <span class="direction direction-improving">↗ 改善</span>，回收速度仍需審視</td>
+<td>事實／計算</td>
+</tr>
+<tr>
+<td>大型雲平台具有外需重要性</td>
+<td>無台廠新增訂單量化</td>
+<td>限制為條件式傳導</td>
+<td>推論</td>
+</tr>
+<tr>
+<td>股指偏強、信用未惡化</td>
+<td>資料時鐘不同、信用有落差</td>
+<td>不支持 Risk Light 升級</td>
+<td>跨資產旁證</td>
+</tr>
+</tbody>
+</table></div>
+<p>能源反證已檢查需求破壞、季節性、庫存、運價、供給恢復與曲線結構。汽油庫存增加與季節路徑限制新增緊張論述；即時運價不可得、供給限制尚無對應新氣日實際流量，不以缺資料假稱供給中斷已解除。</p>
+<h2 id="section-台灣傳導-taiwan-transmission">台灣傳導（TAIWAN TRANSMISSION）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>管道</th>
+<th>邊際含意</th>
+<th>Horizon</th>
+<th>確認／限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>估值（Valuation）</td>
+<td>需求支持獲利能見度，長端折現率仍約束</td>
+<td>即時</td>
+<td>不能由收入驚喜直接推定本益比上修</td>
+</tr>
+<tr>
+<td>外需</td>
+<td>算力收入化支持製程、封裝、伺服器需求論述</td>
+<td>數週至數月／1–3 季</td>
+<td>台廠訂單（Order）、營收（Revenue）及庫存（Inventory）驗證</td>
+</tr>
+<tr>
+<td>金融條件</td>
+<td>未確認新增信用或美元融資壓力</td>
+<td>即時／數週至數月</td>
+<td>不把外資期貨空單當現貨賣超</td>
+</tr>
+<tr>
+<td>匯率</td>
+<td>TWD 升值對進口成本與出口換算影響相反</td>
+<td>即時</td>
+<td>USDTWD 32.3805，19:53 UTC；非事件同步</td>
+</tr>
+<tr>
+<td>日本／中國放大器</td>
+<td>日本設備材料、中國終端需求可能分化</td>
+<td>1–3 季</td>
+<td>單一雲平台不代表亞洲全面復甦</td>
+</tr>
+<tr>
+<td>能源與電力</td>
+<td>LNG、電力及美元能源帳單仍約束成本</td>
+<td>數週至數月／1–3 季</td>
+<td>政策與個別公司成本轉嫁證據不足</td>
+</tr>
+</tbody>
+</table></div>
+<p>台股 10/28 漲跌家數顯示上漲占漲跌合計約 71.83%；外資期貨淨未平倉約 −84,917 口，與當日交易淨額不同。本輪現貨外資原頁讀取失敗，維持 UNKNOWN，不能推定與期貨同向。<a href="https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20261028&amp;type=ALL&amp;response=json" rel="noopener noreferrer" target="_blank">TWSE 廣度</a>、<a href="https://www.taifex.com.tw/cht/3/futContractsDate" rel="noopener noreferrer" target="_blank">TAIFEX</a></p>
+<p>台積電 ADR 與台灣現股、SOX 與台灣半導體的報價時間不一致，未計算可交易溢價。台灣外銷訂單（Export Orders）、韓國半導體出口、WSTS、記憶體報價與公司庫存（Inventory）均已檢查；低頻資料不是本輪新增訂單。</p>
+<h2 id="section-產業-股票敏感度-industry-equity-sensitivity">產業／股票敏感度（INDUSTRY / EQUITY SENSITIVITY）</h2>
+<ul>
+<li><strong>先進製程／封裝：</strong> 雲端需求超預期支持長期負載論述；沒有台積電或其他個股新訂單證據，不直接提高單一公司盈餘預測。</li>
+<li><strong>伺服器／連接／電源：</strong> 營收實現有利需求能見度，但付款、交付、租賃分類與客戶資本支出（CapEx）回收須分開；不把所有支出都視為硬體新採購。</li>
+<li><strong>記憶體／測試：</strong> 記憶體報價（Memory Pricing）與產品組合仍有分化。單一測試設備股走弱不能代替基本面週期反轉。</li>
+<li><strong>能源敏感產業：</strong> 台塑化、航運、電力密集產業及科技製造的毛利率（Gross Margin）取決於成本轉嫁、避險與政策；本輪無足夠公司證據指定贏家或輸家。</li>
+</ul>
+<h2 id="section-市場週期-vs-基本面週期">市場週期 vs 基本面週期</h2>
+<p>市場週期（Market Cycle）需要可驗證的財報後價格、估值與資金流持續性。現有 SOX、台股及 ADR 觀察多早於 Microsoft 結果，不能倒置時間順序，當成市場已因財報轉多。</p>
+<p>基本面週期（Fundamental Cycle）已有一個新的季度需求確認，但廣度仍限單一平台。當前分類是戰術更新，而非新全球多頭循環；其價值在於降低「需求只是資本支出敘事」的疑慮，同時保留現金回收的反證。</p>
+<h2 id="section-分類與風險燈號變化-classification-risk-light-delta">分類與風險燈號變化（CLASSIFICATION &amp; RISK LIGHT DELTA）</h2>
+<p><strong>Classification：NOISE <span class="direction direction-flat">→ 持平</span> TACTICAL。Risk Light：<span class="state-transition"><span class="risk risk-yellow">🟡 YELLOW</span> <span class="transition-arrow">→</span> <span class="risk risk-yellow">🟡 YELLOW</span></span>。</strong> 分類轉變只針對本輪新增 AI 需求訊號，不是把既有能源與折現率風險重新命名。</p>
+<p>本輪未出現兩項獨立市場指標同步惡化，故不升級風險燈號；也沒有足夠證據將既有風險降為 GREEN。尚無兩個訊號家族的持續共振及核心反證失效，不宣稱 Regime Shift。</p>
+<blockquote class="callout">
+<p>戰術性需求改善可以先於價格確認成立；但不能因這項改善就刪去能源、折現率、毛利與現金回收風險。</p>
+</blockquote>
+<h2 id="section-情境矩陣-scenario-matrix">情境矩陣（SCENARIO MATRIX）</h2>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>情境</th>
+<th>條件</th>
+<th>市場／台灣傳導</th>
+<th>推翻條件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基準：局部需求改善</td>
+<td>可比 Azure 驚喜成立，成本仍高</td>
+<td>外需能見度改善，估值擴張受限</td>
+<td>口徑重算消除驚喜</td>
+</tr>
+<tr>
+<td>上行情境：收入化擴散</td>
+<td>其他平台與台廠收入／訂單共同改善</td>
+<td>由單點戰術轉向趨勢形成</td>
+<td>成長主要是一次性認列</td>
+</tr>
+<tr>
+<td>下行情境：回收約束壓過需求</td>
+<td>指引轉弱、取消訂單或成本壓力加重</td>
+<td>獲利修正抵銷收入增量</td>
+<td>現金轉換及毛利恢復</td>
+</tr>
+<tr>
+<td>總經風險擴散</td>
+<td>能源與實質利率／信用同步惡化</td>
+<td>折現率及金融條件壓抑台股</td>
+<td>供給恢復、跨資產壓力消退</td>
+</tr>
+</tbody>
+</table></div>
+<p>未提供無法驗證的情境機率；每個情境都以後續可觀察資料區分，而不是以單日股價決勝。</p>
+<h2 id="section-下一確認條件-next-confirmation">下一確認條件（NEXT CONFIRMATION）</h2>
+<ol>
+<li><strong>05:30 台北／21:30 UTC：</strong> Microsoft 實際法說、下一季前瞻指引（Guidance）、雲端毛利與現金／融資租賃資本支出調和；不把排程當成已發生內容。</li>
+<li><strong>其他平台：</strong> Alphabet 官方動態頁本輪未取得實際結果，後續依法可讀時確認；再與 Amazon 需求及成本交叉檢驗，不使用錯誤 Meta 今晚財報日曆。</li>
+<li><strong>台灣數週至數月：</strong> 外銷訂單（Export Orders）、月營收（Revenue）、庫存與毛利；未來需求是否轉為可交付訂單，是供應鏈擴散的核心測試。</li>
+<li><strong>即時至下一交易日：</strong> 取得時鐘可比的實質殖利率（Real Yield）、美元、信用利差（Credit Spread）與股票；補核最終收盤，不把近收盤值當正式收盤。</li>
+<li><strong>能源下一氣日：</strong> 可比 TTF 結算、挪威實際流量、EU 庫存與 LNG；量化限制流量的實際損失，避免把容量限制當作已發生供給減量。</li>
+</ol>
+<h2 id="section-source-audit">SOURCE AUDIT</h2>
+<p><strong>來源時效：</strong> 研究嘗試均在本輪 20:00 UTC 後；實際觀察時間與重新讀取時間分開。報告涵蓋即時取得的財報，但不宣稱所有市場已同步收盤。完整 12 家族、21 訊號各 18 欄、5 能源輸入與 13 台灣檢查保留於同 RUN_ID 研究物件。</p>
+<div class="table-scroll wide-content"><table>
+<thead>
+<tr>
+<th>來源</th>
+<th>支持內容／觀察日期</th>
+<th>使用角色</th>
+<th>限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast" rel="noopener noreferrer" target="_blank">Microsoft FY27 Q1</a></td>
+<td>10/28 實際季度結果</td>
+<td>原始事實</td>
+<td>未提供下一季指引、雲端毛利</td>
+</tr>
+<tr>
+<td><a href="https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4" rel="noopener noreferrer" target="_blank">Microsoft FY26 Q4 法說</a></td>
+<td>前次公司指引</td>
+<td>事前基準</td>
+<td>KPI／分部改版須調和</td>
+</tr>
+<tr>
+<td><a href="https://www.tipranks.com/news/microsoft-stock-forecast-bofa-reaffirms-buy-ahead-of-earnings-sees-44-8-azure-growth" rel="noopener noreferrer" target="_blank">TipRanks 引述 BofA</a></td>
+<td>同季 Azure 定匯預期與金額</td>
+<td>獨立預期來源</td>
+<td>原頁成功；精確發布時間未暴露</td>
+</tr>
+<tr>
+<td><a href="https://www.investing.com/news/stock-market-news/microsoft-stock-setup-analysis-ahead-of-todays-earnings-release-93CH-4979177" rel="noopener noreferrer" target="_blank">Investing 事前預覽</a></td>
+<td>10/28 總營收／EPS 預期</td>
+<td>獨立預期補充</td>
+<td>不是財報後實際報導</td>
+</tr>
+<tr>
+<td><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm" rel="noopener noreferrer" target="_blank">Fed 決策</a></td>
+<td>10/28 決議</td>
+<td>原始政策事實</td>
+<td>完整記者會另有存取限制</td>
+</tr>
+<tr>
+<td><a href="https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-october-2026" rel="noopener noreferrer" target="_blank">Kiplinger 分時報導</a></td>
+<td>實際部分問答</td>
+<td>合法獨立事件報導</td>
+<td>單一出版社、非完整逐字稿</td>
+</tr>
+<tr>
+<td><a href="https://au.investing.com/news/economy-news/fomc-holds-rates-steady-markets-mostly-follow-suit-4722684" rel="noopener noreferrer" target="_blank">Reuters 事件反應</a></td>
+<td>記者會後股匯債方向</td>
+<td>跨資產旁證</td>
+<td>轉載仍算同一 Reuters 上游</td>
+</tr>
+<tr>
+<td><a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" rel="noopener noreferrer" target="_blank">FRED HY</a>／<a href="https://fred.stlouisfed.org/series/BAMLC0A0CM" rel="noopener noreferrer" target="_blank">IG</a></td>
+<td>10/27 信用利差</td>
+<td>已發布風險資料</td>
+<td>共用 ICE 上游、有時間落差</td>
+</tr>
+<tr>
+<td><a href="https://indexes.nasdaqomx.com/index/Overview/SOX" rel="noopener noreferrer" target="_blank">Nasdaq SOX</a></td>
+<td>10/28 指數</td>
+<td>半導體市場檢查</td>
+<td>精確時間未暴露</td>
+</tr>
+<tr>
+<td><a href="https://www.investing.com/commodities/lng-japan-korea-marker-platts-futures-historical-data" rel="noopener noreferrer" target="_blank">JKM 期貨代理</a>／<a href="https://www.investing.com/commodities/ice-dutch-ttf-gas-c1-futures-historical-data" rel="noopener noreferrer" target="_blank">TTF</a></td>
+<td>10/28 延遲日列／報價</td>
+<td>能源代理</td>
+<td>JKM 非現貨評價；TTF 報酬基準未調和</td>
+</tr>
+<tr>
+<td><a href="https://www.investing.com/commodities/brent-oil-contracts" rel="noopener noreferrer" target="_blank">Brent</a>／<a href="https://www.investing.com/commodities/crude-oil-contracts" rel="noopener noreferrer" target="_blank">WTI</a>／<a href="https://www.asiae.co.kr/en/article/2026102805524436938" rel="noopener noreferrer" target="_blank">Asiae 前結算</a></td>
+<td>12 月合約當前值對 10/27 結算</td>
+<td>油價與獨立前值核對</td>
+<td>非本日正式結算、時鐘不同步</td>
+</tr>
+<tr>
+<td><a href="https://energiedashboard.ch/api/v1/datasets/fuellstaende-gasspeicher-eu" rel="noopener noreferrer" target="_blank">SFOE EU storage API</a></td>
+<td>10/26 氣日及歷史</td>
+<td>產業資料可追溯代理</td>
+<td>與 GIE 同源、不算獨立雙來源</td>
+</tr>
+<tr>
+<td><a href="https://www.dramexchange.com/" rel="noopener noreferrer" target="_blank">DRAMeXchange</a></td>
+<td>10/28 DRAM 日評價</td>
+<td>記憶體檢查</td>
+<td>模組／NAND 另有較舊日期</td>
+</tr>
+<tr>
+<td><a href="https://www.wsts.org/61/Forecasts" rel="noopener noreferrer" target="_blank">WSTS</a></td>
+<td>已發布預測版本</td>
+<td>產業背景</td>
+<td>非當小時新資料；SEMI 來源限制</td>
+</tr>
+<tr>
+<td><a href="https://focustaiwan.tw/business/202610200019" rel="noopener noreferrer" target="_blank">CNA 外銷訂單</a></td>
+<td>9 月資料、10/20 報導</td>
+<td>台灣外需</td>
+<td>非本輪新訂單</td>
+</tr>
+<tr>
+<td><a href="https://www.cbc.gov.tw/tw/cp-302-193075-5bcb1-1.html" rel="noopener noreferrer" target="_blank">台灣央行</a></td>
+<td>9 月金融統計、10/27 公布</td>
+<td>金融／領先循環</td>
+<td>企業資金暫泊不等於需求復甦</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>來源限制：</strong> 官方 Fed 記者會 HTML／PDF 既有 HTTP 403 保留；本輪 InvestingLive 特定事件文章原始讀取亦回傳 HTTP 403，已停止。未透過鏡像繞過；APH 被隔離的新逐字稿不採用。其他既有 hold 原樣保留。</p>
+<p><strong>資料缺口：</strong> TWSE 外資頁 307／InternalError、部分拍賣與實施工具頁技術讀取失敗，當前值維持 UNKNOWN；GIE 首頁逾時但 SFOE 原始 API 成功。來源不全降低信心，不是事件不存在的證據。</p>
+<p><strong>驗證範圍：</strong> 本報告僅對原始 Markdown 內容與結構進行預檢。未指定 renderer 且未取得實際渲染結果，不宣稱藍色 callout、間距或像素版面已驗證；Drive 保存狀態須另行直接讀回驗證。</p>
+<h2 id="section-結論-bottom-line">結論（BOTTOM LINE）</h2>
+<blockquote class="callout">
+<p>本輪值得保存的是「雲端需求已實現且優於預期」這個新增事實與戰術含意，不是「AI 投資風險解除」。對台灣，外需能見度邊際改善；對整體金融環境，YELLOW 仍是適當風險燈號。</p>
+</blockquote>
+<p>需求改善、成本約束與能源風險應同時保留。下一個關鍵是收入驚喜能否延續為可比較的指引、現金回收及供應鏈訂單，而不是把財報前的股價強勢誤讀成財報後確認。</p>
+
+    </main>
+    <footer>
+      Global Macro Signal Report · 2026-10-29 04:15:19 · Generated Deterministically
+    </footer>
+  </div>
+</div>
+</body>
+</html>
