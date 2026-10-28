@@ -3184,6 +3184,22 @@
       "title": "Global Macro Early Warning｜AI財報兌現卻遭盤後賣壓：基本面與估值分歧",
       "topic": null
     },
+    "MTW-20261028-2200-packaging-orders": {
+      "coverage_end_taipei": "2026-10-28T22:11:19.653771+08:00",
+      "coverage_start_taipei": "2026-10-28T21:00:00+08:00",
+      "generated_at_taipei": "2026-10-28T22:11:19.765195+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-28_2200_packaging-orders.html",
+      "html_sha256": "d98ea09e89bd78b0e943fdf35820c224920afd6dbb6be17f2d5ff0e9a4769e90",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-28_2200_packaging-orders.md",
+      "markdown_sha256": "6de16474b8f1a72fb1deb0eb21401e3fcc2a4a5dc15c84ed0f598dd7c0c07bf0",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261028-2200-packaging-orders",
+      "slug": "packaging-orders",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜ASMPT封裝設備訂單超越原展望，AI需求廣度增加但拉貨前置限制外推",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
