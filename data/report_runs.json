@@ -912,6 +912,22 @@
       "title": "Global Daily Brief｜Oracle 擴大多晶片雲端，Meta 融資與 ASM 展望凸顯 AI 定價分歧",
       "topic": null
     },
+    "GDB-20261029-0730": {
+      "coverage_end_taipei": "2026-10-29T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-28T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-29T07:49:57+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-29.html",
+      "html_sha256": "36dde48b4a25959dafb69cbb1508e4ff16a0692cf2c83641d7de870debe243aa",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-29.md",
+      "markdown_sha256": "775cb05a23c91675e5c25bf532bbca61669a8017f31cf24ef470ae0a4ec8b9c3",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261029-0730",
+      "slug": "cloud-cash-conversion",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Alphabet 現金回收落後預期，雲端高成長難抵估值壓力",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
@@ -3246,6 +3262,22 @@
       "slug": "ai-cash-conversion",
       "source_document_id": null,
       "title": "Global Macro Early Warning｜Alphabet 雲端需求超預期，現金回收缺口擴大",
+      "topic": null
+    },
+    "MTW-20261029-0700-pc-demand-inventory": {
+      "coverage_end_taipei": "2026-10-29T07:15:09+08:00",
+      "coverage_start_taipei": "2026-10-29T06:00:00+08:00",
+      "generated_at_taipei": "2026-10-29T07:15:09+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_0700_pc-demand-inventory.html",
+      "html_sha256": "1aabfba131690932c5c2f53ecc4ad8b7d9d0ba4ba422277056f3f5bea755aab9",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_0700_pc-demand-inventory.md",
+      "markdown_sha256": "366095f55e8dbf2547ad7597136d3abd0f70a12c93083f354ad286f0755a94f5",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261029-0700-pc-demand-inventory",
+      "slug": "pc-demand-inventory",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜PC 終端需求與庫存壓力獲確認，AI 強勢不代表全面復甦",
       "topic": null
     },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
