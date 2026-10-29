@@ -3360,6 +3360,22 @@
       "title": "Global Macro Early Warning｜A股算力硬體弱勢獲補充確認，銀行逆勢限制全面避險判斷",
       "topic": null
     },
+    "MTW-20261029-1600-taiwan-cash-selling": {
+      "coverage_end_taipei": "2026-10-29T16:00:00+08:00",
+      "coverage_start_taipei": "2026-10-29T15:00:00+08:00",
+      "generated_at_taipei": "2026-10-29T16:13:18+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_1600_taiwan-cash-selling.html",
+      "html_sha256": "c25c0803b84f267072247bf89c42a155938948cf886c4503cf4c90c5e6fc62bb",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_1600_taiwan-cash-selling.md",
+      "markdown_sha256": "e294f112265ef44460221517af1ff03f19d27182a9668850f16ebd96fe80dc29",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261029-1600-taiwan-cash-selling",
+      "slug": "taiwan-cash-selling",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台股外資現貨賣超獲確認，資金壓力仍具類股分化",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,

@@ -2259,6 +2259,15 @@
       "sha256": "c2bade834cea947e40de244dcf4aee716dadd48b02681ab5631640e50a4b021a",
       "size": 19836
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_1600_taiwan-cash-selling.md": {
+      "category": "early-warning",
+      "drive_file_id": "12tXoUbwajYoblDSU7LIcYiNQs2keGm9H",
+      "md5_checksum": "59e958f238da1044a8baefb70ead5875",
+      "modified_time": "2026-10-29T08:20:16.796Z",
+      "name": "Global_Macro_Early_Warning_2026-10-29_1600_taiwan-cash-selling.md",
+      "sha256": "d4e437d50ad4aec8b14ea4d3283caa5854eeddd2b3a5e3dfcd04b6d2cb910113",
+      "size": 15635
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
