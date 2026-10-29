@@ -3440,6 +3440,22 @@
       "title": "Global Macro Early Warning｜美國季度成長強勁，季末實質消費停滯與所得受壓",
       "topic": null
     },
+    "MTW-20261029-2300-tech-relative-weakness": {
+      "coverage_end_taipei": "2026-10-29T23:00:00+08:00",
+      "coverage_start_taipei": "2026-10-29T22:00:00+08:00",
+      "generated_at_taipei": "2026-10-29T23:11:06.525234+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_2300_tech-relative-weakness.html",
+      "html_sha256": "6fd0bb5782e9ffa63f9e0bab455af19d04113be89c5ebbc62feb626b08b5ce88",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_2300_tech-relative-weakness.md",
+      "markdown_sha256": "d4f6603a724e943043de236136bf2806e7a0700745d1c2ec3ea844729274a62d",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261029-2300-tech-relative-weakness",
+      "slug": "tech-relative-weakness",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜科技股現貨相對弱勢獲確認，尚非全面資金壓力",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
