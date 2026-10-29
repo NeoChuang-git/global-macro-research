@@ -3312,6 +3312,22 @@
       "title": "Global Macro Early Warning｜KLA 實績與指引確認 AI 設備需求，現金改善仍待延續",
       "topic": null
     },
+    "MTW-20261029-1100-korea-equity-fx-repricing": {
+      "coverage_end_taipei": "2026-10-29T11:00:00+08:00",
+      "coverage_start_taipei": "2026-10-29T10:00:00+08:00",
+      "generated_at_taipei": "2026-10-29T11:17:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_1100_korea-equity-fx-repricing.html",
+      "html_sha256": "a5500c00cff8359c78af5fe20d29552b49278b0d8266c7e36b2d55dc0259d38d",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_1100_korea-equity-fx-repricing.md",
+      "markdown_sha256": "ac9f0743a40428a5a0abf170505cde578c72f108bab22df72080f46a5745db83",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261029-1100-korea-equity-fx-repricing",
+      "slug": "korea-equity-fx-repricing",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜韓股廣度與韓元同步轉弱，先視為區域重訂價而非 AI 需求反轉",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
