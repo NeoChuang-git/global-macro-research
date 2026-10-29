@@ -3376,6 +3376,22 @@
       "title": "Global Macro Early Warning｜台股外資現貨賣超獲確認，資金壓力仍具類股分化",
       "topic": null
     },
+    "MTW-20261029-1800-ai-inventory-conversion": {
+      "coverage_end_taipei": "2026-10-29T18:00:00+08:00",
+      "coverage_start_taipei": "2026-10-29T17:00:00+08:00",
+      "generated_at_taipei": "2026-10-29T18:19:06+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_1800_ai-inventory-conversion.html",
+      "html_sha256": "b2266a92076932ef64156faa65669387cfc7404d0a68b063d171fee414aab004",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_1800_ai-inventory-conversion.md",
+      "markdown_sha256": "145650fa7a43b04ec644ee4c302a68cc17ae1f7b40105dbaebec284a006ac3c2",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261029-1800-ai-inventory-conversion",
+      "slug": "ai-inventory-conversion",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台達電確認交付與庫存錯位，AI 毛利轉換風險待第四季驗證",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
