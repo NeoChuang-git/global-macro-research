@@ -3328,6 +3328,22 @@
       "title": "Global Macro Early Warning｜韓股廣度與韓元同步轉弱，先視為區域重訂價而非 AI 需求反轉",
       "topic": null
     },
+    "MTW-20261029-1200-taiwan-equity-fx-confirmation": {
+      "coverage_end_taipei": "2026-10-29T12:00:00+08:00",
+      "coverage_start_taipei": "2026-10-29T11:00:00+08:00",
+      "generated_at_taipei": "2026-10-29T12:12:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_1200_taiwan-equity-fx-confirmation.html",
+      "html_sha256": "0e411c8c04ddace1c9d634b2331a257629e51f9d7f3bcc89b55b2bb86fc649a5",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_1200_taiwan-equity-fx-confirmation.md",
+      "markdown_sha256": "a6b469325521c4c74a80f7e1a59929b8d7c31d6e3fb338b9425d6953d715a1a9",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261029-1200-taiwan-equity-fx-confirmation",
+      "slug": "taiwan-equity-fx-confirmation",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜台股跌勢擴大，早盤台幣弱勢提供交叉佐證",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
