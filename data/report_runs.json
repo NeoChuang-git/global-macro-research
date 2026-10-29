@@ -3280,6 +3280,22 @@
       "title": "Global Macro Early Warning｜PC 終端需求與庫存壓力獲確認，AI 強勢不代表全面復甦",
       "topic": null
     },
+    "MTW-20261029-0800-oracle-funding-visibility": {
+      "coverage_end_taipei": "2026-10-29T08:10:35+08:00",
+      "coverage_start_taipei": "2026-10-29T07:00:00+08:00",
+      "generated_at_taipei": "2026-10-29T08:10:35+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_0800_oracle-funding-visibility.html",
+      "html_sha256": "d734694e35d4d79db147277450259c57ec70a7769b4b6bfa1790c643c6a44ff9",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_0800_oracle-funding-visibility.md",
+      "markdown_sha256": "cb508f2ad50fc03b740ef1441cff315bed013ddd0990d67083171fe0ccf91a50",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261029-0800-oracle-funding-visibility",
+      "slug": "oracle-funding-visibility",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜Oracle 設定剩餘募資上限，AI 融資可見度有條件改善",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
