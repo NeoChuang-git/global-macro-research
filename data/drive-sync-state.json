@@ -2322,6 +2322,15 @@
       "sha256": "cefc46e5f4333680b6437f7d81c795e5457d5dd58e68ef050553416798094922",
       "size": 18910
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_0300_ai-contingent-exposure.md": {
+      "category": "early-warning",
+      "drive_file_id": "1rGbf77pT9-hdYTieUEIqIFZzAULX9b5r",
+      "md5_checksum": "49e866c0388a071bfaaff0f99af0a63b",
+      "modified_time": "2026-10-29T19:17:39.232Z",
+      "name": "Global_Macro_Early_Warning_2026-10-30_0300_ai-contingent-exposure.md",
+      "sha256": "ae80cb6bf08760c46b4b0a28951099ec05db204686cb155c21ff77bb9ed62772",
+      "size": 18929
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
