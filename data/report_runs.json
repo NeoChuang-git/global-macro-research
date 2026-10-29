@@ -3504,6 +3504,22 @@
       "title": "Global Macro Early Warning｜Amazon現金投資缺口擴大，雲端需求仍強",
       "topic": null
     },
+    "MTW-20261030-0600-semi-spillover": {
+      "coverage_end_taipei": "2026-10-30T06:00:00+08:00",
+      "coverage_start_taipei": "2026-10-30T05:00:00+08:00",
+      "generated_at_taipei": "2026-10-30T06:16:04+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_0600_semi-spillover.html",
+      "html_sha256": "5473cddbaf7017778cbd91fa58adaeac75d11654d4b2f4ffebb8ce9e0c15a68c",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_0600_semi-spillover.md",
+      "markdown_sha256": "26f689203588d4559993e862a9979da133d5329ffe4464dabcf238f25b62e094",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261030-0600-semi-spillover",
+      "slug": "semi-spillover",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜Intel弱指引外溢晶片股，尚非全面需求轉折",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
