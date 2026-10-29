@@ -2250,6 +2250,15 @@
       "sha256": "bcbb1fe5666d5c225139f4a89bcd54af0914616f2bf8ae7aceb8a5c22eb72981",
       "size": 21876
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_1300_china-ai-equity-breadth.md": {
+      "category": "early-warning",
+      "drive_file_id": "1l8k382pRdBipQLxo5cXNQTHcncTa_iPD",
+      "md5_checksum": "00fa33270e6d2b01e094d1bc6d57cb18",
+      "modified_time": "2026-10-29T05:22:46.042Z",
+      "name": "Global_Macro_Early_Warning_2026-10-29_1300_china-ai-equity-breadth.md",
+      "sha256": "c2bade834cea947e40de244dcf4aee716dadd48b02681ab5631640e50a4b021a",
+      "size": 19836
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
