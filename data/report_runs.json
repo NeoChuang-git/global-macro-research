@@ -3392,6 +3392,38 @@
       "title": "Global Macro Early Warning｜台達電確認交付與庫存錯位，AI 毛利轉換風險待第四季驗證",
       "topic": null
     },
+    "MTW-20261029-1900-europe-price-intentions": {
+      "coverage_end_taipei": "2026-10-29T19:00:00+08:00",
+      "coverage_start_taipei": "2026-10-29T18:00:00+08:00",
+      "generated_at_taipei": "2026-10-29T19:18:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_1900_europe-price-intentions.html",
+      "html_sha256": "af13b86a3a15af584d0dc88d8ae0f657c6f1b363ef3a67b3ea33d7964d0a8033",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_1900_europe-price-intentions.md",
+      "markdown_sha256": "5c2baa3ed3c1eda6c8f84458eef22a3d0eec65b400657d741584aeffb28c4516",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261029-1900-europe-price-intentions",
+      "slug": "europe-price-intentions",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜歐洲漲價意圖擴至四產業，轉嫁能力仍待驗證",
+      "topic": null
+    },
+    "MTW-20261029-2000-ase-capacity-guidance": {
+      "coverage_end_taipei": "2026-10-29T20:00:00+08:00",
+      "coverage_start_taipei": "2026-10-29T19:00:00+08:00",
+      "generated_at_taipei": "2026-10-29T20:08:43.345985+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_2000_ase-capacity-guidance.html",
+      "html_sha256": "1e22e1a84bd87463cf87b9658b7569efa7c51b1156130cb0eadb00262503a696",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-29_2000_ase-capacity-guidance.md",
+      "markdown_sha256": "dc0b3ab73ee68e53d08adec689a6cabe70bee7c8d0b259f5b821821b5363e4a3",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261029-2000-ase-capacity-guidance",
+      "slug": "ase-capacity-guidance",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜日月光上修先進封測與投資計畫，需求改善仍受產能約束",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
