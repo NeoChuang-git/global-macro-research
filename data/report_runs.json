@@ -3488,6 +3488,22 @@
       "title": "Global Macro Early Warning｜Alphabet 或有承諾增加，AI 投資風險承擔延伸至交易對手",
       "topic": null
     },
+    "MTW-20261030-0500-ai-cash-pc-liquidity": {
+      "coverage_end_taipei": "2026-10-30T05:00:00+08:00",
+      "coverage_start_taipei": "2026-10-30T04:00:00+08:00",
+      "generated_at_taipei": "2026-10-30T05:17:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_0500_ai-cash-pc-liquidity.html",
+      "html_sha256": "a81d411c3032b210cd9442643422963198a987d76779c18a0aff11ef78bc08f5",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_0500_ai-cash-pc-liquidity.md",
+      "markdown_sha256": "7cf3116bab9dd28f38178477c2b849d7f37d0ed527fc7d8810b537e69f7c73a7",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261030-0500-ai-cash-pc-liquidity",
+      "slug": "ai-cash-pc-liquidity",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜Amazon現金投資缺口擴大，雲端需求仍強",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
