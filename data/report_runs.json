@@ -3568,6 +3568,22 @@
       "title": "Global Macro Early Warning｜科技股壓力傳至台灣現貨，尚未確認美元融資共振",
       "topic": null
     },
+    "MTW-20261030-1100-datacenter-demand": {
+      "coverage_end_taipei": "2026-10-30T11:00:00+08:00",
+      "coverage_start_taipei": "2026-10-30T10:00:00+08:00",
+      "generated_at_taipei": "2026-10-30T11:22:00+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_1100_datacenter-demand.html",
+      "html_sha256": "3334f619b935401a33de242048ceab47cb49ec9605bb8edacd586f571c2ba2c6",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_1100_datacenter-demand.md",
+      "markdown_sha256": "3fa17a0ebd661236a36e8c7792588d229a4f01169c1aebd815dfa9f44bf225e2",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261030-1100-datacenter-demand",
+      "slug": "datacenter-demand",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜資料中心租賃創新高，AI實體需求反證增強",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,

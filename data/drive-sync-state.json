@@ -2376,6 +2376,15 @@
       "sha256": "b082b62260e317c71fe5a50ceb8f9c8d184e1103837cd316c7daa03140ab5f64",
       "size": 46152
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_1100_datacenter-demand.md": {
+      "category": "early-warning",
+      "drive_file_id": "1sjHEulU7t9teu3Kg-Z2tSvq0-HdnKaEe",
+      "md5_checksum": "3af03619bb9cbbd0c9c20eab87a9039f",
+      "modified_time": "2026-10-30T03:25:58.508Z",
+      "name": "Global_Macro_Early_Warning_2026-10-30_1100_datacenter-demand.md",
+      "sha256": "cd269adc14cc8a795630d63dc08e525cd7802d635dd8c0e5ce571a9f994fcf6e",
+      "size": 20435
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",
