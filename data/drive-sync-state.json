@@ -2385,6 +2385,15 @@
       "sha256": "cd269adc14cc8a795630d63dc08e525cd7802d635dd8c0e5ce571a9f994fcf6e",
       "size": 20435
     },
+    "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_1200_boj-defi.md": {
+      "category": "early-warning",
+      "drive_file_id": "1FXfnTWAuNxkr6rtlr6-IM3aWt50LSpW0",
+      "md5_checksum": "26dcf5d43833ffe76e0a1177e11d52ac",
+      "modified_time": "2026-10-30T04:20:46.395Z",
+      "name": "Global_Macro_Early_Warning_2026-10-30_1200_boj-defi.md",
+      "sha256": "c8c5d4c4e3c236f0bbdb03dd24461fcd0ac3d4570a2bfc101a02abba579c3183",
+      "size": 32839
+    },
     "reports/early-warning/Global_Macro_Taiwan_Early_Warning_2026-08-27_NVIDIA_Post_Earnings.html": {
       "category": "early-warning",
       "drive_file_id": "13ljEPZj3pTDRj-qWN7tfWpx4uU3iq7mf",

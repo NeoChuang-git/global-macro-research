@@ -3584,6 +3584,22 @@
       "title": "Global Macro Early Warning｜資料中心租賃創新高，AI實體需求反證增強",
       "topic": null
     },
+    "MTW-20261030-1200-boj-defi": {
+      "coverage_end_taipei": "2026-10-30T12:00:00+08:00",
+      "coverage_start_taipei": "2026-10-30T11:00:00+08:00",
+      "generated_at_taipei": "2026-10-30T12:18:10+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_1200_boj-defi.html",
+      "html_sha256": "b383c4af8c28a51ab4b8dc3dd57066cca397a50841711e08d59ed283722831c7",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_1200_boj-defi.md",
+      "markdown_sha256": "c27c27b87abda143491c9eeacee3df31231af5766b29dafd303d0c67ac5fc631",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261030-1200-boj-defi",
+      "slug": "boj-defi",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜日本加快ETF出售，DeFi借貸限制擴散",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
