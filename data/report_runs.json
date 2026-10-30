@@ -3552,6 +3552,22 @@
       "title": "Global Macro Early Warning｜Binance暫停存提款，美元融資外溢尚待確認",
       "topic": null
     },
+    "MTW-20261030-1000-asia-tech-spillover": {
+      "coverage_end_taipei": "2026-10-30T10:00:00+08:00",
+      "coverage_start_taipei": "2026-10-30T09:00:00+08:00",
+      "generated_at_taipei": "2026-10-30T10:24:13+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_1000_asia-tech-spillover.html",
+      "html_sha256": "76e53f8cad2c069dcbb976a31b6a9bd6fbcb19b175a73d68362e538f7dc3a639",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_1000_asia-tech-spillover.md",
+      "markdown_sha256": "6a8f8449c98da4184a670e3bffb25f985dba6d5f9803f17fba4b9cb18980f21d",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261030-1000-asia-tech-spillover",
+      "slug": "asia-tech-spillover",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜科技股壓力傳至台灣現貨，尚未確認美元融資共振",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
