@@ -928,6 +928,22 @@
       "title": "Global Daily Brief｜Alphabet 現金回收落後預期，雲端高成長難抵估值壓力",
       "topic": null
     },
+    "GDB-20261030-0730": {
+      "coverage_end_taipei": "2026-10-30T07:30:00+08:00",
+      "coverage_start_taipei": "2026-10-29T07:30:00+08:00",
+      "generated_at_taipei": "2026-10-30T07:51:22+08:00",
+      "html_path": "reports/daily/Global_Daily_Brief_2026-10-30.html",
+      "html_sha256": "0787fd60d1610960b3a69d69976c22bbdcd5d715d5a54843b4bcce23dee3273b",
+      "markdown_path": "reports/daily/Global_Daily_Brief_2026-10-30.md",
+      "markdown_sha256": "03342a1cfdda7c10a5ad97ea7d2e4e578668f3f0fc6424b1640c2d6381c34695",
+      "report_type": "GLOBAL_DAILY_BRIEF",
+      "risk_light": "YELLOW",
+      "run_id": "GDB-20261030-0730",
+      "slug": "cloud-cash-pc-divergence",
+      "source_document_id": null,
+      "title": "Global Daily Brief｜Amazon雲端成長未能抵銷現金缺口，Intel弱指引擴大科技股分化",
+      "topic": null
+    },
     "MEW-20260903-0003-LRD": {
       "coverage_end_taipei": "2026-09-03 00:03:00+08:00",
       "coverage_start_taipei": "2026-09-02 00:00:00+08:00",
