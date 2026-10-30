@@ -3616,6 +3616,22 @@
       "title": "Global Macro Early Warning｜ASIC交付能見度提高，台股外資去風險仍未解除",
       "topic": null
     },
+    "MTW-20261030-1900-ai-power-capex": {
+      "coverage_end_taipei": "2026-10-30T19:00:00+08:00",
+      "coverage_start_taipei": "2026-10-30T18:00:00+08:00",
+      "generated_at_taipei": "2026-10-30T19:15:56.962187+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_1900_ai-power-capex.html",
+      "html_sha256": "797686fa0cc3e8da7880d402a85cc5bde3af1cce7a9f634a1de4f6419972f79b",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_1900_ai-power-capex.md",
+      "markdown_sha256": "b779c716f6fd349d5f9c124c4e8078dc0515ed055e7ddc5fec153d757eddf697",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261030-1900-ai-power-capex",
+      "slug": "ai-power-capex",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜AI電源擴產上修，交付改善仍受電力瓶頸約束",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
