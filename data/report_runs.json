@@ -3600,6 +3600,22 @@
       "title": "Global Macro Early Warning｜日本加快ETF出售，DeFi借貸限制擴散",
       "topic": null
     },
+    "MTW-20261030-1700-asic-flow": {
+      "coverage_end_taipei": "2026-10-30T17:00:00+08:00",
+      "coverage_start_taipei": "2026-10-30T16:00:00+08:00",
+      "generated_at_taipei": "2026-10-30T17:20:25.675886+08:00",
+      "html_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_1700_asic-flow.html",
+      "html_sha256": "887ccdf0b4e24b9983d8a6f57e6a72ea43c6cf416b71ecf15fe96c613b1dc192",
+      "markdown_path": "reports/early-warning/Global_Macro_Early_Warning_2026-10-30_1700_asic-flow.md",
+      "markdown_sha256": "1827f5f381859ec0a547dac4e3375b2eed77b6287d8721903b16f128b1c939a4",
+      "report_type": "MACRO_TAIWAN_EARLY_WARNING",
+      "risk_light": "YELLOW",
+      "run_id": "MTW-20261030-1700-asic-flow",
+      "slug": "asic-flow",
+      "source_document_id": null,
+      "title": "Global Macro Early Warning｜ASIC交付能見度提高，台股外資去風險仍未解除",
+      "topic": null
+    },
     "WEEKLY-Weekly_Strategy_2026-10-25": {
       "coverage_end_taipei": null,
       "coverage_start_taipei": null,
